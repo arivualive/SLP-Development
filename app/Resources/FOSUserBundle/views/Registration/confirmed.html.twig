@@ -1,0 +1,80 @@
+{% extends "::base.html.twig" %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('css/register.css') }}">
+<link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+{% endblock %}
+{% block title -%}Inscription validée{% endblock %}
+
+{% block body %}
+
+<div class="row">
+    <!--<header>
+        <div id="carousel-slp" class="carousel slide" data-ride="carousel">
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img class="d-block" src="{{ asset('images/slider/slide_3.jpg') }}"
+                        alt="Dashboard">
+                    <div class="carousel-caption d-none d-block intro col-6 top-adjust">
+                        <h1>Félicitations</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown burger">
+                <a class="dropdown-item" style="padding: 0%;width:0%;" class="btn btn-secondary dropdown-toggle"
+                    href="{{ path('site_index') }}">
+                    <button class="btn btn-secondary dropdown-toggle"><i class="fa fa-home" style="font-size:24px"></i>
+
+                    </button>
+                </a>
+            </div>
+
+        </div>
+    </header>-->
+
+    <header>
+        <div class="header">
+            <img class="d-block" src="{{ asset('images/slider/slide_3.jpg') }}" alt="Dashboard">
+            <div class="text-inside-header">
+                <h1>Félicitations</h1>
+                <!--<p>Contrôlez les informations de votre profil</p>-->
+            </div>
+        </div>
+        <div class="dropdown burger">
+            <a class="dropdown-item" class="btn btn-secondary dropdown-toggle"
+                    href="{{ path('site_index') }}">
+                <button class="btn btn-secondary dropdown-toggle"><i class="fa fa-home" style="font-size:24px"></i>
+                </button>
+            </a>
+        </div>
+    </header>
+
+
+<div class="main-title">
+    <div class="container">
+        <h1>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</h1>
+    </div>
+</div>
+
+<div class="pt-3 pb-3">
+    <div class="container">
+        <p class="text-center">
+            <a href="{{ path('userslp_portail') }}" title="Completer mon profile" class="btn btn-lg btn-primary">Compléter
+                mon profil
+            </a>
+        </p>
+    </div>
+</div>
+
+<div class="col-12" >
+    {% include 'footer.html.twig' %}
+</div>
+
+
+
+{% endblock body %}

@@ -1,0 +1,783 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/Dashboard/programme_budget.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+
+{% endblock %}
+
+{% block body %}
+    <div>
+        <header>
+            <div id="carousel-slp" class="carousel slide" data-ride="carousel">
+
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <img class="d-block w-100 image-header"
+                             src="{{ asset('images/dashboard/programme-budget-dashboard.png') }}"
+                             alt="Dashboard">
+                    </div>
+                </div>
+                <div class="dropdown burger">
+                    <a class="dropdown-item btn btn-secondary dropdown-toggle" href="{{ path('site_index') }}">
+                        <button class="btn btn-secondary dropdown-toggle"><i class="fa fa-home"
+                                                                             style="font-size:24px"></i>
+
+                        </button>
+                    </a>
+                </div>
+
+            </div>
+        </header>
+    </div>
+    <div class="programmeN2">
+            <div class="row justify-content-center periode">
+                <div class="col-xs-4">
+                    <img src="{{ asset('images/dashboard/budget/annuel5.jpg') }}">
+                </div>
+                <div class="col-xs-4">
+                    <img src="{{ asset('images/dashboard/budget/semestriel1.jpg') }}">
+                </div>
+                <div class="col-xs-4">
+                    <img src="{{ asset('images/dashboard/budget/trimestriel1.jpg') }}">
+                </div>
+                <div class="col-xs-4">
+                    <img src="{{ asset('images/dashboard/budget/mensuel4.jpg') }}">
+                </div>
+                <div class="col-xs-4">
+                    <img src="{{ asset('images/dashboard/budget/Hebdomadaire1.jpg') }}">
+                </div>
+            </div>
+            <div class="myThemes">
+                <div class="row themes">
+                    <div class="col-xs-4 theme">
+                        <img src="{{ asset('images/dashboard/budget/se-distraire.png') }}">
+                    </div>
+                    <div class="col-xs-4 theme">
+                        <img src="{{ asset('images/dashboard/budget/prendre-soin-de-soi.png') }}">
+                    </div>
+                    <div class="col-xs-4 theme">
+                        <img src="{{ asset('images/dashboard/budget/travailler.png') }}">
+                    </div>
+                </div>
+                <div class="row align-items-center themes">
+                    <div class="col-xs-4 theme">
+                        <img src="{{ asset('images/dashboard/budget/habiter.png') }}">
+                    </div>
+                    <div class="col-xs-4 theme centre">
+                        <img src="{{ asset('images/dashboard/budget/cercle.png') }}">
+                    </div>
+                    <div class="col-xs-4 theme">
+                        <img src="{{ asset('images/dashboard/budget/shabiller.png') }}">
+                    </div>
+                </div>
+                <div class="row themes">
+                    <div class="col-xs-4 theme">
+                        <img src="{{ asset('images/dashboard/budget/se-déplacer.png') }}">
+                    </div>
+                    <div class="col-xs-4 theme">
+                        <img src="{{ asset('images/dashboard/budget/communiquer.png') }}">
+                    </div>
+                    <div class="col-xs-4 theme">
+                        <img src="{{ asset('images/dashboard/budget/manger.png') }}">
+                    </div>
+                </div>
+            </div>
+            <div class="mySpecTheme manger">
+                <h1>Budget Manger</h1>
+                <div class="row justify-content-center periode">
+                    <div class="col-xs-4">
+                        <img src="{{ asset('images/dashboard/budget/annuel5.jpg') }}">
+                    </div>
+                    <div class="col-xs-4">
+                        <img src="{{ asset('images/dashboard/budget/semestriel1.jpg') }}">
+                    </div>
+                    <div class="col-xs-4">
+                        <img src="{{ asset('images/dashboard/budget/trimestriel1.jpg') }}">
+                    </div>
+                    <div class="col-xs-4">
+                        <img src="{{ asset('images/dashboard/budget/mensuel4.jpg') }}">
+                    </div>
+                    <div class="col-xs-4">
+                        <img src="{{ asset('images/dashboard/budget/Hebdomadaire1.jpg') }}">
+                    </div>
+                </div>
+                <div class="logo">
+                    <img src="{{ asset('images/dashboard/budget/manger3.png') }}">
+                </div>
+                <div class="mySpec">
+                    <div>
+                        <h3>Boisson</h3>
+                    </div>
+                    <div class="totalCat">
+                        <span>
+                            20€<br />
+                            Mois précédent 40€
+                        </span>
+                    </div>
+                    <div class="cat">
+                        <div class="row justify-content-center">
+                            <div class="col-xs-4">
+                                <img src="{{ asset('images/dashboard/budget/eau.png') }}">
+                                <h4>Eau</h4>
+                            </div>
+                            <div class="col-xs-4">
+                                <img src="{{ asset('images/dashboard/budget/the.png') }}">
+                                <h4>Café/Thé</h4>
+                            </div>
+                            <div class="col-xs-4">
+                                <img src="{{ asset('images/dashboard/budget/boisson-vegetal.png') }}">
+                                <h4>Boissons végétale</h4>
+                                <p>(lait de soja, lait d'amandes, lait d'avoine...)</p>
+                            </div>
+                        </div>
+                        <div class="intro">
+                            <p>
+                                <b>Cochez</b> les <b>cases</b> pour <b>valider</b> ces <b>informations</b> quand vous les <b>connaissez</b>.<br />
+                               <b>Si</b> vous ne <b>cochez pas une case</b>, le <b>système considérera</b> que vous <b>ignorez l'information</b> et vous <b>proposera</b> de <b>poser</b> une <b>question</b>.
+                            </p>
+                        </div>
+                        <div class="subcat">
+                            <div class="row title">
+                                <div class="col-xs-3">
+                                    <h5 class="produit">lait de soja</h5>
+                                </div>
+                                <div class="col-xs-3">
+                                    <h5 class="produit">lait d'avoine</h5>
+                                </div>
+                                <div class="col-xs-3">
+                                    <h5 class="produit">lait d'amandes</h5>
+                                </div>
+                                <div class="col-xs-3">
+                                    <h5><img src="{{ asset('images/dashboard/budget/plus.png') }}" />Ajouter produits</h5>
+                                </div>
+                            </div>
+                            <div class="DetailProduit">
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <label class="containerCheckbox boxbottom">
+                                            Achat en supermarché
+                                            <input type="checkbox">
+                                            <span class="checkmark boxbottom"></span>
+                                        </label>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <label class="containerCheckbox boxbottom">
+                                            Emballages
+                                            <input type="checkbox">
+                                            <span class="checkmark boxbottom"></span>
+                                        </label>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <label class="containerCheckbox boxbottom">
+                                            Produit de saison
+                                            <input type="checkbox">
+                                            <span class="checkmark boxbottom"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div clasS="col-xs-6">
+                                        <label class="containerCheckbox boxbottom">
+                                            Label qualité<br />
+                                            (Biologique,labe rouge, bleu blanc coeur...)
+                                            <input type="checkbox">
+                                            <span class="checkmark boxbottom"></span>
+                                        </label>
+                                    </div>
+                                    <div clasS="col-xs-6">
+                                        <label class="containerCheckbox boxbottom">
+                                            Connaissance composition
+                                            <input type="checkbox">
+                                            <span class="checkmark boxbottom"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-4 origine">
+                                        <h4>Connaissance de l'origine</h4>
+                                        <label class="containerCheckbox">
+                                            EU
+                                            <input type="checkbox">
+                                            <span class="checkmark boxright"></span>
+                                        </label>
+                                        <label class="containerCheckbox">
+                                            National
+                                            <input type="checkbox">
+                                            <span class="checkmark boxright"></span>
+                                        </label>
+                                        <label class="containerCheckbox">
+                                            Local
+                                            <input type="checkbox">
+                                            <span class="checkmark boxright"></span>
+                                        </label>
+                                        <label class="containerCheckbox">
+                                            Hors EU
+                                            <input type="checkbox">
+                                            <span class="checkmark boxright"></span>
+                                        </label>
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                <label class="containerCheckbox boxbottom">
+                                                   Contenant OGM
+                                                    <input type="checkbox">
+                                                    <span class="checkmark boxbottom"></span>
+                                                </label>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <label class="containerCheckbox boxbottom">
+                                                    Produits transformés ?
+                                                    <input type="checkbox">
+                                                    <span class="checkmark boxbottom"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="additifs">
+                                            <h4>Contenant additifs alimentaires</h4>
+                                            <div class="row">
+                                                <div class="col-xs-4">
+                                                    <label class="containerCheckbox">
+                                                        E102
+                                                        <input type="checkbox">
+                                                        <span class="checkmark boxright"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <label class="containerCheckbox">
+                                                        E104
+                                                        <input type="checkbox">
+                                                        <span class="checkmark boxright"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <label class="containerCheckbox">
+                                                        E110
+                                                        <input type="checkbox">
+                                                        <span class="checkmark boxright"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-4">
+                                                    <label class="containerCheckbox">
+                                                        E122
+                                                        <input type="checkbox">
+                                                        <span class="checkmark boxright"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <label class="containerCheckbox">
+                                                        E124
+                                                        <input type="checkbox">
+                                                        <span class="checkmark boxright"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <label class="containerCheckbox">
+                                                        E129
+                                                        <input type="checkbox">
+                                                        <span class="checkmark boxright"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-4">
+                                                    <label class="containerCheckbox">
+                                                        E150c
+                                                        <input type="checkbox">
+                                                        <span class="checkmark boxright"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <label class="containerCheckbox">
+                                                        E150d
+                                                        <input type="checkbox">
+                                                        <span class="checkmark boxright"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <label class="containerCheckbox">
+                                                        E210
+                                                        <input type="checkbox">
+                                                        <span class="checkmark boxright"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-4">
+                                                    <label class="containerCheckbox">
+                                                        E211
+                                                        <input type="checkbox">
+                                                        <span class="checkmark boxright"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <label class="containerCheckbox">
+                                                        E212
+                                                        <input type="checkbox">
+                                                        <span class="checkmark boxright"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <label class="containerCheckbox">
+                                                        E213
+                                                        <input type="checkbox">
+                                                        <span class="checkmark boxright"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-4">
+                                                    <label class="containerCheckbox">
+                                                        E249
+                                                        <input type="checkbox">
+                                                        <span class="checkmark boxright"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <label class="containerCheckbox">
+                                                        250
+                                                        <input type="checkbox">
+                                                        <span class="checkmark boxright"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <label class="containerCheckbox">
+                                                        E251
+                                                        <input type="checkbox">
+                                                        <span class="checkmark boxright"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-4">
+                                                    <label class="containerCheckbox">
+                                                        E252
+                                                        <input type="checkbox">
+                                                        <span class="checkmark boxright"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <label class="containerCheckbox">
+                                                        E284
+                                                        <input type="checkbox">
+                                                        <span class="checkmark boxright"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <label class="containerCheckbox">
+                                                        E285
+                                                        <input type="checkbox">
+                                                        <span class="checkmark boxright"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-4">
+                                                    <label class="containerCheckbox">
+                                                        E320
+                                                        <input type="checkbox">
+                                                        <span class="checkmark boxright"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="huiles">
+                                    <h4>Contenant des huiles</h4>
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <label class="containerCheckbox">
+                                                Huile de palme
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <label class="containerCheckbox">
+                                                Graisse palmiste Huile végétale
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <label class="containerCheckbox">
+                                                Graisse végétale
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <label class="containerCheckbox">
+                                                Huile palmiste
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <label class="containerCheckbox">
+                                                Mono-di-glycéride d'acides gras
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <label class="containerCheckbox">
+                                                Graisse de palme
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <label class="containerCheckbox">
+                                                Huile végétale hydrogénée
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <label class="containerCheckbox">
+                                                Sucroesters d'acides gras
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <label class="containerCheckbox">
+                                                Stéarine de palme
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <label class="containerCheckbox">
+                                                Monostéarate de glycérol Oléïne de palme
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sucres">
+                                    <h4>Contenant du sucres cachés</h4>
+                                    <div class="row">
+                                        <div class="col-xs-2">
+                                            <label class="containerCheckbox">
+                                                Glucose
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <label class="containerCheckbox">
+                                                Fructose
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <label class="containerCheckbox">
+                                                Dextose
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <label class="containerCheckbox">
+                                                Maltose
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <label class="containerCheckbox">
+                                                Sorbitol
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <label class="containerCheckbox">
+                                                Mélasse
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <label class="containerCheckbox">
+                                                Sirop de riz brun
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <label class="containerCheckbox">
+                                                Miel
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <label class="containerCheckbox">
+                                                Sirop de maïs
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <label class="containerCheckbox">
+                                                Sirop de malt
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <label class="containerCheckbox">
+                                                Sirop de maïs à haute teneur en fructose
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <label class="containerCheckbox">
+                                                Jus de canne
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <label class="containerCheckbox">
+                                                Dextrine
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <label class="containerCheckbox">
+                                                Agave
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <label class="containerCheckbox">
+                                                Sucre de palme
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <label class="containerCheckbox">
+                                                Sucrose
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <label class="containerCheckbox">
+                                                Saccharose
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <label class="containerCheckbox">
+                                                Sucre de table
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <label class="containerCheckbox">
+                                                Sirop d'érable
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <label class="containerCheckbox">
+                                                Maltodextrine
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <label class="containerCheckbox">
+                                                Sirop de Caroube
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                    </div><div class="row">
+                                        <div class="col-xs-3">
+                                            <label class="containerCheckbox">
+                                                Sucre de betterave
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <label class="containerCheckbox">
+                                                Sucre glace
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <label class="containerCheckbox">
+                                                Sucre brun
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <label class="containerCheckbox">
+                                                Malt d'orge
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <label class="containerCheckbox">
+                                                Cassonade
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <label class="containerCheckbox">
+                                                Caramel
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <label class="containerCheckbox">
+                                                Sucre roux
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <label class="containerCheckbox">
+                                                Galactose
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-2">
+                                            <label class="containerCheckbox">
+                                                Lactose
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <label class="containerCheckbox">
+                                                Ethyl-maltol
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <label class="containerCheckbox">
+                                                Sucre de noix de coco
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <label class="containerCheckbox">
+                                                Sucre de canne
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-2">
+                                            <label class="containerCheckbox">
+                                                Sucanat
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <label class="containerCheckbox">
+                                                Jus de fruits
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <label class="containerCheckbox">
+                                                jus de fruits concentré
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <label class="containerCheckbox">
+                                                Sirop de Sorgo
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <label class="containerCheckbox">
+                                                Fructose cristallisé
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <label class="containerCheckbox">
+                                                Rapadura
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <label class="containerCheckbox">
+                                                Sucre Muscovado
+                                                <input type="checkbox">
+                                                <span class="checkmark boxright"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="validation">
+                                        <h2>Valider</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}

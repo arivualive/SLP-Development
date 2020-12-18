@@ -1,0 +1,143 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/ecoatelier.css') }}">
+{% endblock %}
+
+{% block body %}
+
+    <header>
+        <div class="content">
+            <div class="text-content">
+                <p class="menu-icon" style="display:flex;width:340px">
+                    <a href="{{ path('fos_user_registration_register') }}" style="background-color:white;color:#337ab7;width:190px;height:35px;margin:auto;line-height:35px;font-size:16px;text-transform:uppercase">
+                        Inscription
+                    </a>
+                    <a href="">
+                        <span class="glyphicon glyphicon-menu-hamburger"></span>
+                    </a>
+                </p>
+                <h1>ATELIERS ECO</h1>
+                <p class="text">ALIMENTATION / MODE / MAQUILLAGE / SANTÉ / CHOISIR & CONSOMMER / 0 WASTE</p>
+                <p>
+                    <a href="#ateliers">
+                        <span class="glyphicon glyphicon-menu-down"></span>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+
+        <section id="ateliers" class="ateliers">
+            <div class="content row">
+                <div class="col-md-4 text-content">
+                    <div class="image">
+                        <img src="{{ asset('images/atelier-eco/atelier_alimentation.png') }}" alt="citron" />
+                    </div>
+                    <h2>ATELIER <br/>ALIMENTATION</h2>
+                    <p class="test">
+                        Que ce soit l'hiver ou l'été, découvrez dans l'atelier alimentation les meilleures recettes et
+                        produits de saison qui feront du bien à votre corps.
+                    </p>
+                    <a href="{# {{ path('atelier-alimentation') }} #}" target="_blank" role="button">Plus d'infos</a>
+                </div>
+                <div class="col-md-4 text-content">
+                    <div class="image">
+                        <img src="{{ asset('images/atelier-eco/atelier_mode.png') }}" alt="fil avec une épingle" />
+                    </div>
+                    <h2>ATELIER <br/>MODE</h2>
+                    <p>
+                        Pour rester tendance, notre atelier mode vous fournit des précieux conseils sur le recyclage de vos
+                        vêtements, des astuces pour recoudre un bouton, transformer une chemise de votre compagnon en joli 
+                        petit haut.
+                    </p>
+                    <a href="{# {{ path('atelier-mode') }} #}" target="_blank" role="button">Plus d'infos</a>
+                </div>
+                <div class="col-md-4 text-content">
+                    <div class="image">
+                        <img src="{{ asset('images/atelier-eco/atelier_maquillage.png') }}" alt="rouge à lèvres et poudre" />
+                    </div>
+                    <h2>ATELIER <br/>MAQUILLAGE</h2>
+                    <p>
+                        Crèmes, eye-liner, fond de teint, ... Vous en êtes accro ? Suivez nos astuces pour réussir à tous 
+                        les coups à vous maquiller, prendre soin de votre visage et de votre corps avec des produits naturels !
+                    </p>
+                    <a href="{# {{ path('atelier-maquillage') }} #}" target="_blank" role="button">Plus d'infos</a>
+                </div>
+            </div>
+            <div class="content row">
+                <div class="col-md-4 text-content">
+                    <div class="image">
+                        <img src="{{ asset('images/atelier-eco/atelier_sante.png') }}" alt="trousse à pharmacie" />
+                    </div>
+                    <h2>ATELIER <br/>SANTÉ</h2>
+                    <p>
+                        Vous êtes souvent sujet à tomber malade ? Notre atelier santé vous conseille sur les différentes vitamines
+                         et aliments qui vont booster votre organisme.
+                    </p>
+                    <a href="{# {{ path('atelier-sante') }} #}" target="_blank" role="button">Plus d'infos</a>
+                </div>
+                <div class="col-md-4 text-content">
+                    <div class="image">
+                        <img src="{{ asset('images/atelier-eco/atelier_choisir_et_consommer.png') }}" alt="best choise" />
+                    </div>
+                    <h2>ATELIER <br/><span>CHOISIR & CONSOMMER</span></h2>
+                    <p>
+                        Êtes-vous sûr de manger vraiment bio ? Autrement dit, êtes-vous sûr de la qualité des aliments que vous 
+                        achetez et consommez ?
+                    </p>
+                    <a href="{# {{ path('atelier-choisirConsommer') }} #}" target="_blank" role="button">Plus d'infos</a>
+                </div>
+                <div class="col-md-4 text-content">
+                    <div class="image">
+                        <img src="{{ asset('images/atelier-eco/atelier_zero_waste.png') }}" alt="bonhomme qui met du papier à la poubelle" />
+                    </div>
+                    <h2>ATELIER <br/>ZÉRO WASTE</h2>
+                    <p>
+                        Trop d'aliments dans votre frigo ? Vous ne voulez pas gaspiller mais vous ne savez pas quoi en faire ? 
+                        Pas de soucis, venez découvrir grâce à notre atelier toutes les alternatives qui s'offrent à vous face 
+                        à ce dilemne !
+                    </p>
+                    <a href="{# {{ path('atelier-zeroWaste') }} #}" target="_blank" role="button">Plus d'infos</a>
+                </div>
+            </div>
+        </section>
+
+        <!--<section class="form">
+            <div class="content row">
+                <h3>FORMULAIRE D'INSCRIPTION <br/> ATELIERS ECO</h3>
+
+                {# Modifier la manière de traiter les infos. Créer un form symfony et traiter dans controller #}
+
+                <form method="post" action="ecoatelieraction.php" id="form-atelier">
+                    <div class="col-md-6 input-block">
+                        <select name="atelier" size="1">
+                            <option value="" selected disabled>Choix de l'atelier</option>
+                            <option value="alimentation">Atelier alimentation</option>
+                            <option value="mode">Atelier mode</option>
+                            <option value="maquillage">Atelier maquillage</option>
+                            <option value="sante">Atelier santé</option>
+                            <option value="choisir">Atelier choisir & consommer</option>
+                            <option value="zeroWaster">Atelier zéro waste</option>
+                        </select>
+                        <input type="text" name="lastName" placeholder="Nom"></input>
+                        <input type="text" name="firstName" placeholder="Prénom"></input>
+                    </div>
+                    <div class="col-md-6 input-block">
+                        <input type="text" name="email" placeholder="Email"></input>
+                        <input type="text" name="tel" placeholder="Téléphone"></input>
+                        <input type="text" name="comm" placeholder="Commentaire"></input>
+                    </div>
+                    <input type="submit" value="ENVOYER"></input>
+                </form>
+            </div>
+
+            <div class="message-info">
+                {# <?php $session->flash(); ?> #}
+            </div>
+        </section>-->
+    </div>
+
+{% endblock %}

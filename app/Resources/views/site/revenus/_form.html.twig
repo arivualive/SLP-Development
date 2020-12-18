@@ -1,0 +1,19 @@
+{{ form_start(form) }}
+{{ form_label(form.mainRevenues, 'Revenu principaux') }}
+{{ form_widget(form.mainRevenues) }}
+{{ form_label(form.otherRevenues, 'Autres revenus') }}
+{{ form_widget(form.otherRevenues) }}
+{{ button_label|default('Modifier mes revenus') }}
+{{ form_end(form) }}
+
+{#
+    EXEMPLE DE BOUTON :
+
+        <button class="btn btn-success" style="width:150px;">
+            {{ button_label|default('Enregistrer') }}
+        </button>
+    </div>
+</div>
+{{ form_end(form) }}
+    
+#}

@@ -1,0 +1,978 @@
+{% extends 'jquery-ui-dependencies.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/Dashboard/programme_budget_depenses.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/jquery/blue-form-widgets/blue-slp-theme.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+    
+{% endblock %}
+
+{% block body %}
+    
+
+    <div class="header">
+        <div class="dropdown burger above-image">
+        </div>
+        <h1>PROGRAMME BUDGET<br>DASHBOARD</h1>
+        <div class="image-container">
+            <div class="blue-film"></div>
+            <img class="below-film" src="{{ asset('images/dashboard/dashboard-budget-header.png') }}">
+            <a href="#">
+                <div class="dollar-img-container">
+                    <img class="dollar-img" src="{{ asset('images/budget/individumenage/dollars.png') }}" />
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+    
+    <div class="choix">
+        <p class="enter-spendings-title">Entrez vos dépenses principales hebdomadaires, mensuelles et annuelles.</p>
+
+        {% include('site/general-budget-spendings-by-periods/periods/week-spendings.html.twig') %}
+
+        {% include('site/general-budget-spendings-by-periods/periods/month-spendings.html.twig') %}
+
+        {% include('site/general-budget-spendings-by-periods/periods/year-spendings.html.twig') %}
+
+        <!--<div class="category-row">
+            <div class="category-image-container">
+                <div class="blue-film"></div>
+                <img class="category-image" src="{# asset('images/budget/individumenage/week-end.jpg') #}" />
+                <div class="category-text-container"><p>Budget escapades week-end (montant de réserve épargné  mensuellement)</p></div>
+            </div>
+
+            <div class="category-image-container">
+                <img class="category-image" src="{# asset('images/budget/individumenage/week-end.jpg') #}" />
+                <div class="category-text-container"><p>Budget escapades week-end (montant de réserve épargné  mensuellement)</p></div>
+            </div>
+
+            <div class="category-image-container">
+                <img class="category-image" src="{# asset('images/budget/individumenage/week-end.jpg') #}" />
+                <div class="category-text-container"><p>Budget escapades week-end (montant de réserve épargné  mensuellement)</p></div>
+            </div>
+
+            <div class="category-image-container">
+                <img class="category-image" src="{# asset('images/budget/individumenage/week-end.jpg') #}" />
+                <div class="category-text-container"><p>Budget escapades week-end (montant de réserve épargné  mensuellement)</p></div>
+            </div>
+
+            <div class="category-list-wrap">
+                <div class="space-between-category-lines"></div>
+            </div>
+
+            <div class="category-image-container">
+                <img class="category-image" src="{# asset('images/budget/individumenage/week-end.jpg') #}" />
+                <div class="category-text-container"><p>Budget escapades week-end (montant de réserve épargné  mensuellement)</p></div>
+            </div>
+
+            <div class="category-image-container">
+                <img class="category-image" src="{# asset('images/budget/individumenage/week-end.jpg') #}" />
+                <div class="category-text-container"><p>Budget escapades week-end (montant de réserve épargné  mensuellement)</p></div>
+            </div>
+
+            <div class="category-image-container">
+                <img class="category-image" src="{# asset('images/budget/individumenage/week-end.jpg') #}" />
+                <div class="category-text-container"><p>Budget escapades week-end (montant de réserve épargné  mensuellement)</p></div>
+            </div>
+
+            <div class="category-image-container">
+                <img class="category-image" src="{# asset('images/budget/individumenage/week-end.jpg') #}" />
+                <div class="category-text-container"><p>Budget escapades week-end (montant de réserve épargné  mensuellement)</p></div>
+            </div>
+            
+        </div>-->
+
+    </div>
+    <div class="row my-row last-row ecran">
+        <!--<div id="food-products-itms" class="col-md-3 theme">
+            <div class="image-container">
+                <div class="blue-film"></div>
+                <img class="below-film" src="{{ asset('images/budget/individumenage/produits-alimentaires.jpg') }}">
+            </div>
+            <p class="category-title with-bigger-margin-top">Produits alimentaires</p>
+            </div>
+        </div>-->
+    </div>
+        
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/budget/spendings.js') }}"></script>
+    <script>
+
+        // to prevent the user from entering letters in field
+        $(document).ready(function() {
+            $(".numeric-field").keypress(function(e) {
+                var keyCode = e.which;
+                /*
+                8 - (backspace)
+                32 - (space)
+                48-57 - (0-9)Numbers
+                */
+
+                if ( (keyCode != 8 || keyCode ==32 ) && (keyCode < 48 || keyCode > 57)) {
+                    //showNoCharactersNotification();
+                    return false;
+                } else {
+                    //hideNoCharactersNotification();
+                }
+            });
+        });
+
+
+
+        // set the values in the form for fiels of user's already existing spendings
+
+        //productName = $('.product-name');
+        /*quantityValue = $('.quantity-value');
+        brandName = $('.brand-name');*/
+
+        //$('.what-field').val(productName);
+        /*quantityValue.each({
+
+        });
+        $('.what-field').val(productName);
+        $('.quantity-field').val(productName);*/
+
+        // when the user clicks on validation button
+        /*
+        $(".non-alcoholic-drinks-validation-button").click(function() {
+            category = $(this).parents('.general-spendings-form-container').find('.category').text();
+            console.log('category:');
+            console.log(category);
+            formValidation(category);
+        });
+
+        $(".tobbacco-validation-button").click(function() {
+            category = $(this).parents('.general-spendings-form-container').find('.category').text();
+            console.log('category:');
+            console.log(category);
+            formValidation(category);
+        });
+
+        $(".food-products-validation-button").click(function() {
+            category = $(this).parents('.general-spendings-form-container').find('.category').text();
+            console.log('category:');
+            console.log(category);
+            formValidation(category);
+        });
+
+        $(".alcoholic-drinks-validation-button").click(function() {
+            category = $(this).parents('.general-spendings-form-container').find('.category').text();
+            console.log('category:');
+            console.log(category);
+            formValidation(category);
+        });*/
+
+        $('.form-validation-button').click(function(){
+            console.log('validation button listener detected click');
+            category = $(this).data("category");
+            //allSubCategories = $('.'+category+'form-container').find('.subcategory-container');
+            //allSubCategories.each(function(){
+                //$(this).find('product-line');
+            //})
+            formValidation(category, $(this));
+        });
+
+
+        function formValidation(category, button) {
+            //myList = $(this).parents('.non-alcoholic-drinks-form-container').find('.product-line')/*.find('.row')*/;
+
+            console.log('category : ');
+            console.log(category);
+
+
+            myList = button.parents('.'+category+'-form-container').find('.product-line')/*.find('.row')*/;
+
+            console.log(myList);
+
+            var array = new Array();
+            var iteration = 0;
+
+            var idValue = null;
+
+            var period = $('.period').text();
+
+            /*console.log("period :");
+            console.log(period);*/
+
+            myList.each(function() {
+                console.log('list iteration');
+                //nameAttribute = $(this).attr("class");
+                console.log(this);
+                //subcategory = nameAttribute.val();
+
+                idValue = $(this).data("id");
+
+                //idValue = $(this).find('.spending').text();
+
+                if (!idValue) {
+                    idValue = null;
+                }
+
+                /*console.log('id value :');
+                console.log(idValue);*/
+
+                //idValue = null;
+
+                subcategory = $(this).find('.subcategory').text();
+
+                whatValue = $(this).find('.what-field').val();
+                quantityValue = $(this).find('.quantity-field').val();
+                brandValue = $(this).find('.brand-field').val();
+                amountValue = $(this).find('.amount').val();
+                currencyValue = $(this).find('.ui-selectmenu-text').text();
+
+                /*console.log('nouvelle itération :');
+                console.log(subcategory);
+                console.log(whatValue);
+                console.log(quantityValue);
+                console.log(brandValue);
+                console.log(amountValue);
+                console.log(currencyValue);*/
+
+                if (whatValue != 0 && quantityValue != 0 && brandValue != 0 && amountValue != 0) {
+                    //console.log('no empty field');
+                    var miniArray = {
+                        "id" : idValue,
+                        "name" : whatValue,
+                        "quantity" : quantityValue,
+                        "brand" : brandValue,
+                        "amount" : amountValue,
+                        "currency" : currencyValue,
+                        "subcategory" : subcategory,
+                        "period" : period
+                    };
+                    //console.log('full form row');
+                    //console.log(miniArray);
+                    array.push(miniArray);
+                    iteration += Number(1);
+                }
+            });
+
+            //console.log(array);
+
+            var myJSON = JSON.stringify(array);
+
+            //console.log(myJSON);
+
+            $(document).ready(function() {
+                $.ajax({
+                    url:'/ajax_spendings_update',
+                    type: "POST",
+                    dataType: "json",
+                    data: {
+                      "myJSON": myJSON
+                    },
+                    async: true,
+                    success: function (data)
+                    {
+                      myJSON;
+                    },
+                    complete: function (xhr,status)
+                    {
+                      console.log("ajax request completed");
+                    }
+                });
+            });
+        }
+
+        var converter = ""; //valeur de 1CHF = {value}EUR
+        $.ajax({
+          url: "http://api.devises.zone/v1/quotes/CHF/EUR/json?qty=1&key=2672|4Fc1DMTXFnjjttLLagR0PypZ5xsRox0U",
+          method: "GET"
+        })
+        .done(function(data) {
+          //console.log(data);
+          converter = data.result.value;
+          //console.log(converter);
+        })
+        .fail(function( jqXHR, textStatus ) {
+        });
+
+        // get equivalent value in CHF
+        var convertMoney = function(price) {
+            equivalentInChf = price*converter;
+            //console.log("in chf : "+equivalentInChf);
+            return equivalentInChf;
+        }
+
+        // reverse operation
+        var reverseConvertMoney = function(price) {
+            equivalentInChf = price/converter;
+            //console.log("in chf : "+equivalentInChf);
+            return equivalentInChf;
+        }
+
+        previouslyClickedCurrency = "CHF";
+
+        // quand on clique sur une option dépliée du menu déroulant généré par jquery-ui
+        $('.currency-selectmenu-container').find('.ui-selectmenu-button').click(function(converter) {
+            //calculateTotalAmount(converter);
+            event = "click-currency-dropdown-list";
+
+            calculateTotalAmount(event);
+        });
+
+        $('select').on('selectmenuchange', function() {
+            //alert( this.value );
+            event = "click-currency-dropdown-list";
+            calculateTotalAmount(event);
+        });
+
+        /*$(".total-amount-currency-dropdown-list").find('.ui-selectmenu-button').click(function() {
+            event = "click-total-amount-currency-dropdown-list";
+            calculateTotalAmount(event);
+        });*/
+
+        $('.total-amount-currency-dropdown-list').find('select').on('selectmenuchange', function() {
+            //alert( this.value );
+            event = "click-total-amount-currency-dropdown-list";
+            calculateTotalAmount(event);
+        });
+
+        var calculateTotalAmount = function (event) {
+            //console.log(converter);
+            // non alcoholic drinks
+
+            var categories = $('.category');
+            //console.log('categories :');
+            //console.log(categories);
+            categories.each(function() {
+
+                var nonAlcoholicDrinkSum = 0;
+                var iteration = 0;
+
+                //console.log('category : ');
+                category = $(this).text();
+                //console.log(category);
+                $('.'+category+'-form-container').find('.amount').each(function() {
+                    //console.log(".amount-field :");
+                    //console.log($(this));
+                    // if currency CHF no conversion else find equivalent in CHF
+                    iteration +=  Number(1);
+                    amountInput = $(this);
+                    //console.log('amount input below :');
+                    //console.log(amountInput);
+                    price = amountInput.val();
+                    //console.log('price value below : ');
+                    //console.log(price);
+
+                    commonAncestor = amountInput.parents('.product-line');
+
+                    currencyDropdownListContainer = commonAncestor.find('.currency-selectmenu-container');
+
+                    //console.log('currencyDropdownListContainer :');
+                    //console.log(currencyDropdownListContainer);
+
+                    selectedCurrency = currencyDropdownListContainer.find('.ui-selectmenu-text').text();
+                    //console.log('selected currency '+iteration+' : '+selectedCurrency);
+
+                    if(selectedCurrency != 'CHF') {
+                        //console.log('selectedCurrency is not CHF');
+                        equivalentInChf = convertMoney(price);
+                        //console.log("in CHF : "+price);
+                        nonAlcoholicDrinkSum += Number(equivalentInChf);
+
+                    } else {
+                        //console.log('selectedCurrency is CHF');
+                        equivalentInChf = price;
+                        nonAlcoholicDrinkSum += Number(price);
+
+                    }
+                });
+
+                //console.log(nonAlcoholicDrinkSum);
+
+                $('.'+category+'-form-container').find('.total-amount').val(nonAlcoholicDrinkSum);
+
+                if (event == "entering-spendings-in-fields") {
+
+                } else if (event == "click-currency-dropdown-list") {
+
+                } else if (event == "click-total-amount-currency-dropdown-list") {
+                    ///////////////////////////////////////////////
+                    // update total amount value if currency change
+                    ///////////////////////////////////////////////
+
+                    //totalAmountCurrencyDropdownList = $(this);
+
+                    totalAmountCurrencyDropdownList = $('.'+category+'-form-container').find('.total-amount-currency-dropdown-list');
+
+                    //console.log('total amount currency dropdown list below :');
+                    //console.log(totalAmountCurrencyDropdownList);
+
+                    currency = totalAmountCurrencyDropdownList.find('.ui-selectmenu-text').text();
+
+                    //console.log('currencyBelow');
+                    //console.log(currency);
+
+                    formContainer = totalAmountCurrencyDropdownList.parents('.'+category+'-form-container');
+
+                    //console.log('catTotalAmountAndCurrency value below');
+                    //console.log(catTotalAmountAndCurrency);
+
+                    totalAmountField = formContainer.find('.total-amount');
+
+                    //console.log('totalAmountField value below');
+                    //console.log(totalAmountField);
+
+                    totalAmountValue = totalAmountField.val();
+
+                    //console.log('totalAmountValue value below');
+                    //console.log(totalAmountValue);
+
+                    var convertedTotalAmountvalue = null;
+                    var action = null;
+
+                    //console.log('previouslyClickedCurrency value below');
+                    //console.log(previouslyClickedCurrency);
+
+                    if (currency == 'CHF') {
+                        //console.log('CHF');
+                        if (previouslyClickedCurrency == 'EUR') {
+                        //console.log('previously clicked on  EUR');
+                        //console.log(totalAmountValue);
+                        //convertedTotalAmountvalue = reverseConvertMoney(totalAmountValue);
+                        convertedTotalAmountvalue = totalAmountValue;
+                        action = 'change-input-value';
+                        }
+                        previouslyClickedCurrency = "CHF";
+                    } else if (currency == 'EUR') {
+                        //console.log('EUR');
+                        if(previouslyClickedCurrency == 'CHF') {
+                        convertedTotalAmountvalue = convertMoney(totalAmountValue);
+                        action = 'change-input-value';
+                        }
+                        previouslyClickedCurrency = "EUR";
+                    }
+
+                    if (action == 'change-input-value') {
+                        totalAmountField.val(convertedTotalAmountvalue);
+                    }
+
+                    //console.log('convertedTotalAmountvalue value below');
+                    //console.log(convertedTotalAmountvalue);
+                }
+            });
+        };
+
+        $('.amount').keyup(function(evt) {
+            //calculateTotalAmount(converter);
+            //console.log(converter);
+            event = "entering-spendings-in-fields";
+            calculateTotalAmount(event);
+        });
+
+
+        var addedSelecmenuLineIteration = 0;
+
+
+        $(".add-meat").click(function() {
+            addFormLine(this, 'meat');
+        });
+
+        $(".add-alcohol").click(function() {
+            addFormLine(this, 'alcohol');
+        });
+
+        $(".add-complete-starch").click(function() {
+            addFormLine(this, 'complete-starch');
+        });
+
+        $(".add-refined-starchy").click(function() {
+            addFormLine(this, 'refined-starch');
+        });
+
+        $(".add-milk").click(function() {
+            addFormLine(this, 'milk');
+        });
+
+        $(".add-cheese").click(function() {
+            addFormLine(this, 'cheese');
+        });
+
+        $(".add-egg").click(function() {
+            addFormLine(this, 'egg');
+        });
+
+        $(".add-lean-fish").click(function() {
+            addFormLine(this, 'lean-fish');
+        });
+
+        $(".add-oily-fish").click(function() {
+            addFormLine(this, 'oily-fish');
+        });
+
+        $(".add-fresh-fruit").click(function() {
+            addFormLine(this, 'fresh-fruit');
+        });
+
+        $(".add-dried-fruit").click(function() {
+            addFormLine(this, 'dried-fruit');
+        });
+
+        $(".add-processed-fruit").click(function() {
+            addFormLine(this, 'processed-fruit');
+        });
+
+        $(".add-vegetable").click(function() {
+            addFormLine(this, 'vegetable');
+        });
+
+        $(".add-tobbacco").click(function() {
+            addFormLine(this, 'tobbacco');
+        });
+
+        $(".add-water").click(function() {
+            addFormLine(this, 'water');
+        });
+
+        $(".add-coffee").click(function() {
+            addFormLine(this, 'coffee');
+        });
+
+        $(".add-tea").click(function() {
+            addFormLine(this, 'tea');
+        });
+
+        $(".add-soft-drink").click(function() {
+            addFormLine(this, 'tea');
+        });
+
+        $(".add-vegetable-drink").click(function() {
+            addFormLine(this, 'tea');
+        });
+
+
+        function addFormLine(addOption, subcategory) {
+            addedSelecmenuLineIteration++;
+
+            //line = $(".bread-cereals-line-1");
+            line = $("."+subcategory+"-line-1");
+
+            clonedLine = line.clone();
+            //clonedLine.removeClass('bread-cereals-line-1');
+            clonedLine.removeClass(subcategory+'-line-1');
+
+            clonedLine.find('.subcategory-image').remove();
+            clonedLine.find('.subcategory-image-title').remove();
+
+            clonedLine.find('.dropdown-list').remove();
+            clonedLine.find('.ui-selectmenu-button').remove();
+
+            // new select menu
+            newSelectMenu = "<select class='dropdown-list currency-list currency-list-"+addedSelecmenuLineIteration+"'></select>";
+
+            //$('.bread-cereals-container').append(clonedLine);
+            $('.'+subcategory+'-container').append(clonedLine);
+            //$('.bread-cereals-container').append(addOption);
+            $('.'+subcategory+'-container').append(addOption);
+
+            // new select menu initialisation
+
+            clonedLine.find('.currency-selectmenu-container').append(newSelectMenu);
+
+            console.log($(".currency-list-"+addedSelecmenuLineIteration));
+
+            // to add currency select menu
+
+            $(".currency-list-"+addedSelecmenuLineIteration).selectmenu();
+
+            // Add a new option to the dropdown
+
+            $(".currency-list-"+addedSelecmenuLineIteration).append($('<option>', {
+                value: 'CHF',
+                text: 'CHF'
+            }));
+
+            $(".currency-list-"+addedSelecmenuLineIteration).append($('<option>', {
+                value: 'EUR',
+                text: 'EUR'
+            }));
+
+            //Refresh the selectmenu widget so the newly added options to the dropdown are now loaded properly
+
+            $(".currency-list-"+addedSelecmenuLineIteration).selectmenu( "refresh" );
+        }
+
+        // week
+        isNonAlcoholicDrinksLine = false;
+        isAlcoholicDrinksLine = false;
+        isTobbaccoLine = false;
+        isAddedFoodProductsLine = false;
+
+        // week
+
+        $('.non-alcoholic-drinks-items').click(function(){
+            category = 'non-alcoholic-drinks';
+            toggleAddedLine(category);
+        });
+
+        $('.alcoholic-drinks-items').click(function(){
+            category = 'alcoholic-drinks';
+            toggleAddedLine(category);
+        });
+
+        $('.tobacco-items').click(function(){
+            category = 'tobacco';
+            toggleAddedLine(category);
+            //console.log('tobacco 1');
+        });
+
+        $('.food-products-items').click(function(){
+            category = 'food-products';
+            toggleAddedLine(category);
+        });
+
+        // month
+
+        isClothesPurchaseItemsLine = false;
+        isRestaurantsHostingServicesLine = false;
+        isRentRepaymentAnnuityLine = false;
+        isTaxesLine = false;
+
+        $('.clothes-purchase-items').click(function(){
+            category = 'clothes-purchase';
+            toggleAddedLine(category);
+        });
+
+        $('.restaurants-hosting-services-items').click(function(){
+            category = 'restaurants-hosting-services';
+            toggleAddedLine(category);
+        });
+
+        $('.rent-repayment-annuity-items').click(function(){
+            category = 'rent-repayment-annuity';
+            toggleAddedLine(category);
+        });
+
+        $('.taxes-items').click(function(){
+            category = 'taxes';
+            toggleAddedLine(category);
+        });
+
+        isFuelCarStickerTollCarParkItemsLine = false;
+        isHealthInsuranceItemsLine = false;
+        isOutingsLeisureCultureItemsLine = false;
+        isHairdresserBeauticianItemsLine = false;
+
+        $('.fuel-car-sticker-toll-car-park-items').click(function(){
+            category = 'fuel-car-sticker-toll-car-park';
+            toggleAddedLine(category);
+        });
+
+        $('.health-insurance-items').click(function(){
+            category = 'health-insurance';
+            toggleAddedLine(category);
+        });
+
+        $('.outings-leisure-culture-items').click(function(){
+            category = 'outings-leisure-culture';
+            toggleAddedLine(category);
+        });
+
+        $('.hairdresser-beautician-items').click(function(){
+            category = 'hairdresser-beautician';
+            toggleAddedLine(category);
+        });
+
+        isCleaningProductsHouseworkItemsLine = false;
+        isSocialContributionItemsLine = false;
+        isCommunicationsItemsLine = false;
+        ishealthSpendingsItemsLine = false;
+
+        $('.cleaning-products-housework-items').click(function(){
+            category = 'cleaning-products-housework';
+            toggleAddedLine(category);
+        });
+
+        $('.social-contribution-items').click(function(){
+            category = 'social-contribution';
+            toggleAddedLine(category);
+        });
+
+        $('.communications-items').click(function(){
+            category = 'communications';
+            toggleAddedLine(category);
+        });
+
+        $('.health-spendings-items').click(function(){
+            category = 'health-spendings';
+            toggleAddedLine(category);
+        });
+
+        isDonationGiftInvitationItemsLine = false;
+        isSubscriptionsItemsLine = false;
+        isEnergyElectricityGazWaterItemsLine = false;
+        isTransportItemsLine = false;
+
+        $('.donation-gift-invitation-items').click(function(){
+            category = 'donation-gift-invitation';
+            toggleAddedLine(category);
+        });
+
+        $('.subscriptions-items').click(function(){
+            category = 'subscriptions';
+            toggleAddedLine(category);
+        });
+
+        $('.energy-electricity-gaz-water-items').click(function(){
+            category = 'energy-electricity-gaz-water';
+            toggleAddedLine(category);
+        });
+
+        $('.transport-items').click(function(){
+            category = 'transport';
+            toggleAddedLine(category);
+        });
+
+        isStationneryStoreStampsItemsLine = false;
+
+        $('.stationnery-store-stamps-items').click(function(){
+            category = 'stationnery-store-stamps';
+            toggleAddedLine(category);
+        });
+
+        // year
+
+        isVehicleCostsLine = false;
+        isHolidayBudgetLine = false;
+        isWeekEndBudgetLine = false;
+        isVehiclePurchaseLine = false;
+
+        $('.vehicle-costs-items').click(function(){
+            category = 'vehicle-costs';
+            toggleAddedLine(category);
+        });
+
+        $('.holiday-budget-items').click(function(){
+            category = 'holiday-budget';
+            toggleAddedLine(category);
+        });
+
+        $('.week-end-budget-items').click(function(){
+            category = 'week-end-budget';
+            toggleAddedLine(category);
+        });
+
+        $('.vehicle-purchase-items').click(function(){
+            category = 'vehicle-purchase';
+            toggleAddedLine(category);
+        });
+
+        isComputerPurchaseItemsLine = false;
+        isFurniturePurchaseItemsLine = false;
+        isToolsElectericalEquipmentPurchaseItemsLine = false;
+        isappliancesPurchaseItemsLine = false;
+
+        $('.computer-purchase-items').click(function(){
+            category = 'computer-purchase';
+            toggleAddedLine(category);
+        });
+
+        $('.furniture-purchase-items').click(function(){
+            category = 'furniture-purchase';
+            toggleAddedLine(category);
+        });
+
+        $('.tools-electerical-equipment-purchase-items').click(function(){
+            category = 'tools-electerical-equipment-purchase';
+            toggleAddedLine(category);
+        });
+
+        $('.appliances-purchase-items').click(function(){
+            category = 'appliances-purchase';
+            toggleAddedLine(category);
+        });
+
+        function showSection(category) {
+            destination = "."+category;
+            console.log(destination);
+            $('html, body').animate({
+                scrollTop: $(destination).offset().top
+            }, 2000);
+        }
+
+        function toggleAddedLine(category) {
+            $('.added-row').css("display","none");
+
+            $('.film').addClass("blue-film");
+
+            //clickableCategories = $('.clickable-category');
+            /*index = 0;
+
+            $(".clickable-category").each(function( index ) {
+
+
+                if (index == 4) {
+                    index = 0;
+                    $( "<div class='category-list-wrap'><div class='space-between-category-lines'></div></div>" ).insertAfter(this);
+                }
+                index++;
+
+                lastCategory = this;
+            });
+
+            console.log(lastCategory);
+
+            $( "<div class='category-list-wrap'><div class='space-between-category-lines'></div></div>" ).insertAfter(lastCategory);*/
+
+            clickedCategory = $('.'+category+'-items');
+
+            //console.log(clickedCategory);
+
+            $('.clickable-category').parent().css("display","flex");
+            //$('.clickable-category').find("category-image-container").css("display","flex");
+
+
+            addedLine = $('.'+category);
+
+            addedLine.css("display","flex");
+
+            addedLine.find(".added-col").css("display","flex");
+            addedLine.find(".added-col").css("flex-direction","row");
+            addedLine.find(".added-col").css("justify-content","center");
+
+            /*addedLine.child().css("display","flex");
+            addedLine.child().css("flex-direction","row");
+            addedLine.child().css("justify-content","center");*/
+
+            //addedLine.find("category-image-container").css("display","flex");
+            addedLine.find('.film').removeClass("blue-film");
+
+            clickedCategory.parent().css("display","none");
+
+            // week
+            isNonAlcoholicDrinksLine = false;
+            isAlcoholicDrinksLine = false;
+            isTobbaccoLine = false;
+            isAddedFoodProductsLine = false;
+
+            if (category == "non-alcoholic-drinks") {
+                isNonAlcoholicDrinksLine = true;
+            } else if (category == "alcoholic-drinks") {
+                isAlcoholicDrinksLine = true;
+            } else if (category == "tobacco") {
+                isTobbaccoLine = true;
+                //console.log('tobacco 2');
+            } else if (category == "food-products") {
+                isAddedFoodProductsLine = true;
+            }
+
+            // month
+            isClothesPurchaseItemsLine = false;
+            isRestaurantsHostingServicesLine = false;
+            isRentRepaymentAnnuityLine = false;
+            isTaxesLine = false;
+
+            if (category == "clothes-purchase") {
+                isClothesPurchaseItemsLine = true;
+            } else if (category == "restaurants-hosting-services") {
+                isRestaurantsHostingServicesLine = true;
+            } else if (category == "rent-repayment-annuity") {
+                isRentRepaymentAnnuityLine = true;
+            } else if (category == "taxes") {
+                isTaxesLine = true;
+            }
+
+            isFuelCarStickerTollCarParkItemsLine = false;
+            isHealthInsuranceItemsLine = false;
+            isOutingsLeisureCultureItemsLine = false;
+            isHairdresserBeauticianItemsLine = false;
+
+            if (category == "fuel-car-sticker-toll-car-park") {
+                isFuelCarStickerTollCarParkItemsLine = true;
+            } else if (category == "health-insurance") {
+                isHealthInsuranceItemsLine = true;
+            } else if (category == "outings-leisure-culture") {
+                isOutingsLeisureCultureItemsLine = true;
+            } else if (category == "hairdresser-beautician") {
+                isHairdresserBeauticianItemsLine = true;
+            }
+
+            isCleaningProductsHouseworkItemsLine = false;
+            isSocialContributionItemsLine = false;
+            isCommunicationsItemsLine = false;
+            ishealthSpendingsItemsLine = false;
+
+            if (category == "cleaning-products-housework") {
+                isCleaningProductsHouseworkItemsLine = true;
+            } else if (category == "social-contribution") {
+                isSocialContributionItemsLine = true;
+            } else if (category == "communications") {
+                isCommunicationsItemsLine = true;
+            } else if (category == "health-spendings") {
+                ishealthSpendingsItemsLine = true;
+            }
+
+            isDonationGiftInvitationItemsLine = false;
+            isSubscriptionsItemsLine = false;
+            isEnergyElectricityGazWaterItemsLine = false;
+            isTransportItemsLine = false;
+
+            if (category == "donation-gift-invitation") {
+                isDonationGiftInvitationItemsLine = true;
+            } else if (category == "subscriptions") {
+                isSubscriptionsItemsLine = true;
+            } else if (category == "energy-electricity-gaz-water") {
+                isEnergyElectricityGazWaterItemsLine = true;
+            } else if (category == "transport") {
+                isTransportItemsLine = true;
+            }
+
+            isStationneryStoreStampsItemsLine = false;
+
+            if (category == "stationnery-store-stamps-items") {
+                isStationneryStoreStampsItemsLine = true;
+            }
+
+            // year
+
+            isVehicleCostsLine = false;
+            isHolidayBudgetLine = false;
+            isWeekEndBudgetLine = false;
+            isVehiclePurchaseLine = false;
+
+            if (category == "vehicle-costs") {
+                isVehicleCostsLine = true;
+            } else if (category == "holiday-budget") {
+                isHolidayBudgetLine = true;
+            } else if (category == "week-end-budget") {
+                isWeekEndBudgetLine = true;
+            } else if (category == "vehicle-purchase") {
+                isVehiclePurchaseLine = true;
+            }
+
+            isComputerPurchaseItemsLine = false;
+            isFurniturePurchaseItemsLine = false;
+            isToolsElectericalEquipmentPurchaseItemsLine = false;
+            isappliancesPurchaseItemsLine = false;
+
+            if (category == "computer-purchase") {
+                isComputerPurchaseItemsLine = true;
+            } else if (category == "furniture-purchase") {
+                isFurniturePurchaseItemsLine = true;
+            } else if (category == "tools-electerical-equipment-purchase") {
+                isToolsElectericalEquipmentPurchaseItemsLine = true;
+            } else if (category == "appliances-purchase") {
+                isappliancesPurchaseItemsLine = true;
+            }
+
+            showSection(category);
+        }
+
+        /*function addSelectedCategoryForm () {
+            if (addedFoodProductsLine == false) {
+                selectedCategoryLine = "<div class=\"category-row\"><div id=\"food-products-itms\" class=\"col-md-3 theme\"><div class=\"image-container\"><div></div><img class=\"below-film\" src=\"{{ asset('images/budget/individumenage/produits-alimentaires.jpg') }}\"></div><p class=\"category-title with-bigger-margin-top\">Produits alimentaires</p></div><div class=\"col-md-9\">{# include('site/formulaires-budget-individu-menage/eating-budget-forms.html.twig') #}</div></div>";
+
+                $('.week').append(selectedCategoryLine);
+                addedFoodProductsLine = true;
+            }
+        }*/
+
+    </script>
+{% endblock %}

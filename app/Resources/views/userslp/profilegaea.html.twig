@@ -1,0 +1,607 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/profilgaea.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/questionnaire/socioEco.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock %}
+
+{% block body %}
+    <div class="container profil-page">
+    <div class="row ecran">
+        <header>
+            <div id="carousel-slp" class="carousel slide ecran" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100 ecran" src="{{ asset('images/profilgaea/header-ecoprofil.jpg') }}"
+                            alt="Questionnaire consom'acteur">
+
+                        <div class="carousel-caption d-none d-block intro col-6 top-adjust">
+                            <h1>quel consom'acteur êtes-vous ?</h1>
+
+                            <p>Voulez-vous connaître le type de comsom'acteur que vous êtes ? Ces questionnaires vont
+                                vous révéler votre degré d'implication vis-à-vis de l'environnement. Vous pourrez ainsi
+                                obtenir votre profil de consom'acteur, et éventuellement rectifier ou améliorer vos
+                                gestes au quotidien avec nos conseils. Êtes-vous prêt ? C'est parti
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="dropdown burger">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                        <!--<a class="dropdown-item" href="{#{ path('site_index') }}">Accueil</a>
+
+                        {% if userslp != null %}
+                            <a class="dropdown-item" href="{{ path('userslp_show', { 'id': userslp.id }) }}">Profil</a>
+                        {% endif %#}-->
+                        {#% if userslp != null %}
+                        <a class="dropdown-item" {% if form == 1 %} aria-disabled="true"
+                            href="{{ path('site_dashboard') }}"> {% else %} href="{{ path('site_dashboard') }}"
+                            aria-disabled="false">Dashboard</a>{% endif %}
+                        {% endif %#}
+                        <a class="dropdown-item" href="{{path('site_index')}}">Accueil</a>
+                        <a class="dropdown-item" href="{{path('presentationdashboard')}}">Présentation dashboard</a>
+                        <a class="dropdown-item" href="{{path('site_dashboard')}}">Dashboard</a>
+
+                        <div class="dropdown-divider"></div>
+
+                        {% if userslp != null %}
+                            <a class="dropdown-item" href="/logout">Deconnexion</a>
+                        {% else %}
+                            <a class="dropdown-item" href="/login">Connexion</a>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="arrowDown">
+                    <a href="#questionnaire"><i class="fa fa-arrow-down"></i></a>
+                </div>
+
+            </div>
+        </header>
+    </div>
+
+    <div class="header mobile">
+        <h1>QUEL CONSOM'ACTEUR ÊTES-VOUS?</h1>
+        <p>Ces questionnaires vont vous révéler votre degré d'implication vis-à-vis de l'environnement. Vous pourrez ainsi obtenir votre profil de consom'acteur et rectifier ou améliorer vos gestes au quotidien avec nos conseils.<br />Êtes-vous prêt ?<br />C'est parti !</p>
+        <div class="creerprofil">
+             {% if userslp == null %}
+                <a href="/login">CRÉEZ VOTRE PROFIL</a>
+            {% else %}
+                <a href="" data-toggle="modal" data-target="#myModal-profil">CRÉEZ VOTRE PROFIL</a>
+            {% endif %}
+        </div>
+        <img src="{{ asset('images/profilgaea/bloc 1_En-tête.jpg') }}" />
+    </div>
+
+    <div class="visage-bleu">
+        <img class="ecran" src="{{ asset('images/profilgaea/visage-bleu.jpg') }}" width="100%">
+        <img class="mobile" src="{{ asset('images/profilgaea/bloc 2 - 0image.jpg') }}" width="100%">
+    </div>
+
+    <div class="row ecran">
+        <div class="profil-intro ">
+            <h1>Créez votre profil - Intégrez la communauté SLP en 3 étapes</h1>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="explicatif-processus">
+                    <p>
+                        En tant que consommateur, vous avez des besoins. Pour répondre à ces derniers, vous allez faire des choix individuels qui engendreront une série d'impacts positifs ou négatifs d'un point de vue économique, social et environnemental. Pour améliorer ces choix et donc votre impact, nous vous proposons d'élaborer votre profil et d'intégrer la communauté SLP. Vous pourrez alors devenir consomm'acteur à travers 8 processus fondamentaux :
+                    </p>
+                    <p>
+                        1. Trouver et acheter des produits durables près de chez vous grâce au "<strong>Répertoire vert</strong>"
+                    </p>
+                    <p>
+                        2. Trouver des alternatives à vos choix de vie quotidiens grâce à la "<strong>plateforme consom'action</strong>"
+                    </p>
+                    <p>
+                        3. Effectuer des changements d'habitude et les comparer avec d'autres grâce au programme "<strong>Eco-gestes</strong>" et à "<strong>l'empreinte chromatique</strong>" ;
+                    </p>
+                    <p>
+                        4. Produire vous-même vos propres fruits et légumes grâce au programme "<strong>Grow Your Own</strong>"
+                    </p>
+                    <p>
+                        5. Mettre en commun vos ressources et bénéficier du soutien de la communauté grâce à la "<strong>plateforme d'économie collaborative / sharing economy</strong>"
+                    </p>
+                    <p>
+                        6. S'amuser, faire du sport, sortir et rencontrer du monde grâce au "<strong>programme GES</strong>"
+                    </p>
+                    <p>
+                        7. Mettre en place un plan de changement et en mesurer immédiatement les bénéfices pour soi et son entourage grâce au programme "<strong>Green coaching</strong>"
+                    </p>
+                    <p>
+                        8. Apprendre à transformer ses choix grâce aux "<strong>Ateliers éco</strong>"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mobile cadre about">
+        <h4>CRÉEZ VOTRE PROFIL :</h4>
+        <h4>INTÉGREZ LA SL COMMUNITY EN 3 ÉTAPES</h4>
+        <p>En tant que consommateur, vous avez des besoins. Pour répondre à ces derniers, vous allez faire des choix individuels qui engendreront une série d'impacts positifs ou négatifs d'un point de vue économique, social et environnemental. Pour améliorer ces choix et donc votre impact, nous vous proposons d'élaborer votre profil et d'intégrer la communauté SLP. Vous pourrez alors devenir consomm'acteur à travers 8 processus fondamentaux :</p>
+    </div>
+
+    <div class="row mobile aboutDetail">
+        <div class="row myrow">
+            <div class="col-xs-4 innerRow">
+                <img src="{{ asset('images/profilgaea/bloc 2 _1répertoirevert.jpg') }}" />
+            </div>
+            <div class="col-xs-8 innerRow">
+                <p>1. Trouver et acheter des produits durables près de chez vous grâce au "<strong>Répertoire vert</strong>"</p>
+            </div>
+        </div>
+        <div class="row myrow">
+            <div class="col-xs-4 innerRow">
+                <img src="{{ asset('images/profilgaea/bloc 2 _2plateforme.jpg') }}" />
+            </div>
+            <div class="col-xs-8 innerRow">
+                <p> 2. Trouver des alternatives à vos choix de vie quotidiens grâce à la "<strong>plateforme consom'action</strong>"</p>
+            </div>
+        </div>notification
+        <div class="row myrow">
+            <div class="col-xs-4 innerRow">
+                <img src="{{ asset('images/profilgaea/bloc 2 _4growyourown.jpg') }}" />
+            </div>
+            <div class="col-xs-8 innerRow">
+                <p>4. Produire vous-même vos propres fruits et légumes grâce au programme "<strong>Grow Your Own</strong>"</p>
+            </div>
+        </div>
+        <div class="row myrow">
+            <div class="col-xs-4 innerRow">
+                <img src="{{ asset('images/profilgaea/bloc 2 _5Sharingeconomy.jpg') }}" />
+            </div>
+            <div class="col-xs-8 innerRow">
+                <p>5. Mettre en commun vos ressources et bénéficier du soutien de la communauté grâce à la "<strong>plateforme d'économie collaborative / sharing economy</strong>"</p>
+            </div>
+        </div>
+        <div class="row myrow">
+            <div class="col-xs-4 innerRow">
+                <img src="{{ asset('images/profilgaea/bloc 2 _6GES.jpg') }}" />
+            </div>
+            <div class="col-xs-8 innerRow">
+                <p>6. S'amuser, faire du sport, sortir et rencontrer du monde grâce au "<strong>programme GES</strong>"</p>
+            </div>
+        </div>
+        <div class="row myrow">
+            <div class="col-xs-4 innerRow">
+                <img src="{{ asset('images/profilgaea/bloc 2 _7greencoaching.jpg') }}" />
+            </div>
+            <div class="col-xs-8 innerRow">
+                <p> 7. Mettre en place un plan de changement et en mesurer immédiatement les bénéfices pour soi et son entourage grâce au programme "<strong>Green coaching</strong>"</p>
+            </div>
+        </div>
+        <div class="row myrow">
+            <div class="col-xs-4 innerRow">
+                <img src="{{ asset('images/profilgaea/bloc 2 _8atelierseco.jpg') }}" />
+            </div>
+            <div class="col-xs-8 innerRow">
+                <p>8. Apprendre à transformer ses choix grâce aux "<strong>Ateliers éco</strong>"</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="questionnaire" class="row etapes ecran">
+        <div class="col-4">
+            <img src="{{ asset('images/profilgaea/etape1-img.jpg') }}" alt="">
+            <h1>Etape 1 :</h1>
+            <h3>Remplissez le questionnaire</h3>
+            <p>déterminez votre profil socio-économique actuel et validez votre inscription sur la plateforme SLP/</p>
+        </div>
+        <div class="col-4">
+            <img src="{{ asset('images/profilgaea/etape2-img.jpg') }}" alt="">
+            <h1>Etape 2 :</h1>
+            <h3> CRÉATION DU DASHBOARD</h3>
+            <p>votre dashboard sera actif. Vous pourrez consulter/gérer vos actions, faire évoluer votre compte et créer des profils différents ou complémentaires !</p>
+        </div>
+        <div class="col-4">
+            <img src="{{ asset('images/profilgaea/etape3-img.jpg') }}" alt="">
+            <h1>Etape 3 :</h1>
+            <h3> Complétez votre profil</h3>
+            <p>...en répondant aux questionnaires psychologique et écologique</p>
+        </div>
+    </div>
+    <div class="row etape mobile cadre">
+        <div class="col-xs-5 innerRow">
+            <img src="{{ asset('images/profilgaea/bloc 3 _Etape1.jpg') }}" alt="">
+        </div>
+        <div class="col-xs-7 lastrow">
+            <h3>ÉTAPE 1 :</h3>
+            <h3>REMPLISSEZ LE QUESTIONNAIRE</h3>
+            <p>déterminez votre profil socio-économique actuel et validez votre inscription sur la plateforme SLP</p>
+        </div>
+    </div>
+    <div class="row etape mobile cadre">
+        <div class="col-xs-5 innerRow">
+            <img src="{{ asset('images/profilgaea/bloc 4 _Etape2.jpg') }}" alt="">
+        </div>
+        <div class="col-xs-7 lastrow">
+            <h3>ÉTAPE 2 :</h3>
+            <h3>CRÉATION DU DASHBOARD</h3>
+            <p>votre dashboard sera actif. Vous pourrez consulter/gérer vos actions, faire évoluer votre compte et créer des profils différents ou complémentaires !</p>
+        </div>
+    </div>
+    <div class="row etape mobile cadre">
+        <div class="col-xs-5 innerRow">
+            <img src="{{ asset('images/profilgaea/bloc 5 _Etape3.jpg') }}" alt="">
+        </div>
+        <div class="col-xs-7 lastrow">
+            <h3>ÉTAPE 3 :</h3>
+            <h3>COMPLÉTER VOTRE PROFIL...</h3>
+            <p>...en répondant aux questionnaires psychologique et écologique</p>
+        </div>
+    </div>
+    <div class="row etapes-button ecran">
+        {% if done == 1 %}
+            <div class="col-12" style="height: 50px; position: relative;">
+                {% if form == 0 %}
+                <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); margin: 0 auto;">
+                    <a href="{{path('site_dashboard')}}"></a>
+                        {% else %}
+                        <a href="">
+                            {% endif %}
+                            <button class="btn btn-primary btn-md" aria-disabled="true">Retourner au <br>Dashboard</button>
+                        </a>
+                </div>
+            </div>
+
+        {% elseif lastquestionnumber < 49 %}
+            <div class="col-12" style="height: 50px; position: relative;">
+                <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); margin: 0 auto;">
+                    {% if userslp == null %}
+                    <!--    <a href="{{path('fos_user_registration_register')}}" style="margin: 0 15px;">
+                            <button class="btn btn-primary btn-md">S'inscrire</button>
+                        </a>-->
+                        <a href="/login" style="margin: 0 15px;">
+                            <button class="btn btn-primary btn-md">Se connecter</button>
+                        </a>
+                    {% else %}
+                        <a href="" data-toggle="modal" data-target="#myModal-profil">
+                            <button class="btn btn-primary btn-md">Répondez au questionnaire <br> et déterminez votre profil</button>
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+        {% elseif userslp == null %}
+            <div class="col-4">
+                <a href="fos-user-registration-register" data-toggle="modal" data-target="#myModal-profil">
+                    <button class="btn btn-primary btn-md">S'inscrire</button>
+                </a>
+            </div>
+            <a href="/login" data-toggle="modal" data-target="#myModal-profil">
+                <button class="btn btn-primary btn-md">Se connecter</button>
+            </a>
+    </div>
+      {% endif %}
+    </div>
+
+    <div class="row profil-individu ecran">
+        <div class="col-4">
+            <img src="{{ asset('images/profilgaea/menage.jpg') }}" alt="">
+            <span>Profil ménage</span>
+            <p>Vous vivez sous le même toit, sans pour autant avoir des liens familliaux</p>
+        </div>
+        <div class="col-4">
+            <img src="{{ asset('images/profilgaea/famille.jpg') }}" alt="">
+            <span>Profil famille</span>
+            <p>Vous avez des liens familliaux, mais ne vivez pas sous le même toit.</p>
+        </div>
+        <div class="col-4">
+            <img src="{{ asset('images/profilgaea/amis.jpg') }}" alt="">
+            <span>Profil amis</span>
+            <p>Un profil entre amis !</p>
+        </div>
+    </div>
+    <div class="row profil_groupe cadre mobile">
+        <p>Vous pouvez inviter amis, famille, proche et définissez la dynamique de votre ménage, votre famille, votre groupe d'amis ou votre mode solo.</p>
+        <div class="row myrow">
+            <div class="col-xs-4 innerRow">
+                <img src="{{ asset('images/profilgaea/menage.jpg') }}" alt="">
+                <h4>PROFIL MÉNAGE</h4>
+                <p>Vous vivez sous le même toit, sans pour autant avoir des liens familliaux</p>
+            </div>
+            <div class="col-xs-4 innerRow">
+                <img src="{{ asset('images/profilgaea/famille.jpg') }}" alt="">
+                <h4>PROFIL FAMILLE</h4>
+                <p>Vous vivez sous le même toit, sans pour autant avoir des liens familliaux</p>
+            </div>
+            <div class="col-xs-4 innerRow">
+                <img src="{{ asset('images/profilgaea/amis.jpg') }}" alt="">
+                <h4>PROFIL AMIS</h4>
+                <p>Vous vivez sous le même toit, sans pour autant avoir des liens familliaux</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row finalisez ecran">
+        <div class="col-6">
+            <img src="{{ asset('images/profilgaea/finalisez-profil.jpg') }}" alt="">
+        </div>
+        <div class="col-6">
+            <h3>Finalisez votre profil en complétant les questionnaires processus</h3>
+            <p>Une fois les questionnaires socio-économique, psychologique et écologique remplis, vous allez pouvoir approfondir votre profil en fonction de 8 thèmes de consommaction : manger, s'habiller, habiter, prendre soin de soi, se déplacer, se distraire, communiquer, travailler.</p>
+
+        </div>
+    </div>
+
+    <div class="row final cadre mobile">
+        <div class="col-xs-5 innerRow">
+            <img src="{{ asset('images/profilgaea/bloc 7 - image finalisez.jpg') }}" alt="">
+        </div>
+        <div class="col-xs-7 lastrow">
+            <h4>FINALISEZ VOTRE PROFIL EN COMPLÉTANT LE QUESTIONNAIRE PROCESSUS</h4>
+            <p>Une fois les questionnaires socio-économique, psychologique et écologique remplis, vous allez pouvoir approfondir votre profil en fonction de 8 thèmes de consommaction : manger, s'habiller, habiter, prendre soin de soi, se déplacer, se distraire, communiquer, travailler.</p>
+        </div>
+    </div>
+    <div class="row etapes-button mobile">
+        {% if done == 1 %}
+            <div class="col-4">
+                {% if form == 1 %}
+                    <a href="{{path('site_dashboard')}}">
+                        <button class="btn btn-primary btn-md" aria-disabled="true">Retourner au <br>Dashboard</button>
+                    </a>
+                {% endif %}
+            </div>
+        {% elseif form == 1 %}
+        
+            <div class="col-12" style="height: 50px; position: relative;">
+                <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); margin: 0 auto;">
+                    {% if userslp == null %}
+                        <a href="/login" style="margin: 0 15px;">
+                            <button class="btn btn-primary btn-md">Lancer le questionnaire</button>
+                        </a>
+                    {% else %}
+                        <a href="" data-toggle="modal" data-target="#myModal-profil">
+                            <button class="btn btn-primary btn-md">Répondez au questionnaire<br> et déterminez votre profil</button>
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+
+        {% elseif userslp == null %}
+            <div class="col-4">
+                <a href="fos-user-registration-register" data-toggle="modal" data-target="#myModal-profil">
+                    <button class="btn btn-primary btn-md">S'inscrire</button>
+                </a>
+            </div>
+                <a href="/login" data-toggle="modal" data-target="#myModal-profil">
+                    <button class="btn btn-primary btn-md">Se connecter</button>
+                </a>
+            </div>
+        {% endif %}
+    </div>
+    <div class="modal" id="myModal-profil" role="dialog" aria-labelledby="myModal-profil">
+        <div class="modal-body quiz-profil ">
+            {{ render(controller('AppBundle\\Controller\\UserSlpController::socioAction')) }}
+        </div>{# modal profil #}
+    </div>
+
+    <div class="row ecran">
+        <h4 class="blue-title col-12"></h4>
+        <div class="d-flex flex-row flex-wrap wrap justify-content-around them-survey">
+            {# future foreach quand les questionnaires thématiques serrons fini #}
+            <div>
+                <a href="">
+                    <img src="{{ asset('images/landing-page/s_habiller.jpg') }}" alt="">
+                    <h5 class="questionnaire-title">S'habiller</h5>
+                </a>
+            </div>
+            <div>
+                <a href="">
+                    <img src="{{ asset('images/landing-page/habiter.jpg') }}" alt="">
+                    <h5 class="questionnaire-title">Habiter</h5>
+                </a>
+            </div>
+            <div>
+                <a href="{{ path('site_manger') }}" aria-disabled="true" data-toggle="modal"
+                    data-target="#myModal1">
+                    <img src="{{ asset('images/landing-page/manger.jpg') }}" alt="">
+                    <h5 class="questionnaire-title">Manger</h5>
+                </a>
+            </div>
+            <div>
+                <a href="">
+                    <img src="{{ asset('images/landing-page/se_deplacer.jpg') }}" alt="">
+                    <h5 class="questionnaire-title">Se deplacer</h5>
+                </a>
+            </div>
+            <div>
+                <a href="">
+                    <img src="{{ asset('images/landing-page/communiquer.jpg') }}" alt="">
+                    <h5 class="questionnaire-title">Communiquer</h5>
+                </a>
+            </div>
+            <div>
+                <a href="">
+                    <img src="{{ asset('images/landing-page/se_distraire.jpg') }}" alt="">
+                    <h5 class="questionnaire-title">Se distraire</h5>
+                </a>
+            </div>
+            <div>
+                <a href="">
+                    <img src="{{ asset('images/landing-page/prendre_soin_de_soi.jpg') }}" alt="">
+                    <h5 class="questionnaire-title">Prendre soin de soi</h5>
+                </a>
+            </div>
+            <div>
+                <a href="">
+                    <img src="{{ asset('images/profilgaea/travailler.jpg') }}" alt="">
+                    <h5 class="questionnaire-title">Travailler</h5>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row themes cadre mobile">
+        <div class="row myrow">
+            <div class="col-xs-5 offset-1 theme">
+                <img src="{{ asset('images/landing-page/s_habiller.jpg') }}" alt="">
+                <h5>S'HABILLER</h5>
+            </div>
+            <div class="col-xs-5 theme">
+                <img src="{{ asset('images/landing-page/habiter.jpg') }}" alt="">
+                <h5>HABITER</h5>
+            </div>
+        </div>
+        <div class="row myrow">
+            <div class="col-xs-5 offset-1 theme">
+                <img src="{{ asset('images/landing-page/communiquer.jpg') }}" alt="">
+                <h5>COMMUNIQUER</h5>
+            </div>
+            <div class="col-xs-5 theme">
+                <img src="{{ asset('images/landing-page/se_distraire.jpg') }}" alt="">
+                <h5>SE DISTRAIRE</h5>
+            </div>
+        </div>
+        <div class="row myrow">
+            <div class="col-xs-5 offset-1 theme">
+                <img src="{{ asset('images/landing-page/manger.jpg') }}" alt="">
+                <h5>MANGER</h5>
+            </div>
+            <div class="col-xs-5 theme">
+                <img src="{{ asset('images/landing-page/se_deplacer.jpg') }}" alt="">
+                <h5>SE DÉPLACER</h5>
+            </div>
+        </div>
+        <div class="row myrow">
+            <div class="col-xs-5 offset-1 theme">
+                <img src="{{ asset('images/landing-page/prendre_soin_de_soi.jpg') }}" alt="">
+                <h5>PRENDRE SOIN DE SOI</h5>
+            </div>
+            <div class="col-xs-5 theme">
+                <img src="{{ asset('images/landing-page/travailler.jpg') }}" alt="">
+                <h5>TRAVAILLER</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="myModal1" role="dialog">
+        <div class="modal-body">
+         {#   {{ render(controller('AppBundle\\Controller\\SiteController::mangerAction'))}}#}
+        </div>
+    </div>
+
+    <div class="community ecran">
+        <div>
+            <a href="{{ path('community') }}"><button>Intégrez la communauté SLP</button></a>
+        </div>
+        <div>
+        <img src="{{ asset('images/landing-page/aviron.jpg') }}" alt="community">
+        </div>
+    </div>
+
+    <div class="ambassadeur ecran">
+        <a href="{{ path('ambassadeur') }}"></a>
+        <img src="{{ asset('images/landing-page/ambassadeur.PNG') }}" alt="ambassadeur">
+    </div>
+    
+    <div class="banniere mobile">
+        <div class="ambassadeur_m">
+            <div class="linkambassadeur">
+                <a href="{{ path('ambassadeur') }}"></a>
+            </div>
+            <img src="{{ asset('images/profilgaea/bannière Ambassadeurs 1.jpg') }}" />
+        </div>
+        <div class="hog">
+            <div class="linkhog">
+                <a href="{{ path('humans') }}"></a>
+            </div>
+            <img src="{{ asset('images/profilgaea/bannièreHOG21_480.jpg') }}" />
+        </div>
+    </div>
+
+    
+            
+    <div class="col-12" >
+        {% include 'footer.html.twig' %}
+    </div>
+    {% endblock %}
+
+    {% block javascripts %}
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+        </script>
+        <script>
+            $('.suivant').prop('disabled', true);
+            $('#form7').find('.sub-answer-box').hide();
+            $('.active').hide();
+
+            var lastquestionnumber = {{ lastquestionnumber|json_encode() }};
+            {% for answer in answers %}
+            $('#form{{ answer.question.id }} .suivant').find('.active').show();
+            $('#form{{ answer.question.id }} .suivant').find('.desactive').hide();
+            $('#form{{ answer.question.id }} .suivant').prop('disabled', false);
+
+            var questionthemenum = $('#form{{ answer.question.id }} .suivant').children('.desactive').parent().data('questionthemenumid');
+            var themeid =  $('#form{{ answer.question.id }} .suivant').children('.desactive').parent().data('themeid');
+            {#console.log($('#form{{ answer.question.id }} .suivant').children('.desactive').parent());#}
+
+
+                {% if answer.question == "Question_choice" or answer.question == "Conditional_question_choice" or answer.question == "Sub_question_choice" %}
+                    {% for choice in answer.choices %}
+                        {#console.log({{ choice.id }});#}
+                        if ($('#labelchoice{{ choice.id }}').data('imageselected') != undefined) {
+                            var img = $('#labelchoice{{ choice.id }}').data('imageselected');
+                        } else if ($('#labelchoice{{ choice.id }}').find('img').data('imgselected') != undefined) {
+                            var img = $('#labelchoice{{ choice.id }}').find('img').data('imgselected');
+                        }
+                        // console.log(img);
+                        $('#labelchoice{{choice.id}}').find('img').attr('src','/images/survey/icones-selectionnes/'+img);
+                        $('#labelchoice{{choice.id}}').addClass('selected');
+                        // console.log('ok choice');
+                        {% if answer.question.id == 6 %}
+                            var key = $("#choice{{choice.id}}").data('keychoice');
+                            $("#choice{{choice.id}}").parents('.containerQuestion').next().find('.subQuestion'+ key).show();
+                        {% endif %}
+                    {% endfor %}
+                {% elseif answer.question == "Question_free" or answer.question == "Conditional_question_free" %}
+                    {#console.log($('#form{{ answer.question.id }}'));#}
+                    $("#form{{ answer.question.id }} option[value='{{ answer.freeAswere }}']").attr('selected', true);
+                    $("#free{{ answer.question.id }} ").attr('value', '{{ answer.freeAswere }}');
+                    if ($('#container{{ answer.question.number }}').hasClass('useless')) {
+                        $('#container{{ answer.question.number }}').removeClass('useless');
+                    }
+                // console.log('ok free');
+                {% elseif answer.question == "Question_scale" %}
+                    {% if answer.scale == 1 %}
+                        var scale = 3;
+                    {% elseif answer.scale == 3 %}
+                        var scale = 1;
+                    {% else %}
+                        var scale = {{ answer.scale }};
+                    {% endif %}
+                    var img = $("[for='scale{{ answer.question.id }}for"+scale+ "']").data("imageselected");
+                    $("[for='scale{{ answer.question.id }}for"+scale+ "']").find('img').attr('src','/images/survey/icones-selectionnes/'+img);
+                    $("#scale{{ answer.question.id }}for"+scale).attr('checked', true);
+                {% elseif answer.question == 'Sub_question_free' %}
+{#                        {% if answer.question.masterQuestion.id == 10 or answer.question.masterQuestion.id == 7 %}// Champs freeAswere vide pour le moment    or answer.question.masterQuestion.id == 139#}
+                            $('#form{{ answer.question.masterQuestion.id }} .suivant').find('.active').show();
+                            $('#form{{ answer.question.masterQuestion.id }} .suivant').find('.desactive').hide();
+                            $('#form{{ answer.question.masterQuestion.id }} .suivant').prop('disabled', false);
+                            var questionthemenum = $('#form{{ answer.question.masterQuestion.id }} .suivant').children('.desactive').parent().data('questionthemenumid');
+                            var themeid =  $('#form{{ answer.question.masterQuestion.id }} .suivant').children('.desactive').parent().data('themeid');
+
+
+                        {#console.log($("#container{{ answer.question.number}} [for=subfree{{ answer.question.id }}]").siblings(".subfreeselect [value={{ answer.freeAswere }}]"))#}
+                            {% if answer.freeAswere != "" %}
+                                $("#container{{ answer.question.number}} [for=subfree{{ answer.question.id }}]").siblings(".subfreeselect").find("[value={{ answer.freeAswere }}]").attr('selected', true);
+                            {% endif %}
+{#                        {% else %}#}
+                            $("#subfree{{ answer.question.id }} ").attr('value', '{{ answer.freeAswere }}');
+{#                        {% endif %}#}
+                {% else %}
+                {% endif %}
+            $('.question'+themeid+''+questionthemenum).addClass('menuQuestion');
+            $('.question'+themeid+''+questionthemenum).attr('src','/images/survey/menuNumero/' + questionthemenum + '-petit.jpg');
+            {% endfor %}
+        </script>
+        <script src="{{ asset('js/app.js')}}"></script>
+    {% endblock %}

@@ -1,0 +1,291 @@
+<div class="eating-budget-spendings-form-container"></div>
+<div class="eating-budget-spendings-form-grid-container form-container fat-products-form-container">
+    <div class="row my-row">
+        {% include 'site/budget-spendings-forms/forms-columns-titles.html.twig' %}
+    </div>
+    
+    <div class="subcategory-container animal-fat-container">
+        <div id="animal-fat-form-line" class="row my-row row-with-long-title from-line form-spending-line" data-id="0">
+            <div class="subcategory invisible">animal-fat</div>
+            <div class="col-3">
+                <idv class="form-line-title">
+                    <div class="form-line-title-content medium-width-title">
+                        - Matières grasses animales
+                        <div class="small-title-content">
+                            (Beurre, crème fraiche, saindoux, graisses d'oie)
+                        </div>
+                    </div>
+                </idv>
+            </div>
+            <div class="col-1">
+                <input class="spendings-field what-field"/>
+            </div>
+            <div class="col-1 dropdown-list-col volume-dropdown-list-col">
+                <div class="dropdown-list-container quantity-container">
+                    <select class="dropdown-list animal-fat-quantity-list">
+                        <option>1L</option>
+                        <option>2L</option>
+                    </select>
+                    <div class="triangle-img-container animal-fat quantity">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-1">
+                <input class="spendings-field brand-field" />
+            </div>
+            <div class="col-1">
+                <input class="spendings-field amount-field" />
+            </div>
+            <div class="col-1 dropdown-list-col currency-dropdown-list-col">
+                <div class="dropdown-list-container currency-list-container">
+                    <select class="dropdown-list currency-list animal-fat-currency-list">
+                        <option>CHF</option>
+                        <option>EUR</option>
+                    </select>
+                    <div class="triangle-img-container animal-fat currency">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col add-animal-fat hand-on-hover">
+                <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+                <idv class="add-product-text">Ajouter un produit</idv>
+            </div>
+            <!--<div class="white-div-to-hide-first-line-add-option"></div>-->
+        </div>
+        {% for spending in spendings %}
+            {% if spending.getProduct().getSubcategory().getName() == "animal-fat" %}
+                {% set subcategory = "animal-fat" %}
+                {% include('site/budget/recorded-theme-spending-form-line.html.twig') %}
+            {% endif %}
+        {% endfor %}
+        <!--<div class="add-product-line add-animal-fat hand-on-hover">
+            <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+            <idv class="add-product-text">Ajouter un produit</idv>
+        </div>-->
+    </div>
+    
+    <div class="subcategory-container vegetable-oil-container">
+        <div id="vegetable-oil-form-line" class="row my-row form-spending-line" data-id="0">
+            <div class="subcategory invisible">vegetable-oil</div>
+            <div class="col-3">
+                <idv class="form-line-title">
+                    <div class="form-line-title-content medium-width-title">
+                    - Huiles végétales
+                        <div class="small-title-content">
+                            (margarines, vegetalines, huiles divers types, ...)
+                        </div>
+                    </div>
+                </idv>
+            </div>
+            <div class="col-1">
+                <input class="spendings-field what-field"/>
+            </div>
+            <div class="col-1 dropdown-list-col volume-dropdown-list-col">
+                <div class="dropdown-list-container quantity-container">
+                    <select class="dropdown-list vegetable-oil-quantity-list">
+                        <option>1L</option>
+                        <option>2L</option>
+                    </select>
+                    <div class="triangle-img-container vegetable-oil quantity">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-1">
+                <input class="spendings-field brand-field" />
+            </div>
+            <div class="col-1">
+                <input class="spendings-field amount-field" />
+            </div>
+            <div class="col-1 dropdown-list-col currency-dropdown-list-col">
+                <div class="dropdown-list-container currency-list-container">
+                    <select class="dropdown-list currency-list vegetable-oil-currency-list">
+                        <option>CHF</option>
+                        <option>EUR</option>
+                    </select>
+                    <div class="triangle-img-container vegetable-oil currency">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col add-vegetable-oil hand-on-hover">
+                <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+                <idv class="add-product-text">Ajouter un produit</idv>
+            </div>
+        </div>
+        {% for spending in spendings %}
+            {% if spending.getProduct().getSubcategory().getName() == "vegetable-oil" %}
+                {% set subcategory = "vegetable-oil" %}
+                {% include('site/budget/recorded-theme-spending-form-line.html.twig') %}
+            {% endif %}
+        {% endfor %}
+        <!--<div class="add-product-line add-vegetable-oil hand-on-hover">
+            <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+            <idv class="add-product-text">Ajouter un produit</idv>
+        </div>-->
+    </div>
+    
+    <div class="subcategory-container sauce-container">
+        <div id="sauce-form-line" class="row my-row sauce-bottom-form-line-0 last-line form-spending-line" data-id="0">
+            <div class="subcategory invisible">sauce</div>
+            <div class="col-3">
+                <idv class="form-line-title">
+                    <div class="form-line-title-content">
+                        - Sauces
+                        <div class="small-title-content">
+                            (mayonnaise, ketchup, moutarde)
+                        </div>
+                    </div>
+                </idv>
+            </div>
+            <div class="col-1 field-and-button-under-field-container last-line-what-column">
+                <input class="spendings-field what-field"/>
+                <div class="form-button left-button">Retour au dashboard</div>
+            </div>
+            <div class="col-1 dropdown-list-col volume-dropdown-list-col">
+                <div class="dropdown-list-container quantity-container">
+                    <select class="dropdown-list sauce-quantity-list">
+                        <option>1L</option>
+                        <option>2L</option>
+                    </select>
+                    <div class="triangle-img-container sauce quantity">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-1">
+                <input class="spendings-field brand-field" />
+            </div>
+            <div class="col-1">
+                <input class="spendings-field amount-field" />
+            </div>
+            <div class="col-1 field-and-button-under-field-container last-line-currency-column dropdown-list-col currency-dropdown-list-col">
+                <div class="dropdown-list-container currency-list-container">
+                    <select class="dropdown-list currency-list sauce-currency-list">
+                        <option>CHF</option>
+                        <option>EUR</option>
+                    </select>
+                    <div class="triangle-img-container sauce currency">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+                <div class="form-button right-button form-validation-button" data-category="fat-products">Valider</div>
+            </div>
+            <div class="col add-sauce hand-on-hover">
+                <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+                <idv class="add-product-text">Ajouter un produit</idv>
+            </div>
+        </div>
+        {% for spending in spendings %}
+            {% if spending.getProduct().getSubcategory().getName() == "sauce" %}
+                {% set subcategory = "sauce" %}
+                {% include('site/budget/recorded-theme-spending-form-line.html.twig') %}
+            {% endif %}
+        {% endfor %}
+        <!--<div class="add-product-line add-sauce hand-on-hover">
+            <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+            <idv class="add-product-text">Ajouter un produit</idv>
+        </div>-->
+    </div>
+</div>
+<!--
+<div class="eating-budget-spendings-form">
+    
+    <div class="form-line first-line">
+        <idv class="what-title">
+            Quoi
+        </idv>
+        <idv class="quantity-title">
+            Quantité
+        </idv>
+        <idv class="brand-title">
+            Marque
+        </idv>
+        <idv class="amount-title">
+            Montant
+        </idv>
+    </div>
+    
+    <div class="form-line">
+        <idv class="form-line-title">
+            <div class="form-line-title-content">
+                - Matières grasses animales<br>
+                <div class="small-title-content">
+                    (Beurre, crème fraiche, saindoux, graisses d'oie)
+                </div>
+            </div>
+        </idv>
+        
+        <input class="spendings-field what-field"/>
+        
+        <select class="dropdown-list">
+            <option>1L</option>
+            <option>2L</option>
+        </select>
+        <input class="spendings-field brand-field" />
+        <input class="spendings-field amount-field" />
+        <select class="dropdown-list currency-list">
+            <option>CHF</option>
+            <option>EUR</option>
+        </select>
+        <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+        <idv class="add-product-text">Ajouter un produit</idv>
+    </div>
+
+    <div class="form-line">
+
+        <idv class="form-line-title">
+            <div class="form-line-title-content">
+                - Huiles végétales<br>
+                <div class="small-title-content">
+                    (margarines, vegetalines, huiles divers types, ...)
+                </div>
+            </div>
+        </idv>
+        
+        <input class="spendings-field what-field"/>
+        
+        <select class="dropdown-list">
+            <option>1L</option>
+            <option>2L</option>
+        </select>
+        <input class="spendings-field brand-field" />
+        <input class="spendings-field amount-field" />
+        <select class="dropdown-list currency-list">
+            <option>CHF</option>
+            <option>EUR</option>
+        </select>
+        <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+        <idv class="add-product-text">Ajouter un produit</idv>
+    </div>
+
+    <div class="form-line">
+        <idv class="form-line-title">
+            <div class="form-line-title-content">
+                - Sauces<br>
+                <div class="small-title-content">
+                    (mayonnaise, ketchup, moutarde)
+                </div>
+            </div>
+        </idv>
+        
+        <input class="spendings-field what-field"/>
+        
+        <select class="dropdown-list">
+            <option>1L</option>
+            <option>2L</option>
+        </select>
+        <input class="spendings-field brand-field" />
+        <input class="spendings-field amount-field" />
+        <select class="dropdown-list currency-list">
+            <option>CHF</option>
+            <option>EUR</option>
+        </select>
+        <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+        <idv class="add-product-text">Ajouter un produit</idv>
+    </div>
+</div>
+-->

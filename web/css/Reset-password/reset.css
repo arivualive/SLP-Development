@@ -1,0 +1,339 @@
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+.row {
+    margin: 0;
+}
+
+.burger button {
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 1);
+    color: #539ac4;
+    border: solid 2px white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.burger{
+    position: absolute;
+    top: 3%;
+    right: 1%;
+}
+
+.dropdown-menu::before,
+.dropdown-menu::after {
+border: none;
+content: none;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.main-title {
+    font-family: 'Nunito', sans-serif;
+    margin-top: 7%;
+}
+
+.main-title .title-information {
+    font-size: 1.5em;
+}
+
+.page {
+    margin-bottom:7%;
+}
+
+/* ------------------------------------------------
+MENU
+------------------------------------------------  */
+
+.container{
+    padding: 0;
+}
+ 
+
+/* ------------------------------------------------
+HEADER
+------------------------------------------------  */
+
+header {
+    position: relative;
+}
+
+.header img{
+    width: 100%;
+}
+
+.text-inside-header {
+    position: absolute;
+    width:100%;
+    top: 35%;
+    color: white;
+    text-align: center;
+    text-shadow: -1px 0 gray, 0 1px gray, 1px 0 gray, 0 -1px gray;
+}
+
+.header .intro h1 {
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    text-align: center;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header .intro p {
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.form-group input {
+    width:40%;
+}
+
+/* ------------------------------------------------
+RESPONSIVE
+------------------------------------------------  */
+
+@media screen and (max-width:1024px) {
+
+    /* ------------------------------------------------
+    MENU
+    ------------------------------------------------  */
+    .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+
+    /* ------------------------------------------------
+    VIDEO APPLI "griditem"
+    ------------------------------------------------- */
+
+}
+
+@media screen and (max-width:991px) {
+    .text-inside-header {
+        font-size: 80%;
+    }
+}
+
+@media screen and (max-width:960px) {
+
+    /* ------------------------------------------------
+    MENU
+    ------------------------------------------------  */
+    .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+
+        .menu ul {
+            padding-top: 5px;
+            width: 95%;
+            z-index: 200;
+            position: absolute;
+            top:0;
+            left: 0;
+        }
+
+        /* ------------------------------------------------
+        HEADER
+        ------------------------------------------------  */
+        .header .intro h1 {
+            font-family: 'Nunito', sans-serif;
+            color: white;
+            text-align: center;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .header .intro p {
+            font-family: 'Nunito', sans-serif;
+            color: white;
+            font-size: 14px;
+        }
+    }
+
+@media screen and (max-width:768px) {
+
+        /* ------------------------------------------------
+        MENU
+        ------------------------------------------------  */
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+
+        /* ------------------------------------------------
+        SLIDER
+        ------------------------------------------------  */
+        .header .intro h1 {
+            font-family: 'Nunito', sans-serif;
+            color: white;
+            text-align: center;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .header .intro p {
+            font-family: 'Nunito', sans-serif;
+            color: white;
+            font-size: 10px;
+        }
+
+    }
+
+@media screen and (max-width:767px) {
+
+    .text-inside-header {
+        font-size: 70%;
+        top: 30%;
+    }
+
+    .form-group input {
+        width:120%;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    /* ------------------------------------------------
+    MENU
+    ------------------------------------------------  */
+    .navbar {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width:480px) {
+
+    /* ------------------------------------------------
+    MENU
+    ------------------------------------------------  */
+    .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+
+        /* ------------------------------------------------
+        SLIDER
+        ------------------------------------------------  */
+
+        .header .intro h1 {
+            font-family: 'Nunito', sans-serif;
+            color: white;
+            text-align: center;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        .header .intro p {
+            font-family: 'Nunito', sans-serif;
+            color: white;
+            font-size: 15px;
+        }
+
+        .header .intro a {
+            display: block;
+            width:90px;
+            margin: 0 auto;
+        }
+
+        .header .intro a button {
+            padding: 2px;
+            background-color: #539ac4;
+            color: white;
+            border: solid 2px white;
+            border-radius: 3px;
+            font-size: 8px;
+        }
+
+        /* ------------------------------------------------
+        CONTENT
+        ------------------------------------------------*/
+
+        .content {
+            max-width:100%;
+        }
+
+        .content h2 {
+            font-size:5vw;
+        }
+        
+        .content label {
+            font-size:3vw;
+        }
+
+        .content .input {
+            height:20%;
+        }
+
+        .content .registration-title {
+            font-size:7vw;
+        }
+        
+        h1 {
+            font-size:8vw;
+        }
+
+        p {
+            font-size:3vw;
+        }
+
+        .main-title {
+            margin-left:2%;
+        }
+
+        .page {
+            margin-left:2%;
+        }
+
+        .main-title-mobile .title-information-mobile {
+            font-size:2.7vw; margin-bottom:-5%;
+        }
+
+        .text-inside-header {
+            font-size: 70%;
+            top: 25%;
+        }
+
+        .form-group input {
+            font-size: 5vw;
+            padding:5px 7px 5px 7px;
+        }
+
+        .burger {
+            top: 3%;
+            right: -0.5%;
+        }
+
+        .new-psswrd-creation-form input {
+            width:100%;
+        }
+
+        .new-psswrd-creation-form label {
+            font-size:3vw;
+        }
+
+        .new-psswrd-creation-form .new-psswrd-creation-button input {
+            padding:5px 7px 5px 7px;
+            border-radius:5px;
+            border-width: 0px;
+            font-size: 5vw;
+        }
+
+        .form-group input {
+            width:100%;
+        }
+    }

@@ -1,0 +1,593 @@
+/* CSS Document */
+
+
+/*
+
+@media(max-width:767px){}
+@media(min-width:768px){}
+@media(min-width:992px){}
+@media(min-width:1200px){}
+
+*/
+
+/* ---------GLOBAL-------------*/
+
+/*
+@media (min-width: 992px) {
+  body {
+    padding-left:120px;
+    padding-right:120px;
+  }
+}
+*/
+
+
+
+
+.ui.menu {
+
+    margin-bottom: 0px !important;
+}
+
+html, body { overflow-x: hidden; }
+
+.underline1{
+	border-bottom: 3px solid #75254C;
+	display: inline-block;
+
+}
+
+.underline2{
+	border-bottom: 4px solid #75254C;
+	border-right: 4px solid #75254C;
+	 border-top-right-radius: 8px;
+	 border-bottom-right-radius: 8px;
+	 border-bottom-left-radius: 8px;
+	display: inline-block;
+	padding-bottom:14px;
+	padding-right: 23px;
+	padding-left: 23px;
+}
+
+
+
+h2 {
+  font-size: 25px;
+  font-family: "Nunito" "Gotham",'Roboto', sans-serif;
+  /*color: rgb(182, 112, 159);*/
+  color: white;
+  /*text-transform: uppercase;
+  line-height: 1.2;*/
+  text-align: center;
+
+}
+
+.composition_h2 {
+	background-color: #62add5;
+	height: 78px;
+}
+
+.commande_h2 {
+	background-color: #62add5;
+	height: 78px;
+}
+
+h3 {
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(150, 53, 98);
+  line-height: 1.2;
+  text-align: center;
+}
+
+h4 {
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(69, 65, 64);
+  line-height: 1.2;
+  text-align: center;
+}
+
+h5 {
+  font-size: 14px;
+  font-family: "Roboto";
+  color: rgb(69, 65, 64);
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: left;
+  margin-top: 30px;
+  margin-bottom: 0px; 
+  margin-left: 0px;
+
+}
+
+
+p {
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(150, 53, 98);
+  line-height: 1.2;
+  text-align: center;
+}
+
+ul li {
+
+  list-style: none;
+  margin: 0; /* To remove default bottom margin */
+  padding: 0; /* To remove default left padding */
+  font-size: 14px;
+  /*font-family: "Roboto";*/
+  color: rgb(69, 65, 64);
+  line-height: 1.2;
+  text-align: left;
+}
+
+label {
+  font-size: 14px;
+  font-family: "Roboto";
+  color: rgb(69, 65, 64);
+  line-height: 1.643;
+  text-align: left;
+}
+
+
+
+/* ---------SECTION NAVIGATION-------------*/
+
+#navigation{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.login_and_news {
+	margin-right: 0px;
+}
+
+@media(max-width:767px){
+}
+
+.btn.btn-primary.dropdown-toggle.dropdown_btn {
+  background-image:url(../../build/img/ecopanier/icomenu.png);
+  height:80px;
+  width:88px;
+  background-color:rgba(0, 0, 0, 0);
+  border:none;
+  background-repeat:no-repeat;
+  outline:none;
+}
+
+
+.dropdown.fixed-top {
+  text-align:right;
+  margin:29px;
+}
+
+element.style {
+}
+
+@media (min-width: 992px) {
+  #navbar {
+    padding-right:120px;
+  }
+}
+
+.btn.btn-primary.dropdown-toggle.dropdown_btn:focus {
+  box-shadow:none;
+}
+
+
+
+/* ---------SECTION HEADER-------------*/
+
+
+div.jumbotron.hero-photography {
+  /*color:#fff;*/
+  text-align:center;
+  background:url("../../build/img/ecopanier/header_ecopanier_ges.jpg");
+  background-size:cover;
+  background-position:center;
+  height:850px;
+}
+
+.header_icon {
+    margin-top:200px;
+}
+
+.header_btn {
+  margin-top:140px;
+}
+
+.h1, h1 {
+  padding-top:60px;
+  text-align:center;
+  font-family:'Nunito';
+  font-weight:700;
+  font-size:48px;
+  padding-bottom:50px;
+  color:white;
+}
+
+
+
+
+header {
+	text-align: center;
+	background-image: url("../images/ecopanier/header_ecopanier_slp.jpg");
+	background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+	height:767px;
+}
+
+
+header .container{
+	padding-left: 250px;
+	padding-right: 250px;
+}
+
+
+.header > div {
+	heigt:50px;
+	background-color: slategray;
+}
+
+/*
+header {
+	border-top: 5px;
+	border-top-color: #D3C5DE;
+	border-top-style: solid;
+}
+*/
+
+hr.style5 {
+	background-color: #fff;
+	border-top: 2px dashed #8c8b8b;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+
+
+@media (min-width: 768px) {
+	header .row{
+		text-align: right;
+	}
+}
+
+
+@media(max-width:767px){
+}
+
+
+
+header .header_icon {
+	padding-top: 40px;
+}
+
+/* ---------SECTION COMPOSITION-------------*/
+
+.composition-backbox {
+	border-right: 14px solid #75254C;
+	border-left: 2px solid #75254C;
+	border-top: 4px solid #75254C;
+	border-bottom: 14px solid #75254C;
+	 border-top-right-radius: 18px;
+	 border-bottom-right-radius: 15px;
+	/*background:#75254C;
+	border-top-right-radius : 15px 10px;
+	border-bottom-right-radius : 15px 10px;	*/
+}
+
+/*
+.composition-frontbox {
+	background:#FFFFFF;
+	margin:14px;
+}
+*/
+
+@media (min-width: 992px) {
+  .composition-backbox {
+    /*padding-right:120px;*/
+    height: 800px;
+  }
+}
+
+
+#composition .row{
+	margin-top:50px;
+}
+
+#composition .container {           /*   TEST    */
+	/*background-color: yellow;
+	margin:10px;
+	padding: 0px; */
+}
+
+#composition h4, p {
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+/* ---------SECTION TARIF-------------*/
+
+.tarif-img{
+	background-image:url(../../build/img/ecopanier/panier_1.jpg);
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+	height: 300px;
+	weight:300px;
+
+}
+
+#commande ul {
+	  list-style: none;
+  margin: 0; /* To remove default bottom margin */
+  padding: 0; /* To remove default left padding */
+  font-size: 14px;
+  font-family: "Roboto";
+  color: rgb(69, 65, 64);
+  line-height: 1.2;
+  text-align: left;
+}
+
+.tarif-background{
+
+			border-right: 14px solid #75254C;
+	border-left: 2px solid #75254C;
+	border-top: 4px solid #75254C;
+	border-bottom: 14px solid #75254C;
+	 border-top-right-radius: 11px;
+	 border-bottom-right-radius: 15px;
+
+}
+
+
+
+/* ---------SECTION COMMANDE-------------*/
+
+.commande-form{
+	margin-top: 70px;
+}
+
+#commande .form-inline {
+	float: right;
+}
+
+button {
+	color:#454340;
+	background-color: #9DDC8C;
+	border-radius: 16px;
+	border: none;
+	font-size: 18px;
+	font-family: Roboto-Medium;
+}
+
+.btn-jecommande {
+	height: 50px;
+	border-radius: 0;
+	font-weight: bold;
+	color: white;
+	font-size: 24px;
+	font-family: Roboto-Medium;
+}
+
+#commande .add-to-cart-classique,.add-to-cart-vegetarien{
+	margin-top: 60px;
+}
+
+/* ---------FOOTER-------------*/
+
+
+#footer h3 {
+  font-family:'Nunito';
+  color:white;
+  font-size:22px;
+  font-weight:900;
+  text-align: left;
+}
+
+#footer a {
+	color: white;
+
+}
+
+#footer li {
+  font-family:'Nunito';
+  color:white;
+  margin-top:10px;
+  margin-bottom:10px;
+  list-style:none;
+  font-weight:500;
+  font-size:16px;
+  margin-left: 0px;
+  padding-left: 0px;
+  	margin-top: 15px;
+}
+
+#footer {
+  /*padding-top:60px;
+  margin-top:50px;*/
+}
+
+
+.footer-clean{
+	margin-top: 100px;
+    /*background-color: rgb(110, 114, 128);*/
+	background-size: cover;
+	background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-image: url("../../build/img/ecopanier/footer_atelierseco.jpg");
+    height: 380px;
+    padding-top: 66px;
+}
+
+.footer-clean ul a:hover {
+  opacity:1;
+}
+
+.footer-clean ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-clean ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:14px;
+  margin-bottom:0;
+}
+
+footer .col-md-3 {
+	padding-left: 50px;
+}
+
+
+
+
+/*----- override sylius :  -----*/
+
+body .pushable {
+    background: white !important;
+}
+
+body.pushable .pusher {
+
+    background-color: white;
+
+}
+
+body {
+    background-color: white;
+}
+
+footer {
+    background-color: white;
+}
+
+.intro {
+
+    background-color: #61ADD5;
+
+}
+
+#intro h2 {
+
+    font-size: 32px;
+    font-family: "Nunito";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 18px;
+}
+
+#intro .form-group {
+
+    margin: 18px;
+
+}
+
+.ui.menu {
+
+    margin-bottom: 0px !important;
+
+}
+
+.intro-lead-in {
+
+    font-size: 48px;
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+
+}
+
+.intro-heading {
+
+    margin-left: 230px;
+    margin-right: 230px;
+
+}
+.intro-heading {
+
+    padding-top: 53px;
+    padding-bottom: 140px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: justifyCenter;
+    line-height: 1.2;
+
+}
+
+header.masthead {
+
+    text-align: center;
+    color: white;
+    background-image: url("../images/atelier_alimentation/header_cover_alim.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: 25px;
+    padding-top: 176px;
+    padding-bottom: 80px;
+
+}
+
+#intro h3 {
+
+    font-size: 32px;
+    font-family: "Nunito";
+    color: rgb(97, 173, 213);
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+
+}
+
+#intro p {
+
+    font-size: 18px;
+    font-family: "Nunito";
+    color: rgb(97, 173, 213);
+    line-height: 1.2;
+    text-align: center;
+
+}
+
+.container-fluid {
+
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.header > div {
+    background-color: white;
+}
+
+.rowjecommande {
+    margin-top: 50px;
+}
+
+
+.rowjecommande > div:nth-child(1) {
+    margin-bottom: 50px;
+}
+
+html body div.pusher section#composition div.container-fluid div.row.text-center {
+    margin-left: 90px;
+    margin-right: 90px;
+}

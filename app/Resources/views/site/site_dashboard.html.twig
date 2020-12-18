@@ -1,0 +1,3019 @@
+{# src/GAEA21/SLPBundle/Resources/views/Default/uDashboard.html.twig #}
+{% extends "base.html.twig" %}
+
+{% block title %}
+    Dashboard Universel
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/site_dashboard.css') }}">
+    {# <link rel="stylesheet" href="{{ asset('css/custom_dashboard.css') }}"> #}
+    <link rel="stylesheet" href="{{ asset('css/questionnaire/socioEco.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/questionnaire/manger.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div>
+        {#---------------------------------------------------------------------------------------------------------------#}
+        {#--------------------------------------------Version Ecran------------------------------------------------------#}
+        {#---------------------------------------------------------------------------------------------------------------#}
+        <div class="ecran">
+            <div class="row no-gutters bandeau">
+                <a href="#" class="bg-user"><img class="img-responsive" src="{{userCover}}" alt="photo background" id="imgBanner"></a>
+                <a class="bg-photo" href="{{path('dashboard_personalisation')}}">
+                    <img class="photo-user" src="{{avatar}}" alt="photo de profil">
+                    <img class="upload_icon"src="images/image.svg">
+                </a>
+                <h1>Votre dashboard universel</h1>
+            </div>
+            <div class="row no-gutters empreinte">
+                {#-----------------couleur----------------#}
+                <div class="col-2 col-sm-2 col-md-2 col-lg-2 innerdiv">
+                    <div class="color gris">
+                        <p>votre couleur</p>
+
+                    </div>
+                </div>
+                {#-----------------Empreinte----------------#}
+                <div class="col-5 col-sm-5 col-md-5 col-lg-5 innerdiv">
+                    <div class="empreinteChromatique">
+                        <div class="infoFirst empreinteInfo infoFirstEmpreinte">
+                            <p>Calculez votre empreinte chromatique afin de déterminer vos profils</p>
+                            <a href="{{ path('userslp_portail') }}">
+                                <img class="calculatrice" src="{{ asset('images/dashboard/calculatrice.png') }}"
+                                    alt="calculatrice"/>
+                            </a>
+                            <p class="question">Qu'est-ce que l'empreinte chromatique ? <a
+                                        href="{{ path('empreinte_chromatique') }}"><img
+                                            src="{{ asset('images/dashboard/empreinte.png') }}"/></a></p>
+                        </div>
+                        <div class="votre-empreinte">
+                            <p>Votre empreinte Chromatique /</p>
+                            <p> Votre Green ID</p>
+                            <div class="mes-rond">
+                                <div class="rond black"></div>
+                                <div class="rond red"></div>
+                                <div class="rond orange"></div>
+                                <div class="rond yellow"></div>
+                                <div class="rond green"></div>
+                                <div class="rond green-c"></div>
+                            </div>
+                            <div class="processusall">
+                                <div class="mes-processus">
+                                    <img src="{{ asset('images/dashboard/communiquer.png') }}" alt="photo background">
+                                </div>
+                                <div class="mes-processus">
+                                    <img src="{{ asset('images/dashboard/manger.png') }}" alt="photo background">
+                                </div>
+                                <div class="mes-processus">
+                                    <img src="{{ asset('images/dashboard/s_habiller.png') }}" alt="photo background">
+                                </div>
+                                <div class="mes-processus">
+                                    <img src="{{ asset('images/dashboard/se_déplacer.png') }}" alt="photo background">
+                                </div>
+                                <div class="mes-processus">
+                                    <img src="{{ asset('images/dashboard/habiter.png') }}" alt="photo background">
+                                </div>
+                                <div class="mes-processus">
+                                    <img src="{{ asset('images/dashboard/se_distraire.png') }}" alt="photo background">
+                                </div>
+                                <div class="mes-processus">
+                                    <img src="{{ asset('images/dashboard/prendre_soin_de_soi.png') }}"
+                                        alt="photo background">
+                                </div>
+                                <div class="mes-processus">
+                                    <img src="{{ asset('images/dashboard/travail.png') }}" alt="photo background">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {#-----------------Eco-geste----------------#}
+                <div class="col-3 col-sm-3 col-md-3 col-lg-3 innerdiv">
+                    <div class="eco">
+                        <div class="row no-gutters align-items-end infoFirst infoFirsteco-geste">
+                            <h2>
+                                Votre éco-geste
+                            </h2>
+                        </div>
+                        <div class="eco-geste">
+                            <h3>ECO GESTE</h3>
+                            <div class="text-eco-geste">
+                                <p class="subtitle">Geste N°47</p>
+                                <p>Se passer si possible de la climatisation afin d’éviter les
+                                    émissions de gaz et une augmentation de facture d’électricité.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {#-----------------Personnalisation----------------#}
+                <div class="col-2 col-sm-2 col-md-2 col-lg-2 personnalisation">
+                    <h2>Personnalisation</h2>
+                    <h6>Personnalisez votre dashboard</h6>
+                    <a href="{{ path('dashboard_personalisation') }}">
+                        <img src="{{ asset('images/dashboard/personnalisation.png') }}"/>
+                    </a>
+                </div>
+            </div>
+            <div class="row no-gutters content">
+                {#---------------------------------------------------------------------------------------------------------------#}
+                {#-------------------------------------------colonne gauche------------------------------------------------------#}
+                {#---------------------------------------------------------------------------------------------------------------#}
+                    {#-------------------------------------------colonne info (celle de gauche)--------------------------------------#}
+                    <div class="col-md-2 col-lg-2 innerdiv">
+                        <div class="statistiques">Statistiques</div>
+                        <div class="actualites">Actualités</div>
+                        <div class="gestion-de-projets">Gestion de Projets</div>
+                        <div class="mes-favoris">Mes Favoris</div>
+                        <div class="agenda">Agenda</div>
+                        <div class="vos-badges">             
+                            <h4 class="text-center pt-3">vos badges</h4>
+                            <p class="text-center mt-3">Votre dernier badge</p>
+                            <div class="text-center">
+                                <img src="{{ asset('images/dashboard/badges-slp.png') }}" />
+                            </div>
+                            <div class="text-center">
+                                <button type="button" class="btn mt-3 mb-3">voir mes badges</button>
+                            </div>     
+                        </div>
+                    </div>
+                    <div class="col-md-10 passerAction" id="slpProgram">
+                        <div class="row no-gutters">
+                            <div class="col-md-12 px-3">
+                                <p class="text-justify introParagraph">
+                                    <h2 class="float-left mr-4">Passer à l'action</h2>
+                                    Le programme <strong>"Passer à l'action"</strong> est un outil communautaire qui met en relation toutes les personnes inscrites dans la <strong>SL communauté</strong> et leur permet grâce à un algorithme d'établir une relation d'èchange immédiate et sans contraintes.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row no-gutters px-3">
+                            <div class="col-md-6">
+                                <p class="text-justify firstParagraph">
+                                    Le <strong>programme SLP</strong> a pour objectif de vous aider à <strong>transformer votre expérience de vie.</strong>
+                                    <br>
+                                    Il s'appuie sur l'humain et les valeurs qui le portent : être en relation, s'aider, se soutenir et surtout agir <strong>ensemble.</strong>
+                                </p>
+                                <p class="text-justify secondParagraph">
+                                    Il vous suffit d'exprimer un besoin ou une envie, de faire une demande ou de proposer un service dans une des <strong>catégories</strong> du programme.
+                                </p>
+                            </div>
+                            <div class="col-md-6 action-images">
+                                <div class="row no-gutters text-right">
+                                    <div class="col-md-4 bouton-actions-cherche">
+                                        <img class="action-cherche" src="{{ asset('images/dashboard/je-cherche.jpg') }}" />
+                                        <div class="btn btn-cherche">
+                                            <img src="{{ asset('images/dashboard/je-cherche-selectionne.png') }}" class="img-back" />
+                                            <img src="{{ asset('images/dashboard/je-cherche.png') }}" class="img-front" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 bouton-actions-propose">
+                                        <img src="{{ asset('images/dashboard/je-propose.jpg') }}" />
+                                        <div class="btn btn-propose">
+                                            <img class="action-propose img-back" src="{{ asset('images/dashboard/je-propose-selectionne.png') }}"/>
+                                            <img class="action-propose img-front" src="{{ asset('images/dashboard/je-propose.png') }}"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 bouton-aide-voisin">
+                                        <img src="{{ asset('images/dashboard/aide-ton-voisin.jpg') }}" />
+                                        <a href="https://aidetonvoisin.sustlivprogram.org/"><div class="btn btn-propose">
+                                            <img class="aide-voisin img-back" src="{{ asset('images/dashboard/bouton-aide-ton-voisin-selectionne.png') }}"/>
+                                            <img class="aide-voisin img-front" src="{{ asset('images/dashboard/bouton-aide-ton-voisin.png') }}"/>
+                                        </div></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row no-gutters px-3">
+                            <div class="col-md-12">
+                                <p class="thirdParagraph">
+                                    Le programme vous proposera alors une option qu'il vous suffira <strong>d'accepter/refuser </strong> et tout se mettra automatiquement 
+                                    en place sans autre action de votre part afin de répondre à votre demande.
+                                </p>
+                                <div class="row no-gutters bottomDiv">
+                                    <div class="col-md-3 text-center mt-4">
+                                        <button type="button" class="btn btn-danger mt-2">Passer à l'action</button>
+                                    </div>
+                                    <div class="col-md-9 Action-icons">
+                                        <div class="row no-gutters passerIcons text-center">
+                                            <div class="col-md-2">
+                                                <figure>
+                                                <img src="{{ asset('images/dashboard/competence.png') }}" alt="">
+                                                <figcaption class="mt-2">compétence</figcaption>
+                                                </figure>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <figure>
+                                                <img src="{{ asset('images/dashboard/materiel.png') }}" alt="">
+                                                <figcaption  class="mt-2">matériel</figcaption>
+                                                </figure>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <figure>
+                                                <img src="{{ asset('images/dashboard/transport.png') }}" alt="">
+                                                <figcaption  class="mt-2">transport</figcaption>
+                                                </figure>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <figure>
+                                                <img src="{{ asset('images/dashboard/logement.png') }}" alt="">
+                                                <figcaption  class="mt-2">logement</figcaption>
+                                                </figure>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <figure>
+                                                <img src="{{ asset('images/dashboard/soutient.png') }}" alt="">
+                                                <figcaption  class="mt-2">soutien</figcaption>
+                                                </figure>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <figure>
+                                                <img src="{{ asset('images/dashboard/parrainage.png') }}" alt="">
+                                                <figcaption  class="mt-2">parrainage</figcaption>
+                                                </figure>
+                                            </div>
+                                         </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="row no-gutters">
+                            <div class="col-md-7 pointCommu">
+                                <h3 class="mt-2 text-center">Points communautaires</h3>
+                                <div class="row no-gutters mt-3">
+                                    <div class="col-md-6 description-commu">
+                                        <h6>Points communautaires :</h6>
+                                        <p class="text-justify textpointCommu">
+                                            Le programme est régi par un système de <strong>points communauté.</strong>
+                                            <br>
+                                            Plus vous contribuez, plus vous gagnez de points.
+                                            <br>
+                                            <br>
+                                            Vos points vous permettent de participer 
+                                            au concours communautaire et de gagner des prix/récompenses
+                                            et avantages tous les mois, trimestres, semestres et de faire partie
+                                            de la sélection annuelle pour le programme <strong>"change maker"</strong>
+                                        </p>
+                                    </div>
+                                    <div class="col-md-6 verticaltext text-center mt-4">
+                                        <h5>Vos points hebdomadaires</h5>
+                                        <h3 class="pt-number">70 Points</h3>
+                                        <div class="verticaltext_content">classement pc</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5 pointClassement">
+                                <div class="row">
+                                    <div class="col-9">
+                                        <div class="tableau-classement text-center">
+                                            <div class="c-table-action">
+                                                <div class="btn-group no-gutters" role="group">
+                                                    <div class="btn">
+                                                        <img src="{{ asset('images/dashboard/hebdomadaire.png') }}" />
+                                                    </div>
+                                                    <div class="btn">
+                                                        <img src="{{ asset('images/dashboard/mensuel.png') }}" />
+                                                    </div>
+                                                    <div class="btn">
+                                                        <img src="{{ asset('images/dashboard/semestriel.png') }}" />
+                                                    </div>
+                                                    <div class="btn">
+                                                        <img src="{{ asset('images/dashboard/annuel.png') }}" />
+                                                    </div>                                        
+                                                </div>
+                                                <div class="row no-gutters table-row-2 align-items-center">
+                                                    <div class="col-2">
+                                                        <img class="place" src="{{ asset('images/dashboard/un.png') }}" />
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <img class="img-profil" src="{{ asset('images/dashboard/profil1.png') }}">
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <p>bast</p>
+                                                    </div>                                                   
+                                                    <div class="col-4">
+                                                        <p>150 000 Points</p>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <img class="current-points" src="{{ asset('images/dashboard/point-communautaire.png') }}">
+                                                    </div>
+                                                </div>
+                                                <div class="row no-gutters table-row-2 align-items-center">
+                                                    <div class="col-2">
+                                                        <img class="place" src="{{ asset('images/dashboard/deux.png') }}" />
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <img class="img-profil" src="{{ asset('images/dashboard/profil3.png') }}">
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <p>jhon21</p>
+                                                    </div>                                                   
+                                                    <div class="col-4">
+                                                        <p>100 000 Points</p>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <img class="current-points" src="{{ asset('images/dashboard/point-communautaire.png') }}">
+                                                    </div>
+                                                </div>
+                                                <div class="row no-gutters table-row-3 align-items-center">
+                                                    <div class="col-2">
+                                                        <img class="place" src="{{ asset('images/dashboard/trois.png') }}" />
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <img class="img-profil" src="{{ asset('images/dashboard/profil4.png') }}">
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <p>artu</p>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <p>60 000 Points</p>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <img class="current-points" src="{{ asset('images/dashboard/point-communautaire.png') }}">
+                                                    </div>                                                  
+                                                </div>
+                                                <div class="row no-gutters table-row-4 align-items-center">
+                                                    <div class="col-2">
+                                                        <img class="place" src="{{ asset('images/dashboard/quatre.png') }}" />
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <img class="img-profil" src="{{ asset('images/dashboard/profil2.png') }}">
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <p>jina</p>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <p>20 000 Points</p>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <img class="current-points" src="{{ asset('images/dashboard/point-communautaire.png') }}">
+                                                    </div>                                                  
+                                                </div>
+                                                <div class="row no-gutters table-row-5 align-items-center">
+                                                    <div class="col-2">
+                                                        <img class="place" src="{{ asset('images/dashboard/cinq.png') }}" />
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <img class="img-profil" src="{{ asset('images/dashboard/profil5.png') }}">
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <p>chlo</p>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <p>10 000 Points</p>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <img class="current-points" src="{{ asset('images/dashboard/point-communautaire.png') }}">
+                                                    </div>                                                  
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 logo-classement text-center">                                       
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <figure class="commu">
+                                                    <img class="commu-classement" src="{{ asset('images/dashboard/logo-communaute-classement.png') }}" alt="">
+                                                </figure>
+                                                <figcaption class="macommunaute"><img src="{{ asset('images/dashboard/bouton-communaute-classement.png') }}" alt=""></figcaption>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <figure class="slc">
+                                                    <img class="slc-classement" src="{{ asset('images/dashboard/logo_slc_bleu_2.png') }}" alt="">
+                                                </figure>
+                                                <figcaption class="slc"><img src="{{ asset('images/dashboard/bouton-slc-classement.png') }}" alt=""></figcaption>
+                                            </div>
+                                        </div>                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                                     
+                    </div>
+                    {#-------------------------------------------colonne info (celle de gauche partie 2)--------------------------------------#}
+                    <div class="col-5 col-md-5 col-sm-5 col-lg-5">
+                        <div class="row no-gutters innerdiv">
+                            <div class="col-md-5 col-sm-5 innerdiv mt-2">
+                                <div class="CO2 gris" id="co2">
+                                    <h2>CO2</h2>
+                                    <div>
+                                        <p>graphique</p>
+                                    </div>
+                                    <p class="day">Votre empreinte CO2</p>
+                                    <p class="day">Jour</p>
+                                    <p>{{ random(500) }}g CO2</p>
+                                    <p class="day">Jour</p>
+                                    <p>{{ random(500) }}g CO2</p>
+                                    <p class="day">Jour</p>
+                                    <p>{{ random(500) }}g CO2</p>
+                                </div>
+                                <div class="row no-gutters">
+                                    <div class="calorie">
+                                        <h2>Calories</h2>
+                                        <div>
+                                            <p>graphique</p>
+                                        </div>
+
+                                        <p class="day">Vos dépenses en calories</p>
+
+                                        <p class="day">Jour</p>
+                                        <p>{{ random(500) }} Calories</p>
+
+                                        <p class="day">Jour</p>
+                                        <p>{{ random(500) }} Calories</p>
+
+                                        <p class="day">Jour</p>
+                                        <p>{{ random(500) }} Calories</p>
+
+                                    </div>
+
+                                    <div class="calendrier">
+                                        <h2>Calendrier</h2>
+                                        <p class="day"> MARS </p>
+                                        <p class="day">L M M J V S D</p>
+                                        <p class="day"> 1 2 3 4 5 6 7</br>8 9 10 11 12 13 14</br>15 16 17 18 19 20 21</br>22 23
+                                            24 25 26 27
+                                            28</br>29 30 31</p>
+                                        <p class="day">Jour</p>
+                                    </div>
+                                    <div class="packages">
+                                        <h2>Vos packages </h2>
+                                        <p class="day"> Demande simple </p>
+                                        <p class="day">Package membre</p>
+                                        <p class="day"> Package non membre </p>
+                                    </div>
+
+                                    <div class="repertoire">
+                                        <h2>Répertoire vert </h2>
+                                    </div>
+
+                                    <div class="greenevent">
+                                        <h2>Green event series </h2> 
+                                    </div>
+
+                                    <div class="consumaction">
+                                        <h2>Consom’action </h2>
+                                    </div>
+
+                                    <div class="ecogestes">
+                                        <h2>Programme Eco-gestes </h2>
+                                    </div>
+
+                                    <div class="greencoaching text-center">
+                                        <div class="overlay">
+                                            <img src="{{ asset('images/dashboard/logo_greencoaching.png') }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="greenyourown text-center">
+                                        <div class="overlay">
+                                            <img src="{{ asset('images/dashboard/logo_growyourown.png') }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="greensharing text-center">
+                                        <div class="overlay">
+                                            <img src="{{ asset('images/dashboard/logo_sharing_economy.png') }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="videos text-center">
+                                        <h3 class="mt-2">Vidéos</h3>
+                                        <p class="mt-2">
+                                            Cliquez ici pour trouver des vidéos informatives sur les thèmes du : 
+                                        </p>
+                                        <ul class="text-left list-group">
+                                            <li class="list-item text-left">
+                                                Dashboard
+                                            </li>
+                                            <li class="list-item text-left mt-3">
+                                                Gaea21 et ses événements
+                                            </li>
+                                            <li class="list-item text-left mt-3">
+                                                Les dernières actualités et plus encore
+                                            </li>
+                                        </ul>
+                                        <div class=" row image-video mx-auto mt-5 mb-4">
+                                            <div class="embed">
+                                                <img src="{{ asset('images/dashboard/bouton-play.png') }}">
+                                            </div>                                         
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            {#-------------------------------------------colonne info (celle du milieu)--------------------------------------#}
+                            <div class="col-7 col-md-7 col-sm-7 col-lg-7 feeds mt-2">
+                                <div class="feed-actualites">
+                                    <div class="row">
+                                        <div class="d-flex align-items-center col-md-7">
+                                            <h4> Feed / Actualités</h4>
+                                        </div>
+                                        <div class="col-md-5 notification text-left">
+                                            <span class="badge">{{counter[0]['counted']}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% for value in desktopFeed %}
+                                    {% if value.updateAt > user.lastlogin|date("Y/m/d") %}
+                                    {% set date = 'true' %}
+                                    <div class="card border-dark feed-color-{{value.priorite}} feed-{{value.titre}} feed-{{value.categorie}} new-feed-{{date}}">
+                                        {% else %}
+                                        {% set date = 'false' %}
+                                        <div class="card border-dark feed-color-{{value.priorite}} feed-{{value.titre}} feed-{{value.categorie}}">
+                                    {% endif %}
+                                        <div class="logo">
+                                            <img class="ml-2 float-left" src="{{ asset('images/dashboard/' ~ value.categorie) }}">
+                                            <h5 class="card-title">{{value.titre}}</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <img src="{{ asset('images/dashboard/' ~ value.image) }}" class="card-img-top A1">
+                                            {% if value.priorite == 1 %}
+                                            <span><img src="{{ asset('images/dashboard/important-feed.png') }}" class="card-img-top A2"></span>
+                                            {% endif %}
+                                            {% if value.titre == 'Bienvenue' %}
+                                            <span><img src="{{ asset('images/dashboard/bienvennu-encart.jpg') }}" class="card-img-top A3"></span>
+                                            {% endif %}
+                                            <h6 class="header">{{value.titrecontenu}}</h6>
+                                            <p class="card-text">{{value.description}}</p>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        {#-------------------------------------------classement SLP---------------------------------------------#}
+                        <div class="row no-gutters containerClassementSlp mt-2 innerdiv">
+                            <div class="col-12 classementSlp">
+                                <h3 class="text-center pt-3">classement SLP</h3>
+                                <div class="btn-group btn-slc no-gutters" role="group">
+                                    <div class="btn slc-btn">
+                                        <img src="{{ asset('images/dashboard/hebdomadaire-nonselect.png') }}" data-image="hebdomadaire-nonselect.png" data-imageselected="hebdomadaire-selectionne.png" />
+                                    </div>
+                                    <div class="btn slc-btn">
+                                        <img src="{{ asset('images/dashboard/mensuel-nonselect.png') }}" data-image="mensuel-nonselect.png" data-imageselected="mensuel-selectionne.png" />
+                                    </div>
+                                    <div class="btn slc-btn">
+                                        <img src="{{ asset('images/dashboard/semestre-nonselect.png') }}" data-image="semestre-nonselect.png" data-imageselected="semestriel-selectionne.png" />
+                                    </div>
+                                    <div class="btn slc-btn">
+                                        <img src="{{ asset('images/dashboard/annuel-nonselect.png') }}" data-image="annuel-nonselect.png" data-imageselected="annuel-selectionne.png" />
+                                    </div>                                        
+                                </div>
+                                <div class="row text-center classementPerso">
+                                    <div class="col-md-6">
+                                            <img class="slp-commu-classement" src="{{ asset('images/dashboard/logo-ma-communaute-classement-slp.png') }}" alt=""> 
+                                    </div>
+                                    <div class="col-md-6">
+                                            <img src="{{ asset('images/dashboard/logo-slc-classement-slp.png') }}" alt="">
+                                    </div>
+                                </div>
+                                <div class="table mt-2">                                 
+                                    <div class="row no-gutters table-row-1 align-items-center">
+                                        <div class="col-2">
+                                            <img class="place" src="{{ asset('images/dashboard/un-classement.png') }}" />
+                                        </div>
+                                        <div class="col-2">
+                                            <img class="img-profil" src="{{ asset('images/dashboard/profil1.png') }}">
+                                        </div>
+                                        <div class="col-2">
+                                            <p>bast</p>
+                                        </div>
+                                        <div class="col-2">
+                                            <img class="current-points" src="{{ asset('images/dashboard/point-communautaire.png') }}">
+                                        </div>
+                                        <div class="col-3">
+                                            <p>100 000 Points</p>
+                                        </div>
+                                        <div class="col-1">
+                                            <img class="badge-classement" src="{{ asset('images/dashboard/badge-classement-slp.png') }}">
+                                        </div>
+                                    </div>
+                                    <div class="row no-gutters table-row-2 align-items-center">
+                                        <div class="col-2">
+                                            <img class="place" src="{{ asset('images/dashboard/deux-classement.png') }}" />
+                                        </div>
+                                        <div class="col-2">
+                                            <img class="img-profil" src="{{ asset('images/dashboard/profil3.png') }}">
+                                        </div>
+                                        <div class="col-2">
+                                            <p>jhon21</p>
+                                        </div>
+                                        <div class="col-2">
+                                            <img class="current-points" src="{{ asset('images/dashboard/point-communautaire.png') }}">
+                                        </div>
+                                        <div class="col-4">
+                                            <p>100 000 Points</p>
+                                        </div>
+                                    </div>
+                                    <div class="row no-gutters table-row-3 align-items-center">
+                                        <div class="col-2">
+                                            <img class="place" src="{{ asset('images/dashboard/trois-classement.png') }}" />
+                                        </div>
+                                        <div class="col-2">
+                                            <img class="img-profil" src="{{ asset('images/dashboard/profil4.png') }}">
+                                        </div>
+                                        <div class="col-2">
+                                            <p>artu</p>
+                                        </div>
+                                        <div class="col-2">
+                                            <img class="current-points" src="{{ asset('images/dashboard/point-communautaire.png') }}">
+                                        </div>
+                                        <div class="col-4">
+                                            <p>60 000 Points</p>
+                                        </div>
+                                    </div>
+                                    <div class="row no-gutters table-row-4 align-items-center">
+                                        <div class="col-2">
+                                            <img class="place" src="{{ asset('images/dashboard/quatre.png') }}" />
+                                        </div>
+                                        <div class="col-2">
+                                            <img class="img-profil" src="{{ asset('images/dashboard/profil2.png') }}">
+                                        </div>
+                                        <div class="col-2">
+                                            <p>jina</p>
+                                        </div>
+                                        <div class="col-2">
+                                            <img class="current-points" src="{{ asset('images/dashboard/point-communautaire.png') }}">
+                                        </div>
+                                        <div class="col-4">
+                                            <p>20 000 Points</p>
+                                        </div>
+                                    </div>
+                                    <div class="row no-gutters table-row-5 align-items-center">
+                                        <div class="col-2">
+                                            <img class="place" src="{{ asset('images/dashboard/cinq.png') }}" />
+                                        </div>
+                                        <div class="col-2">
+                                            <img class="img-profil" src="{{ asset('images/dashboard/profil5.png') }}">
+                                        </div>
+                                        <div class="col-2">
+                                            <p>chlo</p>
+                                        </div>
+                                        <div class="col-2">
+                                            <img class="current-points" src="{{ asset('images/dashboard/point-communautaire.png') }}">
+                                        </div>
+                                        <div class="col-4">
+                                            <p>10 000 Points</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {#-------------------------------------------colonne Impact tracker ---------------------------------------------#}
+                        <div class="row no-gutters impactrow innerdiv">
+                            <div class="col-12 col-12 col-md-12 col-sm-12 col-lg-12 impacttracker">
+                                <div class="overlay"></div>
+                                <h2>Impact Tracker</h2>
+                                <h2>Comming Soon</h2>
+                            </div>
+                        </div>  
+                    </div>
+                    {#---------------------------------------------------------------------------------------------------------------#}
+                    {#-------------------------------------------collone info (celle de droite)--------------------------------------#}
+                    {#---------------------------------------------------------------------------------------------------------------#}
+                    <div class="col-7 col-md-7 col-sm-7 col-lg-7 mt-2">
+                        <div class="row no-gutters">
+                            {#-------------------------------------------Section Budget----------------------------------------------------#}
+                            <div class="budget_section text-center">
+                                <h2 class="text-center">Budget</h2>
+                                <div class="col-md-12 budgetxt">
+                                    <p>
+                                        La plupart des gens pensent qu’adopter un
+                                        comportement éco-conscient et consommer
+                                        de manière responsable coûte cher.
+                                    </p>
+                                    <p>
+                                        Sur la base de votre budget mensuel,
+                                        le dashboard universel vous propose
+                                        un algorithme qui calcule automatiquement
+                                        votre variation de revenus en fonction
+                                        de vos choix de consommation.
+                                    </p>
+                                    <div id="link_programme_buget">
+                                        <a href="{{ path('programmebudgetDashboard') }}"> Entrez dans le programme budget dashboard</a>
+                                    </div>
+                                </div>
+                            </div>
+                            {#-------------------------------------------Profil Personnel----------------------------------------------------#}
+                            <div class="profil">
+                                <div class="col-md-12 col-sm-12 col-12 col-lg-12">
+                                    <h2 class="text-center" >
+                                        Votre Profil Individuel
+                                    </h2>
+                                    <div class="row target">
+                                        <div class="col-4 col-md-4 col-sm-4 col-lg-4">
+                                            <div class="target-socio">
+                                                <h6>Socio-économique</h6>
+                                                <p>De quel type êtes-vous ?</p>
+                                                <p> Vous avez répondu à ce questionnaire ?
+                                                Retrouver ici votre Mini-profil Socio-économique.</p>
+                                                <a href="{{ path('profil_socio-economique') }}">
+                                                    <i class="fa fa-plus-circle"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-4 col-sm-4 col-lg-4">  
+                                            <div class="target-psycho">
+                                                <div class="d-flex align-items-end overlay overlayTarget">
+                                                    <h2>Questionnaire Psychologique</h2>
+                                                </div>                              
+                                                <h6>Psychologique</h6>
+                                                <p>De quel type êtes-vous ?</p>
+                                                <p> Vous avez répondu à ce questionnaire ? Retrouver ici votre Mini-profil
+                                                Psychologique.</p>
+                                                {% if reponduPyscho == true %}
+                                                    {% if formPsycho == 1 %}
+                                                        <a href="{{ path('userslp_psycho') }}" data-toggle="modal"
+                                                            data-target="#myModal-Psychologique">
+                                                            <i class="fa fa-plus-circle"
+                                                                style="font-size:20px;color:red"></i></a>
+                                                    {% else %}
+                                                        <a href="{{ path('profil_psychologique') }}">
+                                                            <i class="fa fa-plus-circle"></i></a>
+                                                    {% endif %}
+                                                {% endif %}       
+                                            </div>  
+                                        </div>
+                                        <div class="right col-4 col-md-4 col-sm-4 col-lg-4">
+                                            <div class="target-ecologique">
+                                                <div class="d-flex align-items-end overlay overlayTarget">
+                                                    <h2>Questionnaire Ecologique</h2>
+                                                </div>
+                                                <h6>Ecologique</h6>
+                                                <p>De quel type êtes-vous ?</p>
+                                                <p>Vous avez répondu à ce questionnaire ?
+                                                Retrouver ici votre Mini-profil Ecologique.
+                                                </p>
+                                                {% if reponduEcolo == true %}
+                                                    <a href="#">
+                                                        <i class="fa fa-plus-circle" style="font-size:20px;color:red"></i></a>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bandeau-bottom">
+                                        <div class="col-4 col-md-4 col-sm-4 float-left">
+                                            <div class="d-flex align-items-center texte-bottom">
+                                                <h6>Répondez aux questionnaires
+                                                    processus pour déterminer
+                                                    votre empreinte chomatique :</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-md-8 col-sm-8 col-lg-8 float-right">
+                                            <div class="lien-questionnaires">
+                                                <div class="mes-processus">
+                                                    <img src="{{ asset('images/dashboard/communiquer.png') }}"
+                                                        alt="photo background">
+                                                </div>
+                                                <div class="mes-processus"><a href="{{ path('userslp_portail') }}">
+                                                    <img src="{{ asset('images/dashboard/manger.png') }}"
+                                                        alt="photo background"></a>
+                                                </div>
+                                                <div class="mes-processus">
+                                                    <img src="{{ asset('images/dashboard/s_habiller.png') }}"
+                                                        alt="photo background">
+                                                </div>
+                                                <div class="mes-processus">
+                                                    <img src="{{ asset('images/dashboard/se_déplacer.png') }}"
+                                                        alt="photo background">
+                                                </div>
+                                                <div class="mes-processus">
+                                                    <img src="{{ asset('images/dashboard/habiter.png') }}" alt="photo background">
+                                                </div>
+                                                <div class="mes-processus">
+                                                    <img src="{{ asset('images/dashboard/se_distraire.png') }}"
+                                                             alt="photo background">
+                                                </div>
+                                                <div class="mes-processus">
+                                                    <img src="{{ asset('images/dashboard/prendre_soin_de_soi.png') }}"
+                                                        alt="photo background">
+                                                </div>
+                                                <div class="mes-processus">
+                                                    <img src=" {{ asset('images/dashboard/travail.png') }}" alt="photo background">
+                                                     </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                          
+                                </div>
+                            </div>
+                            {#-------------------------------------------Profil version ipad portrait----------------------------------------------------#}  
+                            <div class="containerProfilIndiv">
+                                <h2 class="text-center">Votre Profil Individuel</h2>
+                                <div class="row profilIndiv">
+                    
+                                    <div class="left text-center align-middle">
+                                        <div id="socioLeft">
+                                            <h5 class="text-center align-middle">Socio-économique</h5>
+                                            <h6 class="text-center align-middle">De quel type êtes-vous ?</h6>
+                                            <h6 class="text-center align-middle"> Vous avez répondu à ce questionnaire ?
+                                                Retrouver ici votre Mini-profil Socio-économique.
+                                            </h6>
+                                            <i class="fa fa-plus-circle"></i>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="right text-center">
+                                        {% if reponduPyscho == false %}
+                                            <div class="one" style="background-color:grey; color: white" onclick="changeProfilIndividuel(this)">
+                                                <div id="psychoRight">
+                                                    <h5>Psychologique</h5>
+                                                    <h6>Questionnaire Psychologique</h6>
+                                                </div>
+                                            </div>
+                                        {% else %}
+                                            <div class="one" style="background-color:white; color: black" onclick="changeProfilIndividuel(this)">
+                                                <div id="psychoRight">
+                                                    <h5>Psychologique</h5>
+                                                    <h6>Questionnaire Psychologique</h6>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                        {% if reponduEcolo == false %}
+                                            <div class="two"  style="background-color:grey; color: white" onclick="changeProfilIndividuel(this)" >
+                                                <div id="ecoRight">
+                                                    <h5>Ecologique</h5>
+                                                    <h6>Questionnaire Ecologique</h6>
+                                                </div>
+                                            </div>
+                                        {% else %}
+                                            <div class="two" style="background-color:white; color: black" onclick="changeProfilIndividuel(this)">
+                                                <div id="ecoRight">
+                                                    <h5>Ecologique</h5>
+                                                    <h6>Questionnaire Ecologique</h6>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                    <div class="profilIndivLast">
+                                        <div class="col-12">
+                                            <h6>Répondez aux questionnaires
+                                                processus pour déterminer
+                                                votre empreinte chomatique :</h6>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="lien-questionnaires">
+                                                <div class="mes-processus">
+                                                    <img class="img-fluid" src="{{ asset('images/dashboard/communiquer.png') }}" alt="photo background">
+                                                </div>
+                                                <div class="mes-processus">
+                                                    <a href="{{ path('site_mangerTest') }}" aria-disabled="true" data-toggle="modal"
+                                                       data-target="#myModal-Manger">
+                                                        <img class="img-fluid" src="{{ asset('images/dashboard/manger.png') }}" alt="photo background">
+                                                    </a>
+                                                </div>
+                                                <div class="mes-processus">
+                                                    <img class="img-fluid" src="{{ asset('images/dashboard/s_habiller.png') }}" alt="photo background">
+                                                </div>
+                                                <div class="mes-processus">
+                                                    <img class="img-fluid" src="{{ asset('images/dashboard/se_déplacer.png') }}" alt="photo background">
+                                                </div>
+                                                <div class="mes-processus">
+                                                    <img class="img-fluid" src="{{ asset('images/dashboard/habiter.png') }}" alt="photo background">
+                                                </div>
+                                                <div class="mes-processus">
+                                                    <img class="img-fluid" src="{{ asset('images/dashboard/se_distraire.png') }}" alt="photo background">
+                                                </div>
+                                                <div class="mes-processus">
+                                                    <img class="img-fluid" src="{{ asset('images/dashboard/prendre_soin_de_soi.png') }}" alt="photo background">
+                                                </div>
+                                                <div class="mes-processus">
+                        
+                                                    <img class="img-fluid" src=" {{ asset('images/dashboard/travail.png') }}" alt="photo background">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                    
+                            {#-------------------------------------------Profil collectif version ipad portrait----------------------------------------------------#}
+                            <div class="containerProfilCollectif">
+                                <h2 class="text-center">Votre Profil Collectif</h2>
+                                <div class="profilCollectif">
+                                    <div class="row no-gutters">
+                                        <div class="col-8">
+                                            <div class="leftCollectif">
+                                                {% if reponduFamille == false %}
+                                                    <div id="familleLeft">
+                                                        <div class="first_famille false">
+                                                            <h6>Créez votre profil Famille</h6>
+                                                        </div>
+                                                        <img id="firstIMG" src="{{ asset('images/dashboard/profil_famille_V2.jpg') }}" class="img-fluid">
+                                                    </div>
+                                                {% else %}
+                                                    <div id="familleLeft">
+                                                        <div class="profilCollectifContent">
+                                                            <h6>Vous êtes de type A</h6>
+                                                            <h6>Vous avez répondu à ce questionnaire ? Retrouver ici votre
+                                                                Mini-profil.</h6>
+                                                            <h6><i style="color:red" class="fa fa-plus-circle"></i></h6>
+                                                        </div>
+                                                        <img id="firstIMG" src="{{ asset('images/dashboard/profil_famille_V2.jpg') }}" class="img-fluid">
+                                                    </div>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="rightCollectif">
+                                                {% if reponduMenage == false %}
+                                                <div class="oneProfilCollectif" onclick="changeProfilCollectif(this)">
+                                                    <div id="menageRight">
+                                                        <div class="second_menage false">
+                                                            <h6>Créez votre profil Ménage</h6>
+                                                        </div>
+                                                        <img src="{{ asset('images/dashboard/profil_menage_V2.jpg') }}">
+                                                    </div>
+                                                </div>
+                                                {% else %}
+                                                    <div class="oneProfilCollectif" onclick="changeProfilCollectif(this)">
+                                                        <div id="menageRight">
+                                                            <div class="second_menage">
+                                                                <h6>Profil Ménage</h6>
+                                                            </div>
+                                                            <img src="{{ asset('images/dashboard/profil_menage_V2.jpg') }}">
+                                                        </div>
+                                                    </div>
+                                                {% endif %}
+                                                {% if reponduAmi == false %}
+                                                    <div class="twoProfilCollectif" style="background-color:grey; color: white" onclick="changeProfilCollectif(this)">
+                                                        <div id="amisRight">
+                                                            <div class="third_amis false">
+                                                                <h6>Créez votre Profil Amis</h6>
+                                                            </div>
+                                                            <img src="{{ asset('images/dashboard/profil_amis_V2.jpg') }}" class="img-fluid">
+                                                        </div>
+                                                    </div>
+                                                {% else %}
+                                                    {# style="box-shadow: inset 0 0 0 1000px rgba(255,255,255); color: black; background-image: url({{asset('images/dashboard/profil_amis_V2.jpg') }}"  #}
+                                                    <div class="twoProfilCollectif" onclick="changeProfilCollectif(this)">
+                                                        <div id="amisRight">
+                                                            <div class="third_amis">
+                                                                <h6> Profil Amis </h6>
+                                                            </div>
+                                                            <img src="{{ asset('images/dashboard/profil_amis_V2.jpg') }}" class="img-fluid">
+                                                        </div>
+                                                    </div>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                     
+                            {#-------------------------------------------Profil collectif----------------------------------------------------#}
+                            <div class="row questionnaire mx-auto">
+                                <div class="col-md-4 col-sm-4 col-4 innerdiv profilcollectif">
+                                    <div class="profilfamille">
+                                        {% if reponduFamille == true %}
+                                            <div class="target-profil">
+                                                <h4>Profil famille</h4>
+                                                <h5>Vous êtes de type A</h5>
+                                                <h6> Vous avez répondu à ce questionnaire ?
+                                                    Retrouver ici votre Mini-profil.</h6>
+                                                <a href="#">
+                                                    <i class="fa fa-plus-circle"></i>
+                                                </a>
+                                            </div>
+                                        {% else %}
+                                            <div class="d-flex align-items-end innerdiv target-profil overlay">
+                                                <h2>Créez votre profil Famille</h2>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+    
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-4 innerdiv profilcollectif">
+                                    <div class="profilamis">
+                                        {% if reponduAmi == true %}
+                                            <div class="target-profil">
+                                                <h4>Profil amis</h4>
+                                                <h6>De quel type êtes-vous ?</h6>
+                                                <h6> Vous avez répondu à ce questionnaire ?
+                                                    Retrouver ici votre Mini-profil.</h6>
+                                                <a href="#">
+                                                    <i class="fa fa-plus-circle"></i>
+                                                </a>
+                                            </div>
+                                        {% else %}
+                                            <div class="d-flex align-items-end innerdiv target-profil overlay">
+                                                <h2 >Créez votre profil Amis</h2>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-4 lastdiv profilcollectiflast">
+                                    <div class="profilmenage">
+                                        {% if reponduMenage == true %}
+                                            <div class="target-profil">
+                                                <h4>Profil ménage</h4>
+                                                <h6>De quel type êtes-vous ?</h6>
+                                                <h6> Vous avez répondu à ce questionnaire ?
+                                                    Retrouver ici votre Mini-profil.</h6>
+                                                <a href="#">
+                                                    <i class="fa fa-plus-circle"></i>
+                                                </a>
+                                            </div>
+                                        {% else %}
+                                            <div class="d-flex align-items-end innerdiv target-profil overlay">
+                                                <h2>Créez votre profil Ménage</h2>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                            {#-----------------------------------------------SLC-------------------------------------------------------------#}
+                            <div class="row lastdiv SLC mx-auto">
+                                <div class="col-md-12 col-12 col-lg-12 lastdiv">
+                                    <img src="{{ asset('images/dashboard/aviron.jpg') }}"/>
+                                    <div class="title">
+                                        <img src="{{ asset('images/dashboard/logo_slc_bleu_2.png') }}"/>
+                                        <h2 class="mt-3">Sustainable Living Community</2>
+                                    </div>
+                                    <div class="sign">
+                                        <img src="{{ asset('images/dashboard/logo_slc_bleu_2.png') }}"/>
+                                        <span>SL Community Forum</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-12 .col-lg-12 lastdiv description">
+                                    <div class="row lastdiv mx-auto">
+                                        <div class="col-md-12 col-xs-12">
+                                            <p>La Sustainable Living Community (SLC) réunit toutes les personnes qui
+                                                participent à un des 7 sous-programmes du programme Sustainable Living
+                                                Program (SLP).</p>
+                                        </div>
+                                        <div class="row lastdiv join">
+                                            <div class="offset-sm-1 col-sm-6 .col-lg-6">
+                                                <a href="{{ path('community') }}">
+                                                <img src="{{ asset('images/dashboard/logo-slc-blanc.png') }}"/>
+                                                <p class="joinSlCommunity">JE REJOINS LA SL COMMUNITY</p>
+                                                </a>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="{{ path('community') }}">
+                                                <img src="{{ asset('images/dashboard/oui.png') }}"/>
+                                                </a>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <img src="{{ asset('images/dashboard/non.png') }}"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {#-------------------------------------------Profil thématique---------------------------------------------------#}
+                            <div class="containerresultat">
+                                <div class="affichageresultat" id="link-affichageresultat">
+                                    <h2>Affichage résultats </br>par thème/questionniaire </h2>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6 col-6 col-lg-6">
+    
+                                            <h1>MANGER
+                                                <a href="{{ path('site_mangerTest') }}" aria-disabled="true" data-toggle="modal"
+                                                   data-target="#myModal-Manger">
+                                                    <img src="{{ asset('images/dashboard/manger - empreinte - vert foncé.png') }}" alt="manger jaune">
+                                                </a>
+                                            </h1>
+    
+                                            <h3>Vous êtes un profil de type A</h3>
+                                            <p class="truncate">La production de viande toujours plus importante a un impact majeur sur le réchauffement
+                                                climatique, la déforestation, la consommation d’eau... Grâce à cette page, vous aurez à
+                                                disposition des outils pour avoir une consommation adaptée à vos besoins réels et basée
+                                                sur
+                                                l’utilisation de produits régionaux et de saison.
+                                            </p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-6 col-lg-6">
+                                            <h1>SE DEPLACER
+                                                <img src="{{ asset('images/dashboard/sedeplacervertfon.png') }}"
+                                                     alt="se déplacer vert foncé"></h1>
+                                            <h3>Vous êtes un profil de type A</h3>
+                                            <p class="truncate">Il est aujourd’hui difficile de modifier nos habitudes de déplacement en raison des
+                                                contraintes
+                                                quotidienne auxquelles il nous faut faire face.
+                                                Ici, vous pourrez en savoir plus sur les offres en matière d’éco-mobilité. En effet,
+                                                de
+                                                nouvelles initiatives publiques et privées en faveur d’une mobilité durable comme
+                                                par exemple le
+                                                covoiturage ou les transports en commun vert, ne cessent de voir le jour !
+                                            </p>
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="hide_eqblock">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-6 col-lg-6">
+                                                <h1>HABITER
+                                                    <img src="{{ asset('images/dashboard/habitergris.png') }}" alt="habiter gris">
+                                                </h1>
+                                                <h3>Vous êtes un profil de type A</h3>
+                                                <p class="truncate">
+                                                    Vivre dans un logement avec une taille adaptée, réduire au maximum ses déchets,
+                                                    etc... vous
+                                                    permettra de rendre votre vie moins stressante, d’avoir d’importants bienfaits sur
+                                                    votre
+                                                    santé, et d’économiser du temps et de l’argent. Alors ne perdez pas de temps pour
+                                                    adopter
+                                                    les conseils de notre page “Habiter” !
+                                                </p>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-6 col-lg-6">
+                                                <h1>PRENDRE SOIN DE SOI
+                                                    <img src="{{ asset('images/dashboard/prendresoinvert.png') }}"
+                                                         alt="prendre soin de soit vert"></h1>
+                                                <h3>Vous êtes un profil de type A</h3>
+                                                <p class="truncate">Prendre soin de soi tout en prenant soin de la planète, ce n’est pas paradoxal ! Vous
+                                                    en avez
+                                                    marre des bouteilles de shampoing et de gel douche en plastique vides et des cotons
+                                                    jetables
+                                                    qui s’accumulent très vite dans la poubelle de votre salle de bain ? Venez trouver
+                                                    les
+                                                    solutions à ces problèmes sur la page “Prendre soin de soi”</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-6 col-lg-6">
+                                                <h1>COMMUNIQUER
+                                                    <img src="{{ asset('images/dashboard/empreinterouge.png') }}" alt="empreinte rouge">
+                                                </h1>
+                                                <h3>Vous êtes un profil de type A</h3>
+                                                <p class="truncate">La démocratisation de l’usage des Nouvelles Technologies de l’Information et de la
+                                                    Communication
+                                                    (NTIC) avec par exemple l’accès internet mobile ou le courrier électronique, a
+                                                    considérablement
+                                                    augmenté notre consommation énergétique et en ressources naturelles rares… Cependant, il
+                                                    existe
+                                                    des solutions pour réduire son impact comme par exemple l’utilisation de fairphone que
+                                                    vous
+                                                    pouvez retrouver sur cette page “Communiquer”.
+                                                </p>
+                                            </div>        
+                                            <div class="col-md-6 col-sm-6 col-6 col-lg-6">
+    
+                                                <h1>S'HABILLER
+                                                    <img src="{{ asset('images/dashboard/shabillerorange.png') }}"
+                                                         alt="s'habiller orange"></h1>
+                                                <h3>Vous êtes un profil de type A</h3>
+                                                <p class="truncate">L’industrie de la mode est la plus polluante au monde après celle du pétrole.
+                                                    Mais mode et éthique ne sont plus antinomiques. S'habiller avec style en respectant
+                                                    l'homme
+                                                    et la planète, c'est possible ! Même s’il n'est pas toujours simple de décoder les
+                                                    étiquettes et les labels, vous pouvez déjà adopter des pratiques efficaces comme la
+                                                    garde-robe minimaliste ou le slow-fashion. Suivez nos conseils pour y voir plus
+                                                    clair et
+                                                    consommer moins, mais mieux.</p>
+                                            </div>
+    
+                                        </div>
+    
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-6 col-lg-6">
+                                                <h1>SE DISTRAIRE
+                                                    <img src="{{ asset('images/dashboard/sedistrairenoir.png') }}"
+                                                         alt="se distraire noir"></h1>
+                                                <h3>Vous êtes un profil de type A</h3>
+                                                <p class="truncate">
+                                                    Voyager, aller au restaurant ou encore séjourner à l'hôtel sont des activités qui
+                                                    nous
+                                                    permettent de nous relaxer hors de notre temps de travail. Cependant, il ne faut pas
+                                                    que ces
+                                                    loisirs se fassent aux dépens de l’environnement. Adoptez des solutions mis à
+                                                    disposition
+                                                    sur cette page pour protéger la planète tout en profitant de votre temps libre.
+                                                </p>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-6 col-lg-6">
+                                                <h1>TRAVAILLER
+    
+                                                    <img src="{{ asset('images/dashboard/travailjaune.png') }}" alt="travail jaune">
+                                                </h1>
+                                                <h3>Vous êtes un profil de type A</h3>
+                                                <p class="truncate">Être écologique, ce n’est pas du travail supplémentaire ! En général, nous passons un
+                                                    tiers
+                                                    de notre journée à travailler ou à étudier; c’est pourquoi il est important de
+                                                    pouvoir
+                                                    concilier travail et respect de la planète. En suivant nos conseils, vous
+                                                    contribuerez à
+                                                    protéger notre planète même lorsque vous travaillez ou étudiez.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            {#--------------------------------------------Résultat Comparé---------------------------------------------------#}
+                            <div class="resultatcompare" id="link-resultatcompare">
+                                <div class="d-flex align-items-end overlay overlayCompare">
+                                    <h2>Résultats Comparés</h2>
+                                </div>
+                                <h2>Résultats comparés</h2>
+                            </div>
+                            {#----------------------questionnaire---------------------#}
+                            <div class="repondez">
+                                <h2>Répondez aux questionnaires</h2>
+                            </div>
+                            <div class="row them-survey rowinner mt-2">
+                                {# future foreach quand les questionnaires thématiques seront fini #}
+                                <div class="col-lg-3 col-md-6 col-6 innerdiv">
+                                    <div class="eTheme">
+                                        <a href="">
+                                            <span class="span">0%</span>
+                                            <div class="overlay"></div>
+                                            <img class="triangle" src="{{ asset('images/dashboard/triangle.png') }}"/>
+                                            <img class="back img-fluid" src="{{ asset('images/landing-page/manger.jpg') }}">
+                                            <h5 class="questionnaire-title">Manger</h5>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-6 innerdiv">
+                                    <div class="eTheme">
+                                        <a href="">
+                                            <span class="span">0%</span>
+                                            <div class="overlay"></div>
+                                            <img class="triangle" src="{{ asset('images/dashboard/triangle.png') }}"/>
+                                            <img class="back img-fluid" src="{{ asset('images/landing-page/se_deplacer.jpg') }}">
+                                            <h5 class="questionnaire-title">Se déplacer</h5>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-6 innerdiv">
+                                    <div class="eTheme">
+                                        <a href="">
+                                            <span class="span">0%</span>
+                                            <img class="triangle" src="{{ asset('images/dashboard/triangle.png') }}"/>
+                                            <div class="overlay"></div>
+                                            <img class="back img-fluid" src="{{ asset('images/landing-page/s_habiller.jpg') }}">
+                                            <h5 class="questionnaire-title">S'habiller</h5>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-6 innerdiv">
+                                    <div class="eTheme">
+                                        <a href="">
+                                            <span class="span">0%</span>
+                                            <div class="overlay"></div>
+                                            <img class="triangle" src="{{ asset('images/dashboard/triangle.png') }}"/>
+                                            <img class="back img-fluid" src="{{ asset('images/landing-page/habiter.jpg') }}">
+                                            <h5 class="questionnaire-title">Habiter</h5>
+                                        </a>
+                                    </div>
+                                </div>                               
+                                <div class="col-lg-3 col-md-6 col-6 innerdiv">
+                                        <div class="eTheme">
+                                            <a href="">
+                                                <span class="span">0%</span>
+                                                <img class="triangle" src="{{ asset('images/dashboard/triangle.png') }}"/>
+                                                <div class="overlay"></div>
+                                                <img class="back img-fluid" src="{{ asset('images/landing-page/communiquer.jpg') }}">
+                                                <h5 class="questionnaire-title">Communiquer</h5>
+                                            </a>
+                                        </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-6 innerdiv">
+                                    <div class="eTheme">
+                                        <a href="">
+                                            <span class="span">0%</span>
+                                            <div class="overlay"></div>
+                                            <img class="triangle" src="{{ asset('images/dashboard/triangle.png') }}"/>
+                                            <img class="back img-fluid" src="{{ asset('images/landing-page/se_distraire.jpg') }}">
+                                            <h5 class="questionnaire-title">Se distraire</h5>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-6 innerdiv">
+                                    <div class="eTheme">
+                                        <a href="">
+                                            <span class="span">0%</span>
+                                            <img class="triangle" src="{{ asset('images/dashboard/triangle.png') }}"/>
+                                            <div class="overlay"></div>
+                                            <img class="back img-fluid" src="{{ asset('images/landing-page/prendre_soin_de_soi.jpg') }}">
+                                            <h5 class="questionnaire-title">Prendre soin de soi</h5>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-6 innerdiv">
+                                    <div class="eTheme">
+                                        <a href="">
+                                            <span class="span">0%</span>
+                                            <div class="overlay"></div>
+                                            <img class="triangle" src="{{ asset('images/dashboard/triangle.png') }}"/>
+                                            <img class="back img-fluid" src="{{ asset('images/landing-page/se_distraire.jpg') }}">
+                                            <h5 class="questionnaire-title">Travailler</h5>
+                                        </a>
+                                    </div>
+                                </div>                                
+                            </div>
+                            <!-- {#---------------------------------------Questionnaire thématique------------------------------------------------#} 
+                            <div class="repondez">
+                                <h2>Répondez aux questionnaires</h2>
+                            </div>
+                            <div class="row lastdiv them-survey mx-auto">
+                                {# future foreach quand les questionnaires thématiques seront fini #}
+                                <div class="col-sm-3 col-md-3 col-3 .col-lg-3 innerdiv processusFirst">
+                                    <a href="">
+                                        <span class="spancloth">0%</span>
+                                        <img class="trianglecloth" src="{{ asset('images/dashboard/triangle.png') }}"/>
+                                        <img class="back" src="{{ asset('images/landing-page/s_habiller.jpg') }}">
+                                        <h5 class="questionnaire-title">S'habiller</h5>
+                                        <div class="row box overlay"></div>
+                                    </a>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-3 .col-lg-3 innerdiv processusInnerFirst">
+                                    <a href="">
+                                        <span>0%</span>
+                                        <img class="triangle" src="{{ asset('images/dashboard/triangle.png') }}"/>
+                                        <img class="back" src="{{ asset('images/landing-page/habiter.jpg') }}">
+                                        <h5 class="questionnaire-title">Habiter</h5>
+                                    </a>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-3 .col-lg-3 innerdiv processusInner">
+                                    <a href="{{ path('site_manger') }}" aria-disabled="true" data-toggle="modal"
+                                       data-target="#myModal-Manger">
+                                        <span style="font-weight: bold;"><p> {{ nombreReponses|round(0, 'floor') }} %</p></span>
+                                        <div style="height:{{ 100-nombreReponses|round(0, 'floor') }}%" class="row infoFirst infoFirstQTheme"></div>
+                                        <img class="triangle" src="{{ asset('images/dashboard/triangle.png') }}"/>
+                                        <img class="back" src="{{ asset('images/landing-page/manger.jpg') }}">
+                                        <h5 class="questionnaire-title">Manger</h5>
+                                    </a>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-3 .col-lg-3 lastdiv processusLast">
+                                    <a href="">
+                                        <span>0%</span>
+                                        <img class="triangle" src="{{ asset('images/dashboard/triangle.png') }}"/>
+                                        <img class="back" src="{{ asset('images/landing-page/se_deplacer.jpg') }}">
+                                        <h5 class="questionnaire-title">Se deplacer</h5>
+                                    </a>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-3 .col-lg-3 innerdiv processusFirst">
+                                    <a href="">
+                                        <span class="spancomm">0%</span>
+                                        <img class="trianglecomm" src="{{ asset('images/dashboard/triangle.png') }}"/>
+                                        <img class="back" src="{{ asset('images/landing-page/communiquer.jpg') }}">
+                                        <h5 class="questionnaire-title">Communiquer</h5>
+                                        <div class="row box infoFirst infoFirstBTheme"></div>
+                                    </a>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-6 .col-lg-3 innerdiv processusInnerFirst">
+                                    <a href="">
+                                        <span>0%</span>
+                                        <img class="triangle" src="{{ asset('images/dashboard/triangle.png') }}"/>
+                                        <img class="back" src="{{ asset('images/landing-page/se_distraire.jpg') }}">
+                                        <h5 class="questionnaire-title">Se distraire</h5>
+                                        <div class="row box infoFirst infoFirstBTheme"></div>
+                                    </a>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-3 .col-lg-3 innerdiv processusInner">
+                                    <a href="">
+                                        <span>0%</span>
+                                        <img class="triangle" src="{{ asset('images/dashboard/triangle.png') }}"/>
+                                        <img class="back" src="{{ asset('images/landing-page/prendre_soin_de_soi.jpg') }}">
+                                        <h5 class="questionnaire-title">Prendre soin </br> de soi</h5>
+                                        <div class="row box infoFirst infoFirstBTheme"></div>
+                                    </a>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-3 .col-lg-3 lastdiv processusLast">
+                                    <a href="">
+                                        <span>0%</span>
+                                        <img class="triangle" src="{{ asset('images/dashboard/triangle.png') }}"/>
+                                        <img class="back" src="{{ asset('images/landing-page/travailler.jpg') }}">
+                                        <h5 class="questionnaire-title">Travailler</h5>
+                                        <div class="row box overlay"></div>
+                                    </a>
+                                </div>
+                            </div>  -->
+                            {#--------------------------------------------Atelier / Panier---------------------------------------------------#}
+                            <div class="row lastdiv atelierPanier mx-auto">
+                                <div class="col-sm-3 col-md-3 col-3 .col-lg-3 lastdiv atelier">
+                                    <h5>Atelier</h5>
+                                    <p>Choississez votre atelier</p>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-3 .col-lg-3 innerdiv atelierImg">
+                                    <img src="{{ asset('images/dashboard/cqs.png') }}">
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-3 .col-lg-3 lastdiv panier">
+                                    <h5>Eco-panier</h5>
+                                    <p>Choississez votre éco-panier</p>
+                                </div>
+                                <div class="col-sm-3 col-md-3 lastdiv panierImg">
+                                    <img src="{{ asset('images/dashboard/v.png') }}">
+                                </div>
+                            </div>
+    
+                            {#---------------------------------------------Publicité---------------------------------------------------------#}
+                            <div class="row lastdiv pub mx-auto">
+                                <div class="col-md-12 col-sm-12 col-12 .col-lg-12 lastdiv">
+                                    <h2>Publicité</h2>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-12 .col-lg-12 lastdiv">
+                                    <h4>Personnalisez votre publicité</h4>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-6 .col-lg-6 innerdiv">
+                                    <h3>Choix</h3>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-6 .col-lg-6 lastdiv ">
+                                    <h3>Préferences</h3>
+                                </div>
+                                <div class="banniere">
+                                    <a href="{{ path('humans') }}"><img src="{{ asset('images/dashboard/bannièreHOG21.jpg') }}"/></a>
+                                </div>
+                                <div class="d-flex align-items-end overlay overlayPub">
+                                    <h2>Publicité</h2>
+                                </div>
+                            </div>
+    
+                            {#-------------------------------------------Coûts / Bénéfices---------------------------------------------------#}
+                            <div class="row lastdiv costbenefits mx-auto">
+                                <div class="repondez">
+                                    <h2>Coûts et bénéfices</h2>
+                                </div>
+                                <div class="budget col-sm-6 col-md-6 col-6.col-lg-6">
+                                    <h2>Budget</h2>
+                                    <canvas id="myChartBar"></canvas>
+                                </div>
+                                <div class="portefeuille col-sm-6 col-md-6 col-6 col-lg-6">
+                                    <h2>Portefeuille</h2>
+                                    <div style="position: relative; height: 220px">
+                                        <canvas style="position: absolute;" id="myChartLine" ></canvas>
+                                        <h3 style="position: absolute; right: 0px">+ {{ excedentActualMonth }} {{ currency.symbol }}</h3>
+                                    </div>
+{#                                    <div class="d-flex justify-content-around">#}
+{#                                        <img id="graphMensuel" class="time-period-img" src="{{ asset('images/dashboard/budget/mensuel4.jpg') }}">#}
+
+{#                                        <img id="graphSemestriel" class="time-period-img" src="{{ asset('images/dashboard/budget/semestriel1.jpg') }}">#}
+
+{#                                        <img id="graphTrimestriel" class="time-period-img" src="{{ asset('images/dashboard/budget/trimestriel1.jpg') }}">#}
+
+{#                                    </div>#}
+                                </div>
+                                <div class="varrevenu justify-content-center">
+                                    <h2>Variation revenu excedentaire</h2>
+                                    <canvas id="myChartRevenu" style="margin-left: auto; margin-right: auto"></canvas>
+                                </div>
+                                <div class="d-flex align-items-end
+                                {# {% if  revenus.months[year][litteralMonths[date]] is defined or spending.0 is defined and spending.0 != 0 or excedentMonth.0 is defined %}
+                                {% else %} overlay {% endif %} overlayCouts"> #}
+                                    <h2>Coûts-bénéfices</h2>
+                                </div>
+                            </div>
+                            {#--------------------------------------------Green Coaching-----------------------------------------------------#}
+                            <div class="row lastdiv green_coaching mx-auto">
+                                <div class="col-md-4 col-sm-4 col-4 innerdiv">
+                                    <h2>GREEN COACHING</h2>
+                                    <div>
+                                        <h6>Votre objectif du mois</h6>
+                                        <p>Perdre 5kg</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 col-sm-8 col-8 col-lg-8 lastdiv">
+                                    <img class="img-fluid" src="{{ asset('images/dashboard/Copie de Fotolia_31153068_Subscription_XXL.jpg') }}"/>
+                                </div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row lastdiv avertissement mx-auto">
+                    <div class="col-md-2 col-sm-2 col-2 col-lg-2">
+                        <img class="img-fluid" src="{{ asset('images/dashboard/point-exclamation.png') }}">
+                    </div>
+                    <div class="col-md-8 col-sm-8 col-8 col-lg-8">
+                        <p>Les <strong>données récoltées</strong> sur le <strong>dashboard</strong> sont
+                            <strong>protégées</strong> et ne sont <strong>en aucun cas transmises à des tiers !</strong></p>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-2col-lg-2">
+                        <img class="img-fluid" src="{{ asset('images/dashboard/point-exclamation.png') }}">
+                    </div>
+    
+                </div>    
+            </div>
+        </div>
+
+    {#---------------------------------------------------------------------------------------------------------------#}
+    {#-------------------------------------------Version Mobile------------------------------------------------------#}
+    {#---------------------------------------------------------------------------------------------------------------#}
+    <div class="mobile">
+        <div class="row mBandeau">
+            <img class="back" src="{{ asset('images/dashboard/photo-de-couverture.jpg') }}"/>
+            <a href="" data-toggle="modal" data-target="#myModal-personalisation">
+                <img class="photo-user" src="{{ asset('images/dashboard/avatar.png') }}"/>
+            </a>
+        </div>
+        {#-----------------Miniboard----------------#}
+        <!-- Miniboard -->
+        <div class="row miniboard">    
+            {% if mobileFeedOne %}
+                <div id="theCarouselOne" class="carousel slide row" data-ride="carousel"  data-interval="8000">
+                    <div class="carousel-inner col-6" id="priorityCarousel"> 
+                        {% for value in mobileFeedOne %}       
+                        <div class="carousel-item {{ loop.first ? 'active' : '' }}">
+                            <div class="feed">
+                                <div class="card border-dark">
+                                    <h5 class="card-title"><img class="logo ml-2 mt-1" src="{{ asset('images/dashboard/' ~ value.categorie) }}" /><span class=" float-right mt-2 mr-4">{{value.titre}}</span></h5>
+                                    <img class="card-img-top mainImg" src="{{ asset('images/dashboard/' ~ value.image) }}">
+                                    <div class="card-body">
+                                        <h6 class="card-subtitle mb-1 text-align-left">{{value.titreContenu}}</h6>
+                                    </div>
+                                </div>
+                            </div>   
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="carousel slide carousel-inner col-6" data-ride="carousel"  data-interval="5000" id="theCarouselTwo"> 
+                        {% for value in mobileFeedTwo %}           
+                        <div class="carousel-item {{ loop.first ? 'active' : '' }}">
+                            <div class="feed">
+                                <div class="card feed-{{value.categorie}} border-dark">
+                                    <h5 class="card-title"><img class="logo ml-2 mt-1" src="{{ asset('images/dashboard/' ~ value.categorie) }}" /><span class="float-right mt-2 mr-4">{{value.titre}}</span></h5>
+                                    <img class="card-img-top mainImg" src="{{ asset('images/dashboard/' ~ value.image) }}">
+                                    <div class="card-body">
+                                        <h6 class="card-subtitle mb-1 text-align-left">{{value.titreContenu}}</h6>
+                                    </div>
+                                  </div>
+                            </div>    
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% else %}    
+                <div id="myCarousel" class="carousel slide multi-item-carousel" data-ride="carousel" data-interval="2000">
+                    <div class="carousel-inner"> 
+                        {% for value in mobileFeedTwo %}       
+                            <div class="carousel-item {{ loop.first ? 'active' : '' }}">
+                                    <div class="col-6 feed">
+                                        <div class="card border-dark">
+                                            <h3 class="text-center"><img class="logo ml-2 mt-1 float-left" src="{{ asset('images/dashboard/' ~ value.categorie) }}" /><span>{{value.titre}}</span></h3>
+                                            <img class="mainImg" src="{{ asset('images/dashboard/' ~ value.image) }}"/>
+                                            <h6 class="card header text-align-left" style="border: none;">{{value.titreContenu}}</h6>
+                                        </div>
+                                    </div>
+                                </div>                         
+                        {% endfor %}
+                    </div>
+                </div>
+            {%  endif %}
+            <div class="wrap">            
+                <div class="box small co2 align-self-center h-100 text-center">
+                    <h2>CO2</h2>
+                    <div class="co2-text mt-4">
+                        <p><img src="{{ asset('images/dashboard/pas-CO2.png') }}" style="width: 15%;"/><span class="ml-2">80g CO2 ce mois</span></p>
+                        <p><img src="{{ asset('images/dashboard/voiture-CO2.png') }}" style="width: 15%;" /><span class="ml-2">80g CO2 ce mois</span></p>
+                        <p><img src="{{ asset('images/dashboard/Avion-CO2.png') }}" style="width: 15%;" /><span class="ml-2">80g CO2 ce mois</span></p>
+                        <p><img src="{{ asset('images/dashboard/transport-CO2.png') }}" style="width: 15%;" /><span class="ml-2">80g CO2 ce mois</span></p>
+                    </div>   
+                </div>
+                <div class="box small-eco ecogeste">
+                    <img src="{{ asset('images/dashboard/img-eco-gestes.jpg') }}" />
+                    <div class="over">
+                        <h2>Eco gestes</h2>
+                        <div class="gestes">
+                            <h6>Geste N°20</h6>
+                            <p>Se passer si possible de la climatisation afin d’éviter les émissions de gaz et une augmentation de facture.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box small tableau">
+                    <h2>Mes tableaux</h2>
+                    <div class="ptableau">
+                    </div>
+                </div>
+            </div>
+        </div>
+        {#-----------------Empreinte----------------#}
+        <div class="row Empreinte">
+            <div class="overlay-empreinte">
+                <div class="empreinteInfo">
+                    <p>Calculez votre empreinte chromatique afin de déterminer vos profils</p>
+                    <a href="{{ path('userslp_portail') }}">
+                        <img class="calculatrice" src="{{ asset('images/dashboard/calculatrice.png') }}"
+                            alt="calculatrice"/>
+                    </a>
+                    <p class="question">Qu'est-ce que l'empreinte chromatique ? <a
+                        href="{{ path('empreinte_chromatique') }}"><img src="{{ asset('images/dashboard/empreinte.png') }}"/></a></p>
+                </div>
+            </div>  
+            <div class="col-md-12 votre-empreinte">
+                <p>Votre empreinte Chromatique /</p>
+                <p> Votre Green ID</p>
+                <div class="col-md-12 mes-rond">
+                    <div class="rond black"></div>
+                    <div class="rond red"></div>
+                    <div class="rond orange"></div>
+                    <div class="rond yellow"></div>
+                    <div class="rond green"></div>
+                    <div class="rond green-c"></div>
+                </div>
+                <div class="col-md-12 processusall">
+                    <div class="mes-processus">
+                        <img src="{{ asset('images/dashboard/communiquer.png') }}" alt="photo background">
+                    </div>
+                    <div class="mes-processus">
+                        <a href="{{ path('site_mangerTest') }}" aria-disabled="true" data-toggle="modal"
+                           data-target="#myModal-Manger">
+                            <img src="{{ asset('images/dashboard/manger.png') }}" alt="photo background">
+                        </a>
+                    </div>
+                    <div class="mes-processus">
+                        <img src="{{ asset('images/dashboard/s_habiller.png') }}" alt="photo background">
+                    </div>
+                    <div class="mes-processus">
+                        <img src="{{ asset('images/dashboard/se_déplacer.png') }}" alt="photo background">
+                    </div>
+                    <div class="mes-processus">
+                        <img src="{{ asset('images/dashboard/habiter.png') }}" alt="photo background">
+                    </div>
+                    <div class="mes-processus">
+                        <img src="{{ asset('images/dashboard/se_distraire.png') }}" alt="photo background">
+                    </div>
+                    <div class="mes-processus">
+                        <img src="{{ asset('images/dashboard/prendre_soin_de_soi.png') }}" alt="photo background">
+                    </div>
+                    <div class="mes-processus">
+                        <img src="{{ asset('images/dashboard/travail.png') }}" alt="photo background">
+                    </div>
+                </div>
+            </div>
+        </div>
+        {#-------------------budget-------------------#}
+        <div class="row mbudget">
+            <div class="mbudgetContent">
+                <h1>Budget</h1>
+                <p>La plupart des gens pensent qu'adopter un comportement éco-conscient et consommer de manière
+                    responsable coûte cher.</p>
+                <p>Sur la base de votre budget mensuel, le dashboard universel vous propose un algorithme qui
+                    calcule automatiquement votre variation de revenus en fonction de vos choix de consommation.</p>
+                <div class="linkmBudget">
+                    <a href="{{ path('programmebudgetDashboard') }}">Entrez dans le programme budget dashboard</a>
+                </div>
+            </div>
+        </div>
+        {#-------------------menu-------------------#}
+        <div class="row menu col-xs-12 mb-3">
+            <nav class="navbar navbar-expand-lg bg-light navbar-light">
+                <!-- Toggler/collapsibe Button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"
+                        style="position:relative; margin-left: 10px">
+                        <span>
+                            <i class="fas fa-bars" style="color:red; font-size:20px;"></i>
+                        </span>
+                </button>
+
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav text-center">
+                        <li class="nav-item border-bottom">
+                            <a class="nav-link" href="#link-profil"> Mon Profil Individuel</a>
+                        </li>
+                        <li class="nav-item border-bottom">
+                            <a class="nav-link" href="#link-affichageresultat">Affichage résultats</a>
+                        </li>
+                        <li class="nav-item border-bottom">
+                            <a class="nav-link" href="#">Résultats comparés</a>
+                        </li>
+                        <li class="nav-item border-bottom">
+                            <a class="nav-link" href="#link-repondez">Répondez aux questionnaires</a>
+                        </li>
+                        <li class="nav-item border-bottom">
+                            <a class="nav-link" href="#">CO2</a>
+                        </li>
+                        <li class="nav-item border-bottom">
+                            <a class="nav-link" href="#">Calories</a>
+                        </li>
+                        <li class="nav-item border-bottom">
+                            <a class="nav-link" href="#link-mpackages">Vos Packages</a>
+                        </li>
+                        <li class="nav-item border-bottom">
+                            <a class="nav-link" href="#7sousprogramme">Lien avec les 7 sites</a>
+                        </li>
+                        <li><a href="#"><img id="logo-resp"
+                            src="{{ asset('images/dashboard/arrow-circle-bottom.svg') }}"
+                            alt="arrow bottom"></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        {#-------------profil individu V1--------------#}
+        <div class="row">
+            <div class="containerProfilIndiv">
+                <h1 class="text-center mt-2">Votre Profil Individuel</h1>
+                <div class="row profilIndiv">
+
+                    <div class="left text-center align-middle">
+                        <div id="socioLeft">
+                            <h5 class="text-center align-middle">Socio-économique</h5>
+                            <p class="text-center align-middle">De quel type êtes-vous ?</p>
+                            <p class="text-center align-middle"> Vous avez répondu à ce questionnaire ?
+                                Retrouver ici votre Mini-profil Socio-économique.
+                            </p>
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                    </div>
+
+                    <div class="right text-center">
+                        {% if reponduPyscho == false %}
+                            <div class="one" style="background-color:grey; color: white" onclick="changeProfilIndividuel(this)">
+                                <div id="psychoRight">
+                                    <h5>Psychologique</h5>
+                                    <p>Questionnaire Psychologique</p>
+                                </div>
+                            </div>
+                        {% else %}
+                            <div class="one" style="background-color:white; color: black" onclick="changeProfilIndividuel(this)">
+                                <div id="psychoRight">
+                                    <h5>Psychologique</h5>
+                                    <p>Questionnaire Psychologique</p>
+                                    <i class="fa fa-plus-circle fa-psycho"></i>
+                                </div>
+                            </div>
+                        {% endif %}
+                        {% if reponduEcolo == false %}
+                            <div class="two"  style="background-color:grey; color: white" onclick="changeProfilIndividuel(this)" >
+                                <div id="ecoRight">
+                                    <h5>Ecologique</h5>
+                                    <p>Questionnaire Ecologique</p>
+                                </div>
+                            </div>
+                        {% else %}
+                            <div class="two" style="background-color:white; color: black" onclick="changeProfilIndividuel(this)">
+                                <div id="ecoRight">
+                                    <h5>Ecologique</h5>
+                                    <p>Questionnaire Ecologique</p>
+                                    <i class="fa fa-plus-circle fa-eco"></i>
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="profilIndivLast">
+                        <div class="col-12 mt-2">
+                            <h6>Répondez aux questionnaires
+                                processus pour déterminer
+                                votre empreinte chomatique :</h6>
+                        </div>
+                        <div class="col-12">
+                            <div class="lien-questionnaires">
+                                <div class="mes-processus">
+                                    <img class="img-fluid" src="{{ asset('images/dashboard/communiquer.png') }}" alt="photo background">
+                                </div>
+                                <div class="mes-processus">
+                                    <a href="{{ path('site_mangerTest') }}" aria-disabled="true" data-toggle="modal"
+                                    data-target="#myModal-Manger">
+                                        <img class="img-fluid" src="{{ asset('images/dashboard/manger.png') }}" alt="photo background">
+                                    </a>
+                                </div>
+                                <div class="mes-processus">
+                                    <img class="img-fluid" src="{{ asset('images/dashboard/s_habiller.png') }}" alt="photo background">
+                                </div>
+                                <div class="mes-processus">
+                                    <img class="img-fluid" src="{{ asset('images/dashboard/se_déplacer.png') }}" alt="photo background">
+                                </div>
+                                <div class="mes-processus">
+                                    <img class="img-fluid" src="{{ asset('images/dashboard/habiter.png') }}" alt="photo background">
+                                </div>
+                                <div class="mes-processus">
+                                    <img class="img-fluid" src="{{ asset('images/dashboard/se_distraire.png') }}" alt="photo background">
+                                </div>
+                                <div class="mes-processus">
+                                    <img class="img-fluid" src="{{ asset('images/dashboard/prendre_soin_de_soi.png') }}" alt="photo background">
+                                </div>
+                                <div class="mes-processus">
+        
+                                    <img class="img-fluid" src=" {{ asset('images/dashboard/travail.png') }}" alt="photo background">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- {#-------------profil individu V2--------------#}
+        <div class="row profil ecran">
+            <h2>Votre Profil Individuel</h2>
+            <div class="row">
+                <div class="col-xs-12 target_v2">
+                    <div class="target-socio_v2">
+                        <div class="row align-items-center">
+                            <div class="col-xs-10">
+                                <h3>Socio-économique</h3>
+                                <h6>De quel type êtes-vous ?</h6>
+                                <h6> Vous avez répondu à ce questionnaire ?
+                                    Retrouver ici votre Mini-profil Psychologique.
+                                </h6>
+                            </div>
+                            <div class="col-xs-2">
+                                <a href="#">
+                                    <i class="fa fa-plus-circle"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 target_v2">
+                    <div class="target-psycho_v2">
+                        <div class="row align-items-center target-ecologique">
+                            <h2>Questionnaire Psychologique</h2>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-xs-10">
+                                <h3>Psychologique</h3>
+                                <h6>De quel type êtes-vous ?</h6>
+                                <h6> Vous avez répondu à ce questionnaire ?
+                                    Retrouver ici votre Mini-profil Socio-économique.
+                                </h6>
+                            </div>
+                            <div class="col-xs-2">
+                                {% if reponduEcolo == true %}
+                                    <a href="#">
+                                        <i class="fa fa-plus-circle"></i>
+                                    </a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 target_v2">
+                    <div class="target-psycho_v2">
+                        <div class="row align-items-center target-ecologique">
+                            <h2>Questionnaire Ecologique</h2>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-xs-10">
+                                <h3>Psychologique</h3>
+                                <h6>De quel type êtes-vous ?</h6>
+                                <h6> Vous avez répondu à ce questionnaire ?
+                                    Retrouver ici votre Mini-profil Socio-économique.
+                                </h6>
+                            </div>
+                            <div class="col-xs-2">
+                                {% if reponduEcolo == true %}
+                                    <a href="#">
+                                        <i class="fa fa-plus-circle"></i>
+                                    </a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mbandeau-bottom">
+                <div class="row mtexte-bottom">
+                    <h6>Répondez aux questionnaires
+                        processus pour déterminer
+                        votre empreinte chomatique :</h6>
+                </div>
+                <div class="row mlien-questionnaires">
+                    <div class="col-xs-1 mes-processusm">
+                        <img src="{{ asset('images/dashboard/communiquer.png') }}" alt="photo background">
+                    </div>
+                    <div class="col-xs-1 mes-processusm">
+                        <a href="{{ path('site_manger') }}" aria-disabled="true" data-toggle="modal"
+                           data-target="#myModal-Manger">
+                            <img src="{{ asset('images/dashboard/manger.png') }}" alt="photo background">
+                        </a>
+                    </div>
+                    <div class="col-xs-1 mes-processusm">
+                        <img src="{{ asset('images/dashboard/s_habiller.png') }}" alt="photo background">
+                    </div>
+                    <div class="col-xs-1 mes-processusm">
+                        <img src="{{ asset('images/dashboard/se_déplacer.png') }}" alt="photo background">
+                    </div>
+                    <div class="col-xs-1 mes-processusm">
+                        <img src="{{ asset('images/dashboard/habiter.png') }}" alt="photo background">
+                    </div>
+                    <div class="col-xs-1 mes-processusm">
+                        <img src="{{ asset('images/dashboard/se_distraire.png') }}" alt="photo background">
+                    </div>
+                    <div class="col-xs-1 mes-processusm">
+                        <img src="{{ asset('images/dashboard/prendre_soin_de_soi.png') }}" alt="photo background">
+                    </div>
+                    <div class="col-xs-1 mes-processusm">
+                        <img src=" {{ asset('images/dashboard/travail.png') }}" alt="photo background">
+                    </div>
+                </div>
+            </div>
+        </div>-->
+
+        <div class="row">
+            <div class="profilCollectif col-12">
+                <div class="row no-gutters">
+                    <div class="col-8">
+                        <div class="leftCollectif">
+                            {% if reponduFamille == false %}
+                                <div id="familleLeft">
+                                    <div class="first_famille false">
+                                        <h3>Créez votre profil Famille</h3>
+                                    </div>
+                                    <img id="firstIMG" src="{{ asset('images/dashboard/profil_famille_V2.jpg') }}" class="img-fluid">
+                                </div>
+                            {% else %}
+                                <div id="familleLeft">
+                                    <div class="profilCollectifContent">
+                                        <h6>Vous êtes de type A</h6>
+                                        <h6>Vous avez répondu à ce questionnaire ? Retrouver ici votre
+                                            Mini-profil.</h6>
+                                        <h6><i style="color:red" class="fa fa-plus-circle"></i></h6>
+                                    </div>
+                                    <img id="firstIMG" src="{{ asset('images/dashboard/profil_famille_V2.jpg') }}" class="img-fluid">
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="rightCollectif">
+                            {% if reponduMenage == false %}
+                            <div class="oneProfilCollectif" onclick="changeProfilCollectif(this)">
+                                <div id="menageRight">
+                                    <div class="second_menage false">
+                                        <h3>Créez votre profil Ménage</h3>
+                                    </div>
+                                    <img src="{{ asset('images/dashboard/profil_menage_V2.jpg') }}">
+                                </div>
+                            </div>
+                            {% else %}
+                                <div class="oneProfilCollectif" onclick="changeProfilCollectif(this)">
+                                    <div id="menageRight">
+                                        <div class="second_menage">
+                                            <h6>Profil Ménage</h6>
+                                        </div>
+                                        <img src="{{ asset('images/dashboard/profil_menage_V2.jpg') }}">
+                                    </div>
+                                </div>
+                            {% endif %}
+                            {% if reponduAmi == false %}
+                                <div class="twoProfilCollectif" style="background-color:grey; color: white" onclick="changeProfilCollectif(this)">
+                                    <div id="amisRight">
+                                        <div class="third_amis false">
+                                            <h3>Créez votre Profil Amis</h3>
+                                        </div>
+                                        <img src="{{ asset('images/dashboard/profil_amis_V2.jpg') }}" class="img-fluid">
+                                    </div>
+                                </div>
+                            {% else %}
+                                {# style="box-shadow: inset 0 0 0 1000px rgba(255,255,255); color: black; background-image: url({{asset('images/dashboard/profil_amis_V2.jpg') }}"  #}
+                                <div class="twoProfilCollectif" onclick="changeProfilCollectif(this)">
+                                    <div id="amisRight">
+                                        <div class="third_amis">
+                                            <h6> Profil Amis </h6>
+                                        </div>
+                                        <img src="{{ asset('images/dashboard/profil_amis_V2.jpg') }}" class="img-fluid">
+                                    </div>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {#----------------------SLC---------------------#}
+        <div class="SLC">
+            <div class="row">
+                <img class="img-fluid title" src="{{ asset('images/dashboard/aviron.jpg') }}"/>
+                <div class="caption text-center">
+                    <h1><img class="slc-caption" src="{{ asset('images/dashboard/logo_slc_bleu_2.png') }}"/>Sustainable Living Community</h1>  
+                </div>
+                <div class="sign">
+                    <div>
+                        <h3><img class="slc-sign" src="{{ asset('images/dashboard/logo_slc_bleu_2.png') }}"/>SL Community Forum</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row description" id="7sousprogramme">
+                <div class="col-12 text-left">
+                    <p class="slp_desc">La Sustainable Living Community (SLC) réunit toutes les personnes qui participent à un
+                        des 7 sous-programmes du programme Sustainable Living Program (SLP).</p>
+                </div>
+                <div class="col-md-12">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <img class="img-fluid d-block h-70" src="{{ asset('images/dashboard/logo-slc-blanc.png') }}"/>
+                        <p class="ml-3 mb-0" style="width:100%; color: white; font-weight: bold;">JE REJOINS LA SL COMMUNITY</p>
+                        <div class="button" style="display: inherit;">
+                            <img class="img-fluid mr-3" src="{{ asset('images/dashboard/oui.png') }}"/>
+                            <img class="img-fluid" src="{{ asset('images/dashboard/non.png') }}"/>
+                        </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        {#----------------------Affichage résultat---------------------#}
+        <div class="row containerresultat col-xs-12">
+            <div class="affichageresultat" id="link-affichageresultat">
+                <h1 class="mt-2">Affichage résultats </br>par thème/questionniaire </h1>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Manger
+                            <a href="{{ path('site_mangerTest') }}" aria-disabled="true" data-toggle="modal"
+                               data-target="#myModal-Manger">
+                                <img src="{{ asset('images/dashboard/manger - empreinte - vert foncé.png') }}" alt="manger jaune">
+                            </a>
+                        </h2>
+                        <h3>Vous êtes un profil de type A</h3>
+                        <p class="truncate">La production de viande toujours plus importante a un impact majeur sur le réchauffement
+                            climatique, la déforestation, la consommation d’eau... Grâce à cette page, vous aurez à
+                            disposition des outils pour avoir une consommation adaptée à vos besoins réels et basée
+                            sur
+                            l’utilisation de produits régionaux et de saison.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Se déplacer
+                            <img src="{{ asset('images/dashboard/sedeplacervertfon.png') }}"
+                                 alt="se déplacer vert foncé"></h2>
+                        <h3>Vous êtes un profil de type A</h3>
+                        <p class="truncate">Il est aujourd’hui difficile de modifier nos habitudes de déplacement en raison des
+                            contraintes
+                            quotidienne auxquelles il nous faut faire face.
+                            Ici, vous pourrez en savoir plus sur les offres en matière d’éco-mobilité. En effet,
+                            de
+                            nouvelles initiatives publiques et privées en faveur d’une mobilité durable comme
+                            par exemple le
+                            covoiturage ou les transports en commun vert, ne cessent de voir le jour !
+                        </p>
+                    </div>
+
+                </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2>Habiter
+                                <img src="{{ asset('images/dashboard/habitergris.png') }}" alt="habiter gris">
+                            </h2>
+                            <h3>Vous êtes un profil de type A</h3>
+                            <p class="truncate">
+                                Vivre dans un logement avec une taille adaptée, réduire au maximum ses déchets,
+                                etc... vous
+                                permettra de rendre votre vie moins stressante, d’avoir d’importants bienfaits sur
+                                votre
+                                santé, et d’économiser du temps et de l’argent. Alors ne perdez pas de temps pour
+                                adopter
+                                les conseils de notre page “Habiter” !
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <h2><img src="{{ asset('images/dashboard/prendresoinvert.png') }}" alt="prendre soin de soit vert" style="float: right;"><span>Prendre soin de soi</span></h2>
+                            <h3>Vous êtes un profil de type A</h3>
+                            <p class="truncate">Prendre soin de soi tout en prenant soin de la planète, ce n’est pas paradoxal ! Vous
+                                en avez
+                                marre des bouteilles de shampoing et de gel douche en plastique vides et des cotons
+                                jetables
+                                qui s’accumulent très vite dans la poubelle de votre salle de bain ? Venez trouver
+                                les
+                                solutions à ces problèmes sur la page “Prendre soin de soi”</p>
+                        </div>
+                    </div>
+                    <div class="hide_block">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2>Communiquer
+                                <img src="{{ asset('images/dashboard/empreinterouge.png') }}" alt="empreinte rouge">
+                            </h2>
+                            <h3>Vous êtes un profil de type A</h3>
+                            <p class="truncate">La démocratisation de l’usage des Nouvelles Technologies de l’Information et de la
+                                Communication
+                                (NTIC) avec par exemple l’accès internet mobile ou le courrier électronique, a
+                                considérablement
+                                augmenté notre consommation énergétique et en ressources naturelles rares… Cependant, il
+                                existe
+                                des solutions pour réduire son impact comme par exemple l’utilisation de fairphone que
+                                vous
+                                pouvez retrouver sur cette page “Communiquer”.
+                            </p>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <h2>S'habiller
+                                <img src="{{ asset('images/dashboard/shabillerorange.png') }}"
+                                     alt="s'habiller orange"></h2>
+                            <h3>Vous êtes un profil de type A</h3>
+                            <p class="truncate">L’industrie de la mode est la plus polluante au monde après celle du pétrole.
+                                Mais mode et éthique ne sont plus antinomiques. S'habiller avec style en respectant
+                                l'homme
+                                et la planète, c'est possible ! Même s’il n'est pas toujours simple de décoder les
+                                étiquettes et les labels, vous pouvez déjà adopter des pratiques efficaces comme la
+                                garde-robe minimaliste ou le slow-fashion. Suivez nos conseils pour y voir plus
+                                clair et
+                                consommer moins, mais mieux.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2>Se distraire
+                                <img src="{{ asset('images/dashboard/sedistrairenoir.png') }}"
+                                     alt="se distraire noir"></h2>
+                            <h3>Vous êtes un profil de type A</h3>
+                            <p class="truncate">
+                                Voyager, aller au restaurant ou encore séjourner à l'hôtel sont des activités qui
+                                nous
+                                permettent de nous relaxer hors de notre temps de travail. Cependant, il ne faut pas
+                                que ces
+                                loisirs se fassent aux dépens de l’environnement. Adoptez des solutions mis à
+                                disposition
+                                sur cette page pour protéger la planète tout en profitant de votre temps libre.
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <h2>Travailler
+                                <img src="{{ asset('images/dashboard/travailjaune.png') }}" alt="travail jaune">
+                            </h2>
+                            <h3>Vous êtes un profil de type A</h3>
+                            <p class="truncate">Être écologique, ce n’est pas du travail supplémentaire ! En général, nous passons un
+                                tiers
+                                de notre journée à travailler ou à étudier; c’est pourquoi il est important de
+                                pouvoir
+                                concilier travail et respect de la planète. En suivant nos conseils, vous
+                                contribuerez à
+                                protéger notre planète même lorsque vous travaillez ou étudiez.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 text-center">
+                    <button class="btn custombutton" id="clic1"><i class="fas fa-caret-down fa-2x"></i></button>
+                    <button class="btn custombutton" id="clic2"><i class="fas fa-caret-up fa-2x"></i></button>
+                </div>
+            </div>
+        </div>
+
+
+
+        {#----------------------questionnaire---------------------#}
+        <div class="repondez" id="link-repondez">
+            <h1>Répondez aux questionnaires</h1>
+        </div>
+        <div class="row them-survey">
+            <div class="col-lg-3 col-md-6 col-6">
+                <div class="mTheme">
+                    <a href="{{ path('site_mangerTest') }}" aria-disabled="true" data-toggle="modal"
+                       data-target="#myModal-Manger">
+                        <span class="span">0%</span>
+                        <div class="overlay-mtheme"></div>
+                        <img class="triangle" src="{{ asset('images/dashboard/triangle.png') }}"/>
+                        <img class="back img-fluid" src="{{ asset('images/landing-page/manger.jpg') }}">
+                        <h5 class="questionnaire-title">Manger</h5>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-6">
+                <div class="mTheme">
+                    <a href="">
+                        <span class="span">0%</span>
+                        <div class="overlay-mtheme"></div>
+                        <img class="triangle" src="{{ asset('images/dashboard/triangle.png') }}"/>
+                        <img class="back img-fluid" src="{{ asset('images/landing-page/se_deplacer.jpg') }}">
+                        <h5 class="questionnaire-title">Se déplacer</h5>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-6">
+                <div class="mTheme">
+                    <a href="">
+                        <span class="span">0%</span>
+                        <img class="triangle" src="{{ asset('images/dashboard/triangle.png') }}"/>
+                        <div class="overlay-mtheme"></div>
+                        <img class="back img-fluid" src="{{ asset('images/landing-page/s_habiller.jpg') }}">
+                        <h5 class="questionnaire-title">S'habiller</h5>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-6">
+                <div class="mTheme">
+                    <a href="">
+                        <span class="span">0%</span>
+                        <div class="overlay-mtheme"></div>
+                        <img class="triangle" src="{{ asset('images/dashboard/triangle.png') }}"/>
+                        <img class="back img-fluid" src="{{ asset('images/landing-page/habiter.jpg') }}">
+                        <h5 class="questionnaire-title">Habiter</h5>
+                    </a>
+                </div>
+            </div>
+            <div class="hide_qblock">
+                <div class="col-lg-3 col-md-6 col-6">
+                        <div class="mTheme">
+                            <a href="">
+                                <span class="span">0%</span>
+                                <img class="triangle" src="{{ asset('images/dashboard/triangle.png') }}"/>
+                                <div class="overlay-mtheme"></div>
+                                <img class="back img-fluid" src="{{ asset('images/landing-page/communiquer.jpg') }}">
+                                <h5 class="questionnaire-title">Communiquer</h5>
+                            </a>
+                        </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-6">
+                    <div class="mTheme">
+                        <a href="">
+                            <span class="span">0%</span>
+                            <div class="overlay-mtheme"></div>
+                            <img class="triangle" src="{{ asset('images/dashboard/triangle.png') }}"/>
+                            <img class="back img-fluid" src="{{ asset('images/landing-page/se_distraire.jpg') }}">
+                            <h5 class="questionnaire-title">Se distraire</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-6">
+                    <div class="mTheme">
+                        <a href="">
+                            <span class="span">0%</span>
+                            <img class="triangle" src="{{ asset('images/dashboard/triangle.png') }}"/>
+                            <div class="overlay-mtheme"></div>
+                            <img class="back img-fluid" src="{{ asset('images/landing-page/prendre_soin_de_soi.jpg') }}">
+                            <h5 class="questionnaire-title">Prendre soin de soi</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-6">
+                    <div class="mTheme">
+                        <a href="">
+                            <span class="span">0%</span>
+                            <div class="overlay-mtheme"></div>
+                            <img class="triangle" src="{{ asset('images/dashboard/triangle.png') }}"/>
+                            <img class="back img-fluid" src="{{ asset('images/landing-page/se_distraire.jpg') }}">
+                            <h5 class="questionnaire-title">Travailler</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 text-center">
+                <button class="btn" id="clic3"><i class="fas fa-caret-down fa-2x"></i></button>
+                <button class="btn" id="clic4"><i class="fas fa-caret-up fa-2x"></i></button>
+            </div> 
+        </div>
+
+
+        {#----------------------packages---------------------#}
+        <div class="row mpackages col-xs-12" id="link-mpackages">
+            <div class="mtitle">
+                <h1 style="color: red; font-weight:bold;">
+                    Vos Packages
+                    <img src="{{ asset('images/dashboard/logo_repertoire_vert.png') }}"/>
+                </h1>
+            </div>
+            <div class="reste">
+                <p>Vous avez la possibilité d'acheter un package d'heures d'éco-conseils*</p>
+                <div class="">
+                    <div class="col-lg-12 col-md-12 col-12 text-center">
+                        <img class="img-fluid pck-img mr-3" src="{{ asset('images/dashboard/travail-packege.png') }}"/>
+                        <img class="img-fluid pck-img ml-3" src="{{ asset('images/dashboard/shabiller-package.png') }}"/>
+                    </div>
+                </div>
+                <p class="mlast col-md-12">*Les membres de la SL Community ont droit aux 5 premières questions gratuites</p>
+                <a href="" class="button">Achetez votre package</a>
+            </div>
+        </div>
+        {#----------------------calendar---------------------#}
+        <div class="row mcalendar">
+            <img src="{{ asset('images/dashboard/calendar.jpg') }}"/>
+        </div>
+        {#----------------------green coaching---------------------#}
+        <div class="row green_coaching">
+            <div class="col-4 innerdiv objectif">
+                <h2>GREEN COACHING</h2>
+                <div>
+                    <h6>Votre objectif du mois</h6>
+                    <p>Perdre 5kg</p>
+                </div>
+            </div>
+            <div class="col-8 lastdiv">
+                <img class="img-fluid" src="{{ asset('images/dashboard/Copie de Fotolia_31153068_Subscription_XXL.jpg') }}"/>
+            </div>
+        </div>
+        {#----------------------Tracker---------------------#}
+        <div class="row mobilitytracker">
+            <h2>Mobility tracker</h2>
+            <div class="row align-items-center">
+                <div class="col-xs-2 offset-1 line"></div>
+                <div class="col-xs-6">
+                    <h3>Step tracker</h3>
+                </div>
+                <div class="col-xs-2 line"></div>
+            </div>
+            <img src="{{ asset('images/dashboard/graph.jpg') }}"/>
+
+            <div class="row align-items-center">
+                <div class="col-xs-2 offset-1 line"></div>
+                <div class="col-xs-6">
+                    <h3>Locomotion tracker</h3>
+                </div>
+                <div class="col-xs-2 line"></div>
+            </div>
+            <img src="{{ asset('images/dashboard/locomotion.jpg') }}"/>
+            <img src="{{ asset('images/dashboard/locomotion_type.jpg') }}"/>
+
+            <div class="row align-items-center">
+                <div class="col-xs-2 offset-1 line"></div>
+                <div class="col-xs-6">
+                    <h3>Coût/bénéfice tracker</h3>
+                </div>
+                <div class="col-xs-2 line"></div>
+            </div>
+            <img src="{{ asset('images/dashboard/cost.jpg') }}"/>
+            <img src="{{ asset('images/dashboard/cost2.jpg') }}"/>
+        </div>
+
+        <div class="row avertissement">
+            <div class="col-2">
+                <img class="img-fluid" src="{{ asset('images/dashboard/point-exclamation.png') }}">
+            </div>
+            <div class="col-8">
+                <p>Les <strong>données récoltées</strong> sur le <strong>dashbaord</strong> sont
+                    <strong>protégés</strong> et ne sont <strong>en aucun cas transmises à des tiers !</strong></p>
+            </div>
+            <div class="col-2">
+                <img class="img-fluid" src="{{ asset('images/dashboard/point-exclamation.png') }}">
+            </div>
+
+        </div>
+    </div>
+
+    {#---------------------------------------------------------------------------------------------------------------#}
+    {#-------------------------------------------Fenêtre Modal-------------------------------------------------------#}
+    {#---------------------------------------------------------------------------------------------------------------#}
+
+    {#-------------------------------------------Modal Psychologique-------------------------------------------------#}
+    <div class="modal" id="myModal-Psychologique" role="dialog">
+        <div class="modal-body">
+            <!---->
+            {{ render(controller('AppBundle\\Controller\\UserSlpController::psychoAction')) }}
+        </div>
+    </div>
+
+    {#-------------------------------------------Modal Manger--------------------------------------------------------#}
+    <div class="modal" id="myModal-Manger" role="dialog">
+        <div class="modal-body">
+            <!---->
+            {{ render(controller('AppBundle\\Controller\\SiteController::mangerTest')) }}
+        </div>
+    </div>
+    {# modal notif questionnaire #}
+    <div class="modal" id="myModal-profil" role="dialog">
+        <div class="modal-body">        
+        {#     {{ render(controller('QuestionBundle\\Controller\\NotificationController::notificationAction')) }} #}
+        </div>
+    </div>
+
+    <div class="text-replace-profil-individuel">
+        <div id="socioLeft" class="text-center"><h5>Socio-économique</h5><h6>De quel type êtes-vous ?</h6><h6> Vous avez répondu à ce questionnaire ? Retrouver ici votre Mini-profil Socio-psychologique.</h6><i class="fa fa-plus-circle"></i></div>
+        <div id="socioRight" class="text-center"><h5>Socio-économique</h5><h6> Questionnaire Socio</h6> </div>
+
+        <div id="psychoLeft" class="text-center"><h5>Psychologique</h5><h6>De quel type êtes-vous ?</h6><h6> Vous avez répondu à ce questionnaire ? Retrouver ici votre Mini-profil Socio-psychologique.</h6><i class="fa fa-plus-circle"></i></div>
+
+        <div id="ecoLeft" class="text-center"><h5>Ecologique</h5><h6>De quel type êtes-vous ?</h6><h6> Vous avez répondu à ce questionnaire ? Retrouver ici votre Mini-profil Socio-ecologique.</h6><i class="fa fa-plus-circle"></i></div>
+    </div>
+
+
+
+<div class="text-replace-profil-collectif">
+    <div id="familleRight">
+        {% if reponduFamille == true %}
+            <h6 class="first_famille">Profil Famille</h6>
+        {% else %}
+            <div class="first_famille false">
+                <h6 class="first_famille">Créez votre profil famille</h6>
+            </div>
+        {% endif %}
+        <img id="firstIMG" src="{{ asset('images/dashboard/profil_famille_V2.jpg') }}" class="img-fluid">
+    </div>
+    
+
+    <div id="menageLeft">
+        {% if reponduMenage == true %}
+            <div class="profilCollectifContent">
+                <h4 class="text-center title_profil">Profil ménage</h4>
+                <h6>Vous êtes de type A</h6>
+                <h6>Vous avez répondu à ce questionnaire ? Retrouver ici votre Mini-profil.</h6>
+                <h6><i style="color:red" class="fa fa-plus-circle"></i></h6>
+            </div>
+        {% else %}
+            <div class="second_menage false">
+                <h6>Créez votre profil Ménage</h6>
+            </div>
+        {% endif %}
+        <img id="secondIMG" src="{{ asset('images/dashboard/profil_menage_V2.jpg') }}" class="img-fluid">
+    </div>
+
+    <div id="amisLeft">
+        {% if reponduAmi == true %}
+            <div class="profilCollectifContent">
+                <h4 class="text-center title_profil">Profil Amis</h4>
+                <h6>Vous êtes de type A</h6>
+                <h6>Vous avez répondu à ce questionnaire ? Retrouver ici votre Mini-profil.</h6>
+                <h6><i style="color:red" class="fa fa-plus-circle"></i></h6>
+            </div>
+        {% else %}
+            <div class="third_amis false">
+                <h6>Créez votre profil Ami</h6>
+            </div>
+        {% endif %}
+        <img id="thirdIMG" src="{{ asset('images/dashboard/profil_amis_V2.jpg') }}" class="img-fluid">
+    </div>
+</div>
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.7/cropper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+{#    <script src="{{ asset('js/questionnaire_manger.js') }}"></script> #}
+{#    <script src="{{ asset('js/app.js')}}"></script>#}
+    <script>
+    // Bouton tabs classement SLC
+        $('.slc-btn').click('change', function(event) {
+            imageSelected = $(this).find("img").data("imageselected");
+            $(this).find("img").attr("src", "{{ asset('images/dashboard/') }}"+imageSelected);
+            console.log(imageSelected);
+            $(this).siblings('.slc-btn').each(function(index) {
+                thisImage = $(this).find("img").data("image");
+                console.log(thisImage);
+                $(this).find("img").attr("src", "{{ asset('images/dashboard/') }}"+thisImage)
+            })
+        });   
+    </script>
+
+    <script>
+    // Instantiate the Bootstrap carousel
+        $('.multi-item-carousel').carousel({
+            interval: false
+        });
+
+        // for every slide in carousel, copy the next slide's item in the slide.
+        // Do the same for the next, next item.
+        $('.multi-item-carousel .carousel-item').each(function(){
+            var next = $(this).next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+        });
+        
+        // $(document).ready(function() {
+        // $(".carousel-inner").swiperight(function() {
+        //     $(this).carousel('prev');
+        // });
+        // $(".carousel-inner").swipeleft(function() {
+        //     $(this).carousel('next');
+        // });
+        // });
+        
+    
+    
+    </script>
+    <script>
+    //troncage afficher résultat
+        jQuery(function(){
+            var minimized_elements = $('p.truncate');
+            minimized_elements.each(function(){    
+                var t = $(this).text();        
+                if(t.length < 90) return;
+                
+                $(this).html(
+                    t.slice(0,90)+'<span>... </span><a href="#" class="more">Plus</a>'+
+                    '<span style="display:none;">'+ t.slice(90,t.length)+' <a href="#" class="less">Moins</a></span>'
+                );            
+            }); 
+            $('a.more', minimized_elements).click(function(event){
+                event.preventDefault();
+                $(this).hide().prev().hide();
+                $(this).next().show();        
+            });
+            $('a.less', minimized_elements).click(function(event){
+                event.preventDefault();
+                $(this).parent().hide().prev().show().prev().show();    
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#clic1").click(function () {
+                $('.hide_block').css('display', 'block');
+                $('#clic1').css('display', 'none');
+                $('.affichageresultat').css('height', 'auto');
+                $('#clic1').hide();
+                $('#clic2').show();
+            });
+            $("#clic2").click(function () {
+                $('.hide_block').css('display', 'none');
+                $('.affichageresultat').css('height', 'auto');
+                $('#clic2').hide();
+                $('#clic1').show();
+            });
+            $("#clic3").click(function () {
+                $('.hide_qblock').css('display', 'contents');
+                $('#clic3').css('display', 'none');
+                $('.them-survey').css('height', 'auto');
+                $('#clic3').hide();
+                $('#clic4').show();
+            });
+            $("#clic4").click(function () {
+                $('.hide_qblock').css('display', 'none');
+                $('.them-survey').css('height', 'auto');
+                $('#clic4').hide();
+                $('#clic3').show();
+            });
+
+            $(window).bind('scroll', function () {
+                var heightBandeau = $('.mBandeau').height();
+                var heightminiBoard = $('.miniboard').height();
+                var heightEmpreinte = $('.Empreinte').height();
+                var heightBudget = $('.mbudget').height();
+                var heightTotal = heightBandeau + heightminiBoard + heightEmpreinte+ heightBudget;
+
+                if ($(window).scrollTop() > heightTotal) {
+                    $('nav').addClass('');
+                } else {
+                    $('nav').removeClass('fixed');
+                }
+            });
+
+            $(".navbar-toggler").click(function() {
+                var heightBandeau = $('.mBandeau').height();
+                var heightminiBoard = $('.miniboard').height();
+                var heightEmpreinte = $('.Empreinte').height();
+                var heightBudget = $('.mbudget').height();
+                var heightTotal = heightBandeau + heightminiBoard + heightEmpreinte+ heightBudget;
+
+                if ($('.navbar-toggler').attr('aria-expanded') === "true") {
+                    if ($(window).scrollTop() < heightTotal) {
+                        $('nav').removeClass('fixed');
+                    }
+                } else {
+                    $('nav').addClass('');
+                }
+            });   
+        });
+        $('.text-replace-profil-individuel').hide();
+
+
+        var socioLeft = $('#socioLeft');
+        var socioRight = $('#socioRight');
+
+        var psychoLeft = $('#psychoLeft');
+        var psychoRight = $('#psychoRight');
+
+        var ecoLeft = $('#ecoLeft');
+        var ecoRight = $('#ecoRight');
+
+
+        var changeProfilIndividuel = function(myElement){
+            //myNewLeft; //ce sera le nouvel élément à placer en left
+            //myNewRight; //ce sera le nouvel élément à placer en right
+
+            //section socio et section psycho
+            if($(myElement).children(':first').attr('id') === 'psychoRight'){ // cas 2
+                var myNewLeft = psychoLeft;
+
+                {%  if reponduPyscho == false  %}
+                $('.left ').css('background-color', 'grey');
+                $('.left ').css('color', 'white');
+                $('#psychoLeft i').hide();
+                console.log('commentaire 1');
+                {% else %}
+                $('.left ').css('background-color', 'white');
+                $('.left ').css('color', 'black');
+                console.log('commentaire 2');
+                {% endif %}
+
+            }else if($(myElement).children(':first').attr('id') === 'socioRight'){
+                var myNewLeft = socioLeft;
+
+                {% if reponduSocio == true %}
+                $('.left').css('background-color', 'white');
+                $('.left ').css('color', 'black');
+                console.log('commentaire 3');
+                {% endif %}
+
+            }else{
+                var myNewLeft = ecoLeft;
+                {%  if reponduEcolo == false  %}
+                $('.left ').css('background-color', 'grey');
+                $('.left ').css('color', 'white');
+                $('#ecoLeft i').hide();
+                console.log('commentaire 4');
+                {% endif %}
+
+                {% if reponduEcolo == true %}
+                $('.left ').css('background-color', 'white');
+                $('.left ').css('color', 'black');
+                console.log('commentaire 5');
+                {% endif %}
+            }
+
+
+            //section socio et section ecolo
+            var actualIdLeft = $('.left').children(':first').attr('id');
+            if(actualIdLeft === 'socioLeft'){ // cas 1 //Section socio
+                var myNewRight = socioRight;
+
+                {% if reponduSocio == true %}
+                $(myElement).css('background-color', 'white');
+                $(myElement).css('color', 'black');
+                console.log('commentaire 6');
+                {% endif %}
+
+
+            }else if(actualIdLeft === 'ecoLeft'){ //section eco
+                var myNewRight = ecoRight;
+                {% if reponduEcolo == true %}
+                $(myElement).css('background-color', 'white');
+                $(myElement).css('color', 'black');
+                console.log('commentaire 7');
+                {% endif %}
+                {% if reponduEcolo == false %}
+                $(myElement).css('background-color', 'grey');
+                $(myElement).css('color', 'white');
+                console.log('commentaire 8');
+                {% endif %}
+            }else{// section psycho
+                var myNewRight = psychoRight;
+                {% if reponduPyscho == true %}
+                $(myElement).css('background-color', 'white');
+                $(myElement).css('color', 'black');
+                console.log('commentaire 9');
+                {% endif %}
+                {% if reponduPyscho == false %}
+                $(myElement).css('background-color', 'grey');
+                $(myElement).css('color', 'white');
+                console.log('commentaire 10');
+                {% endif %}
+            }
+
+            $(myElement).empty();
+            $(myElement).prepend(myNewRight);
+
+            $('.left').empty();
+            $('.left').append(myNewLeft);
+        };
+
+
+        $('.text-replace-profil-collectif').hide();
+
+        var familleLeft = $('#familleLeft');
+        var familleRight = $('#familleRight');
+
+        var menageLeft = $('#menageLeft');
+        var menageRight = $('#menageRight');
+
+        var amisLeft = $('#amisLeft');
+        var amisLeftFalse = $('#amisLeftFalse');
+        var amisRight = $('#amisRight');
+
+        var test = $('.testt');
+
+        var changeProfilCollectif = function(myElement) {
+
+            //myNewLeft; //ce sera le nouvel élément à placer en left
+            //myNewRight; //ce sera le nouvel élément à placer en right
+
+            //section famille et section ménage
+            if ($(myElement).children(':first').attr('id') === 'menageRight') { // cas 2
+                var myNewLeft = menageLeft;
+                var myNewLeftFALSE;
+
+                {% if reponduMenage == false %}
+
+                console.log('commentaire 1');
+                {% else %}
+
+                console.log('commentaire 2 ici');
+
+                {% endif %}
+
+            } else if ($(myElement).children(':first').attr('id') === 'familleRight') {
+                var myNewLeft = familleLeft;
+
+                {% if reponduFamille == true %}
+
+                console.log('commentaire 3');
+                {% endif %}
+
+            }else{
+                var myNewLeft = amisLeft;
+                {%  if reponduAmi == false  %}
+
+                console.log('commentaire 4');
+                /*
+                $('.profilCollectifContent').remove();
+                $('#amisLeft img').css('background-color', 'grey');
+
+                $('.leftCollectif').children(':first').append('<div class="third_amis" style="background-color: grey"> <h6> Créez votre profil amis </h6> </div>')
+                 */
+                {% endif %}
+
+                {% if reponduAmi == true %}
+
+                console.log('commentaire 5');
+                {% endif %}
+            }
+
+
+            //section famille et section amis
+            var actualIdLeft = $('.leftCollectif').children(':first').attr('id');
+            if(actualIdLeft === 'familleLeft'){ // cas 1 //Section famille
+                var myNewRight = familleRight;
+
+                {% if reponduFamille == true %}
+
+         
+        
+                {% endif %}
+
+
+
+            }else if(actualIdLeft === 'amisLeft'){ //section amis
+                var myNewRight = amisRight;
+                {% if reponduAmi == true %}
+
+                console.log('commentaire 7');
+                {% endif %}
+                {% if reponduAmi == false %}
+
+                console.log('commentaire 8');
+                {% endif %}
+            }else{// section menage
+                var myNewRight = menageRight;
+                {% if reponduMenage == true %}
+
+                console.log('commentaire 9');
+                {% endif %}
+                {% if reponduMenage == false %}
+
+                console.log('commentaire 10');
+                {% endif %}
+            }
+
+            $(myElement).empty();
+            $(myElement).prepend(myNewRight);
+
+            $('.leftCollectif').empty();
+            $('.leftCollectif').append(myNewLeft);
+        };
+
+
+    </script>
+    <script>
+
+        // Par default les valeur sont mensuel
+        var revenu1 = {% if revenus.months[year][litteralMonths[date]] is defined %}
+                {{ revenus.months[year][litteralMonths[date]].mainRevenue.0.amount }}+{{ revenus.months[year][litteralMonths[date]].otherRevenue.0.amount }}
+                        {% else %}0{% endif %};
+        var revenu2 = {% if revenus.months[year][litteralMonths[date-1]] is defined %}
+                {{ revenus.months[year][litteralMonths[date-1]].mainRevenue.0.amount }}+{{ revenus.months[year][litteralMonths[date-1]].otherRevenue.0.amount }}
+                        {% else %}0{% endif %};
+        var revenu3 = {% if revenus.months[year][litteralMonths[date-2]] is defined %}
+                {{ revenus.months[year][litteralMonths[date-2]].mainRevenue.0.amount }}+{{ revenus.months[year][litteralMonths[date-2]].otherRevenue.0.amount }}
+                        {% else %}0{% endif %};
+        var revenu4 = {% if revenus.months[year][litteralMonths[date-3]] is defined %}
+                {{ revenus.months[year][litteralMonths[date-3]].mainRevenue.0.amount }}+{{ revenus.months[year][litteralMonths[date-3]].otherRevenue.0.amount }}
+                        {% else %}0{% endif %};
+        var graphlabel1 = '{{ letterMonths[date] }}';
+        var graphlabel2 = '{{ letterMonths[date-1] }}';
+        var graphlabel3 = '{{ letterMonths[date-2] }}';
+        var date1 = {{ date }};
+        var year1 = {{ year }};
+
+        // graphique du portefeuille
+
+        function setGraphRevenu () {
+            let myChart = document.getElementById('myChartLine').getContext('2d');
+
+            let lineChart = new Chart(myChart, {
+                type:'line',
+                data:{
+                    labels:['', graphlabel3, graphlabel2, graphlabel1],
+                    datasets:[{
+                        data:[
+                            revenu4,
+                            revenu3,
+                            revenu2,
+                            revenu1
+                        ],
+                        lineTension: 0,
+                        pointRadius:0,
+                        pointHoverRadius: 3,
+                        pointHitRadius: 10,
+                        borderColor: 'white',
+                        backgroundColor: '#575756',
+                        defaultsFontColor: 'white',
+                        label: 'Revenu',
+                    }]
+                },
+                options:{
+                    legend: {
+                        display: false,
+                    },
+                    scales: {
+                        yAxes:[{
+                            stacked:true,
+                            ticks: {
+                                display: false,
+                                suggestedMax: 100
+                            },
+                            gridLines: {
+                                display:false,
+                                drawBorder: false,
+                            }
+                        }],
+                        xAxes:[{
+                            stacked:true,
+                            gridLines: {
+                                display:false,
+                                drawBorder: false,
+                            },
+                            ticks: {
+                                fontColor: 'white',
+                                fontSize: 30,
+                                fontStyle: 'bold',
+                            },
+                        }]
+                    }
+                }
+            });
+        }
+        setGraphRevenu();
+
+
+
+        //bouton Mensuel
+        $("#graphMensuel").on({
+            "click": function () {
+                revenu1 = {% if revenus.months[year][litteralMonths[date]] is defined %}
+                        {{ revenus.months[year][litteralMonths[date]].mainRevenue.0.amount }}+{{ revenus.months[year][litteralMonths[date]].otherRevenue.0.amount }}
+                                {% else %}0{% endif %};
+                revenu2 = {% if revenus.months[year][litteralMonths[date-1]] is defined %}
+                        {{ revenus.months[year][litteralMonths[date-1]].mainRevenue.0.amount }}+{{ revenus.months[year][litteralMonths[date-1]].otherRevenue.0.amount }}
+                                {% else %}0{% endif %};
+                revenu3 = {% if revenus.months[year][litteralMonths[date-2]] is defined %}
+                        {{ revenus.months[year][litteralMonths[date-2]].mainRevenue.0.amount }}+{{ revenus.months[year][litteralMonths[date-2]].otherRevenue.0.amount }}
+                                {% else %}0{% endif %};
+                revenu4 = {% if revenus.months[year][litteralMonths[date-3]] is defined %}
+                        {{ revenus.months[year][litteralMonths[date-3]].mainRevenue.0.amount }}+{{ revenus.months[year][litteralMonths[date-3]].otherRevenue.0.amount }}
+                                {% else %}0{% endif %};
+
+                graphlabel1 = '{{ letterMonths[date] }}';
+                graphlabel2 = '{{ letterMonths[date-1] }}';
+                graphlabel3 = '{{ letterMonths[date-2] }}';
+
+                setGraphRevenu();
+            }
+        });
+
+        //Bouton Semestriel
+        $("#graphSemestriel").on({
+            "click": function () {
+                revenu1 = 150;
+                revenu2 = 50;
+                revenu3 = 350;
+                revenu4 = 250;
+
+                if ( date1 <= 6 ) {
+                    graphlabel1 = 'sem1/';
+                    graphlabel2 = 'sem2/';
+                    graphlabel3 = 'sem1/';
+                    console.log(date1);
+                    console.log(1);
+                } else {
+                    graphlabel1 = 'sem2/';
+                    graphlabel2 = 'sem1/';
+                    graphlabel3 = 'sem2/';
+                    console.log(date1);
+                    console.log(2);
+                }
+                setGraphRevenu();
+            }
+        });
+
+        // Bouton Trimestriel
+        $("#graphTrimestriel").on({
+            "click": function () {
+
+                revenu1 = 150;
+                revenu2 = 50;
+                revenu3 = 350;
+                revenu4 = 250;
+
+                graphlabel1 = 1;
+                graphlabel2 = 2;
+                graphlabel3 = 3;
+
+                setGraphRevenu();
+            }
+        });
+
+
+        // graphique des dépenses
+        let myChartbar = document.getElementById('myChartBar').getContext('2d');
+
+        let barChart = new Chart(myChartbar, {
+            type:'bar',
+            data:{
+                labels:['{{ letterMonths[date-2] }}', '{{ letterMonths[date-1] }}', '{{ letterMonths[date] }}'],
+                datasets:[
+                    {
+                        label: 'Dépenses',
+                        backgroundColor: "white",
+                        maxBarThickness: 3,
+                        data: [
+                            {% if spending.2 is defined %}
+                            {{ spending.2 }}
+                            {% else %}0{% endif %},
+                            {% if spending.1 is defined %}
+                            {{ spending.1 }}
+                            {% else %}0{% endif %},
+                            {% if spending.0 is defined %}
+                            {{ spending.0 }}
+                            {% else %}0{% endif %},
+                        ]
+                    },
+                ]
+            },
+            options:{
+                legend: {
+                    display: false,
+                },
+                scales: {
+                    yAxes:[{
+                        ticks: {
+                            display: false,
+                            suggestedMax: 100,
+                            min: 0
+                        },
+                        gridLines: {
+                            display:false,
+                            drawBorder: false,
+                        }
+                    }],
+                    xAxes:[{
+                        categoryPercentage: 1.0,
+                        barPercentage: 1.0,
+                        gridLines: {
+                            display:false,
+                            drawBorder: false,
+
+                        },
+                        ticks: {
+                            fontColor: 'white',
+                            fontSize: 30,
+                            fontStyle: 'bold',
+                        },
+                    }]
+                }
+            }
+        });
+
+        // graphique variation des revenus
+        let myChartRevenu = document.getElementById('myChartRevenu').getContext('2d');
+
+        let revenuChart = new Chart(myChartRevenu, {
+            type:'line',
+            data:{
+                labels:['', '{{ letterMonths[date-2] }}', '{{ letterMonths[date-1] }}', '{{ letterMonths[date] }}'],
+                datasets:[{
+                    data:
+                        [
+                            {% if excedentMonth.3 is defined %}'{{ excedentMonth.3 }}'{% else %}0{% endif %},
+                            {% if excedentMonth.2 is defined %}'{{ excedentMonth.2 }}'{% else %}0{% endif %},
+                            {% if excedentMonth.1 is defined %}'{{ excedentMonth.1 }}'{% else %}0{% endif %},
+                            {% if excedentMonth.0 is defined %}'{{ excedentMonth.0 }}'{% else %}0{% endif %}
+                    ],
+                    pointRadius:0,
+                    pointHoverRadius: 3,
+                    pointHitRadius: 10,
+                    borderColor: 'red',
+                    backgroundColor: 'red',
+                    defaultsFontColor: 'red',
+                }]
+            },
+            options:{
+                legend: {
+                    display: false,
+                },
+                scales: {
+                    yAxes:[{
+                        stacked:true,
+                        ticks: {
+                            display: false,
+                            suggestedMax: 100
+                        },
+                        gridLines: {
+                            display:false,
+                            drawBorder: false,
+                        }
+                    }],
+                    xAxes:[{
+                        stacked:true,
+                        gridLines: {
+                            display:false,
+                            drawBorder: false,
+                        },
+                        ticks: {
+                            fontColor: 'red',
+                            fontSize: 30,
+                            fontStyle: 'bold',
+                        },
+                    }]
+                }
+            }
+        });
+    </script>
+{% endblock %}

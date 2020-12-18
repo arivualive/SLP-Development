@@ -1,0 +1,238 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/humans.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="row">
+   <header>
+        <div id="carousel-slp" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="{{ asset('images/humans/humans1.PNG') }}" alt="Dashboard">
+                    <div class="carousel-caption d-none d-block intro col-6 top-adjust">
+                    </div>
+                </div>
+            <div class="dropdown burger">
+                <a class="dropdown-item" class="btn btn-secondary dropdown-toggle"
+                    href="{{ path('site_index') }}">
+                    <button class="btn btn-secondary dropdown-toggle"><i class="fa fa-home"></i>
+                    </button>
+                </a>
+            </div>
+            <div>
+        <div>
+    </header>
+</div>
+
+    <div class="entête">
+    <img class="arrow-bottom mobile" src="{{ asset('/images/humans/bloc 1 - complet.jpg') }}">
+
+</div>
+
+<div class="arrow-bottom mobile">
+    <div>
+        <a href="/humans#laststories">
+            <img class="arrow-bottom" src="{{ asset('images/humans/bouton flèche bas.jpg') }}">
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="laststories ecran">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <h1>HUMANS OF GAEA21</h1>
+            <h2>Dernieres stories</h2>
+            <div class="lireStory"><a class href=""><h4>Découvrez nos dernières stories</h4></a></div>
+        </div>
+    </div>
+    <div class="laststories mobile" id="laststories">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <h1>HUMANS OF GAEA21</h1>
+            <h2>Dernieres stories</h2>
+            <a class href=""><button>DÉCOUVREZ NOS DERNIÈRES STORIES</button></a>
+        </div>
+    </div>
+
+    <div class="arrow-bottom mobile">
+        <div>
+            <a href="/humans#lirestorie">
+                <img class="arrow-bottom" src="{{ asset('images/humans/bouton flèche bas.jpg') }}">
+            </a>
+        </div>
+    </div>
+
+    <div id="lirestorie" class="mobile">
+        <img class="mobile" src="{{ asset('images/humans/bloc 3 - cadre et photo.jpg') }}">
+        
+        
+        <h1 class="mobile" style="font-size: 6vw;"> Interview Alumni pour Mélanie Desfougeres </h1>
+        <a class="mobile" href=""><button>Lire la story</button><div class="mobile"></div></a>
+    </div>
+
+    <div class="text-content ecran">
+        <div class="col-md-5 col-sm-5 col-xs-12">
+            <h1 style="margin-top: 60px; font-size: 50px;"> Interview Alumni pour Mélanie Desfougeres </h1>
+            <a class href="{{ path('humans_article') }}"><button>Lire la story</button><div class="mobile"></div></a>
+        </div>
+
+        <div class="col-md-7 col-sm-7 col-xs-12 right ecran">
+            <img class="ecran" src="{{ asset('images/humans/story.PNG') }}" alt="questionnaire">
+            <!--<img class="mobile" src="{{ asset('/images/humans/bloc 3 - cadre et photo.jpg') }}">-->
+        </div>
+    </div>
+
+    <div class="arrow-bottom mobile">
+        <div>
+            <a href="/humans#actustories">
+                <img class="arrow-bottom" src="{{ asset('images/humans/bouton flèche bas.jpg') }}">
+            </a>
+        </div>
+    </div>
+
+    <div class="actustories" id="actustories">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <h1>SERIES</h1>
+            <div class="actu">
+                <div class="row justify-content-md-center ecran withoutpadding">
+                    <div class="col-md-3 withoutpadding actustory">
+                        <h3 class="monexperience">Mon expérience dans gaea21</h3>
+                        <div class="col-md-6 withoutpadding">
+                            <img src="{{ asset('images/landing-page/Actualité-Landingpage.jpg') }}" alt="beach-volley">
+                        </div>
+                        <div class="col-md-6 withoutpadding">
+                            <p>Bientôt disponible dans le cadre du programme SLP, les Green Events Series (GES)!</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 withoutpadding actustory">
+                        <h3 class="decouvertgaea">J'ai découvert gaea21</h3>
+                        <div class="col-md-6 withoutpadding">
+                            <img src="{{ asset('images/landing-page/Actualité-Landingpage.jpg') }}" alt="beach-volley">
+                        </div>
+                        <div class="col-md-6 withoutpadding">
+                            <p>Bientôt disponible dans le cadre du programme SLP, les Green Events Series (GES)!</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 withoutpadding actustory">
+                        <h3>Ce que gaea a changé pour moi</h3>
+                        <div class="col-md-6 withoutpadding">
+                            <img src="{{ asset('images/landing-page/Actualité-Landingpage.jpg') }}" alt="beach-volley">
+                        </div>
+                        <div class="col-md-6 withoutpadding">
+                            <p>Bientôt disponible dans le cadre du programme SLP, les Green Events Series (GES)!</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div>
+                    <div class="container my-container mobile">
+                        <div class="my-col">
+                            <img src="{{ asset('images/landing-page/Actualité-GES.jpg') }}">
+                        </div>
+                        <div class="my-col">
+                            <div class="my-row">
+                                <p class="title">MON EXPÉRIENCE DANS GAEA21</p>
+                            </div>
+                            <div class="my-row">
+                                <p class="text">Bientôt disponible dans le cadre du programme SLP, les Green Events Series (GES)! </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br></br>
+
+                    <div class="container my-container mobile">
+                        <div class="my-col">
+                            <img src="{{ asset('images/landing-page/Actualité-Landingpage.jpg') }}">
+                        </div>
+                        <div class="my-col">
+                            <div class="my-row">
+                                <p class="title">J'AI DÉCOUVERT GAEA21</p>
+                            </div>
+                            <div class="my-row">
+                                <p class="text">Bientôt disponible dans le cadre du programme SLP, les Green Events Series (GES)! </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br></br>
+
+                    <div class="container my-container mobile">
+                        <div class="my-col">
+                            <img src="{{ asset('images/landing-page/Actualité-RepertoireVert.jpg') }}">
+                        </div>
+                    <div class="my-col">
+                        <div class="my-row">
+                            <p class="title">CE QUE GAEA A CHANGÉ POUR MOI</p>
+                        </div>
+                        <div class="my-row">
+                            <p class="text">Bientôt disponible dans le cadre du programme SLP, les Green Events Series (GES)! </p>
+                        </div>
+                    </div>
+                </div>
+            <div>
+
+            </div>
+        </div>
+            <br></br>
+            <a class="last-stories-btn" href=""><button>Découvrez nos dernières séries</button></a>
+        </div>
+
+    </div>
+</div>
+</div>
+
+    <div class="ambassadeur">
+        <div class="linkAmbassadeur ecran">
+            <a href="{{ path('ambassadeur') }}"></a>
+        </div>
+        <img class="ecran" src="{{ asset('images/landing-page/ambassadeur.PNG') }}" alt="ambassadeur">
+    </div>
+    <div class="ambassadeur-mobile">
+        <div class="linkAmbassadeur mobile">
+            <a href="{{ path('ambassadeur') }}"></a>
+        </div>
+        <img class="mobile" src="{{ asset('images/humans/bannière ambassadeurs.jpg') }}"/>
+    </div>
+
+    <div class="ambassadeur">
+        <div class="linkSLC">
+            <a href="{{ path('community') }}"></a>
+        </div>
+        <img class="ecran" src="{{ asset('images/landing-page/aviron.PNG') }}" alt="ambassadeur">
+    </div>
+    <div class="slc-mobile">
+        <div class="linkSLC mobile">
+            <a href="{{ path('community') }}"></a>
+        </div>
+        <img class="mobile" src="{{ asset('images/humans/bannière SLC.jpg') }}"/>
+    </div>
+
+    {# BOUTON DE PARTAGE SUR FACEBOOK #}
+    {{ include('site/partager_facebook.html.twig') }}
+
+    <div class="row">
+        <div class="temoignage ecran">
+            <div class="col-md-7 col-sm-7 col-xs-12 text">
+                <h1> Vous avez une histoire, une expérience à partager ? </h1>
+            </div>
+            <div class="col-md-5 col-sm-5 col-xs-12 button">
+                <a href=""><button>Témoignez</button></a>
+            </div>
+        </div>
+    </div>
+    <div class="temoignage mobile">
+        <h1> Vous avez une histoire, une expérience à partager ? </h1>
+        <a href=""><div class="mobile-button"><text>TÉMOIGNEZ</text></div></a>
+        <div class="div-after-button"></div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+
+<!--
+    
+    <script link rel="stylesheet" href="{{ asset('js/bootstrap.min.js')}}"></script>
+-->
+{% endblock %}

@@ -1,0 +1,151 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/questionnaire/manger.css') }}">
+
+
+{% endblock %}
+{% block title %}
+
+{% endblock %}
+
+{% block body %}
+    {#---------------------------------------------------------------------------------------#}
+    {#--------------------------colonne gauche----------------------------------------------#}
+    {#---------------------------------------------------------------------------------------#}
+
+
+            <div class="container-fluid ">
+    {% for question in questionsManger %}
+
+            {% if (question == "Conditional_question_free" or question == "Conditional_question_master" or question == "Conditional_question_choice")%}<!--niveau 4-->
+                {% if question.number == 3 %}
+                        <div class="row useless firstConditional{{ question.triggerQuestion.number }}" id="container-manger{{ question.number }}" style="display:none;">
+                {% elseif question.number == 4 %}
+                    <div class="row useless secondConditional{{ question.triggerQuestion.number }}" id="container-manger{{ question.number }}" style="display:none;">
+                {% else %}
+                        <div class="row useless firstConditional{{ question.triggerQuestion.number }}" id="container-manger{{ question.number }}" style="display:none;">
+                {% endif %}
+            {% else %}
+                {% if question.number == 10 or question.number == 11 %}
+                    <div class="row useless firstConditional8 firstConditional9" id="container-manger{{ question.number }}" style="display:none;">
+                {% else %}
+                    <div class="row" id="container-manger{{ question.number }}" style="display:none;">
+                {% endif %}
+
+            {% endif %}
+                <div class="col-md-3 col-left-1" style="background-color:{{ question.backgroundLeft }}" >
+                    <div>
+                        <div class=" titre-processus">
+                            <p>Manger</p>
+
+                        </div>
+
+                        <div class="text-sous-processus">
+                            <p>{{ question.theme.soustheme }}<p>
+                        </div>
+                    </div>
+                    <div class="question-number"><img class="img-number" src="{{ asset('images/manger/PNG/'~ question.number ~'.png') }}"/></div>
+                    <div class="text-sous-theme theme-left">
+                        <p>{{ question.theme.name }}</p>
+                    </div>
+                </div>
+                {#---------------------------------------------------------------------------------------#}
+                {#---------------------------colonne droite----------------------------------------------#}
+                {#---------------------------------------------------------------------------------------#}
+                <div class="col-md-9" style="background-color:{{ question.backgroundRight }}">
+                    <div class="titre-theme">
+                        <p class="titre-themeManger"><i>-Quoi ?-</i></p>
+                        <div class="dropdown burger-Manger">
+                            <button class="btn" type="button" id="dropdownMenuButton" style="background-color: {{ question.backgroundRight }}"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" data-number="{{ question.number }}">
+                                {% for question in questionsManger %}
+                                <p class="dropdown-item" data-dropdownnumber="{{ question.number }}">{{ question.number }}. {{ question.question }}</p>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-alimentation">
+                        <p><i>{{ question.question }}</i></p>
+                    </div>
+                    <form class="form-group" id="formManger{{ question.number }}" action="{{ path('answer_save') }}" method="POST">
+                        <div class="reponse">
+
+                            {% for choice in question.choices %}
+                                {% if question.isUnique %}
+                                    <label id="labelManger{{ choice.id }}" for="inputManger{{ choice.id }}" data-number="{{ question.number }}" data-choiceid="{{ choice.id }}"
+                                       {% if choice.conditional == 0 %}
+                                            class="uselessChoice"
+                                       {% elseif choice.conditional == 1 %}
+                                            class="showChoice1"
+                                       {% elseif choice.conditional == 2 %}
+                                            class="showChoice2"
+                                        {% endif %}>{{ choice.name }}
+                                        <input type="radio" class="eat" name="{{ question.id }}" id="inputManger{{ choice.id }}" value="{{ choice.id }}"/>
+                                    </label><br><br>
+                                    <p id="subComment{{ choice.id }}" class="subComment">{{ choice.comment }}</p>
+
+                                {% else %}
+                                    <label id="labelManger{{ choice.id }}" for="inputManger{{ choice.id }}" data-number="{{ question.number }}" data-choiceid="{{ choice.id }}"
+                                           {% if choice.conditional == 0 %}
+                                                class="uselessChoice"
+                                           {% elseif choice.conditional == 1 %}
+                                                class="showChoice1"
+                                           {% elseif choice.conditional == 2 %}
+                                                class="showChoice2"
+                                            {% endif %}>{{ choice.name }}
+                                        <input type="checkbox" class="eat" name="{{ question.id }}" id="inputManger{{ choice.id }}" value="{{ choice.id }}"/>
+                                    </label><br><br>
+                                    <p id="subComment{{ choice.id }}" class="subComment">{{ choice.comment }}</p>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </form>
+
+                        <div id="button1" class="btn-valider">
+                            <button type="button" data-number="{{ question.number }}" id="precedent{{ question.number }}"
+                                    class="precedent btn btn-light" data-formulid="formManger{{ question.number }}">Précédent</button>
+
+                            <button type="button" data-number="{{ question.number }}" id="valider{{ question.number }}"
+                                    class="valider btn btn-light" data-formulid="formManger{{ question.number }}">Valider</button>
+
+                            <button type="button" id="suivant{{ question.number }}" data-number="{{ question.number }}"
+                                    class="suivant_manger btn btn-light" data-formulid="formManger{{ question.number }}">Suivant</button>
+
+{#                            <button id="fermer{{ question.number }}" type="button" class="btn btn-light" data-dismiss="modal">Fermer et#}
+{#                                finir plus tard ?</button>#}
+                        </div>
+                    </div>{#fin col-md-9#}
+                </div>{#fin row#}
+{#            </div>#}
+    {% endfor %}
+
+    </div>{#fin container-fluid#}
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/manger.js')}}"></script>
+    <script >
+        $("#myModal-Manger .valider").prop('disabled', true);//désactiver le bouton valider
+
+        {% for answer in answers %}
+            {#$('#form{{ answer.question.id }} .suivant').find('.active').show();#}
+            {#$('#form{{ answer.question.id }} .suivant').find('.desactive').hide();#}
+            $('#myModal-Manger #valider' + {{ answer.question.number }}).prop('disabled', false);
+            console.log($('#myModal-Manger #valider' + {{ answer.question.number }}))
+            {% if answer.question == "Question_choice" or answer.question == "Conditional_question_choice" or answer.question == "Sub_question_choice" %}
+                {% for choice in answer.choices %}
+                    {#console.log($('#labelManger{{choice.id}}'));#}
+                    $('#labelManger{{choice.id}}').addClass('blur');
+                    $('#labelManger{{choice.id}}').children().attr('checked', true);
+                {% endfor %}
+            {% endif %}
+
+        {% endfor %}
+    </script>
+{% endblock %}

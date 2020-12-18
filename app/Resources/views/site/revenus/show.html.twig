@@ -1,0 +1,100 @@
+<div class="row my-row">
+    <div class="col-4 my-col">
+        <div role="button" class="annual-mini-box">
+            {# bouton actif par défaut #}
+                <img src="{{ asset('images/revenus/annuel2.jpg') }}" id="annuel" alt="revenus annuels">
+        </div>
+    </div>
+    <div class="col-4 my-col">
+    </div>
+    <!-- <div class="col-1 my-col">
+    </div> -->
+    <div class="col-4 my-col">
+        <div role="button" class="monthly-mini-box">
+            {# bouton inactif par défaut #}
+                <img src="{{ asset('images/revenus/mensuel1.jpg') }}" id="mensuel" alt="revenus mensuels">
+        </div>
+    </div>
+</div>
+<div class="space-between-titles-and-displayed-revenues"></div>
+
+{# TABLEAU DES DERNIERES ANNÉES #}
+
+{% if firstMainRev is defined and firstMainRev is not null %}
+    <div id="annualRevenues" class="display">
+        <div class="row my-row">
+            <div class="col-4 my-col"></div>
+            <div class="col-4 my-col revenues-grid-centered-text">Revenus principaux</div>
+            <div class="col-4 my-col revenues-grid-centered-text">Autres revenus</div>
+        </div>
+        <div class="space-between-titles-displayed-periods"></div>
+        {# boucler d'abord sur l'année du tableau annuel #}
+        {% for keyY,years in revenues.years %}
+        <div class="row my-row">
+            <div class="col-4 my-col">{{ keyY }}</div>
+            <div class="col-4 my-col revenues-grid-centered-text revenues-grid-centered-text">{{ years.mainRevenues }} {{ currency.symbol }}</div>
+            <div class="col-4 my-col revenues-grid-centered-text revenues-grid-centered-text">{{ years.otherRevenues }} {{ currency.symbol }}</div>
+        </div>
+        <div class="space-between-revenue-display-period-rows"></div>
+        {% endfor %}
+    </div>
+{# {% else %}
+    <div class="row my-row">
+        <div class="col-12 my-col">
+            Vous n'avez enregistré aucun revenu dans votre dashboard.
+        </div>
+        <div class="space-between-titles-displayed-periods"></div>
+        <div class="col-12 my-col">
+            <a href="{{ path('programmebudgetDashboard') }}">Retour au dashboard</a>
+        </div>
+    </div>
+    <div class="space-between-revenue-display-period-rows"></div> #}
+{% endif %}
+
+
+
+{# TABLEAU DES 12 DERNIERS MOIS #}
+
+{% if firstMainRev is defined and firstMainRev is not null %}
+    <div id="monthlyRevenues" class="invisible">
+        <div class="row my-row">
+            <div class="col-4 my-col"></div>
+            <div class="col-4 my-col revenues-grid-centered-text">Revenus principaux</div>
+            <div class="col-4 my-col revenues-grid-centered-text">Autres revenus</div>
+        </div>
+        <div class="space-between-titles-displayed-periods"></div>
+        <div class="row my-row">
+            {# boucler d'abord sur l'année du tableau mensuel #}
+            {% for key1, years in revenues.months %}
+                {# boucler sur le nom du mois dans l'année #}
+                {% for key2, months in years %}
+                        <div class="col-4 my-col">{{ key2 }} {{ key1 }}</div>
+                        {# boucler sur les revenus du mois #}
+                        {% for key3, revenues in months %}
+                            {% for key4, type in revenues %}
+                                <div class="col-4 my-col revenues-grid-centered-text revenues-grid-centered-text">
+                                    {% if type.amount is defined and type.amount is not null %}
+                                    {{ type.amount }} {{ currency.symbol }}
+                                    {% endif %}
+                                </div>
+                            {% endfor %}
+                        {% endfor %}
+                {% endfor %}
+            {% endfor %}
+        </div>
+        <div class="space-between-revenue-display-period-rows"></div>
+    </div>
+{# {% else %}
+    <div class="row my-row">
+        <div class="col-12 my-col">
+            Vous n'avez enregistré aucun revenu dans votre dashboard.
+        </div>
+        <div class="space-between-titles-displayed-periods"></div>
+        <div class="col-12 my-col">
+            <a href="{{ path('programmebudgetDashboard') }}">Retour au dashboard</a>
+        </div>
+    </div>
+    <div class="space-between-revenue-display-period-rows"></div> #}
+{% endif %}
+
+

@@ -1,0 +1,227 @@
+<h2>Budget Annuel</h2>
+
+        <div class="row category-row">
+            <div class="col-3 clickable-category-col">
+                <div class="category-image-container clickable-category vehicle-costs-items">
+                    <div class="film"></div>
+                    <img class="category-image" src="{{ asset('images/budget/individumenage/faris-vehicules.jpg') }}" />
+                    <div class="category-text-container small-text">
+                        <p>Frais véhicule (assurances, impôts, réparation, entretien, garage)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3 clickable-category-col">
+                <div class="category-image-container clickable-category holiday-budget-items">
+                    <div class="film"></div>
+                    <img class="category-image" src="{{ asset('images/budget/individumenage/vacances.jpg') }}" />
+                    <div class="category-text-container small-text">
+                        <p>Budget vacances (montant de reserve epagné mensuellement)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3 clickable-category-col">
+                <div class="category-image-container clickable-category week-end-budget-items">
+                    <div class="film"></div>
+                    <img class="category-image" src="{{ asset('images/budget/individumenage/week-end.jpg') }}" />
+                    <div class="category-text-container small-text">
+                        <p>Budget escapades week-end (montant de réserve épargné mensuellement)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3 clickable-category-col">
+                <div class="category-image-container clickable-category vehicle-purchase-items">
+                    <div class="film"></div>
+                    <img class="category-image" src="{{ asset('images/budget/individumenage/achat-vehicule.jpg') }}" />
+                    <div class="category-text-container small-text">
+                        <p>Achat de véhicule</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3 clickable-category-col">
+                <div class="category-image-container clickable-category computer-purchase-items">
+                    <div class="film"></div>
+                    <img class="category-image" src="{{ asset('images/budget/individumenage/ordinateur.jpg') }}" />
+                    <div class="category-text-container small-text">
+                        <p>Achat Ordinateur / portable* (reserve)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3 clickable-category-col">
+                <div class="category-image-container clickable-category furniture-purchase-items">
+                    <div class="film"></div>
+                    <img class="category-image" src="{{ asset('images/budget/individumenage/meubles.jpg') }}" />
+                    <div class="category-text-container small-text">
+                        <p>Achat meubles* (reserve)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3 clickable-category-col">
+                <div class="category-image-container clickable-category tools-electerical-equipment-purchase-items">
+                    <div class="film"></div>
+                    <img class="category-image" src="{{ asset('images/budget/individumenage/materiel-electrique.jpg') }}" />
+                    <div class="category-text-container small-text">
+                        <p>Achat outils et matériel electrique /electronique* (réserve)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3 clickable-category-col">
+                <div class="category-image-container clickable-category appliances-purchase-items">
+                    <div class="film"></div>
+                    <img class="category-image" src="{{ asset('images/budget/individumenage/electromenager.jpg') }}" />
+                    <div class="category-text-container small-text">
+                        <p>Achat electro-menager (reserve)*</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row added-row vehicle-costs category-row">
+            <div class="added-col col-3">
+                <div class="category-image-container">
+                    <div class="film"></div>
+                    <img class="category-image" src="{{ asset('images/budget/individumenage/faris-vehicules.jpg') }}" />
+                    <div class="category-text-container small-text">
+                        <p>Frais véhicule (assurances, impôts, réparation, entretien, garage)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9 general-spendings-form">
+                <div>
+                    {# include('site/formulaires-budget-individu-menage/vehicle-costs-form.html.twig') #}
+                </div>
+            </div>
+        </div>
+
+        <div class="row added-row holiday-budget category-row">
+            <div class="added-col col-3">
+                <div class="category-image-container">
+                    <div class="film"></div>
+                    <img class="category-image" src="{{ asset('images/budget/individumenage/vacances.jpg') }}" />
+                    <div class="category-text-container small-text">
+                        <p>Budget vacances (montant de reserve epagné mensuellement)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9 general-spendings-form">
+                <div>
+                    {# include('site/formulaires-budget-individu-menage/holiday-budget-form.html.twig') #}
+                </div>
+            </div>
+        </div>
+
+        <div class="row added-row week-end-budget category-row">
+            <div class="added-col col-3">
+                <div class="category-image-container">
+                    <div class="film"></div>
+                    <img class="category-image" src="{{ asset('images/budget/individumenage/week-end.jpg') }}" />
+                    <div class="category-text-container small-text">
+                        <p>Budget escapades week-end (montant de réserve épargné mensuellement)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9 general-spendings-form">
+                <div>
+                    {# include('site/formulaires-budget-individu-menage/week-end-budget-form.html.twig') #}
+                </div>
+            </div>
+        </div>
+
+        <div class="row added-row vehicle-purchase category-row">
+            <div class="added-col col-3">
+                <div class="category-image-container">
+                    <div class="film"></div>
+                    <img class="category-image" src="{{ asset('images/budget/individumenage/achat-vehicule.jpg') }}" />
+                    <div class="category-text-container small-text">
+                        <p>Achat de véhicule</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9 general-spendings-form">
+                <div>
+                    {# include('site/formulaires-budget-individu-menage/vehicle-purchase-form.html.twig') #}
+                </div>
+            </div>
+        </div>
+
+        <div class="row added-row computer-purchase category-row">
+            <div class="added-col col-3">
+                <div class="category-image-container">
+                    <div class="film"></div>
+                    <img class="category-image" src="{{ asset('images/budget/individumenage/ordinateur.jpg') }}" />
+                    <div class="category-text-container small-text">
+                        <p>Achat Ordinateur / portable* (reserve)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9 general-spendings-form">
+                <div>
+                    {# include('site/formulaires-budget-individu-menage/computer-purchase-form.html.twig') #}
+                </div>
+            </div>
+        </div>
+
+        <div class="row added-row furniture-purchase category-row">
+            <div class="added-col col-3">
+                <div class="category-image-container">
+                    <div class="film"></div>
+                    <img class="category-image" src="{{ asset('images/budget/individumenage/meubles.jpg') }}" />
+                    <div class="category-text-container small-text">
+                        <p>Achat meubles* (reserve)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9 general-spendings-form">
+                <div>
+                    {# include('site/formulaires-budget-individu-menage/furniture-purchase-form.html.twig') #}
+                </div>
+            </div>
+        </div>
+
+        <div class="row added-row tools-electerical-equipment-purchase category-row">
+            <div class="added-col col-3">
+                <div class="category-image-container">
+                    <div class="film"></div>
+                    <img class="category-image" src="{{ asset('images/budget/individumenage/materiel-electrique.jpg') }}" />
+                    <div class="category-text-container small-text">
+                        <p>Achat outils et matériel electrique /electronique* (réserve)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9 general-spendings-form">
+                <div>
+                    {# include('site/formulaires-budget-individu-menage/tools-electerical-equipment-purchase-form.html.twig') #}
+                </div>
+            </div>
+        </div>
+
+        <div class="row added-row appliances-purchase category-row">
+            <div class="added-col col-3">
+                <div class="category-image-container">
+                    <div class="film"></div>
+                    <img class="category-image" src="{{ asset('images/budget/individumenage/electromenager.jpg') }}" />
+                    <div class="category-text-container small-text">
+                        <p>Achat electro-menager (reserve)*</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9 general-spendings-form">
+                <div>
+                    {# include('site/formulaires-budget-individu-menage/appliances-purchase-form.html.twig') #}
+                </div>
+            </div>
+        </div>
+
+        <div class="row category-row">
+            <div class="added-col col-3" style="margin-top: 100px; display: flex; flex-direction: row; justify-content: center;">
+                <div style="width: 150px; position: relative;" class="small-text">
+                    <p class="asterisk">* = pas toutes les années mais montant de réserve épargné mensuellement pour permettre l'achat en cas de besoin)</p>
+                </div>
+            </div>
+        </div>

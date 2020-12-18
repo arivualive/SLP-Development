@@ -1,0 +1,109 @@
+<h2>Budget Hebdomadaire</h2>
+    <div>
+        <div class="invisible period">week</div>
+        <!-- premiere ligne budget hebdomadaire ecran -->
+        <div class="row category-row">
+            <div class="col-3 clickable-category-col">
+                <div class="category-image-container clickable-category non-alcoholic-drinks-items">
+                    <div class="film"></div>
+                    <img class="category-image" src="{{ asset('images/budget/individumenage/boissons-non-alcoolise.jpg') }}"/>
+                    <div class="category-text-container small-text">
+                        <p>Boissons non<br> alcoolisées</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 clickable-category-col">
+                <div class="category-image-container clickable-category alcoholic-drinks-items">
+                    <div class="film"></div>
+                    <img class="category-image" src="{{ asset('images/budget/individumenage/boissons-alcoolises.jpg') }}" />
+                    <div class="category-text-container small-text">
+                        <p>Boissons alcoolisées</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 clickable-category-col">
+                <div class="category-image-container clickable-category tobacco-items">
+                    <div class="film"></div>
+                    <img class="category-image" src="{{ asset('images/budget/individumenage/tabac.jpg') }}" />
+                    <div class="category-text-container small-text">
+                        <p>Tabac</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 clickable-category-col">
+                <div class="category-image-container clickable-category food-products-items">
+                    <div class="film"></div>
+                    <img class="category-image" src="{{ asset('images/budget/individumenage/produits-alimentaires.jpg') }}" />
+                    <div class="category-text-container small-text">
+                        <p>Produits alimentaires</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row added-row non-alcoholic-drinks category-row">
+            <div class="added-col col-3">
+                <div class="category-image-container">
+                    <div class="film"></div>
+                    <img class="category-image" src="{{ asset('images/budget/individumenage/boissons-non-alcoolise.jpg') }}" />
+                    <div class="category-text-container small-text">
+                        <p>Boissons non<br> alcoolisées</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9 general-spendings-form">
+                {{ include('site/formulaires-budget-individu-menage/non-alcoholic-drinks-form.html.twig') }}
+            </div>
+        </div>
+
+        <div class="row added-row alcoholic-drinks category-row">
+            <div class="added-col col-3">
+                <div class="category-image-container">
+                    <div class="film"></div>
+                    <img class="category-image" src="{{ asset('images/budget/individumenage/boissons-alcoolises.jpg') }}" />
+                    <div class="category-text-container small-text">
+                        <p>Boissons alcoolisées</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9 general-spendings-form">
+                <div>
+                    {{ include('site/formulaires-budget-individu-menage/alcoholic-drinks-form.html.twig') }}
+                </div>
+            </div>
+        </div>
+
+        <div class="row added-row tobacco category-row">
+            <div class="added-col col-3">
+                <div class="category-image-container">
+                    <div class="film"></div>
+                    <img class="category-image" src="{{ asset('images/budget/individumenage/tabac.jpg') }}" />
+                    <div class="category-text-container small-text">
+                        <p>Tabac</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9 general-spendings-form">
+                <div>
+                    {{ include('site/formulaires-budget-individu-menage/tobacco-form.html.twig') }}
+                </div>
+            </div>
+        </div>
+
+        <div class="row added-row food-products category-row">
+            <div class="added-col col-3">
+                <div class="category-image-container">
+                    <div class="film"></div>
+                    <img class="category-image" src="{{ asset('images/budget/individumenage/produits-alimentaires.jpg') }}" />
+                    <div class="category-text-container small-text">
+                        <p>Produits alimentaires</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9 general-spendings-form">
+                <div>
+                    {{ include('site/formulaires-budget-individu-menage/eating-budget-forms.html.twig') }}
+                </div>
+            </div>
+        </div>
+    </div>

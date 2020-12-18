@@ -1,0 +1,25 @@
+
+/*	--------------------------------------------------
+	:: Container
+-------------------------------------------------- */
+
+.container { max-width: 100%; padding-top: 0px; padding-bottom: 0px;}
+
+/*	--------------------------------------------------
+	:: Media Queries
+-------------------------------------------------- */
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media screen and (min-width: 1601px) {
+  .container { max-width: 1600px; padding-top: 0px; padding-bottom: 0px;}
+}
+
+@media screen and (max-width: 1600px) {
+  .container { width: 100%; padding-top: 0px; padding-bottom: 0px;}
+}
+
+@media screen and (max-width: 767px) {
+  .blocks-2{
+    visibility: hidden;
+  }
+}

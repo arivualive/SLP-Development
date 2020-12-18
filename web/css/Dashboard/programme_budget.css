@@ -1,0 +1,1278 @@
+body {
+    font-family: nunito;
+}
+
+#midCircle {
+    border-radius:50%;
+    width:100%;
+    height:100%;
+    border:10px solid;
+    border-color: #ff5e2e;
+}
+
+#midCircle p {
+    text-align: center;
+    font-size: 25px;
+    color: #ff5e2e;
+}
+
+.moneyTitle {
+    margin-top: 25px;
+}
+
+.ecran {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+
+.my-row {
+    margin-left: 0%;
+    width: 100%;
+}
+
+.burger button {
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 1);
+    color: #76afcd;
+    border: solid 2px white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.image-header {
+    opacity: 0.4;
+}
+
+.burger {
+    position: absolute;
+    top: 3%;
+    right: 2%;
+}
+
+.dropdown-menu::before,
+.dropdown-menu::after {
+    border: none;
+    content: none;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+/* ------------------------------------------------
+MENU
+------------------------------------------------  */
+
+.container {
+    padding: 0;
+}
+
+/* ------------------------------------------------
+SLIDER
+------------------------------------------------  */
+.carousel-item {
+    background-color: #76afcd;
+}
+
+.top-adjust {
+    top: 30%;
+}
+
+.carousel-caption {
+    margin: auto;
+    padding-bottom: 10%;
+}
+
+.image-header {
+    opacity: 1;
+}
+
+.carousel-item .intro h1 {
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    text-align: center;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 45pt;
+    font-weight: bold;
+}
+
+.text-page-transition {
+    margin-top: 26px;
+    margin-bottom: 60px;
+}
+
+.level-2-text {
+    margin-top: 26px;
+    margin-bottom: 60px;
+}
+
+.sixth-question-text {
+    margin-top: 26px;
+    margin-bottom: 60px;
+}
+
+.budget-intro-text {
+    margin-top: 26px;
+    margin-bottom: 60px;
+    width: 90%;
+    margin-left: 4%;
+    margin-right: 10px;
+}
+
+.budget-intro-text p {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #76afcd;
+    text-align: left;
+}
+
+.text-page-transition p {
+    /*font-size: 15pt;*/
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #76afcd;
+    text-align: left;
+}
+
+.level-2-text p {
+    /*font-size: 15pt;*/
+    /*margin-left: 10px;
+    margin-right: 10px;*/
+    color: #76afcd;
+    text-align: left;
+}
+
+.text-page-transition h3 {
+    font-family: 'Nunito', sans-serif;
+    color: #76afcd;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25pt;
+    margin-bottom: 26px
+}
+
+.level-2-text h3 {
+    font-family: 'Nunito', sans-serif;
+    color: #76afcd;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25pt;
+    margin-bottom: 26px
+}
+
+.enter-revenues-spendings-description {
+    margin-top: 10px;
+    color: white;
+    width: 65%;
+    font-size: small;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.float-right {
+    float: right;
+}
+
+.n1{
+    background-color: #76afcd;
+    padding-top: 20px;
+    width: 100%;
+    margin-left: 0%;
+}
+.n1 p, .n1 h3{
+    /*color: white;*/
+}
+.n1 .desc{
+    font-size: 12pt;
+}
+/*.n1 img{
+    width: 100%;
+}*/
+
+.n1 .title p {
+    text-align: center;
+}
+
+.variation {
+    margin-top: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.n1 .variation, .n2{
+    padding: 0 5%;
+}
+.n1 .variation h1{
+    /*color: white;*/
+    font-size: 35pt;
+    font-weight: bold;
+}
+
+.n1 .variation h1 span{
+    float: right;
+    background-color: white;
+    color: #76afcd;
+}
+.surplus-revenue-variation-title p{
+    font-weight: bold;
+    font-size: x-large;
+}
+/*.n1 .variation p{
+    background-color: white;
+    color: #539ac4;
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 5px;
+    border-radius: 5px;
+}*/
+.rounded-white-section {
+    background-color: white;
+    color: #76afcd;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    /*font-size: large*/;
+}
+.info-text-rounded-white-section {
+    font-size: large;
+}
+
+.titles-graphs {
+    font-size: large;
+}
+.monthly-graphs-buttons {
+    /*font-size: x-large;*/
+    /*width: 50px;*/
+    color: #76afcd;
+    /* utile seulement si la div n'inclue pas d'image pour le bouton :
+    border: 2px solid #76afcd; background-color: white;
+    color: #76afcd; border-radius: 3px; */
+    padding-right: 9px; padding-left: 9px;
+    padding-top: 3px; padding-bottom: 3px;
+    font-weight: bold; text-align: center;
+    width: 120px; font-size: 21px; font-family: 'Nunito', sans-serif; margin-top: 30%;
+}
+.annual-graphs-buttons {
+    /*font-size: x-large;*/
+    /*width: 50px;*/
+    color: #76afcd;
+    /* utile seulement si la div n'inclue pas d'image pour le bouton :
+    border: 2px solid #76afcd; background-color: #76afcd;
+    color: white; border-radius: 3px; */
+    padding-right: 9px; padding-left: 9px; padding-top: 3px;
+    padding-bottom: 3px; font-weight: bold; font-size: 21px;
+    width: 120px; text-align: center;
+    font-family: 'Nunito', sans-serif;
+    display: inline-block; text-decoration: none; margin-top: 50%;
+}
+.annual-graphs-buttons img, .monthly-graphs-buttons img, .mobile-annual-graphs-buttons img, .mobile-monthly-graphs-buttons img {
+    width : 100%;
+}
+.monthly-graphs-buttons :hover, .monthly-graphs-buttons:visited, .monthly-graphs-buttons:link, .monthly-graphs-buttons:active, .mobile-monthly-graphs-buttons :hover, .mobile-monthly-graphs-buttons:visited, .mobile-monthly-graphs-buttons:link, .mobile-monthly-graphs-buttons:active {
+    display: inline-block;
+    text-decoration: none;
+    color: #76afcd;
+
+}
+.annual-graphs-buttons :hover, .annual-graphs-buttons:visited, .annual-graphs-buttons:link, .annual-graphs-buttons:active, .mobile-annual-graphs-buttons :hover, .mobile-monthly-graphs-buttons:visited, .mobile-annual-graphs-buttons:link, .mobile-annual-graphs-buttons:active {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+}
+.n2 h2{
+    border-style: solid;
+    border-radius: 10px;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 5px;
+    color: #76afcd;
+    margin-bottom: 20px;
+    font-size: 18pt;
+}
+.n2 .debutprogramme{
+    text-align: center;
+}
+.n2 .debutprogramme img {
+    width: 30%;
+    border: 1px solid #76afcd;
+    border-radius: 3px;
+}
+.n2 h2 img{
+    width: 50px;
+}
+
+.variation p{
+    margin: 0px;
+}
+
+.revenues-gif {
+    /*background-image: url('../../images/dashboard/budget/gif/GIF-revenus.gif');*/
+    width: 100%;
+    height: 100%;
+}
+
+.revenues-gif-img-container {
+    
+}
+
+.revenues-gif img {
+    width: 100%;
+    height: auto;
+}
+
+.time-period-button {
+    padding-left: 3px;
+    padding-right: 3px;
+    color: white;
+    background-color: #76afcd;
+    border: 2px solid #76afcd;
+    border-radius: 1px;
+}
+
+.align-horizontal-end {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.align-vertical-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+}
+
+.programmeN2 .periode img{
+    height: 28px;
+}
+.programmeN2 .myThemes .themes{
+    margin-top: 50px;
+}
+.programmeN2 .myThemes .themes .theme img{
+    height: 180px;
+}
+.programmeN2 .myThemes .themes .centre img{
+    height: 250px;
+}
+.programmeN2 .myThemes .themes .theme{
+     text-align: center;
+}
+.programmeN2 .mySpecTheme{
+    margin-top: 50px;
+}
+.programmeN2 .mySpecTheme h1{
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 30pt;
+}
+.programmeN2 .mySpecTheme .periode{
+    margin-top: 50px;
+}
+.programmeN2 .mySpecTheme.manger{
+    color: rgb(79,213,104);
+}
+.programmeN2 .mySpecTheme .logo{
+    text-align: center;
+    margin-top: 50px;
+}
+.programmeN2 .mySpecTheme .logo img{
+    width: 30%;
+}
+.programmeN2 .mySpec h3{
+    font-size: 20pt;
+}
+.programmeN2 .mySpec .totalCat span{
+    float: right;
+}
+.programmeN2 .mySpec .cat{
+    margin-top: 50px;
+    text-align: center;
+}
+.programmeN2 .mySpec .cat img{
+    width: 100px;
+}
+.programmeN2 .mySpec .cat h4{
+    margin-bottom: 0px;
+}
+.programmeN2 .mySpec .cat .intro p{
+    font-size: 15pt;
+}
+.programmeN2 .mySpec .cat .subcat .title h5{
+    font-size: 16pt;
+    margin: 0 auto;
+    padding: 5px;
+}
+.programmeN2 .mySpec .cat .subcat .title h5.produit{
+    font-size: 16pt;
+    border-style: solid;
+    width: fit-content;
+}
+.programmeN2 .mySpec .cat .subcat .title img{
+    width: 35px;
+    padding-right: 10px;
+}
+
+.programmeN2 .mySpec .cat .subcat .DetailProduit{
+    margin-top: 50px;
+}
+.programmeN2 .mySpec .cat .subcat .DetailProduit h4{
+    font-size: 22px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+.origine label{
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+.additifs label{
+    width: 80%;
+}
+.sucres, .huiles{
+    margin-top: 30px;
+}
+.validation h2{
+    background-color: rgb(79,213,104);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 0px;
+}
+/* checkbox*/
+label{
+    font-weight: 400;
+}
+.containerCheckbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: left;
+  }
+.containerCheckbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    border-style: solid;
+  }
+  
+  .checkmark.boxright{
+      left: auto;
+      right: 0;
+  }
+  .containerCheckbox.boxbottom{
+      height: 90px;
+      text-align: center;
+  }
+  .checkmark.boxbottom{
+    left: 50%;
+    top: auto;
+    bottom: 0;
+  }
+/* On mouse-over, add a grey background color */
+.containerCheckbox:hover input ~ .checkmark {
+    background-color: white;
+}
+  
+/* When the checkbox is checked, add a blue background */
+.containerCheckbox input:checked ~ .checkmark {
+    background-color: white;
+}
+  
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+/* Show the checkmark when checked */
+.containerCheckbox input:checked ~ .checkmark:after {
+    display: block;
+}
+/* Style the checkmark/indicator */
+.containerCheckbox .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid rgb(79,213,104);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.my-container {
+    /*width: 90%;*/
+    /*margin-top: 1%;*/
+    /*border: 2px dotted purple;*/
+}
+
+.my-col {
+    /*border: 2px dotted orange;*/
+    padding: 0;
+    /*padding-top: 10px;*/
+    /*padding:0 0 0 0;*/
+    /*height: 90%;*/
+}
+
+.my-row {
+    /*border: 2px dotted blue;*/
+    padding:0 0 0 0;
+}
+
+.enter-revenues-box {
+    float:left;
+    color: #76afcd;
+    background-color:white;
+    border: 2px solid white;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 70%;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.enter-spendings-box {
+    float: right;
+    color: white;
+    background-color:#76afcd;
+    border: 3px solid white;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 65%;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.larger-than-767-px {
+    display: block;
+}
+
+.smaller-than-768-px {
+    display: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.padding-period {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.width-period {
+    
+}
+
+.padding-period img {
+    /*width: 30px;
+    height: auto;*/
+}
+
+.time-periods-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.time-period-img-container img {
+    /*height: 20px;*/
+    width: auto;
+    margin-left: 3px;
+    margin-right: 3px;
+    border: 1px solid #76afcd;
+    border-radius: 3px;
+}
+
+.cliked-time-period-img {
+    height: 30px;
+}
+
+.time-period-img {
+    height: 20px;
+}
+
+.centered-time-period-container {
+    margin-top: 80px;
+    justify-content: center;
+}
+
+.n1 .revenues-spending-parenthesis-text {
+    color: white;
+    font-size: small;
+}
+
+.budget-surplus-container {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    color: #76afcd;
+    font-size: xx-large;
+    justify-content: space-between;
+    padding:2px 2px 2px 2px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.budget-surplus-title {
+    font-weight: bold;
+    margin-left: 3%;
+    margin-top: 15px;
+}
+
+.plus-surplus-value-text {
+    color: white;
+    background-color: #76afcd;
+    padding: 15px 15px 15px 15px;
+}
+
+.graphs-container {
+    background-color: white;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    width: 100%;
+    position: relative;
+}
+
+.themes-list-container {
+    
+}
+
+.theme-list-item-title {
+    margin-top: 9px;
+    font-size: 10px;
+}
+
+.theme-img {
+    width: 30px;
+    height: 30px;
+    margin-right: 4px;
+}
+
+.allocation-variation-spendings {
+    color: #76afcd;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.allocation-variation-revenue {
+    color: #76afcd;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.dashboard-budget-program-text {
+    color: #76afcd;
+    width: 60%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: large;
+}
+
+.budget-themes-title {
+    margin-bottom: 65px;
+}
+
+.join-sl-community-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 38px;
+}
+
+.join-sl-community-button img {
+    width: 27%;
+}
+
+.themes-grid {
+    margin-top: 35px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.themes-grid .central-row {
+    margin-top: 15%;
+    margin-bottom: 15%;
+}
+
+.determine-budget-title {
+    color: white;
+    font-weight: bold;
+    font-size: 21px;
+}
+
+/*.revenues-spending-parenthesis-text {
+    color: white;
+    font-size: 3px;
+}*/
+
+.level-1-title {
+    color: white;
+}
+
+/*.text-page-transition .texts-and-gifs-container {
+    margin-left:50px;
+    margin-right:50px;
+}*/
+
+/*.determine-budget-title-parenthesis {
+    color: white;
+    font-weight: bold;
+}*/
+
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.mobile-status {
+    display: none;
+}
+
+/*.screen-status {*/
+/*    display: block !important;*/
+/*}*/
+
+@media screen and (max-width:1199px) {
+    .enter-revenues-box {
+        width: 75%;
+    }
+    
+    .enter-spendings-box {
+        width: 75%;
+    }
+
+    .enter-revenues-spendings-description {
+        width: 75%;
+    }
+
+    /* -------------------- */
+    /* -- graphs buttons -- */
+    /* -------------------- */
+
+    .monthly-graphs-buttons {
+        /*font-size: x-large;*/
+        /*width: 50px;*/
+        border: 2px solid #76afcd; background-color: white;
+        color: #76afcd; border-radius: 3px;
+        padding-right: 9px; padding-left: 9px;
+        padding-top: 3px; padding-bottom: 3px;
+        font-weight: bold; text-align: center;
+        width: 100px; font-size: 18px; font-family: 'Nunito', sans-serif; margin-top: 30%; margin-left: 15%;
+    }
+    .annual-graphs-buttons {
+        /*font-size: x-large;*/
+        /*width: 50px;*/
+        border: 2px solid #76afcd; background-color: #76afcd;
+        color: white; border-radius: 3px;
+        padding-right: 9px; padding-left: 9px; padding-top: 3px;
+        padding-bottom: 3px; font-weight: bold; font-size: 18px;
+        width: 100px; text-align: center;
+        font-family: 'Nunito', sans-serif;
+        display: inline-block; text-decoration: none; margin-top: 50%; margin-left: 15%;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .enter-revenues-box {
+        width: 100%;
+    }
+    
+    .enter-spendings-box {
+        width: 100%;
+    }
+
+    .enter-revenues-spendings-description {
+        width: 100%;
+    }
+
+    .cliked-time-period-img {
+        height: 25px;
+    }
+    
+    .time-period-img {
+        height: 15px;
+    }
+
+    /* ------- */
+    /* buttons */
+    /* ------- */
+
+    .join-sl-community-button img {
+        width: 37%;
+    }
+
+    .n2 .debutprogramme img {
+        width: 40%;
+    }
+
+    /* -------------------- */
+    /* -- graphs buttons -- */
+    /* -------------------- */
+
+    .monthly-graphs-buttons {
+        border: 2px solid #76afcd;
+        border-radius: 3px;
+        padding-right: 9px; padding-left: 9px;
+        padding-top: 3px; padding-bottom: 3px; width: 80px; font-size: 15px; margin-top: 30%; margin-left: 5%;
+    }
+    .annual-graphs-buttons {
+        border: 2px solid #76afcd;
+        color: white; border-radius: 3px;
+        padding-right: 9px; padding-left: 9px; padding-top: 3px;
+        padding-bottom: 3px; font-size: 15px; width: 80px; margin-top: 50%; margin-left: 5%;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .larger-than-767-px {
+        display: none;
+    }
+    
+    .smaller-than-768-px {
+        display: block;
+    }
+    
+    .enter-revenues-box {
+        /*font-size: x-large;*/
+    }
+    
+    .enter-spendings-box {
+        /*font-size: x-large;*/
+    }
+
+    /* -------------------- */
+    /* -- graphs buttons -- */
+    /* -------------------- */
+
+    .monthly-graphs-buttons {
+        border: 2px solid #76afcd;
+        border-radius: 3px;
+        padding-right: 9px; padding-left: 9px;
+        padding-top: 3px; padding-bottom: 3px; width: 70px; font-size: 12px; margin-top: 30%; margin-left: 5%;
+    }
+    .annual-graphs-buttons {
+        border: 2px solid #76afcd;
+        color: white; border-radius: 3px;
+        padding-right: 9px; padding-left: 9px; padding-top: 3px;
+        padding-bottom: 3px; font-size: 12px; width: 70px; margin-top: 50%; margin-left: 5%;
+    }
+}
+
+@media screen and (max-width:520px) {
+    /* -------------------- */
+    /* -- graphs buttons -- */
+    /* -------------------- */
+
+    .monthly-graphs-buttons {
+        border: 2px solid #76afcd;
+        border-radius: 3px;
+        padding-right: 9px; padding-left: 9px;
+        padding-top: 3px; padding-bottom: 3px; width: 70px; font-size: 12px; margin-top: 30%; margin-left: 0%;
+    }
+    .annual-graphs-buttons {
+        border: 2px solid #76afcd;
+        color: white; border-radius: 3px;
+        padding-right: 9px; padding-left: 9px; padding-top: 3px;
+        padding-bottom: 3px; font-size: 12px; width: 70px; margin-top: 50%; margin-left: 0%;
+    }
+    .mobile-monthly-graphs-buttons {
+        border: 2px solid #76afcd; background-color: white;
+        border-radius: 3px;
+        width: 70px; font-size: 12px;
+        margin: auto;
+    }
+    .mobile-annual-graphs-buttons {
+        border: 2px solid #76afcd; background-color: #76afcd;
+        color: white; border-radius: 3px;
+        font-size: 12px; width: 70px;
+        margin: auto;
+    }
+
+    .pie-charts-container {
+        display: none;
+    }
+
+    .screen-status {
+        display: none !important;
+    }
+
+    .mobile-status {
+        display: block;
+    }
+    .mobile-width {
+        width: 70%;
+    }
+    .button-mobile {
+        display: flex;
+    }
+    .year {
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width:484px) {
+    .enter-revenues-box {
+        font-size: 6.3vw;
+    }
+
+    .enter-spendings-box {
+        font-size: 6.3vw;
+    }
+}
+
+@media screen and (max-width:480px) {
+    /* --------- */
+    /* pie chart */
+    /* --------- */
+
+    .svg-max {
+        display: none;
+    }
+    
+    .svg-991 {
+        display: none;
+    }
+    
+    .svg-767 {
+        display: none;
+    }
+    
+    .svg-480 {
+        display: block;
+    }
+
+    .line-two {
+        margin-bottom: 10px;
+    }
+    .pie-chart-container {
+        width: 72px;
+        height: 72px;
+    }
+    .circle-one {
+        stroke-width: 30%;
+        stroke-dasharray: 100 150;
+    }
+    svg {
+        position: absolute;
+        left: -15px;
+        top: -5px;
+        transform: rotate(-90deg);
+    }
+    .one {
+        position: relative;
+        top: 1%;
+        left: 1%;
+        width: 99%;
+        height: 98%;
+    }
+    .two {
+        top: 15%;
+        left: 5%;
+        width: 75%;
+        height: 75%;
+        border-radius: 50%;
+    }
+    .graphs-container {
+        margin-top: 1.5%;
+    }
+
+    /* ------------- */
+    /* end pie chart */
+    /* ------------- */
+
+    .ecran {
+        display: none;
+    }
+    
+    .mobile {
+        display: block;
+    }
+    
+    .title-budget-surplus {
+        font-size: 7.5vw;
+    }
+
+    .text-page-transition{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    
+    .text-page-transition p {
+        /*font-size: 3.5vw;*/
+        /*margin-left: 10px;
+        margin-right: 10px;
+        color: #539ac4;
+        text-align: center;*/
+        font-weight: 10vw;
+    }
+
+    h3 {
+        font-size: 5.5vw;
+    }
+
+    h2 {
+        font-size: 5vw;
+    }
+
+    .text-page-transition h3 {
+        font-size: 5.5vw;
+    }
+
+    .level-2-text h3 {
+        font-size: 5.5vw;
+        margin-bottom: 5%;
+    }
+
+    .title p {
+        /*font-size: 3.5vw;*/
+    }
+
+    /*.responsive-text {
+        font-size: 3.5vw;
+    }*/
+
+    .themes-title {
+        font-size: 5vw;
+    }
+
+    .enter-revenues-spendings-description {
+        font-size: 3.5vw;
+    }
+
+    .surplus-revenue-variation-title p{
+        /*font-weight: bold;*/
+        font-size: 4.5vw;
+    }
+
+    .info-text-rounded-white-section {
+        font-size: 3.5vw;
+    }
+
+    .budget-intro-text p {
+        /*margin-top: 26px;
+        margin-bottom: 60px;*/
+        font-size: 3.5vw;
+    }
+
+    .budget-surplus-title {
+        font-size: 6vw;
+    }
+
+    .plus-surplus-value-text {
+        font-size: 6vw;
+    }
+
+    .allocation-variation-spendings {
+        font-size: 3.5vw;
+    }
+
+    .dashboard-budget-program-text {
+        font-size: 3.5vw;
+    }
+
+    .level-2-paragraph {
+        font-size: 3.5vw;
+        margin-bottom: 4%;
+        margin-left: -4%;
+    }
+
+    .cliked-time-period-img {
+        height: 20px;
+    }
+    
+    .time-period-img {
+        height: 12px;
+    }
+
+    .centered-time-period-container {
+        margin-top: 12%;
+        
+    }
+
+    .budget-themes-title {
+        margin-bottom: 8%;
+    }
+
+    .budget-themes-title {
+        margin-top: 12%;
+    }
+
+    .sixth-question-text {
+        margin-top: 5%;
+        margin-bottom: 13%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .join-sl-community-button {
+        margin-bottom: 5%;
+    }
+
+    .join-sl-community-button img {
+        width: 54%;
+    }
+    
+    .n2 .debutprogramme img {
+        width: 60%;
+    }
+
+    .level-2-text{
+        margin-top: 7%;
+        margin-bottom: 7%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .n1 {
+        padding-top: 3%;
+    }
+
+    .title {
+        margin-bottom: 5%;
+    }
+
+    .title h3 {
+        margin-bottom: 5%;
+    }
+
+    .variation {
+        margin-top: 5%
+    }
+
+    .rounded-white-section {
+        margin-top: 8%;
+        margin-bottom: 8%;
+        padding: 2%;
+        border-radius: 5px;
+        text-align: center;
+        /*font-size: large*/;
+    }
+
+    .enter-spendings-box {
+        border: 2px solid white;
+    }
+
+    .determine-budget-title {
+        font-size: 4.5vw;
+    }
+
+    .n1 .revenues-spending-parenthesis-text {
+        color: white;
+        font-size: 3vw;
+    }
+    
+    .level-1-title {
+        color: white;
+    }
+
+    .budget-intro-text {
+        margin-top: 5%;
+        margin-bottom: 12%;
+    }
+
+    .budget-surplus-container {
+        margin-top: 5%;
+    }
+    
+    .themes-grid {
+        margin-top: 35px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .themes-grid .central-row {
+        margin-top: 15%;
+        margin-bottom: 15%;
+    }
+
+    /* -------------------- */
+    /* -- graphs buttons -- */
+    /* -------------------- */
+
+    .monthly-graphs-buttons {
+        border: 1px solid #76afcd;
+        border-radius: 8px;
+        padding-right: 9px; padding-left: 6px;
+        padding-top: 3px; padding-bottom: 3px; width: 90%; font-size: 2.5vw; margin-top: 30%; margin-left: 0%;
+    }
+    .annual-graphs-buttons {
+        border: 1px solid #76afcd;
+        color: white; border-radius: 8px;
+        padding-right: 9px; padding-left: 8px; padding-top: 3px;
+        padding-bottom: 3px; font-size: 2.5vw; width: 90%; margin-top: 50%; margin-left: 0%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .cliked-time-period-img {
+        height: 18px;
+    }
+    
+    .time-period-img {
+        height: 10px;
+    }
+}
+
+@media screen and (max-width:370px) {
+    /* -------------------- */
+    /* -- graphs buttons -- */
+    /* -------------------- */
+
+    .monthly-graphs-buttons {
+        padding-left: 3px;
+    }
+    .annual-graphs-buttons {
+        padding-left: 5px;
+    }
+}
+
+@media screen and (max-width:295px) {
+    .cliked-time-period-img {
+        height: 16px;
+    }
+    
+    .time-period-img {
+        height: 8px;
+    }
+}

@@ -1,0 +1,349 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/complementary-page.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+
+{% endblock %}
+
+{% block body %}
+
+    <div class="header">
+        <div class="dropdown burger above-image">
+        </div>
+        <h1>HUILE DE PALME</h1>
+        <div class="image-container">
+            <div class="green-film"></div>
+            <img class="below-film" src="{{ asset('images/dashboard/additional-information-pages/header_palm_oil.jpg') }}">
+            <a href="#">
+                <div class="dollar-img-container">
+                    <img class="dollar-img" src="{{ asset('images/budget/individumenage/dollars.png') }}" />
+                </div>
+            </a>
+        </div>
+    </div>
+    <a href="#" title="Haut de page" class="scrollup"><i class="fa fa-arrow-up"></i></a>
+
+    <p class="intro black-text bold">L’industrie  de  l’huile  de  palme  est  complexe  et  englobe  plusieurs  secteurs,  dont  la santé humaine, ainsi que de dommages écologiques et d’abus aux travailleurs dans les plantations de l’huile de palme.D'autre  part,  des  recherches  récentes  démontrent  que  la  consommation  d'huile  de palme n'a pas d'effet négatif sur la santé, mais comme il s'agit de graisses saturées, il convient de limiter à 10% la consommation de graisses saturées dans le cadre d'un régime alimentaire équilibré.</p>
+
+    <div class="btns-container container my-container">
+        <div class="row my-row">
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Graisses">Graisses</div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Huile-de-palme">Huile de palme</div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Huile-palmiste">Huile palmiste</div>
+        </div>
+        </div>
+
+        <div class="row my-row">
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Acides-gras-saturés">Acides gras saturés</div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Stéarine-de-palme">Stéarine de palme</div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Mono-di-glycéride">Mono-di glycéride d'acides  </div>
+        </div>
+        </div>
+
+        <div class="row my-row">
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Oméga-3-Acides-gras">Oméga-3 Acides gras</div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Acides-gras-oméga-6">Acides gras oméga-6</div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="oléine-de-palme">L'oléine de palme</div>
+        </div>
+        </div>
+
+        <div class="row my-row">
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Huile-Végétale">Huile Végétale</div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Acide-stéarique">Acide stéarique  </div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Sucroesters-acides-gras">Sucroesters d'acides gras</div>
+        </div>
+        </div>
+
+        <div class="row my-row">
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Huile-Végétale-hydrogénée">Huile Végétale hydrogénée</div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Acides-gras-trans">Acides gras trans</div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Monostéarate-de-glycérol-Oléïne-de-palme">Monostéarate de glycérol Oléïne de palme </div>
+        </div>
+        </div>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+    
+    <div class="title" id="Graisses">
+        <p>• Graisses:</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+    
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Groupe de composés à base de glycérol et d’acides gras. Les graisses sont l'un des trois groupes de macronutriments qui fournissent de l'énergie.</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Acides-gras-saturés">
+        <p>• Acides gras saturés:</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+    
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Les acides gras qui ont tout l'hydrogène qu'ils peuvent contenir sur leurs chaînes chimiques n'ont pas de doubles liaisons. À l'exception de l'acide stéarique, les graisses saturées amènent le foie à produire plus de cholestérol total et de LDL que les graisses insaturées. Dans les aliments, ils proviennent principalement d'aliments d'origine animale tels que la viande, le beurre, les produits à base de lait entier et le fromage, ainsi que d'huile de noix de coco, de palme et de palmiste. La plupart des graisses saturées sont solides à la température ambiante.</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Oméga-3-Acides-gras">
+        <p>• Oméga-3 Acides gras:</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+    
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Acides gras (ALA, EPA, DHA) hautement polyinsaturés. Ils peuvent aider à réduire la coagulation du sang dans les artères et à prévenir le durcissement des artères. Les oméga-3 à longue chaîne (EPA, DHA) proviennent principalement des fruits de mer. L'acide alpha-linolénique (ALA) ou l'oméga-3 à chaîne courte se trouvent dans des aliments tels que les noix, les noix, le soja, le canola et les huiles de lin.</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Acides-gras-oméga-6">
+        <p>• Acides gras oméga-6:</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+    
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Un  autre  groupe  d’acides  gras  polyinsaturés.  L'acide  linoléique  est  l'un  d'entre  eux.  Sources:  huile  de  soja, maïs, huiles de tournesol.</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Acide-stéarique">
+        <p>• Acide stéarique:</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+    
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Un type d'acide gras saturé qui semble avoir un effet neutre, n'augmentant ni ne diminuant le taux de cholestérol dans le sang. Le chocolat noir et l'huile de karité sont riches en acide stéarique</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Acides-gras-trans">
+        <p>• Acides gras trans:</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+    
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Un  type  d’acide  gras  formé  au  cours  du  processus  d’hydrogénation  partielle.  Bien  qu’ils  soient  également présents  naturellement  dans  certains  aliments,  la  plupart  des  acides  gras  trans  dans  l’alimentation  proviennent de graisses partiellement hydrogénées.</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Huile-Végétale">
+        <p>• Huile Végétale:</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+    
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Les huiles végétales sont un groupe de graisses dérivées de graines, de noix, de céréales et de fruits. Toutes ne sont pas des huiles liquides à température ambiante</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Huile-Végétale-hydrogénée">
+        <p>• Huile Végétale hydrogénée:</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+    
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Graisses insaturées qui sont transformées pour les rendre plus saturées, stables et solides à la température ambiante. L'hydrogène est ajouté à leur composition chimique et les rend plus fermes et plus saturés tout en prolongeant leur durée de vie. L’étendue de l’hydrogénation détermine s’il ya peu ou pas de gras trans. Une huile figurant sur la liste des ingrédients d’un aliment comme étant «hydrogénée» plutôt que «partiellement hydrogénée» est totalement saturée et ne contient pas de gras trans</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Huile-de-palme">
+        <p>• Huile de palme:</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+    
+    <div class="description-txt-container">
+        <p class="description-txt black-text">(nom INCI Palm oil) est obtenue par extraction à partir du mésocarpe du fruit (Elaeis guineensis); sa consistance  est  celle  d’un  beurre,  sa  couleur  est  celle  du  bouton  d’or,  elle  dégage  une  odeur  de  violettes. contiennent de l’acide oléique (40%) et palmitique (45%). Fournit une consistance semi-solide et une stabilité à long terme. fonctionne bien à des températures de cuisson élevées.Il a la texture lisse et crémeuse et l’absence d'odeur.</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Huile-palmiste">
+        <p>• Huile palmiste:</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+    
+    <div class="description-txt-container">
+        <p class="description-txt black-text">(Nom  INCI  Palm  kernel  oil)  est  obtenue  par  extraction  à  partir  de  l’amende  du  fruit.  Elle  est  de  couleur blanche. Elle est riche en glycérides lauriques (48 %). On trouve également des acides gras comme l’acide myristique (15 %) et l’acide oléique (15 %)</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Mono-di-glycéride">
+        <p>• Mono-di glycéride d'acides gras:</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+    
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Sont des produits de dégration des graisses, ils sont produits de manière endogène dans l’organisme, mais aussi utilize comme conservateur.Il sert comme émulsifiant, agent d'enrobage, gélifiant, antioxydant et support pour colorant. Il est obtenu par hydrolyse, soit à partir de graisse et d’huiles végétales. La matière plus utlisée est: l’huile de soja.Peut être trouvé sous différents noms : Mono- et diglycérides d'acides gras alimentaires,  Monostéarate de glycérine,  GMS,  Monopalmitate  de  glycérine,  Monooléate  de  glycérine,  Monostéarine,  monopalmitine,  monooléine, glyceryl monostearate, glyceryl distearate</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Monostéarate-de-glycérol-Oléïne-de-palme">
+        <p>• Monostéarate de glycérol Oléïne de palme:</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+    
+    <div class="description-txt-container">
+        <p class="description-txt black-text">dérivés de l'huile de palme</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Stéarine-de-palme">
+        <p>• Stéarine de palme:</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+    
+    <div class="description-txt-container">
+        <p class="description-txt black-text">est la fraction à point de fusion élevé obtenue après fractionnement de l'huile de palme. Sa Point d'écoulement: pas plus de 44°C.</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="oléine-de-palme">
+        <p>• L'oléine de palme:</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+    
+    <div class="description-txt-container"></div>
+    <p class="description-txt black-text">Est la fraction liquide obtenue après fractionnement de l'huile de palme. Sa Point d'écoulement: pas plus de 24°C</p>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Sucroesters-acides-gras">
+        <p>• Sucroesters d'acides gras:</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+    
+    <div class="description-txt-container"></div>
+    <p class="description-txt black-text">Est l’ester d’un acide gras et d’une sucre, généralment le saccharose.</p>
+    
+    <br class="ecran"><br class="ecran"><br class="ecran"><br class="ecran">
+
+    <div class="references-text black-text">
+    <p class="references">Références :</p>
+    <br class="ecran">
+    <p>https://palmoilalliance.eu/about-palm-oil/</p>
+    <p>https://www.wwf.org.uk/updates/8-things-know-about-palm-oil</p>
+    <p>https://www.regard-sur-les-cosmetiques.fr/nos-re-</p>
+    <p>gards/quelle-difference-entre-huile-de-palme-et-huile-de-palmiste-789/</p>
+    <p>https://www.additifs-alimentaires.net/E471.ph</p>
+    <p>https://fr.openfoodfacts.org/additif/e471-mono-et-diglycerides-d-acides-gras-alimentaires</p>
+    <p>http://www.fao.org/3/x1736f/x1736f0c.htm</p>
+    <p>https://www.sciencedirect.com/topics/food-science/vegetable-oils</p>
+    <p>https://www.palmoilfreecertification.org/alternate-names-for-palm-oil</p>
+    <br><br>
+    <p>Complete Food and Nutrition Guide, Academy of Nutrition and Dietetics, 2012 pages 102-105.</p>
+    
+    <br><br><br>
+
+
+
+{% include 'footer.html.twig' %}
+
+{% endblock %}
+
+{% block javascripts %}
+    <script link rel="stylesheet" href="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script>
+        $('.hidden-sugar-btn').click(function (){
+            var dataId = $(this).data('scrollid');
+            console.log(dataId);
+            $('.hidden-sugar-btn').addClass('inactive');
+            $(this).removeClass('inactive');
+            $('html, body').animate({
+                scrollTop: $("#" + dataId).offset().top
+            }, 500);
+        })
+
+        //Bouton pour remonter en haut de la page
+        ScrollToTop=function() {
+            var s = $(window).scrollTop();
+            if (s > 1000) {
+                $('.scrollup').fadeIn();
+            } else {
+                $('.scrollup').fadeOut();
+            }
+
+            $('.scrollup').click(function () {
+                $("html, body").animate({ scrollTop: 0 }, 500);
+                return false;
+            });
+        }
+
+        StopAnimation=function() {
+            $("html, body").bind("scroll mousedown DOMMouseScroll mousewheel keyup", function(){
+                $('html, body').stop();
+            });
+        }
+
+
+        $(window).scroll(function() {
+            ScrollToTop();
+            StopAnimation();
+        });
+    </script>
+{% endblock %}

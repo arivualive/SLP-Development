@@ -1,0 +1,327 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Eco Panier{% endblock %}
+
+{% block stylesheets %}
+    <!-- Bootstrap -->
+    <link href="{{ asset('externe/css/bootstrap-4.0.0.css') }}" rel="stylesheet">
+
+    <link href="{{ asset('externe/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:300,400,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+
+    <!-- Custom CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link href="{{ asset('externe/fonts/Gotham-Font/GothamMedium.ttf') }}">
+    <link href="{{ asset('externe/fonts/Roboto/Roboto-Medium.ttf') }}">
+    <link href="{{ asset('slp/css/ecopanier.css') }}" rel="stylesheet">
+    <link href="{{ asset('slp/css/footer.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/portailatelier.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/ecopanier.css') }}">
+    {# <link href="{{ asset('build/app.css') }}" rel="stylesheet"> #}
+{% endblock %}
+
+{% block atelier %}
+    <!-- Header -->
+  <!--<div class="jumbotron hero-photography">
+    <div class="header_icon"><img src="{{ asset('build/img/ecopanier/header_icon.png') }}" id="header_btn"></div>
+    <h1>LES ÉCO-PANIERS</h1>
+  </div>-->
+
+  <header>
+        <div class="" style="background-color: rgba(204, 102, 204, 0.45); height: 100%;">
+            <div class="" style="color: white; position: relative; font-weight: var(--style-bold); height: 100%;">
+                <div class="menu-icon" style="display: flex; width: 340px;">
+                    {% if userslp == null %}
+                    <a href="{{ path('fos_user_registration_register') }}" style="background-color: white; color: #337ab7; width: 190px; height: 35px; margin: auto; line-height: 35px; font-size: 16px; text-transform: uppercase;">
+                        Inscription
+                    </a>
+                    {% endif %}
+                    <div class="dropdown burger" {% if userslp != null %} style="margin-left: 290px;" {% endif %}>
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="min-width: 30px;">
+                            <!--<a class="dropdown-item" href="{#{ path('site_index') }}">Accueil</a>
+                            
+                            {% if userslp != null %}
+                                <a class="dropdown-item" href="{{ path('userslp_show', { 'id': userslp.id }) }}">Profil</a>
+                            {% endif %#}-->
+                            {% if userslp != null %}
+                                <a class="dropdown-item" {% if form == 1 %} aria-disabled="true"
+                                href="{{ path('site_dashboard') }}"> {% else %} href="{{ path('site_dashboard') }}"
+                                aria-disabled="false">Dashboard</a>{% endif %}
+                            {% endif %}
+                            {% if userslp != null %}
+                                <a class="dropdown-item" href="/logout">Deconnexion</a>
+                            {% else %}
+                                <a class="dropdown-item" href="/login">Connexion</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="" style="background: url({{ asset('images/ateliers/header_ecopanier_ges.jpg') }}) no-repeat; background-size: cover; height: 100%;" >
+                    <img src="{{ asset('images/atelier-eco/atelier_alimentation.png') }}" id="header_btn" 
+                            style="vertical-align: middle; border-style: none; width: 129px; height: 93px; margin-top: 200px;"/>
+                    
+                    <h1>LES ÉCO-PANIERS</h1>
+                    <!--<p class="" style="font-size: 30px;">ALIMENTATION / MODE / MAQUILLAGE / <br> SANTÉ / CHOISIR &amp; CONSOMMER / 0 WASTE</p>-->
+                    <!--<div style="margin: 90px;">
+                        <a href="#section_atelier" class="header_btn" style="">
+                            <img src="{#{ asset('images/ateliers/icoheader.png') }#}" id="header_btn">
+                        </a>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </header>
+
+  <!-- Composition -->
+  <div class="row text-center composition_h2">
+    <div class="col-xl-12 d-flex align-items-center justify-content-center">
+      <h2>LA COMPOSITION DES PANIERS</h2>
+    </div>
+  </div>
+
+    <section id="composition">
+    <div class="container-fluid">
+      <div class="row text-center" style="margin-right: 120px; margin-left: 70px;">
+        <div class="col-xl-6">
+          <div class="composition-backbox">
+            <h3 class="mt-4">Le classique</h3>
+            <div>
+              <h4 class="mt-5">Economique</h4> <br>
+              <p>
+                Saucisson ou viande séchée * (boeuf) <br>
+                Mélange de crudités, oeuf dur, sauce (petites carottes, tomates cerises et radis) <br>
+                Fruits : pêche (200g) et  abricots (83g) <br>
+                Gruyère <br>
+                Jus de pomme de la région (50cl) <br>
+                Pain rustique
+              </p>
+            </div>
+            <hr class="style5">
+            <div>
+              <h4>Middle</h4> <br>
+              <p> Saucisson ou viande séchée (boeuf) * <br>
+                Mélange de crudités, oeuf dur, sauce (petites carottes, tomates cerises et radis) <br>
+                Fruits : pêche (200g) et abricots (83g) <br>
+                Gruyère <br>
+                Jus de pomme de la région (50cl) <br>
+                Vin de la région de Genève - gamay de satigny AOC (50cl) <br>
+                Pain rustique
+              </p>
+            </div>
+            <hr class="style5">
+            <div>
+              <h4>Premium</h4> <br>
+              <p>
+                Saucisson ou viande séchée (boeuf) * <br>
+                Terrine <br>
+                Mélange de crudités, oeuf dur, sauce (petites carottes, tomates cerises et radis) <br>
+                Noix (250g) <br>
+                Fruits : pêche (200g) et abricots (83g) <br>
+                Gruyère <br>
+                Jus de pomme de la région (50cl) <br>
+                Vin de la région de Genève (50cl) - Pinot noir Grande Réserve AOC <br>
+                Pain rustique 2x
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <div class="composition-backbox">
+            <h3 class="mt-4">Le végétarien</h3>
+            <div>
+              <h4 class="mt-5">Economique</h4> <br>
+              <p>
+                Tomme de brebis, ou chèvre ou gruyère * <br>
+                Mélange de crudités, sauce (petites carottes, tomates cerises et radis) <br>
+                Fruits : pêche (200g) et  abricots (83g) <br>
+                Jus de pomme de la région (50cl) <br>
+                Pain rustique <br> <br>
+              </p>
+            </div>
+            <hr class="style5">
+            <div>
+              <h4>Middle</h4> <br>
+              <p>
+                Tomme de brebis, ou chèvre ou gruyère * <br>
+                Grande crudités, sauce (petites carottes, tomates cerises et radis) <br>
+                Fruits : pêche (200g) et abricots (83g) <br>
+                Jus de pomme de la région (50cl) <br>
+                Vin de la région de Genève - Gamay de satigny AOC(50cl) <br>
+                Pain rustique <br> <br>
+              </p>
+            </div>
+            <hr class="style5">
+            <div>
+              <h4>Premium</h4> <br>
+              <p>Tomme de brebis ou chèvre * <br>
+                gruyère <br>
+                Barquette de hummus ou pâte à tartiner au soja <br>
+                Grande crudités, oeuf dur, sauce (petites carottes, tomates cerises et radis) <br>
+                Noix (250g) <br>
+                Fruits : pêche (200g) et abricots (83g) <br>
+                Jus de pomme de la région (50cl) <br>
+                Vin de la région de Genève (50cl) - Pinot noir Grande Réserve AOC <br>
+                Pain rustique x2
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Je Commande -->
+  <section class="mt-5" id="commande">
+    <div class="container-fluid ">
+      <div class="row text-center commande_h2">
+        <div class="col-md-12 d-flex align-items-center justify-content-center">
+          <h2> LES TARIFS DES PANIERS </h2>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-8 offset-md-2">
+            <div class="row">
+                <div class="col-md-3">
+                    <h4 class="text-left">Le classique</h4>
+                    <div>
+                        <h5>Economique</h5>
+                        <ul>
+                            <li>Non membres : 26 -</li>
+                            <li>Staff : 22 -</li>
+                            <li>Membres Gaea21 : 24</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>Middle</h5>
+                        <ul>
+                            <li>Non membres : 26 -</li>
+                            <li>Staff : 22 -</li>
+                            <li>Membres Gaea21 : 24</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>Premium</h5>
+                        <ul>
+                            <li>Non membres : 26 -</li>
+                            <li>Staff : 22 -</li>
+                            <li>Membres Gaea21 : 24</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="tarif-background">
+                        <div class="tarif-img img-fluid">
+                          <img src="{{ asset('images/ecopanier/eco_panier_slp_sw.jpg') }}" id="" 
+                            style="width: 100%; height: 100%;"/> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h4 class="text-left">Le végétarien</h4>
+                    <div>
+                        <h5>Economique</h5>
+                        <ul>
+                            <li>Non membres : 26 -</li>
+                            <li>Staff : 22 -</li>
+                            <li>Membres Gaea21 : 24</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>Middle</h5>
+                        <ul>
+                            <li>Non membres : 26 -</li>
+                            <li>Staff : 22 -</li>
+                            <li>Membres Gaea21 : 24</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>Premium</h5>
+                        <ul>
+                            <li>Non membres : 26 -</li>
+                            <li>Staff : 22 -</li>
+                            <li>Membres Gaea21 : 24</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+    <!--<div class="container-fluid ">
+      <div class="row text-center rowjecommande">
+        <div class="col-md-12 d-flex align-items-center justify-content-center">
+          <div class="col-md-4 form-group pl-0">
+            <button type="button" data-toggle="modal" data-target="#modalform" class="btn btn-jecommande">Je commande</button>
+            {#{ render(url('sylius_shop_partial_taxon_index_by_code', {'code': 'ecopanier', 'template': '@SyliusShop/Taxon/_horizontalMenu.html.twig'})) }#}
+          </div>
+        </div> 
+      </div>
+    </div>-->
+  </section>
+
+    {# BOUTON DE PARTAGE SUR FACEBOOK #}
+    {{ include('site/partager_facebook.html.twig') }}
+
+  <div class="row">
+        <footer>
+            <div class="d-flex flex-row justify-content-around footer">
+                <div>
+                    <h3>Projets</h3>
+                    <ul>
+                        <li><a href="http://www.repertoirevert.org/">Répertoire Vert</a></li>
+                        <li><a href="">Green Event Series</a></li>
+                        <li><a href="">Grow your own</a></li>
+                        <li><a href="">Consom'action</a></li>
+                        <li><a href="">Eco-gestes</a></li>
+                        <li><a href="">Green Coaching</a></li>
+                        <li><a href="">Sharing Economy</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3><a href="{{ path('site_mentions') }}">About</a></h3>
+                </div>
+
+                <div>
+                    <h3><a href="{{ path('contact') }}">Contact</a></h3>
+                </div>
+
+                <div>
+                    <h3><a href="http://www.gaea21.org/wpg21/">gaea21</a></h3>
+                </div>
+            </div>
+        </footer>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript">
+      function MM_swapImgRestore() { //v3.0
+        var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+      }
+      function MM_preloadImages() { //v3.0
+        var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+          var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+            if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+      }
+
+      function MM_findObj(n, d) { //v4.01
+        var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+          d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+        if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+        for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+        if(!x && d.getElementById) x=d.getElementById(n); return x;
+      }
+
+      function MM_swapImage() { //v3.0
+        var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+          if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+      }
+    </script>
+{% endblock %}

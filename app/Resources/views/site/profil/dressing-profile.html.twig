@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/profile.css') }}">
+    
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+{% endblock %}
+
+{% block body %}
+    <div class="header">
+        <div class="dropdown burger above-image">
+        </div>
+        <h1>RÉSULTAT<br>PROFIL S'HABILLER</h1>
+        <div class="image-container">
+            <div class="blue-film"></div>
+            <img class="below-film" src="{{ asset('images/subject-profiles/header-page-profil-s-habiller.jpg') }}">
+        </div>
+    </div>
+    
+    <div class="container my-container">
+        <div class="row title">
+            <h2>Résultat Thématique / S'habiller</h2>
+        </div>
+        <div class="row intro">
+            <p>Lindustrie de la mode est la <b>plus polluante</b> au monde après celle du <b>pétrole</b>.<br>Mais <b>mode</b> et <b>éthique</b> ne sont plus <b>antinomiques</b>.<br><b>S'habiller</b> avec style en <b>respectant</b>l'<b>homme</b> et la <b>blanète</b>, c'est <b>possible !</b><br>
+            Même s'il n'est pas toujours simple de décoder les <b>étiquettes</b> et les <b>labels</b>, vous pouvez déjà adopter des <b>pratiques efficaces</b> comme la <b>garde-robe minimaliste</b> ou le <b>slow-fashion</b>.<br>Suivez nos conseils pour y voir plus clair et <b>consommer moins, mais mieux</b>.
+        </div>
+    </div>
+
+    <div class="container my-container result-box">
+        <div class="row">
+            <h2 class="margins-titles-2nd-grid">PROFIL A</h2>
+        </div>
+        <div class="row">
+            <div class="col-12 my-col title-and-square-image">
+                <div class="title-exlaination-profile">
+                    <h3 class="margins-titles-2nd-grid">Vous avez un mode de vie neutre</h3>
+                </div>
+                <div class="square-image-container">
+                    <img class="square-image" src="{{ asset('images/dashboard/orange-100_.png') }}" />
+                </div>
+            </div>
+        </div>
+        <div class="space-between-profile-exlanation-title-and-explanaition-text"></div>
+        <div class="row">
+            <div class="col-10 my-col">
+                <p class="profile-text">Lorem ipsum dolor sit amet, consecutetuer adipiscing elit, sed diam nonummy nibh euismod tincindunt ut laoreet dolore magna aliquam erat voluptat. Ut wisi enim ad minim veniam, quis Lorem ipsum dolor sit amet, consecutor dipiscing elit, sed diam nonummy nihb euismod tincindunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="col-2 my-col text-image-container">
+                <img class="image" src="{{ asset('images/subject-profiles/s-habiller.jpg') }}"/>
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src"{{ asset('js/budget/spendings.js') }}"></script>
+{% endblock %}

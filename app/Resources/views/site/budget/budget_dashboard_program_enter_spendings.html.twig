@@ -1,0 +1,765 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/profilgaea.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/eating-budget.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/Dashboard/budget-dashboard-program-enter-spendings.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/Dashboard/bar-chart/revenue-variation-bar-chart.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+{% endblock %}
+
+{% block body %}
+    <div class="header">
+{#        <div class="dropdown burger above-image">#}
+{#        </div>#}
+        <h1> PROGRAMME BUDGET<br>DASHBOARD</h1>
+        <div class="image-container">
+            <div class="blue-film"></div>
+            <img class="below-film"
+                 src="{{ asset('images/dashboard/dashboard-budget-header.png') }}"
+            >
+{#            <a href="#">#}
+{#                <div class="dollar-img-container">#}
+{#                    <img class="dollar-img" src="{{ asset('images/budget/individumenage/dollars.png') }}" />#}
+{#                </div>#}
+{#            </a>#}
+
+            {#  --Ici nous avons ajouté le menu burger en utilisant la classe
+                    dollar-img-container afin de de fixer notre menu a droite sur l'image--
+            #}
+            {% include '/site/budget/_menu-burger.html.twig' %}
+            {# -- Fin du menu burger-- #}
+        </div>
+    </div>
+
+    <h2 class="centered-text">Entrez vos dépenses</h2>
+
+    <div class="container my-container">
+        <div class="row my-row theme-row">
+            <div class="image-subject-container col-4 my-col">
+                <img class="image-subject" src="{{ asset('images/dashboard/budget/se-distraire.png') }}" />
+            </div>
+            <div class="image-subject-container col-4 my-col">
+                <img class="image-subject take-care-of-yourself-img" src="{{ asset('images/dashboard/budget/prendre-soin-de-soi.png') }}" />
+            </div>
+            <div class="image-subject-container col-4 my-col">
+                <img class="image-subject" src="{{ asset('images/dashboard/budget/travailler.png') }}" />
+            </div>
+        </div>
+        <div class="row my-row theme-row">
+            <div class="image-subject-container col-4 my-col">
+                <img class="image-subject" src="{{ asset('images/dashboard/budget/habiter.png') }}" />
+            </div>
+            <div class="image-subject-container col-4 my-col">
+                <img class="image-subject" src="{{ asset('images/dashboard/budget/communiquer.png') }}" />
+            </div>
+            <div class="image-subject-container col-4 my-col">
+                <img class="image-subject" src="{{ asset('images/dashboard/budget/shabiller.png') }}" />
+            </div>
+        </div>
+        <div class="row my-row theme-row">
+            <div class="col-2 my-col"></div>
+            <div class="image-subject-container col-4 my-col">
+                <img class="image-subject" src="{{ asset('images/dashboard/budget/se-déplacer.png') }}" />
+            </div>
+            <div class="image-subject-container col-4 my-col">
+                <img class="image-subject" src="{{ asset('images/dashboard/budget/manger.png') }}" />
+            </div>
+            <div class="col-2 my-col"></div>
+        </div>
+    </div>
+
+    <div class="categories container my-container" style="display: none;">
+        <div class="row my-row">
+            <div class="subcategory-col col-4 my-col">
+                <div class="col-12 my-col subcategory-container">
+                    <div class="container my-container subcategory">
+                        <div class="row my-row subcategory-image-container">
+                            <img class="subcategory-image" src="{{ asset('images/dashboard/se_distraire.png') }}" />
+                        </div>
+                        <div class="row my-row">
+                            <p class="centered-text subcategory-text">
+                                <b class="gray-title">Se Distraire</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subcategory-col col-4 my-col">
+                <div class="col-12 my-col subcategory-container">
+                    <div class="container my-container subcategory">
+                        <div class="row my-row subcategory-image-container">
+                            <img class="subcategory-image" src="{{ asset('images/dashboard/prendre soin de soi- empreinte - orange.png') }}" />
+                        </div>
+                        <div class="row my-row">
+                            <p class="centered-text subcategory-text">
+                                <b class="orange-title">Prendre soin de soi</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subcategory-col col-4 my-col">
+                <div class="col-12 my-col subcategory-container">
+                    <div class="container my-container subcategory">
+                        <div class="row my-row subcategory-image-container">
+                            <img class="subcategory-image" src="{{ asset('images/dashboard/travail- empreinte - orange.png') }}" />
+                        </div>
+                        <div class="row my-row">
+                            <p class="centered-text subcategory-text">
+                                <b class="orange-title">Travailler</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-row">
+            <div class="subcategory-col col-4 my-col">
+                <div class="col-12 my-col subcategory-container">
+                    <div class="container my-container subcategory">
+                        <div class="row my-row subcategory-image-container">
+                            <img class="subcategory-image" src="{{ asset('images/dashboard/habiter- empreinte - vert clair.png') }}" />
+                        </div>
+                        <div class="row my-row">
+                            <p class="centered-text subcategory-text">
+                                <b class="yellowgreen-title">Habiter</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subcategory-col col-4 my-col">
+                <div class="col-12 my-col subcategory-container">
+                    <div class="container my-container subcategory">
+                        <div class="row my-row subcategory-image-container">
+                            <img class="subcategory-image" src="{{ asset('images/dashboard/communiquer- empreinte - orange.png') }}" />
+                        </div>
+                        <div class="row my-row">
+                            <p class="centered-text subcategory-text">
+                                <b class="orange-title">Communiquer</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subcategory-col col-4 my-col">
+                <div class="col-12 my-col subcategory-container">
+                    <div class="container my-container subcategory">
+                        <div class="row my-row subcategory-image-container">
+                            <img class="subcategory-image" src="{{ asset('images/dashboard/s_habiller.png') }}" />
+                        </div>
+                        <div class="row my-row">
+                            <p class="centered-text subcategory-text">
+                                <b class="gray-title">S'habiller</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-row">
+            <div class="col-2 my-col"></div>
+            <div class="subcategory-col col-4 my-col">
+                <div class="col-12 my-col subcategory-container">
+                    <div class="container my-container subcategory">
+                        <div class="row my-row subcategory-image-container">
+                            <img class="subcategory-image subcategory-image" src="{{ asset('images/dashboard/se déplacer- empreinte - gris.png') }}" />
+                        </div>
+                        <div class="row my-row">
+                            <p class="centered-text subcategory-text">
+                                <b class="gray-title">Se déplacer</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subcategory-col col-4 my-col">
+                <div class="col-12 my-col subcategory-container">
+                    <div class="container my-container subcategory">
+                        <div class="row my-row subcategory-image-container">
+                            <img class="subcategory-image subcategory-image" src="{{ asset('images/dashboard/manger - empreinte - vert foncé.png') }}" />
+                        </div>
+                        <div class="row my-row">
+                            <p class="centered-text subcategory-text">
+                                <b class="green-title">Manger</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 my-col"></div>
+        </div>
+    </div>
+
+    <div class="eating-theme">
+        <div class="categories container my-container">
+            <div class="row my-row">
+            <div class="subcategory-col col-4 my-col">
+                <div class="col-12 my-col subcategory-container">
+                    <div class="container my-container subcategory">
+                        <div class="row my-row subcategory-img-container">
+                            <img class="subcategory-img" src="{{ asset('images/dashboard/budget/boisson.png') }}" />
+                        </div>
+                        <div class="row my-row">
+                            <p class="green-text centered-text subcategory-text">
+                                <b>Boissons</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subcategory-col col-4 my-col">
+                <div class="col-12 my-col subcategory-container">
+                    <div class="container my-container subcategory">
+                        <div class="row my-row subcategory-img-container">
+                            <img class="subcategory-img" src="{{ asset('images/dashboard/budget/fruit-legume.png') }}" />
+                        </div>
+                        <div class="row my-row">
+                            <p class="green-text centered-text subcategory-text">
+                                <b>Fruits et légumes</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subcategory-col col-4 my-col">
+                <div class="subcategory-container col-12 my-col">
+                    <div class="container my-container subcategory">
+                        <div class="row my-row subcategory-img-container">
+                            <img class="subcategory-img" src="{{ asset('images/dashboard/budget/produit-laitier.png') }}" />
+                        </div>
+                        <div class="row my-row">
+                            <p class="green-text centered-text subcategory-text">
+                                <b>Produits laitiers</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="row my-row">
+            <div class="subcategory-col col-4 my-col">
+                <div class="col-12 my-col subcategory-container">
+                    <div class="container my-container subcategory">
+                        <div class="row my-row subcategory-img-container">
+                            <img class="subcategory-img" src="{{ asset('images/dashboard/budget/feculent.png') }}" />
+                        </div>
+                        <div class="row my-row">
+                            <p class="green-text centered-text subcategory-text">
+                                <b>Feculants</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subcategory-col col-4 my-col">
+                <div class="col-12 my-col subcategory-container">
+                    <div class="container my-container subcategory">
+                        <div class="row my-row subcategory-img-container">
+                            <img class="subcategory-img" src="{{ asset('images/dashboard/budget/matiere-grasse.png') }}" />
+                        </div>
+                        <div class="row my-row">
+                            <p class="green-text centered-text subcategory-text">
+                                <b>Matières grasses</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subcategory-col col-4 my-col">
+                <div class="col-12 my-col subcategory-container">
+                    <div class="container my-container subcategory">
+                        <div class="row my-row subcategory-img-container">
+                            <img class="subcategory-img" src="{{ asset('images/dashboard/budget/produit-sucré.png') }}" />
+                        </div>
+                        <div class="row my-row">
+                            <p class="green-text centered-text subcategory-text">
+                                <b>Produits sucrés</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="row my-row">
+            <div class="subcategory-col col-4 my-col"></div>
+            <div class="subcategory-col col-4 my-col">
+                <div class="col-12 my-col subcategory-container">
+                    <div class="container my-container subcategory">
+                        <div class="row my-row subcategory-img-container">
+                            <img class="subcategory-img" src="{{ asset('images/dashboard/budget/vpo.png') }}" />
+                        </div>
+                        <div class="row my-row">
+                            <p class="green-text centered-text subcategory-text">
+                                <b>VPO</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subcategory-col col-4 my-col"></div>
+        </div>
+        </div>
+
+        {% include 'site/budget/currency-label-with-buttons-line.html.twig' %}
+
+        
+        <!--<div class="one-line-itms-images">
+            <div class="one-row-col my-itm">
+                <img class="one-row-image" src="{{ asset('images/dashboard/budget/feculent.png') }}" />
+            </div>
+            <div class="one-row-col my-itm">
+                <img class="one-row-image" src="{{ asset('images/dashboard/budget/fruit-legume.png') }}" />
+            </div>
+            <div class="one-row-col my-itm">
+                <img class="one-row-image" src="{{ asset('images/dashboard/budget/produit-laitier.png') }}" />
+            </div>
+            <div class="one-row-col my-itm">
+                <img class="one-row-image" src="{{ asset('images/dashboard/budget/vpo.png') }}" />
+            </div>
+            <div class="one-row-col my-itm">
+                <img class="one-row-image" src="{{ asset('images/dashboard/budget/matiere-grasse.png') }}" />
+            </div>
+            <div class="one-row-col my-itm">
+                <img class="one-row-image" src="{{ asset('images/dashboard/budget/produit-sucré.png') }}" />
+            </div>
+        </div>-->
+
+        <div class="graph-container">
+{#            {% include 'site/bar-chart/revenue-variation-bar-chart.html.twig' %}#}
+        </div>
+
+        <div class="one-row-container container my-container">
+        <div class="row my-row">
+            <div class="one-row-col col-2 my-col">
+                <img class="one-row-image" src="{{ asset('images/dashboard/budget/feculent.png') }}" />
+            </div>
+            <div class="one-row-col col-2 my-col">
+                <img class="one-row-image" src="{{ asset('images/dashboard/budget/fruit-legume.png') }}" />
+            </div>
+            <div class="one-row-col col-2 my-col">
+                <img class="one-row-image" src="{{ asset('images/dashboard/budget/produit-laitier.png') }}" />
+            </div>
+            <div class="one-row-col col-2 my-col">
+                <img class="one-row-image" src="{{ asset('images/dashboard/budget/vpo.png') }}" />
+            </div>
+            <div class="one-row-col col-2 my-col">
+                <img class="one-row-image" src="{{ asset('images/dashboard/budget/matiere-grasse.png') }}" />
+            </div>
+            <div class="one-row-col col-2 my-col">
+                <img class="one-row-image" src="{{ asset('images/dashboard/budget/produit-sucré.png') }}" />
+            </div>
+        </div>
+        </div>
+                                
+        <div class="form-img-title-container container my-container">
+        <div class="row my-row">
+            <div class="col-2 my-col">
+                <img class="frm-category-image" src="{{ asset('images/dashboard/budget/boisson.png') }}" />
+            </div>
+            <div class="col-10 my-col cat-frm-title-container">
+                <p class="green-text cat-frm-title">Boissons</p>
+            </div>
+        </div>
+        
+        </div>
+        <a href="#">
+        <div class="plus">
+            <p class="txt-plus"> Ajouter produits</p>
+        </div>
+        </a>
+    
+        <div class="form-img-title-container container my-container">
+        <div class="row my-row">
+            <div class="col-2 my-col">
+                <img class="frm-category-image" src="{{ asset('images/dashboard/budget/fruit-legume.png') }}" />
+            </div>
+            <div class="col-10 my-col cat-frm-title-container">
+                <p class="green-text cat-frm-title">Fruits et légumes</p>
+            </div>
+        </div>
+        </div>
+
+        <a href="#">
+        <div class="plus">
+            <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+            <p class="txt-plus"> Ajouter produits</p>
+        </div>
+        </a>
+
+        <div class="form-img-title-container container my-container">
+        <div class="row my-row">
+            <div class="col-2 my-col">
+                <img class="frm-category-image" src="{{ asset('images/dashboard/budget/produit-laitier.png') }}" />
+            </div>
+            <div class="col-10 my-col cat-frm-title-container">
+                <p class="green-text cat-frm-title">Produits laitiers</p>
+            </div>
+        </div>
+        </div>
+
+        <a href="#">
+        <div class="plus">
+            <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+            <p class="txt-plus"> Ajouter produits</p>
+        </div>
+        </a>
+
+        <div class="form-img-title-container container my-container">
+        <div class="row my-row">
+            <div class="col-2 my-col">
+                <img class="frm-category-image" src="{{ asset('images/dashboard/budget/feculent.png') }}" />
+            </div>
+            <div class="col-10 my-col cat-frm-title-container">
+                <p class="green-text cat-frm-title">Féculents</p>
+            </div>
+        </div>
+        </div>
+
+        <a href="#">
+        <div class="plus">
+            <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+            <p class="txt-plus"> Ajouter produits</p>
+        </div>
+        </a>
+
+        <div class="form-img-title-container container my-container">
+        <div class="row my-row">
+            <div class="col-2 my-col">
+                <img class="frm-category-image" src="{{ asset('images/dashboard/budget/matiere-grasse.png') }}" />
+            </div>
+            <div class="col-10 my-col cat-frm-title-container">
+                <p class="green-text cat-frm-title">Matières grasses</p>
+            </div>
+        </div>
+        </div>
+
+        <a href="#">
+        <div class="plus">
+            <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+            <p class="txt-plus"> Ajouter produits</p>
+        </div>
+        </a>
+
+        <div class="form-img-title-container container my-container">
+        <div class="row my-row">
+            <div class="col-2 my-col">
+                <img class="frm-category-image" src="{{ asset('images/dashboard/budget/produit-sucré.png') }}" />
+            </div>
+            <div class="col-10 my-col cat-frm-title-container">
+                <p class="green-text cat-frm-title">Produits sucrés</p>
+            </div>
+        </div>
+        </div>
+
+        <a href="#">
+        <div class="plus">
+            <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+            <p class="txt-plus"> Ajouter produits</p>
+        </div>
+        </a>
+
+        <div class="form-img-title-container container my-container">
+        <div class="row my-row">
+            <div class="col-2 my-col">
+                <img class="frm-category-image" src="{{ asset('images/dashboard/budget/vpo.png') }}" />
+            </div>
+            <div class="col-10 my-col cat-frm-title-container">
+                <p class="green-text cat-frm-title">VPO</p>
+            </div>
+        </div>
+        </div>
+
+        <a href="#">
+        <div class="plus">
+            <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+            <p class="txt-plus"> Ajouter produits</p>
+        </div>
+        </a>
+    </div>
+
+    <div class="taking-care-of-yourself-theme">
+        <div class="categories container my-container">
+        <div class="row my-row">
+            <div class="subcategory-col col-4 my-col">
+                <div class="col-12 my-col subcategory-container">
+                    <div class="container my-container subcategory">
+                        <div class="row my-row subcategory-img-container">
+                            <img class="subcategory-img" src="{{ asset('images/dashboard/budget/dent1.png') }}" />
+                        </div>
+                        <div class="row my-row">
+                            <p class="orange-text centered-text subcategory-text">
+                                <b>Santé bucco-dentaire</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subcategory-col col-4 my-col">
+                <div class="col-12 my-col subcategory-container">
+                    <div class="container my-container subcategory">
+                        <div class="row my-row subcategory-img-container">
+                            <img class="subcategory-img" src="{{ asset('images/dashboard/budget/ongle1.png') }}" />
+                        </div>
+                        <div class="row my-row">
+                            <p class="orange-text centered-text subcategory-text">
+                                <b>Soins des ongles</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subcategory-col col-4 my-col">
+                <div class="subcategory-container col-12 my-col">
+                    <div class="container my-container subcategory">
+                        <div class="row my-row subcategory-img-container">
+                            <img class="subcategory-img" src="{{ asset('images/dashboard/budget/capillaire1.png') }}" />
+                        </div>
+                        <div class="row my-row">
+                            <p class="orange-text centered-text subcategory-text">
+                                <b>Soins capillaires</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-row">
+            <div class="subcategory-col col-4 my-col">
+                <div class="col-12 my-col subcategory-container">
+                    <div class="container my-container subcategory">
+                        <div class="row my-row subcategory-img-container">
+                            <img class="subcategory-img" src="{{ asset('images/dashboard/budget/autre1.png') }}" />
+                        </div>
+                        <div class="row my-row">
+                            <p class="orange-text centered-text subcategory-text">
+                                <b>Autres produits</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subcategory-col col-4 my-col">
+                <div class="col-12 my-col subcategory-container">
+                    <div class="container my-container subcategory">
+                        <div class="row my-row subcategory-img-container">
+                            <img class="subcategory-img" src="{{ asset('images/dashboard/budget/maquillage1.png') }}" />
+                        </div>
+                        <div class="row my-row">
+                            <p class="orange-text centered-text subcategory-text">
+                                <b>Maquillage</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subcategory-col col-4 my-col">
+                <div class="col-12 my-col subcategory-container">
+                    <div class="container my-container subcategory">
+                        <div class="row my-row subcategory-img-container">
+                            <img class="subcategory-img" src="{{ asset('images/dashboard/budget/parfum1.png') }}" />
+                        </div>
+                        <div class="row my-row">
+                            <p class="orange-text centered-text subcategory-text">
+                                <b>Parfums</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-row">
+            <div class="subcategory-col col-4 my-col"></div>
+            <div class="subcategory-col col-4 my-col">
+                <div class="col-12 my-col subcategory-container">
+                    <div class="container my-container subcategory">
+                        <div class="row my-row subcategory-img-container">
+                            <img class="subcategory-img" src="{{ asset('images/dashboard/budget/autre1.png') }}" />
+                        </div>
+                        <div class="row my-row">
+                            <p class="orange-text centered-text subcategory-text">
+                                <b>Produits de soins</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subcategory-col col-4 my-col"></div>
+        </div>
+        </div>
+
+        {% include 'site/budget/currency-label-with-buttons-line.html.twig' %}
+
+        <!--<div class="one-line-itms-images">
+            <div class="one-row-col my-itm">
+                <img class="one-row-image" src="{{ asset('images/dashboard/budget/dent1.png') }}" />
+            </div>
+            <div class="one-row-col my-itm">
+                <img class="one-row-image" src="{{ asset('images/dashboard/budget/ongle1.png') }}" />
+            </div>
+            <div class="one-row-col my-itm">
+                <img class="one-row-image" src="{{ asset('images/dashboard/budget/autre1.png') }}" />
+            </div>
+            <div class="one-row-col my-itm">
+                <img class="one-row-image" src="{{ asset('images/dashboard/budget/maquillage1.png') }}" />
+            </div>
+            <div class="one-row-col my-itm">
+                <img class="one-row-image" src="{{ asset('images/dashboard/budget/parfum1.png') }}" />
+            </div>
+            <div class="one-row-col my-itm">
+                <img class="one-row-image" src="{{ asset('images/dashboard/budget/capillaire1.png') }}" />
+            </div>
+        </div>-->
+        <div class="one-row-container container my-container">
+        <div class="row my-row">
+            <div class="one-row-col col-2 my-col">
+                <img class="one-row-image" src="{{ asset('images/dashboard/budget/dent1.png') }}" />
+            </div>
+            <div class="one-row-col col-2 my-col">
+                <img class="one-row-image" src="{{ asset('images/dashboard/budget/ongle1.png') }}" />
+            </div>
+            <div class="one-row-col col-2 my-col">
+                <img class="one-row-image" src="{{ asset('images/dashboard/budget/autre1.png') }}" />
+            </div>
+            <div class="one-row-col col-2 my-col">
+                <img class="one-row-image" src="{{ asset('images/dashboard/budget/maquillage1.png') }}" />
+            </div>
+            <div class="one-row-col col-2 my-col">
+                <img class="one-row-image" src="{{ asset('images/dashboard/budget/parfum1.png') }}" />
+            </div>
+            <div class="one-row-col col-2 my-col">
+                <img class="one-row-image" src="{{ asset('images/dashboard/budget/capillaire1.png') }}" />
+            </div>
+        </div>
+        </div>
+
+
+
+        <div class="form-img-title-container container my-container">
+        <div class="row my-row">
+            <div class="col-2 my-col">
+                <img class="frm-category-image" src="{{ asset('images/dashboard/budget/autre1.png') }}" />
+            </div>
+            <div class="col-10 my-col cat-frm-title-container">
+                <p class="orange-text cat-frm-title">Produits de soin</p>
+            </div>
+        </div>
+        </div>
+        <a href="#">
+        <div class="plus">
+            <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+            <p class="txt-plus"> Ajouter produits</p>
+        </div>
+        </a>
+
+        <div class="form-img-title-container container my-container">
+        <div class="row my-row">
+            <div class="col-2 my-col">
+                <img class="frm-category-image" src="{{ asset('images/dashboard/budget/capillaire1.png') }}" />
+            </div>
+            <div class="col-10 my-col cat-frm-title-container">
+                <p class="orange-text cat-frm-title">Soins capillaires</p>
+            </div>
+        </div>
+        </div>
+        <a href="#">
+        <div class="plus">
+            <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+            <p class="txt-plus"> Ajouter produits</p>
+        </div>
+        </a>
+
+        <div class="form-img-title-container container my-container">
+        <div class="row my-row">
+            <div class="col-2 my-col">
+                <img class="frm-category-image" src="{{ asset('images/dashboard/budget/ongle1.png') }}" />
+            </div>
+            <div class="col-10 my-col cat-frm-title-container">
+                <p class="orange-text cat-frm-title">Soins des ongles</p>
+            </div>
+        </div>
+        </div>
+        <a href="#">
+        <div class="plus">
+            <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+            <p class="txt-plus"> Ajouter produits</p>
+        </div>
+        </a>
+
+        <div class="form-img-title-container container my-container">
+        <div class="row my-row">
+            <div class="col-2 my-col">
+                <img class="frm-category-image" src="{{ asset('images/dashboard/budget/dent1.png') }}" />
+            </div>
+            <div class="col-10 my-col cat-frm-title-container">
+                <p class="orange-text cat-frm-title">Santé bucco dentaire</p>
+            </div>
+        </div>
+        </div>
+        <a href="#">
+        <div class="plus">
+            <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+            <p class="txt-plus"> Ajouter produits</p>
+        </div>
+        </a>
+
+        <div class="form-img-title-container container my-container">
+        <div class="row my-row">
+            <div class="col-2 my-col">
+                <img class="frm-category-image" src="{{ asset('images/dashboard/budget/maquillage1.png') }}" />
+            </div>
+            <div class="col-10 my-col cat-frm-title-container">
+                <p class="orange-text cat-frm-title">Maquillage</p>
+            </div>
+        </div>
+        </div>
+        <a href="#">
+        <div class="plus">
+            <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+            <p class="txt-plus"> Ajouter produits</p>
+        </div>
+        </a>
+
+        <div class="form-img-title-container container my-container">
+        <div class="row my-row">
+            <div class="col-2 my-col">
+                <img class="frm-category-image" src="{{ asset('images/dashboard/budget/parfum1.png') }}" />
+            </div>
+            <div class="col-10 my-col cat-frm-title-container">
+                <p class="orange-text cat-frm-title">Parfum</p>
+            </div>
+        </div>
+        </div>
+        <a href="#">
+        <div class="plus">
+            <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+            <p class="txt-plus"> Ajouter produits</p>
+        </div>
+        </a>
+
+        <div class="form-img-title-container container my-container">
+        <div class="row my-row">
+            <div class="col-2 my-col">
+                <img class="frm-category-image" src="{{ asset('images/dashboard/budget/autre1.png') }}" />
+            </div>
+            <div class="col-10 my-col cat-frm-title-container">
+                <p class="orange-text cat-frm-title">Autres produits</p>
+            </div>
+        </div>
+        </div>
+        <a href="#">
+        <div class="plus">
+            <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+            <p class="txt-plus"> Ajouter produits</p>
+        </div>
+        </a>
+    </div>
+    
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src = "{{ asset('js/budget/spendings.js') }}"></script>
+{% endblock %}

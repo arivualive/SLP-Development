@@ -1,0 +1,78 @@
+/* ------------------------------------------------
+FOOTER
+------------------------------------------------  */
+
+/*
+footer{
+    background-image: url('../images/pelle_terre_footer.jpg');
+    width: 100%;
+    color: white;
+}
+*/
+nav ul, nav a{
+    color: #fff;
+    list-style: none;
+
+}
+
+.header_footer{
+    font-weight: bold;
+}
+
+.navbar-nav{
+    flex-direction: initial;
+}
+
+.navbar{
+    height: 370px;
+}
+
+.nav-item a{
+    font-size: 24px;
+}
+
+
+@media (min-width: 992px) and (max-width: 5000px) {
+    /* nav */
+    .spacer_nav {
+        margin-right: 40px;
+    }
+
+    .navbar-expand-sm {
+        flex-flow: column;
+    }
+
+    .spacer_title_nav {
+        margin-top: 35px !important;
+    }
+}
+
+
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .nav-item a {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .nav-item a{
+        font-size: 12pt;
+    }
+
+}
+
+@media (min-width: 331px) and (max-width: 479px) {
+    /* Nav */
+    .nav-item a{
+        font-size: 10pt;
+    }
+}
+@media (min-width: 10px) and (max-width: 330px) {
+
+    /* Nav */
+    .nav-item a{
+        font-size: 10pt;
+    }
+}
+

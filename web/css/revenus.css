@@ -1,0 +1,555 @@
+.header {
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+
+.header img {
+    width: 100%;
+}
+
+.dollar-img-container {
+    position: absolute;
+    width:6%;
+    height:auto;
+    top:4%;
+    right:4%;
+}
+
+.header h1 {
+    position:absolute;
+    color:white;
+    font-weight: bold;
+    margin-top:25%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align:center;
+    z-index: 1;
+    font-size: 320%;
+}
+
+.burger button {
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 1);
+    color: #539ac4;
+    border: solid 2px white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.above-image {
+    z-index: 1;
+}
+
+.image-container {
+    width: fit-content;
+    position: relative;
+}
+
+.blue-film {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(83,156,196,0.5);
+}
+
+.white-film {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+}
+
+.space-between-titles-and-displayed-revenues {
+    height: 70px;
+}
+
+.space-between-titles-displayed-periods {
+    height: 70px;
+}
+
+.space-between-revenue-display-period-rows {
+    height: 20px;
+}
+
+.invisible {
+    display: none;
+}
+
+.below-film {
+    z-index: -1;
+}
+
+body * {
+    font-family: 'Nunito', sans-serif;
+}
+
+.image-header {
+    opacity: 0.4;
+}
+
+.intro {
+    color: #539ac4;
+    font-weight: 510;
+}
+
+.revenue_intro {
+    color: #539ac4;
+    /* font-weight: 510; */
+    margin-top: 26px;
+    margin-bottom: 60px;
+    width: 90%;
+    margin-left: 6%;
+    margin-right: 10px;
+}
+
+.enter-spendings-title {
+    color: #539ac4;
+    text-align: center;
+    font-weight: 510;
+    font-size: 150%;
+}
+
+.enter-revenues-section {
+    margin-top: 150%;
+    margin-bottom: 7%;
+    width: 60%;
+}
+
+/* ******** BOUTONS DU HAUT ********* */
+
+#modify {
+    text-align: center;
+}
+
+.view-modify-revenues-btn {
+    color: white;
+    background-color: #539ac4;
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center !important;
+    margin: 0 auto;
+    height: 52px;
+    width : 25%;
+    padding-top:10px;
+    margin-top: 2%;
+}
+
+.display-revenues-history {
+    width: 60%;
+    font-size: 160% !important;
+    color: #539ac4 !important;
+    font-weight: bold !important;
+}
+
+.blue-background a {
+    color: white;
+}
+
+.blue-background a:hover {
+    text-decoration: none;
+}
+
+.white-background a {
+    color: #539ac4;
+}
+
+.white-background a:hover {
+    text-decoration: none;
+}
+
+.display {
+    display : block;
+}
+
+/* ne pas afficher la version mobile pour le moment */
+.mobile {
+    display: none;
+}
+
+/* classes des boutons du haut pour le JS */ 
+.blue-background {
+    color: white;
+    background-color: #539ac4;
+}
+
+.white-background {
+    color: #539ac4;
+    border: 1px solid #539ac4;
+    background-color: white;
+}
+
+.burger {
+    position: absolute;
+    top: 3%;
+    right: 2%;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.choix {
+    position: relative;
+    width:100%;
+}
+
+.choix h2 {
+    width: fit-content;
+    margin: 10% auto 0px auto;
+    color: #539ac4;
+    font-weight: bold;
+    font-size: 260%;
+}
+
+.choix p {
+    color: #539ac4;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+input {
+    width: 99%;
+    height: 50px;
+    border: 1px solid #539ac4;
+    color: #539ac4;
+    font-size: 80%;
+    margin-bottom: 20px;
+}
+
+::placeholder { /* Chrome, Firefox,    Opera, Safari 10.1+ */
+    color: #539ac4;
+    opacity: 1; /* Firefox */
+    text-align: center;
+    font-size: 120%;  
+}
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #539ac4;
+    text-align: center;
+}
+  
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #539ac4;
+    text-align: center;
+}
+
+input:focus {
+    outline:none;
+    box-shadow: 0 0 3px #719ECE;
+}
+
+.my-container {
+    /*width: 60%;*/
+    margin-top: 10%;
+}
+
+.my-row {
+    /*border: 2px dotted blueviolet;*/
+    padding:0 0 0 0;
+    height: 100%;
+}
+
+.my-col {
+    /*border: 2px dotted purple;*/
+    padding:0 0 0 0;
+    height: 90%;
+}
+
+.earnings-field {
+    height: 3em;
+    width: 70%;
+    float: right;
+}
+
+.earnings-field-labels {
+    font-size: 160% !important;
+    color: #539ac4 !important;
+    font-weight: bold !important;
+}
+
+/* ******** BOUTONS SECONDAIRES ********* */
+
+.annual-mini-box {
+    float: right;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 46px;
+}
+
+.annual-mini-box a{
+    height: 100%;
+}
+
+.annual-mini-box img{
+    height: 100%;
+}
+
+.monthly-mini-box {
+    float:left;
+    /* color: #539ac4;
+    border: 1px solid #539ac4; */
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 46px;
+}
+
+.monthly-mini-box a {
+    height: 100%;
+}
+
+.monthly-mini-box img {
+    height: 100%;
+}
+
+.revenues-grid-centered-text {
+    text-align: center;
+}
+
+/* ------------------------------------------------
+RESPONSIVE
+------------------------------------------------  */
+@media screen and (max-width:2000px) {
+    /*.header h1 {
+        margin-top:26%;
+        margin-left:32%;
+        font-size: 300%;
+    }*/
+
+    .choix h2 {
+        /*margin: 50px auto;*/
+        font-weight: bold;
+        font-size: xx-large;
+    }
+}
+
+@media screen and (max-width:1199px) {
+    .header h1 {
+        margin-top:25%;
+    }
+    .view-modify-revenues-btn {
+        width: 35%;
+        font-size: large; /* 2em */
+        padding-top:5px;
+    }
+
+    .display-revenues-history {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:991px) {
+
+    .space-between-main-and-other-revenues {
+        height: 5px;
+    }
+
+    .choix h2 {
+        font-weight: bold;
+        font-size: x-large;
+    }
+
+    .header h1 {
+        font-size: 260%;
+    }
+
+    /* .my-container .my-row .my-col p  */.earnings-field-labels {
+        font-size: 1.7em !important;
+    }
+
+
+    .view-modify-revenues-btn {
+        width: 35%;
+        font-size: large; /* 1.5em */
+        padding-top:10px;
+    }
+
+    .display-revenues-history {
+        font-size: 1.7em !important;
+        width: 80% !important;
+    }
+}
+
+@media screen and (max-width:767px) {
+
+    .header h1 {
+        font-size: 240%;
+        margin-top:25%;
+    }
+
+    .earnings-field-labels {
+        font-size: 2em !important;
+    }
+
+    .view-modify-revenues-btn {
+        width: 41%;
+        /* font-size: 1.25em; */
+        padding-top: 13px;
+    }
+
+    .display-revenues-history {
+        /* font-size: 1.25em; */
+        width: 100%;
+    }
+
+    .annual-mini-box, .monthly-mini-box {
+        height: 40px;
+    }
+
+    .space-between-titles-displayed-periods {
+        height: 30px !important;
+    }
+}
+
+@media screen and (max-width:738px) {
+    .earnings-field {
+        height: 2em;
+        width: 70%;
+        float: right;
+    }
+
+/*     .earnings-field-labels {
+        font-size: 1.7em !important;
+    } */
+
+    .view-modify-revenues-btn {
+        height: 42px;
+        width: 32%;
+        font-size: medium; /* 1em */
+        padding-top:10px;
+    }
+}
+@media screen and (max-width:510px) {
+
+    .earnings-field-labels {
+        font-size: 1.5em !important;
+    }
+
+    .view-modify-revenues-btn {
+        height: 30px;
+        width: 32%;
+        font-size: 0.8em;
+        padding-top:7px;
+    }
+
+    .display-revenues-history {
+        font-size: 1.5em !important;
+    }
+
+    .annual-mini-box, .monthly-mini-box {
+        height: 30px;
+    }
+
+    .space-between-titles-displayed-periods {
+        height: 10px !important;
+    }
+}
+
+
+@media screen and (max-width:480px) {
+
+/*     .ecran{
+        display: none;
+    }
+    
+    .mobile{
+        display: block;
+    } */
+
+    .earnings-field {
+        height: 1.7em;
+        width: 70%;
+        float: right;
+    }
+
+/*     .earnings-field-labels {
+        font-size: 1.5em !important;
+    } */
+
+    .header h1 {
+        position:absolute;
+        color:white;
+        font-weight: bold;
+        margin-top:25%;
+        font-size:6vw;
+        text-align:center;
+    }
+
+    .choix h2 {
+        font-size: 5.7vw;
+    }
+}
+
+@media screen and (max-width:420px) {
+
+    .earnings-field {
+        height: 1.2em;
+    }
+
+    .earnings-field-labels {
+        font-size: 1em !important;
+    }
+    
+    .space-between-main-and-other-revenues {
+        height: 0px;
+    }
+
+    .view-modify-revenues-btn {
+        height: 20px;
+        width: 32%;
+        font-size: 0.5em;
+        padding-top:5px;
+    }
+
+    ::placeholder { /* Chrome, Firefox,    Opera, Safari 10.1+ */
+        font-size: 80%;
+        padding-bottom:50px;
+    }
+      
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        font-size: 80%;
+    }
+      
+    ::-ms-input-placeholder { /* Microsoft Edge */
+        font-size: 80%;
+    }
+
+    .display-revenues-history {
+        font-size: 1em !important;
+    }
+
+    .annual-mini-box, .monthly-mini-box {
+        height: 30px;
+    }
+}
+
+@media screen and (max-width:280px) {
+
+/*     .earnings-field-labels {
+        font-size: 1em !important;
+    } */
+
+    .view-modify-revenues-btn {
+        height: 20px;
+        width: 40%;
+        font-size: 0.5em;
+        padding-top:5px;
+    }
+}
+
+@media screen and (max-width:230px) {
+
+/*     .earnings-field-labels {
+        font-size: 1em !important;
+    } */
+
+    .view-modify-revenues-btn {
+        height: 20px;
+        width: 50%;
+        font-size: 0.5em;
+        padding-top:5px;
+    }
+}

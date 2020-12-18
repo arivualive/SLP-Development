@@ -1,0 +1,566 @@
+/* ---------------------------------------------------------------------------
+Les paramètres suivants s'appliquent par défaut
+--------------------------------------------------------------------------- */
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 11.12pt;
+    color: #36667b;
+}
+
+
+/* HEADER */
+
+header {
+    max-width: 100%;
+}
+
+
+/* ABOUT */
+
+.about {
+    padding: 17px 15px 0;
+}
+
+.about .desc {
+    font-weight: 300;
+}
+
+.about .desc strong {
+    font-weight: bold;
+}
+
+/* Pour supprimer l'indentation des puces de Bootstrap: */
+.about ul {
+    padding-left: 19px;
+}
+
+.about span {
+    display: block;
+}
+
+
+/* BANDEAU JE REJOINS LA SLC */
+
+.SLC {
+    background-color: #36667b;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-around;
+}
+
+.SLC .row {
+    height: 45px;
+}
+
+.SLC img {
+    height: 24px;
+}
+
+.SLC #join {
+    display: inline-flex;
+    height:100%;
+    float: left;
+}
+
+.SLC h2 {
+    color:white;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 0;
+    font-size: 9.94pt;
+}
+
+.slc-logo {
+    width: 24px;
+    height: 24px;
+}
+
+.SLC .yesBtn {
+    margin-right: 15px;
+}
+
+.SLC .yes {
+    width: 35px;
+    height: 35px;
+}
+
+.SLC .no {
+    width: 35px;
+    height: 35px;
+}
+
+
+/* IF EVERY DROP IN THE OCEAN SAID... */
+
+.info {
+    background-color: #36667b;
+    width: 100%;
+    margin: 27px auto 0;
+    padding-top: 23px;
+    padding-left: 15px;
+    position: relative;
+    font-weight: 300;
+}
+
+.info .titre {
+    width: 100%;
+}
+
+.info .titre h1 {
+    margin: 0;
+    font-size: 16.19pt;
+    color: white;
+    font-weight: normal;
+}
+
+.info .titre h1 span {
+    display: block;
+}
+
+.info strong {
+    font-weight: bold;
+}
+
+/*Liste avec tirets*/
+.info .dashedList {
+    width: 100%;
+    color: white;
+    font-size: 12px;
+    margin-top: 40px;
+    position: relative
+}
+
+.info .dashedList p {
+    margin-bottom: 0;
+}
+
+.dashedList .dashed {
+    margin:0;
+    padding-left: 12px;
+    list-style-image: url('/images/community/dash5_white.png');
+}
+/*Fin liste avec tirets*/
+
+.info .content2 {
+    margin-top: 40px;
+    margin-bottom: 23px;
+    width: 100%;
+    font-size: 12px;
+}
+
+.info .contentright q {
+    color: white;
+    font-size: 12px;
+}
+
+.info .contentright p {
+    color: white;
+    font-size: 12px;
+    padding-top: 15px;
+}
+
+.diagramme {
+    width: 125%;
+    padding-right: 5%;
+}
+
+.ours {
+    width: 110%;
+    padding-right: 5%;
+}
+
+.videoGreta{
+    width: 230px;
+    height: 135px;
+}
+
+.content p {
+    color: white;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+.content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.content2 ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.content ul li::before {
+    content: "- ";
+}
+
+.content ul li {
+    color: white;
+    font-size: 12px;
+}
+
+.content2 ul li {
+    color: white;
+    font-size: 12px;
+}
+
+.content2 .desktop {
+    display: none;
+}
+
+.alignLeft {
+    color: white;
+}
+
+.alignLeft span {
+    display: block;
+}
+
+.alignLeft strong {
+    font-weight: bold;
+}
+
+
+/* ASSOCIATION */
+
+.association {
+    font-size: 11pt;
+    font-weight: 300;
+    position: relative;
+}
+
+.assoDesktop {
+    display: none;
+}
+
+.abeilles {
+    position: absolute;
+    width: 108%;
+    bottom: 46px;
+    left: 0;
+}
+
+.association .videoTeaserSlp iframe {
+    position: relative;
+    top: 275px;
+    left: -10px;
+    width: 154px;
+    height: 76px;
+}
+
+.association h2 {
+    font-weight: normal;
+    font-size: 16.19pt;
+    margin-top: 27px;
+    margin-bottom: 31px;
+}
+
+.association h3 {
+    font-weight: normal;
+    font-size: 11px;
+    margin-top: 272px;
+    margin-left: -10px;
+}
+
+.association strong {
+    font-weight: bold;
+}
+
+.firstParagraph {
+    margin-bottom: 22px;
+}
+
+.firstParagraph span {
+    display: block;
+}
+
+.secondParagraph {
+    text-align: right;
+}
+
+.secondParagraph :first-child {
+    margin-bottom: 56px;
+}
+
+.secondParagraph span {
+    display: block;
+}
+
+
+/* PASSEZ A L'ACTION! */
+
+.action {
+    width: 100%;
+    background-color: rgb(83, 83, 83);
+    color:white;
+    height:auto;
+}
+
+.actionDashboard .paddingBottom {
+    padding-bottom: 115px;
+}
+
+.action .actionDashboard iframe {
+    width: 100%;
+    height: 160%;
+}
+
+.action .link_non_violent_struggle {
+    color:white;
+}
+
+.action .actionTitle {
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+.action .actionForce {
+    margin-top: 3rem;
+}
+
+.actionForce .paddingBottom {
+    padding-bottom: 110px;
+}
+
+.action .actionForce iframe {
+    width: 100%;
+    height: 160%;
+}
+
+.action h2 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.action h3 {
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+.action p {
+    font-size: 1.5rem;
+}
+
+.action .transition {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+/********** LES AVANTAGES DE LA SLC **********/
+
+.avantages {
+    width: 100%;
+    margin-top: 31px;
+    position: relative;
+}
+
+.avantagesTitle {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.avantages img {
+    width: 87px;
+    height: 36px;
+}
+
+.avantages h2 {
+    margin-top: 10px;
+    line-height: 1.5em;
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.avantages h2 span {
+    display: block;
+}
+
+.avantagesText {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+/*Liste à puces de premier niveau*/
+.avantages .dashed {
+    margin: 0;
+    padding-left: 13px;
+    list-style-image: url('/images/community/dash5_blue.png');
+}
+
+.avantages .dashed li {
+    padding-bottom: 2rem;
+}
+
+.avantages a {
+    color: #36667b;
+}
+
+.avantagesText span {
+    text-decoration: underline;
+}
+
+/*Liste à puces de deuxième niveau*/
+.avantages .bulletPoints {
+    margin: 0;
+    padding-left: 2rem;
+    list-style-image: url('/images/community/bullet8.png');
+}
+
+/*Liste à puces de troisième niveau*/
+.avantages .bulletPoints .dashed li {
+    padding-bottom: 0;
+}
+
+.avantages .lastParagraph {
+    max-width: 59%;
+}
+
+.abeilles-avantages-slc {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width:100%;
+}
+
+.abeilles-avantages-slc img {
+    width:100%;
+    height:100%;
+    margin-bottom: 17px;
+}
+
+
+/* BOUTON SLC FORUM */
+
+.slcForum {
+    margin: 18px auto;
+}
+
+.linkforum {
+    width: 30%;
+    height: auto;
+    z-index: 300;
+    margin: 10% auto;
+}
+
+.linkforum .bouton {
+    width: 116%;
+    height: auto;
+}
+
+
+/* BANNIERES */
+
+.ambassadeur {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-top:40px;
+    margin-bottom: 15px;
+    padding-left: 0;
+    position:relative;
+}
+
+.linkAmbassadeur {
+    width: 9.1%;
+    height: 13%;
+    position: absolute;
+    bottom:15.8%;
+    left: 46.6%;
+    z-index: 1;
+}
+
+.linkAmbassadeur a {
+    display: block;
+    width: 137%;
+    height: 86%;
+    margin-top: 2%;
+    margin-left: -30%;
+}
+
+.ambassadeur img {
+    display: block;
+    width: 100%;
+    height:100%;
+}
+
+.ambassadeur a button {
+    margin-top: 250px;
+    position: absolute;
+    margin-left: 530px;
+    padding: 8px 10px;
+    border: solid 2px transparent;
+    border-radius: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color:transparent;
+    background-color: transparent;
+}
+
+.humans {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 15px;
+    padding-left: 0;
+    position: relative;
+}
+
+.linkHoG {
+    width: 21.5%;
+    height: 14.6%;
+    position: absolute;
+    bottom:5.8%;
+    left: 39.3%;
+    z-index: 1;
+}
+
+.linkHoG a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.humans img {
+    display: block;
+    width: 100%;
+    height:100%;
+}
+
+/* FOOTER */
+
+footer {
+    background-image: url('/imagespelle_terre_footer.jpg');
+    width: 100%;
+    color: white;
+}
+
+/* ---------------------------------------------------------------------------
+Les paramètres suivants s'appliquent à partir de 576px
+--------------------------------------------------------------------------- */
+
+@media screen and (min-width: 576px) {
+
+    /* AVANTAGES */
+
+    .avantages h2 span {
+        display: inline;
+    }
+
+}
+
+
+/* ---------------------------------------------------------------------------
+Les paramètres suivants s'appliquent à partir de 768px
+--------------------------------------------------------------------------- */
+
+@media screen and (min-width: 768px) {
+    /*ABOUT*/
+
+    .about span {
+        display: inline;
+    }
+
+}
+

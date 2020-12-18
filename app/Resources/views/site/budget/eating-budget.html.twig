@@ -1,0 +1,350 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/eating-budget.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/profilgaea.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/jquery/blue-form-widgets/blue-slp-theme.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/Dashboard/vertical-menus/eating-budget-vertical-menu.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/checkboxes/slp-blue-checkbox.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+{% endblock %}
+
+{% block body %}
+
+    <div class="header">
+{#        <div class="dropdown burger above-image">#}
+{#        </div>#}
+        <h1>PROGRAMME DASHBOARD /<br>BUDGET MANGER</h1>
+        <div class="image-container">
+            <div class="blue-film"></div>
+            <img class="below-film"
+                 src="{{ asset('images/budget/manger/budget-manger-header.png') }}"
+            >
+{#            <a href="#">#}
+                <div class="dollar-img-container">
+
+                    {#  --Ici nous avons ajouté le menu burger en utilisant la classe
+                    dollar-img-container afin de de fixer notre menu a droite sur l'image--
+                    #}
+                    {% include '/site/budget/_menu-burger.html.twig' %}
+                    {# -- Fin du menu burger-- #}
+
+{#                  <img class="dollar-img" src="{{ asset('images/budget/individumenage/dollars.png') }}" />#}
+                </div>
+{#            </a>#}
+        </div>
+    </div>
+
+    <div class="introduction" class="intro-text">
+        <p>
+            Le <b>programme budget manger</b> vous permet d'<b>analyser</b> la <b>composition</b> des vos produits
+            alimentaires que vous achetez en magasin et de répondre à toute une série de questions
+            que vous devriez vous posez :<br>
+            Contiennent ils des pesticides ? des antibiotiques? quel est le danger présenté par les
+            produits chimiques qu’ils contiennent? s’agit-il d’OGM (Organisme Génétiquement Modifiés ? Quel est leur impact sur votre santé ?
+        </p>
+        <p>
+            <br>Vous serez également en mesure de savoir <b>d’où viennent vos produits</b> et les <b>conséquences</b> qu’ils peuvent représenter.
+        </p>
+        <p>
+            <br>Nous pourrons vous proposer des <b>alternatives</b> de choix et vous permettre de faire des
+            <b>achats</b> plus <b>conscients</b> et <b>écologiques</b>. Il est temps de <b>passer à l’action</b>.<br><br>
+            Commencez le programme.
+        </p>
+        <p>
+            <br><b>Rentrez vos produits!</b>
+        </p>
+    </div>
+    
+    <div class="green-plate-icon-container">
+        <img class="green-plate-icon" src="{{ asset('images/dashboard/manger - empreinte - vert foncé.png') }}"/>
+    </div>
+
+    <!-- ********************************* MENU **************************************** -->
+
+    {% include 'site/vertical-menu/eating-budget-vertical-menu.html.twig' %}
+
+    <!-- *********************** TITRE AVANT LES CASES À COCHER *********************** -->
+
+    <div class="row green-title-container">
+        <div class="section-title green-text titles-and-paragraph checkbox-line" id="detail">
+            <b>Eau</b>
+        </div>
+        {# SI JAMAIS ON AJOUTE DES SOUS-SOUS-CATÉGORIES PLUS TARD :
+        <img class="still-water-with-text" src="{{ asset('images/dashboard/budget/eau-plate-avec-texte.png') }}" />
+        <img class="sparkling-water-with-text" src="{{ asset('images/dashboard/budget/eau-gazeuse-avec-texte.png') }}" /> #}
+    </div>
+
+
+    <!-- **************************** LISTE DES PRODUITS PAR CATÉGORIE **************************** -->
+    
+        {% for key,category in productsByCatAndUser %}
+        
+        <div id="{{ key }}" class="product-list invisible">
+                {% if category is defined and category is not empty %}
+                <div class="product-line">
+                    <div class="product-brand-text">Sélectionnez un article dans votre liste de produits : </div>
+                    <FORM class="autocomplete placeholder-text">
+                        <SELECT name="product" class="product">
+                            <OPTION value="no value">--- sélectionnez un produit</OPTION>
+                        {% for product in category %}
+                            <OPTION value="{{ product.id }}">{{ product.name }}</OPTION>
+                        {% endfor %}
+                        </SELECT>
+                    </FORM>
+                </div>
+                {% else %}
+                    <div class="product-line">
+                        <div class="product-brand-text">Vous n'avez encore enregistré aucun produit dans cette catégorie</div>
+                        <div class="back-to-dashboard-button ajouter">
+                            <a href="{{ path('budget_dashboard_program_enter_spendings') }}">Ajouter une dépense</a>
+                        </div>
+                    </div>
+                {% endif %}
+        </div>
+        {% endfor %}
+    
+     <!-- **************************** LISTE DES PRODUITS PAR SOUS-CATÉGORIES **************************** -->
+
+        {% for key,subcategory in productsBySubcatAndUser %}
+        
+        <div id="{{ key }}" class="product-list invisible">
+                {% if subcategory is defined and subcategory is not empty %}
+                <div class="product-line">
+                    <div class="product-brand-text">Sélectionnez un article dans votre liste de produits : </div>
+                    <FORM class="autocomplete placeholder-text">
+                        <SELECT name="product" class="product">
+                            <OPTION value="no value">--- sélectionnez un produit</OPTION>
+                        {% for product in subcategory %}
+                            <OPTION value="{{ product.id }}">{{ product.name }}</OPTION>
+                        {% endfor %}
+                        </SELECT>
+                    </FORM>
+                </div>
+                {% else %}
+                    <div class="product-line">
+                        <div class="product-brand-text">Vous n'avez encore enregistré aucun produit dans cette catégorie</div>
+                        <div class="back-to-dashboard-button ajouter">
+                            <a href="{{ path('budget_dashboard_program_enter_spendings') }}">Ajouter une dépense</a>
+                        </div>
+                    </div>
+                {% endif %}
+        </div>
+
+        {% endfor %}
+
+    <!-- **************************** TITRES DES SECTIONS - VERSION MOBILE UNIQUEMENT **************************** -->
+
+    <div id="mobile" class="row green-title-container">
+        <div class="section-title green-text titles-and-paragraph checkbox-line" id="detail">
+                <b>Lieu d'achat</b>
+        </div>
+        <div class="section-title green-text titles-and-paragraph checkbox-line" id="bulk">
+                <b>Achat en vrac</b>
+        </div>
+        <div class="section-title green-text titles-and-paragraph checkbox-line" id="packings">
+                <b>Emballages</b>
+        </div>
+        <div class="section-title green-text titles-and-paragraph checkbox-line" id="labels">
+                <b>Labels qualité</b>
+        </div>
+        <div class="section-title green-text titles-and-paragraph checkbox-line" id="origins">
+                <b>Connaissance de l'origine</b>
+        </div>
+        <div class="section-title green-text titles-and-paragraph checkbox-line" id="compos">
+                <b>Connaissance composition</b>
+        </div>
+        <div class="section-title green-text titles-and-paragraph checkbox-line" id="additives">
+                <b>Contenant additifs alimentaires</b>
+        </div>
+        <div class="section-title green-text titles-and-paragraph checkbox-line" id="palmoils">
+                <b>Contenant huile de palme</b>
+        </div>
+        <div class="section-title green-text titles-and-paragraph checkbox-line" id="sugars">
+                <b>Contenant sucres cachés</b>
+        </div>
+    </div>
+
+    <!-- ********************************* BOUTONS RADIO ET CHECKBOXES ********************************* -->
+    <!-- *********************** AJAX : COCHÉES PAR DÉFAUT SELON PRODUIT CLIQUÉ ************************ -->
+    
+    <div class="section" id="detail-section">
+        <div class="row green-title-container">
+            <p class="green-text titles-and-paragraph">
+                <b>Lieu d'achat :</b>
+            </p>
+        </div>
+        <div class="row checkbox-line">
+            {% for detail in details %}
+            <label class="slp-blue-checkbox-container{# col-12 col-sm-6 col-md-3 #}">{{ detail.name }}
+                <input type="radio" name ="detail" value="{{ detail.id }}" id="detail{{ detail.id }}" />
+                <span class="radiobutton"></span>
+            </label>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="section" id="bulk-section">
+        <div class="row green-title-container">
+                <p class="green-text titles-and-paragraph">
+                    <b>Achat en vrac :</b>
+                </p>
+        </div>
+        <div class="checkbox-line">
+            {% for bulkOption in bulkOptions %}
+            <label class="slp-blue-checkbox-container">{{ bulkOption.name }}
+                <input type="radio" name="bulk" value="{{ bulkOption.id }}" id="bulk{{ bulkOption.id }}"/>
+                <span class="radiobutton"></span>
+            </label>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="section" id="packings-section">
+        <div class="row green-title-container">
+            <p class="green-text titles-and-paragraph">
+                <b>Emballages :</b>
+            </p>
+        </div>
+        <div class="checkbox-line">
+            {% for packingOption in packingOptions %}
+            <label class="slp-blue-checkbox-container">{{ packingOption.type }}
+                <input type="checkbox" name="packing" value="{{ packingOption.id }}" id="packings{{ packingOption.id }}"/>
+                <span class="checkmark"></span>
+            </label>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="section" id="labels-section">
+        <div class="row green-title-container">
+                <p class="green-text titles-and-paragraph">
+                    <b>Labels qualité :</b>
+                </p>
+        </div>
+        <div class="checkbox-line">
+            {% for qualityLabel in qualityLabels %}
+            <label class="slp-blue-checkbox-container">{{ qualityLabel.name }}
+                <input type="checkbox" name="quality_label" value="{{ qualityLabel.id }}" id="qualityLabels{{ qualityLabel.id }}"/>
+                <span class="checkmark"></span>
+            </label>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="section" id="origins-section">
+        <div class="row green-title-container">
+                <p class="green-text titles-and-paragraph">
+                    <b>Connaissance de l'origine :</b>
+                </p>
+        </div>
+        <div class="checkbox-line">
+            {% for originOption in originOptions %}
+            <label class="slp-blue-checkbox-container">{{ originOption.name }}
+                <input type="checkbox" name="origin" value="{{ originOption.id }}" id="origins{{ originOption.id }}"/>
+                <span class="checkmark"></span>
+            </label>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="section" id="compos-section">
+        <div class="row green-title-container">
+                <p class="green-text titles-and-paragraph">
+                    <b>Connaissance composition :</b>
+                </p>
+        </div>
+        <div class="checkbox-line">
+            {% for compositionOption in compositionOptions %}
+            <label class="slp-blue-checkbox-container">{{ compositionOption.name }}
+                <input type="checkbox" name="composition" value="{{ compositionOption.id }}" id="compositions{{ compositionOption.id }}"/>
+                <span class="checkmark"></span>
+            </label>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="section" id="additives-section">
+        <div class="row green-title-container">
+                <p class="green-text titles-and-paragraph">
+                    <b>Contenant additifs alimentaires :</b>
+                </p>
+        </div>
+        <div class="checkbox-line">
+            {% for additive in additives %}
+            <label class="slp-blue-checkbox-container">{{ additive.code }}
+                <input type="checkbox" name="additive" value="{{ additive.id }}" id="additives{{ additive.id }}"/>
+                <span class="checkmark"></span>
+            </label>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="section" id="palmoils-section">
+        <div class="row green-title-container">
+                <p class="green-text titles-and-paragraph">
+                    <b>Contenant huile de palme :</b>
+                </p>
+        </div>
+        <div class="checkbox-line">
+            {% for palmOil in palmOils %}
+            <label class="slp-blue-checkbox-container">{{ palmOil.name }}
+                <input type="checkbox" name="palm_oil" value="{{ palmOil.id }}" id="palmOils{{ palmOil.id }}"/>
+                <span class="checkmark"></span>
+            </label>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="section" id="sugars-section">
+        <div class="row green-title-container">
+            <p class="green-text titles-and-paragraph">
+                <b>Contenant sucres cachés :</b>
+            </p>
+        </div>
+        <div class="checkbox-line">
+            {% for hiddenSugar in hiddenSugars %}
+            <label class="slp-blue-checkbox-container">{{ hiddenSugar.name }}
+                <input type="checkbox" name="hidden_sugar" value="{{ hiddenSugar.id }}" id="hiddenSugars{{ hiddenSugar.id }}"/>
+                <span class="checkmark"></span>
+            </label>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- **************************** BOUTONS BAS DE PAGE **************************** -->
+
+    <div class="row form-validation-button-container">
+        <div id="form-validation-button">
+                Valider
+        </div>
+    </div>
+    <div class="row form-validation-button-container" id="mobile-buttons">
+        <div class="back-to-dashboard-button">
+            <a href="{{ path('revenus_index') }}">Retour page budget</a>
+        </div>
+        <div class="back-to-dashboard-button mobile-eating">
+            <a href="{{ path('programmebudgetDashboard') }}">Retour au dashboard</a>
+        </div>
+    </div>
+    <div class="space-before-footer"></div>
+
+
+    <!-- ********************************** FOOTER *********************************** -->
+
+
+    {{ include('footer.html.twig') }}
+
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src="js/budget/eating-budget.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+    </script>
+    <script src="{{ asset('js/app.js')}}"></script>
+{% endblock %}
+

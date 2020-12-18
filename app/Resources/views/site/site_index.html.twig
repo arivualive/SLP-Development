@@ -1,0 +1,1149 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+
+    <link rel="stylesheet" href="{{ asset('css/front.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/landing-page.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="row">
+        <div id="carousel-slp" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-site">
+                        <img class="d-block w-100" src="{{ asset('images/slider/slide_3.jpg') }}" alt="Dashboard">
+                        <div class="carousel-caption d-none d-block intro col-6 top-adjust">
+                            <h1>dashboard universel</h1>
+                            <p>Cette plateforme vous propose une page web qui vous est spécialement dédiée. Le but est
+                                d’organiser vos activités et vos
+                                besoins dont les informations seront centralisées. Cela vous met évidemment en rapport avec
+                                le développement durable et vous êtes libre de personnaliser la page à votre guise.</p>
+                            <a href="{{ path('fos_user_registration_register') }}"><button>S'enregistrer et Créer son
+                                    dashboard</button></a>
+                        </div>
+                    </div>
+                    <div class="carousel-mobile" style="">
+                        <img class="d-block w-100" src="{{ asset('images/slider/slide_3.jpg') }}" alt="Dashboard">
+                        <div class="carousel-caption d-none d-block intro col-7 top-adjust" style="top: 8%;">
+                            <h1 style="font-size: 3.5vw; margin-top: 13px;">dashboard universel</h1>
+                            <p style="font-size: 2.5vw; margin-bottom: 9px;">Cette plateforme vous propose une page web qui vous est spécialement dédiée. Le but est
+                                d’organiser vos activités et vos
+                                besoins dont les informations seront centralisées. Cela vous met évidemment en rapport avec
+                                le développement durable et vous êtes libre de personnaliser la page à votre guise.</p>
+                            <div class="row">
+                            <div class="col-2" style="margin: 0; padding: 0;"> </div>
+                            <a class="col-8" style="margin: 0; padding: 0;" href="{{ path('fos_user_registration_register') }}">
+                                <button style="font-size: 2.3vw; width: 150px; border: solid 1px white; border-radius: 0px;">S'enregistrer et <br>Créer son dashboard</button>
+                            </a>
+                            <div class="col-2" style="margin: 0; padding: 0;"> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-site">
+                        <img class="d-block w-100" src="{{ asset('images/slider/slide_1.jpg') }}" alt="Second slide">
+                        <div class="carousel-caption d-none d-block intro col-6">
+                            <img src="{{ asset('images/logoslp.png') }}" alt="logo SLP">
+                            <h1>"Transformez votre experience de vie"</h1>
+                        </div>
+                    </div>
+                    <div class="carousel-mobile">
+                        <div style="">
+                            <img class="d-block w-100" src="{{ asset('images/slider/slide_1.jpg') }}" alt="Second slide" style="height: 100%; width: 100%;">
+                        </div>
+                        <div class="carousel-caption d-none d-block intro col-6">
+                            <img src="{{ asset('images/logoslp.png') }}" alt="logo SLP">
+                            <h1>"Changez votre experience de vie"</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-site">
+                        <img class="d-block w-100" src="{{ asset('images/questionnaire_01.png') }}"
+                            alt="Questionnaire consom'acteur">
+                        <div class="carousel-caption d-none d-block intro col-4">
+                            <h1>Quel consom'acteur êtes-vous ?</h1>
+                            <p>Voulez-vous connaître le type de consom’acteur que vous êtes ? Ces questionnaires vont vous
+                                révéler votre degré d'implication vis-à-vis de l'environnement. Vous pourrez ainsi obtenir
+                                votre profil de consom'acteur et éventuellement rectifier ou améliorer vos gestes au
+                                quotidien avec nos conseils. Êtes-vous prêt ? C'est parti!</p>
+                            <a href="{{ path('fos_user_registration_register') }}"><button>Inscription et profil</button></a>
+                        </div>
+                    </div>
+                    <div class="carousel-mobile">
+                        <img class="d-block w-100" src="{{ asset('images/questionnaire_01.png') }}"
+                            alt="Questionnaire consom'acteur">
+                        <div class="carousel-caption d-none d-block intro col-5" style="margin-left: 15%; width: 600px; padding: 0; margin-bottom: 10px;">
+                            <h1 style="font-size: 3.5vw;">Quel consom'acteur <br> êtes-vous ?</h1>
+                            <p style="font-size: 2.5vw; padding-bottom: 0; margin-bottom: 10px;">
+                                Ces questionnaires vont vous
+                                révéler votre degré d'implication 
+                                vis-à-vis de l'environnement. <br>
+                                Vous pourrez ainsi obtenir votre 
+                                profil de consom'acteur et
+                                rectifier ou améliorer vos gestes 
+                                au quotidien avec nos conseils. <br>
+                                Êtes-vous prêt ?
+                                C'est parti!
+                            </p> 
+                            <a style="padding: 0; width: 90%;" href="{{ path('fos_user_registration_register') }}">
+                                <button style="font-size: 2.1vw; border-radius: 0px; border: 1px solid white;">Créez votre profil</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-site">
+                        <img class="d-block w-100 carouselLandingPage" src="{{ asset('images/landing-page/slider4.jpg') }}"
+                            alt="dernier article">
+                        <div class="carousel-caption d-none d-block intro col-6 top-adjust">
+                            <h1>LE LANDING PAGE SLP</h1>
+                            <p>La Landing page SLP est un portail web </br>depuis lequel vous accédez au Dashboard
+                                universel, un outil unique</br>
+                                et personnalisable destiné à vous accompagner dans votre volonté de changement de
+                                comportement.</br></br>
+
+                                Suivez votre évolution pour passer de consommateur à consom'acteur !
+                            </p>
+                            <a href="{{ path('actualite_type') }}"><button>LIRE L'ARTICLE</button></a>
+                        </div>
+                    </div>
+                    <div class="carousel-mobile">
+                        <img class="d-block w-100" src="{{ asset('images/landing-page/slider4.jpg') }}"
+                            alt="dernier article">
+                        <div class="carousel-caption d-none d-block intro col-6 top-adjust" style="top: 15%;">
+                            <h1 style="font-size: 3.5vw;">LE LANDING PAGE SLP</h1>
+                            <p style="font-size: 2.5vw; margin-bottom: 10px;">
+                                La Landing page SLP est un portail web 
+                                depuis lequel vous accédez au Dashboard
+                                universel, un outil unique
+                                et personnalisable destiné à vous accompagner dans votre volonté de changement de
+                                comportement.</br>
+
+                                Suivez votre évolution pour passer de consommateur à consom'acteur!
+                            </p>
+                            <a href="{{ path('actualite_type') }}"><button style="font-size: 2.3vw; border-radius: 0px; border: 1px solid white;">LIRE L'ARTICLE</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-site">
+                        <img class="d-block w-100" src="{{ asset('images/slider/slide_5.jpg') }}" alt="Third slide">
+                        <div class="carousel-caption d-none d-block intro col-6 top-adjust">
+                            <h1>Eco repas</h1>
+                            <p>
+                                Marre des sandwichs jambon-beurre lors de vos pique-niques? <br>
+                                Nous avons la solution ! <br>
+                                Faites-vous plaisir tout en mangeant bio !
+                            </p>
+                            <a href="#"><button>Commander un panier</button></a>
+                        </div>
+                    </div>
+                    <div class="carousel-mobile">
+                        <img class="d-block w-100" src="{{ asset('images/slider/slide_5.jpg') }}" alt="Third slide">
+                        <div class="carousel-caption d-none d-block intro col-6 top-adjust" style="top: 20%;">
+                            <h1 style="font-size: 3.5vw;">Panier repas</h1>
+                            <p style="font-size: 2.7vw; margin-bottom: 15px;">
+                                Marre des sandwichs jambon-beurre lors de vos pique-niques? <br>
+                                Nous avons la solution ! <br>
+                                Faites-vous plaisir tout en mangeant bio !
+                            </p>
+                            <a href="#" style="width: 100%;"><button style="font-size: 2.4vw; border-radius: 0px; border: 1px solid white;">Commander un panier</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carousel-slp" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-slp" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+
+            {% if is_granted('IS_AUTHENTICATED_FULLY') == null %}
+                <a class="inscription d-inline" href="{{ path('fos_user_registration_register') }}"><button>Inscription</button></a>
+                <a class="connexion d-inline" href="/login"><button>Connexion</button></a>
+            {% else %}
+                <a class="deconnexion d-inline" href="/logout"><button>Déconnexion</button></a>
+                <a class="quizz-yourself d-inline" href="{{ path('userslp_portail') }}"><button>Eco-profil</button></a>
+            {% endif %}
+        </div>
+</div>
+<div class="row">
+    <div class="about">
+        <div class="siteabout col-12" style="padding-left: 0px; padding-right: 0px;">
+            <h2>à Propos</h2>
+        </div>
+        <div style="display: flex;">
+            <div class="siteabout col-3" style="padding-left: 0px; padding-right: 30px;">
+                <p class="desc"><span style="font-weight: bold;">Le programme SLP </span> est un outil de transformation de votre quotidien. En effet, il vous
+                    propose des outils et des solutions concrètes vous permettant d'améliorer votre expérience de vie tout
+                    en préservant notre planète.</p>
+                <p class="desc sec-part">SLP est <span style="font-weight: bold;">une plateforme web interactive </span> innovante autour de la durabilité et du
+                    changement de comportement.</br>Elle est composée de 7 sites et d'un programme annuel d'<span style="font-weight: bold;">ateliers
+                    thématiques</span> qui apporteront des résultats mesurables et vous changeront la vie !</p> <br>
+            </div>
+            <div class="siteabout2 col-9" style="padding-left: 45px;">
+                <p>1. Quoi acheter et où le trouver ? </br>
+                    <strong>(répertoire vert)</strong></p>
+                <p>2. Quels choix de vie quotidiens et quelles alternatives ? </br>
+                    <strong>(plateforme Consom'action)</strong>
+                </p>
+                <p>3. Quels changements effectuer à mon niveau et comment me comparer aux autres ?</br>
+                    <strong>(programme éco-gestes & empreinte chromatique)</strong></p>
+                <p>4. Comment produire mes propres fruits et légumes chez moi ? </br>
+                    <strong>(Grow Your Own)</strong></p>
+                <p>5. Comment mettre en commun mes ressources et bénéficier du soutien de ma communauté et de mes voisins </br>
+                    <strong>(plateforme d'économie collaborative)</strong></p>
+                <p>6. Comment m'amuser, faire du sport, sortir et rencontrer du monde ? </br>
+                    <strong>(programme GES)</strong></p>
+                <p>7. Comment mettre en place un plan de changement et en mesurer immédiatement les bénéfices pour moi et mon entourage ? </br>
+                    <strong>(programme Green coaching pour individus/familles)</strong></p>
+                <p>8. Comment apprendre à transformer mes choix ? </br>
+                    <strong>(ateliers éco)</strong></p>
+            </div>
+        </div>
+        <!--<div class="aboutmobile1 col-12">
+            <h2 style="margin: 0; padding: 33px 0 27px 0; font-size:4vw;">à Propos</h2>
+            <div class="" style="margin: 0; padding: 0 25px 30px 25px; font-size: 3.7vw;">
+                <p class="" style="margin: 0; padding: 0 0 13px 0;"> 
+                    <span style="font-weight: bold;">Le programme SLP </span> est un outil de transformation de votre quotidien
+                    dans la mesure où il vous propose des outils et des solutions concrètes
+                    vous permettant d'améliorer votre expérience de vie tout en préservant notre planète.
+                </p>
+                <p class="" style="margin: 0; padding: 0;">
+                    Le SLP est <span style="font-weight: bold;">une plateforme web interactive</span> innovante autour de la durabilité
+                    et du changement de comportement. Elle est composée de 7 sites et d'un
+                    programme annuel d'<span style="font-weight: bold;">ateliers thématiques</span> qui apporteront des résultats
+                    mesurables et vous changeront la vie:
+                </p>
+            </div>
+        </div>
+        <div class="aboutmobile2">
+            <div class="row col-12" style="padding: 0 0 15px 0; margin: 0;">
+                <div class="aboutmobileimg col-4">
+                    <img class="" src="{#{ asset('images/landing-page/about/1-Repertoire-vert.jpg') }}" alt="Repertoire-vert">
+                </div>
+                <div class="aboutmobilep col-8">
+                    <p class="pmobile">1. Trouver et acheter des produits durables près de chez vous grâce au "<strong>Répertoire vert</strong>";</p>
+                </div>
+                <div class="aboutmobileimg col-4">
+                    <img class="" src="{{ asset('images/landing-page/about/2-Plate-forme.jpg') }}" alt="Plate-forme">
+                </div>
+                <div class="aboutmobilep col-8">
+                    <p class="pmobile">
+                        <span>2. Trouver des alternatives à vos choix de vie quotidiens grâce à la "<strong>Plateforme consom'action</strong>";</span>
+                        <span style="float: right;">
+                            <button class="plusiconbutton">
+                                <img class="plusicon" src="{{ asset('images/landing-page/bouton-plus.jpg') }}" alt="">
+                            </button>
+                        </span>
+                    </p>
+                </div>
+                <div class="aboutmobileimg col-4">
+                    <img class="" src="{{ asset('images/landing-page/about/3-Programme-eco-gestes.jpg') }}" alt="Programme-eco-gestes">
+                </div>
+                <div class="aboutmobilep col-8">
+                    <p class="pmobile">
+                        <span>3. Effectuer des changements d'habitude et les comparer avec d'autres grâce au programme "<strong>Eco-gestes</strong>" et à "<strong>l'empreinte chromatique</strong>";</span>
+                    </p>
+                </div>
+                <div class="aboutmobileimg col-4">
+                    <img class="" src="{{ asset('images/landing-page/about/4-Grow-your-own.jpg') }}" alt="Grow-your-own">
+                </div>
+                <div class="aboutmobilep col-8">
+                    <p class="pmobile">
+                        <span>4. Produire vous même vos propres fruits et légumes grâce au programme "<strong>Grow Your Own</strong>";</span>
+                    </p>
+                    <span class=""></span>
+                </div>
+                <div class="aboutmobileimg col-4">
+                    <img class="" src="{{ asset('images/landing-page/about/5-Plate-forme-economie.jpg') }}" alt="Plate-forme-economie">
+                </div>
+                <div class="aboutmobilep col-8">
+                    <p class="pmobile">
+                        <span>5. Mettre en commun vos ressources et bénéficier du soutien de la communauté grâce à la "<strong>plateforme d'économie collaborative / sharing economy</strong>";</span>
+                    </p>
+                </div>
+                <div class="aboutmobileimg col-4">
+                    <img class="" src="{{ asset('images/landing-page/about/6-Programme-GES.jpg') }}" alt="Programme-GES">
+                </div>
+                <div class="aboutmobilep col-8">
+                    <p class="pmobile">
+                        <span>6. S'amuser, faire du sport, sortir et rencontrer du monde grâce au "<strong>programme GES</strong>";</span>
+                    </p>
+                </div>
+                <div class="aboutmobileimg col-4">
+                    <img class="" src="{{ asset('images/landing-page/about/7-Programme-Green-Coaching.jpg') }}" alt="Programme-Green-Coaching">
+                </div>
+                <div class="aboutmobilep col-8">
+                    <p class="pmobile">
+                        <span>7. Mettre en place un plan de changement et en mesurer immédiatement les bénéfices pour soi et son entourage grâce au programme "<strong>Green coaching</strong>";</span>
+                    </p>
+                </div>
+                <div class="aboutmobileimg col-4">
+                    <img class="" src="{{ asset('images/landing-page/about/8-Atelierseco.jpg') }#}" alt="Ateliers-eco">
+                </div>
+                <div class="aboutmobilep col-8">
+                    <p class="pmobile">
+                        <span>8. Apprendre à transformer ses choix grâce aux "<strong>Ateliers éco</strong>".</span>
+                    </p>
+                </div>
+            </div>
+        </div>-->
+        <div class="slogant">
+            <p>En vous aidant vous-même, vous soutenez l'avenir.</p> <br>
+        </div>
+    </div>
+    <div class="about-mobile">
+        <div><a href="{{ path('userslp_portail') }}"><!--<button>ALLER AU QUESTIONNAIRE</button>--></a></div>
+        <img src="{{ asset('images/landing-page/bloc2apropos.png') }}" alt="about">  
+    </div>
+
+    <div class="row text-content" style="padding: 21.5px 0; margin: 0;">
+        <div class="col-md-3 col-sm-4 col-xs-4" style="padding-right: 0px; margin-right: 0px;">
+            <img src="{{ asset('images/questionnaire.png') }}" alt="questionnaire">
+        </div>
+        <div class="col-md-9 col-sm-8 col-xs-8" style="padding-left: 45px; padding-right: 50px; background-color: #539ac4;">
+            <h2 class="tch2site">L’univers SLP</h2>
+            <p>Entrez dans l’univers SLP en répondant au premier questionnaire et créez votre profil de consom’acteur.
+                <br>
+                Il validera votre inscription sur la plateforme SLP et vous donnera accès à votre dashboard, d’où vous
+                pourrez consulter et gérer vos actions sur SLP !<br>
+                Et ensuite faites évoluer votre compte et créez des profils différents ou complémentaires ! <br>
+                Invitez amis, famille, proches et définissez la dynamique de votre ménage, votre famille, votre groupe
+                d’amis ou votre mode solo.
+            </p>
+            <h2 class="tch2site">Quel consom'acteur êtes-vous?</h2>
+            <p>Dans un premier temps, vous allez répondre à des questions concernant votre situation socio-économique
+                actuelle. Dans un second temps, vous pourrez répondre à d’autres questionnaires thématiques et suivre
+                leurs avancements en image !<br>
+                <span style="padding: 50px 0; line-height: 4;">Êtes-vous prêt ? C’est parti !</span>
+            </p>
+            {#% if is_granted('IS_AUTHENTICATED_FULLY') == null %}
+                <a class href="{{ path('userslp_portail') }}"><button>Aller au questionnaire</button></a>
+            {% else %#}
+                <a class="tcbutton" href="{{ path('userslp_portail') }}"><button>Aller au questionnaire</button></a>
+            {#% endif %#}
+        </div>
+    </div>
+
+    <!--<div class="text-content-mobile" style="padding: 21.5px 0; margin: 0;">
+        <div class="col-md-4 col-sm-4 col-xs-4">
+            <img src="{#{ asset('images/questionnaire.png') }}" alt="questionnaire">
+        </div>
+        <div class="col-md-8 col-sm-8 col-xs-8">
+            <div class="tch2" style="margin-bottom: 5px;">L’UNIVERS SLP</div>
+            <p style="margin-bottom: 0px;">
+                <div class="questionnaire-interp-space">
+                Entrez dans l’univers SLP en répondant au premier questionnaire et créez votre profil de consom’acteur.
+                </div>
+                <div class="questionnaire-interp-space">
+                Il validera votre inscription sur la plateforme SLP et vous donnera accès à votre dashboard, d’où vous
+                pourrez consulter et gérer vos actions sur SLP !
+                </div>
+                <div class="questionnaire-interp-space">
+                Et ensuite faites évoluer votre compte et créez des profils différents ou complémentaires !
+                </div>
+                <div class="questionnaire-interp-space">
+                Invitez amis, famille, proches et définissez la dynamique de votre ménage, votre famille, votre groupe
+                d’amis ou votre mode solo.
+                </div>
+            </p>
+            <div class="tch2" style="margin-top: 20px;">QUEL CONSOM'ACTEUR ÊTES-VOUS?</div>
+            <p style="margin-bottom: 5px;">
+                <div class="questionnaire-interp-space">
+                Dans un premier temps, vous allez répondre à des questions concernant votre situation socio-économique
+                actuelle. 
+                </div>
+                <div class="questionnaire-interp-space">
+                Dans un second temps, vous pourrez répondre à d’autres questionnaires thématiques et suivre
+                leurs avancement en image ! 
+                </div>
+                <div class="questionnaire-interp-space">
+                Êtes-vous prêt ? C’est parti !
+                </div>
+            </p>
+                <a class="tcbutton" href="{{ path('userslp_portail') }#}" style="">
+                    <button style="font-size: 3.1vw; padding: 2px 3px;">ALLER AU QUESTIONNAIRE</button>
+                </a>
+        </div>
+    </div>-->
+    <div class="text-content-mobile">
+        <div><a href="{{ path('userslp_portail') }}"><!--<button>ALLER AU QUESTIONNAIRE</button>--></a></div>
+        <img src="{{ asset('images/landing-page/last/bloc3-universSLP.png') }}" alt="slp-univers">  
+    </div>
+
+    
+    <div class="dashboard">
+        <div class="dashboard-img col-3">
+            <img src="{{ asset('images/dashboard.png') }}" alt="questionnaire">
+        </div>
+        <div class="col-9">
+            <h2>Le nouveau dashboard universel</h2>
+            <p>
+                Découvrez la plateforme qui vous permettra de vous organiser tout en découvrant une multitude d’activités ludiques, 
+                de soirées et d’événements que vous pouvez même programmer à votre guise à l’aide d’une équipe dynamique ! <br>
+                Divers conseils et actualités sont aussi à votre service. 
+            </p>
+            <a href="{{ path('presentationdashboard') }}"><button>Découvrir le dashboard</button></a>
+        </div>
+    </div>
+    <div class="dashboard-mobile">
+        <div><a href="{{ path('presentationdashboard') }}"><!--<button>Découvrir le dashboard</button>--></a></div>
+        <img src="{{ asset('images/landing-page/bloc4nouveaudashboard.png') }}" alt="dashboard">  
+    </div>
+    <!--<div class="dash">
+        <div class="dashboardmobile">
+            <div class="dashimg col-md-4 col-sm-4 col-xs-4">
+                <img src="{#{ asset('images/dashboard.png') }}" alt="questionnaire">
+            </div>
+            <div class="col-md-8 col-sm-8 col-xs-8" style="padding-left: 26px;">
+                <h2 style="font-size: 3.5vw;">Le nouveau dashboard universel</h2>
+                <p style="font-size: 2.9vw;">
+                    Le Dashboard est un tableau de bord qui vous permet
+                    d'identifier, évaluer et mesurer votre impact individuel
+                    et établit en temps réel la valeur de votrecomportement.
+                    <br><br>
+                    Cet outil vous aide à intégrer de manière simple,
+                    progressive et non-contraignante un comportement
+                    éco-conscient dans votre réalité quotidienne et à mesurer en temps réel l'impact de chaque changement.
+                </p>
+                <a href="{{ path('presentationdashboard') }#}"><button style="font-size: 3vw;">Découvrir le dashboard</button></a>
+            </div>
+        </div>
+    </div>-->
+    
+    <div class="news">
+        <img src="{{ asset('images/landing-page/news.PNG') }}" alt="news">  
+    </div>
+    <div class="news-mobile">
+        <img src="{{ asset('images/landing-page/last/actus440w.png') }}" alt="news">  
+    </div>
+
+    <div id="actu" class="row no-gutters actu">
+        {# limitation en caractere du titre et de la description #}
+        <!--<h2>actualités</h2>-->
+        <div class="actu-block-img col-md-2 col-sm-3 col-xs-3">
+            <!--<img src="{#{ asset('images/landing-page/actu/Journee-festive.jpg') }#}" alt="">-->
+            <img src="{{ asset('images/landing-page/news/news2plateformeslp.png') }}" alt="">
+                        
+        </div>
+        <div class="actu-block col-md-2 col-sm-3 col-xs-3 ">
+            <p><b>La plateforme SLP</b> </br> Programme innovant de mesure, de sensibilisation et de stimulation du</p>
+            <!--<p><strong>Journée festive et tournoi de beach-volley aux Evaux </strong> </br> 
+            GES organise une 1/2 journée ouverte à tous</p>-->
+            <button class="actu-ensavoirplus-button">
+                <img class="actu-ensavoirplus-img" src="{{ asset('images/landing-page/ensavoirplus_blanc.jpg') }}" alt="">
+            </button>
+        </div>
+
+        <div class="actu-block-img col-md-2 col-sm-3 col-xs-3">
+            <!--<img src="{#{ asset('images/landing-page/actu/Eco-Paniers1.jpg') }#}" alt="">-->
+            <img src="{{ asset('images/landing-page/news/news3dashboard.png') }}" alt="">
+        </div>
+        <div class="actu-block col-md-2 col-sm-3 col-xs-3 description">
+            <p><!--ARTICLE 3<br>--><b>Le dashboard universel</b></br> La Landing page SLP est un portail web depuis lequel vous accédez</p>
+            <!--<p><strong>Éco-paniers</strong></br>
+            Lesquels des mes petits gestes quotidiens pourrais-je modifier afin <!--de réduire mon</p>-->
+            <button class="actu-ensavoirplus-button">
+                <img class="actu-ensavoirplus-img" src="{{ asset('images/landing-page/ensavoirplus_blanc.jpg') }}" alt="">
+            </button>
+        </div>
+
+        <div class="actu-block-img col-md-2 col-sm-3 col-xs-3">
+            <!--<img src="{#{ asset('images/landing-page/actu/Programme-GES.jpg') }#}" alt="">-->
+            <img src="{{ asset('images/landing-page/news/newsecopaniers.png') }}" alt="">
+        </div>
+        <div class="actu-block-right col-md-2  col-sm-3 col-xs-3" style="margin-bottom:50px; padding-left: 0;">
+            <p><!--ARTICLE 6<br>--><strong>Les éco-paniers</strong></br> L’objectif des Eco Paniers est multiple : il s’agit d’abord de proposer une</p>
+            <!--<p><b>Le programme Green Event Series</b> </br> 
+            Une série d'événements festifs, sportifs, ludiques </br></p>-->
+            <button class="actu-ensavoirplus-button">
+                <img class="actu-ensavoirplus-img" src="{{ asset('images/landing-page/ensavoirplus_blanc.jpg') }}" alt="">
+            </button>
+        </div>
+
+        <div class="actu-block-img col-md-2 col-sm-3 col-xs-3">
+            <!--<img src="{#{ asset('images/landing-page/actu/Les-eco-ateliers.jpg') }#}" alt="">-->
+            <img src="{{ asset('images/landing-page/news/newsecoateliers.png') }}" alt="">
+        </div>
+        <div class="actu-block col-md-2  col-sm-3 col-xs-3">
+            <p><!--ARTICLE 5<br>--><strong>Les éco-ateliers</strong></br> Des activités ludiques ayant pour objectif de sensibiliser les enfants</p>
+            <!--<p><b>Les éco-ateliers</b> </br> 
+            Veux-tu éblouir tes proches, tes amis et tes collègues avec une peau <!--ambrée, évitant</p>-->
+            <button class="actu-ensavoirplus-button">
+                <img class="actu-ensavoirplus-img" src="{{ asset('images/landing-page/ensavoirplus_blanc.jpg') }}" alt="">
+            </button>
+        </div>
+
+        <div class="actu-block-img col-md-2 col-sm-3 col-xs-3">
+            <!--<img src="{#{ asset('images/landing-page/actu/Eco-Paniers.jpg') }#}" alt="">-->
+            <img src="{{ asset('images/landing-page/news/news6repertoirevert.png') }}" alt="">
+        </div>
+        <div class="actu-block col-md-2  col-sm-3 col-xs-3 ">
+            <p><!--ARTICLE 2<br>--><strong>Le répertoire vert</strong></br> Un outil révolutionnaire qui va simplifier votre quotidien et vos</p>
+            <!--<p><b>Éco-paniers</b></br>
+            Lesquels des mes petits gestes quotidiens pourrais-je modifier afin <!--de réduire mon</p>-->
+            <button class="actu-ensavoirplus-button">
+                <img class="actu-ensavoirplus-img" src="{{ asset('images/landing-page/ensavoirplus_blanc.jpg') }}" alt="">
+            </button>
+        </div>
+
+        <div class="actu-block-img col-md-2 col-sm-3 col-xs-3">
+            <!--<img src="{#{ asset('images/landing-page/actu/Plateforme-conso.jpg') }#}" alt="">-->
+            <img src="{{ asset('images/landing-page/news/newsplateformeconsomaction.png') }}" alt="">
+        </div>
+        <div class="actu-block-right col-md-2 col-sm-3 col-xs-3" style="padding-left: 0;">
+            <p><!--ARTICLE 1<br>--><strong>Plateforme consom'action</strong></br> En tant que consommateur, nous avons des besoins. Pour les satisfaire </p>
+            <!--<p><b>Plateforme consom'action</b></br>  
+            La plateforme éco-conso est un support aux familles, individus,</p>-->
+            <button class="actu-ensavoirplus-button">
+                <img class="actu-ensavoirplus-img" src="{{ asset('images/landing-page/ensavoirplus_blanc.jpg') }}" alt="">
+            </button>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12" style="display: flex; justify-content: center;">
+            <a href="{{ path('actualites_menu') }}"><button style="font-size: 20px; height: 30px; width: 350px; margin: 30px 0 0 0;" class="btn-actu-dashboard-site">TOUTES LES ACTUALITÉS SLP</button></a>
+        </div>
+    </div>
+
+    <div class="actu-mobile">
+            <!--<div class="col-1"></div>-->
+            <div class="actu-row"  style="text-align: center;">
+                <div class="actu-left">
+                    <div class="actu-img-p">
+                        <img src="{{ asset('images/landing-page/news/news2plateformeslp.png') }}" alt="">
+                        <p><!--ARTICLE 4<br>--><b>LA PLATEFORME SLP</b> </br> Programme innovant de mesure, de sensibilisation et de stimulation du changement de</p>
+                    </div>
+                    <button class="plus-button">
+                        <img class="plus-btn-img" src="{{ asset('images/landing-page/ensavoirplus_blanc.jpg') }}" alt="">
+                    </button>
+                </div>
+                <div class="actu-center">
+                    <div class="actu-img-p">
+                        <img src="{{ asset('images/landing-page/news/news3dashboard.png') }}" alt="">
+                        <p><!--ARTICLE 3<br>--><b>LE DASHBOARD UNIVERSEL</b></br> La Landing page SLP est un portail web depuis lequel vous accédez au Dashboard<!--Lesquels de mes petits gestes quotidiens <!--pourrais-je modifier--></p>
+                    </div>
+                    <button class="plus-button">
+                        <img class="plus-btn-img" src="{{ asset('images/landing-page/ensavoirplus_blanc.jpg') }}" alt="">
+                    </button>
+                </div>
+                <div class="actu-right">
+                    <div class="actu-img-p">
+                        <img src="{{ asset('images/landing-page/news/newsecopaniers.png') }}" alt="">
+                        <p><!--ARTICLE 6<br>--><strong>LES ÉCO-PANIERS</strong></br> L’objectif des Eco Paniers est multiple : il s’agit d’abord de proposer une alternative <!--Lesquels de mes petits gestes quotidiens pourrais-je modifier afin de réduire mon<!--impact sur--></p>
+                    </div>
+                    <button class="plus-button">
+                        <img class="plus-btn-img" src="{{ asset('images/landing-page/ensavoirplus_blanc.jpg') }}" alt="">
+                    </button>
+                </div>
+            </div>
+            
+            <div class="actu-row" style="text-align: center;">
+                <div class="actu-left">
+                    <div class="actu-img-p">
+                        <img src="{{ asset('images/landing-page/news/newsecoateliers.png') }}" alt=""><!--actu/Les-eco-ateliers.jpg-->
+                        <p><!--ARTICLE 5<br>--><strong>LES ÉCO-ATELIERS</strong></br> Des activités ludiques ayant pour objectif de sensibiliser les enfants dès le plus jeune âge au Développement<!--Veux-tu éblouir tes proches, tes amis et tes collègues avec une peu ambrée,<!--évitant--></p>
+                    </div>
+                    <button class="plus-button">
+                        <img class="plus-btn-img" src="{{ asset('images/landing-page/ensavoirplus_blanc.jpg') }}" alt="">
+                    </button>
+                </div>
+                <div class="actu-center">
+                    <div class="actu-img-p">
+                        <img src="{{ asset('images/landing-page/news/news6repertoirevert.png') }}" alt="">
+                        <p><!--ARTICLE 2<br>--><strong>LE RÉPERTOIRE VERT<!--LANCEMENT JOURNÉE GAEA21--></strong></br> Un outil révolutionnaire qui va simplifier votre quotidien et vos recherches de solutions vertes,<!--GES organise une 1/2 journée ouverte à tous--></p>
+                    </div>
+                    <button class="plus-button">
+                        <img class="plus-btn-img" src="{{ asset('images/landing-page/ensavoirplus_blanc.jpg') }}" alt="">
+                    </button>
+                </div>
+                <div class="actu-right">
+                    <div class="actu-img-p">
+                        <img src="{{ asset('images/landing-page/news/newsplateformeconsomaction.png') }}" alt="">
+                        <p><!--ARTICLE 1<br>--><strong>La PLATEFORME CONSOM'ACTION <!--MISE EN LIGNE DE LANDING PAGE SLP--></strong></br> En tant que consommateur, nous avons des besoins. Pour les satisfaire </p>
+                    </div>
+                    <button class="plus-button">
+                        <img class="plus-btn-img" src="{{ asset('images/landing-page/ensavoirplus_blanc.jpg') }}" alt="">
+                    </button>
+                </div>
+            </div>
+        <div class="row col-12" style="margin: 0; padding: 0;">
+            <div class="col-2"></div>
+            <div class="col-8" style="padding: 0 10%;">
+                <a href="{{ path('actualite_dashboard') }}">
+                    <button class="btn-actu-dashboard-mobile">
+                        TOUTES LES ACTUALITÉS SLP
+                    </button>
+                </a>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+    
+    <div class="community">
+        <a href="{{ path('community') }}"></a>
+        <img src="{{ asset('images/landing-page/aviron.jpg') }}" alt="community">
+    </div>
+    <div class="community-mobile">
+        <a href="{{ path('community') }}"><!--<button>Intégrez la communauté SLP</button>--></a>
+        <img src="{{ asset('images/landing-page/banniereSLC440.png') }}" alt="community">
+    </div>
+
+    <div class="ambassadeur">
+        <a href="{{ path('ambassadeur') }}"></a>
+        <img src="{{ asset('images/landing-page/ambassadeur.PNG') }}" alt="ambassadeur">
+    </div>
+    <div class="ambassadeur-mobile">
+        <a href="{{ path('ambassadeur') }}"><!--<button>Cliquez ici</button>--></a>
+        <img src="{{ asset('images/landing-page/banniere_ambassadeurs_440.png') }}" alt="ambassadeur">
+    </div>
+    
+    <div class="row empreinte">
+        <div class="empr-div-img col-md-3 col-sm-4 col-xs-4">
+            <img src="{{ asset('images/empreinte_chromatique.jpg') }}" alt="empreinte chromatique" style="width: 100%; height: 100%;">
+        </div>
+        <div class="col-md-9 col-sm-8 col-xs-8" style="padding-left: 45px; background-color: white;">
+            <h2>L'empreinte chromatique</h2>
+            <p>Bientôt sur notre plateforme : l’échelle d’empreinte Chromatique !<br>
+                gaea21 a développé un mode de calcul de l’empreinte (impact) comportementale qui se traduit par une
+                échelle universelle organisée autour de 6 couleurs/niveaux.<br>
+                L'échelle de 1 : très soutenable et conscient de la fragilité de l'environnement <br>
+                à 6 : très peu conscient d'impacts sur l'environnement. </p>
+            <a href="{{ path('empreinte_chromatique') }}"><button style="margin-top: 20px;">Empreinte chromatique </button></a>
+            {#  <a href="{{ path('empreinte_chromatique_famille') }}"><button>Empreinte chromatique famille </button></a>#}
+            <div class="row">
+                <p class="slogant col-7">Alors surveillez bien et ne ratez pas son arrivée !</p>
+                <div class="d-flex col-5 justify-content-around" style="margin: 13px 0; padding-right: 0; right: 0;">
+                    <div class="rond" style="background-color: #26e236;"></div>
+                    <div class="rond" style="background-color: #3C964B;"></div>
+                    <div class="rond" style="background-color: #E0ED34;"></div>
+                    <div class="rond" style="background-color: #EAA433;"></div>
+                    <div class="rond" style="background-color: #DB401A;"></div>
+                    <div class="rond" style="background-color: #000;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="empreinte-mobile">
+        <a href="{{ path('empreinte_chromatique') }}"><!--<button>Empreinte chromatique</button>--></a>
+        <img src="{{ asset('images/landing-page/empreintechromatiquebloc.png') }}" alt="print">
+    </div>
+    <!--<div class="empreinte-mobile-frame">
+        <div class="empreinte-mobile col-12" style="display: flex;">
+            <div class="emp-img col-4">
+                <img src="{#{ asset('images/empreinte_chromatique.jpg') }#}" style="" alt="empreinte chromatique">
+            </div>
+            <div class="emp-text col-8">
+                <h2 style="font-size: 3.5vw; margin-top: 10px;">L'empreinte chromatique</h2>
+                <p style="font-size: 2.9vw;">
+                    Bientôt sur notre plateforme : l’échelle 
+                    d’empreinte Chromatique !<br><br>
+                    gaea21 a développé un mode de calcul de l’empreinte (impact) comportemental qui se 
+                    traduit par une échelle universelle organisée autour de 6 couleurs/niveaux.<br><br>
+                    L'échelle de 1 (très soutenable et conscient 
+                    de la fragilité de l'environnement) à 6 (très peu 
+                    conscient d'impacts sur l'environnement).<br><br>
+                    <strong>Alors surveillez bien et ne ratez pas son arrivée!</strong>
+                </p>
+                <div class="ronds d-flex">
+                    <div class="rond" style="background-color: #26e236; margin-left: 0;"></div>
+                    <div class="rond" style="background-color: #3C964B;"></div>
+                    <div class="rond" style="background-color: #E0ED34;"></div>
+                    <div class="rond" style="background-color: #EAA433;"></div>
+                    <div class="rond" style="background-color: #DB401A;"></div>
+                    <div class="rond" style="background-color: #000;"></div>
+                </div>
+                <a href="{#{ path('empreinte_chromatique') }#}"><button style="font-size: 3.3vw; padding: 0 6px;">Empreinte chromatique </button></a>
+            </div>
+        </div>
+    </div>-->
+
+    <div class="humans">
+        <a href="{{ path('humans') }}"></a>
+        <img src="{{ asset('images/landing-page/banniereHOG21.jpg') }}" alt="humans">
+    </div>
+    <div class="humans-mobile">
+        <a href="{{ path('humans') }}"><!--<button>Cliquez ici</button>--></a>
+        <img src="{{ asset('images/landing-page/last/bannierehumans440.png') }}" alt="humans">
+    </div>
+
+    <div class="row no-gutters allothers col-12">
+        <div class="other col-md-6 col-sm-6 col-xs-6">
+            <div class="row">
+                <div id="colorItem" class="griditem"
+                    style="background-image:url(../images/logos/eco-ateliers.jpg); background-size:cover;">
+                    <div class="video">
+                        <div class="row">
+                            <video id="video" preload="none" muted autoplay loop
+                                poster="{{ asset('images/videos/atelier_cuisine.png') }}" style="width:100%; height:100%">
+                                <source id="mp4" src="{{ asset('images/videos/atelier_cuisine.mp4') }}" type="video/mp4">
+                                <source id="webm" src="{{ asset('images/videos/atelier_cuisine.webm') }}" type="video/webm">
+                                <source id="ogv" src="{{ asset('images/videos/atelier_cuisine.ogg') }}" type="video/ogg">
+                                <p>Your browser does not support HTML5 Video!</p>
+                            </video>
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <a href="{{ path('atelier_portail') }}" class="titles">
+                            <!-- lien atelier_eco modifié-->
+                            <img class="ateliercuisineimg" src="{{ asset('images/logos/transparent-ecoateliers.png') }}" alt="atelier cuisine">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="other col-md-6 col-sm-6 col-xs-6">
+            <div class="row">
+                <div id="colorItem2" class="griditem"
+                    style="background-image:url(../images/logos/logo_repertoire_vert.png); background-size:cover;">
+                    <div class="video">
+                        <div class="row">
+                            <video id="video" preload="none" muted autoplay loop
+                                poster="http://media.w3.org/2010/05/sintel/poster.png" style="width:100%; height:100%">
+                                <source id="mp4" src="{{ asset('images/videos/RV.mp4') }}" type="video/mp4">
+                                <source id="webm" src="{{ asset('images/videos/RV.webm') }}" type="video/webm">
+                                <source id="ogv" src="{{ asset('images/videos/RV.ogg') }}" type="video/ogg">
+                                <p>Your browser does not support HTML5 Video!</p>
+                            </video>
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <a href="http://www.repertoirevert.org/" class="titles">
+                            <img src="{{ asset('images/logos/logo_repertoire_vert.png') }}" alt="repertoire vert">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="other col-md-6 col-sm-6 col-xs-6">
+            <div class="row">
+                <div id="colorItem3" class="griditem"
+                    style="background-image:url(../images/logos/logo_green_events_series.png); background-size:cover;">
+                    <div class="video">
+                        <div class="row">
+                            <video id="video" preload="none" muted autoplay loop
+                                poster="http://media.w3.org/2010/05/sintel/poster.png" style="width:100%; height:100%">
+                                <source id="mp4" src="{{ asset('images/videos/GES.mp4') }}" type="video/mp4">
+                                <source id="webm" src="{{ asset('images/videos/GES.webm') }}" type="video/webm">
+                                <source id="ogv" src="{{ asset('images/videos/GES.ogg') }}" type="video/ogg">
+                                <p>Your browser does not support HTML5 Video!</p>
+                            </video>
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <a href="http://www.google.com" class="titles">
+                            <img src="{{ asset('images/logos/logo_green_events_series.png') }}" alt="logo green event">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="other col-md-6 col-sm-6 col-xs-6">
+            <div class="row">
+                <div id="colorItem4" class="griditem"
+                    style="background-image:url(../images/logos/logo_growyourown.png); background-size:cover;">
+                    <div class="video">
+                        <div class="row">
+                            <video id="video" preload="none" muted autoplay loop
+                                poster="http://media.w3.org/2010/05/sintel/poster.png" style="width:100%; height:100%">
+                                <source id="mp4" src="{{ asset('images/videos/GYO.mp4') }}" type="video/mp4">
+                                <source id="webm" src="{{ asset('images/videos/GYO.webm') }}" type="video/webm">
+                                <source id="ogv" src="{{ asset('images/videos/GYO.ogg') }}" type="video/ogg">
+                                <p>Your browser does not support HTML5 Video!</p>
+                            </video>
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <a href="http://www.google.com" class="titles">
+                            <img src="{{ asset('images/logos/logo_growyourown.png') }}" alt="logo growyourown">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="other col-md-6 col-sm-6 col-xs-6">
+            <div class="row">
+                <div id="colorItem5" class="griditem"
+                    style="background-image:url(../images/logos/logo_consom_Action.png); background-size:cover;">
+                    <div class="video">
+                        <div class="row">
+                            <video id="video" preload="none" muted autoplay loop
+                                poster="http://media.w3.org/2010/05/sintel/poster.png" style="width:100%; height:100%">
+                                <source id="mp4" src="{{ asset('images/videos/CA.mp4') }}" type="video/mp4">
+                                <source id="webm" src="{{ asset('images/videos/CA.webm') }}" type="video/webm">
+                                <source id="ogv" src="{{ asset('images/videos/CA.ogg') }}" type="video/ogg">
+                                <p>Your browser does not support HTML5 Video!</p>
+                            </video>
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <a href="http://www.google.com" class="titles">
+                            <img src="{{ asset('images/logos/logo_consom_Action.png') }}" alt="logo consom action">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="other col-md-6 col-sm-6 col-xs-6">
+            <div class="row">
+                <div id="colorItem8" class="griditem"
+                    style="background-image:url(../images/logos/logo_ecogest.png); background-size:cover;">
+                    <div class="video">
+                        <div class="row">
+                            <video id="video" preload="none" muted autoplay loop
+                                poster="http://media.w3.org/2010/05/sintel/poster.png" style="width:100%; height:100%">
+                                <source id="mp4" src="{{ asset('images/videos/EG.mp4') }}" type="video/mp4">
+                                <source id="webm" src="{{ asset('images/videos/EG.webm') }}" type="video/webm">
+                                <source id="ogv" src="{{ asset('images/videos/EG.ogg') }}" type="video/ogg">
+                                <p>Your browser does not support HTML5 Video!</p>
+                            </video>
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <a href="http://www.google.com" class="titles">
+                            <img src="{{ asset('images/logos/logo_ecogest.png') }}" alt="logo consom action">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="other col-md-6 col-sm-6 col-xs-6">
+            <div class="row">
+                <div id="colorItem9" class="griditem"
+                    style="background-image:url(../images/logos/logo_greencoaching.png); background-size:cover;">
+                    <div class="video">
+                        <div class="row">
+                            <video id="video" preload="none" muted autoplay loop
+                                poster="http://media.w3.org/2010/05/sintel/poster.png" style="width:100%; height:100%">
+                                <source id="mp4" src="{{ asset('images/videos/GC.mp4') }}" type="video/mp4">
+                                <source id="webm" src="{{ asset('images/videos/GC.webm') }}" type="video/webm">
+                                <source id="ogv" src="{{ asset('images/videos/GC.ogg') }}" type="video/ogg">
+                                <p>Your browser does not support HTML5 Video!</p>
+                            </video>
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <a href="http://www.google.com" class="titles">
+                            <img src="{{ asset('images/logos/logo_greencoaching.png') }}" alt="logo green coaching">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="other col-md-6 col-sm-6 col-xs-6">
+            <div class="row">
+                <div id="colorItem10" class="griditem"
+                    style="background-image:url(../images/logos/logo_sharing_economy.png); background-size:cover;">
+                    <div class="video">
+                        <div class="row">
+                            <video id="video" preload="none" muted autoplay loop
+                                poster="http://media.w3.org/2010/05/sintel/poster.png" style="width:100%; height:100%">
+                                <source id="mp4" src="{{ asset('images/videos/RV.mp4') }}" type="video/mp4">
+                                <source id="webm" src="{{ asset('images/videos/RV.webm') }}" type="video/webm">
+                                <source id="ogv" src="{{ asset('images/videos/RV.ogg') }}" type="video/ogg">
+                                <p>Your browser does not support HTML5 Video!</p>
+                            </video>
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <a href="http://www.google.com" class="titles">
+                            <img src="{{ asset('images/logos/logo_sharing_economy.png') }}" alt="logo sharin economy">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="allothers-mobile" style="padding: 0 5% 15px 5%; width: 100%;">
+        <div class="row-other" style="">
+            <div class="other-left" style="">
+                <div id="colorItem" class="griditem"
+                    style="background-image:url(../images/logos/eco-ateliers.jpg); background-size:cover;">
+                    <div class="video">
+                        <div class="row">
+                            <video id="video" preload="none" muted autoplay loop
+                                poster="{{ asset('images/videos/atelier_cuisine.png') }}" style="width:100%; height:100%">
+                                <source id="mp4" src="{{ asset('images/videos/atelier_cuisine.mp4') }}" type="video/mp4">
+                                <source id="webm" src="{{ asset('images/videos/atelier_cuisine.webm') }}" type="video/webm">
+                                <source id="ogv" src="{{ asset('images/videos/atelier_cuisine.ogg') }}" type="video/ogg">
+                                <p>Your browser does not support HTML5 Video!</p>
+                            </video>
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <img class="ateliercuisineimg" src="{{ asset('images/logos/transparent-ecoateliers.png') }}" alt="atelier cuisine">
+                    </div>
+                </div>
+            </div>
+
+            <div class="other-right" style="">
+                <div id="colorItem2" class="griditem"
+                    style="background-image:url(../images/logos/logo_repertoire_vert.png); background-size:cover;">
+                    <div class="video">
+                        <div class="row">
+                            <video id="video" preload="none" muted autoplay loop
+                                poster="http://media.w3.org/2010/05/sintel/poster.png" style="width:100%; height:100%">
+                                <source id="mp4" src="{{ asset('images/videos/RV.mp4') }}" type="video/mp4">
+                                <source id="webm" src="{{ asset('images/videos/RV.webm') }}" type="video/webm">
+                                <source id="ogv" src="{{ asset('images/videos/RV.ogg') }}" type="video/ogg">
+                                <p>Your browser does not support HTML5 Video!</p>
+                            </video>
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <img src="{{ asset('images/logos/logo_repertoire_vert.png') }}" alt="repertoire vert">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row-other" style="">
+            <div class="other-left">
+                <div id="colorItem3" class="griditem"
+                    style="background-image:url(../images/logos/logo_green_events_series.png); background-size:cover;">
+                    <div class="video">
+                        <div class="row">
+                            <video id="video" preload="none" muted autoplay loop
+                                poster="http://media.w3.org/2010/05/sintel/poster.png" style="width:100%; height:100%">
+                                <source id="mp4" src="{{ asset('images/videos/GES.mp4') }}" type="video/mp4">
+                                <source id="webm" src="{{ asset('images/videos/GES.webm') }}" type="video/webm">
+                                <source id="ogv" src="{{ asset('images/videos/GES.ogg') }}" type="video/ogg">
+                                <p>Your browser does not support HTML5 Video!</p>
+                            </video>
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <img src="{{ asset('images/logos/logo_green_events_series.png') }}" alt="logo green event">
+                    </div>
+                </div>
+            </div>
+
+            <div class="other-right">
+                <div id="colorItem4" class="griditem"
+                    style="background-image:url(../images/logos/logo_growyourown.png); background-size:cover;">
+                    <div class="video">
+                        <div class="row">
+                            <video id="video" preload="none" muted autoplay loop
+                                poster="http://media.w3.org/2010/05/sintel/poster.png" style="width:100%; height:100%">
+                                <source id="mp4" src="{{ asset('images/videos/GYO.mp4') }}" type="video/mp4">
+                                <source id="webm" src="{{ asset('images/videos/GYO.webm') }}" type="video/webm">
+                                <source id="ogv" src="{{ asset('images/videos/GYO.ogg') }}" type="video/ogg">
+                                <p>Your browser does not support HTML5 Video!</p>
+                            </video>
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <img src="{{ asset('images/logos/logo_growyourown.png') }}" alt="logo growyourown">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row-other" style="">
+            <div class="other-left">
+                <div id="colorItem5" class="griditem"
+                    style="background-image:url(../images/logos/logo_consom_Action.png); background-size:cover;">
+                    <div class="video">
+                        <div class="row">
+                            <video id="video" preload="none" muted autoplay loop
+                                poster="http://media.w3.org/2010/05/sintel/poster.png" style="width:100%; height:100%">
+                                <source id="mp4" src="{{ asset('images/videos/CA.mp4') }}" type="video/mp4">
+                                <source id="webm" src="{{ asset('images/videos/CA.webm') }}" type="video/webm">
+                                <source id="ogv" src="{{ asset('images/videos/CA.ogg') }}" type="video/ogg">
+                                <p>Your browser does not support HTML5 Video!</p>
+                            </video>
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <img src="{{ asset('images/logos/logo_consom_Action.png') }}" alt="logo consom action">
+                    </div>
+                </div>
+            </div>
+
+            <div class="other-right">
+                <div id="colorItem8" class="griditem"
+                    style="background-image:url(../images/logos/logo_ecogest.png); background-size:cover;">
+                    <div class="video">
+                        <div class="row">
+                            <video id="video" preload="none" muted autoplay loop
+                                poster="http://media.w3.org/2010/05/sintel/poster.png" style="width:100%; height:100%">
+                                <source id="mp4" src="{{ asset('images/videos/EG.mp4') }}" type="video/mp4">
+                                <source id="webm" src="{{ asset('images/videos/EG.webm') }}" type="video/webm">
+                                <source id="ogv" src="{{ asset('images/videos/EG.ogg') }}" type="video/ogg">
+                                <p>Your browser does not support HTML5 Video!</p>
+                            </video>
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <img src="{{ asset('images/logos/logo_ecogest.png') }}" alt="logo consom action">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row-other" style="">
+            <div class="other-left">
+                <div id="colorItem9" class="griditem"
+                    style="background-image:url(../images/logos/logo_greencoaching.png); background-size:cover;">
+                    <div class="video">
+                        <div class="row">
+                            <video id="video" preload="none" muted autoplay loop
+                                poster="http://media.w3.org/2010/05/sintel/poster.png" style="width:100%; height:100%">
+                                <source id="mp4" src="{{ asset('images/videos/GC.mp4') }}" type="video/mp4">
+                                <source id="webm" src="{{ asset('images/videos/GC.webm') }}" type="video/webm">
+                                <source id="ogv" src="{{ asset('images/videos/GC.ogg') }}" type="video/ogg">
+                                <p>Your browser does not support HTML5 Video!</p>
+                            </video>
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <img src="{{ asset('images/logos/logo_greencoaching.png') }}" alt="logo green coaching">
+                    </div>
+                </div>
+            </div>
+
+            <div class="other-right">
+                <div id="colorItem10" class="griditem"
+                    style="background-image:url(../images/logos/logo_sharing_economy.png); background-size:cover;">
+                    <div class="video">
+                        <div class="row">
+                            <video id="video" preload="none" muted autoplay loop
+                                poster="http://media.w3.org/2010/05/sintel/poster.png" style="width:100%; height:100%">
+                                <source id="mp4" src="{{ asset('images/videos/RV.mp4') }}" type="video/mp4">
+                                <source id="webm" src="{{ asset('images/videos/RV.webm') }}" type="video/webm">
+                                <source id="ogv" src="{{ asset('images/videos/RV.ogg') }}" type="video/ogg">
+                                <p>Your browser does not support HTML5 Video!</p>
+                            </video>
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <img src="{{ asset('images/logos/logo_sharing_economy.png') }}" alt="logo sharin economy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="eco-panier row col-12">
+        <div class="col-md-4 col-sm-4 col-xs-4"><img src="{{ asset('images/panier_petit.png') }}" alt="petit panier"></div>
+        <div class="col-md-8 col-sm-8 col-xs-8">
+            <h2>ÉCO-PANIERS</h2>
+            <p>
+                Marre des sandwichs jambon-beurre lors de vos pique-niques? <br>
+                Nous avons la solution ! <br>
+                Faites-vous plaisir tout en mangeant bio !
+            </p>
+            <a href="{{ path('eco_panier') }}">COMMANDE TON PANIER</a>
+        </div>
+    </div>
+    <div class="eco-panier-mobile">
+        <div><a href="{{ path('eco_panier') }}"><!--<button>COMMANDE TON PANIER</button>--></a></div>
+        <img src="{{ asset('images/landing-page/last/ecopaniers.png') }}" alt="eco-panier">  
+    </div>
+    <!--<div class="eco-panier-mobile-frame">
+        <div class="eco-panier-mobile row col-12">
+            <div class="ecopimg col-4"><img src="{#{ asset('images/panier_petit.png') }}" alt="petit panier"></div>
+            <div class="ecop col-7">
+                <h2 style="font-size: 3.7vw;">ÉCO PANIERS</h2>
+                <p style="font-size: 3vw;">
+                    Marre des sandwichs jambon-beurre lors de vos pique-niques? <br>
+                    Nous avons la solution ! <br>
+                    Faites-vous plaisir tout en mangeant bio !
+                </p>
+                <a href="{{ path('eco_panier') }#}" style="font-size: 3vw;">COMMANDE TON PANIER</a>
+            </div>
+        </div>
+    </div>-->
+</div>
+
+<div class="row">
+    {% include 'footer.html.twig' %}
+</div>
+
+<!--<footer class="footer" style="background-image: url(../images/pelle_terre_footer.jpg);">
+    <div class="row">
+        <div class="col-md-1 col-sm-0 col-xs-0">
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-3">
+            <h3>Projets</h3>
+            <ul>
+                <li><a href="http://www.repertoirevert.org/">Répertoire Vert</a></li>
+                <li><a href="">Green Event Series</a></li>
+                <li><a href="">Grow your own</a></li>
+                <li><a href="">Consom'action</a></li>
+                <li><a href="">Eco-gestes</a></li>
+                <li><a href="">Green Coaching</a></li>
+                <li><a href="">Sharing Economy</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-3 col-sm-3 col-xs-3">
+            <h3><a href="{#{ path('site_mentions') }}">About</a></h3>
+        </div>
+
+        <div class="col-md-3 col-sm-3 col-xs-3">
+            <h3><a href="{{ path('contact') }}">Contact</a></h3>
+        </div>
+
+        <div class="col-md-2 col-sm-2 col-xs-2">
+            <h3><a href="http://www.gaea21.org/wpg21/">gaea21</a></h3>
+        </div>
+    </div>
+</footer>
+
+<footer class="footer-mobile" style="padding: 0; margin: 0;">
+    <div class="row" style="background-image: url(../images/pelle_terre_footer.jpg);">
+        <div class="col-1">
+        </div>
+        <div class="col-5" style="padding: 0;">
+            <h3 style="font-size: 4.5vw;">Projets</h3>
+            <ul>
+                <li><a style="font-size: 3.3vw;" href="http://www.repertoirevert.org/">Répertoire Vert</a></li>
+                <li><a style="font-size: 3.3vw;" href="">Green Event Series</a></li>
+                <li><a style="font-size: 3.3vw;" href="">Grow your own</a></li>
+                <li><a style="font-size: 3.3vw;" href="">Consom'action</a></li>
+                <li><a style="font-size: 3.3vw;" href="">Eco-gestes</a></li>
+                <li><a style="font-size: 3.3vw;" href="">Green Coaching</a></li>
+                <li><a style="font-size: 3.3vw;" href="">Sharing Economy</a></li>
+            </ul>
+        </div>
+
+        <div class="col-2" style="padding: 0;">
+            <h3 style="font-size: 4.5vw;"><a href="{{ path('site_mentions') }}">About</a></h3>
+        </div>
+
+        <div class="col-3" style="padding-left: 23px;">
+            <h3 style="font-size: 4.5vw;"><a href="{{ path('contact') }#}">Contact</a></h3>
+        </div>
+
+        <!--<div class="col-2">
+            <h3 style="font-size: 4vw;"><a href="http://www.gaea21.org/wpg21/">gaea21</a></h3>
+        </div>
+    </div>
+</footer>-->
+
+{% endblock %}
+
+{% block javascripts %}
+<script type="text/javascript">
+    $(".number").selectmenu();
+</script>
+
+<script link rel="stylesheet" href="{{ asset('js/bootstrap.min.js')}}"></script>
+
+{% endblock %}

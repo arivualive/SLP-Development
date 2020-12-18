@@ -1,0 +1,655 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+Dashboard Universel
+{% endblock %}
+
+{% block stylesheets %}
+
+<link rel="stylesheet" href="{{ asset('css/site_dashboard.css') }}">
+<link rel="stylesheet" href="{{ asset('css/profilgaea.css') }}">
+
+<link rel="stylesheet" type="text/css"
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .container {
+        color: black;
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+
+<div class="row">
+
+
+
+    <div class="bandeau">
+
+        <a href="#" class="bg-user"><img src="{{ asset('images/dashboard/soleil-levant3.jpg') }}"
+                alt="photo background"></a>
+
+        
+
+        <a class="bg-photo" href="#"><img class="photo-user" src="{{ asset('images/profile-default.jpg') }}"
+                alt="photo de profil"></a>
+
+        <h1>Votre dashboard universel</h1> 
+    </div>
+
+
+    <div class="empreinte">
+
+        <div class=" col-md-2 col-sm-2 col-xs-6 color">
+            <p>votre couleur</p>
+        </div>
+
+
+
+
+        <div class="votre-empreinte">
+            <p>Votre empreinte Chromatique /</p>
+            <p> Votre Green ID</p>
+            <div class="mes-rond">
+                <div class="rond black"></div>
+                <div class="rond red"></div>
+                <div class="rond orange"></div>
+                <div class="rond yellow"></div>
+                <div class="rond green"></div>
+                <div class="rond green-c"></div>
+            </div>
+            <div class="processusall">
+                <div class="mes-processus">
+                    <img src="{{ asset('images/dashboard/communiquer.png') }}" style="height: 26px;margin-top: 5px;"
+                        alt="photo background">
+                </div>
+                <div class="mes-processus">
+                    <img src="{{ asset('images/dashboard/manger.png') }}" style="height: 26px;margin-top: 5px;"
+                        alt="photo background">
+                </div>
+                <div class="mes-processus">
+                    <img src="{{ asset('images/dashboard/s_habiller.png') }}" style="height: 26px;margin-top: 5px;"
+                        alt="photo background">
+                </div>
+                <div class="mes-processus">
+                    <img src="{{ asset('images/dashboard/se_déplacer.png') }}" style="height: 26px;margin-top: 5px;"
+                        alt="photo background">
+                </div>
+                <div class="mes-processus">
+                    <img src="{{ asset('images/dashboard/habiter.png') }}" style="height: 26px;margin-top: 5px;"
+                        alt="photo background">
+                </div>
+                <div class="mes-processus">
+                    <img src="{{ asset('images/dashboard/se_distraire.png') }}" style="height: 26px;margin-top: 5px;"
+                        alt="photo background">
+                </div>
+                <div class="mes-processus">
+                    <img src="{{ asset('images/dashboard/prendre_soin_de_soi.png') }}"
+                        style="height: 26px;margin-top: 5px;" alt="photo background">
+                </div>
+                <div class="mes-processus">
+                    <img src="{{ asset('images/dashboard/travail.png') }}" style="height: 26px;margin-top: 5px;"
+                        alt="photo background">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="eco-geste">
+            <h3>Eco-geste</h3>
+            <div class="text-eco-geste">
+                <p>Geste N°47</p>
+                Se passer si possible de la climatisation afin d’éviter les
+                émissions de gaz et une augmentation de facture d’électricité.
+
+            </div>
+        </div>
+
+        <div class="personnalisation">
+            <p>Personnalisation</p>
+            <h6>Personnalisez votre dashboard</h6>
+        </div>
+
+
+    </div>
+
+    {#---------------------------------------------------------------------------------------------------------------#}
+    {#-------------------------------------------colonne gauche------------------------------------------------------#}
+    {#---------------------------------------------------------------------------------------------------------------#}
+
+    <div class="col-md-2 col-sm-2 col-xs-2 col-g">
+        <div class="row">
+            <div class="statistiques">Statistiques</div><br>
+            <div class="actualites">Actualités</div><br>
+            <div class="gestion-de-projets">Gestion de Projets</div><br>
+            <div class="mes-favoris">Mes Favoris</div><br>
+            <div class="agenda">Agenda</div><br>
+
+            <div class="CO2">
+                <h2>CO2</h2>
+                <div>
+                    <p>graphique</p>
+                </div>
+
+                <p class="day">Votre empreinte CO2</p>
+
+                <p class="day">Jour</p>
+                <p>{{ random(500) }}g CO2</p>
+
+                <p class="day">Jour</p>
+                <p>{{ random(500) }}g CO2</p>
+
+                <p class="day">Jour</p>
+                <p>{{ random(500) }}g CO2</p>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="calorie">
+                <h2>Calories</h2>
+                <div>
+                    <p>graphique</p>
+                </div>
+
+                <p class="day">Vos dépenses en calories</p>
+
+                <p class="day">Jour</p>
+                <p>{{ random(500) }} Calories</p>
+
+                <p class="day">Jour</p>
+                <p>{{ random(500) }} Calories</p>
+
+                <p class="day">Jour</p>
+                <p>{{ random(500) }} Calories</p>
+
+            </div>
+
+            <div class="calendrier">
+                <h2>Calendrier</h2>
+
+
+                <p class="day"> MARS </p>
+
+                <p class="day">L M M J V S D</p>
+
+
+                <p class="day"> 1 2 3 4 5 6 7</br>8 9 10 11 12 13 14</br>15 16 17 18 19 20 21</br>22 23 24 25 26 27
+                    28</br>29 30 31</p>
+
+
+                <p class="day">Jour</p>
+
+
+            </div>
+
+            <div class="packages">
+                <h2>Vos packages </h2>
+
+
+                <p class="day"> Demande simple </p>
+
+                <p class="day">Package membre</p>
+
+
+                <p class="day"> Package non membre </p>
+
+
+
+
+            </div>
+
+            <div class="repertoire">
+                <h2>Répertoire vert </h2>
+            </div>
+
+            <div class="greenevent">
+                <h2>Green event series </h2>
+            </div>
+
+            <div class="consumaction">
+                <h2>Consom’action </h2>
+            </div>
+
+            <div class="ecogestes">
+                <h2>Programme Eco-gestes </h2>
+            </div>
+
+            <div class="greencoaching">
+                <h2>Green Coaching </h2>
+            </div>
+
+            <div class="greenyourown">
+                <h2>Green your own </h2>
+            </div>
+
+            <div class="greensharing">
+                <h2>Green sharing</h2>
+            </div>
+            <div class="impacttracker">
+                <h2>Impact Tracker </br> </br> </br> </br> </br> </br> </br> </br> </br> </br> </br> Comming Soon
+                </h2>
+
+            </div>
+        </div>
+    </div>
+    {#---------------------------------------------------------------------------------------------------------------#}
+    {#-------------------------------------------collone info (celle du milieu)--------------------------------------#}
+    {#---------------------------------------------------------------------------------------------------------------#}
+    <div class="col-md-3 col-sm-3 col-xs-3">
+        <div class="feed-actualites"> Feed / Actualités</div>
+        <div>
+            <div class="info">
+                <img src="/images/dashboard/logo_sharing_economy.png" alt="photo background"
+                    style="width: 70px;height: 40px;float: left;">
+                <h1>DIMINUTION COUT TRANSPORTS</h1>
+                <div class="imageactu1"></div>
+                <p><strong>Geste N°47</strong>
+                    Se passer si possible de la climatisation afin d’éviter les
+                    émissions de gaz et une augmentation de facture d’électricité.</p>
+            </div>
+
+            <div class="info">
+                <img src="/images/dashboard/logo_sharing_economy.png" alt="photo background"
+                    style="width: 70px;height: 40px;float: left;">
+                <h1>ESCO SCOPE</h1>
+                <div class="imageactu2"></div>
+                <p><strong>Geste N°47</strong>
+                    Se passer si possible de la climatisation afin d’éviter les
+                    émissions de gaz et une augmentation de facture d’électricité.</p>
+
+            </div>
+
+            <div class="info">
+                <img src="/images/dashboard/logo_consom_Action.png" alt="photo background"
+                    style="width: 70px;height: 40px;float: left;">
+                <h1>BEAUTE ET SOIN DU CORPS</h1>
+                <div class="imageactu3"></div>
+                <p><strong>Geste N°47</strong>
+                    Se passer si possible de la climatisation afin d’éviter les
+                    émissions de gaz et une augmentation de facture d’électricité.</p>
+
+            </div>
+
+            <div class="info">
+                <img src="/images/dashboard/logo_greencoaching.png" alt="photo background"
+                    style="width: 70px;height: 40px;float: left;">
+                <h1>CONCOURS SUSTAINABLE SCHOOL</h1>
+                <div class="imageactu4"></div>
+                <p><strong>Geste N°47</strong>
+                    Se passer si possible de la climatisation afin d’éviter les
+                    émissions de gaz et une augmentation de facture d’électricité.</p>
+
+            </div>
+
+            <div class="info">
+                <img src="/images/dashboard/logo_growyourown.png" alt="photo background"
+                    style="width: 70px;height: 40px;float: left;">
+                <h1>KIT GARDEN</h1>
+                <div class="imageactu5"></div>
+                <p><strong>Geste N°47</strong>
+                    Se passer si possible de la climatisation afin d’éviter les
+                    émissions de gaz et une augmentation de facture d’électricité.</p>
+
+            </div>
+
+            <div class="info">
+                <img src="/images/dashboard/logo_repertoire_vert.png" alt="photo background"
+                    style="width: 70px;height: 40px;float: left;">
+                <h1>VOS ENGRAIS</h1>
+                <div class="imageactu6"></div>
+                <p><strong>Geste N°47</strong>
+                    Se passer si possible de la climatisation afin d’éviter les
+                    émissions de gaz et une augmentation de facture d’électricité.</p>
+
+            </div>
+
+            <div class="info">
+                <img src="/images/dashboard/logo_sharing_economy.png" alt="photo background"
+                    style="width: 70px;height: 40px;float: left;">
+                <h1>VOS ECO</h1>
+                <div class="imageactu7"></div>
+                <p><strong>Geste N°47</strong>
+                    Se passer si possible de la climatisation afin d’éviter les
+                    émissions de gaz et une augmentation de facture d’électricité.</p>
+
+            </div>
+
+            <div class="impacttracker">
+                <h2>Impact Tracker </br> </br> </br> </br> </br> </br> </br> </br> </br> </br> </br> Comming Soon
+                </h2>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    {#---------------------------------------------------------------------------------------------------------------#}
+    {#-------------------------------------------collone info (celle de droite)--------------------------------------#}
+    {#---------------------------------------------------------------------------------------------------------------#}
+    <div class="col-md-7 col-sm-7 col-xs-7">
+        <div class="row">
+            <div class="profil">
+                <h2>Votre Profil Individuel</h2>
+
+                <div class="target-socio">
+                    <p>Socio-économique</p>
+
+                    <h6>De quel type êtes-vous ?</h6>
+                    <h6> Vous avez répondu à ce questionnaire ?
+                        Retrouver ici votre Mini-profil Socio-économique.
+
+                    </h6>
+                    <a href="#">
+                        <i class="fa fa-plus-circle" style="font-size:20px;color:red"></i>
+                    </a>
+                </div>
+                <div class="target-psycho">
+                    <p>Psychologique</p>
+
+                    <h6>De quel type êtes-vous ?</h6>
+                    <h6> Vous avez répondu à ce questionnaire ?
+                        Retrouver ici votre Mini-profil Psychologique.</h6>
+
+
+                    <a href="#" data-toggle="modal" data-target="#myModal-Psychologique">
+                        <i class="fa fa-plus-circle" style="font-size:20px;color:red"></i></a>
+
+
+
+                </div>
+
+                <div class="target-ecologique">
+                    <p>Ecologique</p>
+
+                    <h6>De quel type êtes-vous ?</h6>
+                    <h6> Vous avez répondu à ce questionnaire ?
+                        Retrouver ici votre Mini-profil Ecologique.</h6>
+                    <a href="#">
+                        <i class="fa fa-plus-circle" style="font-size:20px;color:red"></i>
+                    </a>
+                </div>
+
+                <div class="bandeau-bottom">
+                    <div class="texte-bottom">
+                        <h6>Répondez aux questionnaires
+                            processus pour déterminer
+                            votre empreinte chomatique :</h6>
+                    </div>
+                    <div class="lien-questionnaires">
+                        <div class="mes-processus">
+                            <img src="{{ asset('images/dashboard/communiquer.png') }}" alt="photo background">
+                        </div>
+                        <div class="mes-processus"><a href="#">
+                                <img src="{{ asset('images/dashboard/manger.png') }}" alt="photo background"></a>
+                        </div>
+                        <div class="mes-processus">
+                            <img src="{{ asset('images/dashboard/s_habiller.png') }}" alt="photo background">
+                        </div>
+                        <div class="mes-processus">
+                            <img src="{{ asset('images/dashboard/se_déplacer.png') }}" alt="photo background">
+                        </div>
+                        <div class="mes-processus">
+                            <img src="{{ asset('images/dashboard/habiter.png') }}" alt="photo background">
+                        </div>
+                        <div class="mes-processus">
+                            <img src="{{ asset('images/dashboard/se_distraire.png') }}" alt="photo background">
+                        </div>
+                        <div class="mes-processus">
+                            <img src="{{ asset('images/dashboard/prendre_soin_de_soi.png') }}" alt="photo background">
+                        </div>
+                        <div class="mes-processus">
+
+                            <img src=" {{ asset('images/dashboard/travail.png') }}" alt="photo background">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="questionnaire">
+                <div class="profilfamille">
+                    <div class="target-profil">
+                        <p>Profil famille</p>
+
+                        <h6>De quel type êtes-vous ?</h6>
+                        <h6> Vous avez répondu à ce questionnaire ?
+                            Retrouver ici votre Mini-profil Psychologique.</h6>
+                        <a href="#">
+                            <i class="fa fa-plus-circle" style="font-size:20px;color:red"></i>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="profilamis">
+                    <div class="target-profil">
+                        <p>Profil amis</p>
+
+                        <h6>De quel type êtes-vous ?</h6>
+                        <h6> Vous avez répondu à ce questionnaire ?
+                            Retrouver ici votre Mini-profil Psychologique.</h6>
+                        <a href="#">
+                            <i class="fa fa-plus-circle" style="font-size:20px;color:red"></i>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="profilmenage">
+                    <div class="target-profil">
+                        <p>Profil menage</p>
+
+                        <h6>De quel type êtes-vous ?</h6>
+                        <h6> Vous avez répondu à ce questionnaire ?
+                            Retrouver ici votre Mini-profil Psychologique.</h6>
+                        <a href="#">
+                            <i class="fa fa-plus-circle" style="font-size:20px;color:red"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="affichageresultat">
+                <h2>Affichage résultats </br>par thème/questionniaire </h2>
+
+                <div class="gauche">
+                    <h1>COMMUNIQUER
+                        <img src="{{ asset('images/dashboard/empreinterouge.png') }}" alt=""></h1>
+                    <h3>Vous êtes un profil de type A</h3>
+                    <p>Quelques phrases récapitulatif expliquant un peu ce qui caractérise chaque profil pour que le
+                        consommateur comprenne bien</p>
+
+                    <h1>MANGER
+                        <a href="#">
+                            <img src="{{ asset('images/dashboard/mangerjaune.png') }}" alt=""></a></h1>
+
+
+
+                    <h3>Vous êtes un profil de type A</h3>
+                    <p>Quelques phrases récapitulatif expliquant un peu ce qui caractérise chaque profil pour que le
+                        consommateur comprenne bien</p>
+
+                    <h1>HABITER
+                        <img src="{{ asset('images/dashboard/habitergris.png') }}" alt=""></h1>
+                    <h3>Vous êtes un profil de type A</h3>
+                    <p>Quelques phrases récapitulatif expliquant un peu ce qui caractérise chaque profil pour que le
+                        consommateur comprenne bien</p>
+
+                    <h1>PRENDRE SOIN DE SOI
+                        <img src="{{ asset('images/dashboard/prendresoinvert.png') }}" alt=""></h1>
+                    <h3>Vous êtes un profil de type A</h3>
+                    <p>Quelques phrases récapitulatif expliquant un peu ce qui caractérise chaque profil pour que le
+                        consommateur comprenne bien</p>
+                </div>
+
+                <div class="droite">
+                    <h1 style="margin-top: 0px;">SE DEPLACER
+                        <img src="{{ asset('images/dashboard/sedeplacervertfon.png') }}" alt=""></h1>
+                    <h3>Vous êtes un profil de type A</h3>
+                    <p>Quelques phrases récapitulatif expliquant un peu ce qui caractérise chaque profil pour que le
+                        consommateur comprenne bien</p>
+
+                    <h1>S'HABILLER
+                        <img src="{{ asset('images/dashboard/shabillerorange.png') }}" alt=""></h1>
+                    <h3>Vous êtes un profil de type A</h3>
+                    <p>Quelques phrases récapitulatif expliquant un peu ce qui caractérise chaque profil pour que le
+                        consommateur comprenne bien</p>
+
+                    <h1>SE DISTRAIRE
+                        <img src="{{ asset('images/dashboard/sedistrairenoir.png') }}" alt=""></h1>
+                    <h3>Vous êtes un profil de type A</h3>
+                    <p>Quelques phrases récapitulatif expliquant un peu ce qui caractérise chaque profil pour que le
+                        consommateur comprenne bien</p>
+
+                    <h1>TRAVAILLER
+                        <img src="{{ asset('images/dashboard/travailjaune.png') }}" alt=""></h1>
+                    <h3>Vous êtes un profil de type A</h3>
+                    <p>Quelques phrases récapitulatif expliquant un peu ce qui caractérise chaque profil pour que le
+                        consommateur comprenne bien</p>
+                </div>
+            </div>
+
+            <div class="resultatcompare">
+                <h2>Résultats comparés</h2>
+            </div>
+
+            <div class="repondez">
+                <h2>Répondez aux questionnaires</h2>
+            </div>
+
+            <div class="them-survey">
+                {# future foreach quand les questionnaires thématiques serrons fini #}
+                <div class="processus">
+                    <a href="">
+                        <img src="{{ asset('images/landing-page/s_habiller.jpg') }}" alt="">
+                        <h5 class="questionnaire-title">S'habiller</h5>
+                    </a>
+                </div>
+                <div class="processus">
+                    <a href="">
+                        <img src="{{ asset('images/landing-page/habiter.jpg') }}" alt="">
+                        <h5 class="questionnaire-title">Habiter</h5>
+                    </a>
+                </div>
+                <div class="processus">
+
+                    <a href="#" aria-disabled="true" data-toggle="modal" data-target="#myModal">
+                        <img src="{{ asset('images/landing-page/manger.jpg') }}" alt="">
+                        <h5 class="questionnaire-title">Manger</h5>
+                    </a>
+
+                </div>
+                <div class="processus">
+                    <a href="">
+                        <img src="{{ asset('images/landing-page/se_deplacer.jpg') }}" alt="">
+                        <h5 class="questionnaire-title">Se deplacer</h5>
+                    </a>
+                </div>
+                <div class="processus">
+                    <a href="">
+                        <img src="{{ asset('images/landing-page/communiquer.jpg') }}" alt="">
+                        <h5 class="questionnaire-title">Communiquer</h5>
+                    </a>
+                </div>
+                <div class="processus">
+                    <a href="">
+                        <img src="{{ asset('images/landing-page/se_distraire.jpg') }}" alt="">
+                        <h5 class="questionnaire-title">Se distraire</h5>
+                    </a>
+                </div>
+                <div class="processus">
+                    <a href="">
+                        <img src="{{ asset('images/landing-page/prendre_soin_de_soi.jpg') }}" alt="">
+                        <h5 class="questionnaire-title">Prendre soin </br> de soi</h5>
+                    </a>
+                </div>
+                <div class="processus">
+                    <a href="">
+                        <img src="{{ asset('images/landing-page/travailler.jpg') }}" alt="">
+                        <h5 class="questionnaire-title">Travailler</h5>
+                    </a>
+                </div>
+
+                <div class="processus" style="background-color: #eeecef">
+                    <a href="">
+                        <img src="{{ asset('images/dashboard/empreinte.png') }}" alt="">
+                        <h5 class="questionnaire-title" style="color: red">Ateliers</h5>
+                    </a>
+                </div>
+                <div class="processus">
+                    <a href="">
+                        <img src="{{ asset('images/dashboard/cqs.png') }}" alt="">
+                    </a>
+                </div>
+                <div class="processus" style="background-color: #eeecef">
+                    <a href="">
+                        <img src="{{ asset('images/dashboard/empreinte.png') }}" alt="">
+                        <h5 class="questionnaire-title" style="color: red">Eco-panier</h5>
+                    </a>
+                </div>
+                <div class="processus">
+                    <a href="">
+                        <img src="{{ asset('images/dashboard/v.png') }}" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="pub">
+                <h2>Publicité </h2>
+                <h4>Personnalisez votre publicité</h4>
+                <h3><strong>Choix</strong></h3>
+                <h3><strong>Préferences</strong></h3>
+            </div>
+
+            <div class="bulgari">
+                <a href="">
+                    <img src="{{ asset('images/dashboard/dashboard rouge.png') }}" alt=""
+                        style="width: 100%;height:100%;	">
+                </a>
+            </div>
+
+            <div class="repondez">
+                <h2>Coûts et bénéfices</h2>
+            </div>
+
+            <div class="budget">
+                <h2>Budget</h2>
+            </div>
+
+            <div class="portefeuille">
+                <h2>Portefeuille</h2>
+            </div>
+
+            <div class="varrevenu">
+                <h2>Variation revenu excedentaire</h2>
+            </div>
+
+            <div class="green_coaching">
+                <p>GREEN COACHING</br> </br> </br>
+                    Votre objectif </br> du mois </br> Perdre 5kg</p>
+                <img src="{{ asset('images/dashboard/Copie de Fotolia_31153068_Subscription_XXL.jpg') }}" alt=""
+                    style="width: 100%;height:100%;	">
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+</div>
+
+
+
+
+
+{% endblock %}
+
+{% block javascripts %}
+
+<script link rel="stylesheet" href="{{ asset('js/bootstrap.min.js')}}"></script>
+<script src="{{ asset('js/app.js')}}"></script>
+{% endblock %}

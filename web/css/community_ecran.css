@@ -1,0 +1,320 @@
+
+/* ---------------------------------------------------------------------------
+Les paramètres suivants s'appliquent à partir de 992px
+--------------------------------------------------------------------------- */
+
+@media screen and (min-width: 992px) {
+
+    /* ABOUT */
+
+    .about {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .about .desc {
+        font-size: 18px;
+    }
+
+    .about p {
+        font-size: 0.9em;
+        margin-bottom: 10px;
+
+    }
+
+
+    /* BANDEAU JE REJOINS LA SLC */
+
+    .SLC .row {
+        height: 125px;
+    }
+
+    .SLC img {
+        height: 90px;
+    }
+
+    .SLC h2 {
+        margin-top: 20px;
+        margin-left:20px;
+        font-size: 21.75pt;
+    }
+
+    .slc-logo {
+        width: 90px;
+        height: 90px;
+        padding: 2px;
+        margin-left: 12%;
+    }
+
+    .SLC .yesBtn {
+        margin-right: 0;
+    }
+
+    .SLC .yes {
+        width: 103px;
+        height: 103px;
+    }
+
+    .SLC .no {
+        width:103px;
+        height: 103px;
+    }
+
+
+    /* IF EVERY DROP IN THE OCEAN SAID... */
+
+    .info {
+        margin-top: 70px;
+        padding: 53px 0 53px 33px;
+    }
+    
+    .info .titre h1 {
+        font-size: 30pt;
+    }
+
+    /*Liste avec tirets*/
+    .info .dashedList {
+        font-size: 14pt;
+    }
+    /*Fin liste avec tirets*/
+
+    .info .contentright q {
+        font-size: 14pt;
+    }
+
+    .info .contentright p {
+        font-size: 14pt;
+    }
+
+    .videoGreta {
+        width: 100%;
+        height: 100%;
+    }
+
+    .content p {
+        font-size: 14pt;
+    }
+
+    .content ul li {
+        font-size: 14pt;
+    }
+
+    .content2 ul li {
+        font-size: 14pt;
+    }
+
+    .content2 .desktop {
+        display: block;
+    }
+
+    .content2 .desktop span {
+        display: block;
+    }
+
+    .alignLeft {
+        display: none;
+    }
+
+
+    /* ASSOCIATION */
+
+    .association {
+        font-size: 1.6rem;
+        margin-top: 4rem;
+        margin-bottom: 8rem;
+    }
+
+    .assoMobile {
+        display: none;
+    }
+
+    .assoDesktop {
+        display: block;
+    }
+
+    .abeilles {
+        width: 63%;
+        bottom: 0;
+    }
+
+    .association .videoTeaserSlp iframe {
+        top: 491px;
+        width: 367px;
+        height: 208px;
+    }
+
+    .association .slpText {
+        position: relative;
+        top: 507px;
+        left: -10px;
+    }
+
+    .association h2 {
+        font-size: 3.2rem;
+        text-align: right;
+        margin-bottom: 6rem;
+    }
+
+    .association h3 {
+        margin-top: -7px;
+        margin-left: 0;
+        font-size: 2.2rem;
+    }
+
+    .association #firstParagraph {
+        margin-bottom: 8rem;
+    }
+
+    .association #secondParagraph {
+        margin-bottom: 2rem;
+    }
+
+    .association p {
+        text-align: right;
+    }
+
+    .association span {
+        display: block;
+    }
+
+
+    /* PASSEZ A L'ACTION! */
+
+    .actionDashboard .paddingBottom {
+        padding-bottom: 0;
+    }
+
+    .action .actionDashboard iframe {
+        height: 100%;
+    }
+    
+    .action .actionTitle {
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .actionForce .paddingBottom {
+        padding-bottom: 0;
+    }
+
+    .action .actionForce iframe {
+        height: 100%;
+    }
+
+    .action h2 {
+        font-size: 3.2rem;
+    }
+
+    .action h3 {
+        font-size: 2.5rem;
+    }
+
+    .action p {
+        font-size: 1.7rem;
+    }
+
+    
+/********** LES AVANTAGES DE LA SLC **********/
+
+    .avantages {
+        margin-top: 4rem;
+    }
+
+    .avantagesTitle {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .avantages img {
+        width: 100%;
+        height: auto;
+    }
+
+    .avantages h2 {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    .avantagesText {
+        font-size: 1.8rem;
+    }
+
+    /*Liste à puces de premier niveau*/
+    .avantages .dashed {
+        padding-left: 2rem;
+        list-style-image: url('/images/community/dash.png');
+    }
+
+    .avantages .dashed li {
+        font-size: 1.8rem;
+    }
+    
+    
+    /*Liste à puces de deuxième niveau*/
+    .avantages .bulletPoints {
+        list-style-image: url('/images/community/bullet10.png');
+    }
+
+    /*Liste à puces de troisième niveau*/
+    .avantages .bulletPoints .dashed li {
+        font-size: 1.8rem;
+    }
+
+
+    /* BOUTON SLC FORUM */
+        
+    .linkforum .bouton {
+        width: 100%;
+    }
+    
+}
+
+
+/* ---------------------------------------------------------------------------
+Les paramètres suivants s'appliquent à partir de 1200px
+--------------------------------------------------------------------------- */
+
+@media screen and (min-width: 1200px) {
+
+    /* INFORMATION : IF EVERY DROP... */
+    .info {
+        padding-bottom: 103px;
+    }
+
+    .videoGreta {
+        height: 130%;
+    }
+
+    /* ASSOCIATION POUR LA MISE EN OEUVRE DU DEVELOPPEMENT DURABLE ET DE L'AGENDA 21 */
+
+    .association {
+        font-size: 2rem;
+    }
+
+    .association h2 {
+        font-size: 3.8rem;
+    }
+
+    .association h3 {
+        font-size: 2.8rem;
+    }
+
+    .abeilles {
+        width: 65%;
+    }
+
+    .association .videoTeaserSlp iframe {
+        top: 569px;
+        width: 450px;
+        height: 255px;
+    }
+
+    .association .slpText {
+        top: 585px;
+    }
+
+
+
+}

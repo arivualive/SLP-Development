@@ -1,0 +1,143 @@
+body {
+    text-align: center;
+    --style-bold: 700;
+    --style-regular: 400;
+    --style-light: 300;
+}
+body * {
+    font-family: 'Nunito', sans-serif;
+}
+a {
+    color: inherit;
+}
+
+header {
+    background-image: url("../images/atelier-eco/ateliers_eco_header.jpg");
+    background-size: cover;
+    height: 700px;
+}
+header .content {
+    background-color: rgba(204, 102, 204, 0.45);
+    height: 100%;
+}
+header .text-content {
+    color: white;
+    padding: 200px;
+    position: relative;
+    font-weight: var(--style-bold);
+}
+header h1 {
+    font-size: 48px;
+    font-weight: var(--style-bold);    
+}
+header p.text {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    font-size: 30px;
+}
+header .menu-icon {
+    position: absolute;
+    right: 30px;
+    top: 30px;    
+}
+header .glyphicon {
+    border-radius: 100%;
+    background-color: #6E98ED;
+    color: white;
+    padding: 15px;
+    font-size: 30px;
+    font-weight: var(--style-bold);        
+}
+header .glyphicon:hover {
+    background-color: white;
+    color: #6E98ED;
+}
+    
+section {
+    color: #6E98ED;        
+}
+section.ateliers div.content.row{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+section.ateliers .text-content {
+    margin: 40px 0;
+    padding: 0 50px;
+}
+section.ateliers h2 {
+    font-size: 30px;
+    font-weight: var(--style-bold);
+}
+section.ateliers h2 span {
+    font-size: 24px;
+}
+
+section.ateliers p {
+    font-size: 18px;
+    font-weight: var(--style-light);
+    height: 170px;
+    padding-top: 10px;
+    text-align: center;/*justify*/
+}
+section.ateliers .image {
+    height: 100px;
+}
+section.ateliers img {
+    /* width: 25%; */
+    height: 100%;
+}
+section.ateliers a {
+    border: 2px solid #6E98ED;
+    color: #6E98ED;
+    padding: 10px;
+    position: relative;
+    top: 20px;
+}
+section.ateliers a:hover {
+    background-color: #6E98ED;
+    color: white;
+    text-decoration: none;
+}
+    
+    
+
+section.form h3 {
+    margin-top: 80px;
+    font-size: 24px;
+    font-weight: var(--style-bold);
+}
+section.form input, section.form select {
+    border: 2px solid #6E98ED;
+    width: 100%;
+    height: 50px;
+    display: block;
+    margin: 40px 0;
+    padding-left: 20px;
+    font-size: 18px;
+    font-weight: var(--style-regular);
+}
+section.form ::placeholder {
+    color: #6E98ED;
+}
+section.form .input-block {
+    padding: 0 60px;    
+}
+section.form input[type="submit"] {
+    width: 150px;
+    margin: auto;
+    margin-top: 0;
+    background-color: #6E98ED;
+    color: white;
+    padding-left: 0;
+}
+section.form input[type="submit"]:hover {
+    background-color: white;
+    color: #6E98ED;
+}
+
+.message-info {
+    font-size: 20px;
+    width: 50%;
+    margin: auto;
+    margin: 20px auto;
+}

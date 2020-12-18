@@ -1,0 +1,92 @@
+.ui-widget.ui-widget-content {
+    border:1px solid #539ac4;
+    /* dropdown section height */
+    /*
+    height: 20px;
+    */
+}
+    
+.ui-widget-content {
+    border:1px solid #ddd;
+    background:#fff;
+    color:#539ac4;
+    /* dropdown section height */
+    /*
+    height: 20px;
+    */
+}
+
+.ui-state-default,.ui-widget-content .ui-state-default,.ui-widget-header .ui-state-default,.ui-button,html .ui-button.ui-state-disabled:hover,html .ui-button.ui-state-disabled:active {
+    border:1px solid #539ac4;
+    background:#f6f6f6;
+    font-weight:normal;
+    color:#454545;
+    /*
+    height: 20px;
+    */
+}
+
+.ui-state-hover,.ui-widget-content .ui-state-hover,.ui-widget-header .ui-state-hover,.ui-state-focus,.ui-widget-content .ui-state-focus,.ui-widget-header .ui-state-focus,.ui-button:hover,.ui-button:focus {
+    border:1px solid #539ac4;
+    background:#fff;
+    font-weight:normal;
+    color:#2b2b2b;
+    /*
+    height: 20px;
+    */
+}
+
+.ui-visual-focus {
+    box-shadow:0 0 3px 1px rgb(94,158,214);
+    /*
+    height: 20px;
+    */
+}
+
+.ui-state-active,.ui-widget-content .ui-state-active,.ui-widget-header .ui-state-active,a.ui-button:active,.ui-button:active,.ui-button.ui-state-active:hover {
+    border: 1px solid #539ac4;
+    background: #539ac4;
+    font-weight: normal;
+    color: white;
+    /*color: #080000*/
+    
+    /* height of hover highlight - scroll appears when hover secound dropdown option*/
+    /*height: 20px;*/
+}
+
+.ui-icon-background,.ui-state-active .ui-icon-background {
+    border: #539ac4;
+    background-color: #080000;
+    /*height: 20px;*/
+    /*
+    height: 20px;
+    */
+}
+
+.ui-state-highlight,.ui-widget-content .ui-state-highlight,.ui-widget-header .ui-state-highlight {
+    border:1px solid #2c6384;
+    background:#539ac4;
+    color:#777620;
+    /*
+    height: 20px;
+    */
+}
+
+.ui-state-checked {
+    border:1px solid #2c6384;
+    background:#539ac4;
+    /*
+    height: 20px;
+    */
+}
+
+input {
+    border: 1px solid #539ac4;
+    /*
+    height: 20px;
+    */
+}
+
+.field-text {
+    color: #539ac4;
+}

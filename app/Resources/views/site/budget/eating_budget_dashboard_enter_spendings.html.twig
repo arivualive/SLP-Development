@@ -1,0 +1,2105 @@
+{% extends 'jquery-ui-dependencies.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/profilgaea.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/jquery/blue-form-widgets/blue-slp-theme.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/eating-budget.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/Dashboard/bar-chart/spendings-variation-bar-chart.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/forms/eating-budget-spendings-forms.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('css/Dashboard/budget-dashboard-program-enter-spendings.css') }}">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+{% endblock %}
+
+{% block body %}
+
+    <div class="header">
+{#        <div class="dropdown burger above-image">#}
+{#        </div>#}
+        <h1> PAGE BUDGET<br>MANGER</h1>
+        <div class="image-container">
+            <div class="blue-film"></div>
+            <img class="below-film"
+                 src="{{ asset('images/budget/manger/budget-manger-header.png') }}"
+            >
+{#            <a href="#">#}
+                <div class="dollar-img-container">
+                    {#  --Ici nous avons ajouté le menu burger en utilisant la classe
+                        dollar-img-container afin de de fixer notre menu a droite sur l'image--
+                    #}
+                    {% include '/site/budget/_menu-burger.html.twig' %}
+                    {# -- Fin du menu burger-- #}
+
+{#                    <img class="dollar-img" src="{{ asset('images/budget/individumenage/dollars.png') }}" />#}
+                </div>
+{#            </a>#}
+        </div>
+    </div>
+
+    <div class="text-intro">
+        <p class="intro-paragraph">
+            Beaucoup d'individus pensent qu’<b>adopter</b> un <b>comportement éco-conscient</b> et <b>consommer</b>
+            de manière <b>responsable</b> coûte <b>plus cher</b>.
+            Le <b>programme budget dashboard</b> est un logiciel qui permet de vous montrer une <b>réalité différente</b>.
+        </p>
+        <br class="intro-br">
+        <p class="intro-paragraph">
+            Le <b>programme budget manger</b> est une <b>application</b> mise à votre disposition pour vous permettre de rentrer vos <b>dépenses agro-alimentaire journalières</b>.
+            Le programme vous permet ainsi de <b>déterminer</b> votre <b>budget mensuel</b>, de <b>comparer</b> vos
+            <b>dépenses</b> au fur et à mesure du temps mais également mettre en avant les différents
+            composants se trouvant dans vos <b>produits achetés</b> et <b>consommés</b>.
+            Le programme sert à déterminer quels sont vos <b>coûts totaux</b>, vous permet de faire des <b>achats</b> plus <b>conscients</b>, <b>écologiques</b> et ainsi vous donner les <b>outils</b> pour <b>devenir</b> un <b>consom’acteur</b>.
+        </p>
+        <br class="intro-br">
+        <p class="intro-paragraph">
+            Quand vous aurez complété dans la totalité les différentes parties de votre <b>budget</b> grâce au <b>programme budget dashboard</b>, vous pouvez encore aller plus loin en intégrant le <b>programme "conseil vert"</b> du <b>répertoire vert</b> et avoir la possibilité d’obtenir des <b>conseils personnalisés</b>.
+        </p>
+        <br class="intro-br">
+        <p class="intro-paragraph">
+            A vous de jouer à présent. <b>Commencer à rentrer vos dépenses!</b>
+        </p>
+    </div>
+
+    <div class="green-plate-icon-container">
+        <img class="green-plate-icon" src="{{ asset('images/dashboard/budget/icone-manger.png') }}"/>
+    </div>
+
+    <div class="eating-theme">
+        <div class="two-rows-categories categories container my-container">
+            <div class="row my-row row-categories-before-selection">
+            <div id="drinks-2-l" class="subcategory-col col-3 my-col drinks">
+                <div class="col-12 my-col subcategory-container hand-on-hover">
+                    <div class="container my-container subcategory">
+                        <div class="row my-row subcategory-img-container">
+                            <img class="subcategory-img" src="{{ asset('images/dashboard/budget/boisson.png') }}" />
+                        </div>
+                        <div class="row my-row">
+                            <p class="green-text centered-text subcategory-text">
+                                <b>Boissons</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="fruits-vegetables-2-l" class="subcategory-col col-3 my-col fruits-vegetables">
+                <div class="col-12 my-col subcategory-container hand-on-hover">
+                    <div class="container my-container subcategory">
+                        <div class="row my-row subcategory-img-container">
+                            <img class="subcategory-img" src="{{ asset('images/dashboard/budget/fruit-legume.png') }}" />
+                        </div>
+                        <div class="row my-row">
+                            <p class="green-text centered-text subcategory-text">
+                                <b>Fruits et légumes</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="dairy-products-2-l" class="subcategory-col col-3 my-col dairy-products">
+                <div class="subcategory-container col-12 my-col hand-on-hover">
+                    <div class="container my-container subcategory">
+                        <div class="row my-row subcategory-img-container">
+                            <img class="subcategory-img" src="{{ asset('images/dashboard/budget/produit-laitier.png') }}" />
+                        </div>
+                        <div class="row my-row">
+                            <p class="green-text centered-text subcategory-text">
+                                <b>Produits laitiers</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="starchy-foods-2-l" class="subcategory-col col-3 my-col starchy-foods">
+                <div class="col-12 my-col subcategory-container hand-on-hover">
+                    <div class="container my-container subcategory">
+                        <div class="row my-row subcategory-img-container">
+                            <img class="subcategory-img" src="{{ asset('images/dashboard/budget/feculent.png') }}" />
+                        </div>
+                        <div class="row my-row">
+                            <p class="green-text centered-text subcategory-text">
+                                <b>Feculants</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="row my-row row-categories-before-selection">
+            
+            <div id="fat-2-l" class="subcategory-col col-4 my-col fat">
+                <div class="col-12 my-col subcategory-container hand-on-hover">
+                    <div class="container my-container subcategory">
+                        <div class="row my-row subcategory-img-container">
+                            <img class="subcategory-img" src="{{ asset('images/dashboard/budget/matiere-grasse.png') }}" />
+                        </div>
+                        <div class="row my-row">
+                            <p class="green-text centered-text subcategory-text">
+                                <b>Matières grasses</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sweet-products-2-l" class="subcategory-col col-4 my-col sweet-products">
+                <div class="col-12 my-col subcategory-container hand-on-hover">
+                    <div class="container my-container subcategory">
+                        <div class="row my-row subcategory-img-container">
+                            <img class="subcategory-img" src="{{ asset('images/dashboard/budget/produit-sucré.png') }}" />
+                        </div>
+                        <div class="row my-row">
+                            <p class="green-text centered-text subcategory-text">
+                                <b>Produits sucrés</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="vpo-2-l" class="subcategory-col col-4 my-col vpo">
+                <div class="col-12 my-col subcategory-container hand-on-hover">
+                    <div class="container my-container subcategory">
+                        <div class="row my-row subcategory-img-container">
+                            <img class="subcategory-img" src="{{ asset('images/dashboard/budget/vpo.png') }}" />
+                        </div>
+                        <div class="row my-row">
+                            <p class="green-text centered-text subcategory-text">
+                                <b>VPO</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="row my-row">
+            <div class="subcategory-col col-4 my-col"></div>
+            
+            <div class="subcategory-col col-4 my-col"></div>
+        </div>
+        </div>
+        <!--
+        {# include 'site/budget/currency-label-with-buttons-line.html.twig' #}
+        -->
+        
+
+        
+        <!--<div class="one-line-itms-images">
+            <div class="one-row-col my-itm">
+                <img class="one-row-image" src="{{ asset('images/dashboard/budget/feculent.png') }}" />
+            </div>
+            <div class="one-row-col my-itm">
+                <img class="one-row-image" src="{{ asset('images/dashboard/budget/fruit-legume.png') }}" />
+            </div>
+            <div class="one-row-col my-itm">
+                <img class="one-row-image" src="{{ asset('images/dashboard/budget/produit-laitier.png') }}" />
+            </div>
+            <div class="one-row-col my-itm">
+                <img class="one-row-image" src="{{ asset('images/dashboard/budget/vpo.png') }}" />
+            </div>
+            <div class="one-row-col my-itm">
+                <img class="one-row-image" src="{{ asset('images/dashboard/budget/matiere-grasse.png') }}" />
+            </div>
+            <div class="one-row-col my-itm">
+                <img class="one-row-image" src="{{ asset('images/dashboard/budget/produit-sucré.png') }}" />
+            </div>
+        </div>-->
+
+        <div class="bar-graph-container">
+            {% include 'site/bar-chart/spendings-variation-bar-charts-enter-spendings.html.twig' %}
+        </div>
+
+        <div class="one-row-container container my-container">
+            <div class="row my-row one-row">
+                <div id="drinks-1-l" class="one-row-col my-col drinks hand-on-hover">
+                    <img class="one-row-image" src="{{ asset('images/dashboard/budget/boisson.png') }}" />
+                </div>
+                <div id="fruits-vegetables-1-l" class="one-row-col my-col fruits-vegetables hand-on-hover">
+                    <img class="one-row-image" src="{{ asset('images/dashboard/budget/fruit-legume.png') }}" />
+                </div>
+                <div id="dairy-products-1-l" class="one-row-col my-col dairy-products hand-on-hover">
+                    <img class="one-row-image" src="{{ asset('images/dashboard/budget/produit-laitier.png') }}" />
+                </div>
+                <div id="vpo-1-l" class="one-row-col my-col vpo hand-on-hover">
+                    <img class="one-row-image" src="{{ asset('images/dashboard/budget/vpo.png') }}" />
+                </div>
+                <div id="starchy-foods-1-l" class="one-row-col my-col starchy-foods hand-on-hover">
+                    <img class="one-row-image" src="{{ asset('images/dashboard/budget/feculent.png') }}" />
+                </div>
+                <div id="fat-1-l" class="one-row-col my-col fat hand-on-hover">
+                    <img class="one-row-image" src="{{ asset('images/dashboard/budget/matiere-grasse.png') }}" />
+                </div>
+                <div id="sweet-products-1-l" class="one-row-col my-col sweet-products hand-on-hover">
+                    <img class="one-row-image" src="{{ asset('images/dashboard/budget/produit-sucré.png') }}" />
+                </div>
+            </div>
+        </div>
+
+        <div class="drinks-section">
+            <div class="form-img-title-container container my-container">
+                <div class="row my-row">
+                    <div class="col-2 my-col">
+                        <img class="frm-category-image" src="{{ asset('images/dashboard/budget/boisson.png') }}" />
+                    </div>
+                    <div class="col-10 my-col cat-frm-title-container">
+                        <p class="green-text cat-frm-title">Boissons</p>
+                    </div>
+                </div>
+            </div>
+                                                    
+            <div class="row my-row category-form ecran">
+                {% include('site/budget-spendings-forms/drinks-spendings-form.html.twig') %}
+            </div>
+        </div>
+        
+        
+
+        <div class="fruits-vegetables-section ecran">
+        
+        <div class="form-img-title-container container my-container">
+        <div class="row my-row">
+            <div class="col-2 my-col">
+                <img class="frm-category-image" src="{{ asset('images/dashboard/budget/fruit-legume.png') }}" />
+            </div>
+            <div class="col-10 my-col cat-frm-title-container">
+                <p class="green-text cat-frm-title">Fruits et légumes</p>
+            </div>
+        </div>
+        </div>
+
+        <div class="row my-row category-form">
+            {% include('site/budget-spendings-forms/fruits-vegetables-form.html.twig') %}
+        </div>
+        
+        </div>
+
+        <div class="dairy-products-section ecran">
+        
+        <div class="form-img-title-container container my-container">
+        <div class="row my-row">
+            <div class="col-2 my-col">
+                <img class="frm-category-image" src="{{ asset('images/dashboard/budget/produit-laitier.png') }}" />
+            </div>
+            <div class="col-10 my-col cat-frm-title-container">
+                <p class="green-text cat-frm-title">Produits laitiers</p>
+            </div>
+        </div>
+        </div>
+
+        <div class="row my-row category-form">
+            {% include('site/budget-spendings-forms/dairy-products-form.html.twig') %}
+        </div>
+
+        </div>
+
+        <div class="starchy-foods-section ecran">
+            <div class="form-img-title-container container my-container">
+            <div class="row my-row">
+                <div class="col-2 my-col">
+                    <img class="frm-category-image" src="{{ asset('images/dashboard/budget/feculent.png') }}" />
+                </div>
+                <div class="col-10 my-col cat-frm-title-container">
+                    <p class="green-text cat-frm-title">Féculents</p>
+                </div>
+            </div>
+            </div>
+
+            <div class="row my-row category-form">
+                {% include('site/budget-spendings-forms/starchy-foods-form.html.twig') %}
+            </div>
+
+            <a href="#">
+            <div class="plus">
+                <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+                <p class="txt-plus"> Ajouter produits</p>
+            </div>
+            </a>
+        </div>
+
+        <div class="fat-section ecran">
+            <div class="form-img-title-container container my-container">
+            <div class="row my-row">
+                <div class="col-2 my-col">
+                    <img class="frm-category-image" src="{{ asset('images/dashboard/budget/matiere-grasse.png') }}" />
+                </div>
+                <div class="col-10 my-col cat-frm-title-container">
+                    <p class="green-text cat-frm-title">Matières grasses</p>
+                </div>
+            </div>
+            </div>
+
+            <div class="row my-row category-form">
+                {% include('site/budget-spendings-forms/fat-form.html.twig') %}
+            </div>
+        </div>
+
+        <div class="sweet-products-section ecran">
+            <div class="form-img-title-container container my-container">
+            <div class="row my-row">
+                <div class="col-2 my-col">
+                    <img class="frm-category-image" src="{{ asset('images/dashboard/budget/produit-sucré.png') }}" />
+                </div>
+                <div class="col-10 my-col cat-frm-title-container">
+                    <p class="green-text cat-frm-title">Produits sucrés</p>
+                </div>
+            </div>
+            </div>
+
+            <div class="row my-row category-form">
+                {% include('site/budget-spendings-forms/sweet-products-form.html.twig') %}
+            </div>
+        </div>
+
+        <div class="vpo-section ecran">
+            <div class="form-img-title-container container my-container">
+            <div class="row my-row">
+                <div class="col-2 my-col">
+                    <img class="frm-category-image" src="{{ asset('images/dashboard/budget/vpo.png') }}" />
+                </div>
+                <div class="col-10 my-col cat-frm-title-container">
+                    <p class="green-text cat-frm-title">VPO</p>
+                </div>
+            </div>
+            </div>
+
+            <div class="row my-row category-form">
+                {% include('site/budget-spendings-forms/vpo-form.html.twig') %}
+            </div>
+        </div>
+
+        <div class="alcohol-tobacco-section ecran">
+            <div class="row my-row category-form">
+                {# include('site/budget-spendings-forms/alcohol&tobacco-form.html.twig') #}
+            </div>
+        </div>                                                       
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src = "{{ asset('js/budget/eating-budget-dashboard-program-enter-spendings.js') }}"></script>
+    <script>
+        
+        // to prevent the user from entering letters in field
+        $(document).ready(function() {
+            $(".amount-field").keypress(function(e) {
+                var keyCode = e.which;
+                /*
+                8 - (backspace)
+                32 - (space)
+                48-57 - (0-9)Numbers
+                */
+           
+                if ( (keyCode != 8 || keyCode ==32 ) && (keyCode < 48 || keyCode > 57)) {
+                    //showNoCharactersNotification();
+                    return false;
+                } else {
+                    //hideNoCharactersNotification();
+                }
+            });
+        });
+
+        $('.form-validation-button').click(function(){
+            console.log('validation button listener detected click');
+            category = $(this).data("category");
+            formValidation(category, $(this));
+        });
+
+        function formValidation(category, button) {
+            //categoryFormContainer = $(this).closest('.form-container');
+            
+            //myList = categoryFormContainer.find('.form-spending-line');
+
+            myList = button.parents('.'+category+'-form-container').find('.form-spending-line');
+
+            console.log(myList);
+            
+            var array = new Array();
+            var iteration = 0;
+  
+            myList.each(function() {
+                
+                console.log($(this));
+                
+                //nameAttribute = $(this).attr("class");
+                //console.log(nameAttribute);
+                //subcategory = nameAttribute.val();
+
+                //idValue = $(this).find('.spending').text();
+
+                idValue = $(this).data("id");
+
+                if (!idValue) {
+                    idValue = null;
+                }
+
+                //console.log('id value :');
+                //console.log(idValue);
+                
+                //idValue = null;
+
+                subcategory = $(this).find('.subcategory').text();
+
+                whatValue = $(this).find('.what-field').val();
+                quantityValue = $(this).find('.quantity-container').find('.ui-selectmenu-text').text();
+                brandValue = $(this).find('.brand-field').val();
+                amountValue = $(this).find('.amount-field').val();
+                currencyValue = $(this).find('.currency-list-container').find('.ui-selectmenu-text').text();
+
+                console.log('nouvelle itération :');
+                console.log(subcategory);
+                console.log(whatValue);
+                console.log(quantityValue);
+                console.log(brandValue);
+                console.log(amountValue);
+                console.log(currencyValue);
+
+                if (whatValue != 0 && quantityValue != 0 && brandValue != 0 && amountValue != 0) {
+                    var miniArray = {
+                        "id" : idValue,
+                        "name" : whatValue,
+                        "quantity" : quantityValue,
+                        "brand" : brandValue,
+                        "amount" : amountValue,
+                        "currency" : currencyValue,
+                        "subcategory" : subcategory
+                    };
+    
+                    //console.log(miniArray);
+                    array.push(miniArray);
+                    iteration += Number(1);
+                }
+            });
+            
+            console.log(array);
+  
+            var myJSON = JSON.stringify(array);
+  
+            console.log(myJSON);
+
+            $(document).ready(function() {
+                $.ajax({
+                    url:'/ajax_themes_spendings_record_update',
+                    type: "POST",
+                    dataType: "json",
+                    data: {
+                      "myJSON": myJSON
+                    },
+                    async: true,
+                    success: function (data)
+                    {
+                      myJSON;
+                    }
+                });
+            });
+        }
+        
+        /*$(".form-validation-button").click(function() {
+            
+            categoryFormContainer = $(this).closest('.form-container');
+            
+            myList = categoryFormContainer.find('.form-spending-line');
+
+            console.log(myList);
+            
+            var array = new Array();
+            var iteration = 0;
+  
+            myList.each(function() {
+                
+                console.log($(this));
+                
+                //nameAttribute = $(this).attr("class");
+                //console.log(nameAttribute);
+                //subcategory = nameAttribute.val();
+
+                idValue = $(this).find('.spending').text();
+
+                if (!idValue) {
+                    idValue = null;
+                }
+
+                //console.log('id value :');
+                //console.log(idValue);
+                
+                //idValue = null;
+
+                subcategory = $(this).find('.subcategory').text();
+
+                whatValue = $(this).find('.what-field').val();
+                quantityValue = $(this).find('.quantity-container').find('.ui-selectmenu-text').text();
+                brandValue = $(this).find('.brand-field').val();
+                amountValue = $(this).find('.amount-field').val();
+                currencyValue = $(this).find('.currency-list-container').find('.ui-selectmenu-text').text();
+
+                console.log('nouvelle itération :');
+                console.log(subcategory);
+                console.log(whatValue);
+                console.log(quantityValue);
+                console.log(brandValue);
+                console.log(amountValue);
+                console.log(currencyValue);
+
+                var miniArray = {
+                    "id" : idValue,
+                    "name" : whatValue,
+                    "quantity" : quantityValue,
+                    "brand" : brandValue,
+                    "amount" : amountValue,
+                    "currency" : currencyValue,
+                    "subcategory" : subcategory
+                };
+
+                //console.log(miniArray);
+                array.push(miniArray);
+                iteration += Number(1);
+                
+            });
+            
+            console.log(array);
+  
+            var myJSON = JSON.stringify(array);
+  
+            console.log(myJSON);
+
+            $(document).ready(function() {
+                $.ajax({
+                    url:'/ajax_themes_spendings_record_update',
+                    type: "POST",
+                    dataType: "json",
+                    data: {
+                      "myJSON": myJSON
+                    },
+                    async: true,
+                    success: function (data)
+                    {
+                      myJSON;
+                    }
+                });
+            });
+        });*/
+
+
+
+
+
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        /*
+        $(".water-quantity-dropdownlist-triangle").click(function(){
+            subcategory = "water";
+            subject = "quantity";
+            openedDropdownMenu = waterOpenedQuantityDropdownMenu;
+            toggleDropdownMenu(subcategory, subject, openedDropdownMenu);
+        });
+        
+        $(".water-currency-dropdownlist-triangle").click(function(){
+            subcategory = "water";
+            subject = "currency";
+            openedDropdownMenu = waterOpenedCurrencyDropdownMenu;
+            toggleDropdownMenu(subcategory, subject, openedDropdownMenu);
+        });
+
+        $(".coffee-quantity-dropdownlist-triangle").click(function(){
+            subcategory = "water";
+            subject = "currency";
+            openedDropdownMenu = waterOpenedCurrencyDropdownMenu;
+            toggleDropdownMenu(subcategory, subject, openedDropdownMenu);
+        });
+
+        $(".coffee-currency-dropdownlist-triangle").click(function(){
+            subcategory = "water";
+            subject = "currency";
+            openedDropdownMenu = waterOpenedCurrencyDropdownMenu;
+            toggleDropdownMenu(subcategory, subject, openedDropdownMenu);
+        });
+        */
+        
+        // to open / close on click on the dropdown menu blue triangle
+        
+        // drinks
+        var waterOpenedQuantityDropdownMenu = false;
+        var waterOpenedCurrencyDropdownMenu = false;
+        
+        var coffeeOpenedQuantityDropdownMenu = false;
+        var coffeeOpenedCurrencyDropdownMenu = false;
+        
+        var teaOpenedQuantityDropdownMenu = false;
+        var teaOpenedCurrencyDropdownMenu = false;
+        
+        var softDrinkOpenedQuantityDropdownMenu = false;
+        var softDrinkOpenedCurrencyDropdownMenu = false;
+
+        var vegetableDrinkOpenedQuantityDropdownMenu = false;
+        var vegetableDrinkOpenedCurrencyDropdownMenu = false;
+
+        // fruits-vegetables
+
+        var freshFruitOpenedQuantityDropdownMenu = false;
+        var freshFruitOpenedCurrencyDropdownMenu = false;
+
+        var driedFruitOpenedQuantityDropdownMenu = false;
+        var driedFruitOpenedCurrencyDropdownMenu = false;
+
+        var processedFruitOpenedQuantityDropdownMenu = false;
+        var processedFruitOpenedCurrencyDropdownMenu = false;
+
+        var vegetableOpenedQuantityDropdownMenu = false;
+        var vegetableOpenedCurrencyDropdownMenu = false;
+        
+        var oilseedOpenedQuantityDropdownMenu = false;
+        var oilseedOpenedCurrencyDropdownMenu = false;
+
+        // dairy-products
+        
+        var cheeseOpenedQuantityDropdownMenu = false;
+        var cheeseOpenedCurrencyDropdownMenu = false;
+
+        var milkOpenedQuantityDropdownMenu = false;
+        var milkOpenedCurrencyDropdownMenu = false;
+
+        var sweetDairyDessertOpenedQuantityDropdownMenu = false;
+        var sweetDairyDessertOpenedCurrencyDropdownMenu = false;
+
+        var freshSweetDairyProductOpenedQuantityDropdownMenu = false;
+        var freshSweetDairyProductOpenedCurrencyDropdownMenu = false;
+
+        var plainFreshDairyProductOpenedQuantityDropdownMenu = false;
+        var plainFreshDairyProductOpenedCurrencyDropdownMenu = false;
+
+        // vpo
+
+        var meatOpenedQuantityDropdownMenu = false;
+        var meatOpenedCurrencyDropdownMenu = false;
+
+        var poultryOpenedQuantityDropdownMenu = false;
+        var poultryOpenedCurrencyDropdownMenu = false;
+
+        var delicatessenOpenedQuantityDropdownMenu = false;
+        var delicatessenOpenedCurrencyDropdownMenu = false;
+
+        var oilyFishOpenedQuantityDropdownMenu = false;
+        var oilyFishOpenedCurrencyDropdownMenu = false;
+
+        var leanFishOpenedQuantityDropdownMenu = false;
+        var leanFishOpenedCurrencyDropdownMenu = false;
+
+        var molluscCrustaceanOpenedQuantityDropdownMenu = false;
+        var molluscCrustaceanOpenedCurrencyDropdownMenu = false;
+
+        var eggOpenedQuantityDropdownMenu = false;
+        var eggOpenedCurrencyDropdownMenu = false;
+
+        // starchy foods
+
+        var completeStarchOpenedQuantityDropdownMenu = false;
+        var completeStarchOpenedCurrencyDropdownMenu = false;
+
+        var refinedStarchyOpenedQuantityDropdownMenu = false;
+        var refinedStarchyOpenedCurrencyDropdownMenu = false;
+
+        var legumeOpenedQuantityDropdownMenu = false;
+        var legumeOpenedCurrencyDropdownMenu = false;
+
+        // fat
+
+        var animalFatOpenedQuantityDropdownMenu = false;
+        var animalFatOpenedCurrencyDropdownMenu = false;
+
+        var vegetableOilOpenedQuantityDropdownMenu = false;
+        var vegetableOilOpenedCurrencyDropdownMenu = false;
+
+        var sauceOpenedQuantityDropdownMenu = false;
+        var sauceOpenedCurrencyDropdownMenu = false;
+
+        // sweet products
+
+        var cakeBiscuitIndustrialConfectioneryOpenedQuantityDropdownMenu = false;
+        var cakeBiscuitIndustrialConfectioneryOpenedCurrencyDropdownMenu = false;
+
+        var darkChocolateOpenedQuantityDropdownMenu = false;
+        var darkChocolateOpenedCurrencyDropdownMenu = false;
+
+        var whiteSugarOpenedQuantityDropdownMenu = false;
+        var whiteSugarOpenedCurrencyDropdownMenu = false;
+
+        var alternativeSugarOpenedQuantityDropdownMenu = false;
+        var alternativeSugarOpenedCurrencyDropdownMenu = false;
+
+        var sweetenerOpenedQuantityDropdownMenu = false;
+        var sweetenerOpenedCurrencyDropdownMenu = false;
+        
+        // alcohol & tobbacco
+
+        var alcoholOpenedQuantityDropdownMenu = false;
+        var alcoholOpenedCurrencyDropdownMenu = false;
+
+        var tobbaccoOpenedQuantityDropdownMenu = false;
+        var tobbaccoOpenedCurrencyDropdownMenu = false;
+        
+        var openedDropdownMenu = false;
+
+        $(".triangle-img-container").click(function(){
+            if ($(this).hasClass("currency")){
+                subject = "currency";
+            } else if ($(this).hasClass("quantity")){
+                subject = "quantity";
+            }
+            
+            // drinks
+            if ($(this).hasClass("water")){
+                subcategory = "water";
+                if (subject == "quantity") {
+                    openedDropdownMenu = waterOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = waterOpenedCurrencyDropdownMenu;
+                }
+            }
+            if ($(this).hasClass("coffee")){
+                subcategory = "coffee";
+                if (subject == "quantity") {
+                    openedDropdownMenu = coffeeOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = coffeeOpenedCurrencyDropdownMenu;
+                }
+            }
+            if ($(this).hasClass("tea")){
+                subcategory = "tea";
+                if (subject == "quantity") {
+                    openedDropdownMenu = teaOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = teaOpenedCurrencyDropdownMenu;
+                }
+            }
+            if ($(this).hasClass("soft-drink")){
+                subcategory = "soft-drink";
+                if (subject == "quantity") {
+                    openedDropdownMenu = softDrinkOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = softDrinkOpenedCurrencyDropdownMenu;
+                }
+            }
+            if ($(this).hasClass("vegetable-drink")){
+                subcategory = "vegetable-drink";
+                if (subject == "quantity") {
+                    openedDropdownMenu = vegetableDrinkOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = vegetableDrinkOpenedCurrencyDropdownMenu;
+                }
+            }
+
+            if ($(this).hasClass("water")){
+                subcategory = "water";
+                if (subject == "quantity") {
+                    openedDropdownMenu = waterOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = waterOpenedCurrencyDropdownMenu;
+                }
+            }
+            if ($(this).hasClass("coffee")){
+                subcategory = "coffee";
+                if (subject == "quantity") {
+                    openedDropdownMenu = coffeeOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = coffeeOpenedCurrencyDropdownMenu;
+                }
+            }
+            if ($(this).hasClass("tea")){
+                subcategory = "tea";
+                if (subject == "quantity") {
+                    openedDropdownMenu = teaOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = teaOpenedCurrencyDropdownMenu;
+                }
+            }
+            if ($(this).hasClass("soft-drink")){
+                subcategory = "soft-drink";
+                if (subject == "quantity") {
+                    openedDropdownMenu = softDrinkOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = softDrinkOpenedCurrencyDropdownMenu;
+                }
+            }
+            if ($(this).hasClass("vegetable-drink")){
+                subcategory = "vegetable-drink";
+                if (subject == "quantity") {
+                    openedDropdownMenu = vegetableDrinkOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = vegetableDrinkOpenedCurrencyDropdownMenu;
+                }
+            }
+
+            // fruits-vegetables
+
+            if ($(this).hasClass("fresh-fruit")){
+                subcategory = "fresh-fruit";
+                if (subject == "quantity") {
+                    openedDropdownMenu = freshFruitOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = freshFruitOpenedCurrencyDropdownMenu;
+                }
+            }
+            if ($(this).hasClass("dried-fruit")){
+                subcategory = "dried-fruit";
+                if (subject == "quantity") {
+                    openedDropdownMenu = driedFruitOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = driedFruitOpenedCurrencyDropdownMenu;
+                }
+            }
+            if ($(this).hasClass("processed-fruit")){
+                subcategory = "processed-fruit";
+                if (subject == "quantity") {
+                    openedDropdownMenu = processedFruitOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = processedFruitOpenedCurrencyDropdownMenu;
+                }
+            }
+            if ($(this).hasClass("vegetable")){
+                subcategory = "vegetable";
+                if (subject == "quantity") {
+                    openedDropdownMenu = vegetableOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = vegetableOpenedCurrencyDropdownMenu;
+                }
+            }
+            if ($(this).hasClass("oilseed")){
+                subcategory = "oilseed";
+                if (subject == "quantity") {
+                    openedDropdownMenu = oilseedOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = oilseedOpenedCurrencyDropdownMenu;
+                }
+            }
+
+            // dairy products
+
+            if ($(this).hasClass("cheese")){
+                subcategory = "cheese";
+                if (subject == "quantity") {
+                    openedDropdownMenu = cheeseOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = cheeseOpenedCurrencyDropdownMenu;
+                }
+            }
+
+            if ($(this).hasClass("milk")){
+                subcategory = "milk";
+                if (subject == "quantity") {
+                    openedDropdownMenu = milkOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = milkOpenedCurrencyDropdownMenu;
+                }
+            }
+
+            if ($(this).hasClass("sweet-dairy-dessert")){
+                subcategory = "sweet-dairy-dessert";
+                if (subject == "quantity") {
+                    openedDropdownMenu = sweetDairyDessertOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = sweetDairyDessertOpenedCurrencyDropdownMenu;
+                }
+            }
+
+            if ($(this).hasClass("fresh-sweet-dairy-product")){
+                subcategory = "fresh-sweet-dairy-product";
+                if (subject == "quantity") {
+                    openedDropdownMenu = freshSweetDairyProductOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = freshSweetDairyProductOpenedCurrencyDropdownMenu;
+                }
+            }
+
+            if ($(this).hasClass("plain-fresh-dairy-product")){
+                subcategory = "plain-fresh-dairy-product";
+                if (subject == "quantity") {
+                    openedDropdownMenu = plainFreshDairyProductOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = plainFreshDairyProductOpenedCurrencyDropdownMenu;
+                }
+            }
+
+            // vpo - meet fish egg
+            
+            if ($(this).hasClass("meat")){
+                subcategory = "meat";
+                if (subject == "quantity") {
+                    openedDropdownMenu = meatOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = meatOpenedCurrencyDropdownMenu;
+                }
+            }
+
+            if ($(this).hasClass("poultry")){
+                subcategory = "poultry";
+                if (subject == "quantity") {
+                    openedDropdownMenu = poultryOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = poultryOpenedCurrencyDropdownMenu;
+                }
+            }
+
+            if ($(this).hasClass("delicatessen")){
+                subcategory = "delicatessen";
+                if (subject == "quantity") {
+                    openedDropdownMenu = delicatessenOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = delicatessenOpenedCurrencyDropdownMenu;
+                }
+            }
+
+            if ($(this).hasClass("oily-fish")){
+                subcategory = "oily-fish";
+                if (subject == "quantity") {
+                    openedDropdownMenu = oilyFishOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = oilyFishOpenedCurrencyDropdownMenu;
+                }
+            }
+
+            if ($(this).hasClass("lean-fish")){
+                subcategory = "lean-fish";
+                if (subject == "quantity") {
+                    openedDropdownMenu = leanFishOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = leanFishOpenedCurrencyDropdownMenu;
+                }
+            }
+
+            if ($(this).hasClass("mollusc-crustacean")){
+                subcategory = "mollusc-crustacean";
+                if (subject == "quantity") {
+                    openedDropdownMenu = molluscCrustaceanOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = molluscCrustaceanOpenedCurrencyDropdownMenu;
+                }
+            }
+
+            if ($(this).hasClass("egg")){
+                subcategory = "egg";
+                if (subject == "quantity") {
+                    openedDropdownMenu = eggOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = eggOpenedCurrencyDropdownMenu;
+                }
+            }
+
+            // starchy foods
+
+            if ($(this).hasClass("complete-starch")){
+                subcategory = "complete-starch";
+                if (subject == "quantity") {
+                    openedDropdownMenu = completeStarchOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = completeStarchOpenedCurrencyDropdownMenu;
+                }
+            }
+
+            if ($(this).hasClass("refined-starchy")){
+                subcategory = "refined-starchy";
+                if (subject == "quantity") {
+                    openedDropdownMenu = refinedStarchyOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = refinedStarchyOpenedCurrencyDropdownMenu;
+                }
+            }
+
+            if ($(this).hasClass("legume")){
+                subcategory = "legume";
+                if (subject == "quantity") {
+                    openedDropdownMenu = legumeOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = legumeOpenedCurrencyDropdownMenu;
+                }
+            }
+
+            // fat
+
+            if ($(this).hasClass("animal-fat")){
+                subcategory = "animal-fat";
+                if (subject == "quantity") {
+                    openedDropdownMenu = animalFatOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = animalFatOpenedCurrencyDropdownMenu;
+                }
+            }
+
+            if ($(this).hasClass("vegetable-oil")){
+                subcategory = "vegetable-oil";
+                if (subject == "quantity") {
+                    openedDropdownMenu = vegetableOilOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = vegetableOilOpenedCurrencyDropdownMenu;
+                }
+            }
+
+            if ($(this).hasClass("sauce")){
+                subcategory = "sauce";
+                if (subject == "quantity") {
+                    openedDropdownMenu = sauceOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = sauceOpenedCurrencyDropdownMenu;
+                }
+            }
+
+            // sweet products
+
+            if ($(this).hasClass("cake-biscuit-industrial-confectionery")){
+                subcategory = "cake-biscuit-industrial-confectionery";
+                if (subject == "quantity") {
+                    openedDropdownMenu = cakeBiscuitIndustrialConfectioneryOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = cakeBiscuitIndustrialConfectioneryOpenedCurrencyDropdownMenu;
+                }
+            }
+
+            if ($(this).hasClass("dark-chocolate")){
+                subcategory = "dark-chocolate";
+                if (subject == "quantity") {
+                    openedDropdownMenu = darkChocolateOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = darkChocolateOpenedCurrencyDropdownMenu;
+                }
+            }
+
+            if ($(this).hasClass("white-sugar")){
+                subcategory = "white-sugar";
+                if (subject == "quantity") {
+                    openedDropdownMenu = whiteSugarOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = whiteSugarOpenedCurrencyDropdownMenu;
+                }
+            }
+
+            if ($(this).hasClass("alternative-sugar")){
+                subcategory = "alternative-sugar";
+                if (subject == "quantity") {
+                    openedDropdownMenu = alternativeSugarOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = alternativeSugarOpenedCurrencyDropdownMenu;
+                }
+            }
+
+            if ($(this).hasClass("sweetener")){
+                subcategory = "sweetener";
+                if (subject == "quantity") {
+                    openedDropdownMenu = sweetenerOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = sweetenerOpenedCurrencyDropdownMenu;
+                }
+            }
+
+            // alcohol & tobbacco
+
+            if ($(this).hasClass("alcohol")){
+                subcategory = "alcohol";
+                if (subject == "quantity") {
+                    openedDropdownMenu = alcoholOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = alcoholOpenedCurrencyDropdownMenu;
+                }
+            }
+
+            if ($(this).hasClass("tobbacco")){
+                subcategory = "tobbacco";
+                if (subject == "quantity") {
+                    openedDropdownMenu = tobbaccoOpenedQuantityDropdownMenu;
+                } else if (subject == "currency") {
+                    openedDropdownMenu = tobbaccoOpenedCurrencyDropdownMenu;
+                }
+            }
+
+            toggleDropdownMenu(subcategory, subject, openedDropdownMenu);
+        });
+
+        function toggleDropdownMenu(subcategory, subject, openedDropdownMenu) {
+            if (openedDropdownMenu == false) {
+                $("."+subcategory+"-"+subject+"-list").selectmenu("open");
+                openedDropdownMenu = true;
+                console.log("openedDropdownMenu should be sent to true:");
+                console.log(openedDropdownMenu);
+            } else {
+                $("."+subcategory+"-"+subject+"-list").selectmenu("close");
+                openedDropdownMenu = false;
+                console.log("openedDropdownMenu should be sent to false:");
+                console.log(openedDropdownMenu);
+            }
+            //resetSubcategoryOpenBoolean(subcategory, subject, openedDropdownMenu);
+            if (subject == "quantity") {
+                
+                // drinks
+                if (subcategory == "water") {
+                    waterOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory water');
+                }
+                if (subcategory == "coffee") {
+                    coffeeOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory coffee');
+                }
+                if (subcategory == "tea") {
+                    teaOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory tea');
+                }
+                if (subcategory == "soft-drink") {
+                    softDrinkOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory soft-drink');
+                }
+                if (subcategory == "vegetable-drink") {
+                    vegetableDrinkOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory vegetable-drink');
+                }
+
+                // fruits-vegetables
+
+                if (subcategory == "fresh-fruit") {
+                    freshFruitOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory fresh-fruit');
+                }
+                if (subcategory == "dried-fruit") {
+                    driedFruitOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory dried-fruit');
+                }
+                if (subcategory == "processed-fruit") {
+                    processedFruitOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory processed-fruit');
+                }
+                if (subcategory == "vegetable") {
+                    vegetableOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory vegetable-fruit');
+                }
+                if (subcategory == "oilseed") {
+                    oilseedOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory oilseed-fruit');
+                }
+
+                // dairy products
+
+                if (subcategory == "cheese") {
+                    cheeseOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory cheese-fruit');
+                }
+                if (subcategory == "milk") {
+                    milkOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory milk-fruit');
+                }
+                if (subcategory == "sweet-dairy-dessert") {
+                    sweetDairyDessertOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory sweet-dairy-dessert');
+                }
+                if (subcategory == "fresh-sweet-dairy-product") {
+                    freshSweetDairyProductOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory fresh-sweet-dairy-product');
+                }
+                if (subcategory == "plain-fresh-dairy-product") {
+                    plainFreshDairyProductOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory plain-fresh-dairy-product');
+                }
+
+                // vpo
+
+                if (subcategory == "meat") {
+                    meatOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory meat');
+                }
+                if (subcategory == "poultry") {
+                    poultryOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory poultry');
+                }
+                if (subcategory == "delicatessen") {
+                    delicatessenOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory delicatessen');
+                }
+                if (subcategory == "oily-fish") {
+                    oilyFishOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory oily-fish');
+                }
+                if (subcategory == "lean-fish") {
+                    leanFishOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory lean-fish');
+                }
+                if (subcategory == "mollusc-crustacean") {
+                    molluscCrustaceanOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory mollusc-crustacean');
+                }
+                if (subcategory == "egg") {
+                    eggOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory egg');
+                }
+
+                // starchy foods
+
+                if (subcategory == "complete-starch") {
+                    completeStarchOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory complete-starch');
+                }
+                if (subcategory == "refined-starchy") {
+                    refinedStarchyOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory refined-starchy');
+                }
+                if (subcategory == "legume") {
+                    legumeOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory legume');
+                }
+                
+                // fat product
+
+                if (subcategory == "animal-fat") {
+                    animalFatOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory animal-fat');
+                }
+                if (subcategory == "vegetable-oil") {
+                    vegetableOilOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory vegetable-oil');
+                }
+                if (subcategory == "sauce") {
+                    sauceOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory sauce');
+                }
+
+                // sweet products
+
+                if (subcategory == "cake-biscuit-industrial-confectionery") {
+                    cakeBiscuitIndustrialConfectioneryOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory cake-biscuit-industrial-confectionery');
+                }
+                if (subcategory == "dark-chocolate") {
+                    darkChocolateOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory dark-chocolate');
+                }
+                if (subcategory == "white-sugar") {
+                    whiteSugarOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory white-sugar');
+                }
+                if (subcategory == "alternative-sugar") {
+                    alternativeSugarOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory alternative-sugar');
+                }
+                if (subcategory == "sweetener") {
+                    sweetenerOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory sweetener');
+                }
+
+                //alcohol & tobbacco
+                if (subcategory == "alcohol") {
+                    alcoholOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory alcohol');
+                }
+                if (subcategory == "tobbacco") {
+                    tobbaccoOpenedQuantityDropdownMenu = openedDropdownMenu;
+                    console.log('quantity subcategory tobbacco');
+                }
+            } else if (subject == "currency") {
+                
+                // drinks
+                if (subcategory == "water") {
+                    waterOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory water');
+                }
+                if (subcategory == "coffee") {
+                    coffeeOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory coffee');
+                }
+                if (subcategory == "tea") {
+                    teaOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory tea');
+                }
+                if (subcategory == "soft-drink") {
+                    softDrinkOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory soft-drink');
+                }
+                if (subcategory == "vegetable-drink") {
+                    vegetableDrinkOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory vegetable-drink');
+                }
+
+                // fruits-vegetables
+
+                if (subcategory == "fresh-fruit") {
+                    freshFruitOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory fresh-fruit');
+                }
+                if (subcategory == "dried-fruit") {
+                    driedFruitOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory dried-fruit');
+                }
+                if (subcategory == "processed-fruit") {
+                    processedFruitOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory processed-fruit');
+                }
+                if (subcategory == "vegetable") {
+                    vegetableOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory vegetable');
+                }
+                if (subcategory == "oilseed") {
+                    oilseedOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory oilseed');
+                }
+
+                // dairy products
+
+                if (subcategory == "cheese") {
+                    cheeseOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory cheese-fruit');
+                }
+                if (subcategory == "milk") {
+                    milkOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory milk-fruit');
+                }
+                if (subcategory == "sweet-dairy-dessert") {
+                    sweetDairyDessertOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory sweet-dairy-dessert');
+                }
+                if (subcategory == "fresh-sweet-dairy-product") {
+                    freshSweetDairyProductOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory fresh-sweet-dairy-product');
+                }
+                if (subcategory == "plain-fresh-dairy-product") {
+                    plainFreshDairyProductOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory plain-fresh-dairy-product');
+                }
+
+                // vpo
+
+                if (subcategory == "meat") {
+                    meatOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory meat');
+                }
+                if (subcategory == "poultry") {
+                    poultryOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory poultry');
+                }
+                if (subcategory == "delicatessen") {
+                    delicatessenOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory delicatessen');
+                }
+                if (subcategory == "oily-fish") {
+                    oilyFishOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory oily-fish');
+                }
+                if (subcategory == "lean-fish") {
+                    leanFishOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory lean-fish');
+                }
+                if (subcategory == "mollusc-crustacean") {
+                    molluscCrustaceanOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory mollusc-crustacean');
+                }
+                if (subcategory == "egg") {
+                    eggOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory egg');
+                }
+
+                // starchy foods
+
+                if (subcategory == "complete-starch") {
+                    completeStarchOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory complete-starch');
+                }
+                if (subcategory == "refined-starchy") {
+                    refinedStarchyOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory refined-starchy');
+                }
+                if (subcategory == "legume") {
+                    legumeOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory legume');
+                }
+                
+                // fat product
+
+                if (subcategory == "animal-fat") {
+                    animalFatOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory animal-fat');
+                }
+                if (subcategory == "vegetable-oil") {
+                    vegetableOilOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory vegetable-oil');
+                }
+                if (subcategory == "sauce") {
+                    sauceOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory sauce');
+                }
+
+                // sweet products
+
+                if (subcategory == "cake-biscuit-industrial-confectionery") {
+                    cakeBiscuitIndustrialConfectioneryOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory cake-biscuit-industrial-confectionery');
+                }
+                if (subcategory == "dark-chocolate") {
+                    darkChocolateOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory dark-chocolate');
+                }
+                if (subcategory == "white-sugar") {
+                    whiteSugarOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory white-sugar');
+                }
+                if (subcategory == "alternative-sugar") {
+                    alternativeSugarOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory alternative-sugar');
+                }
+                if (subcategory == "sweetener") {
+                    sweetenerOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory sweetener');
+                }
+
+                //alcohol & tobbacco
+                if (subcategory == "alcohol") {
+                    alcoholOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory alcohol');
+                }
+                if (subcategory == "tobbacco") {
+                    tobbaccoOpenedCurrencyDropdownMenu = openedDropdownMenu;
+                    console.log('currency subcategory tobbacco');
+                }
+            }
+            console.log("-------------------------------------------");
+        }
+        
+        // to hide all forms when the page is loaded
+        $(".one-row-container").css("display", "none");
+        $(".drinks-section").css("display", "none");
+        $(".fruits-vegetables-section").css("display", "none");
+        $(".dairy-products-section").css("display", "none");
+        $(".starchy-foods-section").css("display", "none");
+        $(".sweet-products-section").css("display", "none");
+        $(".fat-section").css("display", "none");
+        $(".vpo-section").css("display", "none");
+        $(".alcohol-tobacco-section").css("display", "none");
+
+        // to call the funcion to show the right form depending on the clicked category
+        $(".drinks").click(function(){
+            showSection($(this).attr('id'));
+        });
+        $(".fruits-vegetables").click(function(){
+            showSection($(this).attr('id'));
+        });
+        $(".dairy-products").click(function(){
+            showSection($(this).attr('id'));
+        });
+        $(".starchy-foods").click(function(){
+            showSection($(this).attr('id'));
+        });
+        $(".fat").click(function(){
+            showSection($(this).attr('id'));
+        });
+        $(".sweet-products").click(function(){
+            showSection($(this).attr('id'));
+        });
+        $(".vpo").click(function(){
+            showSection($(this).attr('id'));
+        });
+
+        // to show the right form depending on the clicked category
+        function showSection(sentId) {
+            
+            $(".two-rows-categories").css("display", "none");
+            $(".one-row-container").css("display", "block");
+            
+            if ((sentId == "drinks-2-l") || (sentId == "drinks-1-l")) {
+                $(".drinks-section").css("display", "block");
+                sectionToShow = ".drinks-section";
+            } else {
+                $(".drinks-section").css("display", "none");
+            }
+
+
+            if ((sentId == "fruits-vegetables-2-l") || (sentId == "fruits-vegetables-1-l")) {
+                $(".fruits-vegetables-section").css("display", "block");
+                sectionToShow = ".fruits-vegetables-section";
+            } else {
+                $(".fruits-vegetables-section").css("display", "none");
+            }
+
+            if ((sentId == "dairy-products-2-l") || (sentId == "dairy-products-1-l")) {
+                $(".dairy-products-section").css("display", "block");
+                sectionToShow = ".dairy-products-section";
+            } else {
+                $(".dairy-products-section").css("display", "none");
+            }
+
+            if ((sentId == "starchy-foods-2-l") || (sentId == "starchy-foods-1-l")) {
+                $(".starchy-foods-section").css("display", "block");
+                sectionToShow = ".starchy-foods-section";
+            } else {
+                $(".starchy-foods-section").css("display", "none");
+            }
+
+            if ((sentId == "fat-2-l") || (sentId == "fat-1-l")) {
+                $(".fat-section").css("display", "block");
+                sectionToShow = ".fat-section";
+            } else {
+                $(".fat-section").css("display", "none");
+            }
+
+            if ((sentId == "sweet-products-2-l") || (sentId == "sweet-products-1-l")) {
+                $(".sweet-products-section").css("display", "block");
+                sectionToShow = ".sweet-products-section";
+            } else {
+                $(".sweet-products-section").css("display", "none");
+            }
+
+            if ((sentId == "vpo-2-l") || (sentId == "vpo-1-l")) {
+                $(".vpo-section").css("display", "block");
+                sectionToShow = ".vpo-section";
+            } else {
+                $(".vpo-section").css("display", "none");
+            }
+
+            $(".alcohol-tobacco-section").css("display", "block");
+
+            $('html, body').animate({
+                scrollTop: $(sectionToShow).offset().top
+            }, 2000);
+        }
+
+        // do add drink
+        $(".add-water").click(function(){
+            subcategory = "water";
+            hasBackToDashboadValidateButtons = false;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons);
+        });
+        
+        $(".add-coffee").click(function(){
+            subcategory = "coffee";
+            hasBackToDashboadValidateButtons = false;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons);
+        });
+
+        $(".add-tea").click(function(){
+            subcategory = "tea";
+            hasBackToDashboadValidateButtons = false;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons);
+        });
+
+        $(".add-soft-drink").click(function(){
+            subcategory = "soft-drink";
+            hasBackToDashboadValidateButtons = false;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons);
+        });
+
+        var vegetableDrinkAddition = 0;
+        $(".add-vegetable-drink").click(function(){
+            vegetableDrinkAddition++;
+            subcategory = "vegetable-drink";
+            hasBackToDashboadValidateButtons = true;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons, vegetableDrinkAddition);
+        });
+
+        // to add fruit / vegetable on click
+        
+        $(".add-fresh-fruit").click(function(){
+            subcategory = "fresh-fruit";
+            hasBackToDashboadValidateButtons = false;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons);
+        });
+
+        $(".add-dried-fruit").click(function(){
+            subcategory = "dried-fruit";
+            hasBackToDashboadValidateButtons = false;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons);
+        });
+
+        $(".add-processed-fruit").click(function(){
+            subcategory = "processed-fruit";
+            hasBackToDashboadValidateButtons = false;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons);
+        });
+
+        $(".add-vegetable").click(function(){
+            subcategory = "vegetable";
+            hasBackToDashboadValidateButtons = false;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons);
+        });
+
+        var oilseedAddition = 0;
+        $(".add-oilseed").click(function(){
+            oilseedAddition++;
+            subcategory = "oilseed";
+            hasBackToDashboadValidateButtons = true;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons, oilseedAddition);
+        });
+
+        // to add dairy product on click
+
+        $(".add-cheese").click(function(){
+            subcategory = "cheese";
+            hasBackToDashboadValidateButtons = false;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons);
+        });
+
+        $(".add-milk").click(function(){
+            subcategory = "milk";
+            hasBackToDashboadValidateButtons = false;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons);
+        });
+
+        $(".add-sweet-dairy-dessert").click(function(){
+            subcategory = "sweet-dairy-dessert";
+            hasBackToDashboadValidateButtons = false;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons);
+        });
+
+        $(".add-fresh-sweet-dairy-product").click(function(){
+            subcategory = "fresh-sweet-dairy-product";
+            hasBackToDashboadValidateButtons = false;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons);
+        });
+
+        plainFreshDairyProductAddition = 0;
+        $(".add-plain-fresh-dairy-product").click(function(){
+            plainFreshDairyProductAddition++;
+            subcategory = "plain-fresh-dairy-product";
+            hasBackToDashboadValidateButtons = true;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons, plainFreshDairyProductAddition);
+        });
+
+        // to add meet / fish / egg on click
+
+        $(".add-meat").click(function(){
+            subcategory = "meat";
+            hasBackToDashboadValidateButtons = false;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons);
+        });
+
+        $(".add-poultry").click(function(){
+            subcategory = "poultry";
+            hasBackToDashboadValidateButtons = false;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons);
+        });
+
+        $(".add-delicatessen").click(function(){
+            subcategory = "delicatessen";
+            hasBackToDashboadValidateButtons = false;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons);
+        });
+
+        $(".add-oily-fish").click(function(){
+            subcategory = "oily-fish";
+            hasBackToDashboadValidateButtons = false;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons);
+        });
+
+        $(".add-lean-fish").click(function(){
+            subcategory = "lean-fish";
+            hasBackToDashboadValidateButtons = false;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons);
+        });
+
+        $(".add-mollusc-crustacean").click(function(){
+            subcategory = "mollusc-crustacean";
+            hasBackToDashboadValidateButtons = false;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons);
+        });
+
+        var eggAddition = 0;
+        $(".add-egg").click(function(){
+            eggAddition++;
+            subcategory = "egg";
+            hasBackToDashboadValidateButtons = true;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons, eggAddition);
+        });
+
+        // add starchy food on click
+
+        $(".add-complete-starch").click(function(){
+            subcategory = "complete-starch";
+            hasBackToDashboadValidateButtons = false;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons);
+        });
+
+        $(".add-refined-starchy").click(function(){
+            subcategory = "refined-starchy";
+            hasBackToDashboadValidateButtons = false;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons);
+        });
+
+
+        var legumeAddition = 0;
+        $(".add-legume").click(function(){
+            legumeAddition ++;
+            subcategory = "legume";
+            hasBackToDashboadValidateButtons = true;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons, legumeAddition);
+        });
+
+        // add fat product
+
+        $(".add-animal-fat").click(function(){
+            subcategory = "animal-fat";
+            hasBackToDashboadValidateButtons = false;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons);
+        });
+
+        $(".add-vegetable-oil").click(function(){
+            subcategory = "vegetable-oil";
+            hasBackToDashboadValidateButtons = false;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons);
+        });
+
+        var sauceAddition = 0;
+        $(".add-sauce").click(function(){
+            sauceAddition++;
+            subcategory = "sauce";
+            hasBackToDashboadValidateButtons = true;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons, sauceAddition);
+        });
+
+        // add sweet product
+
+        $(".add-cake-biscuit-industrial-confectionery").click(function(){
+            subcategory = "cake-biscuit-industrial-confectionery";
+            hasBackToDashboadValidateButtons = false;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons);
+        });
+
+        $(".add-dark-chocolate").click(function(){
+            subcategory = "dark-chocolate";
+            hasBackToDashboadValidateButtons = false;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons);
+        });
+
+        $(".add-white-sugar").click(function(){
+            subcategory = "white-sugar";
+            hasBackToDashboadValidateButtons = false;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons);
+        });
+
+        $(".add-alternative-sugar").click(function(){
+            subcategory = "alternative-sugar";
+            hasBackToDashboadValidateButtons = false;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons);
+        });
+
+        var sweetenerAddition = 0;
+        $(".add-sweetener").click(function(){
+            sweetenerAddition++;
+            subcategory = "sweetener";
+            hasBackToDashboadValidateButtons = true;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons, sweetenerAddition);
+        });
+
+
+        // alcohol%tobbacco
+        $(".add-alcohol").click(function(){
+            subcategory = "alcohol";
+            hasBackToDashboadValidateButtons = false;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons);
+        });
+
+        var tobbaccoAddition = 0;
+        $(".add-tobbacco").click(function(){
+            tobbaccoAddition++;
+            subcategory = "tobbacco";
+            hasBackToDashboadValidateButtons = true;
+            addFormLine(subcategory, hasBackToDashboadValidateButtons, tobbaccoAddition);
+        });
+
+        addedLineIteration = 1;
+
+        // to add a form line (additionOrder contains the instruction for the subcategory to which the line has to be added)
+        function addFormLine(subcategory, hasBackToDashboadValidateButtons, lastLineSubcategoryIteration) {
+            console.log(subcategory);
+
+            if (subcategory == "tobbacco") {
+                tobbaccoIteration = lastLineSubcategoryIteration;
+            } else if (subcategory == "sweetener") {
+                sweetenerIteration = lastLineSubcategoryIteration;
+            } else if (subcategory == "sauce") {
+                sauceIteration = lastLineSubcategoryIteration;
+            } else if (subcategory == "legume") {
+                legumeIteration = lastLineSubcategoryIteration;
+            } else if (subcategory == "egg") {
+                eggIteration = lastLineSubcategoryIteration;
+            } else if (subcategory == "plain-fresh-dairy-product") {
+                plainFreshDairyProductIteration = lastLineSubcategoryIteration;
+            } else if (subcategory == "oilseed") {
+                oilseedIteration = lastLineSubcategoryIteration;
+            } else if (subcategory == "vegetable-drink") {
+                vegetableDrinkIteration = lastLineSubcategoryIteration;
+            }
+
+            console.log("clicked on add option");
+            test = $("#test").clone();
+            clonedFormLine = $("#"+subcategory+"-form-line").clone();
+            
+            console.log(clonedFormLine);
+            clonedFormLine.removeAttr("id");
+            clonedFormLine.find(".add-"+subcategory+"").remove();
+            clonedFormLine.find(".form-line-title-content").remove();
+            clonedFormLine.find(".dropdown-list-container").remove();
+            
+            dropdownListVolume = "<select name='added-volume-select-menu'"+addedLineIteration+" class='added-volume-select-menu"+addedLineIteration+"' class='dropdown-list'></select><div class='triangle-img-container'><img class='triangle-img' src=\"{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}\" /></div>";
+
+            dropdownListCurrency = "<select name='added-currency-select-menu'"+addedLineIteration+" class='added-currency-select-menu"+addedLineIteration+"' class='dropdown-list'></select><div class='triangle-img-container'><img class='triangle-img' src=\"{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}\" /></div>";
+
+            clonedFormLine.find(".volume-dropdown-list-col").append(dropdownListVolume);
+
+            clonedFormLine.find(".currency-dropdown-list-col").append(dropdownListCurrency);
+            
+            
+            
+            
+            if (hasBackToDashboadValidateButtons == true) { /* if the user clicked on the add option of the forms's last subactegory */
+                /* to delete and recreate blue buttons so that they're always at the bottom of the form */
+
+                //maintainBlueButtonsAtBottom (sauceIteration, legumeIteration, eggIteration, plainFreshDairyProductIteration, oilseedIteration, vegetableDrinkIteration);
+                
+                //previousSauceIteration = sauceIteration-1;
+                //previousLegumeIterationn = legumeIteration-1;
+                //previousEggIteration = eggIteration-1;
+                //previousPlainFreshDairyProductIteration = plainFreshDairyProductIteration-1;
+                //previousOilseedIteration = oilseedIteration-1;
+                
+
+                if (subcategory == "vegetable-drink") {
+                    console.log("bb-vegetable-drink");
+                    previousVegetableDrinkIteration = vegetableDrinkIteration-1;
+                    
+                    clonedFormLine.removeClass("vegetable-drink-bottom-form-line-"+previousVegetableDrinkIteration);
+                    clonedFormLine.addClass("vegetable-drink-bottom-form-line-"+vegetableDrinkIteration);
+            
+                    previousFormLine = $(".vegetable-drink-bottom-form-line-"+previousVegetableDrinkIteration);
+                    previousFormLine.removeClass("last-line");
+
+                    previousFormLine.find('.form-button').remove();
+                }
+
+                if (subcategory == "oilseed") {
+                    console.log("bb-oilseed");
+                    previousOilseedIteration = oilseedIteration-1;
+                    
+                    clonedFormLine.removeClass("oilseed-bottom-form-line-"+previousOilseedIteration);
+                    clonedFormLine.addClass("oilseed-bottom-form-line-"+oilseedIteration);
+            
+                    previousFormLine = $(".oilseed-bottom-form-line-"+previousOilseedIteration);
+                    previousFormLine.removeClass("last-line");
+
+                    previousFormLine.find('.form-button').remove();
+                }
+
+                if (subcategory == "plain-fresh-dairy-product") {
+                    console.log("bb-plain-fresh-dairy-product");
+                    previousPlainFreshDairyProductIteration = plainFreshDairyProductIteration-1;
+                    
+                    clonedFormLine.removeClass("plain-fresh-dairy-product-bottom-form-line-"+previousPlainFreshDairyProductIteration);
+                    clonedFormLine.addClass("plain-fresh-dairy-product-bottom-form-line-"+plainFreshDairyProductIteration);
+            
+                    previousFormLine = $(".plain-fresh-dairy-product-bottom-form-line-"+previousPlainFreshDairyProductIteration);
+                    previousFormLine.removeClass("last-line");
+
+                    previousFormLine.find('.form-button').remove();
+                }
+
+                if (subcategory == "egg") {
+                    console.log("bb-egg");
+                    previousEggIteration = eggIteration-1;
+                    
+                    clonedFormLine.removeClass("egg-bottom-form-line-"+previousEggIteration);
+                    clonedFormLine.addClass("egg-bottom-form-line-"+eggIteration);
+            
+                    previousFormLine = $(".egg-bottom-form-line-"+previousEggIteration);
+                    previousFormLine.removeClass("last-line");
+
+                    previousFormLine.find('.form-button').remove();
+                }
+
+                if (subcategory == "legume") {
+                    console.log("bb-legume");
+                    previousLegumeIteration = legumeIteration-1;
+                    
+                    clonedFormLine.removeClass("legume-bottom-form-line-"+previousLegumeIteration);
+                    clonedFormLine.addClass("legume-bottom-form-line-"+legumeIteration);
+            
+                    previousFormLine = $(".legume-bottom-form-line-"+previousLegumeIteration);
+                    previousFormLine.removeClass("last-line");
+
+                    previousFormLine.find('.form-button').remove();
+                }
+
+                if (subcategory == "sauce") {
+                    console.log("bb-sauce");
+                    previousSauceIteration = sauceIteration-1;
+                    
+                    clonedFormLine.removeClass("sauce-bottom-form-line-"+previousSauceIteration);
+                    clonedFormLine.addClass("sauce-bottom-form-line-"+sauceIteration);
+            
+                    previousFormLine = $(".sauce-bottom-form-line-"+previousSauceIteration);
+                    previousFormLine.removeClass("last-line");
+
+                    previousFormLine.find('.form-button').remove();
+                }
+
+                if (subcategory == "tobbacco") {
+                    console.log("bb-tobbacco");
+                    previousTobbaccoIteration = tobbaccoIteration-1;
+                    
+                    clonedFormLine.removeClass("tobbacco-bottom-form-line-"+previousTobbaccoIteration);
+                    clonedFormLine.addClass("tobbacco-bottom-form-line-"+tobbaccoIteration);
+            
+                    previousFormLine = $(".tobbacco-bottom-form-line-"+previousTobbaccoIteration);
+                    previousFormLine.removeClass("last-line");
+
+                    previousFormLine.find('.form-button').remove();
+                }
+
+                if (subcategory == "sweetener") {
+                    console.log("bb-sweetener");
+                    previousSweetenerIteration = sweetenerIteration-1;
+                    
+                    clonedFormLine.removeClass("sweetener-bottom-form-line-"+previousSweetenerIteration);
+                    clonedFormLine.addClass("sweetener-bottom-form-line-"+sweetenerIteration);
+            
+                    previousFormLine = $(".sweetener-bottom-form-line-"+previousSweetenerIteration);
+                    previousFormLine.removeClass("last-line");
+
+                    previousFormLine.find('.form-button').remove();
+                }
+
+                returnToDashboardButton = "<div class='form-button left-button'>Retour au dashboard</div>";
+                
+                validationButton = "<div class='form-button right-button'>Valider</div>";
+
+                validationButton.addClass("validation-button");
+                
+                clonedFormLine.find('.last-line-what-column').append(returnToDashboardButton);
+
+                clonedFormLine.find('.last-line-currency-column').append(validationButton);
+            }
+            
+
+            // to add the modified cloned line after the previous form line in the corresponding subcategory section
+
+            clonedFormLine.appendTo("."+subcategory+"-container");
+
+            // selectmenu widget initialisation (but still empty and does not contain any options) (source : https://jsfiddle.net/phpdeveloperrahul/0mkkzkf5/)
+
+
+
+            // to add volume select menu
+
+            $(".added-volume-select-menu"+addedLineIteration).selectmenu();
+
+            // Add a new option to the dropdown
+            $('.added-volume-select-menu'+addedLineIteration).append($('<option>', {
+                value: 1,
+                text: '1L'
+            }));
+
+            $('.added-volume-select-menu'+addedLineIteration).append($('<option>', {
+                value: 2,
+                text: '2L'
+            }));
+
+            //Refresh the selectmenu widget so the newly added options to the dropdown are now loaded properly
+
+            $('.added-volume-select-menu'+addedLineIteration).selectmenu( "refresh" );
+            
+            // to add currency select menu
+
+            $(".added-currency-select-menu"+addedLineIteration).selectmenu();
+
+            // Add a new option to the dropdown
+            $('.added-currency-select-menu'+addedLineIteration).append($('<option>', {
+                value: 1,
+                text: 'CHF'
+            }));
+
+            $('.added-currency-select-menu'+addedLineIteration).append($('<option>', {
+                value: 2,
+                text: 'EUR'
+            }));
+
+            //Refresh the selectmenu widget so the newly added options to the dropdown are now loaded properly
+
+            $('.added-currency-select-menu'+addedLineIteration).selectmenu( "refresh" );
+
+            addedLineIteration = addedLineIteration+1;
+        }
+
+        function maintainBlueButtonsAtBottom(sauceIteration, legumeIteration, eggIteration, plainFreshDairyProductIteration, oilseedIteration, vegetableDrinkIteration){
+            
+        }
+
+        // variable used to differentiate each new line so that new options are not added to selectmenus of previous lines every time the user adds a new form line
+
+        /*
+        $(".add-water").click(function(){
+            console.log("clicked on add-water");
+            test = $("#test").clone();
+            clonedFormLine = $("#water-form-line").clone();
+            
+            console.log(clonedFormLine);
+            clonedFormLine.removeAttr("id");
+            //clonedFormLine.attr('id', 'added-form-line');
+            clonedFormLine.find(".add-water").remove();
+            clonedFormLine.find(".form-line-title-content").remove();
+            clonedFormLine.find(".dropdown-list-container").remove();
+            
+            dropdownListVolume = "<select name='added-volume-select-menu'"+addedLineIteration+" class='added-volume-select-menu"+addedLineIteration+"'></select><div class='triangle-img-container'><img class='triangle-img' src=\"{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}\" /></div>";
+
+            dropdownListCurrency = "<select name='added-currency-select-menu'"+addedLineIteration+" class='added-currency-select-menu"+addedLineIteration+"'></select><div class='triangle-img-container'><img class='triangle-img' src=\"{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}\" /></div>";
+
+            clonedFormLine.find(".volume-dropdown-list-col").append(dropdownListVolume);
+
+            clonedFormLine.find(".currency-dropdown-list-col").append(dropdownListCurrency);
+
+            // to add the modified cloned line after the previous form line in the corresponding subcategory section
+
+            clonedFormLine.appendTo(".water-container");
+
+            // selectmenu widget initialisation (but still empty and does not contain any options) (source : https://jsfiddle.net/phpdeveloperrahul/0mkkzkf5/)
+
+
+
+            // to add volume select menu
+
+            $(".added-volume-select-menu"+addedLineIteration).selectmenu();
+
+            // Add a new option to the dropdown
+            $('.added-volume-select-menu'+addedLineIteration).append($('<option>', {
+                value: 1,
+                text: '1L'
+            }));
+
+            $('.added-volume-select-menu'+addedLineIteration).append($('<option>', {
+                value: 2,
+                text: '2L'
+            }));
+
+            //Refresh the selectmenu widget so the newly added options to the dropdown are now loaded properly
+
+            $('.added-volume-select-menu'+addedLineIteration).selectmenu( "refresh" );
+
+
+            
+            // to add currency select menu
+
+            $(".added-currency-select-menu"+addedLineIteration).selectmenu();
+
+            // Add a new option to the dropdown
+            $('.added-currency-select-menu'+addedLineIteration).append($('<option>', {
+                value: 1,
+                text: 'CHF'
+            }));
+
+            $('.added-currency-select-menu'+addedLineIteration).append($('<option>', {
+                value: 2,
+                text: 'EUR'
+            }));
+
+            //Refresh the selectmenu widget so the newly added options to the dropdown are now loaded properly
+
+            $('.added-currency-select-menu'+addedLineIteration).selectmenu( "refresh" );
+
+            addedLineIteration = addedLineIteration+1;
+        });
+        */
+    </script>
+{% endblock %}

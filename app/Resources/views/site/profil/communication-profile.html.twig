@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/profile.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+{% endblock %}
+
+{% block body %}
+    <div class="header">
+        <div class="dropdown burger above-image">
+        </div>
+        <h1>RÉSULTAT<br>PROFIL COMMUNIQUER</h1>
+        <div class="image-container">
+            <div class="blue-film"></div>
+            <img class="below-film" src="{{ asset('images/subject-profiles/header-page-profil-communiquer.jpg') }}">
+        </div>
+    </div>
+    
+    <div class="container my-container">
+        <div class="row title">
+            <h2>Résultat Thématique / Communiquer</h2>
+        </div>
+        <div class="row intro">
+            <p>La démocratisation de l'usage des <b>Nouvelles technologies</b> de l'<b>information</b> et de la <b>communication</b> (NTIC) avec par exemple l'<b>accès internet mobile</b> ou le <b>courrier éléctronique</b>, a considérablement <b>augmenté</b> notre <b>consommation énergétique</b> et en <b>ressources naturelles rares</b>...</p>
+            <p>Cependant, il existe des <b>solutions</b> pour <b>réduire</b> son <b>impact</b> comme par exemple l'utilisation de fairphone que vous pouvez retrouver sur cette page <b>"Communiquer"</b>.</p>
+        </div>
+    </div>
+
+    <div class="container my-container result-box">
+        <div class="row">
+            <h2 class="margins-titles-2nd-grid">PROFIL A</h2>
+        </div>
+        <div class="row">
+            <div class="col-12 my-col title-and-square-image">
+                <div class="title-exlaination-profile">
+                    <h3 class="margins-titles-2nd-grid">Vous avez un mode de vie neutre</h3>
+                </div>
+                <div class="square-image-container">
+                    <img class="square-image" src="{{ asset('images/dashboard/orange-100_.png') }}" />
+                </div>
+            </div>
+        </div>
+        <div class="space-between-profile-exlanation-title-and-explanaition-text"></div>
+        <div class="row">
+            <div class="col-10 my-col">
+                <p class="profile-text">Lorem ipsum dolor sit amet, consecutetuer adipiscing elit, sed diam nonummy nibh euismod tincindunt ut laoreet dolore magna aliquam erat voluptat. Ut wisi enim ad minim veniam, quis Lorem ipsum dolor sit amet, consecutor dipiscing elit, sed diam nonummy nihb euismod tincindunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="col-2 my-col text-image-container">
+                <img class="image" src="{{ asset('images/subject-profiles/communiquer.jpg') }}"/>
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src"{{ asset('js/budget/spendings.js') }}"></script>
+{% endblock %}

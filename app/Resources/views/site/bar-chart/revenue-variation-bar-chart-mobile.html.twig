@@ -1,0 +1,31 @@
+<ul class="chart chart-mobile">
+    <div id="monthlyExcedent2" class="display flex-row-reverse justify-content-end" style="height: 200px;">
+        {% for excedent in excedentMonth %}
+            <li class="position-realtive" style="height:100%; max-width: 100%">
+                <div class="month">{{ litteralMonths[date] }}</div>
+                <div class="full-height-bar gray">
+                    <div class="percentage">{{ excedent }}%</div>
+                </div>
+                <div class="bar green" style="height: {{ excedent }}%;"></div>
+            </li>
+            {% if date > 1 %}
+                {% set date = date - 1 %}
+            {% else %}
+                {% set date = 12 %}
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div id="annualExcedent2" class="hidden flex-row-reverse justify-content-end" style="height: 200px">
+        {% set n = 0 %}
+        {% for excedent in excedentYear %}
+            <li class="position-realtive" style="height:100%;">
+                <div class="month year">{{ year[n] }}</div>
+                <div class="full-height-bar gray">
+                    <div class="percentage">{{ excedent }}%</div>
+                </div>
+                <div class="bar green" style="height: {{ excedent }}%;"></div>
+            </li>
+            {% set n =n+1 %}
+        {% endfor %}
+    </div>
+</ul>

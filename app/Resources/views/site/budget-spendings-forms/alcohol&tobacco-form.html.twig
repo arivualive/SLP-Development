@@ -1,0 +1,178 @@
+<div class="eating-budget-spendings-form-grid-container form-container alcohol-tobbacco-form-container">
+    <div class="row my-row">
+        {% include 'site/budget-spendings-forms/forms-columns-titles.html.twig' %}
+    </div>
+    
+    <div class="subcategory-container alcohol-container">
+        <div id="alcohol-form-line" class="row my-row form-spending-line" data-id="0">
+            <div class="subcategory invisible">alcohol</div>
+            <div class="col-3">
+                <idv class="form-line-title">
+                    <div class="form-line-title-content">
+                        <div class="large-text green-text form-line-title-content bold">
+                            Alcool
+                        </div>
+                    </div>
+                </idv>
+            </div>
+            <div class="col-1">
+                <input class="spendings-field what-field"/>
+            </div>
+            <div class="col-1 dropdown-list-col volume-dropdown-list-col">
+                <div class="dropdown-list-container quantity-container">
+                    <select class="dropdown-list alcohol-quantity-list">
+                        <option>1L</option>
+                        <option>2L</option>
+                    </select>
+                    <div class="triangle-img-container alcohol quantity">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-1">
+                <input class="spendings-field brand-field" />
+            </div>
+            <div class="col-1">
+                <input class="spendings-field amount-field" />
+            </div>
+            <div class="col-1 dropdown-list-col currency-dropdown-list-col">
+                <div class="dropdown-list-container currency-list-container">
+                    <select class="dropdown-list currency-list alcohol-currency-list">
+                        <option>CHF</option>
+                        <option>EUR</option>
+                    </select>
+                    <div class="triangle-img-container alcohol currency">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col add-alcohol hand-on-hover">
+                <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+                <idv class="add-product-text">Ajouter un produit</idv>
+            </div>
+            <!--<div class="white-div-to-hide-first-line-add-option"></div>-->
+        </div>
+        {% for spending in spendings %}
+            {% if spending.getProduct().getSubcategory().getName() == "alcohol" %}
+                {% set subcategory = "alcohol" %}
+                {% include('site/budget/recorded-theme-spending-form-line.html.twig') %}
+            {% endif %}
+        {% endfor %}
+        <!--<div class="add-product-line add-alcohol hand-on-hover">
+            <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+            <idv class="add-product-text">Ajouter un produit</idv>
+        </div>-->
+    </div>
+    
+    <div class="subcategory-container tobbacco-container">
+        <div id="tobbacco-form-line" class="row my-row tobbacco-bottom-form-line-0 last-line form-spending-line" data-id="0">
+            <div class="subcategory invisible">tobbacco</div>
+            <div class="col-3">
+                <idv class="form-line-title">
+                    <div class="form-line-title-content">
+                        <div class="large-text green-text form-line-title-content bold">
+                            Tabac
+                        </div>
+                    </div>
+                </idv>
+            </div>
+            <div class="col-1 field-and-button-under-field-container last-line-what-column">
+                <input class="spendings-field what-field"/>
+                <div class="form-button left-button">Retour au dashboard</div>
+            </div>
+            <div class="col-1 dropdown-list-col volume-dropdown-list-col">
+                <div class="dropdown-list-container quantity-container">
+                    <select class="dropdown-list tobbacco-quantity-list">
+                        <option>1L</option>
+                        <option>2L</option>
+                    </select>
+                    <div class="triangle-img-container tobbacco quantity">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-1">
+                <input class="spendings-field brand-field" />
+            </div>
+            <div class="col-1 field-and-button-under-field-container">
+                <input class="spendings-field amount-field" />
+            </div>
+            <div class="col-1 field-and-button-under-field-container last-line-currency-column dropdown-list-col currency-dropdown-list-col">
+                <div class="dropdown-list-container currency-list-container">
+                    <select class="dropdown-list currency-list tobbacco-currency-list">
+                        <option>CHF</option>
+                        <option>EUR</option>
+                    </select>
+                    <div class="triangle-img-container tobbacco currency">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                    <div class="form-button right-button form-validation-button" data-category="alcohol-tobbacco">Valider</div>
+                </div>
+            </div>
+            <div class="col add-tobbacco hand-on-hover">
+                <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+                <idv class="add-product-text">Ajouter un produit</idv>
+            </div>
+        </div>
+        {% for spending in spendings %}
+            {% if spending.getProduct().getSubcategory().getName() == "tobbacco" %}
+                {% set subcategory = "tobbacco" %}
+                {% include('site/budget/recorded-theme-spending-form-line.html.twig') %}
+            {% endif %}
+        {% endfor %}
+        <!--<div class="add-product-line add-tobbacco hand-on-hover">
+            <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+            <idv class="add-product-text">Ajouter un produit</idv>
+        </div>-->
+    </div>
+</div>
+
+<!--
+<div class="eating-budget-spendings-form">
+    <div class="form-line">
+        <idv class="form-line-title">
+            <div class="large-text green-text form-line-title-content bold">
+                Alcool
+            </div>
+        </idv>
+        
+        <input class="spendings-field what-field"/>
+        
+        <select class="dropdown-list">
+            <option>1L</option>
+            <option>2L</option>
+        </select>
+        <input class="spendings-field brand-field" />
+        <input class="spendings-field amount-field" />
+        <select class="dropdown-list currency-list">
+            <option>CHF</option>
+            <option>EUR</option>
+        </select>
+        <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+        <idv class="add-product-text">Ajouter un produit</idv>
+    </div>
+    <div class="form-line">
+        <idv class="form-line-title">
+            <div class="large-text green-text form-line-title-content bold">
+                Tabac
+            </div>
+        </idv>
+        
+        <input class="spendings-field what-field"/>
+        
+        <select class="dropdown-list">
+            <option>1L</option>
+            <option>2L</option>
+        </select>
+        <input class="spendings-field brand-field" />
+        <input class="spendings-field amount-field" />
+        <select class="dropdown-list currency-list">
+            <option>CHF</option>
+            <option>EUR</option>
+        </select>
+        <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+        <idv class="add-product-text">Ajouter un produit</idv>
+    </div>
+</div>
+
+-->

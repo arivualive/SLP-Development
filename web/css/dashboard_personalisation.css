@@ -1,0 +1,345 @@
+/*-----------------------------
+Général
+----------------------------- */
+body{
+    font-family: 'Nunito';
+}
+.wrap{
+    width: 100%;
+    float: left;
+}
+.mydiv{
+    margin: 0;
+    padding: 0px;
+}
+.blocks-1 {
+    display: inline-block; 
+    width: 100%;
+    max-height: 750px; 
+}
+.blocks-2 {
+    display: inline-block; 
+    width: 100%;
+    max-height: 100%; 
+}
+.box{
+    float: left;
+}
+.innerdiv {
+    margin-left: 0px;
+}
+
+/*-----------------------------
+Cropper
+----------------------------- */
+.cropper-container {
+    width: 500px;
+	height: 200px;
+    cursor: default;
+    margin-left: 20px;
+}
+#result {
+	width: 100%;
+	height: auto;
+    cursor: default;
+    margin-left: 20px;
+}
+#preview, #previewAvatar {
+	width: 85%;
+    height: 100%;
+    margin-left: 30px;
+    overflow: hidden;
+}
+.img-result img {
+    width: 231px;
+    height: 40px;
+}
+img {
+    max-width: 100%;
+}
+
+/*-----------------------------
+Header
+----------------------------- */
+.myHeader{
+    background-image: url(../images/dashboard/personalisation/Header_PagePerso.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+.myHeader .content{
+    position: absolute;
+    background-color: rgba(83, 154, 196,0.9);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.myHeader .content h2{
+    color: white;
+    font-size: 4.5em;
+    text-transform: uppercase;
+}
+
+/*-----------------------------
+Introduction
+----------------------------- */
+.intro{
+    padding: 0 10%;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.intro p{
+    color: #539ac4;
+    font-size: 18pt;
+}
+.intro .underline{
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #539ac4;
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+/*-----------------------------
+Personalisation
+----------------------------- */
+.wrap .mydiv .banner, .wrap .mydiv .avatar {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #539ac4;
+    padding: 20px;
+    position: relative;
+}
+.wrap .mydiv .banner .img-background {
+    background-image: url(../images/dashboard/soleil-levant3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height:100%;
+}
+.wrap .mydiv .avatar .img-background {
+    background-image: url(../images/dashboard/photo-de-profil.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height:100%;
+}
+.wrap .mydiv .banner .content, .wrap .mydiv .avatar .content{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.wrap .mydiv .banner .content h2, .wrap .mydiv .avatar .content h2 {
+    color: #549ac4;
+    font-weight: 600;
+    font-size: 40pt;
+    padding: 20px;
+}
+.wrap .mydiv .banner .content p, .wrap .mydiv .avatar .content p {
+    color: #549ac4;
+    font-size: 17pt;
+    padding: 20px 35px;
+    font-family: 'Nunito Light';
+}
+.wrap .mydiv .banner button, .wrap .mydiv .avatar button {
+    background-color: #549ac4;
+    color: white;
+    border: none;
+    width: 150px;
+    height: 40px;
+    
+}
+#formAvatar input[type=file], #formCover input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+#formCover .btn, .importbtn .btnImport, .cropBtn,
+#formAvatar .btn, .importbtn .btnImport .cropBtn{
+    width: 30%;
+    height: 50px;
+    color: white;
+    font-size: 20pt;
+    background-color: #549ac4;
+    border-radius: 0;
+    margin: 0;
+}
+.dashboard-button, .dashboard-button-avatar, a:link, 
+a:visited, 
+a:hover, a:active  {
+    width: 30%;
+    height: 50px;
+    color: white;
+    font-size: 20pt;
+    background-color: #549ac4;
+    border-radius: 0;
+    margin: 0;
+    text-decoration: none;
+}
+.dashboard-button span, .dashboard-button-avatar span  {
+    padding: 5px;
+}
+/*-----------------------------
+Import button
+----------------------------- */
+.button-clicked{
+    width: 30%;
+    height: 50px;
+    color: #549ac4;
+    font-size: 20pt;
+    background-color: white;
+    border: 1px solid #549ac4;
+    border-radius: 0;
+    margin: 0;
+  }
+
+/*-----------------------------
+Personalisation
+----------------------------- */
+.bg-photo {
+	display: block;
+	z-index: 9999;
+	width: 33px;
+	height: 32px;
+	position: relative;
+	left: 2%;
+	top: 38%;
+}
+
+.photo-user {
+	width: 100%;
+	z-index: 10000;
+	position: absolute;
+	left: 0;
+	top: 0;
+	cursor: pointer;
+	height: 32px;
+}
+.perso{
+    margin-bottom: 40px;
+}
+.planActivate{
+    background-color: grey;
+}
+.plan_block{
+    margin-top: 2px;
+    border: 1px solid;
+    height: 95%;
+    width: 100%;
+}
+.plan_innerDiv{
+    padding-right: 2px;
+}
+.plan_lastDiv{
+    height: 40px;
+}
+.plan_header{
+    height: 40px;
+}
+.plan_title{
+    height: 10px;
+}
+.menu{
+    height: 10px;
+}
+.stat{
+    height: 55px;
+}
+.badge_div{
+    height: 40px;
+}
+.stat{
+    height: 55px;
+}
+.calendar{
+    height: 60px;
+}
+.package{
+    height: 50px;
+}
+.plateforme{
+    height: 20px;
+}
+.video{
+    height: 80px;
+}
+.classement{
+    height: 70px;
+}
+.pub{
+    height: 64.2px;
+}
+.impact{
+    height: 316px;
+}
+.feed{
+    height: 20px;
+}
+.profil_perso{
+    height: 100px;
+}
+.plan_groupe{
+    height: 40px;
+    width: 100%;
+}
+.plan_questionnaire{
+    height: 40px;
+    width: 100%;
+}
+.plan_action{
+    height: 60px;
+    width: 100%;
+}
+.action{
+    height: 100.2px;
+}
+.budget{
+    height: 100px;
+}
+.slc{
+    height: 80px;
+}
+.theme{
+    height: 120px;
+}
+.resultat{
+    height: 60px;
+}
+.repondez{
+    height: 20px;
+}
+.themeQ{
+    height: 80px;
+}
+.atelierPanier{
+    height: 40px;
+}
+.publicite_div{
+    height: 80px;
+}
+.CostBenef{
+    height: 70px;
+}
+.personalize{
+    height: 20px;
+}
+.choice{
+    height: 45px;
+}
+.greenCoaching{
+    height: 60px;
+}
+.footer{
+    height: 20px;
+}

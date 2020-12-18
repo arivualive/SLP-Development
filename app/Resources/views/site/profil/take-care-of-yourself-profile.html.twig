@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/profile.css') }}">
+    
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+{% endblock %}
+
+{% block body %}
+    <div class="header">
+        <div class="dropdown burger above-image">
+        </div>
+        <h1>RÉSULTAT<br>PROFIL PRENDRE SOIN DE SOI</h1>
+        <div class="image-container">
+            <div class="blue-film"></div>
+            <img class="below-film" src="{{ asset('images/subject-profiles/header-page-profil-prendre-soin-de-soi.jpg') }}">
+        </div>
+    </div>
+    
+    <div class="container my-container">
+        <div class="row title">
+            <h2>Résultat Thématique / Prendre Soin de Soi</h2>
+        </div>
+        <div class="row intro">
+            <p><b>Prendre soin de soi</b> tout en <b>prenant soin de la planète</b>, ce n'est pas paradoxal !<br>Vous en avez marre des bouteilles de shampoing et de gel douche en <b>plastique vides</b> et des <b>cotons jetables</b> qui s'<b>accumulent</b> très vite dans la <b>poubelle</b> de votre salle de bain ?<br> Venez trouver les <b>solutions</b> à ces <b>problèmes</b> sur la page <b>"Prendre soin de soi"</b>.</p>
+        </div>
+    </div>
+
+    <div class="container my-container result-box">
+        <div class="row">
+            <h2 class="margins-titles-2nd-grid">PROFIL A</h2>
+        </div>
+        <div class="row">
+            <div class="col-12 my-col title-and-square-image">
+                <div class="title-exlaination-profile">
+                    <h3 class="margins-titles-2nd-grid">Vous avez un mode de vie neutre</h3>
+                </div>
+                <div class="square-image-container">
+                    <img class="square-image" src="{{ asset('images/dashboard/orange-100_.png') }}" />
+                </div>
+            </div>
+        </div>
+        <div class="space-between-profile-exlanation-title-and-explanaition-text"></div>
+        <div class="row">
+            <div class="col-10 my-col">
+                <p class="profile-text">Lorem ipsum dolor sit amet, consecutetuer adipiscing elit, sed diam nonummy nibh euismod tincindunt ut laoreet dolore magna aliquam erat voluptat. Ut wisi enim ad minim veniam, quis Lorem ipsum dolor sit amet, consecutor dipiscing elit, sed diam nonummy nihb euismod tincindunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="col-2 my-col text-image-container">
+                <img class="image" src="{{ asset('images/subject-profiles/prendre-soin-de-soi.jpg') }}"/>
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src"{{ asset('js/budget/spendings.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,213 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {#    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">#}
+    <link rel="stylesheet" href="{{ asset('css/profilgaea.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/Dashboard/budget_program_dashboard.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/eating-budget.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+{#    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">#}
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+{% endblock %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="header">
+            <h1> PROGRAMME BUDGET</h1>
+
+            <div class="image-container">
+                <div class="blue-film"></div>
+                <img class="below-film"
+                     src="{{ asset(
+                         'images/dashboard/budget/program-dashboard/header-programme-dashboard-budget.jpg'
+                     ) }}"
+                >
+                {#  --Ici nous avons ajouté le menu burger en utilisant la classe
+                    dollar-img-container afin de de fixer notre menu a droite sur l'image--
+                #}
+                {% include '/site/budget/_menu-burger.html.twig' %}
+                {# -- Fin du menu burger-- #}
+            </div>
+
+        </div>
+    </div>
+
+    <div class="introduction intro-text intro-margin">
+        <p>
+            Beaucoup de personnes pensent qu'adopter un <b>comportement éco-conscient</b> et <b>consommer</b> de
+            manière <b>responsable</b> coûte plus <b>cher</b>. <br>
+            Le <b>programme budget dashboard</b> vous montre une <b>réalité différente</b>.
+        </p>
+        <p>
+            <br>Le <b>programme budget dashboard</b> est une <b>application</b> mise à votre disposition pour vous
+            permettre de <b>rentrer vos dépenses journalières</b>.
+        </p>
+        <p>
+            <br>Le programme vous permet ainsi de déterminer votre <b>budget mensuel</b> en <b>temps réel</b>
+            et de <b>comparer vos dépenses</b> au fil du temps. <br>
+            Ce programme met également en lumière la <b>composition</b> des <b>produits</b> que vous <b>achetez</b>
+            et <b>consommez</b>. <br>
+            Le logiciel intégré dans le <b>programme budget dashboard</b> va donc non seulement
+            <b>calculer</b> le <b>total</b> de <b>vos coûts</b>, mais il va également vous permettre d’effectuer des
+            <b>achats éco-conscients</b>, et ainsi vous donner les outils afin de <b>devenir</b> un <b>consom’acteur</b>.
+        </p>
+        <p>
+            <br>Quand vous aurez complété dans la <b>totalité</b> les <b>différentes parties</b> de votre <b>budget</b>,
+            vous pouvez encore aller plus loin en intégrant le programme "<b>conseil vert</b>" du <b>répertoire
+            vert</b> et avoir la possibilité d’obtenir des <b>conseils personnalisés</b>.
+        </p>
+        <p>
+            <br>A vous de jouer à présent. Commencez à rentrer vos produits!
+        </p>
+        <p>
+            <br>Dans la section ci-dessous, en fonction de la <b>catégorie choisie</b> et pour <b>chaque produit</b>
+            que vous choisissez, vous devez répondre (voir étiquette) aux <b>questions/critères</b>.
+            Si vous <b>ignorez la réponse</b>, vous avez droit à <b>5 questions</b>
+            (réservé aux membres de la communauté SLC)
+        </p>
+        <p>
+            <br>A partir de la <b>6° question</b>, vous avez la possibilité d’<b>acheter</b> des <b>packages d’heures</b>
+            et d’obtenir des <b>conseils personnalisés</b> dans le cadre du <b>conseil vert</b>
+            du programme <b>Répertoire Vert</b>.
+        </p>
+        <p>
+            <br>Quand vous aurez complété dans la totalité les différentes parties de votre budget, vous
+            pouvez encore aller plus loin en intégrant le <b>programme "conseil vert"</b>
+            du <b>répertoire vert</b> et avoir la possibilité d’obtenir des <b>conseils personnalisés</b>.
+        </p>
+        <p>
+            <br>A vous de jouer à présent. Commencez à rentrer vos produits!
+        </p>
+    </div>
+    <div class="my-container">
+        <div class="row my-row theme-row">
+            <div class="col-4 card-budget-dashboard">
+                <div class="">
+                    <img class="img-program-icone" src="{{ asset('images/dashboard/budget/program-dashboard/icone-manger.png') }}" onmouseover="this.src={{ asset('images/dashboard/budget/program-dashboard/icone-manger-selectionne.png') }}" />
+                    <h4 class="title-manger title-icone">Budget Dashboard <br> Manger</h4>
+                </div>
+                <div class="description-budget-dashboard">
+                    <p>Le programme dashboard budget <b>“manger"</b><br>
+                        vous permet d'analyser la <b>composition</b><br>
+                        des vos <b>achats alimentaires quotidiens</b>.
+                    </p>
+                    <p>
+                        <br>Nous vous aidons à trouver <br>
+                        des <b>alternatives</b> plus <b>éco-responsables</b><br>
+                        à votre choix initial de produits.
+                    </p>
+                </div>
+                <a  href="{{ path('eating-budget') }}">
+                    <div class="lancez-vous-manger lancez-vous img-program-button"></div>
+                 </a>
+
+            </div>
+            <div class="col-4 card-budget-dashboard middle-card">
+                <div class="">
+                    <img class="img-program-icone" src="{{ asset('images/dashboard/budget/program-dashboard/icone-prendre-soin-de-soi.png') }}" />
+                    <h4 class="title-prendre-soin-de-soi title-icone">Budget Dashboard <br> Prendre Soin de Soi</h4>
+                </div>
+                <div class="description-budget-dashboard">
+                    <p>
+                        Le programme budget <br>
+                        <b>“prendre soin de soi”</b><br>
+                        vous permet d'analyser la <b>composition</b><br>
+                        des vos <b>produits d’hygiènes quotidiens</b>.
+                    </p>
+                    <p>
+                        <br>Vous êtes plus <b>éco-conscients</b><br>
+                        et nous vous aidons à trouver <br>
+                        des alternatives plus vertes!
+                    </p>
+                </div>
+                <a  href="#">
+                    <div class="lancez-vous-prendre-soin-de-soi lancez-vous img-program-button"></div>
+                </a>
+            </div>
+            <div class="col-4 card-budget-dashboard">
+                <div class="">
+                    <img class="img-program-icone" src="{{ asset('images/dashboard/budget/program-dashboard/icone-se-deplacer.png') }}" />
+                    <h4 class="title-se-deplacer title-icone">Budget Dashboard <br> Se Déplacer</h4>
+                </div>
+                    <div class="description-budget-dashboard">
+                    <p>Le programme budget <b>“se déplacer”</b><br>
+                        vous permet d'analyser <br>
+                        vos <b>méthodes de déplacement quotidiennes</b>.
+                    </p>
+                    </div>
+                <a  href="#">
+                    <div class="lancez-vous-se-deplacer lancez-vous img-program-button"></div>
+                </a>
+            </div>
+        </div>
+        <div class="space-between-card-dashboard"></div>
+        <div class="row my-row theme-row">
+            <div class="col-4 card-budget-dashboard">
+                <div class="">
+                    <img class="img-program-icone" src="{{ asset('images/dashboard/budget/program-dashboard/icone-travailler.png') }}" />
+                    <h4 class="title-travailler title-icone">Budget Dashboard <br> Travailler</h4>
+                </div>
+                <a  href="#">
+                    <div class="lancez-vous-travailler lancez-vous img-program-button"></div>
+                </a>
+            </div>
+            <div class="col-4 card-budget-dashboard">
+                <div class="">
+                    <img class="img-program-icone" src="{{ asset('images/dashboard/budget/program-dashboard/icone-shabiller.png') }}" />
+                    <h4 class="title-shabiller title-icone">Budget Dashboard <br> S'habiller</h4>
+                </div>
+                <a  href="#">
+                    <div class="lancez-vous-shabiller lancez-vous img-program-button"></div>
+                </a>
+            </div>
+            <div class="col-4 card-budget-dashboard">
+                <div class="">
+                    <img class="img-program-icone" src="{{ asset('images/dashboard/budget/program-dashboard/icone-communiquer.png') }}" />
+                    <h4 class="title-communiquer title-icone">Budget Dashboard <br> Communiquer</h4>
+                </div>
+                <a  href="#">
+                    <div class="lancez-vous-communiquer lancez-vous img-program-button"></div>
+                </a>
+            </div>
+
+        </div>
+        <div class="space-between-card-dashboard-small"></div>
+        <div class="row my-row theme-row">
+            <div class="col-2 my-col"></div>
+            <div class="col-4 card-budget-dashboard">
+                <div class="">
+                    <img class="img-program-icone" src="{{ asset('images/dashboard/budget/program-dashboard/icone-se-distraire.png') }}" />
+                    <h4 class="title-se-distraire title-icone">Budget Dashboard <br> Se Distraire</h4>
+                </div>
+                <a  href="#">
+                    <div class="lancez-vous-se-distraire lancez-vous img-program-button"></div>
+                </a>
+            </div>
+            <div class="col-4 card-budget-dashboard">
+                <div class="">
+                    <img class="img-program-icone" src="{{ asset('images/dashboard/budget/program-dashboard/icone-habiter.png') }}" />
+                    <h4 class="title-habiter title-icone">Budget Dashboard <br> Habiter</h4>
+                </div>
+                <a  href="#">
+                    <div class="lancez-vous-habiter lancez-vous img-program-button"></div>
+                </a>
+            </div>
+            <div class="col-2 my-col"></div>
+        </div>
+    </div>
+    <div class="space-between-card-dashboard-small"></div>
+    <div class="col-12" >
+        {% include 'footer.html.twig' %}
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+    </script>
+
+    <script src="{{ asset('js/app.js')}}"></script>
+{% endblock %}

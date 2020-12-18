@@ -1,0 +1,50 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('css/Reset-password/request.css') }}">
+<link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+{% endblock %}
+
+<div class="row">
+    <header>
+        <div class="header">
+            <img class="d-block" src="{{ asset('images/slider/slide_3.jpg') }}" alt="Dashboard">
+            <div class="text-inside-header">
+                <h1>Mot de passe oublié ?</h1>
+                <p>Créez un <br />nouveau mot de passe</p>
+            </div>
+        </div>
+        <div class="dropdown burger">
+            <a class="dropdown-item" class="btn btn-secondary dropdown-toggle"
+                    href="{{ path('site_index') }}">
+                <button class="btn btn-secondary dropdown-toggle"><i class="fa fa-home" style="font-size:24px"></i>
+                </button>
+            </a>
+        </div>
+    </header>
+
+    <div class="main-title">
+        <div class="container">
+            <h1 class="title-new-psswr-request">Réinitialiser le mot de passe</h1>
+        </div>
+    </div>
+
+    <div class="new-passwrd-request-form pt-3 pb-3">
+        <div class="container">
+            <form action="{{ path('fos_user_resetting_send_email') }}" method="POST" class="fos_user_resetting_request">
+                <div class="form-group">
+                    <label for="username">{{ 'resetting.request.username'|trans }}</label>
+                    <input type="text" id="username" name="username" required="required" class="form-control" />
+                </div>
+                <div>
+                    <input class="submit" type="submit" value="{{ 'resetting.request.submit'|trans }}" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="col-12" >
+        {% include 'footer.html.twig' %}
+    </div>
+</div>

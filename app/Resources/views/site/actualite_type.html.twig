@@ -1,0 +1,283 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/actualite_type.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/actualites_menu.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+{% endblock %}
+
+{% block body %}
+
+    {# --------------------- IMAGE EN-TÊTE ET TITRE --------------------- #}
+        <header>
+            <img class="img-responsive" src="{{ asset('images/actualite/1_en_tete.png') }}"
+                 alt="En-tête actualités">
+            <h1>Actualités</h1>
+        </header>
+
+    <!--<header>
+        <div class="row">
+            <div class="col-12">
+                <div id="carousel-slp" class="carousel slide" data-ride="carousel">
+
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <img class="d-block w-100 image-header img-responsive"
+                                 src="{#{ asset('images/landing-page/header.png') }}"
+                                 alt="Dashboard">
+                            <div class="carousel-caption d-none d-block intro col-6 top-adjust">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown burger">
+                        <a class="dropdown-item btn btn-secondary dropdown-toggle"
+                           href="{{ path('site_index') }#}">
+                            <button class="btn btn-secondary dropdown-toggle"><i class="fa fa-home"
+                                                                                 style="font-size:24px"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <h1 class="text-center title_page"> Actualités</h1>-->
+
+    <div class="actualities-block">
+        <div class="actualities-block-header" style="background-color: #36667B;">
+            <h2>LANDING PAGE</h2>
+        </div>
+        <div class="actualities-block-body">
+            <img style="width: 70%; height: 600px; margin: 30px 15% 0 15%;" src="{{ asset('images/actualite/actualite-type/landingpage.PNG') }}" alt="">
+            <div style="width: 70%; margin: 0px 15% 40px 15%; text-align: justify;">
+                <h2 style="text-align: center; margin-top: 15px;">La Landing page SLP</h2>
+                <span style="font-size: 1.5em;">La Landing page SLP est <strong>LE portail web de toute la SL community</strong> ! En effet, il s’adresse à tous les individus, familles et groupes d’amis afin de les regrouper au sein d’une communauté unique animée par gaea21. Ouvert courant septembre, il s’agit d’un outil unique et personnalisable destiné à vous accompagner dans votre volonté de changer de comportement. Suivez votre évolution pour passer de consommateur à consom’acteur !<br>
+                Pour la personnaliser et avoir une vision complète de votre comportement de consommation, il vous suffira de répondre à un questionnaire profil et alimentation, élaborés par nos experts. Vous aurez ensuite accès à votre dashboard personnalisable qui vous permettra de vous positionner en tant que consommateur et trouver les moyens d’agir dans tous les domaines de votre vie.<br>
+                La landing page vous propose l’accès à <strong>7 sites et d'un programme annuel</strong> d'ateliers thématiques qui sont : <br>
+                <strong>- Répertoire vert</strong> pour savoir quoi acheter et où le trouver ;<br>
+                <strong>- Plateforme Consom'action</strong> pour connaître les choix de vie quotidiens et alternatives qui s’offrent à vous ;<br>
+                <strong>- Programme Eco-gestes & Empreinte Chromatique</strong> pour se rendre compte des habitudes à prendre et les comparer ;<br>
+                <strong>- Grow Your Own</strong> pour apprendre à produire mes propres fruits et légumes chez moi ;<br>
+                <strong>- Plateforme d'économie collaborative / Sharing economy</strong> : Pour mettre en commun mes ressources et bénéficier du soutien de ma communauté et de mes voisins ;<br>
+                <strong>- Programme GES</strong> pour être au courant de tous les événements pour m'amuser, faire du sport, sortir et rencontrer du monde ;<br>
+                <strong>- Programme Green coaching pour individus & familles</strong> pour mettre en place un plan de changement et d’en mesurer immédiatement les bénéfices pour moi et mon entourage ;<br>
+                <strong>- Ateliers éco</strong> pour apprendre à transformer mon quotidien <br><br>
+                <strong>Vous pourrez essayer la Landing page SLP et rejoindre la SL community à la journée gaea organisée le 21 septembre au parc des Evaux !</strong>
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    <!--<section>
+        <div class="col-12">
+            <img class="img-fluid" src="{{ asset('images/actualite/bloc_article_complet_landing_page.png') }}" alt="bloc article">
+        </div>
+    </section>-->
+
+    <div id="archive" class="actualities-block">
+        <div class="actualities-block-header" style="background-color: #36667B;">
+            <h2>Archives</h2>
+        </div>
+        <div class="actualities-block-body">
+            <div style="display: flex;">
+                <div class="arch">
+                    <img class="img-fluid" src="{{ asset('images/actualite/landing-page/landingpage.PNG') }}" alt="">
+                    <div class="arch-text">
+                        <h1>LA LANDING PAGE SLP</h1>
+                        <p>La Landing page SLP est LE portail web de toute la SL community ! En effet, il s’adresse à</p>
+                    </div>
+                    <a href="#">en savoir <span class="sizeMore">+ </span></a>
+                </div>
+                <div class="arch">
+                    <img class="img-fluid" src="{{ asset('images/actualite/landing-page/plateformeslp.PNG') }}" alt="">
+                    <div class="arch-text">
+                        <h1>LA PLATEFORME SLP</h1>
+                        <p>Programme innovant de mesure, de sensibilisation et de stimulation du changement de </p>
+                    </div>
+                    <a href="#">en savoir <span class="sizeMore">+ </span></a>
+                </div>
+                <div class="arch">
+                    <img class="img-fluid" src="{{ asset('images/actualite/landing-page/dashboarduniv.png') }}" alt="">
+                    <div class="arch-text">
+                        <h1>LE DASHBOARD UNIVERSEL</h1>
+                        <p>Le dashboard est la première innovation technologique et sociale développée par</p>
+                    </div>
+                    <a href="#">en savoir <span class="sizeMore">+ </span></a>
+                </div>
+                <div class="arch">
+                    <img class="img-fluid" src="{{ asset('images/actualite/landing-page/ecopaniers.png') }}" alt="">
+                    <div class="arch-text">
+                        <h1>LES ECO PANIERS</h1>
+                        <p>Les Eco paniers :  une solution pour mieux manger et soutenir l’agriculture  locale.</p>
+                    </div>
+                    <a href="#">en savoir <span class="sizeMore">+ </span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<section id="archive">
+        <h1 class="d-flex align-items-center d-flex justify-content-center" id="title_archive"> Archives </h1>
+        <div class="row">
+            <div class="col-3">
+                <img class="img-fluid" src="{#{ asset('images/actualite/archive1.png') }}"
+                     alt="bloc archive">
+                <h1>la plate-forme SLP</h1>
+                <p> Programme innovant de mesure de sensibilisation</p>
+                <a href="#">en savoir <span class="sizeMore">+ </span></a>
+            </div>
+            <div class="col-3">
+                <img class="img-fluid" src="{{ asset('images/actualite/archive2.png') }}"
+                     alt="bloc archive">
+                <h1>Titre same size</h1>
+                <p>Texte explicatif Lorem ipsum dolor sit amet, consecte-Lorem ipsum Dolor</p>
+                <a href="#">en savoir <span class="sizeMore">+ </span></a>
+            </div>
+            <div class="col-3">
+                <img class="img-fluid" src="{{ asset('images/actualite/archive3.png') }}"
+                     alt="bloc archive">
+                <h1>Titre</h1>
+                <p>Texte explicatif Lorem ipsum dolor sit amet, consecte-Lorem ipsum Dolor</p>
+                <a href="#">en savoir <span class="sizeMore">+ </span></a>
+            </div>
+            <div class="col-3">
+                <img class="img-fluid" src="{{ asset('images/actualite/archive4.png') }}"
+                     alt="bloc archive">
+                <h1>Titre</h1>
+                <p>Texte explicatif Lorem ipsum dolor sit amet, consecte-Lorem ipsum Dolor</p>
+                <a href="#">en savoir <span class="sizeMore">+ </span></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <img class="img-fluid" src="{{ asset('images/landing-page/image_type_bloc_archive.png') }}"
+                     alt="bloc archive">
+                <h1>LA PLATE-FORME SLP</h1>
+                <p>Texte explicatif Lorem ipsum dolor sit amet, consecte-Lorem ipsum Dolor</p>
+                <a href="#">en savoir <span class="sizeMore">+ </span></a>
+            </div>
+            <div class="col-3">
+                <img class="img-fluid" src="{{ asset('images/landing-page/image_type_bloc_archive.png') }}"
+                     alt="bloc archive">
+                <h1>Titres same size</h1>
+                <p>Texte explicatif Lorem ipsum dolor sit amet, consecte-Lorem ipsum Dolor</p>
+                <a href="#">en savoir <span class="sizeMore">+ </span></a>
+            </div>
+            <div class="col-3">
+                <img class="img-fluid" src="{{ asset('images/landing-page/image_type_bloc_archive.png') }}"
+                     alt="bloc archive">
+                <h1>Titre</h1>
+                <p>Texte explicatif Lorem ipsum dolor sit amet, consecte-Lorem ipsum Dolor</p>
+                <a href="#">en savoir <span class="sizeMore">+ </span></a>
+            </div>
+            <div class="col-3">
+                <img class="img-fluid" src="{{ asset('images/landing-page/image_type_bloc_archive.png') }#}"
+                     alt="bloc archive">
+                <h1>Titre</h1>
+                <p>Texte explicatif Lorem ipsum dolor sit amet, consecte-Lorem ipsum Dolor</p>
+                <a href="#">en savoir <span class="sizeMore">+ </span></a>
+            </div>
+        </div>
+    </section>-->
+
+
+    <!--<section>
+        <div class="col-12">
+            <img class="img-fluid" src="{#{ asset('images/landing-page/bloc_carres.png') }#}" alt="autres articles">
+        </div>
+    </section>-->
+
+    <div class="border-gray-shadow" style="">
+        <div class="" style="text-align: center; padding: 30px 0 0 0;">
+            <h2 style="font-weight: normal;">LES AUTRES ARTICLES SLP</h2>
+        </div>
+        <div class="" style="position: relative; display: flex;">
+            <div style="width: 25%;">
+                <a href="">
+                    <img style="width: 100%;" src="{{ asset('images/actualite/actualite-type/carrerepvert.png') }}" alt="En savoir +">
+                </a>
+            </div>
+            <div style="width: 25%;">
+                <a href="">
+                    <img style="width: 100%;" src="{{ asset('images/actualite/actualite-type/carregrow.png') }}" alt="En savoir +">
+                </a>
+            </div>
+            <div style="width: 25%;">
+                <a href="">
+                    <img style="width: 100%;" src="{{ asset('images/actualite/actualite-type/carreplateformeeco.png') }}" alt="En savoir +">
+                </a>
+            </div>
+            <div style="width: 25%;">
+                <a href="">
+                    <img style="width: 100%;" src="{{ asset('images/actualite/actualite-type/carresharing.png') }}" alt="En savoir +">
+                </a>
+            </div>
+        </div>
+        <div class="" style="position: relative; display: flex;">
+            <div style="width: 25%;">
+                <a href="">
+                    <img style="width: 100%;" src="{{ asset('images/actualite/actualite-type/carreateliers.png') }}" alt="En savoir +">
+                </a>
+            </div>
+            <div style="width: 25%;">
+                <a href="">
+                    <img style="width: 100%;" src="{{ asset('images/actualite/actualite-type/carreges.png') }}" alt="En savoir +">
+                </a>
+            </div>
+            <div style="width: 25%;">
+                <a href="">
+                    <img style="width: 100%;" src="{{ asset('images/actualite/actualite-type/carreconsom.png') }}" alt="En savoir +">
+                </a>
+            </div>
+            <div style="width: 25%;">
+                <a href="">
+                    <img style="width: 100%;" src="{{ asset('images/actualite/actualite-type/carregreencoaching.png') }}" alt="En savoir +">
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <section id="section_btn">
+        <div class="row">
+            <div class="offset-2 col-4 text-center">
+                <a href="{{ path('actualite_dashboard') }}">Retour au menu actualités </a>
+            </div>
+
+            <div class="col-4 text-center">
+                <a href="{{ path('presentationdashboard') }}">Retour au dashboard </a>
+            </div>
+        </div>
+    </section>
+
+    {% include 'site/humans_ambassador_community.html.twig' %}
+
+    <!--<section>
+        <div class="col-12 banniere">
+            <img class="img-fluid" src="{#{ asset('images/landing-page/bloc_banniere_2.png') }}" alt="autres articles">
+            <div class="link1">
+                <a href="{{ path('humans') }}"> Cliquez-ici 1</a>
+            </div>
+            <div class="link2">
+                <a href="{{ path('ambassadeur') }}"> Cliquez-ici 2</a>
+            </div>
+            <div class="link3">
+                <a href="{{ path('community') }#}"> Cliquez-ici 3</a>
+            </div>
+        </div>
+    </section>-->
+
+    {% include 'footer.html.twig' %}
+
+{% endblock %}
+
+
+
+{% block javascripts %}
+    <script link rel="stylesheet" href="{{ asset('js/jquery.min.js') }}"></script>
+    <script link rel="stylesheet" href="{{ asset('js/bootstrap.min.js') }}"></script>
+{% endblock %}

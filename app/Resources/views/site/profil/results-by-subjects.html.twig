@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/profile.css') }}">
+    
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+{% endblock %}
+
+{% block body %}
+    <div class="header">
+        <div class="dropdown burger above-image">
+        </div>
+        <h1>RÉSULTATS<br>THEMATIQUES / QUESTIONNAIRE</h1>
+        <div class="image-container">
+            <div class="blue-film"></div>
+            <img class="below-film" src="{{ asset('images/subject-profiles/header-page-profil-travailler.jpg') }}">
+        </div>
+    </div>
+    
+    <div class="container my-container">
+        <div class="row title">
+            <h2>Résultat Thématiques / Questionnaire</h2>
+        </div>
+        <div class="row intro">
+            <p>Lorem ipsum dolorsit amet, consectetuer adipiscing elit, sed diam nonummy hihb euismod incindunt ut laoret. Lorem ipsum dolorsit amet, consectetuer adipiscing elit, sed diam nonummy hihb euismod incindunt ut laoret. Lorem ipsum dolorsit amet, consectetuer adipiscing elit, sed diam nonummy hihb euismod incindunt ut laoret. Lorem ipsum dolorsit amet, consectetuer adipiscing elit, sed diam nonummy hihb euismod incindunt ut laoret.</p>
+        </div>
+    </div>
+
+    <div class="container my-container result-box">
+        <div class="row">
+            <h2 class="margins-titles-2nd-grid">S'HABILLER</h2>
+        </div>
+        <div class="space-between-profile-exlanation-title-and-explanaition-text"></div>
+        <div class="row">
+            <div class="col-10 my-col">
+                <h2 class="margins-titles-2nd-grid">PROFIL A</h2>
+                <p class="profile-text">Lorem ipsum dolor sit amet, consecutetuer adipiscing elit, sed diam nonummy nibh euismod tincindunt ut laoreet dolore magna aliquam erat voluptat. Ut wisi enim ad minim veniam, quis Lorem ipsum dolor sit amet, consecutor dipiscing elit, sed diam nonummy nihb euismod tincindunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="col-2 my-col text-image-container">
+                <img class="image" src="{{ asset('images/subject-profiles/travailler.jpg') }}"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-container result-box">
+        <div class="row">
+            <h2 class="margins-titles-2nd-grid" style="float: right;">HABITER</h2>
+        </div>
+        
+        <div class="row">
+            
+        </div>
+        <div class="space-between-profile-exlanation-title-and-explanaition-text"></div>
+        <div class="row">
+            <div class="col-2 my-col text-image-container">
+                <img class="image" src="{{ asset('images/subject-profiles/travailler.jpg') }}"/>
+            </div>
+            <div class="col-10 my-col">
+                <h2 class="margins-titles-2nd-grid" style="float: right;">PROFIL A</h2>
+                <p class="profile-text">Lorem ipsum dolor sit amet, consecutetuer adipiscing elit, sed diam nonummy nibh euismod tincindunt ut laoreet dolore magna aliquam erat voluptat. Ut wisi enim ad minim veniam, quis Lorem ipsum dolor sit amet, consecutor dipiscing elit, sed diam nonummy nihb euismod tincindunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src"{{ asset('js/budget/spendings.js') }}"></script>
+{% endblock %}

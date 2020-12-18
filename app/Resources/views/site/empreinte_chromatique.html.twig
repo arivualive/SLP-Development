@@ -1,0 +1,108 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('css/empreinte_chromatique_transition.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+{% endblock %}
+ 
+{% block body %}
+
+    <header class="head">
+        <div class="row">
+            <div class="col-12">
+                <div id="carousel-slp" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100 image-header img-responsive"
+                                 src="{{ asset('images/empreinte-chromatique/header empreinte chromatique.jpg') }}" alt="Dashboard"
+                            >
+                            <div class="carousel-caption d-none d-block intro col-6 top-adjust">
+                                <h1>Empreinte <br> chromatique </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown burger">
+                        <a class="dropdown-item btn btn-secondary dropdown-toggle" href="{{ path('site_index') }}">
+                            <button class="btn btn-secondary dropdown-toggle"><i class="fa fa-home"
+                                                                                 style="font-size:24px"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="intro-explicatif">
+            <h1 class="text-center">L'Empreinte Chromatique</h1> <br>
+            <p>Vous allez maintenant pouvoir <b>identifier</b> votre <b>impact sur
+                    l’environnement</b>
+                grâce à
+                l’<b>empreinte chromatique</b>.
+                <br><br>
+                Vous aurez un positionnement <b> clair </b>et <b>simple</b> sur une échelle de <b>6 couleur</b> allant
+                de <b>noir</b>,
+                un <b>comportement non-durable</b> à <b>vert fluo</b>, un<b> comportement éco-responsable</b>.
+                <br><br>
+                Vous pourrez <b>comparer</b> votre <b>empreinte chromatique </b> à celle de <b>vos amis</b>,
+                <b>voisins</b>...
+                et ainsi rejoindre la communauté SLP !
+                <br><br>
+                Grâce à cette <b>communauté</b>,
+                vous aurez accès aux <b>informations</b> et aux <b>accompagnements</b> nécessaires pour pouvoir
+                <b>changer</b>
+                et <b>adapter</b> vos actions pour un mode de vie <b>plus durable.</b>
+                <br><br>
+                Rejoignez la <b>communauté SLP en calculant dès maintenant
+                    votre empreinte chromatique individuelle </b> ou <b>familiale </b> !
+            </p>
+        </div>
+    </div>
+</div>
+
+    <!--  Video  -->
+  <div class="row">
+        <div class="col-12 text-center">
+                <div class="video_empreinte_chromatique">
+                <h3>Découvrez l'empreinte chromatique</h3>
+                    <iframe src="https://www.youtube.com/embed/ZvJBhgaMYGA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+        </div>
+  </div>
+
+
+
+    <div class="row lien">
+        <div class="col-6 lien-emp-individu">
+            <h3>voir la page famille</h3>
+            <img class="mx-auto d-block" src="{{ asset('images/empreinte-chromatique/economique2.jpg') }}" alt="lien-emp-individu">
+            <a class="btn btn-lg btn-emp-individu" href="{{path('empreinte_chromatique_individu')}}">INDIVIDUS</a>
+        </div>
+
+
+        <div class="col-6 lien-emp-famille">
+            <h3>voir la page famille</h3>
+            <img class="mx-auto d-block" src="{{ asset('images/empreinte-chromatique/environnemental-famille2.jpg') }}" alt="lien-emp-famille">
+            <a class="btn btn-lg btn-emp-famille" href="{{path('empreinte_chromatique_famille')}}">FAMILLE</a>
+        </div>
+    </div>
+
+    {# BOUTON DE PARTAGE SUR FACEBOOK #}
+    {{ include('site/partager_facebook.html.twig') }}
+
+<div class="col-12" >
+    {% include 'footer.html.twig' %}
+</div>
+
+
+{% endblock %}
+
+{% block javascripts %}
+
+<script link rel="stylesheet" href="{{ asset('js/bootstrap.min.js')}}"></script>
+
+
+{% endblock %}

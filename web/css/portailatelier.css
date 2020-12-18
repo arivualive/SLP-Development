@@ -1,0 +1,612 @@
+body {
+    text-align: center;
+    --style-bold: 700;
+    --style-regular: 400;
+    --style-light: 300;
+}
+body * {
+    font-family: 'Nunito', sans-serif;
+}
+a {
+    color: inherit;
+}
+
+header {
+    background-image: url("../images/atelier-eco/ateliers_eco_header.jpg");
+    background-size: cover;
+    height: 650px;
+}
+/*
+header .content {
+    background-color: rgba(204, 102, 204, 0.45);
+    height: 100%;
+}
+header .text-content {
+    color: white;
+    padding: 0px;
+    position: relative;
+    font-weight: var(--style-bold);
+} 
+*/
+header h1 {
+    font-size: 48px;
+    font-weight: var(--style-bold);    
+}
+header p.text {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    font-size: 30px;
+}
+header .menu-icon {
+    position: absolute;
+    right: 30px;
+    top: 30px;    
+}
+header .glyphicon {
+    border-radius: 100%;
+    background-color: #6E98ED;
+    color: white;
+    padding: 15px;
+    font-size: 30px;
+    font-weight: var(--style-bold);        
+}
+header .glyphicon:hover {
+    background-color: white;
+    color: #6E98ED;
+}
+
+
+
+
+#ateliers div {
+    background-color:green;
+    height:876px;
+}
+
+#calendrier {
+    background-color:#00f;
+    height:920px;
+}
+
+
+.ui.menu {
+
+    margin-bottom: 0px !important;
+}
+
+
+/*
+#footer {
+    background-image:url(../../ecoatelier/img/footer_atelierseco.jpg);
+    background-size:cover;
+    height:390px;
+    margin-top:50px;
+    padding-top:60px;
+}
+
+#footer h3 {
+    font-size:22px;
+    font-weight:900;
+}
+
+#footer h3,.atelier_h3,.h1,.h2,h1,h2,li {
+    font-family:Nunito;
+}
+
+#footer h3,.h1,.h2,h1,h2,li,p.hero-subtitle {
+    color:#fff;
+}
+*/
+
+#formulaire {
+    background-color:green;
+    height:440px;
+}
+
+#header {
+    height:768px;
+}
+
+#section_calendrier a {
+    background-color:#d3e4ff;
+    border:initial;
+    border-radius:50%;
+    padding:6px 10px;
+    text-decoration:none;
+}
+
+#section_formulairetop a {
+    background-color:#d3e4ff;
+    border:initial;
+    border-radius:50%;
+    padding:6px;
+    text-decoration:none;
+}
+
+.article-list {
+    background-color:#fff;
+    color:#313437;
+}
+
+.article-list .articles {
+    padding-bottom:40px;
+}
+
+.article-list .intro {
+    font-size:16px;
+    margin:0 auto;
+    max-width:500px;
+}
+
+.article-list .intro p {
+    margin-bottom:0;
+}
+
+.article-list .item {
+    min-height:425px;
+    padding-top:50px;
+    text-align:center;
+}
+
+.article-list .item .action {
+    color:#4f86c3;
+    display:block;
+    font-size:24px;
+    line-height:1;
+    margin:22px auto 0;
+    opacity:.85;
+    text-decoration:none;
+    transition:opacity .2s;
+    width:24px;
+}
+
+.article-list .item .action:hover,.footer-clean ul a:hover {
+    opacity:1;
+}
+
+.article-list .item .description {
+    font-size:14px;
+    margin-bottom:0;
+    margin-top:15px;
+}
+
+.article-list .item .name {
+    color:inherit;
+    font-size:16px;
+    font-weight:700;
+    margin-top:20px;
+}
+
+.article-list h2 {
+    color:inherit;
+    font-weight:700;
+    margin-bottom:40px;
+    padding-top:40px;
+}
+
+.article-list p {
+    color:#7d8285;
+}
+
+.atelier_btn {
+    background-color:#60AED7;
+    border:none;
+    bottom:0;
+    display:block;
+    left:36%;
+    margin-left:auto;
+    margin-right:auto;
+    position:absolute;
+}
+
+.atelier_btn,.h1,.h2,h1,h2,td,th {
+    text-align:center;
+}
+
+.atelier_h3 {
+    color:#67ABCF;
+    font-size:35px;
+    font-weight:900;
+    height:90px;
+    text-align:center;
+}
+
+.atelier_img {
+    display:block;
+    height:100px;
+    margin-bottom:33px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.atelier_p {
+    color:#67ABCF;
+    font-size:18px;
+    height:auto;
+    margin-bottom:70px;
+    margin-top:45px;
+    text-align:justify;
+    width:auto;
+}
+
+.btn.btn-primary.dropdown-toggle.dropdown_btn {
+    background-color:rgba(0,0,0,0);
+    background-image:url(../../ecoatelier/img/icomenu.png);
+    background-repeat:no-repeat;
+    border:none;
+    height:80px;
+    outline:0;
+    width:88px;
+}
+
+.btn.btn-primary.dropdown-toggle.dropdown_btn:focus {
+    box-shadow:none;
+}
+
+.calendar {
+    display:table;
+    margin-left:auto;
+    margin-right:auto;
+    width:100%;
+}
+
+.col-md-3.d-flex.justify-content-center {
+    padding-left:30px;
+    padding-right:30px;
+}
+
+.col-md-4 {
+    margin-bottom:35px;
+    margin-top:35px;
+}
+
+.col-md-4,.container-fluid {
+    padding-left:0px;
+    padding-right:0px;
+    width: 90%;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.dropdown.fixed-top {
+    margin:29px;
+    text-align:right;
+}
+
+.footer-clean {
+    background-color:#fff;
+    color:#4b4c4d;
+    padding:50px 0;
+}
+
+.footer-clean .copyright {
+    font-size:13px;
+    margin-bottom:0;
+    margin-top:14px;
+    opacity:.6;
+}
+
+.footer-clean .item.social {
+    text-align:right;
+}
+
+.footer-clean .item.social > a {
+    border:1px solid #ccc;
+    border-radius:50%;
+    color:inherit;
+    display:inline-block;
+    font-size:24px;
+    height:40px;
+    line-height:40px;
+    margin-left:10px;
+    margin-top:22px;
+    opacity:.75;
+    text-align:center;
+    width:40px;
+}
+
+.footer-clean .item.social > a:hover {
+    opacity:.9;
+}
+
+.footer-clean h3 {
+    font-size:16px;
+    font-weight:700;
+    margin-bottom:12px;
+    margin-top:0;
+}
+
+.footer-clean ul {
+    font-size:14px;
+    line-height:1.6;
+    list-style:none;
+    margin-bottom:0;
+    padding:0;
+}
+
+.footer-clean ul a {
+    color:inherit;
+    opacity:.8;
+    text-decoration:none;
+}
+
+.formulaire_title {
+    color:#67ABCF;
+    font-weight:700;
+    margin-bottom:100px;
+    margin-top:100px;
+    padding:50px;
+}
+
+.h1,.h2,h1,h2 {
+    font-weight:700;
+}
+
+.h1,h1 {
+    font-size:48px;
+    padding-bottom:50px;
+    padding-top:225px;
+    color:white;
+    font-family:nunito;
+}
+
+.h2,h2 {
+    font-size:30px;
+    color:white;
+    font-family:nunito;
+}
+
+.h5,caption,h5 {
+    color:#67ABCF;
+    margin-left:10px;
+}
+
+.h5,h5 {
+    margin-bottom:20px;
+}
+
+.header_btn {
+    margin-top:140px;
+}
+
+.header_h2 {
+    padding-bottom:140px;
+}
+
+.legend {
+    border-collapse:separate;
+    border-spacing:0 5px;
+}
+
+.legend th {
+    border-radius:20px;
+    color:#67ABCF;
+    font-size:18px;
+    margin-bottom:3px;
+    padding-bottom:3px;
+    text-align:center;
+}
+
+.legend tr {
+    border-spacing:5px 10px;
+    margin-bottom:3px;
+}
+
+.row {
+    margin-left:0;
+    margin-right:0;
+}
+
+.section_formulaire {
+    margin-top:88px;
+}
+
+.section_formulairetop {
+    margin-top:55px;
+}
+
+caption {
+    caption-side:top;
+    font-size:18px;
+    margin-bottom:3px;
+    margin-top:30px;
+    text-align:left;
+}
+
+div.jumbotron.hero-photography {
+    background-size:cover;
+    height:850px;
+    text-align:center;
+}
+
+footer {
+    background-attachment:scroll;
+    background-image:url(../img/footer_atelierseco.jpg);
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    height:382px;
+    margin-bottom:0;
+    margin-top:100px;
+}
+
+footer .list-unstyled {
+    padding-bottom:5px;
+    padding-top:5px;
+}
+
+
+
+footer a {
+    color:#FFF;
+    font-family:nunito;
+    font-weight:lighter;
+    text-decoration:none;
+}
+
+footer a:hover {
+    color:#FFF;
+    text-decoration:none;
+}
+
+footer h5 {
+    color:#FFF;
+    font-family:nunito;
+    font-size:22px;
+    font-weight:700;
+    text-align:left;
+    text-decoration:none;
+}
+
+footer li {
+    text-align:left;
+}
+
+h1.hero-title,h2.hero-title,h3.hero-title {
+    color:#fff;
+    text-shadow:0 3px 3px rgba(0,0,0,.4);
+}
+
+li {
+    font-size:16px;
+    font-weight:500;
+    list-style:none;
+    margin-bottom:10px;
+    margin-top:10px;
+}
+
+p.hero-subtitle {
+    margin:25px auto;
+    max-width:600px;
+}
+
+td {
+    padding-bottom:8px;
+    padding-top:8px;
+}
+
+/*@media max-width 767px{
+    .article-list h2 {
+        font-size:24px;
+        margin-bottom:25px;
+        padding-top:25px;
+    }
+
+    .footer-clean .item {
+        padding-bottom:20px;
+        text-align:center;
+    }
+
+    .footer-clean .item.social > a {
+        margin-top:10px;
+    }
+}
+
+@media max-width 768px{
+    .footer-clean .item.social {
+        text-align:center;
+    }
+}
+
+@media max-width 991px{
+    .footer-clean .item.social > a {
+        margin-top:40px;
+    }
+}
+
+@media max-width 576px{
+    .atelier_btn {
+        margin-left:17%;
+        margin-right:17%;
+        position:initial;
+        width:66%;
+    }
+
+    .atelier_img {
+        margin-bottom:initial;
+    }
+
+    .atelier_p {
+        height:auto;
+        margin-bottom:10px;
+        margin-top:initial;
+    }
+}
+
+@media max-width 992px{
+    .atelier_h3 {
+        font-size:25px;
+        height:initial;
+        text-align:center;
+    }
+}
+
+@media min-width 992px{
+    body {
+        padding-left:120px;
+        padding-right:120px;
+    }
+}*/
+
+
+.burger button{
+    padding: 5px;
+    color: rgba(255, 255, 255, 1);
+    background-color: #539ac4;
+    /*border: solid 2px white;*/
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.burger{
+    /*position: absolute;*/
+    top: 2%;
+    right: 2%;
+
+}
+
+.dropdown-menu::before,
+.dropdown-menu::after {
+   border: none;
+   content: none;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.dropdown-menu.show{
+    transform: translate3d(-30px, 50px, 0px);
+}
+*/
+
+.burger button{
+    padding: 5px;
+    color: rgba(255, 255, 255, 1);
+    background-color: #539ac4;
+    /*border: solid 2px white;*/
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.burger{
+    /*position: absolute;*/
+    top: 2%;
+    right: 2%;
+}
+
+.dropdown-menu::before,
+.dropdown-menu::after {
+   border: none;
+   content: none;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.dropdown-menu.show{
+    transform: translate3d(-30px, 50px, 0px);
+}

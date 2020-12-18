@@ -1,0 +1,1074 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Portail atelier{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:300,400,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="{{ asset('css/portailatelier.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <!-- <link href="{#{ asset('build/app.css') }#}" rel="stylesheet"> -->
+{% endblock %}
+
+{% block atelier %}
+    <!--<div style="position: relative; background-color: black; width: 100%; background-size: cover; height: 40px; margin-bottom: -20px;">
+        <div class="" style="display: flex; position: absolute; right: 0; color: white; font-size: 12px; text-transform: uppercase;">
+            <div class="" style="padding: 12px 17px; border-right: 1px gray solid; border-left: 1px gray solid;">
+                <a href="#" style="">
+                    Connexion
+                </a>
+            </div>
+            <div class="" style="padding: 12px 17px; border-right: 1px gray solid; border-left: 1px gray solid;">
+                <a href="#" style="">
+                    Créer un compte
+                </a>
+            </div>
+        </div>
+    </div>-->
+    <header>
+        <div class="" style="background-color: rgba(204, 102, 204, 0.45); height: 100%;">
+            <div class="" style="color: white; position: relative; font-weight: var(--style-bold);">
+                <div class="menu-icon" style="display:flex;width:340px">
+                    {% if userslp == null %}
+                    <a href="{{ path('fos_user_registration_register') }}" style="background-color:white;color:#337ab7;width:190px;height:35px;margin:auto;line-height:35px;font-size:16px;text-transform:uppercase">
+                        Inscription
+                    </a>
+                    {% endif %}
+                    <div class="dropdown burger" {% if userslp != null %} style="margin-left: 290px;" {% endif %}>
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="min-width: 30px;">
+                            <!--<a class="dropdown-item" href="{#{ path('site_index') }}">Accueil</a>
+                            
+                            {% if userslp != null %}
+                                <a class="dropdown-item" href="{{ path('userslp_show', { 'id': userslp.id }) }}">Profil</a>
+                            {% endif %#}-->
+                            {% if userslp != null %}
+                                <a class="dropdown-item" {% if form == 1 %} aria-disabled="true"
+                                href="{{ path('site_dashboard') }}"> {% else %} href="{{ path('site_dashboard') }}"
+                                aria-disabled="false">Dashboard</a>{% endif %}
+                            {% endif %}
+                            {% if userslp != null %}
+                                <a class="dropdown-item" href="/logout">Deconnexion</a>
+                            {% else %}
+                                <a class="dropdown-item" href="/login">Connexion</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="" style="background: url({{ asset('web/images/ateliers/header_atelierseco.jpg') }}) no-repeat;" >
+                    <h1 style="margin-top: 0px;">ATELIERS ECO</h1>
+                    <p class="" style="font-size: 30px;">ALIMENTATION / MODE / MAQUILLAGE / <br> SANTÉ / CHOISIR &amp; CONSOMMER / 0 WASTE</p>
+                    <div style="margin: 90px;">
+                        <a href="#section_atelier" class="header_btn" style="">
+                            <img src="{{ asset('images/ateliers/icoheader.png') }}" id="header_btn">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div style="margin-bottom: 0px;">
+        <!-- AFFICHAGE DYNAMIQUE DES ATELIERS AVEC PRISE EN CHARGE MULTILANGUAGE : -->
+        <div id="section_atelier">
+            <div class="container-fluid" style="padding-bottom: 30px; padding-top: 50px;">
+                <div class="row">
+                    {#% for taxon in taxons %}
+                        <div class="col-lg-4">
+                            <img src="
+                                {% for img in taxon.images %}
+                                {% if img.type == 'icon' %}
+                                    {{ asset('media/image/' ~ img.path) }}
+                                    {% endif %}
+                                {% endfor %}
+                                " width="129" height="93" alt="" class="atelier_img" />
+                            <h3 class="atelier_h3">ATELIER <br> {{ taxon.name }}  </h3>
+                            <p class="atelier_p">  {{ taxon.description }} </p>
+                            <a href=" taxons/{{ taxon.slug }} ">
+                                <button class="btn btn-primary atelier_btn" type="submit">Plus d'infos</button>
+                            </a>
+                        </div>
+                    {% endfor %#}
+                    
+
+                    <div class="col-lg-4" style="margin: 30px 0;">
+                            <img src="{{ asset('images/atelier-eco/atelier_alimentation.png') }}" alt="citron" width="129" height="93" alt="" class="atelier_img" />
+                            <h3 class="atelier_h3">ATELIER <br> ALIMENTATION  </h3>
+                            <p class="atelier_p">  Que ce soit l'hiver ou l'été, découvrez dans l'atelier alimentation les meilleures recettes et
+                                produits de saison qui feront du bien à votre corps. </p>
+                            <a href="{{ path('atelier_alimentation') }}">
+                                <button class="btn btn-primary atelier_btn" type="submit">Plus d'infos</button>
+                            </a>
+                    </div>
+
+                    <div class="col-lg-4" style="margin: 30px 0;">
+                            <img src="{{ asset('images/atelier-eco/atelier_mode.png') }}" alt="fil avec une épingle" width="129" height="93" alt="" class="atelier_img" />
+                            <h3 class="atelier_h3">ATELIER <br> MODE  </h3>
+                            <p class="atelier_p">  Pour rester tendance, notre atelier mode vous fournit des précieux conseils sur le recyclage de vos
+                                vêtements, des astuces pour recoudre un bouton, transformer une chemise de votre compagnon en joli 
+                                petit haut. </p>
+                            <a href="{{ path('atelier_mode') }}">
+                                <button class="btn btn-primary atelier_btn" type="submit">Plus d'infos</button>
+                            </a>
+                    </div>
+
+                    <div class="col-lg-4" style="margin: 30px 0;">
+                            <img src="{{ asset('images/atelier-eco/atelier_maquillage.png') }}" alt="rouge à lèvres et poudre" width="129" height="93" alt="" class="atelier_img" />
+                            <h3 class="atelier_h3">ATELIER <br> MAQUILLAGE  </h3>
+                            <p class="atelier_p">  Crèmes, eye-liner, fond de teint, ... Vous en êtes accro ? Suivez nos astuces pour réussir à tous 
+                                les coups à vous maquiller, prendre soin de votre visage et de votre corps avec des produits naturels ! </p>
+                            <a href="{{ path('atelier_maquillage') }}">
+                                <button class="btn btn-primary atelier_btn" type="submit">Plus d'infos</button>
+                            </a>
+                    </div>
+
+                    <div class="col-lg-4" style="margin: 30px 0;">
+                            <img src="{{ asset('images/atelier-eco/atelier_sante.png') }}" alt="trousse à pharmacie" width="129" height="93" alt="" class="atelier_img" />
+                            <h3 class="atelier_h3">ATELIER <br> SANTÉ  </h3>
+                            <p class="atelier_p">  Vous êtes souvent sujet à tomber malade ? Notre atelier santé vous conseille sur les différentes vitamines
+                                et aliments qui vont booster votre organisme. </p>
+                            <a href="{{ path('atelier_sante') }}">
+                                <button class="btn btn-primary atelier_btn" type="submit">Plus d'infos</button>
+                            </a>
+                    </div>
+
+                    <div class="col-lg-4" style="margin: 30px 0;">
+                            <img src="{{ asset('images/atelier-eco/atelier_choisir_et_consommer.png') }}" alt="best choise" width="129" height="93" alt="" class="atelier_img" />
+                            <h3 class="atelier_h3">ATELIER <br> <span>CHOISIR & CONSOMMER</span>  </h3>
+                            <p class="atelier_p">  Êtes-vous sûr de manger vraiment bio ? Autrement dit, êtes-vous sûr de la qualité des aliments que vous 
+                                achetez et consommez ? </p>
+                            <a href="{{ path('atelier_choisirconsommer') }}">
+                                <button class="btn btn-primary atelier_btn" type="submit">Plus d'infos</button>
+                            </a>
+                    </div>
+
+                    <div class="col-lg-4" style="margin: 30px 0;">
+                            <img src="{{ asset('images/atelier-eco/atelier_zero_waste.png') }}" alt="bonhomme qui met du papier à la poubelle" width="129" height="93" alt="" class="atelier_img" />
+                            <h3 class="atelier_h3">ATELIER <br> ZÉRO WASTE  </h3>
+                            <p class="atelier_p">  Trop d'aliments dans votre frigo ? Vous ne voulez pas gaspiller mais vous ne savez pas quoi en faire ? 
+                                Pas de soucis, venez découvrir grâce à notre atelier toutes les alternatives qui s'offrent à vous face 
+                                à ce dilemne ! </p>
+                            <a href="{{ path('atelier_zerowaste') }}">
+                                <button class="btn btn-primary atelier_btn" type="submit">Plus d'infos</button>
+                            </a>
+                    </div>
+ 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- section légende calendrier début -->
+    {% if colors_label is not defined %}
+        {% set colors_label = [0,1,2,3,4,5,6,7,8,9,10,11,12,13] %}
+    {% endif %}
+    {% if colors_css is not defined %}
+        {% set colors_css = [0,1,2,3,4,5,6,7,8,9,10,11,12,13] %}
+    {% endif %}
+    {% if calendrier is not defined %}
+        {% set calendrier = [0,1,2,3,4,5,6,7,8,9,10,11,12,13] %}
+    {% endif %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" style="margin:0px;">
+                <h3 class="text-center formulaire_title" style="margin: 0px; padding-top: 0px;">CALENDRIER D'INSCRIPTION ATELIER ECO</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="margin-bottom: 30px;">
+        <div class="row">
+            <div class="col-xl-12">
+                <div>
+                    <table class="legend" style="width:100%" border="0">
+                        {#% for i in range(1, 3) %}
+                            <tr>
+                                <th>
+                                    {{ colors_label[i] }} :
+                                </th>
+                                <th bgcolor={{ colors_css[i] }} style="width:10%" >  </th>
+                                <th>
+                                    {{ colors_label[i+3] }} :
+                                </th>
+                                    <th bgcolor={{ colors_css[i+3] }} style="width:10%" >  </th>
+                            </tr>
+                        {% endfor %#}
+                        {# style="width:108px; height: 28.7px;" #}
+                        <tr>
+                            <th>
+                                ATELIER ALIMENTATION :
+                            </th>
+                            <th bgcolor="red" style="" >  </th>
+                            <th>
+                                ATELIER MAQUILLAGE  :
+                            </th>
+                            <th bgcolor="blue" style="width:10%" >  </th>
+                        </tr>
+
+                        <tr>
+                            <th>
+                                ATELIER MODE :
+                            </th>
+                            <th bgcolor="yellow" style="width:10%" >  </th>
+                            <th>
+                                ATELIER WASTE :
+                            </th>
+                            <th bgcolor="green" style="width:10%" >  </th>
+                        </tr>
+
+                        <tr>
+                            <th>
+                                ATELIER SANTÉ :
+                            </th>
+                            <th bgcolor="pink" style="width:10%" >  </th>
+                            <th>
+                                ATELIER CHOISIR ET CONSOMMER :
+                            </th>
+                            <th bgcolor="gray" style="width:10%" >  </th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- section calendrier début -->
+    <!--<div id="sect{#ion_calendrier" class="sect#}ion_formulairetop">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 d-flex justify-content-center">
+                    {{ calendrier[0] | raw }}
+                </div>
+                <div class="col-md-3 d-flex justify-content-center">
+                    {{ calendrier[1] | raw }}
+                </div>
+                <div class="col-md-3 d-flex justify-content-center">
+                    {{ calendrier[2] | raw }}
+                </div>
+                <div class="col-md-3 d-flex justify-content-center">
+                    {{ calendrier[3] | raw }}
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+    <div id="section_calendrier">
+    <div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 d-flex justify-content-center">
+                    <!---->
+                    <table class='calendar'><caption>Janvier 2019</caption>
+                        <tr>
+                            <th class='header'>L</th>
+                            <th class='header'>M</th>
+                            <th class='header'>M</th>
+                            <th class='header'>J</th>
+                            <th class='header'>V</th>
+                            <th class='header'>S</th>
+                            <th class='header'>D</th>
+                        </tr>
+                        <tr>
+                            <td colspan='1'>&nbsp;</td>
+                            <td class='day' rel='2018-12-01'>1</td>
+                            <td class='day' rel='2018-12-02'>2</td>
+                            <td class='day' rel='2018-12-03'>3</td>
+                            <td class='day' rel='2018-12-04'>4</td>
+                            <td class='day' rel='2018-12-05'>5</td>
+                            <td class='day' rel='2018-12-06'>6</td>
+                            
+                            
+                        </tr>
+                        <tr>
+                            <td class='day' rel='2018-12-07'>7</td>
+                            <td class='day' rel='2018-12-08'>8</td>
+                            <td class='day' rel='2018-12-09'>9</td>
+                            <td class='day' rel='2018-12-10'>10</td>
+                            <td class='day' rel='2018-12-11'>11</td>
+                            <td class='day' rel='2018-12-12'>12</td>
+                            <td class='day' rel='2018-12-13'>13</td>
+                            
+                        </tr>
+                        <tr>
+                            <td class='day' rel='2018-12-14'>14</td>
+                            <td class='day' rel='2018-12-16'>15</td>
+                            <td class='day' rel='2018-12-16'>16</td>
+                            <td class='day' rel='2018-12-17'>17</td>
+                            <td class='day' rel='2018-12-18'>18</td>
+                            <td class='day' rel='2018-12-19'>19</td>
+                            <td class='day' rel='2018-12-20'>20</td>
+                            
+                        </tr>
+                        <tr>
+                            <td class='day' rel='2018-12-21'>21</td>
+                            <td class='day' rel='2018-12-23'>22</td>
+                            <td class='day' rel='2018-12-23'>23</td>
+                            <td class='day' rel='2018-12-24'>24</td>
+                            <td class='day' rel='2018-12-25'>25</td>
+                            <td class='day' rel='2018-12-26'>26</td>
+                            <td class='day' rel='2018-12-27'>27</td>
+                            
+                        </tr>
+                        <tr>
+                            <td class='day' rel='2018-12-28'>28</td>
+                            <td class='day' rel='2018-12-30'>29</td>
+                            <td class='day' rel='2018-12-30'>30</td>
+                            <td class='day' rel='2018-12-30'>31</td>
+                            <td colspan='5'>&nbsp;</td>
+                        </tr>
+                    </table>
+                    {#  {{ calendrier[8] | raw }}#}
+                </div>
+
+                <div class="col-md-3 d-flex justify-content-center">
+                    <!---->
+                    <table class='calendar'><caption>Férvrier 2019</caption>
+                    <tr>
+                            <th class='header'>L</th>
+                            <th class='header'>M</th>
+                            <th class='header'>M</th>
+                            <th class='header'>J</th>
+                            <th class='header'>V</th>
+                            <th class='header'>S</th>
+                            <th class='header'>D</th>
+                        </tr>
+                        <tr>
+                            <td colspan='4'>&nbsp;</td>
+                            <td class='day' rel='2018-12-01'>1</td>
+                            <td class='day' rel='2018-12-01'>2</td>
+                            <td class='day' rel='2018-12-03'>3</td>
+                        </tr>
+                        <tr>
+                            
+                            <td class='day' rel='2018-12-04'>4</td>
+                            <td class='day' rel='2018-12-05'>5</td>
+                            <td class='day' rel='2018-12-06'>6</td>
+                            <td class='day' rel='2018-12-07'>7</td>
+                            <td class='day' rel='2018-12-08'>8</td>
+                            <td class='day' rel='2018-12-09'>9</td>
+                            <td class='day' rel='2018-12-10'>10</td>                            
+                        </tr>
+                        <tr>
+                            
+                            
+                            <td class='day' rel='2018-12-11'>11</td>
+                            <td class='day' rel='2018-12-12'>12</td>
+                            <td class='day' rel='2018-12-13'>13</td>
+                            <td class='day' rel='2018-12-14'>14</td>
+                            <td class='day' rel='2018-12-16'>15</td>
+                            <td class='day' rel='2018-12-16'>16</td>
+                            <td class='day' rel='2018-12-17'>17</td>
+                        </tr>
+                        <tr>
+                            <td class='day' rel='2018-12-18'>18</td>
+                            <td class='day' rel='2018-12-19'>19</td>
+                            <td class='day' rel='2018-12-20'>20</td>
+                            <td class='day' rel='2018-12-21'>21</td>
+                            <td class='day' rel='2018-12-21'>22</td>
+                            <td class='day' rel='2018-12-23'>23</td>
+                            <td class='day' rel='2018-12-24'>24</td>
+                            
+                        </tr>
+                        <tr>
+                            
+                            <td class='day' rel='2018-12-25'>25</td>
+                            <td class='day' rel='2018-12-26'>26</td>
+                            <td class='day' rel='2018-12-27'>27</td>
+                            <td class='day' rel='2018-12-28'>28</td>
+                            
+                        </tr>
+                    </table>
+                    {#  {{ calendrier[9] | raw }}#}
+                </div>
+
+                <div class="col-md-3 d-flex justify-content-center">
+                    <!---->
+                    <table class='calendar'><caption>Mars 2019</caption>
+                    <tr>
+                            <th class='header'>L</th>
+                            <th class='header'>M</th>
+                            <th class='header'>M</th>
+                            <th class='header'>J</th>
+                            <th class='header'>V</th>
+                            <th class='header'>S</th>
+                            <th class='header'>D</th>
+                        </tr>
+                        <tr>
+                            <td colspan='4'>&nbsp;</td>
+                            <td class='day' rel='2018-12-01'>1</td>
+                            <td class='day' rel='2018-12-01'>2</td>
+                            <td class='day' rel='2018-12-03'>3</td>
+                        </tr>
+                        <tr>
+                            
+                            <td class='day' rel='2018-12-04'>4</td>
+                            <td class='day' rel='2018-12-05'>5</td>
+                            <td class='day' rel='2018-12-06'>6</td>
+                            <td class='day' rel='2018-12-07'>7</td>
+                            <td class='day' rel='2018-12-08'>8</td>
+                            <td class='day' rel='2018-12-09'>9</td>
+                            <td class='day' rel='2018-12-10'>10</td>                            
+                        </tr>
+                        <tr>
+                            
+                            
+                            <td class='day' rel='2018-12-11'>11</td>
+                            <td class='day' rel='2018-12-12'>12</td>
+                            <td class='day' rel='2018-12-13'>13</td>
+                            <td class='day' rel='2018-12-14'>14</td>
+                            <td class='day' rel='2018-12-16'>15</td>
+                            <td class='day' rel='2018-12-16'>16</td>
+                            <td class='day' rel='2018-12-17'>17</td>
+                        </tr>
+                        <tr>
+                            <td class='day' rel='2018-12-18'>18</td>
+                            <td class='day' rel='2018-12-19'>19</td>
+                            <td class='day' rel='2018-12-20'>20</td>
+                            <td class='day' rel='2018-12-21'>21</td>
+                            <td class='day' rel='2018-12-21'>22</td>
+                            <td class='day' rel='2018-12-23'>23</td>
+                            <td class='day' rel='2018-12-24'>24</td>
+                        </tr>
+                        <tr>
+                            <td class='day' rel='2018-12-25'>25</td>
+                            <td class='day' rel='2018-12-26'>26</td>
+                            <td class='day' rel='2018-12-30'>27</td>
+                            <td class='day' rel='2018-12-30'>28</td>
+                            <td class='day' rel='2018-12-30'>29</td>
+                            <td class='day' rel='2018-12-30'>30</td>
+                            <td class='day' rel='2018-12-30'>31</td>
+                            
+                        </tr>
+                    </table>
+                    {#  {{ calendrier[10] | raw }}#}
+                </div>
+                <div class="col-md-3 d-flex justify-content-center">
+                    <!---->
+                    <table class='calendar'>
+                        <caption>Avril 2019</caption>
+                        <tr>
+                            <th class='header'>L</th>
+                            <th class='header'>M</th>
+                            <th class='header'>M</th>
+                            <th class='header'>J</th>
+                            <th class='header'>V</th>
+                            <th class='header'>S</th>
+                            <th class='header'>D</th>
+                        </tr>
+                        <!--<tr>
+                            <td colspan='6'>&nbsp;</td>
+                            <td class='day' rel='2018-12-01'>1</td>
+                        </tr>-->
+                        <tr>
+                            <td class='day' rel='2018-12-01'>1</td>
+                            <td class='day' rel='2018-12-02'>2</td>
+                            <td class='day' rel='2018-12-03'>3</td>
+                            <td class='day' rel='2018-12-04'>4</td>
+                            <td class='day' rel='2018-12-05'>5</td>
+                            <td class='day' rel='2018-12-06'>6</td>
+                            <td class='day' rel='2018-12-07'>7</td>
+                            
+                        </tr>
+                        <tr>
+                            <td class='day' rel='2018-12-08'>8</td>
+                            <td class='day' rel='2018-12-09'>9</td>
+                            <td class='day' rel='2018-12-10'>10</td>
+                            <td class='day' rel='2018-12-11'>11</td>
+                            <td class='day' rel='2018-12-12'>12</td>
+                            <td class='day' rel='2018-12-13'>13</td>
+                            <td class='day' rel='2018-12-14'>14</td>
+                        </tr>
+                        <tr>
+                            <td class='day' rel='2018-12-16'>15</td>
+                            <td class='day' rel='2018-12-16'>16</td>
+                            <td class='day' rel='2018-12-17'>17</td>
+                            <td class='day' rel='2018-12-18'>18</td>
+                            <td class='day' rel='2018-12-19'>19</td>
+                            <td class='day' rel='2018-12-20'>20</td>
+                            <td class='day' rel='2018-12-21'>21</td>
+                        </tr>
+                        <tr>
+                            <td class='day' rel='2018-12-23'>22</td>
+                            <td class='day' rel='2018-12-23'>23</td>
+                            <td class='day' rel='2018-12-24'>24</td>
+                            <td class='day' rel='2018-12-25'>25</td>
+                            <td class='day' rel='2018-12-26'>26</td>
+                            <td class='day' rel='2018-12-27'>27</td>
+                            <td class='day' rel='2018-12-28'>28</td>
+                        </tr>
+                        <tr>
+                            <td class='day' rel='2018-12-30'>29</td>
+                            <td class='day' rel='2018-12-30'>30</td>
+                            <td colspan='5'>&nbsp;</td>
+                        </tr>
+                    </table>
+                    {#  {{ calendrier[11] | raw }}#}
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 d-flex justify-content-center">
+                    <!---->
+                    <table class='calendar'><caption>Mai 2019</caption>
+                    <tr>
+                            <th class='header'>L</th>
+                            <th class='header'>M</th>
+                            <th class='header'>M</th>
+                            <th class='header'>J</th>
+                            <th class='header'>V</th>
+                            <th class='header'>S</th>
+                            <th class='header'>D</th>
+                        </tr>
+                        <tr>
+                            <td colspan='2'>&nbsp;</td>
+                            <td class='day' rel='2018-12-01'>1</td>
+                            <td class='day' rel='2018-12-02'>2</td>
+                            <td class='day' rel='2018-12-03'>3</td>
+                            <td class='day' rel='2018-12-04'>4</td>
+                            <td class='day' rel='2018-12-05'>5</td>
+                        </tr>
+                        <tr>
+                            <td class='day' rel='2018-12-06'>6</td>
+                            <td class='day' rel='2018-12-07'>7</td>
+                            <td class='day' rel='2018-12-08'>8</td>
+                            <td class='day' rel='2018-12-09'>9</td>
+                            <td class='day' rel='2018-12-10'>10</td>
+                            <td class='day' rel='2018-12-11'>11</td>
+                            <td class='day' rel='2018-12-12'>12</td>
+                            
+                        </tr>
+                        <tr>
+                            <td class='day' rel='2018-12-13'>13</td>
+                            <td class='day' rel='2018-12-14'>14</td>
+                            <td class='day' rel='2018-12-16'>15</td>
+                            <td class='day' rel='2018-12-16'>16</td>
+                            <td class='day' rel='2018-12-17'>17</td>
+                            <td class='day' rel='2018-12-18'>18</td>
+                            <td class='day' rel='2018-12-19'>19</td>
+                            
+                        </tr>
+                        <tr>
+                            <td class='day' rel='2018-12-20'>20</td>
+                            <td class='day' rel='2018-12-21'>21</td>
+                            <td class='day' rel='2018-12-23'>22</td>
+                            <td class='day' rel='2018-12-23'>23</td>
+                            <td class='day' rel='2018-12-24'>24</td>
+                            <td class='day' rel='2018-12-25'>25</td>
+                            <td class='day' rel='2018-12-26'>26</td>
+                            
+                        </tr>
+                        <tr>
+                            <td class='day' rel='2018-12-27'>27</td>
+                            <td class='day' rel='2018-12-28'>28</td>
+                            <td class='day' rel='2018-12-30'>29</td>
+                            <td class='day' rel='2018-12-30'>30</td>
+                            <td class='day' rel='2018-12-30'>31</td>
+                            <td colspan='5'>&nbsp;</td>
+                        </tr>
+                    </table>
+                    {#  {{ calendrier[5] | raw }}#}
+                </div>
+                <div class="col-md-3 d-flex justify-content-center">
+                    <!---->
+                    <table class='calendar'><caption>Juin 2019</caption>
+                    <tr>
+                            <th class='header'>L</th>
+                            <th class='header'>M</th>
+                            <th class='header'>M</th>
+                            <th class='header'>J</th>
+                            <th class='header'>V</th>
+                            <th class='header'>S</th>
+                            <th class='header'>D</th>
+                        </tr>
+                        <tr>
+                            <td colspan='5'>&nbsp;</td>
+                            <td class='day' rel='2018-12-01'>1</td>
+                            <td class='day' rel='2018-12-01'>2</td>
+                        </tr>
+                        <tr>
+                            <td class='day' rel='2018-12-03'>3</td>
+                            <td class='day' rel='2018-12-04'>4</td>
+                            <td class='day' rel='2018-12-05'>5</td>
+                            <td class='day' rel='2018-12-06'>6</td>
+                            <td class='day' rel='2018-12-07'>7</td>
+                            <td class='day' rel='2018-12-08'>8</td>
+                            <td class='day' rel='2018-12-09'>9</td>                            
+                        </tr>
+                        <tr>
+                            
+                            <td class='day' rel='2018-12-10'>10</td>
+                            <td class='day' rel='2018-12-11'>11</td>
+                            <td class='day' rel='2018-12-12'>12</td>
+                            <td class='day' rel='2018-12-13'>13</td>
+                            <td class='day' rel='2018-12-14'>14</td>
+                            <td class='day' rel='2018-12-16'>15</td>
+                            <td class='day' rel='2018-12-16'>16</td>
+                        </tr>
+                        <tr>
+                            
+                            <td class='day' rel='2018-12-17'>17</td>
+                            <td class='day' rel='2018-12-18'>18</td>
+                            <td class='day' rel='2018-12-19'>19</td>
+                            <td class='day' rel='2018-12-20'>20</td>
+                            <td class='day' rel='2018-12-21'>21</td>
+                            <td class='day' rel='2018-12-27'>27</td>
+                            <td class='day' rel='2018-12-28'>28</td>
+                        </tr>
+                        <tr>
+                            <td class='day' rel='2018-12-23'>22</td>
+                            <td class='day' rel='2018-12-23'>23</td>
+                            <td class='day' rel='2018-12-24'>24</td>
+                            <td class='day' rel='2018-12-25'>25</td>
+                            <td class='day' rel='2018-12-26'>26</td>
+                            <td class='day' rel='2018-12-30'>29</td>
+                            <td class='day' rel='2018-12-30'>30</td>
+                            
+                        </tr>
+                        <tr>
+                            
+                            <td colspan='5'>&nbsp;</td>
+                        </tr>
+                    </table>
+                    {#  {{ calendrier[6] | raw }}#}
+                </div>
+                <div class="col-md-3 d-flex justify-content-center">
+                    <!---->
+                    <table class='calendar'><caption>Juillet 2019</caption>
+                    <tr>
+                            <th class='header'>L</th>
+                            <th class='header'>M</th>
+                            <th class='header'>M</th>
+                            <th class='header'>J</th>
+                            <th class='header'>V</th>
+                            <th class='header'>S</th>
+                            <th class='header'>D</th>
+                        </tr>
+                        <tr>
+                            <td class='day' rel='2018-12-01'>1</td>
+                            <td class='day' rel='2018-12-02'>2</td>
+                            <td class='day' rel='2018-12-03'>3</td>
+                            <td class='day' rel='2018-12-04'>4</td>
+                            <td class='day' rel='2018-12-05'>5</td>
+                            <td class='day' rel='2018-12-06'>6</td>
+                            <td class='day' rel='2018-12-07'>7</td>
+                        </tr>
+                        <tr>
+                            
+                            <td class='day' rel='2018-12-08'>8</td>
+                            <td class='day' rel='2018-12-09'>9</td>
+                            <td class='day' rel='2018-12-10'>10</td>
+                            <td class='day' rel='2018-12-11'>11</td>
+                            <td class='day' rel='2018-12-12'>12</td>
+                            <td class='day' rel='2018-12-13'>13</td>
+                            <td class='day' rel='2018-12-14'>14</td>
+                        </tr>
+                        <tr>
+                            
+                            <td class='day' rel='2018-12-16'>15</td>
+                            <td class='day' rel='2018-12-16'>16</td>
+                            <td class='day' rel='2018-12-17'>17</td>
+                            <td class='day' rel='2018-12-18'>18</td>
+                            <td class='day' rel='2018-12-19'>19</td>
+                            <td class='day' rel='2018-12-20'>20</td>
+                            <td class='day' rel='2018-12-21'>21</td>
+                        </tr>
+                        <tr>
+                            
+                            <td class='day' rel='2018-12-23'>22</td>
+                            <td class='day' rel='2018-12-23'>23</td>
+                            <td class='day' rel='2018-12-24'>24</td>
+                            <td class='day' rel='2018-12-25'>25</td>
+                            <td class='day' rel='2018-12-26'>26</td>
+                            <td class='day' rel='2018-12-27'>27</td>
+                            <td class='day' rel='2018-12-28'>28</td>
+                        </tr>
+                        <tr>
+                            
+                            <td class='day' rel='2018-12-30'>29</td>
+                            <td class='day' rel='2018-12-30'>30</td>
+                            <td class='day' rel='2018-12-30'>31</td>
+                            <td colspan='5'>&nbsp;</td>
+                        </tr>
+                    </table>
+                    {# {{ calendrier[7] | raw }}#} 
+                </div>
+
+                <div class="col-md-3 d-flex justify-content-center">
+                    <!---->
+                    <table class='calendar'><caption>Août 2019</caption>
+                    <tr>
+                            <th class='header'>L</th>
+                            <th class='header'>M</th>
+                            <th class='header'>M</th>
+                            <th class='header'>J</th>
+                            <th class='header'>V</th>
+                            <th class='header'>S</th>
+                            <th class='header'>D</th>
+                        </tr>
+                        <tr>
+                            <td colspan='3'>&nbsp;</td>
+                            <td class='day' rel='2018-12-01'>1</td>
+                            <td class='day' rel='2018-12-02'>2</td>
+                            <td class='day' rel='2018-12-03'>3</td>
+                            <td class='day' rel='2018-12-04'>4</td>
+                            
+                        </tr>
+                        <tr>
+                            <td class='day' rel='2018-12-05'>5</td>
+                            <td class='day' rel='2018-12-06'>6</td>
+                            <td class='day' rel='2018-12-07'>7</td>
+                            <td class='day' rel='2018-12-08'>8</td>
+                            <td class='day' rel='2018-12-09'>9</td>
+                            <td class='day' rel='2018-12-10'>10</td>
+                            <td class='day' rel='2018-12-11'>11</td>
+                            
+                        </tr>
+                        <tr>
+                            <td class='day' rel='2018-12-12'>12</td>
+                            <td class='day' rel='2018-12-13'>13</td>
+                            <td class='day' rel='2018-12-14'>14</td>
+                            <td class='day' rel='2018-12-16'>15</td>
+                            <td class='day' rel='2018-12-16'>16</td>
+                            <td class='day' rel='2018-12-17'>17</td>
+                            <td class='day' rel='2018-12-18'>18</td>
+                            
+                        </tr>
+                        <tr>
+                            <td class='day' rel='2018-12-19'>19</td>
+                            <td class='day' rel='2018-12-20'>20</td>
+                            <td class='day' rel='2018-12-21'>21</td>
+                            <td class='day' rel='2018-12-23'>22</td>
+                            <td class='day' rel='2018-12-23'>23</td>
+                            <td class='day' rel='2018-12-24'>24</td>
+                            <td class='day' rel='2018-12-25'>25</td>
+                            
+                        </tr>
+                        <tr>
+                            <td class='day' rel='2018-12-26'>26</td>
+                            <td class='day' rel='2018-12-27'>27</td>
+                            <td class='day' rel='2018-12-28'>28</td>
+                            <td class='day' rel='2018-12-30'>29</td>
+                            <td class='day' rel='2018-12-30'>30</td>
+                            <td class='day' rel='2018-12-30'>31</td>
+                            <td colspan='5'>&nbsp;</td>
+                        </tr>
+                    </table>
+                    {#  {{ calendrier[8] | raw }}#}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="container-fluid">
+            <div class="row">
+                
+
+                <div class="col-md-3 d-flex justify-content-center">
+                    <!---->
+                    <table class='calendar'><caption>Septembre 2019</caption>
+                    <tr>
+                            <th class='header'>L</th>
+                            <th class='header'>M</th>
+                            <th class='header'>M</th>
+                            <th class='header'>J</th>
+                            <th class='header'>V</th>
+                            <th class='header'>S</th>
+                            <th class='header'>D</th>
+                        </tr>
+                        <tr>
+                            <td colspan='6'>&nbsp;</td>
+                            <td class='day' rel='2018-12-01'>1</td>
+                        </tr>
+                        <tr>
+                            <td class='day' rel='2018-12-02'>2</td>
+                            <td class='day' rel='2018-12-03'>3</td>
+                            <td class='day' rel='2018-12-04'>4</td>
+                            <td class='day' rel='2018-12-05'>5</td>
+                            <td class='day' rel='2018-12-06'>6</td>
+                            <td class='day' rel='2018-12-07'>7</td>
+                            <td class='day' rel='2018-12-08'>8</td>
+                            
+                        </tr>
+                        <tr>
+                            <td class='day' rel='2018-12-09'>9</td>
+                            <td class='day' rel='2018-12-10'>10</td>
+                            <td class='day' rel='2018-12-11'>11</td>
+                            <td class='day' rel='2018-12-12'>12</td>
+                            <td class='day' rel='2018-12-13'>13</td>
+                            <td class='day' rel='2018-12-14'>14</td>
+                            <td class='day' rel='2018-12-16'>15</td>
+                        </tr>
+                        <tr>
+                            
+                            <td class='day' rel='2018-12-16'>16</td>
+                            <td class='day' rel='2018-12-17'>17</td>
+                            <td class='day' rel='2018-12-18'>18</td>
+                            <td class='day' rel='2018-12-19'>19</td>
+                            <td class='day' rel='2018-12-20'>20</td>
+                            <td class='day' rel='2018-12-21'>21</td>
+                            <td class='day' rel='2018-12-23'>22</td>
+                        </tr>
+                        <tr>
+                            
+                            <td class='day' rel='2018-12-23'>23</td>
+                            <td class='day' rel='2018-12-24'>24</td>
+                            <td class='day' rel='2018-12-25'>25</td>
+                            <td class='day' rel='2018-12-26'>26</td>
+                            <td class='day' rel='2018-12-27'>27</td>
+                            <td class='day' rel='2018-12-28'>28</td>
+                            <td class='day' rel='2018-12-30'>29</td>
+                        </tr>
+                        <tr>
+                            
+                            <td class='day' rel='2018-12-30'>30</td>
+                            <td colspan='5'>&nbsp;</td>
+                        </tr>
+                    </table>
+                    {#  {{ calendrier[9] | raw }}#}
+                </div>
+
+                <div class="col-md-3 d-flex justify-content-center">
+                    <!---->
+                    <table class='calendar'><caption>Octobre 2019</caption>
+                    <tr>
+                            <th class='header'>L</th>
+                            <th class='header'>M</th>
+                            <th class='header'>M</th>
+                            <th class='header'>J</th>
+                            <th class='header'>V</th>
+                            <th class='header'>S</th>
+                            <th class='header'>D</th>
+                        </tr>
+                        <!--<tr>
+                            <td colspan='6'>&nbsp;</td>
+                            <td class='day' rel='2018-12-01'>1</td>
+                        </tr>-->
+                        <tr>
+                            <td colspan='1'>&nbsp;</td>
+                            <td class='day' rel='2018-12-01'>1</td>
+                            <td class='day' rel='2018-12-02'>2</td>
+                            <td class='day' rel='2018-12-03'>3</td>
+                            <td class='day' rel='2018-12-04'>4</td>
+                            <td class='day' rel='2018-12-05'>5</td>
+                            <td class='day' rel='2018-12-06'>6</td>
+                            
+                            
+                        </tr>
+                        <tr>
+                            <td class='day' rel='2018-12-07'>7</td>
+                            <td class='day' rel='2018-12-08'>8</td>
+                            <td class='day' rel='2018-12-09'>9</td>
+                            <td class='day' rel='2018-12-10'>10</td>
+                            <td class='day' rel='2018-12-11'>11</td>
+                            <td class='day' rel='2018-12-12'>12</td>
+                            <td class='day' rel='2018-12-13'>13</td>
+                            
+                        </tr>
+                        <tr>
+                            <td class='day' rel='2018-12-14'>14</td>
+                            <td class='day' rel='2018-12-16'>15</td>
+                            <td class='day' rel='2018-12-16'>16</td>
+                            <td class='day' rel='2018-12-17'>17</td>
+                            <td class='day' rel='2018-12-18'>18</td>
+                            <td class='day' rel='2018-12-19'>19</td>
+                            <td class='day' rel='2018-12-20'>20</td>
+                            
+                        </tr>
+                        <tr>
+                            <td class='day' rel='2018-12-21'>21</td>
+                            <td class='day' rel='2018-12-23'>22</td>
+                            <td class='day' rel='2018-12-23'>23</td>
+                            <td class='day' rel='2018-12-24'>24</td>
+                            <td class='day' rel='2018-12-25'>25</td>
+                            <td class='day' rel='2018-12-26'>26</td>
+                            <td class='day' rel='2018-12-27'>27</td>
+                            
+                        </tr>
+                        <tr>
+                            <td class='day' rel='2018-12-28'>28</td>
+                            <td class='day' rel='2018-12-30'>29</td>
+                            <td class='day' rel='2018-12-30'>30</td>
+                            <td class='day' rel='2018-12-30'>31</td>
+                            <td colspan='5'>&nbsp;</td>
+                        </tr>
+                    </table>
+                    {#  {{ calendrier[10] | raw }}#}
+                </div>
+                <div class="col-md-3 d-flex justify-content-center">
+                    <!---->
+                    <table class='calendar'><caption>Novembre 2019</caption>
+                    <tr>
+                            <th class='header'>L</th>
+                            <th class='header'>M</th>
+                            <th class='header'>M</th>
+                            <th class='header'>J</th>
+                            <th class='header'>V</th>
+                            <th class='header'>S</th>
+                            <th class='header'>D</th>
+                        </tr>
+                        <tr>
+                            <td colspan='4'>&nbsp;</td>
+                            <td class='day' rel='2018-12-01'>1</td>
+                            <td class='day' rel='2018-12-01'>2</td>
+                            <td class='day' rel='2018-12-03'>3</td>
+                        </tr>
+                        <tr>
+                            
+                            <td class='day' rel='2018-12-04'>4</td>
+                            <td class='day' rel='2018-12-05'>5</td>
+                            <td class='day' rel='2018-12-06'>6</td>
+                            <td class='day' rel='2018-12-07'>7</td>
+                            <td class='day' rel='2018-12-08'>8</td>
+                            <td class='day' rel='2018-12-09'>9</td>
+                            <td class='day' rel='2018-12-10'>10</td>                            
+                        </tr>
+                        <tr>
+                            
+                            
+                            <td class='day' rel='2018-12-11'>11</td>
+                            <td class='day' rel='2018-12-12'>12</td>
+                            <td class='day' rel='2018-12-13'>13</td>
+                            <td class='day' rel='2018-12-14'>14</td>
+                            <td class='day' rel='2018-12-16'>15</td>
+                            <td class='day' rel='2018-12-16'>16</td>
+                            <td class='day' rel='2018-12-17'>17</td>
+                        </tr>
+                        <tr>
+                            <td class='day' rel='2018-12-18'>18</td>
+                            <td class='day' rel='2018-12-19'>19</td>
+                            <td class='day' rel='2018-12-20'>20</td>
+                            <td class='day' rel='2018-12-21'>21</td>
+                            <td class='day' rel='2018-12-21'>22</td>
+                            <td class='day' rel='2018-12-23'>23</td>
+                            <td class='day' rel='2018-12-24'>24</td>
+                        </tr>
+                        <tr>
+                            <td class='day' rel='2018-12-25'>25</td>
+                            <td class='day' rel='2018-12-26'>26</td>
+                            <td class='day' rel='2018-12-30'>27</td>
+                            <td class='day' rel='2018-12-30'>28</td>
+                            <td class='day' rel='2018-12-30'>29</td>
+                            <td class='day' rel='2018-12-30'>30</td>
+                            
+                        </tr>
+                    </table>
+                    {#  {{ calendrier[11] | raw }}#}
+                </div>
+
+                <div class="col-md-3 d-flex justify-content-center">
+                    <!---->
+                    <table class='calendar'><caption>Décembre 2019</caption>
+                    <tr>
+                            <th class='header'>L</th>
+                            <th class='header'>M</th>
+                            <th class='header'>M</th>
+                            <th class='header'>J</th>
+                            <th class='header'>V</th>
+                            <th class='header'>S</th>
+                            <th class='header'>D</th>
+                        </tr>
+                        <tr>
+                            <td colspan='6'>&nbsp;</td>
+                            <td class='day' rel='2018-12-01'>1</td>
+                        </tr>
+                        <tr>
+                            <td class='day' rel='2018-12-02'>2</td>
+                            <td class='day' rel='2018-12-03'>3</td>
+                            <td class='day' rel='2018-12-04'>4</td>
+                            <td class='day' rel='2018-12-05'>5</td>
+                            <td class='day' rel='2018-12-06'>6</td>
+                            <td class='day' rel='2018-12-07'>7</td>
+                            <td class='day' rel='2018-12-08'>8</td>
+                            
+                        </tr>
+                        <tr>
+                            <td class='day' rel='2018-12-09'>9</td>
+                            <td class='day' rel='2018-12-10'>10</td>
+                            <td class='day' rel='2018-12-11'>11</td>
+                            <td class='day' rel='2018-12-12'>12</td>
+                            <td class='day' rel='2018-12-13'>13</td>
+                            <td class='day' rel='2018-12-14'>14</td>
+                            <td class='day' rel='2018-12-16'>15</td>
+                        </tr>
+                        <tr>
+                            
+                            <td class='day' rel='2018-12-16'>16</td>
+                            <td class='day' rel='2018-12-17'>17</td>
+                            <td class='day' rel='2018-12-18'>18</td>
+                            <td class='day' rel='2018-12-19'>19</td>
+                            <td class='day' rel='2018-12-20'>20</td>
+                            <td class='day' rel='2018-12-21'>21</td>
+                            <td class='day' rel='2018-12-23'>22</td>
+                        </tr>
+                        <tr>
+                            
+                            <td class='day' rel='2018-12-23'>23</td>
+                            <td class='day' rel='2018-12-24'>24</td>
+                            <td class='day' rel='2018-12-25'>25</td>
+                            <td class='day' rel='2018-12-26'>26</td>
+                            <td class='day' rel='2018-12-27'>27</td>
+                            <td class='day' rel='2018-12-28'>28</td>
+                            <td class='day' rel='2018-12-30'>29</td>
+                        </tr>
+                        <tr>
+                            
+                            <td class='day' rel='2018-12-30'>30</td>
+                            <td class='day' rel='2018-12-30'>31</td>
+                            <td colspan='5'>&nbsp;</td>
+                        </tr>
+                    </table>
+                    {#  {{ calendrier[8] | raw }}#}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- fin calendrier -->
+
+    <!--<div class="row">-->
+        <footer style="padding: 3% 0;">
+            <div class="">
+                <div class="col-2">
+                    
+                </div>
+                <div class="col-lg-2 col-md-10 col-sm-10">
+                    <h3 style="text-align: left;">Projets</h3>
+                    <ul style="padding-left: 0;">
+                        <li style="padding-top: 1.3rem;"><a href="http://www.repertoirevert.org/">Répertoire Vert</a></li>
+                        <li><a href="">Green Event Series</a></li>
+                        <li><a href="">Grow your own</a></li>
+                        <li><a href="">Consom'action</a></li>
+                        <li><a href="">Eco-gestes</a></li>
+                        <li><a href="">Green Coaching</a></li>
+                        <li><a href="">Sharing Economy</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-10 col-sm-10">
+                    <h3><a href="{{ path('site_mentions') }}">About</a></h3>
+                </div>
+
+                <div class="col-lg-2 col-md-10 col-sm-10">
+                    <h3><a href="{{ path('contact') }}">Contact</a></h3>
+                </div>
+
+                <div class="col-lg-2 col-md-10 col-sm-10">
+                    <h3><a href="http://www.gaea21.org/wpg21/">gaea21</a></h3>
+                </div>
+                <div class="col-2">
+                    
+                </div>
+            </div>
+        </footer>
+    <!--</div>-->
+
+{% endblock %}
+
+
+

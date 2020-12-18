@@ -1,0 +1,776 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/Dashboard/programme_budget.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/eating-budget.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/Dashboard/bar-chart/revenue-variation-bar-chart.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/Dashboard/pie-chart/variation-spendings-pie-charts.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+
+{% endblock %}
+
+{% block body %}
+
+    <div class="header">
+        <div class="dropdown burger above-image">
+        </div>
+        <h1> PROGRAMME BUDGET<br>DASHBOARD</h1>
+        <div class="image-container">
+            <div class="blue-film"></div>
+            <img class="below-film" src="{{ asset('images/dashboard/header-page-budget.jpg') }}">
+            <a href="#">
+                <div class="dollar-img-container">
+                    <img class="dollar-img" src="{{ asset('images/budget/individumenage/dollars.png') }}" />
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <section>
+        <div class="budget-intro-text">
+            <p>La plupart des gens pensent qu'adopter un <b>comportement éco-conscient</b> et <b>consommer</b> de manière <b>responsable</b> coûte cher.<br>
+            Le <b>programme budget dashboard</b> est un <b>logiciel</b> qui permet de démontrer une <b>réalité différente</b>.<br>
+            Il est composé de <b>deux niveaux</b> et s'adresse à tout <b>membre</b> de la <b>communauté SLP</b> désireux de <b>devenir</b> un <b>consom'acteur</b>.
+            </p>
+        </div>
+    </section>
+
+    <section class="n1">
+        <div class="text-page-transition title">
+            <h3 style="color: white;">* Niveau 1 *</h3>
+            <p style="color: white;" class="determine-budget-title">Déterminez votre budget</p>
+            <p style="color: white;" class="revenues-spending-parenthesis-text">(Vos revenus et vos dépenses)</p>
+        </div>
+        <div class="row justify-content-center">
+            
+            <div class="container my-container larger-than-767-px"><!---->
+                <div class="row my-row">
+                    <div class="col-2 my-col"></div>
+                    
+                    <div class="col-3 my-col flex-direction-column">
+                        <a href="{{ path('budget_depenses') }}">
+                            <div class="enter-spendings-box">
+                                Entrez vos Dépenses
+                            </div>
+                        </a>
+                        <div class="enter-revenues-spendings-description float-right">Dans cette section, vous devrez rentrer la totalité de vos dépenses mensuelles, semestrielles et annuelles.</div>
+                    </div>
+                    <div class="col-2 my-col"></div>
+                    <div class="col-3 my-col">
+                        <a href="{{ path('revenus_index') }}">
+                            <div style="margin-bottom: 10px;" class="enter-revenues-box">
+                                Entrez vos Revenus 
+                            </div>
+                        </a>
+                        <div class="enter-revenues-spendings-description">Dans cette section, vous devrez rentrer la totalité de vos revenus mensuels, semestriels et annuels.</div>
+                    </div>
+                    <div class="col-2 my-col"></div>
+                </div>
+            </div>
+
+            <div class="container my-container smaller-than-768-px">
+                <div class="row my-row">
+                    <div class="col-1 my-col"></div>
+
+                    <div class="col-4 my-col">
+                        <a href="#">
+                            <div class="enter-spendings-box">
+                                Entrez vos Dépenses
+                            </div>
+                        </a>
+                        <div class="enter-revenues-spendings-description float-right">Dans cette section, vous devrez rentrer la totalité de vos revenus mensuels, semestriels et annuels.</div>
+                    </div>
+                    
+                    <div class="col-2 my-col"></div>
+
+                    <div class="col-4 my-col">
+                        <a href="#">
+                            <div class="enter-revenues-box">
+                                Entrez vos Revenus 
+                            </div>
+                        </a>
+                        <div class="enter-revenues-spendings-description float-right">Dans cette section, vous devrez rentrer la totalité de vos dépenses mensuelles, semestrielles et annuelles.</div>
+                    </div>
+                    <div class="col-1 my-col"></div>
+                </div>
+            </div>
+        </div>
+        <div class="variation">
+            <div class="row">
+                <!--<div class="col-md-12 col-sm-12 col-xs-12">-->
+                    <div class="text-page-transition">
+                        <div class="rounded-white-section surplus-revenue-variation-title">
+                            <p>
+                                Variation de votre revenu excédentaire
+                            </p>
+                        </div>
+                        <div class="texts-and-gifs-container">
+                            <div class="row my-row">
+                                <div class="col-6 my-col">
+                                    <div class="rounded-white-section info-text-rounded-white-section">Chaque fois que vous <b>modifiez</b> un <b>montant</b> dans les sections <b>revenus</b> ou <b>dépenses</b>, la valeur de votre <b>revenu excédentaire</b> se <b>modifie automatiquement</b> en conséquence.</div>
+                                </div>
+                                <div class="col-6 my-col">
+                                    <div class="revenues-gif">
+                                        <div class="align-vertical-center">
+                                            <div class="revenues-gif-img-container">
+                                                <img src="{{ asset('images/dashboard/budget/gif/GIF-revenus.gif') }}" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row my-row">
+                                <div class="col-6 my-col">
+                                    <div class="revenues-gif align-horizontal-end">
+                                        <div class="align-vertical-center">
+                                            <div class="revenues-gif-img-container">
+                                                <img src="{{ asset('images/dashboard/budget/gif/gif-anime.gif') }}" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 my-col">
+                                    <div class="rounded-white-section info-text-rounded-white-section">Grâce aux programmes <b>éco-gestes</b>, conseil vert du <b>répertoire vert</b> et <b>green coaching</b> pour individus/familles, chaque modification comportementale et/ou choix d'achat différent se reflète automatiquement dans cette section.</div>
+                                </div>
+                            </div>
+
+                            <div class="row my-row">
+                                <div class="col-6 my-col">
+                                <div class="rounded-white-section info-text-rounded-white-section">Sur cette base, le <b>montant</b> figurant dans la partie <b>variation revenu excédentaire</b> correspond au <b>montant supplémentaire</b> dont vous disposez suite à un <b>changement</b> de <b>comportement/variation</b> de la section dépenses et sans modification de votre revenu.</div>
+                                </div>
+                                <div class="col-6 my-col">
+                                    <div class="revenues-gif">
+                                        <div class="align-vertical-center">
+                                            <div class="revenues-gif-img-container">
+                                                    <img src="{{ asset('images/dashboard/budget/gif/comportement.gif') }}" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="budget-surplus-container">
+                        <div class="budget-surplus-title">Votre excédent budgétaire</div>
+                        <div class="plus-surplus-value-text">+ {{ excedentActualMonth }} {{ currency.symbol }}</div>
+                    </div>
+                    <div class="graphs-container">
+                        <!--<div class="themes-list-container">-->
+                            
+                        <!--</div>-->
+                        <div class="row my-row titles-graphs allocation-variation-spendings">
+                            <br>Variation de l'allocation<br>de vos dépenses dans le temps
+                        </div>
+                        <div style="margin-left: 0%; width: 100%;" class="row my-row">
+                            <div></div>
+                            <div class="col-3 my-col">
+                                <div class="theme-list-item-container">
+                                    <img class="theme-img" src="{{ asset('images/dashboard/budget/program-dashboard/icone-habiter.png') }}" />
+                                    <div class="theme-list-item-title-container">
+                                        <div class="theme-list-item-title blue-text">Habiter</div>
+                                    </div>
+                                </div>
+                                <div class="theme-list-item-container">
+                                    <img class="theme-img" src="{{ asset('images/dashboard/budget/program-dashboard/icone-se-deplacer.png') }}" />
+                                    <div class="theme-list-item-title-container">
+                                        <div class="theme-list-item-title pink-text">Se Déplacer</div>
+                                    </div>
+                                </div>
+                                <div class="theme-list-item-container">
+                                    <img class="theme-img" src="{{ asset('images/dashboard/budget/program-dashboard/icone-communiquer.png') }}" />
+                                    <div class="theme-list-item-title-container">
+                                        <div class="theme-list-item-title orange-text">Communiquer</div>
+                                    </div>
+                                </div>
+                                <div class="theme-list-item-container">
+                                    <img class="theme-img" src="{{ asset('images/dashboard/budget/program-dashboard/icone-prendre-soin-de-soi.png') }}" />
+                                    <div class="theme-list-item-title-container">
+                                        <div class="theme-list-item-title orangered-text">Prendre Soin De Soi</div>
+                                    </div>
+                                </div>
+                                <div class="theme-list-item-container">
+                                    <img class="theme-img" src="{{ asset('images/dashboard/budget/program-dashboard/icone-shabiller.png') }}" />
+                                    <div class="theme-list-item-title-container">
+                                        <div class="theme-list-item-title purple-text">S'habiller</div>
+                                    </div>
+                                </div>
+                                <div class="theme-list-item-container">
+                                    <img class="theme-img" src="{{ asset('images/dashboard/budget/program-dashboard/icone-manger.png') }}" />
+                                    <div class="theme-list-item-title-container">
+                                        <div class="theme-list-item-title green-text">Manger</div>
+                                    </div>
+                                </div>
+                                <div class="theme-list-item-container">
+                                    <img class="theme-img" src="{{ asset('images/dashboard/budget/program-dashboard/icone-travailler.png') }}" />
+                                    <div class="theme-list-item-title-container">
+                                        <div class="theme-list-item-title lightorangered-text">Travailler</div>
+                                    </div>
+                                </div>
+                                <div class="theme-list-item-container">
+                                    <img class="theme-img" src="{{ asset('images/dashboard/budget/program-dashboard/icone-se-distraire.png') }}" />
+                                    <div class="theme-list-item-title-container">
+                                        <div class="theme-list-item-title navyblue-text">Se Distraire</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- pie-chart pour version ecran -->
+
+                            <div class="pie-charts-col col-7 my-col screen-status">
+                                {% include 'site/svg/pie-charts.html.twig' %}
+                            </div>
+
+                            <div class="col-2 my-col screen-status">
+                                <!--
+                                <div class="row my-row"></div>
+                                -->
+                                <div role="button" class="monthly-graphs-buttons">
+                                    {#<a href="#">#}
+                                        {# bouton actif par défaut #}
+                                        <img src="{{ asset('images/revenus/mensuel2.jpg') }}" id="monthly1" alt="dépenses mensuelles">
+                                    {#</a>#}
+                                </div>
+                                <!--
+                                <div class="row my-row"></div>
+                                -->
+                                <div role="button" class="annual-graphs-buttons">
+                                    {#<a href="#">#}
+                                        {# bouton inactif par défaut #}
+                                        <img src="{{ asset('images/revenus/annuel1.jpg') }}" id="annual1" alt="dépenses annuelles">
+                                    {#</a>#}
+                                </div>
+                            </div>
+
+                            <!-- pie-chart pour version mobile -->
+                            <div class="pie-charts-col col-9 my-col mobile-status justify-content-center">
+                                {% include 'site/svg/pie-charts-mobile.html.twig' %}
+                            </div>
+                            <div class="mobile-status row my-row justify-content-center button-mobile">
+                                <!--
+                                <div class="row my-row"></div>
+                                -->
+                                <div role="button" class="mobile-monthly-graphs-buttons">
+                                    {#<a href="#">#}
+                                    {# bouton actif par défaut #}
+                                    <img src="{{ asset('images/revenus/mensuel2.jpg') }}" id="monthly3" alt="dépenses mensuelles">
+                                    {#</a>#}
+                                </div>
+                                <!--
+                                <div class="row my-row"></div>
+                                -->
+                                <div role="button" class="mobile-annual-graphs-buttons">
+                                    {#<a href="#">#}
+                                    {# bouton inactif par défaut #}
+                                    <img src="{{ asset('images/revenus/annuel1.jpg') }}" id="annual3" alt="dépenses annuelles">
+                                    {#</a>#}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row my-row titles-graphs allocation-variation-spendings">
+                            <br>Variation de votre revenu<br>excédentaire dans le temps
+                        </div>
+
+                        <!-- Version ecran -->
+
+                        <div style="margin-left: 0%;
+                        width: 100%;" class="row my-row screen-status">
+                            <div class="col-3 my-col"></div>
+                            <div class="col-7 my-col">
+                                {% include 'site/bar-chart/revenue-variation-bar-chart.html.twig' %}
+                            </div>
+                            <div class="col-2 my-col">
+                                <!--
+                                    <div class="row my-row"></div>
+                                -->
+                                <div role="button" class="monthly-graphs-buttons">
+                                    {#<a href="#">#}
+                                        {# bouton actif par défaut #}
+                                        <img src="{{ asset('images/revenus/mensuel2.jpg') }}" id="monthly2" alt="revenu éxédentaire mensuel">
+                                    {#</a>#}
+                                </div>
+                                <!--
+                                <div class="row my-row"></div>
+                                -->
+                                <div role="button" class="annual-graphs-buttons">
+                                    {#<a href="#">#}
+                                        {# bouton inactif par défaut #}
+                                        <img src="{{ asset('images/revenus/annuel1.jpg') }}" id="annual2" alt="revenu éxédentaire annuel">
+                                    {#</a>#}
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Version mobile -->
+                        <div class="row my-row mobile-status">
+                            <div class="col-12 my-col" style="height: 300px">
+                                {% include 'site/bar-chart/revenue-variation-bar-chart-mobile.html.twig' %}
+                            </div>
+                            <div class="mobile-status row my-row justify-content-center button-mobile">
+                                <!--
+                                <div class="row my-row"></div>
+                                -->
+                                <div role="button" class="mobile-monthly-graphs-buttons ">
+                                    {#<a href="#">#}
+                                    {# bouton actif par défaut #}
+                                    <img src="{{ asset('images/revenus/mensuel2.jpg') }}" id="monthly4" alt="dépenses mensuelles">
+                                    {#</a>#}
+                                </div>
+                                <!--
+                                <div class="row my-row"></div>
+                                -->
+                                <div role="button" class="mobile-annual-graphs-buttons">
+                                    {#<a href="#">#}
+                                    {# bouton inactif par défaut #}
+                                    <img src="{{ asset('images/revenus/annuel1.jpg') }}" id="annual4" alt="dépenses annuelles">
+                                    {#</a>#}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; flex-direction: row; justify-content: center;" class="row my-row">
+                            <div class="dashboard-budget-program-text">
+                                L'objectif du programme budget dashboard est de vous donner des outils afin que vous deveniez des consom'acteurs.
+                            </div>
+                        </div>
+                    </div>
+                    <!--
+                    <h1 class="title-budget-surplus">Votre excédent budgétaire<span>+200 CHF</span></h1>
+                    <div class="carousel-item active">
+                        <img class="d-block w-100 image-header"
+                            src="{{ asset('images/dashboard/graphiques-budget.png') }}"
+                            alt="Dashboard" />
+                    </div>
+                    <div class="text-page-transition">
+                        <p>L'objectif du programme budget dashboard est de vous donner des outils afin que vous deveniez des consom'acteurs.</p>
+                    </div>
+                    -->
+                <!--</div>-->
+            </div>
+        </div>
+    </section>
+
+    <section class="n2">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="level-2-text">
+                    <h3>* Niveau 2 *</h3>
+                    <p class="level-2-paragraph">Cette démarche passe par la <b>lecture</b> des <b>étiquettes</b> des <b>produits</b> que vous <b>achetez</b>.</p><br class="ecran">
+                    <p class="level-2-paragraph"><b>Le niveau 1</b> vous permet d'<b>établir</b> la <b>différence</b> entre <b>vos revenus</b> et <b>vos dépenses</b>.</p><br class="ecran">
+                    <p class="level-2-paragraph"><b>Le niveau 2</b> vous <b>engage</b> dans une démarche de <b>réflexion</b> par rapport aux <b>produits</b> que vous <b>achetez</b>.</p><br class="ecran">
+                    <p class="level-2-paragraph">Dans la sections ci-dessous, pour <b>chaque produit</b> que vous <b>choisissez</b>, vous <b>devez répondre</b> (voir étiquette) aux <b>questions/critères</b>.</p>
+                    <p class="level-2-paragraph">Si vous <b>ignorez la réponse</b>, vous avez droit à <b>5 questions</b> (réservé aux <b>membres</b> de la <b>communauté SLC</b>).</p>
+                </div>
+                <!--<h2><img src="{{ asset('images/dashboard/budget/logo SLC.png') }}" /> Rejoignez la SL Community</h2>-->
+
+                <a href="{{ path('community') }}">
+                    <div class="join-sl-community-button">
+                        <img src="{{ asset('images/community/rejignez-la-slc.png') }}" />
+                    </div>
+                </a>
+
+                <a href="{{ path('programme_dashboard_budget') }}">
+                    <div class="debutprogramme">
+                        <img src="{{ asset('images/dashboard/budget/lancez-le-programme-dashbord.jpg') }}">
+                    </div>
+                </a>
+                
+                <div class="sixth-question-text">
+                    <p class="level-2-paragraph">A partir de la <b>6° question</b>, vous avez la <b>possibilité d'acheter</b> des <b>packages d'heures</b> et d'<b>obtenir</b> des <b>conseils personnalisés</b> dans le cadre du <b>conseil vert</b> du <b>programme Répertoire Vert</b>.</p>
+                </div>
+
+                <a href="http://www.repertoirevert.org/conseil-vert">
+                    <div class="debutprogramme">
+                        <img src="{{ asset('images/dashboard/budget/aceder-au-conseil-vert.png') }}">
+                    </div>
+                </a>
+            </div>
+        </div>
+        <h1 class="themes-title budget-themes-title">Budget par thèmes</h1>
+        <div class="programmeN2">
+            <div class="time-periods-container">
+                <div class="time-period-img-container">
+                    <img class="time-period-img" src="{{ asset('images/dashboard/budget/annuel5.jpg') }}" data-periods="annuel">
+                </div>
+                <div class="time-period-img-container">
+                    <img class="time-period-img" src="{{ asset('images/dashboard/budget/semestriel1.jpg') }}" data-periods="semestriel">
+                </div>
+                <div class="time-period-img-container">
+                    <img class="time-period-img" src="{{ asset('images/dashboard/budget/trimestriel1.jpg') }}" data-periods="trimestriel">
+                </div>
+                <div class="time-period-img-container invisible">
+                    <img class="time-period-img" src="{{ asset('images/dashboard/budget/mensuel4.jpg') }}" data-periods="mensuel">
+                </div>
+                <div class="time-period-img-container">
+                    <img class="time-period-img" src="{{ asset('images/dashboard/budget/Hebdomadaire1.jpg') }}" data-periods="hebdomadaire">
+                </div>
+            </div>
+
+            <div class="centered-time-period-container">
+                <div style="display: flex; flex-direction: row; justify-content: center;" class="time-period-img-container">
+                    <img id="annuel" class="cliked-time-period-img invisible" src="{{ asset('images/dashboard/budget/annuel5.jpg') }}" data-periods="annuel">
+                    <img id="semestriel" class="cliked-time-period-img invisible" src="{{ asset('images/dashboard/budget/semestriel1.jpg') }}" data-periods="semestriel">
+                    <img id="trimestriel" class="cliked-time-period-img invisible" src="{{ asset('images/dashboard/budget/trimestriel1.jpg') }}" data-periods="trimestriel">
+                    <img id="mensuel" class="cliked-time-period-img period-active" src="{{ asset('images/dashboard/budget/mensuel4.jpg') }}" data-periods="mensuel">
+                    <img id="hebdomadaire" class="cliked-time-period-img invisible" src="{{ asset('images/dashboard/budget/Hebdomadaire1.jpg') }}" data-periods="hebdomadaire">
+                </div>
+            </div>
+
+            <div class="themes-grid">
+                <div class="row my-row">
+                    <div class="col-4 my-col">
+                        <img class="img-theme" style="width:50%;" src="{{ asset('images/dashboard/budget/se-distraire.png') }}" data-color="#4378ff" data-text="Se Distraire"
+                             data-mensuel="{{ spendingsByThemeCurrentMonth.leisures }}" data-annuel="{{ spendingsByThemeCurrentYear.leisures }}"
+                             data-hebdomadaire="{{ spendingsByThemeCurrentWeek.leisures }}" data-semestriel="{{ spendingsByThemeCurrentSemestriel.leisures }}"
+                             data-trimestriel="{{ spendingsByThemeCurrentTrimestriel.leisures }}">
+                    </div>
+                    <div style="display: flex; flex-direction: row; justify-content: center;" class="col-4 my-col">
+{#        {{ dump(spendingsByThemeCurrentMonth) }}#}
+                         <img class="img-theme" style="width:90%; height: 92%;" src="{{ asset('images/dashboard/budget/prendre-soin-de-soi.png') }}" data-color="#ff5e2e" data-text="Prendre Soin De Soi"
+                              data-mensuel="{{ spendingsByThemeCurrentMonth['take-care-of-yourself'] }}" data-annuel="{{ spendingsByThemeCurrentYear['take-care-of-yourself'] }}"
+                              data-hebdomadaire="{{ spendingsByThemeCurrentWeek['take-care-of-yourself'] }}" data-semestriel="{{ spendingsByThemeCurrentSemestriel['take-care-of-yourself'] }}"
+                              data-trimestriel="{{ spendingsByThemeCurrentTrimestriel['take-care-of-yourself'] }}">
+                    </div>
+                    <div style="display: flex; flex-direction: row; justify-content: flex-end;" class="col-4 my-col">
+                        <img class="img-theme" style="width:50%; height: 92%;" src="{{ asset('images/dashboard/budget/travailler.png') }}" data-color="#fb8056" data-text="Travailler"
+                             data-mensuel="{{ spendingsByThemeCurrentMonth.working }}" data-annuel="{{ spendingsByThemeCurrentYear.working }}"
+                             data-hebdomadaire="{{ spendingsByThemeCurrentWeek.working }}" data-semestriel="{{ spendingsByThemeCurrentSemestriel.working }}"
+                             data-trimestriel="{{ spendingsByThemeCurrentTrimestriel.working }}">
+                    </div>
+                </div>
+                <div class="row my-row central-row">
+                    <div class="col-4 my-col">
+                        <img class="img-theme" style="width:50%; margin-top: 20%;" src="{{ asset('images/dashboard/budget/habiter.png') }}" data-color="#1ed3e8" data-text="Habiter"
+                             data-mensuel="{{ spendingsByThemeCurrentMonth.living }}" data-annuel="{{ spendingsByThemeCurrentYear.living }}"
+                             data-hebdomadaire="{{ spendingsByThemeCurrentWeek.living }}" data-semestriel="{{ spendingsByThemeCurrentSemestriel.living }}"
+                             data-trimestriel="{{ spendingsByThemeCurrentTrimestriel.living }}">
+                    </div>
+                    <div style="display: flex; flex-direction: row; justify-content: center;" class="col-4 my-col">
+{#                        <img style="width:100%;" src="{{ asset('images/dashboard/budget/purple-cercle-whith-text.png') }}">#}
+                        <div id="midCircle" style="align-items: center; align-content: center" data-category="Prendre Soin De Soi">
+                                <p class="moneyTitle" style="text-align: center; ">Prendre Soin De Soi</p>
+                                <p class="money">0</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; justify-content: flex-end;" class="col-4 my-col">
+                        <img class="img-theme" style="width:50%; height: 68%; margin-top: 20%;" src="{{ asset('images/dashboard/budget/shabiller.png') }}" data-color="#ad7afd" data-text="S'habiller"
+                             data-mensuel="{{ spendingsByThemeCurrentMonth.dressing }}" data-annuel="{{ spendingsByThemeCurrentYear.dressing }}"
+                             data-hebdomadaire="{{ spendingsByThemeCurrentWeek.dressing }}" data-semestriel="{{ spendingsByThemeCurrentSemestriel.dressing }}"
+                             data-trimestriel="{{ spendingsByThemeCurrentTrimestriel.dressing }}">
+                    </div>
+                </div>
+                <div class="row my-row">
+                    <div class="col-4 my-col">
+                        <img class="img-theme" style="width:50%;" src="{{ asset('images/dashboard/budget/se-déplacer.png') }}" data-color="#eca8e9" data-text="Se Déplacer"
+                             data-mensuel="{{ spendingsByThemeCurrentMonth.moving }}" data-annuel="{{ spendingsByThemeCurrentYear.moving }}"
+                             data-hebdomadaire="{{ spendingsByThemeCurrentWeek.moving }}" data-semestriel="{{ spendingsByThemeCurrentSemestriel.moving }}"
+                             data-trimestriel="{{ spendingsByThemeCurrentTrimestriel.moving }}">
+                    </div>
+                    <div style="display: flex; flex-direction: row; justify-content: center;" class="col-4 my-col">
+                        <img class="img-theme" style="width:60%; height: 95%;" src="{{ asset('images/dashboard/budget/communiquer.png') }}" data-color="#f08608" data-text="Communiquer"
+                             data-mensuel="{{ spendingsByThemeCurrentMonth.communicating }}" data-annuel="{{ spendingsByThemeCurrentYear.communicating }}"
+                             data-hebdomadaire="{{ spendingsByThemeCurrentWeek.communicating }}" data-semestriel="{{ spendingsByThemeCurrentSemestriel.communicating }}"
+                             data-trimestriel="{{ spendingsByThemeCurrentTrimestriel.communicating }}">
+                    </div>
+                    <div style="display: flex; flex-direction: row; justify-content: flex-end;" class="col-4 my-col">
+                        <img class="img-theme" style="width:50%; height: 95%;" src="{{ asset('images/dashboard/budget/manger.png') }}" data-color="#4fd568" data-text="Manger"
+                             data-mensuel="{{ spendingsByThemeCurrentMonth.eating }}" data-annuel="{{ spendingsByThemeCurrentYear.eating }}"
+                             data-hebdomadaire="{{ spendingsByThemeCurrentWeek.eating }}" data-semestriel="{{ spendingsByThemeCurrentSemestriel.eating }}"
+                             data-trimestriel="{{ spendingsByThemeCurrentTrimestriel.eating }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--</div>-->
+    </section>
+
+    {# BOUTON DE PARTAGE SUR FACEBOOK #}
+    {{ include('site/partager_facebook.html.twig') }}
+
+    <div class="col-12" >
+        {% include 'footer.html.twig' %}
+    </div>
+
+    {% for theme in themes %}
+        {% set index = theme.getName() %}
+        <div class="month-percentages" data-theme="{{index}}" data-percentage="{{spendingsPercentagesByThemeCurrentMonth[index]}}"></div>
+    {% endfor %}
+
+    {% for theme in themes %}
+        {% set index = theme.getName() %}
+        <div class="year-percentages" data-theme="{{index}}" data-percentage="{{spendingsPercentagesByThemeCurrentYear[index]}}"></div>
+    {% endfor %}
+
+{% endblock %}
+
+{% block javascripts %}
+    <script link rel="stylesheet" href="{{ asset('js/bootstrap.min.js') }}"></script>
+
+    <script>
+        var app = {
+            init: function () {
+                // récupération des pourcentages mensuels :
+
+                monthPercentages = $('.month-percentages');
+
+                // console.log(monthPercentages);
+
+                // récupération des pourcentages annuels :
+
+                yearPercentages = $('.year-percentages');
+
+                // pour parcourir les pourcentages mensuels
+
+                // console.log('.month percentages :');
+
+                monthPercentages.each(function() {
+                    // console.log('test');
+                    theme = $(this).data("theme");
+                    
+                    percentage = $(this).data("percentage");
+
+                    // console.log("theme");
+                    // console.log(theme);
+                    // console.log("percentage");
+                    // console.log(percentage);
+
+                    maxScreenFullCircle = 220;
+
+                    maxScreenValue = (maxScreenFullCircle * percentage) / 100;
+                    below991Sreen = (130 * percentage) / 100;
+                    below767Sreen = (130 * percentage) / 100;
+                    below480Sreen = (130 * percentage) / 100;
+                    
+
+                    
+                });
+
+                // pour parcourir les pourcentages annuels
+
+                // console.log('year percentages :');
+
+                // console.log(yearPercentages);
+
+                yearPercentages.each(function() {
+                    // console.log('test');
+                    theme = $(this).data("theme");
+                    
+                    percentage = $(this).data("percentage");
+
+                    maxScreenValue = (220 * percentage) / 100;
+                    below991Sreen = (130 * percentage) / 100;
+                    below767Sreen = (130 * percentage) / 100;
+                    below480Sreen = (130 * percentage) / 100;
+
+                    $('.svg-max').find('.'+theme+"-circle").css('stroke-dasharray',""+maxScreenValue+" "+maxScreenFullCircle+"");
+
+                    // console.log($(document).find('.'+theme+'-pie-chart').find('.svg-max').find(theme+"-circle"));
+                    
+                });
+
+                function setMonthPercentages() {
+                    monthPercentages = $('.month-percentages');
+
+                    monthPercentages.each(function() {
+                        
+                        theme = $(this).data("theme");
+                        
+                        percentage = $(this).data("percentage");
+    
+                        maxScreenFullCircle = 220;
+    
+                        maxScreenValue = (maxScreenFullCircle * percentage) / 100;
+                        below991Sreen = (130 * percentage) / 100;
+                        below767Sreen = (130 * percentage) / 100;
+                        below480Sreen = (130 * percentage) / 100;
+                        
+                        $('.svg-max').find('.'+theme+"-circle").css('stroke-dasharray',""+maxScreenValue+" "+maxScreenFullCircle+"");
+
+                        $('.small-svg').find('.'+theme+"-circle").css('stroke-dasharray',""+below991Sreen+" "+maxScreenFullCircle+"");
+
+                        // console.log($(document).find('.'+theme+'-pie-chart').find('.svg-max').find(theme+"-circle"));
+                        
+                    });
+                }
+
+                function setYearPercentages() {
+                    yearPercentages = $('.year-percentages');
+
+                    yearPercentages.each(function() {
+                        
+                        theme = $(this).data("theme");
+                        
+                        percentage = $(this).data("percentage");
+    
+                        maxScreenValue = (220 * percentage) / 100;
+                        below991Sreen = (130 * percentage) / 100;
+                        below767Sreen = (130 * percentage) / 100;
+                        below480Sreen = (130 * percentage) / 100;
+    
+                        $('.svg-max').find('.'+theme+"-circle").css('stroke-dasharray',""+maxScreenValue+" "+maxScreenFullCircle+"");
+
+                        $('.small-svg').find('.'+theme+"-circle").css('stroke-dasharray',""+below991Sreen+" "+maxScreenFullCircle+"");
+    
+                        // console.log($(document).find('.'+theme+'-pie-chart').find('.svg-max').find(theme+"-circle"));
+                        
+                    });
+                }
+
+
+
+                // PREMIER GRAPH
+
+                // *** le bouton "mensuel" est actif par défaut ***
+                // le bouton "annuel" bleu devient blanc au clic :
+                $("#annual1").on({
+                    "click": function() {
+                    var attr = $(this).attr("src");
+                    // For some browsers, 'attr' is undefined; for others, 'attr' is false. Check for both.
+                    if (typeof attr !== typeof undefined && attr !== false && attr === "{{ asset('images/revenus/annuel1.jpg') }}") {
+                        $(this).attr("src", "{{ asset('images/revenus/annuel2.jpg') }}");
+                        $("#monthly1").attr("src", "{{ asset('images/revenus/mensuel1.jpg') }}");
+                        }
+                        setYearPercentages();
+                    }
+                });
+                // ensuite le bouton "mensuel" devient blanc au clic seulement s'il est bleu :
+                $("#monthly1").on({
+                    "click": function() {
+                    var attr = $(this).attr("src");
+                    // For some browsers, 'attr' is undefined; for others, 'attr' is false. Check for both.
+                    if (typeof attr !== typeof undefined && attr !== false && attr === "{{ asset('images/revenus/mensuel1.jpg') }}") {
+                        $(this).attr("src", "{{ asset('images/revenus/mensuel2.jpg') }}");
+                        $("#annual1").attr('src', "{{ asset('images/revenus/annuel1.jpg') }}");
+                        }
+                        setMonthPercentages();
+                    }
+                });
+                $("#annual3").on({
+                    "click": function() {
+                        var attr = $(this).attr("src");
+                        // For some browsers, 'attr' is undefined; for others, 'attr' is false. Check for both.
+                        if (typeof attr !== typeof undefined && attr !== false && attr === "{{ asset('images/revenus/annuel1.jpg') }}") {
+                            $(this).attr("src", "{{ asset('images/revenus/annuel2.jpg') }}");
+                            $("#monthly3").attr("src", "{{ asset('images/revenus/mensuel1.jpg') }}");
+                        }
+                        setYearPercentages();
+                    }
+                });
+                // ensuite le bouton "mensuel" devient blanc au clic seulement s'il est bleu :
+                $("#monthly3").on({
+                    "click": function() {
+                        var attr = $(this).attr("src");
+                        // For some browsers, 'attr' is undefined; for others, 'attr' is false. Check for both.
+                        if (typeof attr !== typeof undefined && attr !== false && attr === "{{ asset('images/revenus/mensuel1.jpg') }}") {
+                            $(this).attr("src", "{{ asset('images/revenus/mensuel2.jpg') }}");
+                            $("#annual3").attr('src', "{{ asset('images/revenus/annuel1.jpg') }}");
+                        }
+                        setMonthPercentages();
+                    }
+                });
+
+                // SECOND GRAPH
+
+                // *** le bouton "mensuel" est actif par défaut ***
+                // le bouton "annuel" bleu devient blanc au clic :
+                $("#annual2").on({
+                    "click": function() {
+                    var attr = $(this).attr("src");
+                    // For some browsers, 'attr' is undefined; for others, 'attr' is false. Check for both.
+                    if (typeof attr !== typeof undefined && attr !== false && attr === "{{ asset('images/revenus/annuel1.jpg') }}") {
+                        $(this).attr("src", "{{ asset('images/revenus/annuel2.jpg') }}");
+                        $("#monthly2").attr("src", "{{ asset('images/revenus/mensuel1.jpg') }}");
+                        $('#monthlyExcedent').removeClass("display").addClass("hidden");
+                        $('#annualExcedent').removeClass("hidden").addClass("display");
+
+                    }
+                    }
+                });
+                // ensuite le bouton "mensuel" devient blanc au clic seulement s'il est bleu :
+                $("#monthly2").on({
+                    "click": function() {
+                    var attr = $(this).attr("src");
+                    // For some browsers, 'attr' is undefined; for others, 'attr' is false. Check for both.
+                    if (typeof attr !== typeof undefined && attr !== false && attr === "{{ asset('images/revenus/mensuel1.jpg') }}") {
+                        $(this).attr("src", "{{ asset('images/revenus/mensuel2.jpg') }}");
+                        $("#annual2").attr("src", "{{ asset('images/revenus/annuel1.jpg') }}");
+                        $('#monthlyExcedent').removeClass("hidden").addClass("display");
+                        $('#annualExcedent').removeClass("display").addClass("hidden");
+                        }
+                    }
+                });
+                // SECOND GRAPH
+
+                // *** le bouton "mensuel" est actif par défaut ***
+                // le bouton "annuel" bleu devient blanc au clic :
+                $("#annual4").on({
+                    "click": function() {
+                        var attr = $(this).attr("src");
+                        // For some browsers, 'attr' is undefined; for others, 'attr' is false. Check for both.
+                        if (typeof attr !== typeof undefined && attr !== false && attr === "{{ asset('images/revenus/annuel1.jpg') }}") {
+                            $(this).attr("src", "{{ asset('images/revenus/annuel2.jpg') }}");
+                            $("#monthly4").attr("src", "{{ asset('images/revenus/mensuel1.jpg') }}");
+                            $('#monthlyExcedent2').removeClass("display").addClass("hidden");
+                            $('#annualExcedent2').removeClass("hidden").addClass("display");
+
+                        }
+                    }
+                });
+                // ensuite le bouton "mensuel" devient blanc au clic seulement s'il est bleu :
+                $("#monthly4").on({
+                    "click": function() {
+                        var attr = $(this).attr("src");
+                        // For some browsers, 'attr' is undefined; for others, 'attr' is false. Check for both.
+                        if (typeof attr !== typeof undefined && attr !== false && attr === "{{ asset('images/revenus/mensuel1.jpg') }}") {
+                            $(this).attr("src", "{{ asset('images/revenus/mensuel2.jpg') }}");
+                            $("#annual4").attr("src", "{{ asset('images/revenus/annuel1.jpg') }}");
+                            $('#monthlyExcedent2').removeClass("hidden").addClass("display");
+                            $('#annualExcedent2').removeClass("display").addClass("hidden");
+                        }
+                    }
+                });
+
+                $('.img-theme').on({
+                    "click": function() {
+                        var color = $(this).data('color');
+                        var text = $(this).data('text');
+                        var periods = $('.centered-time-period-container').find('.period-active').data('periods');
+                        var money = $(this).data(periods);
+                        //on change la couleur du texte, le contenu et la couleur du cercle central
+                        $("#midCircle").css('border-color', color);
+                        $("#midCircle p").css('color', color);
+                        $("#midCircle .moneyTitle").text(text);
+                        $("#midCircle .money").text(money);
+                        $("#midCircle").data('category', text);
+                    }
+                })
+
+                //Changement des images de perdiode au click
+                $('.time-period-img').on({
+                    "click": function() {
+                        var periods = $(this).data('periods');
+                        $(this).parent().siblings().removeClass('invisible');
+                        $(this).parent().addClass('invisible');
+                        $('.centered-time-period-container').find('.period-active').removeClass('period-active').addClass('invisible');
+                        $('.centered-time-period-container #'+ periods).addClass('period-active').removeClass('invisible');
+                        var category = $('#midCircle').data('category');
+                        console.log($('.img-theme'));
+                        //Test pour trouver les bonnes depenses par rapport a la category pour afficher les donnees de la nouvelle periode séléctionner
+                        $('.img-theme').each(function (){
+                            let testCategory = $(this).data('text');
+                            if (category == testCategory) {
+                                var money = $(this).data(periods);
+                                $("#midCircle .money").text(money);
+                            }
+                        });
+
+                    }
+                })
+
+
+            }
+        }
+        app.init();
+</script>
+{% endblock %}

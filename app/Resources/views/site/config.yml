@@ -1,0 +1,119 @@
+imports:
+    - { resource: parameters.yml }
+    - { resource: security.yml }
+    - { resource: services.yml }
+    - { resource: "@GaeaUserBundle/Resources/config/services.yml" }
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
+parameters:
+    locale: fr
+
+framework:
+    #esi:             ~
+    translator:      { fallbacks: ["%locale%"] }
+    secret:          "%secret%"
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+        strict_requirements: ~
+    form:            ~
+    csrf_protection: ~
+    validation:      { enable_annotations: true }
+    serializer:      { enable_annotations: true }
+    templating:
+        engines: ['twig']
+    default_locale:  "%locale%"
+    trusted_hosts:   ~
+    trusted_proxies: ~
+    session:
+        # http://symfony.com/doc/current/reference/configuration/framework.html#handler-id
+        handler_id:  session.handler.native_file
+        save_path:   "%kernel.root_dir%/../var/sessions/%kernel.environment%"
+    fragments:       ~
+    http_method_override: true
+    assets: ~
+
+# Twig Configuration
+twig:
+    debug:            "%kernel.debug%"
+    strict_variables: "%kernel.debug%"
+    
+#    form_themes:
+#        - 'bootstrap_3_layout.html.twig'
+
+
+# Doctrine Configuration
+doctrine:
+    dbal:
+        default_connection: default
+        connections:
+            default:
+                driver:   pdo_mysql
+                host:     "%database_host%"
+                port:     "%database_port%"
+                dbname:   "%database_name%"
+                user:     "%database_user%"
+                password: "%database_password%"
+                charset:  UTF8
+            nrbt_gaeauser:
+                driver:   pdo_mysql
+                host:     "%database_host%"
+                port:     "%database_port%"
+                dbname:   'nrbt_gaeauser'
+                user:     "%database_user%"
+                password: "%database_password%"
+                charset:  UTF8
+    orm:
+        default_entity_manager: default
+        entity_managers:
+            default:
+                connection: default
+                mappings:
+                    AppBundle: ~
+                    EmailingBundle: ~
+                    UserBundle: ~
+            nrbt_gaeauser:
+                connection: nrbt_gaeauser
+                mappings:
+                    GaeaUserBundle: ~
+fos_user:
+    db_driver: orm
+    model_manager_name: nrbt_gaeauser
+    firewall_name: main
+    user_class: GaeaUserBundle\Entity\User
+    from_email:
+        address: contact@ccsdp.org
+        sender_name: Plateforme des intitiatives
+    registration:
+        confirmation:
+            enabled: true
+            from_email:
+                address:     contact@ccsdp.org
+                sender_name: Plateforme des intitiatives
+            template: '@FOSUser/Registration/email.txt.twig'
+    resetting:
+        email:
+            from_email:
+                address:     contact@ccsdp.org
+                sender_name: Plateforme des intitiatives
+            template: '@FOSUser/Resetting/email.txt.twig'
+
+
+# Swiftmailer Configuration
+swiftmailer:
+    transport: "%mailer_transport%"
+    auth_mode: "%mailer_auth_mode%"
+    host:      "%mailer_host%"
+    port:      "%mailer_port%"
+    username:  "%mailer_user%"
+    password:  "%mailer_password%"
+    encryption: "%mailer_encryption%"
+    spool:     { type: memory }
+    logging:    true
+
+#Assetic Configuration
+assetic:
+    debug:          '%kernel.debug%'
+    use_controller: '%kernel.debug%'
+    filters:
+        cssrewrite: ~

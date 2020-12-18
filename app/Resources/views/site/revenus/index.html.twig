@@ -1,0 +1,139 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/revenus.css') }}">
+    
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+{% endblock %}
+
+{% block body %}
+    <div class="header">
+        <!--<div class="dropdown burger above-image"></div>-->
+        <h1>REVENUS</h1>
+        <div class="image-container">
+            <div class="blue-film"></div>
+            <img class="below-film" src="{{ asset('images/revenus/header2.jpg') }}">
+            <a href="#">
+                <div class="dollar-img-container">
+                    <img class="dollar-img" src="{{ asset('images/budget/individumenage/dollars.png') }}" />
+                </div>
+            </a>
+        </div>
+        <br><br>
+    </div>
+
+    <div class="revenue_intro">
+        <p>Dans la partie “<b>Revenus</b>”, entrez votre revenu <b>principal</b> ainsi que ceux <b>additionnels</b>.</p>
+        <p>Vous pourrez alors suivre l’évolution <b>mensuelle</b> et <b>annuelle</b> de ces <b>revenus</b> et visualiser
+        leur utilisation en vous référant à la <b>partie budget</b> du <b>Dashboard</b>.</p>
+        {# <p>Le <b>bouton</b> d’<b>allocation de revenus</b> (création en cours) vous permettra d’attribuer chaque partie de vos revenus
+        à vos projets et domaines de dépenses (ménage, projet de voyage, crédit achat d’une
+        maison, épargne...etc).</p>
+        <p>Selon le type d’allocation, l’argent sera inclus ou non dans votre budget général.</p> #}
+    </div>
+
+    {# FORMULAIRE #}
+    {% if firstMainRev is defined and firstMainRev is not null %}
+        {% include 'site/revenus/edit.html.twig' %}
+    {% else %}
+        {% include 'site/revenus/new.html.twig' %}
+    {% endif %}
+
+    {# <a class="tcbutton" href="{{ path('userslp_portail') }}"><button>Aller au questionnaire</button></a> #}
+
+    <div role="button" class="view-modify-revenues-btn blue-background margin-top-history-revenues">
+        <a href="#history">
+            Historique des revenus
+        </a>
+    </div>
+
+    <div class="container my-container display-revenues-history invisible" id="history-tables">
+        {% if firstMainRev is defined and firstMainRev is not null %}
+            {{ render(controller('AppBundle:Budget:show')) }}
+        {% else %}
+        <div class="row my-row">
+            <div class="col-12 my-col">
+                Vous n'avez enregistré aucun revenu dans votre dashboard.
+            </div>
+            <div class="space-between-titles-displayed-periods"></div>
+            <div class="col-12 my-col">
+                <a href="{{ path('programmebudgetDashboard') }}">Retour au dashboard</a>
+            </div>
+        </div>
+        <div class="space-between-titles-and-displayed-revenues"></div>
+        {% endif %}
+        {# div mobile supprimée #}
+    </div>
+
+    <div class="space-between-titles-and-displayed-revenues"></div>
+
+    {{ include('footer.html.twig') }}
+
+{% endblock %}
+
+{% block javascripts %}
+    {# <script src"{{ asset('js/budget/revenues.js') }}"></script> #}
+
+    <script>
+    var app = {
+    init: function () {
+
+       // le bouton "historique des revenus" devient blanc au clic et ouvre le tableau des revenus
+        $('.margin-top-history-revenues').on({
+        'click': function(){
+            if ($(this).hasClass("blue-background")){
+                $(this).removeClass("blue-background").addClass( "white-background" );
+                $('#history-tables').removeClass("invisible").addClass("display");
+                $(function() {
+                    /* Smooth scrolling vers le tableau des revenus */
+                    function scrollTo( target ) {
+                        if( target.length ) {
+                            $("html, body").stop().animate( { scrollTop: target.offset().top }, 1500);
+                        }
+                    }
+                    scrollTo( $("#history-tables") );
+                });
+            } else {
+                /* si on clique à nouveau, le bouton change et le tableau se ferme */
+                $(this).removeClass("white-background").addClass( "blue-background" );
+                $('#history-tables').removeClass("display").addClass("invisible");
+            }
+        }
+      });
+
+      // *** le bouton "annuel" est actif par défaut ***
+      // le bouton "mensuel" bleu devient blanc au clic :
+      $('#mensuel').on({
+        'click': function() {
+      var attr = $("#mensuel").attr('src');
+        // For some browsers, 'attr' is undefined; for others, 'attr' is false. Check for both.
+        if (typeof attr !== typeof undefined && attr !== false && attr === "{{ asset('images/revenus/mensuel1.jpg') }}") {
+            $("#mensuel").attr('src', "{{ asset('images/revenus/mensuel2.jpg') }}");
+            $("#annuel").attr('src', "{{ asset('images/revenus/annuel1.jpg') }}");
+            // le tableau annuel disparaît, le tableau mensuel réapparaît
+            $('#annualRevenues').removeClass("display").addClass("invisible");
+            $('#monthlyRevenues').removeClass("invisible").addClass("display");
+            }
+        }
+        });
+      // ensuite le bouton "annuel" devient blanc au clic seulement s'il est bleu :
+      $('#annuel').on({
+        'click': function() {
+      var attr = $("#annuel").attr('src');
+        // For some browsers, 'attr' is undefined; for others, 'attr' is false. Check for both.
+        if (typeof attr !== typeof undefined && attr !== false && attr === "{{ asset('images/revenus/annuel1.jpg') }}") {
+            $("#annuel").attr('src', "{{ asset('images/revenus/annuel2.jpg') }}");
+            $("#mensuel").attr('src', "{{ asset('images/revenus/mensuel1.jpg') }}");
+            // le tableau mensuel disparaît, le tableau annuel réapparaît
+            $('#monthlyRevenues').removeClass("display").addClass("invisible");
+            $('#annualRevenues').removeClass("invisible").addClass("display");
+            }
+        }
+        });
+    }
+}
+
+    app.init();
+   </script>
+{% endblock %}

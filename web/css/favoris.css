@@ -1,0 +1,95 @@
+* {
+    font-family: 'Roboto', 'sans-serif';
+    margin: 0;
+    padding: 0;
+}
+
+/* Section favoris */
+.card
+{
+    border: none;
+    width: 20vw;
+    margin-bottom: 150px;
+}
+
+.d-flex{
+    margin-bottom: 50px;
+}
+.favoris {
+    font-size: 24px;
+    margin-top: 74px;
+    margin-bottom: 74px;
+    color: #77ACCA;
+}
+
+.img-fluid-card,.small
+{
+    border: solid 4px #77ACCA;
+}
+
+.row-favoris
+{
+    margin-bottom: 132px;
+}
+
+/* Favoris etape 1*/
+
+.four_section{
+    color: #77ACCA;
+}
+
+.four_section h1{
+    font-weight: bold;
+}
+
+
+#second{
+    margin-bottom: 150px;
+}
+
+
+/* Favoris etape 2 */
+
+.four_section_after{
+    margin-bottom: 74px;
+}
+
+/*.step2{*/
+/*    margin-bottom: 90px;*/
+/*}*/
+
+/*.step2 #nine{*/
+/*    margin-top: 50px;*/
+/*}*/
+
+.text-center{
+    margin-top: 50px;
+}
+
+/*Favoris etape 3 */
+
+.card-3{
+    width: 400px ;
+}
+
+.step3{
+    color: #77ACCA;
+}
+
+.step3 #first{
+    margin-bottom: 50px;
+}
+
+
+.step3 a{
+    font-weight: bold;
+    padding: 10px;
+    color: #fff;
+    background-color: #77ACCA;
+}
+
+.lastEtape3{
+    margin-top: 74px;
+    margin-bottom: 74px;
+}
+

@@ -1,0 +1,110 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container" id="container{{question.number}}">
+                <h3>{{question.number}}: {{question.title}}</h3>
+
+                {% if question.master %}
+                    <form class="form-group" id="form{{question.id}}" action="{{ path('answer_subquestion') }}" method="POST">
+                        {% for subQuestion in question.subQuestions %}
+
+                            <h4 class=>{{subQuestion.title}}</h4> 
+
+
+                            <label for="{{subQuestion.id}}1">1</label>
+                            <input type="radio" name="{{subQuestion.id}}" id="{{subQuestion.id}}1" value="1">                      
+                            <label for="{{subQuestion.id}}2">2</label>
+                            <input type="radio" name="{{subQuestion.id}}" id="{{subQuestion.id}}2" value="2">                      
+                            <label for="{{subQuestion.id}}3">3</label>
+                            <input type="radio" name="{{subQuestion.id}}" id="{{subQuestion.id}}3" value="3">                      
+                            <label for="{{subQuestion.id}}4">4</label>
+                            <input type="radio" name="{{subQuestion.id}}" id="{{subQuestion.id}}4" value="4">                      
+                            <label for="{{subQuestion.id}}5">5</label>
+                            <input type="radio" name="{{subQuestion.id}}" id="{{subQuestion.id}}5" value="5">   
+
+                                
+                        {% endfor %}
+                        <div>               
+                            <button type="submit" id="termine" data-number="{{question.number}}" data-user="{{userslp.id}}" data-formid="form{{question.id}}" class="termine btn btn-primary">Terminer</button> 
+                        </div>
+                    </form> 
+                {% endif %}
+                {# on definis un conteur de reponse pour géré les champ libre liée au case -> "Autre: précisez" #}
+                {% set answerCount = 0 %}
+                <form class="form-group" id="form{{question.id}}" action="{{ path('answer_new') }}" method="POST">
+                    {% for answer in question.answers %}
+
+                    {% if answer.model == 1 %}
+                    
+                    {% set answerCount = answerCount + 1 %}
+
+                    {% if answer.answerType.id == 1 %}
+                        {# conserne le eco question , ne doit pas etre afficher ici (cette fonction sers a debuger) #}
+                        <p>{{answer.answerType.type}}</p>
+
+                    {% elseif answer.answerType.id == 2 %}
+
+                        {% if answerCount == 2 %}
+                            <input type="text" id="hide{{question.id}}" style="display: none;" name="{{answer.id}}" value="">
+                        {% else %}
+                            <input type="text" id="{{answer.id}}" name="{{answer.id}}" value="">
+                        {% endif %}
+
+                    {% elseif answer.answerType.id == 3 %}
+
+                        <label for="{{answer.id}}oui">oui</label>
+                        <input type="radio" class="oui" data-name="{{answer.id}}" name="{{answer.id}}" id="{{answer.id}}oui" value="1">
+
+                        <label for="{{answer.id}}non">Non</label>
+                        <input class="non" type="radio" data-name="{{answer.id}}" name="{{answer.id}}" id="{{answer.id}}non"  value="0">
+
+                    {% elseif answer.answerType.id == 4 %}
+
+                        {% for choice in answer.choices %}
+                            {# l ajout de class oui et non est uniquement due aux questions 20 et 32, comme ca elle bénéficie de la mm fonction que les question bool#}
+                            <label for="choice{{choice.id}}">{{choice.choice}}</label>
+                            {% if choice.decisive == 1 %}
+                            <input type="radio" class="non" data-name="{{answer.id}}" name="{{answer.id}}" id="choice{{choice.id}}" value="{{choice.id}}">
+                            {% else %}
+                            <input type="radio" class="oui" data-name="{{answer.id}}" name="{{answer.id}}" id="choice{{choice.id}}" value="{{choice.id}}">
+                            {% endif %}
+
+                        {% endfor %}
+
+                    {% elseif answer.answerType.id == 5  or  answer.answerType.id == 7 %} 
+                        {# conserne les subQuestion , ne doit pas etre afficher ici (cette fonction sers a debuger) #}
+                        <p>{{answer.answerType.type}}</p>
+
+                    {% elseif answer.answerType.id == 6 %} 
+
+                        {% for choice in answer.choices %}
+
+                            <label for="choice{{choice.id}}">{{choice.choice}}</label>
+                            {% if choice.decisive == 1 %}
+                                <input type="checkbox" data-button="button{{question.id}}" data-precise="hide{{question.id}}" class="decisive" data-name="{{answer.id}}" name="{{answer.id}}-{{choice.id}}" id="choice{{choice.id}}" value="{{choice.id}}">
+                            {% else %}
+                                <input type="checkbox" data-name="{{answer.id}}" name="{{answer.id}}-{{choice.id}}" id="choice{{choice.id}}" value="{{choice.id}}">
+                            {% endif %}
+                        
+                        {% endfor %}
+
+                    {% endif %}
+                    {% if answerCount == 1 %}
+                        <div id="button{{question.id}}">
+                            <button type="submit" id="termine" data-number="{{question.number}}" data-user="{{userslp.id}}" data-formid="form{{question.id}}" class="termine btn btn-primary">Terminer</button> 
+                        </div>
+                    {% endif %}
+                    {% endif %}
+                    {% endfor %}    
+                </form>  
+
+            </div>
+{% block javascripts %}
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script link rel="stylesheet" href="{{ asset('js/bootstrap.min.js')}}"></script>
+<script src="{{ asset('js/app.js')}}"></script>
+{% endblock %}
+{% endblock %}

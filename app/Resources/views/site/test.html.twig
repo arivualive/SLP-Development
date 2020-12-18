@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+{% endblock %}
+
+{% block body %}
+
+    <h1> Thème</h1>
+    <ul>
+        {% for theme in listTheme %}
+            <li>{{ theme.id }} {{ theme.name }}</li>
+        {% endfor %}
+    </ul>
+
+
+    <h1> Catégories</h1>
+    <ul>
+        {% for categorie in listCategories %}
+            <li>{{ categorie.id }} {{ categorie.name }}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>Sous catégories </h1>
+    <ul>
+        {% for categorie in listSousCategories %}
+            <li> {{ categorie.id }} {{ categorie.name }}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>Produits </h1>
+    <ul>
+        {% for product in listProduct %}
+            <li>  {{ product.name }}</li>
+        {% endfor %}
+    </ul>
+
+
+{% endblock %}
+
+
+
+
+
+{% block javascripts %}
+{% endblock %}

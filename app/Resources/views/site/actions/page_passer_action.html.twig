@@ -1,0 +1,113 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/actions_dashboard.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+
+{% endblock %}
+ 
+{% block body %}
+<div class="header">
+    <div class="dropdown burger above-image">
+    </div>
+    <div class="image-container">
+        <div class="blue-film text-center justify-content-center align-items-center d-flex">
+            <div>
+                <h2>sl community & passer à l'action</h2>
+            </div>  
+        </div>
+        <img class="below-film" src="{{ asset('images/dashboard/points-badges/header-page-points.jpg') }}">
+        <a href="{{ path('site_dashboard') }}">
+            <div class="menu-img-container">
+                <img class="menu-img" src="{{ asset('images/dashboard/points-badges/bouton-menu.png') }}" />
+            </div>
+        </a>
+    </div>
+</div>
+<div class="main">
+	<div class="row">
+		<div class="col-md-12">
+			<p class="passerActionText">
+				Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
+                veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+                consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
+                dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                <br>
+                Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
+                veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
+                veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate 
+			</p>
+		</div>
+    </div>
+    <div class="actionMenu">   
+        <div class="row menu1">
+            <div class="col-md-4">
+                <img class="imgMenu" id="menu_competence" src="{{ asset('images/dashboard/passer_action/competences-plus-icone.jpg') }}" />
+            </div>
+            <div class="col-md-4">
+                <img class="imgMenu" id="menu_materiel" src="{{ asset('images/dashboard/passer_action/materiel-plus-icone.jpg') }}" />
+            </div>
+            <div class="col-md-4">
+                <img class="imgMenu" id="menu_transport" src="{{ asset('images/dashboard/passer_action/transport-plus-icone.jpg') }}" />
+            </div>
+        </div>
+        <div class="row menu2">
+            <div class="col-md-4">
+                <img class="imgMenu" id="menu_logement" src="{{ asset('images/dashboard/passer_action/logement-plus-icone.jpg') }}" />
+            </div>
+            <div class="col-md-4">
+                <img class="imgMenu" id="menu_soutien" src="{{ asset('images/dashboard/passer_action/soutien-plus-icone.jpg') }}" />
+            </div>
+            <div class="col-md-4">
+                <img class="imgMenu" id="menu_parrainage" src="{{ asset('images/dashboard/passer_action/parrainage-plus-icone.jpg') }}" />
+            </div>
+        </div>  
+    </div>
+</div>   
+
+<div class="col-12 footerActionsPoints" >
+    {% include 'footer.html.twig' %}
+</div>
+{% endblock %}
+
+{% block javascripts %}
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+crossorigin="anonymous"></script>
+<script>
+function clickimageone(el, color){
+    let x = document.getElementsByClassName('imgMenu');
+    for(let i = 0; i<x.length; i++) {
+        x.item(i).style.border = 'none';
+        x.item(i).classList.remove('imgHover');
+    }
+    el.style.border = '5px solid'+color;
+    el.classList.add('imgHover');
+}
+
+$('#menu_competence').click(function() {
+    clickimageone(this, '#d267f9');
+});
+$('#menu_materiel').click(function() {
+    clickimageone(this, '#e4bd06');
+});
+$('#menu_transport').click(function() {
+    clickimageone(this, '#ff8170');
+});
+$('#menu_logement').click(function() {
+    clickimageone(this, '#a3e747');
+});
+$('#menu_soutien').click(function() {
+    clickimageone(this, '#5fcadd');
+});
+$('#menu_parrainage').click(function() {
+    clickimageone(this, '#bd661e');
+});
+
+</script>
+
+
+
+{% endblock %}

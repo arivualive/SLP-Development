@@ -1,0 +1,61 @@
+<div id="{{ subcategory }}-form-line" class="row my-row form-spending-line" data-id="{{ spending.getId() }}">
+    <div class="spending invisible">{{ spending.getId() }}</div>
+    <div class="subcategory invisible">{{ subcategory }}</div>
+    <div class="col-3"></div>
+    <div class="col-1">
+        <input class="spendings-field what-field" value="{{spending.product.getName()}}"/>
+    </div>
+    <div class="col-1 dropdown-list-col volume-dropdown-list-col">
+        <div class="dropdown-list-container quantity-container">
+            <select class="dropdown-list {{ subcategory }}-quantity-list">
+                <option>1L</option>
+                <option>2L</option>
+                {% if spending.currency.getIsoCode() == '1L' %}
+                    <option selected>1L</option>
+                {% else %}
+                    <option>2L</option>
+                {% endif %}
+
+                {% if spending.currency.getIsoCode() == '2L' %}
+                    <option selected>2L</option>
+                {% else %}
+                    <option>1L</option>
+                {% endif %}
+            </select>
+            <div class="triangle-img-container {{ subcategory }} quantity">
+                <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+            </div>
+        </div>
+    </div>
+    <div class="col-1">
+        <input class="spendings-field brand-field" value="{{spending.getProduct().getBrand().getName()}}" />
+    </div>
+    <div class="col-1">
+        <input class="spendings-field amount-field" value="{{spending.cost.getPrice()}}" />
+    </div>
+    <div class="col-1 dropdown-list-col currency-dropdown-list-col">
+        <div class="dropdown-list-container currency-list-container">
+            <select class="dropdown-list currency-list {{ subcategory }}-currency-list">
+                {% if spending.currency.getIsoCode() == 'CHF' %}
+                    <option selected>CHF</option>
+                {% else %}
+                    <option>CHF</option>
+                {% endif %}
+
+                {% if spending.currency.getIsoCode() == 'EUR' %}
+                    <option selected>EUR</option>
+                {% else %}
+                    <option>EUR</option>
+                {% endif %}
+            </select>
+            <div class="triangle-img-container {{ subcategory }} currency">
+                <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+            </div>
+        </div>
+    </div>
+    <div class="col add-{{ subcategory }} hand-on-hover">
+        <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+        <idv class="add-product-text">Ajouter un produit</idv>
+    </div>
+    <div class="white-div-to-hide-first-line-add-option"></div>
+</div>

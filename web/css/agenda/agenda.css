@@ -1,0 +1,1627 @@
+.header {
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+
+.dollar-img-container {
+    position: absolute;
+    width:6%;
+    height:auto;
+    top:4%;
+    right:4%;
+}
+
+.header img {
+    width: 100%;
+}
+
+.header h1 {
+    position:absolute;
+    color:white;
+    font-weight: bold;
+    margin-top:25%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align:center;
+    z-index: 1;
+    font-size: 320%;
+}
+
+.collective-calendar-title {
+    margin-top: 8%;
+}
+
+.little-margin-top {
+    margin-top: 5%;
+}
+
+.above-image {
+    z-index: 1;
+}
+
+.image-container {
+    width: fit-content;
+    position: relative;
+}
+
+.blue-film {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(83,156,196,0.5);
+}
+
+.white-film {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+}
+
+.below-film {
+    z-index: -1;
+}
+
+body * {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+}
+
+.image-header {
+    opacity: 0.4;
+}
+
+.intro {
+    color: #539ac4;
+    /*font-weight: 510;*/
+}
+
+h1 {
+    width: fit-content;
+    margin: 50px auto;
+    color: #539ac4;
+    font-weight: bold;
+}
+
+h2 {
+    width: fit-content;
+    margin: 1% auto;
+    color: #539ac4;
+    font-weight: bold;
+    font-size: 260%;
+}
+
+.width-more-767 {
+    display: block;
+}
+
+.width-less-768 {
+    display: none;
+}
+
+h3 {
+    /*width: fit-content;*/
+    /*margin: 10px auto;*/
+    color: #539ac4;
+    font-weight: bold;
+}
+
+p {
+    color: #539ac4;
+    font-size: large;
+}
+
+h5 {
+    color: #539ac4;
+    font-weight: bold;
+}
+
+.centered-text {
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+}
+
+.previous-image-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.next-image-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.previous-image {
+    height: 28px;
+    width: 23px;
+}
+
+.next-image {
+    height: 28px;
+    width: 23px;
+}
+
+.month-text {
+    margin-top: -2%;
+}
+
+.ges-diary {
+    margin-top: 5%;
+}
+
+.day-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.day {
+    position: relative;
+    width: 175px;
+    height: 175px;
+}
+
+.day h2 {
+    position: absolute;
+    font-size: 4em;
+}
+
+.day .number-1-to-9 {
+    top: 34%;
+    left: 41%;
+}
+
+.day .number-10-to-99 {
+    top: 34%;
+    left: 31%;
+}
+
+.martial-art {
+    background-image: url("/../../../images/dashboard/agenda/arts-martiaux.png");
+}
+
+.cinema {
+    background-image: url("/../../../images/dashboard/agenda/cinema.png");
+}
+
+.archery {
+    background-image: url("/../../../images/dashboard/agenda/tir-a-l-arc.png");
+}
+
+.kayak {
+    background-image: url("/../../../images/dashboard/agenda/kayak.png");
+}
+
+.damien {
+    background-image: url("/../../../images/dashboard/agenda/damien.png");
+}
+
+.nadine {
+    background-image: url("/../../../images/dashboard/agenda/nadine.png");
+}
+
+.lilly {
+    background-image: url("/../../../images/dashboard/agenda/lilly.png");
+}
+
+.people {
+    margin-top: 10%;
+    width: 100%;
+}
+
+.people-row {
+    width: 100%;
+}
+
+.image-under-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.round-image {
+    height: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    /*width: 94%;*/
+    height: 0;
+    padding-top: 91%;
+    border-radius: 7em;
+    /*border: 1px solid #539ac4;*/
+    margin-left: 5%;
+}
+
+.center-bigger-image {
+    margin-top: 15%;
+    margin-bottom: 0%;
+    width: 70%;
+    margin-left: 12%;
+}
+
+.people-text-medium {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.people-text-big {
+    margin-top: -20%;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.round-event {
+    height: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 175px;
+    /*width: 94%;*/
+    height: 0;
+    padding-top: 91%;
+    border-radius: 7em;
+    border: 1px solid #539ac4;
+}
+
+.event-image-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.center-image {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.right-image {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.info-events {
+    margin-top: 5%;
+}
+
+.date-box {
+    position: absolute;
+    bottom: 20px;
+    left: 10%;
+    width: 150px;
+    height: 40px;
+    background-color: white;
+}
+
+.date-box-left {
+    position: absolute;
+    bottom: 20px;
+    left: 90px;
+    width: 150px;
+    height: 40px;
+    background-color: white;
+}
+
+.date-box-center {
+    position: absolute;
+    bottom: 20px;
+    left: 120px;
+    width: 150px;
+    height: 40px;
+    background-color: white;
+}
+
+.date-box-right {
+    position: absolute;
+    bottom: 20px;
+    left: 135px;
+    width: 150px;
+    height: 40px;
+    background-color: white;
+}
+
+.date-text {
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.event-image {
+    width: 90%;
+    height: auto;
+}
+
+.events-container {
+    /*margin-top: 5%;*/
+}
+
+.events-title {
+    margin: 3% auto;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.my-container {
+    /*width: 90%;*/
+    /*margin-top: 1%;*/
+    /*border: 2px dotted purple;*/
+}
+
+.my-col {
+    padding: 0;
+    padding-top: 15px;
+}
+
+.my-row {
+    padding:0 0 0 0;
+}
+
+.info-event-text-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info-event-text {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.collective-calendar-button-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+#collective-calendar-button {
+    font-family: 'Nunito', sans-serif;
+    /*width:200px; height:26px;*/ /*border:2px solid black*/;
+    
+    width: 70%;
+    
+    margin-right: 1px;
+    
+    background-color: #539ac4;
+    color: white;
+    padding: 2px;
+
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
+    /*margin-right: 42px;*/
+    cursor: pointer;
+    /*margin-left:60px;*/
+    /*height: 40px;*/
+    /*margin-bottom: 24px;*/
+}
+
+.info-event-button {
+    font-family: 'Nunito', sans-serif;
+    margin-left: 30%;
+    padding: 0px 0px 0px 0px;
+    width: 60%;
+    background-color: #539ac4;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+.secound-info-events-section {
+    margin-top: 10%;
+}
+
+.info-event-button-margin-top {
+    margin-top: 5%;
+}
+
+.white-background {
+    color: #539ac4;
+    border: 1px solid #539ac4;
+    background-color: white;
+}
+
+.blue-background {
+    color: white;
+    background-color: #539ac4;
+}
+
+.green-background {
+    color: white;
+    background-color: #96d068;
+}
+
+.white-text {
+    color: white;
+}
+
+.row-margin-top {
+    margin-top: 5%;
+}
+
+.small-screen {
+    display: none;
+}
+
+.medium-screen {
+    display: block;
+}
+
+.bigger-than-767 {
+    display: flex;
+}
+
+.smaller-or-equal-to-767 {
+    display: none;
+}
+
+.date-box-left-mobile {
+    display: none;
+}
+
+.date-box-center-mobile {
+    display: none;
+}
+
+.date-box-right-mobile {
+    display: none;
+}
+
+/* ------------------------------------------------
+RESPONSIVE
+------------------------------------------------  */
+
+@media screen and (max-width:2000px) {
+    h2 {
+        /*margin: 50px auto;*/
+        font-weight: bold;
+        font-size: xx-large;
+    }
+}
+
+@media screen and (max-width:1199px) {
+    .header h1 {
+        margin-top:25%;
+    }
+
+    .day {
+        width: 152px;
+        height: 152px;
+    }
+    
+    .day h2 {
+        position: absolute;
+        font-size: 4em;
+    }
+    
+    .day .number-1-to-9 {
+        top: 31%;
+        left: 39%;
+    }
+    
+    .day .number-10-to-99 {
+        top: 31%;
+        left: 28%;
+    }
+    
+    .round-event {
+        height: 0;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 152px;
+        /*width: 94%;*/
+        height: 0;
+        padding-top: 93.5%;
+        border-radius: 7em;
+        border: 1px solid #539ac4;
+    }
+
+    .my-col {
+        padding-top: 7px;
+    }
+
+    .date-box-left {
+        position: absolute;
+        bottom: 20px;
+        left: 65px;
+        width: 150px;
+        height: 40px;
+        background-color: white;
+    }
+    
+    .date-box-center {
+        position: absolute;
+        bottom: 20px;
+        left: 85px;
+        width: 150px;
+        height: 40px;
+        background-color: white;
+    }
+    
+    .date-box-right {
+        position: absolute;
+        bottom: 20px;
+        left: 100px;
+        width: 150px;
+        height: 40px;
+        background-color: white;
+    }
+}
+
+@media screen and (max-width:991px) {
+
+    .header h1 {
+        font-size: 260%;
+    }
+
+    .small-screen {
+        display: block;
+    }
+    
+    .medium-screen {
+        display: none;
+    }
+
+    .previous-image-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    
+    .previous-image {
+        height: 28px;
+        width: 23px;
+    }
+    
+    .next-image {
+        height: 28px;
+        width: 23px;
+    }
+    
+    .month-text {
+        margin-top: -2%;
+    }
+    
+    .ges-diary {
+        margin-top: 5%;
+    }
+    
+    .day-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .day {
+        position: relative;
+        width: 113px;
+        height: 112px;
+    }
+    
+    .day h2 {
+        position: absolute;
+    }
+    
+    .day .number-1-to-9 {
+        top: 32%;
+        left: 39%;
+        font-size: 2.8em;
+    }
+    
+    .day .number-10-to-99 {
+        top: 32%;
+        left: 31%;
+        font-size: 2.8em;
+    }
+    
+    .martial-art {
+        background-image: url("/../../../images/dashboard/agenda/arts-martiaux.png");
+    }
+    
+    .cinema {
+        background-image: url("/../../../images/dashboard/agenda/cinema.png");
+    }
+    
+    .archery {
+        background-image: url("/../../../images/dashboard/agenda/tir-a-l-arc.png");
+    }
+    
+    .round-event {
+        height: 0;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 109.9px;
+        /*width: 94%;*/
+        height: 0;
+        padding-top: 89%;
+        border-radius: 5em;
+        border: 1px solid #539ac4;
+    }
+    
+    .event-image-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    
+    .center-image {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .right-image {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    
+    .date-box-left {
+        position: absolute;
+        bottom: 20px;
+        left: 32px;
+        width: 150px;
+        height: 40px;
+        background-color: white;
+    }
+    
+    .date-box-center {
+        position: absolute;
+        bottom: 20px;
+        left: 44px;
+        width: 150px;
+        height: 40px;
+        background-color: white;
+    }
+    
+    .date-box-right {
+        position: absolute;
+        bottom: 20px;
+        left: 55px;
+        width: 150px;
+        height: 40px;
+        background-color: white;
+    }
+    
+    .events-title {
+        margin: 3% auto;
+        font-size: x-large;
+        font-weight: bold;
+    }
+    
+    .collective-calendar-button-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 3%;
+    }
+    
+    #collective-calendar-button {
+        font-family: 'Nunito', sans-serif;
+        /*width:200px; height:26px;*/ /*border:2px solid black*/;
+        
+        width: 70%;
+        
+        float: right;
+        margin-right: 1px;
+        
+        background-color: #539ac4;
+        color: white;
+        padding: 2px;
+    
+        text-align: center;
+        font-weight: bold;
+        font-size: xx-large;
+        /*margin-right: 42px;*/
+        cursor: pointer;
+        /*margin-left:60px;*/
+        /*height: 40px;*/
+        /*margin-bottom: 24px;*/
+    }
+    
+    .date-text {
+        margin-top: 8px;
+        font-weight: bold;
+    }
+    
+    .event-image {
+        width: 90%;
+        height: 215px;
+    }
+    
+    .row-margin-top {
+        margin-top: 5%;
+    }
+
+    .info-event-text {
+        font-size: large;
+    }
+
+    .info-event-button {
+        font-size: large;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .bigger-than-767 {
+        display: none;
+    }
+    
+    .smaller-or-equal-to-767 {
+        display: flex;
+    }
+    
+    .width-more-767 {
+        display: none;
+    }
+    
+    .width-less-768 {
+        display: block;
+    }
+
+    .intro p {
+        font-size: 115%;
+    }
+    
+    .header h1 {
+        font-size: 240%;
+        margin-top:25%;
+    }
+
+    .previous-image-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    
+    .previous-image {
+        height: 24px;
+        width: 18px;
+        margin-right: 5%;
+        margin-top: 2%;
+    }
+    
+    .next-image {
+        height: 24px;
+        width: 18px;
+        margin-left: 5%;
+        margin-top: 2%;
+    }
+    
+    .month-text {
+        margin-top: -2%;
+    }
+    
+    .ges-diary {
+        margin-top: 5%;
+    }
+    
+    .day {
+        position: relative;
+        width: 81px;
+        height: 81px;
+    }
+    
+    .day .number-1-to-9 {
+        top: 32%;
+        left: 40%;
+        font-size: 2em;
+    }
+    
+    .day .number-10-to-99 {
+        top: 32%;
+        left: 30%;
+        font-size: 2em;
+    }
+    
+    .round-event {
+        height: 0;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 81px;
+        /*width: 94%;*/
+        height: 0;
+        padding-top: 93%;
+        border-radius: 5em;
+        border: 1px solid #539ac4;
+    }
+    
+    .event-image-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    
+    .center-image {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .right-image {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    
+    .date-box-left {
+        position: absolute;
+        bottom: 20px;
+        left: 22px;
+        width: 150px;
+        height: 40px;
+        background-color: white;
+    }
+    
+    .date-box-center {
+        position: absolute;
+        bottom: 20px;
+        left: 44px;
+        width: 150px;
+        height: 40px;
+        background-color: white;
+    }
+    
+    .date-box-right {
+        position: absolute;
+        bottom: 20px;
+        left: 55px;
+        width: 150px;
+        height: 40px;
+        background-color: white;
+    }
+    
+    .events-title {
+        margin: 3% auto;
+        font-size: x-large;
+        font-weight: bold;
+    }
+    
+    .collective-calendar-button-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 3%;
+    }
+    
+    #collective-calendar-button {
+        font-family: 'Nunito', sans-serif;
+        /*width:200px; height:26px;*/ /*border:2px solid black*/;
+        
+        width: 70%;
+        
+        float: right;
+        margin-right: 1px;
+        
+        background-color: #539ac4;
+        color: white;
+        padding: 2px;
+    
+        text-align: center;
+        font-weight: bold;
+        font-size: xx-large;
+        /*margin-right: 42px;*/
+        cursor: pointer;
+        /*margin-left:60px;*/
+        /*height: 40px;*/
+        /*margin-bottom: 24px;*/
+    }
+    
+    .date-text {
+        margin-bottom: 40px;
+        margin-top: 8px;
+        font-weight: bold;
+    }
+    
+    .event-image {
+        width: 90%;
+        height: 215px;
+    }
+    
+    .row-margin-top {
+        margin-top: 0%;
+    }
+
+    .my-col {
+        padding-top: 4px;
+    }
+
+    .event-image {
+        width: 90%;
+        height: auto;
+        max-height: 500px;
+    }
+    
+    .date-box-left {
+        position: absolute;
+        bottom: 10px;
+        left: 20px;
+        width: 120px;
+        height: 40px;
+        background-color: white;
+    }
+    
+    .date-box-center {
+        position: absolute;
+        bottom: 10px;
+        left: 25px;
+        width: 120px;
+        height: 40px;
+        background-color: white;
+    }
+    
+    .date-box-right {
+        position: absolute;
+        bottom: 10px;
+        left: 35px;
+        width: 120px;
+        height: 40px;
+        background-color: white;
+    }
+
+    .people-text-medium {
+        font-size: large;
+    }
+    
+    .people-text-big {
+        margin-top: -20%;
+        font-size: x-large;
+    }
+
+    .info-event-text {
+        font-size: small;
+    }
+
+    .info-event-button {
+        font-size: small;
+    }
+}
+
+@media screen and (max-width:570px) {
+    .date-box-left {
+        display: none;
+    }
+    
+    .date-box-center {
+        display: none;
+    }
+    
+    .date-box-right {
+        display: none;
+    }
+
+    .date-box-left-mobile {
+        display: block;
+        position: absolute;
+        bottom: 10%;
+        left: 12%;
+        background-color: white;
+        width: auto;
+        height: auto;
+        padding: 0% 3% 0% 3%;
+    }
+    
+    .date-box-center-mobile {
+        display: block;
+        position: absolute;
+        bottom: 10%;
+        left: 17%;
+        background-color: white;
+        width: auto;
+        height: auto;
+        padding: 0% 3% 0% 3%;
+    }
+    
+    .date-box-right-mobile {
+        display: block;
+        position: absolute;
+        bottom: 10%;
+        left: 21%;
+        background-color: white;
+        width: auto;
+        height: auto;
+        padding: 0% 3% 0% 3%;
+    }
+    
+    .date-text {
+        margin-bottom: 0%;
+        margin-top: 0%;
+        font-size: 3.5vw;
+    }
+
+    #collective-calendar-button {
+        font-family: 'Nunito', sans-serif;
+        /*width:200px; height:26px;*/ /*border:2px solid black*/;
+        
+        width: 70%;
+        
+        float: right;
+        margin-right: 1px;
+        
+        background-color: #539ac4;
+        color: white;
+        padding: 2px;
+    
+        text-align: center;
+        font-weight: bold;
+        font-size: 5vw;
+        /*margin-right: 42px;*/
+        cursor: pointer;
+        /*margin-left:60px;*/
+        /*height: 40px;*/
+        /*margin-bottom: 24px;*/
+    }
+}
+
+@media screen and (max-width:535px) {
+    .day {
+        position: relative;
+        width: 80px;
+        height: 80px;
+    }
+
+    .my-col {
+        padding-top: 3.5px;
+    }
+}
+
+@media screen and (max-width:530px) {
+    .day {
+        position: relative;
+        width: 80px;
+        height: 80px;
+    }
+
+    .day .number-1-to-9 {
+        top: 32%;
+        left: 37%;
+        font-size: 2em;
+    }
+    
+    .day .number-10-to-99 {
+        top: 32%;
+        left: 27%;
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width:520px) {
+    .day {
+        position: relative;
+        width: 79px;
+        height: 79px;
+    }
+
+    .my-col {
+        padding-top: 3px;
+    }
+}
+
+@media screen and (max-width:515px) {
+    .day {
+        position: relative;
+        width: 78px;
+        height: 78px;
+    }
+
+    .my-col {
+        padding-top: 3px;
+    }
+}
+
+@media screen and (max-width:510px) {
+    .day {
+        position: relative;
+        width: 77px;
+        height: 77px;
+    }
+
+    .my-col {
+        padding-top: 3px;
+    }
+}
+
+@media screen and (max-width:505px) {
+    .day {
+        position: relative;
+        width: 76px;
+        height: 76px;
+    }
+
+    .my-col {
+        padding-top: 3px;
+    }
+}
+
+@media screen and (max-width:495px) {
+    .day {
+        position: relative;
+        width: 75px;
+        height: 75px;
+    }
+
+    .my-col {
+        padding-top: 3px;
+    }
+}
+
+@media screen and (max-width:490px) {
+    .day {
+        position: relative;
+        width: 74px;
+        height: 74px;
+    }
+
+    .day .number-1-to-9 {
+        top: 29%;
+        left: 37%;
+        font-size: 2em;
+    }
+    
+    .day .number-10-to-99 {
+        top: 29%;
+        left: 27%;
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width:485px) {
+    .day {
+        position: relative;
+        width: 73px;
+        height: 73px;
+    }
+
+    .my-col {
+        padding-top: 3px;
+    }
+}
+
+@media screen and (max-width:480px) {
+
+    .ecran{
+        display: none;
+    }
+    
+    .mobile{
+        display: block;
+    }
+
+    .header h1 {
+        position:absolute;
+        color:white;
+        font-weight: bold;
+        margin-top:25%;
+        font-size:6vw;
+        text-align:center;
+    }
+
+    h2 {
+        font-size: 5.7vw;
+    }
+
+    h3 {
+        font-size: 5.7vw;
+    }
+
+    .intro {
+        font-size: 3vw;
+    }
+
+    .titles-and-paragraph {
+        font-size: 3.5vw;
+    }
+
+    #form-validation-button {
+        font-size: 4.5vw;
+        height: 50%;
+    }
+
+    .previous-image {
+        height: 50%;
+        width: 5%;
+        margin-right: 5%;
+        margin-top: 2%;
+    }
+    
+    .next-image {
+        height: 50%;
+        width: 5%;
+        margin-left: 5%;
+        margin-top: 2%;
+    }
+
+    .events-title {
+        font-size: 4.5vw;
+    }
+
+    .people-text-medium {
+        font-size: 4vw;
+    }
+    
+    .people-text-big {
+        margin-top: -20%;
+        font-size: 5.5vw;
+    }
+
+    .info-event-text {
+        font-size: 2.5vw;
+    }
+
+    .info-event-button {
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (max-width:475px) {
+    .day {
+        position: relative;
+        width: 70px;
+        height: 70px;
+    }
+
+    .my-col {
+        padding-top: 3px;
+    }
+}
+
+@media screen and (max-width:465px) {
+    .day {
+        position: relative;
+        width: 68px;
+        height: 68px;
+    }
+
+    .day .number-1-to-9 {
+        top: 32%;
+        left: 39%;
+        font-size: 1.5em;
+    }
+    
+    .day .number-10-to-99 {
+        top: 32%;
+        left: 29%;
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .day {
+        position: relative;
+        width: 67px;
+        height: 67px;
+    }
+
+    .my-col {
+        padding-top: 3px;
+    }
+}
+
+@media screen and (max-width:440px) {
+    .day {
+        position: relative;
+        width: 65px;
+        height: 65px;
+    }
+
+    .my-col {
+        padding-top: 3px;
+    }
+}
+
+@media screen and (max-width:430px) {
+    .day {
+        position: relative;
+        width: 63px;
+        height: 63px;
+    }
+
+    .my-col {
+        padding-top: 3px;
+    }
+}
+
+@media screen and (max-width:420px) {
+    .day {
+        position: relative;
+        width: 61px;
+        height: 61px;
+    }
+
+    .my-col {
+        padding-top: 3px;
+    }
+}
+
+@media screen and (max-width:410px) {
+    .day {
+        position: relative;
+        width: 58px;
+        height: 58px;
+    }
+
+    .my-col {
+        padding-top: 3px;
+    }
+}
+
+@media screen and (max-width:390px) {
+    .day {
+        position: relative;
+        width: 55px;
+        height: 55px;
+    }
+
+    .my-col {
+        padding-top: 3px;
+    }
+}
+
+@media screen and (max-width:370px) {
+    .day {
+        position: relative;
+        width: 53px;
+        height: 53px;
+    }
+
+    .day .number-1-to-9 {
+        top: 30%;
+        left: 37%;
+        font-size: 1.5em;
+    }
+    
+    .day .number-10-to-99 {
+        top: 30%;
+        left: 25%;
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width:355px) {
+    .day {
+        position: relative;
+        width: 50px;
+        height: 50px;
+    }
+
+    .my-col {
+        padding-top: 3px;
+    }
+}
+
+@media screen and (max-width:345px) {
+    .day {
+        position: relative;
+        width: 48px;
+        height: 48px;
+    }
+
+    .my-col {
+        padding-top: 3px;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .day .number-1-to-9 {
+        top: 28%;
+        left: 34%;
+        font-size: 1.5em;
+    }
+    
+    .day .number-10-to-99 {
+        top: 28%;
+        left: 22%;
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width:330px) {
+    .day {
+        position: relative;
+        width: 46px;
+        height: 46px;
+    }
+
+    .my-col {
+        padding-top: 3px;
+    }
+}
+
+@media screen and (max-width:315px) {
+    .day {
+        position: relative;
+        width: 44px;
+        height: 44px;
+    }
+
+    .my-col {
+        padding-top: 3px;
+    }
+}
+
+@media screen and (max-width:305px) {
+    .day {
+        position: relative;
+        width: 42px;
+        height: 42px;
+    }
+
+    .my-col {
+        padding-top: 3px;
+    }
+
+    .day .number-1-to-9 {
+        top: 30%;
+        left: 40%;
+        font-size: 1em;
+    }
+    
+    .day .number-10-to-99 {
+        top: 30%;
+        left: 27%;
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width:290px) {
+    .day {
+        position: relative;
+        width: 41px;
+        height: 41px;
+    }
+
+    .my-col {
+        padding-top: 1px;
+    }
+}
+
+@media screen and (max-width:280px) {
+    .day {
+        position: relative;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width:270px) {
+    .day {
+        position: relative;
+        width: 37px;
+        height: 37px;
+    }
+}
+
+@media screen and (max-width:260px) {
+    .day {
+        position: relative;
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@media screen and (max-width:250px) {
+    .day {
+        position: relative;
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media screen and (max-width:240px) {
+    .day {
+        position: relative;
+        width: 34px;
+        height: 34px;
+    }
+}
+
+@media screen and (max-width:235px) {
+    .day .number-1-to-9 {
+        top: 27%;
+        left: 37%;
+        font-size: 1em;
+    }
+    
+    .day .number-10-to-99 {
+        top: 27%;
+        left: 21%;
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width:230px) {
+    .day {
+        position: relative;
+        width: 31px;
+        height: 31px;
+    }
+}
+
+@media screen and (max-width:220px) {
+    .day {
+        position: relative;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width:210px) {
+    .day {
+        position: relative;
+        width: 29px;
+        height: 29px;
+    }
+}
+
+@media screen and (max-width:200px) {
+    .day {
+        position: relative;
+        width: 26px;
+        height: 26px;
+    }
+
+    .day .number-1-to-9 {
+        top: 20%;
+        left: 33%;
+        font-size: 1em;
+    }
+    
+    .day .number-10-to-99 {
+        top: 20%;
+        left: 16%;
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width:190px) {
+    .day {
+        position: relative;
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media screen and (max-width:180px) {
+    .day {
+        position: relative;
+        width: 22px;
+        height: 22px;
+    }
+
+    .day .number-1-to-9 {
+        top: 16%;
+        left: 28%;
+        font-size: 1em;
+    }
+    
+    .day .number-10-to-99 {
+        top: 12%;
+        left: 11%;
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width:170px) {
+    .day {
+        position: relative;
+        width: 21px;
+        height: 21px;
+    }
+}
+
+
+
+
+
+

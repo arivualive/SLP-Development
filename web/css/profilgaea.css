@@ -1,0 +1,545 @@
+.mobile{
+    display: none !important;
+}
+
+
+/* ------------------------------------------------
+MENU
+------------------------------------------------  */
+
+@-moz-document url-prefix(){
+    .selected1:after{
+            position: absolute;
+            top: 20px;
+            margin-left: -35px;
+            font-family: 'FontAwesome';
+            content: '\f00c';
+            color: #ffffff;
+            font-size: 30px;
+  }
+}
+.container{
+    padding: 0;
+    color: #539ac4;
+}
+
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.container .profil-page{
+    font-family: 'Nunito', sans-serif;
+}
+
+.burger button{
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 1);
+    color: #539ac4;
+    border: solid 2px white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.burger{
+    position: absolute !important;
+    top: 2%;
+    right: 2%;
+}
+
+.arrowDown {
+    position: absolute !important;
+    bottom: 2%;
+    right: 2%;
+}
+.arrowDown a{
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 1);
+    color: #539ac4;
+    border: solid 2px white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.dropdown-menu::before,
+.dropdown-menu::after {
+   border: none;
+   content: none;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+/* ------------------------------------------------
+FOOTER
+------------------------------------------------  */
+footer{
+    background-image: url('/images/pelle_terre_footer.jpg');
+    width: 100%;
+    color: white;
+}
+
+.footer{
+    padding: 3%;
+}
+
+.footer a{
+    color: white;
+}
+
+.footer ul li{
+    list-style: none;
+    padding-top: 1.3rem;
+}
+
+.footer ul{
+    padding: 0;
+}
+
+/* ------------------------------------------------
+SLIDER
+------------------------------------------------  */
+    .carousel-item{
+        background-color: #539ac4;
+    }
+
+    .top-adjust{
+        top: 40%;
+    }
+
+    .carousel-caption{
+        margin: auto;
+        padding-bottom: 10%;
+    }
+
+    .carousel-item .intro h1 {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        text-align: center;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .carousel-item .intro p {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        font-size: 16px;
+        margin-bottom:15px;
+    }
+
+    .carousel-item .intro a {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .carousel-item .intro a button {
+        padding: 5px;
+        background-color: rgba(0, 0, 0, 0);
+        color: white;
+        border: solid 2px white;
+        border-radius: 3px;
+        text-transform: uppercase;
+    }
+
+    .visage-bleu{
+        margin-top: 5%;
+    }
+/* ------------------------------------------------
+ABOUT
+------------------------------------------------  */
+.about {
+    margin-bottom: 20px;
+}
+
+.about h2 {
+    color: #539ac4;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.about .desc {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    color: #539ac4;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.about p {
+    font-family: 'Nunito', sans-serif;
+    color: #539ac4;
+}
+
+.slogant p {
+    font-family: 'Nunito', sans-serif;
+    color: #539ac4;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* ------------------------------------------------
+TEXT-CONTENT
+------------------------------------------------  */
+
+.text-content {
+    width: 100%;
+    min-height: 200px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    background-color: #539ac4;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.text-content h2 {
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.text-content img {
+    display: block;
+    width: 100%;
+}
+.text-content p {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    font-size: 16px;
+}
+
+.text-content .btn-q {
+    text-align: center;
+}
+
+.text-content p a button {
+    padding: 5px;
+    background-color: #539ac4;
+    color: white;
+    border: solid 2px white;
+    border-radius: 3px;
+}
+
+/* ------------------------------------------------
+THEMATIQUE SURVEY
+------------------------------------------------  */
+.them-survey div{
+    position: relative;
+}
+
+.them-survey h5{
+    position: absolute;
+    top: 80%;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.8em;
+    width: 100%;
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+}
+
+
+.community {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    padding-left:0px;
+}
+
+
+.community img {
+    display: block;
+    width: 100%;
+    height:350px;
+}
+
+.community .btn-q {
+    text-align: center;
+}
+
+.community a button {
+    margin-top: 18.5%;
+    position: absolute;
+    margin-left: 1%;
+    padding: 5px;
+    padding-left: 60px;
+    padding-right: 60px;
+    border: solid 2px transparent;
+    border-radius: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: transparent;
+    background-color: transparent;
+
+}
+
+
+.ambassadeur {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    padding-left:0px;
+}
+
+
+.ambassadeur img {
+    display: block;
+    width: 100%;
+    height:350px;
+}
+
+.ambassadeur .btn-q {
+    text-align: center;
+}
+
+.ambassadeur a button {
+    margin-top: 250px;
+    position: absolute;
+    margin-left: 530px;
+    padding: 8px;
+    padding-left:10px;
+    padding-right:10px;
+    border: solid 2px transparent;
+    border-radius: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color:transparent;
+    background-color: transparent;
+
+}
+
+.ambassadeur a {
+    position: absolute;
+    top: 73%;
+    left: 43.5%;
+    height: 10%;
+    width: 13%;
+}
+
+@media screen and (max-width:480px) {
+    .row{
+        margin:0% 0%;
+        margin-top: 30px;
+    }
+    .innerRow{
+        padding-left: 0px;
+        margin-bottom: 5px;
+    }
+    .lastrow{
+        padding: 0px;
+        margin-bottom: 5px;
+    }
+    .myrow{
+        padding: 0px;
+        margin: 0px;
+    }
+    .ecran{
+        display: none;
+    }
+    .mobile{
+        display: block !important;
+    }
+    .cadre{
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 5px;
+        padding: 4%;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+    .visage-bleu{
+        margin-top: 0%;
+    }
+    .mbandeau a{
+        height: 80%;
+        position: absolute;
+        bottom: 0;
+    }
+    /* ------------------------------------------------
+    header
+    ------------------------------------------------  */
+    .header{
+        position: relative;
+    }
+    .header img{
+        width: 100%;
+    }
+    .header h1{
+        position: absolute;
+        color: white;
+        margin: 0;
+        font-size: 14px;
+        top: 20%;
+        left: 36%;
+        width: 30%;
+        text-align: center;
+        line-height: 1.3;
+    }
+    .header p{
+        position: absolute;
+        color: white;
+        margin: 0;
+        font-size: 12px;
+        top: 39%;
+        left: 20%;
+        width: 59%;
+        text-align: center;
+    }
+    .header .creerprofil{
+        position: absolute;
+        border-style: solid;
+        border-width: 1px;
+        border-color: white;
+        bottom: 6%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0 3%;
+    }
+    .header .creerprofil a{
+        color: white;
+    }
+    a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover{
+        color: white;
+    }
+    /* ------------------------------------------------
+    About
+    ------------------------------------------------  */
+    .about h4{
+        margin: 0px;
+        font-size: 18px;
+        font-family: 'Nunito Bold';
+        font-weight: bold;
+    }
+    .about p{
+        margin-top: 20px;
+        font-family: 'Nunito light';
+        font-size: 14px;
+        text-align: justify;
+    }
+    .aboutDetail img{
+        width: 100%;
+    }
+    .aboutDetail p {
+        font-family: 'Nunito light';
+    }
+    
+    /* ------------------------------------------------
+    Etape
+    ------------------------------------------------  */
+    .etape img {
+        width: 100%;
+    }
+    .etape h3{
+        margin: 0px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .etape p {
+        margin-top: 5px;
+        font-size: 14px;
+    }
+    
+    /* ------------------------------------------------
+    Profil groupe
+    ------------------------------------------------  */
+    .profil_groupe p {
+        text-align: center;
+    }
+    .profil_groupe img {
+        width: 100%;
+    }
+    .profil_groupe h4 {
+        font-family: 'Nunito bold';
+        font-size: 14px;
+    }
+    .profil_groupe .myrow p{
+        text-align: inherit;
+    }
+
+    /* ------------------------------------------------
+    questionnaire processus
+    ------------------------------------------------  */
+    .final img{
+        width: 100%;
+    }
+    .final h4{
+        font-family: 'Nunito bold';
+        font-size: 16px;
+    }
+    
+    /* ------------------------------------------------
+    questionnaire processus
+    ------------------------------------------------  */
+    .themes img{
+        width: 100%;
+    }
+    .themes .theme{
+        position: relative;
+        margin-bottom: 10px;
+    }
+    .themes .theme h5{
+        position: absolute;
+        color: white;
+        bottom: 5%;
+        margin: 0 auto;
+        width: 79.5%;
+        text-align: center;
+        text-shadow: 2px 2px 2px black;
+        font-weight: bold;
+    }
+
+    /* ------------------------------------------------
+    Bannière
+    ------------------------------------------------  */
+    .banniere{
+        margin: 15px 4%;
+    }
+    .banniere img{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .banniere a{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .banniere .ambassadeur_m{
+        position: relative;
+    }
+    .linkambassadeur{
+        position: absolute;
+        width: 19.7%;
+        height: 10%;
+        bottom: 18.6%;
+        left: 40%;
+    }
+    .banniere .hog{
+        position: relative;
+    }
+    .linkhog{
+        position: absolute;
+        width: 31.7%;
+        height: 15%;
+        bottom: 11.1%;
+        left: 34.1%;
+    }
+}
+@media screen and (max-width:400px) {
+    .header p{
+        font-size: 11px;
+    }
+    
+    .btn-notif-end{
+        font-size: 20px;
+    }
+}
+

@@ -1,0 +1,132 @@
+* {
+    font-family: 'Roboto', 'sans-serif';
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Section Gestion de projet et processus */
+
+.gestion-projet {
+    margin-bottom: 64px;
+}
+
+.gestion-projet h1, .processus h1 {
+    font-size: 77px;
+    color: #787878;
+    text-align: center;
+}
+
+.gestion-projet h1 {
+    margin-bottom: 30px;
+}
+
+.processus h1 {
+    margin-top: 156px;
+    margin-bottom: 64px;
+}
+
+.gestion-projet p, .processus p {
+    font-size: 16px;
+}
+
+.processus {
+    margin-bottom: 45px;
+}
+
+
+/* Section Tableau */
+
+.tableau {
+    margin-bottom: 92px;
+}
+
+
+th, td {
+    color: #fff;
+    background-color: #549AC4;
+}
+
+.spacer_line {
+    text-align: right;
+}
+
+.firstColumn {
+    background-color: #fff;
+    border: none !important;
+}
+
+.firstRowColumn {
+    font-size: 30px;
+    border: none !important;
+}
+
+.secondRowColumn {
+    font-size: 15px;
+}
+
+
+.backgroundInnerRow {
+    background-color: white;
+    color: #549AC4;
+    text-align: center;
+}
+
+.headerRow {
+    font-size: 17px;
+}
+
+.subHeader {
+    font-size: 16px;
+}
+
+
+/* Bouton retour */
+
+.btnDashboard {
+    margin-bottom: 60px;
+}
+
+
+#returnDashboard {
+    padding: 20px;
+    font-weight: bold;
+    color: #549AC4;
+    font-size: 40px;
+    border: 2px solid #549AC4;
+}
+
+
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .processus h1 {
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    th, td {
+        font-size: 5px;
+    }
+
+    .firstRowColumn {
+        font-size: 16px;
+    }
+
+    .headerRow {
+        font-size: 8px;
+    }
+
+    .subHeader {
+        font-size: 7px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+
+
+}

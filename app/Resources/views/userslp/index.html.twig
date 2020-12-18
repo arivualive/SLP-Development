@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Userslps list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Gaeauserid</th>
+                <th>Job</th>
+                <th>Livealone</th>
+                <th>Homepeoplenumber</th>
+                <th>Child</th>
+                <th>Childnumber</th>
+                <th>Zipcode</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for userSlp in userSlps %}
+            <tr>
+                <td><a href="{{ path('userslp_show', { 'id': userSlp.id }) }}">{{ userSlp.id }}</a></td>
+                <td>{{ userSlp.gaeaUserId }}</td>
+                <td>{{ userSlp.job }}</td>
+                <td>{% if userSlp.liveAlone %}Yes{% else %}No{% endif %}</td>
+                <td>{{ userSlp.homePeopleNumber }}</td>
+                <td>{% if userSlp.child %}Yes{% else %}No{% endif %}</td>
+                <td>{{ userSlp.childNumber }}</td>
+                <td>{{ userSlp.zipcode }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('userslp_show', { 'id': userSlp.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('userslp_edit', { 'id': userSlp.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('userslp_new') }}">Create a new userSlp</a>
+        </li>
+    </ul>
+{% endblock %}

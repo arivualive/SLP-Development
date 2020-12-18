@@ -1,0 +1,68 @@
+* {
+    font-family: 'Roboto', 'sans-serif';
+    margin: 0;
+    padding: 0;
+}
+
+.favoris {
+    font-size: 18px;
+    margin-top: 74px;
+    margin-bottom: 74px;
+    color: #77ACCA;
+}
+
+/* Favoris étape 4 */
+
+.row{
+    margin-bottom: 50px;
+}
+
+.step4 #valider{
+    font-size: 25px;
+    padding: 10px;
+    color: #fff;
+    background-color: #559ECC;
+}
+
+.step4{
+    margin-bottom: 150px;
+}
+
+
+/* Favoris étape 5 */
+
+.step5{
+    margin-bottom: 150px;
+}
+
+.step5 #first, .step5 #second{
+    margin-bottom: 50px;
+}
+
+.step5 #four{
+    margin-bottom: 70px;
+}
+
+.step5 #changer{
+    font-size: 25px;
+    padding: 10px;
+    color: #fff;
+    background-color: #559ECC;
+    margin-top: 90px;
+}
+
+.selected {
+
+    opacity: 0.5;
+}
+
+.step5last{
+    margin-top: 120px;
+}
+
+/*
+.four_section img{
+    width: 60%;
+    height: auto;
+}
+ */

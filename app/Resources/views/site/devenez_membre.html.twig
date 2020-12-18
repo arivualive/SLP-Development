@@ -1,0 +1,89 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('css/devenezmembre.css') }}">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+
+{% endblock %} 
+
+{% block community %}
+<div class="container">
+    <div class="row">
+        <header>
+            <div id="carousel-slp" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100 image-header" src="{{ asset('images/devenezmembre/header-ecran.png') }}"
+                            alt="Dashboard">
+                        <div class="carousel-caption d-none d-block intro col-6 top-adjust">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown burger">
+                    <a class="dropdown-item" style="padding: 0%;width:0%;" class="btn btn-secondary dropdown-toggle"
+                        href="{{ path('site_index') }}">
+                        <button class="btn btn-secondary dropdown-toggle"><i class="fa fa-home" style="font-size:24px"></i>
+
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="mobile" style="position:absolute; top:0%; left:0%; margin:0 0 0 0; padding:0 0 0 0;">
+        <img style="width:100% height:auto;" class="d-block w-100 image-header" src="{{ asset('images/devenezmembre/header-mobile.png') }}">
+    </div>
+
+    <div class="row shrinkedcontent">
+        <div id="about" class="about">
+            <div><!-- class="col-md-12 col-sm-12 col-xs-12"-->
+                <p class="desc"> Si vous souhaitez <b>devenir membre, 
+                    intégrer</b> la <b>communauté gaea21</b> et / ou <b>soutenir</b> le<b> modèle d’action proposé par gaea21</b>,
+                    merci de prendre connaissance des <b>avantages</b> et des <b>prestations</b>
+                     qui vous sont <b>offertes</b> et de <b>remplir le formulaire</b> ci-dessous.
+                </p>
+
+                <h1>Tableau de cotisation / parrainage en francs suisses  </h1>
+            </div>    
+        </div>
+
+       
+      
+
+        <img class="diagramme" src="{{ asset('images/devenezmembre/tableau1.jpg') }}">
+            
+        <!--<div sytle="height:20%;">-->
+            
+        <!--</div>-->
+
+        <div class="array-logo-and-bees">
+            <h1 class="titre"> Coordonnées gaea21 :</h1>
+            <p class="coordonnees">gaea21 <br>Association pour la mise en oeuvre <br>du Développement
+             Durable <br>et de l’Agenda 21 <br>Avenue des Morgines 9 <br>1213 Petit-lancy
+              - Suisse <br>ComptePostfinance : association gaea21 <br>17-158896-3 <br>IBAN 
+              : CH33 0900 0000 1715 8896 3 
+            </p>
+            <!--<div class="bees-container">
+                <img class="abeilles" src="{{ asset('images/devenezmembre/tableau1+abeille.png') }}">
+            </div>-->
+            <img class="tableau2" src="{{ asset('images/devenezmembre/tableau1+abeille.png') }}">
+        </div>
+    </div>
+    <!---->
+    
+</div>
+
+
+   
+</div>
+{% endblock %}
+
+{% block javascripts %}
+
+<script link rel="stylesheet" href="{{ asset('js/bootstrap.min.js')}}"></script>
+
+
+{% endblock %}

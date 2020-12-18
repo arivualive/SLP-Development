@@ -1,0 +1,419 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/agenda/agenda.css') }}">
+    
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+{% endblock %}
+
+{% block body %}
+    <div class="header">
+        <div class="dropdown burger above-image">
+        </div>
+        <h1>AGENDA</h1>
+        <div class="image-container">
+            <div class="blue-film"></div>
+            <img class="below-film" src="{{ asset('images/dashboard/agenda/header-agenda.png') }}">
+            <!--
+            <a href="#">
+                <div class="dollar-img-container">
+                    <img class="dollar-img" src="{{ asset('images/budget/individumenage/dollars.png') }}" />
+                </div>
+            </a>
+            -->
+        </div>
+    </div>
+
+    <div class="container my-container ges-diary">
+        <div class="row my-row">
+            <h2>Agenda GES</h2>
+        </div>
+        <div class="row my-row">
+            <div class="col-5 my-col previous-image-row">
+                <img class="previous-image" src="{{ asset('images/dashboard/agenda/previous.png') }}" />
+            </div>
+            <div class="col-2 my-col">
+                <h2 class="month-text">Juillet</h2>
+            </div>
+            <div class="col-5 my-col next-image-row">
+                <img class="next-image" src="{{ asset('images/dashboard/agenda/next.png') }}" />
+            </div>
+            
+        </div>
+        <div class="row my-row">
+            <div class="my-col col-2 day-container">
+                
+            </div>
+            <div class="my-col col-2 day-container">
+                
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-1-to-9">1</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="white-text day round-event martial-art"><h2 class="number-1-to-9 white-text">2</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-1-to-9">3</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-1-to-9">4</h2></div>
+            </div>
+        </div>
+        <div class="row my-row">
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-1-to-9">5</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-1-to-9">6</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-1-to-9">7</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background round-event cinema"><h2 class="number-1-to-9 white-text">8</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-1-to-9">9</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">10</h2></div>
+            </div>
+        </div>
+        <div class="row my-row">
+            <div class="my-col col-2 day-container">
+                <div class="day white-background round-event archery"><h2 class="number-10-to-99 white-text">11</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">12</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day blue-background"><h2 class="number-10-to-99 white-text">13</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">14</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">15</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">16</h2></div>
+            </div>
+        </div>
+        <div class="row my-row">
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">17</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">18</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">19</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">20</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">21</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day green-background"><h2 class="number-10-to-99 white-text">22</h2></div>
+            </div>
+        </div>
+        <div class="row my-row">
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">23</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">24</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">25</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day green-background"><h2 class="number-10-to-99 white-text">26</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day green-background"><h2 class="number-10-to-99 white-text">27</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">28</h2></div>
+            </div>
+        </div>
+        <div class="row my-row">
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">29</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">30</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">31</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                
+            </div>
+            <div class="my-col col-2 day-container">
+                
+            </div>
+            <div class="my-col col-2 day-container">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-container events-container">
+        <div class="row my-row">
+            <p class="events-title">Vos derniers événements</p>
+        </div>
+        <div class="row my-row">
+            <div class="col-4 my-col">
+                <div class="event-image-container">
+                    <img class="event-image" src="{{ asset('images/dashboard/agenda/arts-martiaux.png') }}" />
+                    <div class="date-box-left"><p class="centered-text date-text">02.06.2019</p></div>
+                    <div class="date-box-left-mobile"><p class="centered-text date-text">02.06.2019</p></div>
+                </div>
+            </div>
+            <div class="col-4 my-col">
+                <div class="event-image-container center-image">
+                    <img class="event-image" src="{{ asset('images/dashboard/agenda/cinema.png') }}" />
+                    <div class="date-box-center"><p class="date-text centered-text">08.07.2019</p></div>
+                    <div class="date-box-center-mobile"><p class="date-text centered-text">08.07.2019</p></div>
+                </div>
+            </div>
+            <div class="col-4 my-col">
+                <div class="event-image-container right-image">
+                    <img class="event-image" src="{{ asset('images/dashboard/agenda/tir-a-l-arc.png') }}" />
+                    <div class="date-box-right"><p class="date-text centered-text">11.07.2019</p></div>
+                    <div class="date-box-right-mobile"><p class="date-text centered-text">11.07.2019</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-row">
+            <p class="events-title">Vos prochains événements</p>
+        </div>
+        <div class="row my-row">
+            <div class="col-4 my-col">
+                <div class="event-image-container">
+                    <img class="event-image" src="{{ asset('images/dashboard/agenda/arts-martiaux.png') }}" />
+                    <div class="date-box-left"><p class="date-text centered-text">02.06.2019</p></div>
+                    <div class="date-box-left-mobile"><p class="date-text centered-text">02.06.2019</p></div>
+                </div>
+            </div>
+            <div class="col-4 my-col">
+                <div class="event-image-container center-image">
+                    <img class="event-image" src="{{ asset('images/dashboard/agenda/randonee.png') }}" />
+                    <div class="date-box-center"><p class="date-text centered-text">08.07.2019</p></div>
+                    <div class="date-box-center-mobile"><p class="date-text centered-text">08.07.2019</p></div>
+                </div>
+            </div>
+            <div class="col-4 my-col">
+                <div class="event-image-container right-image">
+                    <img class="event-image" src="{{ asset('images/dashboard/agenda/concert.png') }}" />
+                    <div class="date-box-right"><p class="date-text centered-text">11.07.2019</p></div>
+                    <div class="date-box-right-mobile"><p class="date-text centered-text">11.07.2019</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-container ges-diary">
+        <div class="row my-row">
+            <h2>Agenda Ateliers</h2>
+        </div>
+        <div class="row my-row">
+            <div class="col-5 my-col previous-image-row">
+                <img class="previous-image" src="{{ asset('images/dashboard/agenda/previous.png') }}" />
+            </div>
+            <div class="col-2 my-col">
+                <h2 class="month-text">Juillet</h2>
+            </div>
+            <div class="col-5 my-col next-image-row">
+                <img class="next-image" src="{{ asset('images/dashboard/agenda/next.png') }}" />
+            </div>
+            
+        </div>
+        <div class="row my-row">
+            <div class="my-col col-2 day-container">
+                
+            </div>
+            <div class="my-col col-2 day-container">
+                
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-1-to-9">1</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-1-to-9">2</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-1-to-9">3</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-1-to-9">4</h2></div>
+            </div>
+        </div>
+        <div class="row my-row">
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-1-to-9">5</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-1-to-9">6</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background round-event cinema"><h2 class="number-1-to-9 white-text">7</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-1-to-9">8</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-1-to-9">9</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">10</h2></div>
+            </div>
+        </div>
+        <div class="row my-row">
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">11</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">12</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day blue-background"><h2 class="number-10-to-99 white-text">13</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">14</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">15</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">16</h2></div>
+            </div>
+        </div>
+        <div class="row my-row">
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">17</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">18</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">19</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">20</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">21</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day green-background"><h2 class="number-10-to-99 white-text">22</h2></div>
+            </div>
+        </div>
+        <div class="row my-row">
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">23</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">24</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">25</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">26</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">27</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">28</h2></div>
+            </div>
+        </div>
+        <div class="row my-row">
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">29</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">30</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">31</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                
+            </div>
+            <div class="my-col col-2 day-container">
+                
+            </div>
+            <div class="my-col col-2 day-container">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-container events-container">
+        <div class="row my-row">
+            <p class="events-title">Vos derniers événements</p>
+        </div>
+        <div class="row my-row">
+            <div class="col-4 my-col">
+                
+            </div>
+            <div class="col-4 my-col">
+                <div class="event-image-container center-image">
+                    <img class="event-image" src="{{ asset('images/dashboard/agenda/cinema.png') }}" />
+                    <div class="date-box-center"><p class="date-text centered-text">07.07.2019</p></div>
+                    <div class="date-box-center-mobile"><p class="date-text centered-text">07.07.2019</p></div>
+                </div>
+            </div>
+            <div class="col-4 my-col">
+                
+            </div>
+        </div>
+        <div class="row my-row">
+            <p class="events-title">Vos prochains événements</p>
+        </div>
+        <div class="row my-row">
+            <div class="col-4 my-col">
+                
+            </div>
+            <div class="col-4 my-col">
+                <div class="event-image-container center-image">
+                    <img class="event-image" src="{{ asset('images/dashboard/agenda/randonee.png') }}" />
+                    <div class="date-box-center"><p class="date-text centered-text">02.07.2019</p></div>
+                    <div class="date-box-center-mobile"><p class="date-text centered-text">02.07.2019</p></div>
+                </div>
+            </div>
+            <div class="col-4 my-col">
+                
+            </div>
+        </div>
+        <div class="row my-row">
+            <div class="col-3 my-col">
+                
+            </div>
+            <div class="col-6 my-col collective-calendar-button-row">
+                <div id="collective-calendar-button">
+                    Calendrier<br>Collectif
+                </div>
+            </div>
+            <div class="col-3 my-col">
+                
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+{% include 'footer.html.twig' %}
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src"{{ asset('js/budget/spendings.js') }}"></script>
+{% endblock %}

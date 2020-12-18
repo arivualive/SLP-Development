@@ -1,0 +1,204 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    SLP
+{% endblock %}
+
+{% block stylesheets %}
+
+    <link rel="stylesheet" href="{{ asset('css/favoris_change.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+
+{% endblock %}
+
+{% block body %}
+
+    <header>
+        <div class="row">
+            <div class="col-md-12">
+                <img class="img-fluid"
+                     src="{{ asset('images/favoris/page_favoris_header.jpg') }}" alt="Dashboard">
+            </div>
+        </div>
+    </header>
+
+    <div class="row favoris">
+        <div class="col-md-12">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel
+
+                illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blan-
+                dit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+
+                Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod
+                tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+            </p>
+        </div>
+    </div>
+
+    <div class="col-m-12 step4">
+        <div class="row">
+            <div class="col-md-3" id="first">
+                <img data-image-id="1" class="img-fluid"
+                     src="{{ asset('images/favoris/communication_durable.jpg') }}" alt="Dashboard">
+            </div>
+            <div class="col-md-3" id="secondSelect">
+                <img data-image-id="2" class="img-fluid"
+                     src="{{ asset('images/favoris/s_occuper.jpg') }}" alt="Dashboard">
+            </div>
+            <div class="col-md-3" id="third">
+                <img data-image-id="3" class="img-fluid"
+                     src="{{ asset('images/favoris/Se divertir-Loisirs.jpg') }}" alt="Dashboard">
+            </div>
+            <div class="col-md-3" id="four">
+                <img data-image-id="4" class="img-fluid"
+                     src="{{ asset('images/favoris/zero-waste.jpg') }}" alt="Dashboard">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3" id="five">
+                <img data-image-id="5" class="img-fluid"
+                     src="{{ asset('images/favoris/Tourisme-durable.jpg') }}" alt="Dashboard">
+            </div>
+            <div class="col-md-3" id="six">
+                <img data-image-id="6" class="img-fluid"
+                     src="{{ asset('images/favoris/Humains.jpg') }}" alt="Dashboard">
+            </div>
+            <div class="col-md-3" id="seven">
+                <img data-image-id="7" class="img-fluid"
+                     src="{{ asset('images/favoris/general.jpg') }}" alt="Dashboard">
+            </div>
+            <div class="col-md-3" id="height">
+                <img data-image-id="8" class="img-fluid"
+                     src="{{ asset('images/favoris/technique.jpg') }}" alt="Dashboard">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3" id="nine">
+                <img data-image-id="9" class="img-fluid"
+                     src="{{ asset('images/favoris/macro.jpg') }}" alt="Dashboard">
+            </div>
+            <div class="col-md-3" id="ten">
+                <img data-image-id="10" class="img-fluid"
+                     src="{{ asset('images/favoris/Référentiel 2.jpg') }}" alt="Dashboard">
+            </div>
+            <div class="col-md-3" id="eleven">
+                <img data-image-id="11" class="img-fluid"
+                     src="{{ asset('images/favoris/eco mobilité.jpg') }}" alt="Dashboard">
+            </div>
+            <div class="col-md-3" id="twelve">
+                <img data-image-id="12" class="img-fluid"
+                     src="{{ asset('images/favoris/Architecture-verte.jpg') }}" alt="Dashboard">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3" id="thirteen">
+                <img data-image-id="13" class="img-fluid"
+                     src="{{ asset('images/favoris/alimentation responsable.jpg') }}" alt="Dashboard">
+            </div>
+            <div class="col-md-3" id="fourteen">
+                <img data-image-id="14" class="img-fluid"
+                     src="{{ asset('images/favoris/Mode durable-éthique.jpg') }}" alt="Dashboard">
+            </div>
+            <div class="col-md-3" id="fifteen">
+                <img data-image-id="15" class="img-fluid"
+                     src="{{ asset('images/favoris/Beauté-Soins-Maquillage.jpg') }}" alt="Dashboard">
+            </div>
+            <div class="col-md-3" id="sixteen">
+                <img data-image-id="16" class="img-fluid"
+                     src="{{ asset('images/favoris/Prevention-santé-et-stress.jpg') }}" alt="Dashboard">
+            </div>
+        </div>
+        <div class="col-md-12 text-center">
+            <a href="#" id="valider"> VALIDER </a>
+        </div>
+    </div>
+    <div class="step5">
+        <div class="row justify-content-center">
+            {% for favori in favoris %}
+            <div class="col-md-{% if loop.length
+                <=4 or loop.length ==
+                8 or loop.length ==12
+                or loop.length ==16 or loop.length
+                == 7 or loop.length ==10 or loop.length==11
+                or loop.length == 12 or loop.length == 13 or loop.length == 14
+                or loop.length == 15 %}3{% elseif loop.length <=7 or loop.length == 9 %}4{% endif %}" id="first">
+                <img class="img-fluid" src="images/favoris/{{ favori.image }}" alt="premiere image">
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row step5last">
+            <div class="offset-1 col-md-2" id="five">
+                <img class="img-fluid"
+                     src="{{ asset('images/favoris/communication durable_2.jpg') }}" alt="Dashboard">
+            </div>
+            <div class="col-md-2" id="six">
+                <img class="img-fluid"
+                     src="{{ asset('images/favoris/s_occuper_2.jpg') }}" alt="Dashboard">
+            </div>
+            <div class="col-md-2" id="seven">
+                <img class="img-fluid"
+                     src="{{ asset('images/favoris/Se divertir-Loisirs_2.jpg') }}" alt="Dashboard">
+            </div>
+            <div class="col-md-2" id="height">
+                <img class="img-fluid"
+                     src="{{ asset('images/favoris/zero-waste_2.jpg') }}" alt="Dashboard">
+            </div>
+            <div class="col-md-2" id="nine">
+                <img class="img-fluid"
+                     src="{{ asset('images/favoris/Mode durable-éthique_2.jpg') }}" alt="Dashboard">
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-1 col-md-2" id="ten">
+                <img class="img-fluid"
+                     src="{{ asset('images/favoris/Humains_2.jpg') }}" alt="Dashboard">
+            </div>
+            <div class="col-md-2" id="eleven">
+                <img class="img-fluid"
+                     src="{{ asset('images/favoris/Prévention-santé-et-stress_2.jpg') }}" alt="Dashboard">
+            </div>
+            <div class="col-md-2" id="twelve">
+                <img class="img-fluid"
+                     src="{{ asset('images/favoris/technique_2.jpg') }}" alt="Dashboard">
+            </div>
+            <div class="col-md-2" id="thirteen">
+                <img class="img-fluid"
+                     src="{{ asset('images/favoris/alimentation responsable_2.jpg') }}" alt="Dashboard">
+            </div>
+            <div class="col-md-2" id="fourteen">
+                <img class="img-fluid"
+                     src="{{ asset('images/favoris/macro_2.jpg') }}" alt="Dashboard">
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-4 col-md-2" id="fifteen">
+                <img class="img-fluid"
+                     src="{{ asset('images/favoris/eco mobilité_2.jpg') }}" alt="Dashboard">
+            </div>
+            <div class="col-md-2" id="sixteen">
+                <img class="img-fluid"
+                     src="{{ asset('images/favoris/Prevention-santé-et-stress.jpg') }}" alt="Dashboard">
+            </div>
+        </div>
+        <div class="col-md-12 text-center">
+            <a href="{{ path('favoris_change') }}" id="changer"> CHANGER MES FAVORIS </a>
+        </div>
+    </div>
+
+
+    <div class="col-12">
+        {% include 'footer.html.twig' %}
+    </div>
+
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/favoris/favori.js') }}"></script>
+{% endblock %}

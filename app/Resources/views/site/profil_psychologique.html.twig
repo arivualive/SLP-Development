@@ -1,0 +1,102 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+
+<link rel="stylesheet" href="{{ asset('css/profilgaea.css') }}">
+<link rel="stylesheet" href="{{ asset('css/site_dashboard.css') }}">
+<link rel="stylesheet" type="text/css"
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    @-moz-document url-prefix() {
+        .selected1:after {
+            position: absolute;
+            top: 20px;
+            margin-left: -35px;
+            font-family: 'FontAwesome';
+            content: '\f00c';
+            color: #ffffff;
+            font-size: 30px;
+        }
+    }
+</style>
+{% endblock %}
+{% block body %}
+
+
+
+
+<div class="row">
+    <div class="dropdown burger">
+        <a class="dropdown-item" style="padding: 0%;width:0%;margin-right: 160px;"
+            class="btn btn-secondary dropdown-toggle" href="{{ path('site_dashboard') }}">
+            <button class="btn btn-secondary dropdown-toggle"><i class="fa fa-home" style="font-size:24px"></i>
+
+            </button>
+        </a>
+
+    </div>
+    <img src=" {{ asset('images/dashboard/individus.jpg') }}" style="height: 550px;width:100%;margin-top: 5px;"
+        alt="photo background">
+
+</div>
+
+
+<div class="row">
+
+
+
+    <div class="mini-profil-psycho">
+        <h3 style="color:dimgrey">Mini profil Psychologique</h3>
+        <p>Enthousiaste et sociable, vous avez de la facilité à nouer des liens avec autrui
+
+            et aimez être le centre de l’attention. Décrit comme dynamique et souriant,
+            vous pouvez aussi être étourdi et parfois même désordonné. Malgré votre
+            spontanéité, vous possédez toutefois un esprit pragmatique et vous préférez
+            les personnes aux idées. Enfin, vous êtes une personne active et peu inhibée.
+            B. Vous aimez voir du monde et prendre votre temps dans vos activités, ainsi
+            qu’évoluer dans un environnement qui vous est familier. Vous pourriez être
+            intéressé par les marchés locaux et les vide-dressings qui permettent de
+            redonner une nouvelle vie à des objets devenus inutiles pour d’autres.</p>
+    </div>
+</div>
+
+
+
+<div class="row">
+    <footer>
+        <div class="d-flex flex-row justify-content-around footer">
+            <div>
+                <h3>Projets</h3>
+                <ul>
+                    <li><a href="http://www.repertoirevert.org/">Répertoire Vert</a></li>
+                    <li><a href="">Green Event Series</a></li>
+                    <li><a href="">Grow your own</a></li>
+                    <li><a href="">Consom'action</a></li>
+                    <li><a href="">Eco-gestes</a></li>
+                    <li><a href="">Green Coaching</a></li>
+                    <li><a href="">Sharing Economy</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3><a href="{{ path('site_mentions') }}">About</a></h3>
+            </div>
+
+            <div>
+                <h3><a href="{{ path('contact') }}">Contact</a></h3>
+            </div>
+
+            <div>
+                <h3><a href="http://www.gaea21.org/wpg21/">gaea21</a></h3>
+            </div>
+        </div>
+    </footer>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+
+<script link rel="stylesheet" href="{{ asset('js/bootstrap.min.js')}}"></script>
+
+
+{% endblock %}

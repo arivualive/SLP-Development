@@ -1,0 +1,207 @@
+.eating-budget-vertical-menu-container {
+    position: absolute; top: 1300px; right: 18%;
+}
+
+.eating-budget-vertical-menu {
+    position: relative;
+}
+
+.eating-budget-vertical-menu-images-container {
+    position: absolute; display: flex; flex-direction: column; justify-content: space-around; height: 1250px;
+    padding-top: 40px; padding-bottom: 20px;
+}
+
+/* .group div {
+    margin-top: 0px;
+    margin-bottom: 0px;
+} */
+
+.eating-budget-vertical-menu-container .big-image {
+    width: 100px; height: 100px; z-index: 5;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+#boisson {
+    margin-top: 40px;
+}
+
+/* .eating-budget-vertical-menu-container .first {
+    padding-top: -20px;
+} */
+
+/* .eating-budget-vertical-menu-container .last {
+    margin-bottom: -10px;
+} */
+
+.small {
+    margin-top: -20px; /*margin-bottom: -20px;*/
+}
+
+/* .eating-budget-vertical-menu-container .image-container {
+    position: relative;
+} */
+
+.small-image {
+    width: 46px; height: 50px; z-index: 5; margin-left: 27%;
+    margin-top: 16px; margin-bottom: 16px;
+}
+
+.big-image-title {
+    position: absolute; bottom: 37%; right: 110%; width: 150px; color: #4fd568;font-weight: bold; text-align: right;
+    font-size: 120%;
+}
+
+.group #boissons .big-image-title{
+    /* position: absolute; bottom: 37%; right: 110%; width: 150px; color: #4fd568;font-weight: bold; text-align: right;
+    font-size: 120%; */
+    margin-top: 90px;
+}
+
+.small-image-title {
+    position: absolute; bottom: 37%; right: 110%; width: 150px; color: #4fd568;font-weight: bold; font-size: 90%; text-align: right;
+    /*margin-top: -10px;margin-bottom: -10px;*/
+}
+
+.rounded-green-bar {
+    /* position: absolute; */ bottom: 1px; right: 50px; margin-left: 25px; background-color: #4fd568; border-radius: 50px; width: 50px; height: 1400px/* 1250px */; z-index: -5;
+}
+
+/* ------------------------------------------------
+                    RESPONSIVE
+------------------------------------------------  */
+
+@media screen and (max-width:1440px) {
+    .eating-budget-vertical-menu-container {
+        position: absolute; top: 1300px; right: 10%;
+    }
+}
+
+/* @media screen and (max-width:1224px) {
+    .eating-budget-vertical-menu-container {
+        position: absolute; top: 1300px; right: 0;
+    }
+} */
+
+@media screen and (max-width:1024px) {
+    .eating-budget-vertical-menu-container {
+        position: absolute; top: 1300px; right: 10%;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .eating-budget-vertical-menu-container {
+        position: absolute; top: 1300px; right: 8%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .eating-budget-vertical-menu-container {
+        position: absolute; top: 1000px; right: 5%;
+    }
+}
+
+/* ------------------------------------------------
+                     MOBILE
+------------------------------------------------  */
+
+@media screen and (max-width:688px) {
+
+    .eating-budget-vertical-menu-container {
+        position: absolute; top: 0px; right: 20%; padding-top: 35px; z-index: 5;
+    }
+    
+    .eating-budget-vertical-menu {
+        position: relative;
+    }
+    
+    .eating-budget-vertical-menu-images-container {
+        position: absolute; display: flex; flex-direction: row; justify-content: space-between; height: 70px;
+        padding-top: 0px; padding-bottom: 0px; width: 70%; margin-left: 15%; margin-right: 15%;
+    }
+    
+    .eating-budget-vertical-menu-container .big-image {
+        width: 70px; height: 70px; z-index: 5;
+        margin-left: 7px;
+        margin-right: 7px;
+        margin-top: -10px;
+        margin-bottom: 0;
+    }
+    
+    #boisson {
+        margin-top: -10px;
+    }
+    
+    .small {
+        margin-top: -15px; /*margin-bottom: -20px;*/
+    }
+    
+/*     .eating-budget-vertical-menu-container .image-container {
+        position: relative;
+    } */
+    
+    .small-image {
+        width: 46px; height: 50px; z-index: 5;  margin-left: 23%;
+    }
+    
+    .big-image-title {
+        position: absolute; bottom: 100%;  width: 100%; color: #4fd568;font-weight: bold; text-align: center;
+        font-size: 120%; right: 0%;
+    }
+    
+    .group #boissons .big-image-title{
+        /* position: absolute; bottom: 37%; right: 110%; width: 150px; color: #4fd568;font-weight: bold; text-align: right;
+        font-size: 120%; */
+        margin-left: 50px;
+    }
+    
+    .small-image-title {
+        position: absolute; bottom: 37%;  left: 85%; width: 150px; color: #4fd568;font-weight: bold; font-size: 90%; text-align: left;
+        /*margin-top: -10px; margin-bottom: -10px;*/
+    }
+    
+    .rounded-green-bar {
+        /* position: absolute; */ bottom: 1px; top: 1px; margin-top: 25px; background-color: #4fd568; border-radius: 50px; width: 90%; height: 50px/* 1250px */; z-index: -5;
+    }
+
+    .secondary-rounded-green-bar {
+        position: absolute; bottom: 1px; top: 1px; margin-top: 25px; background-color: #4fd568; border-radius: 50px; width: 50px; height: 0px; z-index: -5;
+        right: 20%;
+    }
+
+    .green-bar-left {
+        position: absolute;
+        top: 15px;
+        left: 35px;
+    }
+
+    .green-bar-right {
+        position: absolute;
+        right: 30px;
+        top: 15px;
+    }
+
+    .active1 {
+        position: absolute;
+    }
+
+    .active2 {
+        position: absolute;
+        left: 32%;
+    }
+
+    .active3 {
+         position: absolute;
+        right: 0%;
+     }
+
+    .background-white {
+        position: absolute;
+        background-color: white;
+        width: 155px;
+        top: 30px;
+        z-index: -10;
+        left: 65px;
+    }
+
+}

@@ -1,0 +1,594 @@
+.burger button{
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 1);
+    color: #539ac4;
+    border: solid 2px white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.burger{
+    position: absolute;
+    top: 3%;
+    right: 2%;
+}
+
+.dropdown-menu::before,
+.dropdown-menu::after {
+border: none;
+content: none;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+/* ------------------------------------------------
+MENU
+------------------------------------------------  */
+
+.container{
+    padding: 0;
+}
+ 
+
+/* ------------------------------------------------
+SLIDER
+------------------------------------------------  */
+    .carousel-item{
+        background-color: #539ac4;
+    }
+
+    .top-adjust{
+        top: 30%;
+    }
+
+    .carousel-caption{
+        margin: auto;
+        padding-bottom: 10%;
+    }
+
+    .carousel-item .intro h1 {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        text-align: center;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        font-size: 40pt;
+        font-weight: bold;
+    }
+
+
+/* ------------------------------------------------
+ABOUT
+------------------------------------------------  */
+.mobile{
+    display:none;
+}
+
+.about {
+    margin-bottom: 20px;
+    width: 1200px;
+}
+
+.about h1 {
+    color: black;
+    font-family: 'Nunito', sans-serif;
+    margin-top: 20px;
+    font-weight: bold; 
+    font-size: 30px;
+
+}
+
+.about h2 {
+    color:black;
+    font-family: 'Nunito', sans-serif;
+    margin-top: 20px;
+    font-weight: bold; 
+    font-size: 25px;
+    
+}
+
+.about p {
+    font-family: 'Nunito', sans-serif;
+    color: black;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    
+}
+
+.about img {
+    width:100%;
+    height: 300px;
+    margin-top:20px;
+}
+
+.introambassadeur {
+    width:100%;
+}
+
+
+.introambassadeur .left img {
+    width: 50%;
+    height:50%;
+    display:inline-block;  
+    margin-top:20px;
+    margin-right:80px;
+
+}
+
+.introambassadeur .right img {
+    /* position: absolute; */
+    width:560px;
+    height:auto;
+    /* margin-top:-150%;
+    margin-left: 200%; */
+}
+
+.introambassadeur h2 {
+    color:black;
+    font-family: 'Nunito', sans-serif;
+    margin-top: 70px;
+    font-weight: bold; 
+    font-size: 30px;
+    
+}
+
+.introambassadeur p {
+    font-family: 'Nunito', sans-serif;
+    color: black;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    
+}
+
+.introambassadeur img {
+    width:100%;
+    height: 300px;
+    margin-top:20px;
+}
+/* ------------------------------------------------
+PROCESSUS
+------------------------------------------------  */
+.ambassadeur {
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.ambassadeur h1 {
+    color: black;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.ambassadeur h2 {
+    color:black;
+    font-family: 'Nunito', sans-serif;
+    margin-top: 40px;
+    font-weight: bold; 
+    font-size: 30px;
+    
+}
+
+/* .ambassadeur img {
+    margin-left:50px;
+    margin-top:20px;
+} */
+
+
+.ambassadeur p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    /* width: 200px; */
+    color: black;
+    margin-top:30px;
+}
+
+.ambassadeur .court {
+    width:200px;
+    height:300px;
+}
+
+.ambassadeur .long {
+    width:200px;
+    height:400px;
+}
+
+.selection {
+    width:100%;
+    margin-bottom:40px;
+}
+
+
+.selection h2 {
+    color:black;
+    font-family: 'Nunito', sans-serif;
+    margin-top: 40px;
+    font-weight: bold; 
+    font-size: 30px;
+    
+}
+
+.selection p {
+    font-family: 'Nunito', sans-serif;
+    color: black;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top:0px;
+}
+
+.selection img {
+    width:100%;
+    height: 300px;
+    margin-top:20px;
+}
+.selection .réseaux {
+    height:70px;
+}
+
+.selection .mail {
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+.selection .réseauxp {
+    margin-top:20px;
+}
+
+.interet img{
+    width:75%;
+    height:500px;
+    margin-left:140px;
+
+}
+
+
+.spacer{
+    margin-top:20px !important;
+}
+
+
+/* ------------------------------------------------
+FOOTER
+------------------------------------------------  */
+footer{
+    background-image: url('/images/pelle_terre_footer.jpg');
+    width: 100%;
+    color: white;
+}
+
+/* ------------------------------------------------
+RESPONSIVE
+------------------------------------------------  */
+@media screen and (max-width:1024px){
+    .mobile{
+        display: none;
+    }
+    .introambassadeur .left img {
+        margin-right:0px;
+    }
+
+    .ambassadeur img {
+        margin-left:40px;
+    }
+
+    .ambassadeur h1,p {
+        margin-left:30px;
+    }
+
+    .ambassadeur .court {
+        width:170px;
+    }
+
+    .ambassadeur .long {
+        width:170px;
+    }
+
+    .interet img {
+        margin-left:70px;
+    }
+
+}
+
+
+@media screen and (max-width:960px) {
+    .mobile{
+        display: none;
+    }
+    /* ------------------------------------------------
+    MENU
+    ------------------------------------------------  */
+    .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+
+        .menu ul {
+            padding-top: 5px;
+            width: 95%;
+            z-index: 200;
+            position: absolute;
+            top:0;
+            left: 0;
+        }
+
+        /* ------------------------------------------------
+        SLIDER
+        ------------------------------------------------  */
+        .carousel-item .intro h1 {
+            font-family: 'Nunito', sans-serif;
+            color: white;
+            text-align: center;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .carousel-item .intro p {
+            font-family: 'Nunito', sans-serif;
+            color: white;
+            font-size: 14px;
+        }
+
+        /* ------------------------------------------------
+        PROCESSUS
+        ------------------------------------------------  */
+        .processus h3 {
+            color: #fff;
+            font-family: 'Nunito', sans-serif;
+            font-size: 16px;
+            margin-top: 0;
+            font-weight: bold;
+            text-align: center;
+        }
+        .processus img {
+            display: block;
+            width: 100%;
+            min-height: 100%;
+            margin-bottom: 15px;
+        
+        }
+}
+
+
+@media screen and (max-width:768px) {
+    .mobile{
+        display: none;
+    }
+        /* ------------------------------------------------
+        MENU
+        ------------------------------------------------  */
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+
+        /* ------------------------------------------------
+        SLIDER
+        ------------------------------------------------  */
+        .carousel-item .intro h1 {
+            font-family: 'Nunito', sans-serif;
+            color: white;
+            text-align: center;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .carousel-item .intro p {
+            font-family: 'Nunito', sans-serif;
+            color: white;
+            font-size: 10px;
+        }
+}
+
+@media screen and (max-width:600px) {
+
+    .mobile{
+        display: none;
+    }
+    /* ------------------------------------------------
+    MENU
+    ------------------------------------------------  */
+    .navbar {
+        margin-bottom: 0;
+    }
+
+    .griditem {
+        position: relative;
+        -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        width: 75%;
+        height: 400px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (max-width:480px) {
+
+    .mobile{
+        display: block;
+    }
+    .container{
+        padding: 0 7%;
+    }
+
+    .pc{
+        display: none;
+    }
+
+    /* ------------------------------------------------
+    MENU
+    ------------------------------------------------  */
+    .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+
+        /* ------------------------------------------------
+        SLIDER 
+        ------------------------------------------------  */
+
+        .carousel-item .intro h1 {
+            font-family: 'Nunito', sans-serif;
+            color: white;
+            text-align: center;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            font-size: 7px;
+            font-weight: bold;
+        }
+
+        .carousel-item .intro p {
+            font-family: 'Nunito', sans-serif;
+            color: white;
+            font-size: 6px;
+        }
+
+        .carousel-item .intro a {
+            display: block;
+            width:90px;
+            margin: 0 auto;
+        }
+        .carousel-item .intro a button {
+            padding: 2px;
+            background-color: #539ac4;
+            color: white;
+            border: solid 2px white;
+            border-radius: 3px;
+            font-size: 8px;
+        }
+
+        /* ------------------------------------------------
+        ABOUT
+        ------------------------------------------------  */
+        .row{
+            margin:0px;
+        }
+        .about{
+            width: 100%;
+        }
+        .about .about {
+            font-family: 'Nunito', sans-serif;
+            font-weight: bold;
+            color: #539ac4;
+            font-size: 18px;
+        }
+        .about h1{
+            width:100%;
+            font-size: 16pt;
+            margin-top: 10px;
+        }
+        .about p{
+            margin: 0px;
+            text-align: justify;
+            font-size: 12pt;
+        }
+
+        .introambassadeur h2{
+            margin-top:0px;
+            font-size: 16pt;
+        }
+        .introambassadeur img{
+            height: auto;
+            margin-top:0px;
+        }
+        .introambassadeur p{
+            margin-top:10px;
+            text-align: justify;
+            margin-left:0px;
+            font-size:12pt;
+        }
+        .introambassadeur .left .image{
+            display:flex;
+            margin-bottom:25px;
+        }
+        .introambassadeur .left img{
+            height:auto;
+            width:65px;
+            margin-top:0px;
+            margin-left:0px;
+            position: relative;
+        }
+        
+        .introambassadeur .left .image p{
+            text-align: left;
+            font-size:8pt;
+            margin-left:5px;
+        }
+        
+        .introambassadeur .right img{
+            height:auto;
+            width:100%;
+            margin-top:0px;
+        }
+        
+        .ambassadeur h2{
+            font-size: 14pt;
+        }
+        
+        .selection h2{
+            font-size: 16pt;
+        }
+        .selection img{
+            height: auto;
+            margin: 0px;
+            width: 100%;
+        }
+
+        .selection p{
+            font-size: 12pt;
+            text-align: justify;
+            margin:0px;
+        }
+        .selection .réseauxp{
+            margin-left: 10px;
+            text-align: left;
+            margin-top: 0px;
+        }
+        .selection .réseaux{
+            display: none;
+        }
+        .selection .mail{
+            width: 100%;
+            height: auto;
+        }
+
+
+        .reseaux-resp{
+            margin-top: 21px !important;
+        }
+        
+        .ambassadeur .court{
+            margin-left: 0px;
+            width: 90px;
+            height: auto;
+        }
+        .ambassadeur .row{
+            margin-bottom: 10px;
+        }
+        .ambassadeur p{
+            width: 100%;
+            padding-left: 5px;
+        }
+        .ambassadeur p.titre{
+            margin-top: 0px;
+            font-weight: bold;
+        }
+        .ambassadeur p.content{
+            margin-top: 0px;
+            font-size: 10pt;
+        }
+}

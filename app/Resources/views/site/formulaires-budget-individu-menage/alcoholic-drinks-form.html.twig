@@ -1,0 +1,174 @@
+{# include('site/formulaires-budget-individu-menage/non-alcoholic-drinks-form.html.twig') #}
+<div class="alcoholic-drinks-form-container general-spendings-form-container">
+
+<div class="category invisible">alcoholic-drinks</div>
+
+<div class="alcohol-container">
+    <div class="row no-gutters product-line alcohol-line alcohol-line-1" data-id="0">
+        <div class="invisible subcategory">alcohol</div>
+        <div class="col-2 my-col">
+            <div class="subcategory-image-container">
+                <!--<img src="{# asset('images/budget/individumenage/sous-categories/pain.png') #}" class="subcategory-image" />-->
+            </div>
+            <div class="subcategory-image-title field-text">Boissons alcolisées</div>
+        </div>
+        <div class="col-2 my-col">
+            <div class="field-and-label-container">
+                <div class="field-text">Quoi</div>
+                <div>
+                    <input class="autocomplete what-field" />
+                </div>
+            </div>
+        </div>
+        <div class="col-2 my-col">
+            <div class="field-and-label-container">
+                <div class="field-text">Quantité</div>
+                <div>
+                    <input class="autocomplete quantity-field numeric-field" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-2 my-col">
+            <div class="field-and-label-container">
+                <div class="field-text">Marque</div>
+                <div>
+                    <input class="autocomplete brand-field" />
+                </div>
+            </div>
+        </div>
+        <div class="col-1 my-col"></div>
+        <div class="col-2 my-col">
+            <div class="field-and-label-container">
+                <div style="color: white;" class="white-text field-text">Marque</div>
+                <div class="amount-input-field">
+                    <input class="autocomplete placeholder-text amount numeric-field" placeholder="Montant" />
+                </div>
+            </div>
+        </div>
+        <div class="col-1 my-col">
+            <div style="color: white;" class="white-text field-text">Marque</div>
+            <div class="currency-selectmenu-container">
+                <select class="dropdown-list currency-list">
+                    <option>CHF</option>
+                    <option>EUR</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    {% for spending in spendings %}
+        {% if spending.getProduct().getSubcategory().getName() == "alcohol" %}
+            <div class="row no-gutters product-line alcohol-line alcohol-line-1" data-id="{{ spending.getId() }}">
+                
+                <div class="spending invisible">{{ spending.getId() }}</div>
+                
+                <div class="invisible subcategory">vegetable-drink</div>
+                <div class="col-2 my-col"></div>
+                <div class="col-2 my-col">
+                    <div class="field-and-label-container">
+                        <div class="field-text">Quoi</div>
+                        <div>
+                            <input class="autocomplete what-field" value="{{spending.product.getName()}}" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 my-col">
+                    <div class="field-and-label-container">
+                        <div class="field-text">Quantité</div>
+                        <div>
+                            <input class="autocomplete quantity-field numeric-field" value="{{spending.quantity.getNumber()}}"/>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-2 my-col">
+                    <div class="field-and-label-container">
+                        <div class="field-text">Marque</div>
+                        <div>
+                            <input class="autocomplete brand-field" value="{{spending.getProduct().getBrand().getName()}}"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1 my-col"></div>
+                <div class="col-2 my-col">
+                    <div class="field-and-label-container">
+                        <div style="color: white;" class="white-text field-text">Marque</div>
+                        <div class="amount-input-field">
+                            <input class="autocomplete placeholder-text amount numeric-field" placeholder="Montant" value="{{spending.cost.getPrice()}}"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1 my-col">
+                    <div style="color: white;" class="white-text field-text">Marque</div>
+                    <div class="currency-selectmenu-container">
+                        <select class="dropdown-list currency-list">
+                            {# dump(currencies) #}
+                            {# for currency in currencies #}
+                                {# currency.getIsoCode() #}
+                                {# if spending.currency.getIsoCode() == currency.getIsoCode() #}
+                                <!--<option selected>{#spending.currency.getIsoCode()#}</option>-->
+                                {# else #}
+                                    <!--<option>{#spending.currency.getIsoCode()#}</option>-->
+                                {# endif #}
+                            {# endfor #}
+
+                            
+                            {% if spending.currency.getIsoCode() == 'CHF' %}
+                                <option selected>CHF</option>
+                            {% else %}
+                                <option>CHF</option>
+                            {% endif %}
+
+                            {% if spending.currency.getIsoCode() == 'EUR' %}
+                                <option selected>EUR</option>
+                            {% else %}
+                                <option>EUR</option>
+                            {% endif %}
+                        </select>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+    
+    <div class="row add-product-line add-alcohol hand-on-hover">
+        <div class="col-2 my-col"></div>
+        <div style="" class="col-1 my-col">
+            <img style="width: 10px; height: 10px;" class="" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" >
+        </div>
+        <div class="col-9 my-col">
+            <text style="color: #539ac4; font-size: 9px;">Ajouter un produit</text>
+        </div>
+    </div>
+</div>
+
+<div class="row my-row">
+    <div style="height: 30px;"></div>
+</div>
+<div class="row my-row">
+    <div class="col-4 my-col"></div>
+    <div class="col-3 my-col">
+        <input class="autocomplete total-amount" />
+    </div>
+    <div class="col-1 my-col">
+        <div class="total-amount-currency-dropdown-list">
+            <select class="dropdown-list currency-list">
+                <option>CHF</option>
+                <option>EUR</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-1 my-col"></div>
+    <div class="col-3 my-col">
+        <div class="form-validation-button alcoholic-drinks-validation-button total-validation" style="width: 100%; height: 100%; color: white; background-color: #539ac4; text-align:center; font-weight: bold; cursor: pointer;" data-category="alcoholic-drinks">Valider</div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-4 my-col"></div>
+    <div style="color:#539ac4; margin-top:2%;" class="col-3 my-col total-validation">
+        Montant total
+    </div>
+</div>
+
+</div>

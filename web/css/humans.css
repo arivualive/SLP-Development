@@ -1,0 +1,1993 @@
+*{font-family: 'Nunito', sans-serif !important}
+
+body{
+    font-family: 'Nunito', sans-serif;
+}
+
+.mobile{
+    display: none;
+}
+
+.dropdown-item {
+    padding: 0%;width:0%;
+}
+
+.dropdown-item button i {
+    font-size:24px;
+}
+
+.withoutpadding{
+    padding: 0px;
+}
+
+/* ------------------------------------------------
+BACKGROUND
+------------------------------------------------  */
+/*
+#background-gray-rectangle {
+    color: #959595;
+    position: fixed;
+    height: 100%;
+    width:80;
+}
+*/
+.burger button{
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 1);
+    color: #539ac4;
+    border: solid 2px white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.burger{
+    position: absolute;
+    top: 12%;
+    right: 2%;
+}
+
+.dropdown-menu::before,
+.dropdown-menu::after {
+border: none;
+content: none;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+
+
+/* ------------------------------------------------
+MENU
+------------------------------------------------  */
+.navbar {
+    margin: 0;
+    border-radius: 0;
+    width: 100%;
+}
+
+.container{
+    padding: 0;
+}
+
+.fond {
+    width:600px;
+    background-color:grey;
+    height:5000px;
+    position:absolute;
+}
+
+.entete {
+    display: none;
+}
+/* ------------------------------------------------
+SLIDER
+------------------------------------------------  */
+    .carousel-item{
+        background-color: #539ac4;
+        margin-top:40px;
+    }
+
+    .top-adjust{
+        top: 30%;
+    }
+
+    .carousel-caption{
+        margin: auto;
+        padding-bottom: 10%;
+    }
+
+    .carousel-item .intro h1 {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        text-align: center;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .carousel-item .intro p {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .carousel-item .intro a {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .carousel-item .intro a button {
+        padding: 5px;
+        background-color: rgba(0, 0, 0, 0);
+        color: white;
+        border: solid 2px white;
+        border-radius: 3px;
+        text-transform: uppercase;
+    }
+
+/* ------------------------------------------------
+ABOUT
+------------------------------------------------  */
+.about {
+    margin-bottom: 20px;
+}
+
+.about h2 {
+    color: #539ac4;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.about .desc {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    color: #539ac4;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.about p {
+    font-family: 'Nunito', sans-serif;
+    color: #539ac4;
+    font-size: 0.9em;
+}
+
+.about .sec-part {
+    margin-top: 2rem;
+}
+
+.slogant p {
+    font-family: 'Nunito', sans-serif;
+    color: #539ac4;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.laststories {
+    width: 100%;
+    height: 430px;
+    background-color: white;
+    overflow: hidden;
+    margin-bottom: 15px;
+    margin-top:70px;
+    border: solid 1px grey;
+}
+
+.laststories h1 {
+    font-family: 'Nunito', sans-serif;
+    color: black;
+    margin-top:80px;
+    font-size:30px;
+    text-align:center;
+    font-weight:bold;
+}
+
+.laststories h2 {
+    font-family: 'Nunito', sans-serif;
+    color: black;
+    margin-top:20px;
+    font-size:50pt;
+    text-align:center;
+    text-transform:uppercase;
+}
+
+.laststories .lireStory {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 6%;
+    width: 23%;
+    border: 1px gray solid;
+}
+
+.laststories .lireStory a {
+    text-decoration: none;
+}
+
+.laststories .lireStory h4 {
+    color: black;
+    font-size: 18pt;
+    line-height:1.4;
+}
+
+.text-content .btn-q {
+    text-align: center;
+}
+
+.laststories a button {
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-right:30px;
+    padding-left:30px;
+    background-color: white;
+    color: black;
+    border: solid 1px grey;
+    font-size: 1.5em;
+    margin-left:450px;
+    margin-top:40px;
+}
+
+
+/* ------------------------------------------------
+TEXT-CONTENT
+------------------------------------------------  */
+
+.txt-content-withgrid {
+    display:block;
+}
+
+.txt-content-withoutgrid {
+    display:none;
+}
+
+.text-content {
+    width: 100%;
+    height: 430px;
+    background-color: #282425;
+    overflow: hidden;
+    margin-bottom: 15px;
+    margin-top:50px;
+}
+
+.text-content h1 {
+    font-family: 'Nunito', sans-serif;
+    /*color: #bd9e36;*/
+    color: #BB8356;
+    margin-left:170px;
+    margin-top:130px;
+    font-size:60px;
+}
+.text-content img {
+    display: block;
+    width: 100%;
+}
+
+.text-content .btn-q {
+    text-align: center;
+}
+
+.text-content a button {
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-right:60px;
+    padding-left:60px;
+    background-color: #282425;
+    color: white;
+    border: solid 1px white;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    margin-left:170px;
+    margin-top:20px;
+}
+
+.text-content .right {
+    padding:0px;
+}
+
+.text-content .right img {
+    width:100%;
+}
+
+
+.actustories {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    overflow: hidden;
+    margin-bottom: 6%;
+    margin-top:50px;
+    border: solid 1px grey;
+
+}
+
+.actustories h1 {
+    font-family: 'Nunito', sans-serif;
+    color: black;
+    margin-top:40px;
+    margin-bottom:30px;
+    font-size:50px;
+    text-align:center;
+    margin-bottom:6%;
+    /*font-weight:bold;*/
+}
+
+
+
+.text-content .btn-q {
+    text-align: center;
+}
+
+.actustories a button {
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-right:30px;
+    padding-left:30px;
+    background-color: white;
+    color: black;
+    border: solid 1px grey;
+    font-size: 1.5em;
+    margin-left:35%;
+    margin-top:0px;
+    margin-bottom:3%;
+}
+
+/* ------------------------------------------------
+ACTU
+------------------------------------------------  */
+.actu {
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+    margin:0 auto;
+}
+
+.actu h2 {
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+}
+
+.actu h3 {
+    color: black;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    margin-top: 0;
+    font-weight: bold;
+    display:block;
+}
+.actu img {
+    display: block;
+    width: 100%;
+    margin-top:9%;
+}
+
+.actu p {
+    font-family: 'Nunito', sans-serif;
+    color: grey;
+    font-size: 14px;
+    margin-left: 12%;
+    margin-top:8%;
+}
+
+.actu .mobile {
+    display:none;
+}
+
+.actu .mobile2 {
+    display:none;
+}
+
+.actu .mobile1 {
+    display: none;
+}
+
+.actu .actustory {
+    margin:20px;
+}
+
+.actustories .actu .actustory {
+    margin-bottom:-3%;
+}
+
+.community {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    padding-left:0px;
+}
+
+
+.community img {
+    /*display: block;*/
+    width: 100%;
+    /*height:350px;*/
+}
+
+.community .btn-q {
+    text-align: center;
+}
+
+.community a button {
+    margin-top: 18.5%;
+    position: absolute;
+    margin-left: 1%;
+    padding: 5px;
+    padding-left: 60px;
+    padding-right: 60px;
+    border: solid 2px transparent;
+    border-radius: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: transparent;
+    background-color: transparent;
+
+}
+
+.linkAmbassadeur {
+    width: 8.7%;
+    height: 10%;
+    /*border: 3px purple dotted;*/
+    position: absolute;
+    bottom:17.5%;
+    left: 46.8%;
+    z-index: 1;
+}
+
+.linkAmbassadeur a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.linkSLC {
+    width: 26%;
+    height: 10%;
+    /*border: 3px purple dotted;*/
+    position: absolute;
+    bottom:11.5%;
+    left: 6%;
+    z-index: 1;
+}
+
+.linkSLC a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.ambassadeur {
+    width: 100%;
+    height: auto;
+    margin-bottom: 6%;
+    padding-left:0px;
+    position:relative;
+}
+
+
+.ambassadeur img {
+    width: 100%;
+    position: relative;
+}
+
+.ambassadeur .btn-q {
+    text-align: center;
+}
+
+.ambassadeur a button {
+    margin-top: 250px;
+    position: absolute;
+    margin-left: 530px;
+    padding: 8px;
+    padding-left:10px;
+    padding-right:10px;
+    border: solid 2px transparent;
+    border-radius: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color:transparent;
+    background-color: transparent;
+
+}
+
+.humans {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    padding-left:0px;
+}
+
+
+.humans img {
+    display: block;
+    width: 100%;
+    height:350px;
+}
+
+.humans .btn-q {
+    text-align: center;
+}
+
+.humans a button {
+    margin-top: 281px;
+    position: absolute;
+    margin-left: 409px;
+    padding: 8px;
+    padding-left:80px;
+    padding-right:80px;
+    border: solid 2px grey;
+    border-radius: 1px;
+    font-size: 1.4em;
+    font-weight: bold;
+    color:grey;
+}
+ .btn-actu-lp{
+
+    padding: 5px;
+    background-color: #fff;
+    color: #539ac4;
+    border: solid 2px #539ac4;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom:20px;
+    margin-left: 200px;
+ }
+ .btn-actu-dashboard{
+
+    padding: 5px;
+    background-color: #fff;
+    color: #539ac4;
+    border: solid 2px #539ac4;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom:20px;
+    margin-left: 200px;
+ }
+
+
+/*
+---------------------------
+TEMOIGNAGE
+---------------------------
+*/
+
+.temoignage {
+    width:100%;
+    height:80px;
+    background-color:grey;
+    margin-bottom:40px;
+
+}
+.temoignage .text  h1{
+    margin-top:30px;
+    font-size:20px;
+    color:white;
+    text-align:right;
+}
+
+.temoignage a button {
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-right:30px;
+    padding-left:30px;
+    background-color: grey;
+    color: white;
+    border: solid 2px white;
+    font-size: 1.5em;
+    margin-top:15px;
+    margin-left:20px;
+}
+/* ------------------------------------------------
+FOOTER
+------------------------------------------------  */
+footer{
+    background-image: url('/images/pelle_terre_footer.jpg');
+    width: 100%;
+    color: white;
+}
+
+.footer{
+    padding: 3%;
+}
+
+.footer a{
+    color: white;
+}
+
+.footer ul li{
+    list-style: none;
+    padding-top: 1.3rem;
+}
+
+.footer ul{
+    padding: 0;
+}
+
+/* ------------------------------------------------
+RESPONSIVE
+------------------------------------------------  */
+@media screen and (max-width:1199px) {
+    .actustories .actu .monexperience {
+        margin-bottom: 30px;
+    }
+
+    .actustories .actu .decouvertgaea {
+        margin-bottom: 30px;
+    }
+
+    .actustories .actu .actustory {
+        margin: 10px;
+    }
+
+    .actustories a button {
+        margin-left:32%;
+        
+    }
+
+    .actustories .actu .actustory {
+        margin-bottom:-5%;
+    }
+
+    /* ------------------------------------------------
+    TEXT-CONTENT
+    ------------------------------------------------  */
+
+    .text-content h1 {
+        margin-left:125px;
+        margin-top:140px;
+        font-size:60px;
+    }
+
+    .text-content a button {
+        margin-left:130px;
+        margin-top:30px;
+    }
+}
+
+
+@media screen and (max-width:1024px) {
+
+    /* ------------------------------------------------
+    TEXT-CONTENT
+    ------------------------------------------------  */
+
+    .text-content h1 {
+        margin-left:125px;
+    }
+
+    .text-content img {
+        height:430px;
+    }
+
+    /*.text-content a button {
+        margin-left:40px;
+    }*/
+
+    .text-content a div {
+        width:250px;
+        height:85px;
+        margin: 100% auto;
+    }
+    .ambassadeur .btn-q {
+        text-align: center;
+    }
+
+    .ambassadeur a button {
+        margin-top: 250px;
+        position: absolute;
+        margin-left: 320px;
+        padding: 8px;
+        padding-left:10px;
+        padding-right:10px;
+        border: solid 2px #095C06;
+        border-radius: 15px;
+        font-size: 1.2em;
+        font-weight: bold;
+        color:white;
+        background-color: #095C06;
+
+    }
+
+    .community h3 {
+        color: white;
+        font-family: 'Nunito', sans-serif;
+        font-weight: bold;
+        font-size: 18px;
+        float:left;
+    }
+    .community img {
+        display: block;
+        width: 100%;
+        height:350px;
+    }
+    .community p {
+        font-family: 'Nunito', sans-serif;
+        font-weight: bold;
+        color: white;
+        font-size: 10px;
+
+    }
+
+    .community .btn-q {
+        text-align: center;
+    }
+
+    .community a button {
+        padding: 5px;
+        background-color: #fff;
+        color: hsl(202, 60%, 37%);
+        border: solid 2px hsl(202, 60%, 37%);
+        border-radius: 3px;
+        font-size: 10px;
+        font-weight: bold;
+
+    }
+
+    .community .logo {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        bottom: 0px;
+        margin-left: 230px;
+    }
+
+    .actustories a button {
+        margin-top:0px;
+        margin-left:32%;
+    }
+
+    .temoignage .text h1 {
+        font-size:17px;
+    }
+}
+/*
+@media screen and (max-width:1201px)
+{
+    .linkAmbassadeur{
+        width: 100px;
+        height: 63px;
+        bottom:-1265px;
+    }
+}
+
+@media screen and (max-width:1199px)
+{
+    .linkAmbassadeur{
+        width: 100px;
+        height: 63px;
+        bottom:-1135px;
+    }
+}
+
+@media screen and (max-width:994px)
+{
+    .linkAmbassadeur{
+        width: 100px;
+        height: 63px;
+        bottom:-980px;
+        left: 46%;
+    }
+}*/
+
+@media screen and (max-width:991px) {
+    
+    .actustories .actu .monexperience {
+        margin-bottom: 11px;
+    }
+
+    .actustories .actu .decouvertgaea {
+        margin-bottom: 29px;
+    }
+
+    .actustories .actu .actustory {
+        margin: 10px;
+        margin-bottom:-60px;
+    }
+    
+    .actustories .actu p {
+        /*  */ 
+        /*--- annulation de la mage gauche du texte des séries --- >>>>> */margin-left: 0%;/*<<<<< ---*/
+        text-align: center;
+    }
+
+    .actustories a button {
+        margin-left:25%;
+    }
+    /*
+    ---------------------
+    LASTSTORIES
+    ---------------------
+    */
+    .laststories {
+        height: 300px;
+    }
+    .laststories h1 {
+        font-size:200%; /*80%*/
+        margin-top:50px;
+    }
+    .laststories h2 {
+        font-size:280%;
+    }
+    .laststories .lireStory h4 {
+        color: black;
+        font-size: 14pt;
+        line-height:1.4;
+    }
+
+    /* ------------------------------------------------
+    TEXT-CONTENT
+    ------------------------------------------------  */
+    .text-content {
+        height:auto;
+    }
+
+    .text-content h1 {
+        font-size: 300%;
+        margin-top:120px;
+        margin-left:100px;
+    }
+
+    .text-content a button {
+        /*font-size: 1.2em;*/
+        margin-top:20px;
+        margin-bottom:20px;
+        margin-left:105px;
+        font-size: 100%;
+        padding:15px 25px 15px 25px;
+    }
+
+    .text-content img {
+        width:40%;
+        height:100%;
+    }
+}
+
+@media screen and (max-width:960px) {
+
+     /*------------------------------------------------
+    MENU
+    ------------------------------------------------*/  
+    .navbar {
+        margin-bottom: 0;
+        /*border-radius: 0;*/
+    }
+
+    .menu ul {
+        padding-top: 5px;
+        width: 95%;
+        z-index: 200;
+        position: absolute;
+        top:0;
+        left: 0;
+    }
+
+     /*------------------------------------------------
+    SLIDER
+    ------------------------------------------------*/  
+    .carousel-item .intro h1 {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        text-align: center;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .carousel-item .intro p {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        font-size: 14px;
+    }
+
+     /*------------------------------------------------
+    DASHBOARD (h2)
+    ------------------------------------------------*/  
+    .dashboard img {
+        display: block;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+     /*------------------------------------------------
+    TEXT-CONTENT
+    ------------------------------------------------*/  
+    .text-content img {
+        display: block;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+     /*------------------------------------------------
+    ACTU
+    ------------------------------------------------*/  
+    .actu h3 {
+        color: black;
+        font-family: 'Nunito', sans-serif;
+        font-size: 16px;
+        margin-top: 0;
+        font-weight: bold;
+        /*text-align: center;*/
+    }
+    .actu img {
+        display: block;
+        width: 100%;
+    }
+
+    .actustories .actu {
+        margin-left: 20px;
+    }
+
+    .actustories .actu .monexperience {
+        margin-bottom: 10px;
+    }
+
+    .actustories .actu .decouvertgaea {
+        margin-bottom: 26px;
+    }
+
+    /* ------------------------------------------------
+    VIDEO APPLI "griditem"
+    -------------------------------------------------*/ 
+    .griditem {
+        position: relative;
+        background-color: #777;
+        -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        width: 100%;
+        overflow: hidden;
+        height: 370px;
+    }
+
+    /* ------------------------------------------------
+    ECO PANIER
+    ------------------------------------------------*/  
+
+    .eco-panier h2 {
+        font-family: 'Nunito', sans-serif;
+        font-weight: bold;
+        color: #539ac4;
+    }
+
+    .eco-panier p {
+        font-family: 'Nunito', sans-serif;
+        color: #539ac4;
+        font-size: 14px;
+        margin-bottom:16px;
+    }
+
+    .eco-panier a {
+        font-family: 'Nunito', sans-serif;
+        color: #539ac4;
+        font-size: 12px;
+        border:solid 2px #539ac4;
+        padding: 5px 5px;
+        margin-bottom:50px;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+        /* ------------------------------------------------
+        MENU
+        ------------------------------------------------*/  
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+
+        /* ------------------------------------------------
+        SLIDER
+        ------------------------------------------------*/  
+        .carousel-item .intro h1 {
+            font-family: 'Nunito', sans-serif;
+            color: white;
+            text-align: center;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .carousel-item .intro p {
+            font-family: 'Nunito', sans-serif;
+            color: white;
+            font-size: 10px;
+        }
+
+        
+
+        /* ------------------------------------------------
+        TEXT-CONTENT
+        ------------------------------------------------  
+        */
+        .text-content img {
+            display: block;
+            width: 50%;
+            margin: 0 auto;
+        }
+        /*
+         ------------------------------------------------
+        VIDEO APPLI "griditem"
+        ------------------------------------------------- 
+        */
+        .griditem {
+            position: relative;
+            -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height:370px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        /* ------------------------------------------------
+        ECO PANIER
+        ------------------------------------------------  
+        */
+        .eco-panier img {
+            padding-top:20px;
+            display: block;
+            width: 55%;
+            margin: 0 auto;
+        }
+
+        .eco-panier h2 {
+            font-family: 'Nunito', sans-serif;
+            font-weight: bold;
+            color: #539ac4;
+            text-align: center;
+
+        }
+        .eco-panier p {
+            font-family: 'Nunito', sans-serif;
+            color: #539ac4;
+            font-size: 14px;
+            width: 70%;
+            margin: 0 auto;
+            margin-bottom:20px;
+        }
+
+        .eco-panier a {
+            font-family: 'Nunito', sans-serif;
+            color: #539ac4;
+            font-size: 12px;
+            border:solid 2px #539ac4;
+            padding: 5px 5px;
+            width: 28%;
+            margin: 0 auto 60px;
+            display: block;
+            text-align: center;
+        }
+
+        
+
+    }
+
+@media screen and (max-width:767px) {
+    /* ------------------------------------------------
+    ACTUSTORIES
+    ------------------------------------------------*/
+    /*.actustories {
+        display: none;
+    }*/
+
+    .actustories h1 {
+        margin-bottom: -30px;
+        margin-top: 35px;
+    }
+
+    .actustories .actu .actustory {
+        /*margin:0 auto;*/
+        padding-left:10%;
+        margin-top:14%;
+    }
+        
+    .actustories .actu .monexperience {
+        margin-bottom: 10px;
+    }
+
+    .actustories .actu .decouvertgaea {
+        margin-bottom: 26px;
+    }
+
+    .actustories img {
+        width:51%; height:auto; margin-left:15%;
+        margin-top:25px;margin-bottom:10px;
+    }
+
+    .actustories p {
+        width:80%; height:auto;font-size:115%;
+        margin-top:20px;
+    }
+
+    .actustories h3 {
+        width:80%; font-size:120%; text-align:center;
+        
+    }
+
+    .actustories a button {
+        margin-left:20%;margin-top:-30px;margin-bottom:30px;
+        font-size: 120%;
+    }
+
+    /*
+    ---------------------
+    LASTSTORIES
+    ---------------------
+    */
+    .laststories {
+        height: 270px;
+        
+    }
+    .laststories h1 {
+        font-size:200%;
+        margin-top: 40px;/*margin-top:80px;*/
+    }
+    .laststories h2 {
+        font-size:280%;
+    }
+    .laststories .lireStory {
+        width: 180px;
+    }
+
+    /* ------------------------------------------------
+    TEXT-CONTENT
+    ------------------------------------------------  */
+    .text-content {
+        height:auto;
+    }
+
+    .text-content h1 {
+        font-size: 300%;
+        margin-top:68px;
+        margin-left:50px;
+    }
+
+    .text-content a button {
+        /*font-size: 1.2em;*/
+        margin-top:20px;
+        margin-bottom:20px;
+        margin-left:55px;
+        font-size: 100%;
+        padding:5px 15px 5px 15px;
+    }
+
+    /* ------------------------------------------------
+    TEMOIGNAGE
+    ------------------------------------------------  */
+
+    .temoignage .text  h1 {
+        font-size:120%;
+        margin-top:20px;
+    }
+
+    .temoignage a button {
+        font-size:120%;
+        margin-top:22px;
+        padding-top:10px;
+        padding-bottom:5px;padding-right:15px;padding-left:15px;padding-top:5px;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    /* ------------------------------------------------
+    MENU
+    ------------------------------------------------  
+    */
+    .navbar {
+        margin-bottom: 0;
+    }
+
+    .griditem {
+        position: relative;
+        -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        width: 75%;
+        height: 400px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (max-width:575px) {
+    /* ------------------------------------------------
+    TEXT-CONTENT
+    ------------------------------------------------  */
+
+    .txt-content-withgrid {
+        display:none;
+    }
+
+    .txt-content-withoutgrid {
+        display:block;
+    }
+
+    .text-content h1 {
+        /*font-size: 300%;*/
+        margin-top:30px;
+        margin-left:50px;
+    }
+
+    .text-content a button {
+        /*font-size: 1.2em;*/
+        margin-top:20px;
+        margin-bottom:20px;
+        margin-left:55px;
+        font-size: 100%;
+        padding:5px 15px 5px 15px;
+    }
+
+    .text-content img {
+        /*display: block;*/
+        float: left;
+        width: 300px;
+        height:300px;
+        /*margin: 0 auto;*/
+    }
+
+    /* ------------------------------------------------
+    TEMOIGNAGE
+    ------------------------------------------------  */
+    .temoignage {
+        height: auto;
+    }
+
+    .temoignage .text  h1 {
+        font-size:120%;
+        margin-top:20px;
+        text-align:center;
+    }
+
+    .temoignage a button {
+        font-size:120%;
+        margin-left:36%;
+        margin-bottom:20px;
+        
+    }
+}
+
+@media screen and (max-width:480px) {
+
+    .ecran{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+    /* ------------------------------------------------
+    MENU
+    ------------------------------------------------  */
+    .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+
+        /* ------------------------------------------------
+        SLIDER
+        ------------------------------------------------  */
+
+        #lirestorie {
+            height: auto;width: 88%;margin: 0% auto;position: relative;
+        }
+
+        #lirestorie img {
+            width: 100%;
+        }
+
+        #lirestorie h1 {
+            position: absolute;bottom: 20.5%;left: 10%;color: #aa7950; text-transform:uppercase;font-size:7.2vw;line-height: 1.3;
+        }
+
+        #lirestorie a {
+            position: absolute;bottom: 11%;left: 33%;color: #aa7950; text-transform:uppercase;font-size:7vw;
+        }
+
+        #lirestorie a button {
+            position:static;background-color: #231f20;color: white;border: solid 0.5px #9d9b9b;border-radius: 2px;width: 126%;height:25%;font-size: 3vw;padding: 6%;text-transform: uppercase;
+        }
+        
+        .carousel-item .intro h1 {
+            font-family: 'Nunito', sans-serif;
+            color: white;
+            text-align: center;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            font-size: 7px;
+            font-weight: bold;
+        }
+
+        .carousel-item .intro p {
+            font-family: 'Nunito', sans-serif;
+            color: white;
+            font-size: 6px;
+        }
+
+        .carousel-item .intro a {
+            display: block;
+            width:90px;
+            margin: 0 auto;
+        }
+        .carousel-item .intro a button {
+            padding: 2px;
+            background-color: #539ac4;
+            color: white;
+            border: solid 2px white;
+            border-radius: 3px;
+            font-size: 8px;
+        }
+
+        /* ------------------------------------------------
+        ABOUT
+        ------------------------------------------------  */
+        .about .desc {
+            font-family: 'Nunito', sans-serif;
+            font-weight: bold;
+            color: #539ac4;
+            font-size: 14px;
+            text-align: justify;
+        }
+
+        /* ------------------------------------------------
+        TEXT-CONTENT
+        ------------------------------------------------  */
+
+        .text-content {
+            height: auto;
+            width: 88%;
+            margin: 0% auto;
+            position: relative;
+        }
+
+        .text-content img {
+            width: 100%;
+            height: auto;
+        }
+
+        .text-content h1 {
+            position: absolute;
+            bottom: 8px;
+            left: 16px;
+            margin-top:87%;
+            font-size:250%;
+            z-index: 100;
+        }
+
+        .text-content a button {
+            
+            background-color: burlywood;
+            color: white;
+            border: solid 1px rgb(14, 241, 192);
+            text-transform: uppercase;
+            font-size: 1.3em;
+            width: 20%; height: 20%;
+            
+        }
+        /* ------------------------------------------------
+        VIDEO APPLI "griditem"
+        ------------------------------------------------- */
+
+        .griditem {
+            position: relative;
+            -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        /* ------------------------------------------------
+        ECO PANIER
+        ------------------------------------------------  */
+
+        .eco-panier img {
+            padding-top:20px;
+            display: block;
+            width: 55%;
+            margin: 0 auto;
+        }
+
+        .eco-panier h2 {
+            font-family: 'Nunito', sans-serif;
+            font-weight: bold;
+            color: #539ac4;
+            text-align: center;
+
+        }
+        .eco-panier p {
+            font-family: 'Nunito', sans-serif;
+            color: #539ac4;
+            font-size: 14px;
+            width: 70%;
+            margin: 0 auto;
+            margin-bottom:20px;
+        }
+
+        .eco-panier a {
+            font-family: 'Nunito', sans-serif;
+            color: #539ac4;
+            font-size: 12px;
+            border:solid 2px #539ac4;
+            padding: 5px 5px;
+            width: 48%;
+            margin: 0 auto 60px;
+            display: block;
+            text-align: center;
+        }
+
+        .actustories {
+            display: block;
+        }
+
+
+        /*annulation d'une propriété de la max-width: 960px;*/
+        .actustories .actu {
+            margin-left: 0px;
+        }
+
+        .actu img {
+            display: block;
+            margin:0 0 0 0;
+            width: 100px;
+            min-height: 100%;
+            margin-bottom: 15px;
+        }
+        /*text-align:center;*/
+        
+        .actustories .my-container p {
+            margin:0;
+            text-align:left;
+        }
+
+        /*.actu .my-cntainer p {
+            text-align: left;
+        }*/
+
+        /*.actustories .actu p {
+            
+            text-align: center;
+        }*/
+
+        
+
+        .actu .mobile {
+            display: block;
+            color: black;
+            font-size: 18px;
+            width: auto;
+            height: 25px;
+            margin-right: 0px;
+            margin-left: 0px;
+        }
+
+        .actu .mobile2 {
+            display: block;
+            color: black;
+            font-size: 18px;
+            width: 315px;
+            height: 25px;
+            margin-right: 200px;
+            margin-left: 0px;
+        }
+        .actu .mobile1 {
+            display: block;
+            margin-left: 0px;
+            margin-top: 13%;
+            position: absolute;
+            color: black;
+            font-size: 18px;
+            width: 45%;
+        }
+
+        .actustories h1 {
+            font-size:9vw;
+            margin-bottom: 6%;
+            margin-top:9%;
+        }
+
+        .actu p {
+            font-family: 'Nunito', sans-serif;
+            color:black;
+            font-size: 19px;
+        }
+
+        .actustories {
+            
+            margin: 4% auto;
+            
+            width: 80%;
+            height: auto;
+            background-color: white;
+            overflow: hidden;
+            
+            border: none;
+            box-shadow: 0 0 7px 2px rgba(134, 133, 133, 0.733);
+            height: auto;
+            border-radius: 6px;
+            padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;
+        }
+
+        
+
+        .actustories .container img {
+            /*height: auto;
+            min-height: 5px;*/
+        }
+
+        /* ------------------------------------------------
+        LASTSTORIES
+        ------------------------------------------------  */
+
+        .laststories a button {
+            margin: 10% auto;
+            border: solid 0.5px #9d9b9b;
+            border-radius: 2px;
+            width: 45%;
+            height:15%;
+            font-size: 3vw;
+            padding: 2%;
+            min-width:122px;
+        }
+
+        .laststories h1 {
+            
+            font-family: 'Nunito', sans-serif;
+            color: black;
+            margin-top: 15%;
+            font-size: 4.5vw;
+            text-align: center;
+            
+        }
+
+        .laststories h2 {
+            font-family: 'Nunito', sans-serif;
+            color: black;
+            margin-top: 8%;
+            font-size: 8vw;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 500;
+            
+        }
+
+        .laststories .title-1 {
+            
+            font-family: 'Nunito', sans-serif;
+            color: black;
+            margin-top: 13%;
+            font-size: 4.5vw;
+            text-align: center;
+            font-weight:20%;
+        }
+
+        .laststories .title-2 {
+            font-family: 'Nunito', sans-serif;
+            color: black;
+            margin-top: 4%;
+            font-size: 8vw;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 500;
+            
+        }
+
+        .laststories {
+            
+            margin: 4% auto;
+            width: 80%;
+            height: auto;
+            background-color: white;
+            overflow: hidden;
+            
+            border: none;
+            
+            box-shadow: 0 0 7px 2px rgba(134, 133, 133, 0.733);
+            text-align: center;
+            opacity:0.7;
+            border-radius: 6px;
+        }
+
+        .actustories a button {
+            padding-top: 0%; padding-bottom: 0%; padding-right: 0%;padding-left: 0%;
+            margin-top: 0px; margin-bottom: 0px; margin-right: 0px;margin-left: 0px;
+            margin-top: 9%; margin-bottom: 7%;
+            background-color: white;
+            color: black;
+            border: solid 0.5px #9d9b9b;
+            border-radius: 2px;
+            width: 40%;
+            height:15%;
+            font-size: 3vw;
+            padding: 2%;
+            min-width:122px;
+            text-transform: uppercase;
+        }
+
+        .actustories .my-container {
+            
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            margin-top: 4%;
+            
+        }
+        .actustories .my-row {
+            
+            width: 100%;
+            justify-content: space-between;
+            margin-left: 3.5%;
+            
+            
+        }
+        .actustories .my-row .title {
+            
+            font-size: 3.05vw;
+            font-weight: bold;
+        }
+        .actustories .my-row .text {
+            font-size: 90%;
+            font-size: 2.8vw;
+            line-height: 130%;
+        }
+        .actustories .my-col {
+            
+            flex-direction: row;
+            height: auto;
+        }
+        .actustories .my-col img {
+            max-width: 100%;
+            
+            height: auto;
+            height:250%;
+            
+        }
+
+        .actustories .last-stories-btn {
+            display:flex; justify-content: center;
+        }
+
+        .community {
+            height: auto;
+            width: 85%;
+            margin: 4% auto;
+            
+        }
+
+        .community img {
+            width: 100%;
+            height: auto;
+        }
+
+        .ambassadeur {
+            height: auto;
+            width: 85%;
+            margin: 0% auto;
+        }
+
+        .ambassadeur-mobile {
+            width:85%;height:auto;margin: 5% auto;position:relative;
+        }
+
+        .ambassadeur-mobile img {
+            position:relative;top:3%;width:100%;height:100%;
+        }
+
+        .ambassadeur img {
+            width: 100%;
+            height: auto;
+        }
+
+        .ambassadeur a button {
+            margin-top: 127%;
+            position: absolute;
+            margin-left: 10%;
+            padding: 50px;
+            padding-left: 175px;
+            padding-right: 26px;
+            border: solid 2px transparent;
+            border-radius: 15px;
+            font-size: 1.4em;
+            font-weight: bold;
+            color: transparent;
+            background-color: transparent;
+        }
+
+
+        .community a button {
+            
+            margin: 10% auto;
+            background-color: transparent;
+            color: transparent;
+            border: solid 2px transparent;
+            border-radius: 3px;
+            font-size: 13px;
+            font-weight: bold;
+            
+        }
+
+        .linkAmbassadeur {
+            width: 21%;
+            height: 14.3%;
+            
+            border: none;
+            position: absolute;
+            bottom:13%;
+            left: 38.8%;
+            z-index: 1;
+        }
+        
+        .linkAmbassadeur a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .linkSLC {
+            width: 46.5%;
+            height: 14.6%;
+            
+            border: none;
+            position: absolute;
+            bottom:9%;
+            left: 33.3%;
+            z-index: 1;
+        }
+
+        .slc-mobile {
+            width:85%;height:auto;margin: 0 auto;position:relative;
+        }
+
+        .slc-mobile img {
+            position:relative;top:3%;width:100%;height:100%;
+        }
+        
+        .linkSLC a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-inner {
+            display: none;
+        }
+
+        .entête {
+            height: auto;
+            width: 95%;
+            margin: 0% auto;
+        }
+
+        .entete .image-entete {
+            width: 100%;
+            height: auto;
+        }
+
+        .arrow-bottom {
+            
+            width: 100%; height:15%;
+            margin-bottom:0%;margin-top:0%;
+        }
+
+        .arrow-bottom div {
+            margin: 0 auto;
+            
+            width: 10%; height:10%;
+        }
+        
+        .arrow-bottom .img {
+            height: auto;
+            width: 80%;
+            margin: 0 auto;
+            
+        }
+        
+        footer {
+            background-image: url(/images/pelle_terre_footer.jpg);
+            width: 85%;
+            color: white;
+            margin: 0 auto;
+        }
+
+        footer .content {
+            width:95%;
+            
+        }
+
+        footer a {
+            color:white;
+        }
+
+        footer h3 {
+            font-weight: bold;
+            
+        }
+
+        footer .other-projects {
+            font-size:140%;
+        }
+
+        .temoignage {
+            width: 85%;
+            
+            height: 15%;
+            background-color: #606060;
+            
+            margin: 0 auto;
+            box-shadow: 0 0 7px 2px rgba(134, 133, 133, 0.733);
+            
+        }
+
+        .temoignage h1 {
+            
+            padding-top: 2.3%;
+            color: white;
+            text-align: center;
+            font-size:3vw;
+        }
+
+        .temoignage .mobile-button {
+            
+            margin: 3.5% auto;
+            
+            text-align: center;
+            color: white;
+            border:1px solid white;
+            border-radius: 2px;
+            height: 38%; width: 24%;
+            padding-top:0px;padding-bottom:0px;padding-left:0px;padding-right:0px;
+            display: flex;
+            flex-direction: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .temoignage a {
+            
+            font-size:2.85vw;
+        }
+
+        .temoignage .div-after-button {
+            width:100%; height:1px;
+        }
+
+        
+        .temoignage a {
+            /*margin: 0 auto;*/
+        }
+
+        .temoignage a button {
+            
+            margin: 0 auto;
+            background-color: #a6a8ab;
+            color: white;
+            border: solid 1.5px white;
+            border-radius:3px;
+            font-size: 1em;
+            
+            
+        }
+}
+
+/**********************************Humans article*********************************/
+
+
+.gray-background{
+
+}
+
+.narrow-border{
+    margin-right: 11.5%; 
+    margin-left: 11.5%; 
+    width: 77%;
+}
+.large-border{
+    margin-right: 10%; 
+    margin-left: 10%; 
+    width: 80%;
+}
+.dark-background{
+    background-color: #969696;
+    padding: 0;
+    height: 60px;
+}
+.light-background{
+    background-color: #F4F4F4; 
+    padding: 0;
+}
+.stories-button{
+    color: black; 
+    border: 1px solid black; 
+    padding: 0.5% 1.5%;
+    margin: 3% 3% 0 3%;
+    font-size: 1.3em;
+}
+.serie{
+    font-size: 1em; 
+    width: 32%;
+}
+.serie-title{
+    text-align: left; 
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.serie-content{
+    display: flex; 
+    height: 140px; 
+    padding-top: 10px;
+} 
+.serie-img{
+    width: 50%; 
+    padding-right: 3%;
+}
+.serie-img img{
+    width: 100%; 
+    height: 100%;
+}
+.serie-text{
+    text-align: left; 
+    width: 50%;
+}
+
+/*.humans-article .ambassadeur a button {
+    position: absolute;
+    margin-top: 229px;
+    margin-left: 503px;
+    border: solid 2px transparent;
+    border-radius: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: transparent;
+    background-color: transparent;
+}*/
+
+/*.humans-article-ambassadeur {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    padding-left: 0px;
+}*/
+.humans-article-ambassadeur {
+}
+.humans-article-ambassadeur img {
+    width: 100%;
+}
+.humans-article-ambassadeur a {
+    position: absolute;
+    margin-top: 15.1%;
+    margin-left: 32.8%;
+    width: 6%;
+    height: 7%;
+}
+.humans-article-community { 
+}
+.humans-article-community img {
+    width: 100%;
+}
+.humans-article-community a {
+    position: absolute;
+    margin-top: 18.4%;
+    margin-left: 1.3%;
+    width: 21.6%;
+    height: 6%;
+}

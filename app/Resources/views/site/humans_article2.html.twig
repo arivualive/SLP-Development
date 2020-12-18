@@ -1,0 +1,253 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/humans.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+{% endblock %}
+
+{% block humansarticle %}
+
+<div class="header ecran">
+    <div class="narrow-border" style="height: 300px; padding: 0;">
+        <div class="gray-background" style="height: 100%; width: 100%; padding: 30px 10% 0 3%; background-color: #969696;">
+            <img class="d-block w-100" style="height: 230px;" src="{{ asset('images/humans/article/humansofgaeatitre2.png') }}" alt="">
+        </div>
+    </div>
+    <div class="large-border" style="display: flex; height: 450px;">
+        <div class="" style="background-color: #272A3A; width: 100%;">
+            <div class="" style="color: #2292AF; padding: 18% 0 0 50%; font-size: 3em;">
+                Interview <br> Alumni <br> pour Mélanie <br> Desfougeres
+            </div>
+        </div>
+        <img class="d-block w-100" style="height: 100%;" src="{{ asset('images/humans/article/melaniedesfougeres.jpg') }}" alt="">
+    </div>
+    <div class="dark-background narrow-border" style="height: 30px;"></div>
+</div>
+
+<div class="header mobile">
+    <div class="narrow-border" style="padding: 0;">
+        <div class="gray-background" style="height: 100%; width: 100%; padding: 10px 10% 10px 3%; background-color: #969696;">
+            <img class="d-block w-100" style="" src="{{ asset('images/humans/article/humansofgaeatitre2.png') }}" alt="">
+        </div>
+    </div>
+    <div class="" style="height: 150px;">
+    <div class="" style="display: flex; width: 100%; height: 100%;">
+        <div class="" style="background-color: #272A3A; height: 100%; width: 50%;">
+            <div class="" style="color: #2292AF; padding: 18% 0 0 40%; font-size: 0.9em;">
+                Interview <br> Alumni <br> pour Mélanie <br> Desfougeres
+            </div>
+        </div>
+        <div style="height: 100%; width: 50%;">
+        <img class="d-block w-100" style="height: 100%; width: 100%;" src="{{ asset('images/humans/article/melaniedesfougeres.jpg') }}" alt="">
+        </div>
+    </div>
+    </div>
+    <div class="dark-background narrow-border" style="height: 30px;"></div>
+</div>
+
+<div class="light-background narrow-border" style="padding: 40px 0;">
+    Pouvez vous vous présenter brièvement ? <br>
+    Quelle était votre principale mission au sein de gaea21 ? <br>
+    Comment avez vous entendu parler de gaea21 ? <br>
+    Qu'est ce qui vous attiré chez gaea21 ? Pourquoi avez vous décidé de vous lancer dans cette aventure ? <br>
+    ...
+</div>
+
+<div class="dark-background ecran narrow-border"></div>
+<div class="light-background ecran narrow-border" style="text-align: center; padding-top: 5%;">
+    <div style="font-size: 2em; font-weight: bold;">HUMANS OF GAEA21</div> 
+    <div style="font-size: 3em;">DERNIÈRE STORIES</div>
+    <a href=""><button class="stories-button" disabled>Découvrez nos <br> dernières stories </button></a>
+</div>
+
+<div class="dark-background mobile narrow-border" style="height: 30px;"></div>
+<div class="light-background mobile narrow-border" style="text-align: center; padding-top: 5%;">
+    <div style="font-size: 0.8em; font-weight: bold;">HUMANS OF GAEA21</div> 
+    <div style="font-size: 1.3em;">DERNIÈRE STORIES</div>
+    <a href=""><button class="stories-button" style="font-size: 0.8em;" disabled>Découvrez nos <br> dernières stories </button></a>
+</div>
+
+<div class="dark-background ecran narrow-border"></div>
+<div class="light-background ecran narrow-border" style="text-align: center; padding-top: 0.5%;">
+    <div style="font-size: 2.2em;">SERIES</div> 
+    <div style="display: flex; margin-top: 1%; margin-bottom: 10px;"> 
+        <div class="serie" style="margin-right: 2%;">
+            <div class="serie-title">Mon expérience dans gaea21</div>
+            <div class="serie-content">
+                <div class="serie-img">
+                    <img class="d-block w-100" src="{{ asset('images/landing-page/Actualité-Landingpage.jpg') }}" alt="">
+                </div>
+                <div class="serie-text">
+                    Bientôt disponible dans le cadre du programme SLP, les Green Events Series (GES)!
+                </div>
+            </div>
+        </div> 
+        <div class="serie" style="margin-right: 2%;">
+            <div class="serie-title">J'ai découvert gaea21</div>
+            <div class="serie-content">
+                <div class="serie-img">
+                    <img class="d-block w-100" src="{{ asset('images/landing-page/Actualité-Landingpage.jpg') }}" alt="">
+                </div>
+                <div class="serie-text">
+                    Bientôt disponible dans le cadre du programme SLP, les Green Events Series (GES)!
+                </div>
+            </div>
+        </div> 
+        <div class="serie">
+            <div class="serie-title">Ce que gaea a changé pour moi</div>
+            <div class="serie-content">
+                <div class="serie-img">
+                    <img class="d-block w-100" src="{{ asset('images/landing-page/Actualité-Landingpage.jpg') }}" alt="">
+                </div>
+                <div class="serie-text">
+                    Bientôt disponible dans le cadre du programme SLP, les Green Events Series (GES)!
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href=""><button class="stories-button" disabled>Découvrez nos <br> dernières stories </button></a>
+</div>
+
+<div class="dark-background mobile narrow-border" style="height: 30px;"></div>
+<div class="light-background mobile narrow-border" style="text-align: center; padding-top: 0.5%;">
+    <div style="font-size: 1.3em;">SERIES</div> 
+    <div style="display: flex; margin-top: 1%; margin-bottom: 10px;"> 
+        <div class="serie" style="margin-right: 2%;">
+            <div class="serie-title" style="font-size: 0.9em; height: 60px;">Mon expérience dans gaea21</div>
+            <div class="">
+                <div class="" style="">
+                    <img class="d-block w-100" src="{{ asset('images/landing-page/Actualité-Landingpage.jpg') }}" alt="">
+                </div>
+                <div class="" style="text-align: left; font-size: 0.8em;">
+                    Bientôt disponible dans le cadre du programme SLP, les Green Events Series (GES)!
+                </div>
+            </div>
+        </div>
+        <div class="serie" style="margin-right: 2%;">
+            <div class="serie-title" style="font-size: 0.9em; height: 60px;">J'ai découvert gaea21</div>
+            <div class="">
+                <div class="" style="">
+                    <img class="d-block w-100" src="{{ asset('images/landing-page/Actualité-Landingpage.jpg') }}" alt="">
+                </div>
+                <div class="" style="text-align: left;  font-size: 0.8em;">
+                    Bientôt disponible dans le cadre du programme SLP, les Green Events Series (GES)!
+                </div>
+            </div>
+        </div>
+        <div class="serie" style="">
+            <div class="serie-title" style="font-size: 0.9em; height: 60px;">Ce que gaea a changé pour moi</div>
+            <div class="">
+                <div class="" style="">
+                    <img class="d-block w-100" src="{{ asset('images/landing-page/Actualité-Landingpage.jpg') }}" alt="">
+                </div>
+                <div class="" style="text-align: left;  font-size: 0.8em;">
+                    Bientôt disponible dans le cadre du programme SLP, les Green Events Series (GES)!
+                </div>
+            </div>
+        </div> 
+    </div>
+    <a href=""><button class="stories-button" style="font-size: 0.9em;" disabled>Découvrez nos <br> dernières stories </button></a>
+</div>
+
+<div class="dark-background ecran narrow-border"></div>
+<div class="humans-article-ambassadeur ecran narrow-border">
+    <div><a href="{{ path('ambassadeur') }}"></a></div>
+    <div><img src="{{ asset('images/landing-page/ambassadeur.PNG') }}" alt="ambassadeur"></div>
+</div>
+<div class="dark-background mobile narrow-border" style="height: 30px;"></div>
+<div class="humans-article-ambassadeur mobile narrow-border">
+    <a href="{{ path('ambassadeur') }}" style="position: absolute; margin-top: 25%; margin-left: 28%; width: 14%; height: 2%;"><!--<button>Cliquez ici</button>--></a>
+    <img src="{{ asset('images/landing-page/banniereambassadeurs440.png') }}" alt="ambassadeur">
+</div>
+<div class="humans-article-community ecran narrow-border">
+    <div><a href="{{ path('community') }}"></a></div>
+    <div><img style="height: 100%; width: 100%;" src="{{ asset('images/landing-page/aviron.jpg') }}" alt="community"></div>
+</div>
+<div class="humans-article-community mobile narrow-border">
+    <a href="{{ path('community') }}" style="position: absolute; margin-top: 26%; margin-left: 24%; width: 31%; height: 2.7%;"><!--<button>Intégrez la communauté SLP</button>--></a>
+    <img src="{{ asset('images/landing-page/banniereSLC440.png') }}" alt="community">
+</div>
+
+<div class="row ecran large-border" style="margin-bottom: 40px; margin-top: 40px;">
+    <div class="temoignage">
+        <div class="col-md-7 col-sm-7 col-xs-12 text">
+            <h1> Vous avez une histoire, une expérience à partager ? </h1>
+        </div>
+        <div class="col-md-5 col-sm-5 col-xs-12 button">
+            <a href=""><button disabled>Témoignez</button></a>
+        </div>
+    </div>
+</div>
+<div class="temoignage mobile" style="margin-bottom: 20px; width: 100%;">
+    <h1> Vous avez une histoire, une expérience à partager ? </h1>
+    <a href=""><div class="mobile-button"><text>TÉMOIGNEZ</text></div></a>
+    <div class="div-after-button"></div>
+</div>
+
+<footer class="footer ecran large-border" style="background-image: url(../images/pelle_terre_footer.jpg);">
+    <div class="row">
+        <div class="col-md-1 col-sm-0 col-xs-0">
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-3">
+            <h3>Projets</h3>
+            <ul>
+                <li><a href="http://www.repertoirevert.org/">Répertoire Vert</a></li>
+                <li><a href="">Green Event Series</a></li>
+                <li><a href="">Grow your own</a></li>
+                <li><a href="">Consom'action</a></li>
+                <li><a href="">Eco-gestes</a></li>
+                <li><a href="">Green Coaching</a></li>
+                <li><a href="">Sharing Economy</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-3 col-sm-3 col-xs-3">
+            <h3><a href="{{ path('site_mentions') }}">About</a></h3>
+        </div>
+
+        <div class="col-md-3 col-sm-3 col-xs-3">
+            <h3><a href="{{ path('contact') }}">Contact</a></h3>
+        </div>
+
+        <div class="col-md-2 col-sm-2 col-xs-2">
+            <h3><a href="http://www.gaea21.org/wpg21/">gaea21</a></h3>
+        </div>
+    </div>
+</footer>
+<footer class="footer mobile" style="padding: 0; margin: 0; width: 100%;">
+    <div class="row" style="background-image: url(../images/pelle_terre_footer.jpg);">
+        <div class="col-1">
+        </div>
+        <div class="col-5" style="padding: 0;">
+            <h3 style="font-size: 4.5vw;">Projets</h3>
+            <ul>
+                <li><a style="font-size: 3.3vw;" href="http://www.repertoirevert.org/">Répertoire Vert</a></li>
+                <li><a style="font-size: 3.3vw;" href="">Green Event Series</a></li>
+                <li><a style="font-size: 3.3vw;" href="">Grow your own</a></li>
+                <li><a style="font-size: 3.3vw;" href="">Consom'action</a></li>
+                <li><a style="font-size: 3.3vw;" href="">Eco-gestes</a></li>
+                <li><a style="font-size: 3.3vw;" href="">Green Coaching</a></li>
+                <li><a style="font-size: 3.3vw;" href="">Sharing Economy</a></li>
+            </ul>
+        </div>
+
+        <div class="col-2" style="padding: 0;">
+            <h3 style="font-size: 4.5vw;"><a href="{{ path('site_mentions') }}">About</a></h3>
+        </div>
+
+        <div class="col-3" style="padding-left: 23px;">
+            <h3 style="font-size: 4.5vw;"><a href="{{ path('contact') }}">Contact</a></h3>
+        </div>
+
+        <!--<div class="col-2">
+            <h3 style="font-size: 4vw;"><a href="http://www.gaea21.org/wpg21/">gaea21</a></h3>
+        </div>-->
+    </div>
+</footer>
+
+{% endblock %}
+
+{% block javascripts %}
+
+{% endblock %}

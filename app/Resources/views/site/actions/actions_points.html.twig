@@ -1,0 +1,246 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/actions_dashboard.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+
+{% endblock %}
+ 
+{% block body %}
+<!-- Back to top button -->
+<a id="button"></a>
+
+<div class="header">
+    <div class="dropdown burger above-image">
+    </div>
+    <div class="image-container">
+        <div class="blue-film text-center justify-content-center align-items-center d-flex">
+            <div>
+                <h2>sl community & passer à l'action</h2>
+            </div>  
+        </div>
+        <img class="below-film" src="{{ asset('images/dashboard/points-badges/header-page-points.jpg') }}">
+        <a href="{{ path('site_dashboard') }}">
+            <div class="menu-img-container">
+                <img class="menu-img" src="{{ asset('images/dashboard/points-badges/bouton-menu.png') }}" />
+            </div>
+        </a>
+    </div>
+</div>
+<div class="main">
+	<div class="row">
+		<div class="col-md-12 descriptionPoints">
+            <h2>Point Communautaire</h2>
+            <br>
+			<p>
+				C’est bien simple, plus vous <b>participez à la communauté</b>, plus vous <b>gagnez de point</b>. <br>  
+                Chaque <b>action</b> est <b>récompensée</b>: <br>
+                Que vous <b>demandiez de l’aide</b> ou que vous <b>donniez de l’aide</b>, vous <b>gagnez des points</b>. <br>
+                Votre <b>progression</b> vous permettra de <b>gagner des récompenses</b> si vous faite partis de
+                ceux qui ont <b>le plus de points</b> dans le classement <b>hebdomadaire, mensuel et annuel</b>.
+			</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+            <div class="actionsTitle">
+                <img class="imgActionsTitle" src="{{ asset('images/dashboard/points-badges/actions-et-points.png') }}" />
+            </div>
+			<div class="row mainService">
+				<div class="col-md-4">
+					<p class="textActions">
+						Les <b>actions</b> ont des <b>points de base</b>
+                        comme mentionnez ci-dessous. 
+                        Les <b>personnes demandant des</b> 
+                        <b>services gagnent</b> quand même des 
+                        points pour motiver à 
+                        poster des annonces.
+					</p>
+				</div>
+				<div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-6 imgActions text-center">
+                            <h2>L’amabilité/politesse</h2>
+                            <img src="{{ asset('images/dashboard/points-badges/amabilite-politesse.png') }}" />
+                        </div>
+                        <div class="col-md-6 imgActions text-center">
+                            <h2>Ponctualité</h2>
+                            <img src="{{ asset('images/dashboard/points-badges/ponctualite.png') }}" />
+                        </div>
+                    </div>             
+                </div>
+                <div class="col-md-4">
+					<p class="textActionsPoints">
+						Des <b>points</b> sont ensuite <b>ajoutés</b>,
+                        que chaque personne peut 
+                        <b>donner en plus</b> en fonction 
+                        de la <b>qualité du service</b>. 
+					</p>
+				</div>
+				<div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-6 imgActions-intervention left">
+                            <h2>Qualité (de l’intervention)</h2>
+                            <img src="{{ asset('images/dashboard/points-badges/qualite.png') }}" />
+                        </div>
+                        <div class="col-md-6 imgActions text-center">
+                            <h2>Disponibilité</h2>
+                            <img src="{{ asset('images/dashboard/points-badges/disponibilite.png') }}" />
+                        </div>
+                    </div>             
+                </div>
+			</div>
+		</div>
+    </div>
+    <div class="row" id="rotator">
+        <div id="block-1" class="active">
+            <img  class="serviceTitle menu" src="{{ asset('images/dashboard/points-badges/competences-menu.png') }}">
+            <h3 id="catCompetence" class="mt-4 text-center">Compétences</h3>
+        </div>
+        <div id="block-2" class="non-active-top">
+            <img  class="serviceTitle menu" src="{{ asset('images/dashboard/points-badges/materiel-menu.png') }}">
+            <h3 id="catMateriel" class="mt-4 text-center">Matériel</h3> 
+        </div>
+        <div id="block-3" class="non-active-top-2">
+            <img  class="serviceTitle menu" src="{{ asset('images/dashboard/points-badges/transport-menu.png') }}">
+            <h3 id="catTransport" class="mt-4 text-center">Transport</h3> 
+        </div>
+        <div id="block-4" class="non-active-top-3">
+            <img  class="serviceTitle menu" src="{{ asset('images/dashboard/points-badges/logement-menu.png') }}">
+            <h3 id="catLogement" class="mt-4 text-center">Logement</h3>
+        </div>
+        <div id="block-5" class="non-active-top-4">
+            <img  class="serviceTitle menu" src="{{ asset('images/dashboard/points-badges/soutien.png') }}">
+            <h3 id="catSoutien" class="mt-4 text-center">Soutien</h3>
+        </div>
+        <div id="block-6" class="non-active-top-5">
+            <img  class="serviceTitle menu" src="{{ asset('images/dashboard/points-badges/parrainage.png') }}">
+            <h3 id="catParrainage" class="mt-4 text-center">Parrainage</h3> 
+        </div> 
+    </div>  
+    <div class="row" id="tables">
+        <div class="row active" id="table1">
+            <div class="col-md-12">
+                <div class="serviceActions text-center">
+                    <img src="{{ asset('images/dashboard/points-badges/tableau-competences.png') }}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row non-active-top" id="table2">
+            <div class="col-md-12">
+                <div class="serviceActions text-center">
+                    <img src="{{ asset('images/dashboard/points-badges/tableau-materiel.png') }}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row non-active-top-2" id="table3">
+            <div class="col-md-12">
+                <div class="serviceActions text-center ">
+                    <img src="{{ asset('images/dashboard/points-badges/tableau-transport.png') }}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row non-active-top-3" id="table4">
+            <div class="col-md-12">
+                <div class="serviceActions text-center">
+                    <img src="{{ asset('images/dashboard/points-badges/tableau-logement.png') }}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row non-active-top-4" id="table5">
+            <div class="col-md-12">
+                <div class="serviceActions text-center">
+                    <img src="{{ asset('images/dashboard/points-badges/tableau-soutien.png') }}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row non-active-top-5" id="table6">
+            <div class="col-md-12">
+                <div class="serviceActions text-center">
+                    <img src="{{ asset('images/dashboard/points-badges/tableau-parrainage.png') }}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 medaillesBadges" >
+        {% include 'site/actions/medailles_badges.html.twig' %}
+    </div>
+</div>   
+<div class="col-12 footerActionsPoints" >
+    {% include 'footer.html.twig' %}
+</div>
+{% endblock %}
+
+{% block javascripts %}
+<script>
+var btn = $('#button');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
+</script>
+<script>
+    function rotate() {				
+        if (current == 1) {
+            $("#block-1, #table1").removeClass().addClass("active");
+            $("#block-2, #table2").removeClass().addClass("non-active-top");
+            $("#block-3, #table3").removeClass().addClass("non-active-top-2");
+            $("#block-4, #table4").removeClass().addClass("non-active-top-3");
+            $("#block-5, #table5").removeClass().addClass("non-active-top-4");
+            $("#block-6, #table6").removeClass().addClass("non-active-top-5");
+        } else if (current == 2) {
+            $("#block-1, #table1").removeClass().addClass("non-active-top");
+            $("#block-2, #table2").removeClass().addClass("active");
+            $("#block-3, #table3").removeClass().addClass("non-active-top-2");
+            $("#block-4, #table4").removeClass().addClass("non-active-top-3");
+            $("#block-5, #table5").removeClass().addClass("non-active-top-4");
+            $("#block-6, #table6").removeClass().addClass("non-active-top-5");        
+        }else if (current == 3) {
+            $("#block-1, #table1").removeClass().addClass("non-active-top");
+            $("#block-2, #table2").removeClass().addClass("non-active-top-2");
+            $("#block-3, #table3").removeClass().addClass("active");
+            $("#block-4, #table4").removeClass().addClass("non-active-top-3");
+            $("#block-5, #table5").removeClass().addClass("non-active-top-4");
+            $("#block-6, #table6").removeClass().addClass("non-active-top-5");        
+        }else if (current == 4) {
+            $("#block-1, #table1").removeClass().addClass("non-active-top");
+            $("#block-2, #table2").removeClass().addClass("non-active-top-2");
+            $("#block-3, #table3").removeClass().addClass("non-active-top-3");
+            $("#block-4, #table4").removeClass().addClass("active");
+            $("#block-5, #table5").removeClass().addClass("non-active-top-4");
+            $("#block-6, #table6").removeClass().addClass("non-active-top-5");        
+        }else if (current == 5) {
+            $("#block-1, #table1").removeClass().addClass("non-active-top");
+            $("#block-2, #table2").removeClass().addClass("non-active-top-2");
+            $("#block-3, #table3").removeClass().addClass("non-active-top-3");
+            $("#block-4, #table4").removeClass().addClass("non-active-top-4");
+            $("#block-5, #table5").removeClass().addClass("active");
+            $("#block-6, #table6").removeClass().addClass("non-active-top-5");        
+        }else if (current == 6) {
+            $("#block-1, #table1").removeClass().addClass("non-active-top");
+            $("#block-2, #table2").removeClass().addClass("non-active-top-2");
+            $("#block-3, #table3").removeClass().addClass("non-active-top-3");
+            $("#block-4, #table4").removeClass().addClass("non-active-top-4");
+            $("#block-5, #table5").removeClass().addClass("non-active-top-5");
+            $("#block-6, #table6").removeClass().addClass("active");        
+        }
+        
+    }
+$("#rotator div").click(function() {
+current = this.id.substr(6);			
+rotate();
+});
+</script>
+
+{% endblock %}

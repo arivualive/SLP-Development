@@ -1,0 +1,13 @@
+body {
+    padding: 50px;
+    margin-left: auto;
+
+}
+
+.navbar-brand {
+    width: 100%;
+}
+
+.bg-color {
+    background-color: #2aaff1;
+}

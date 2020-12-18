@@ -1,0 +1,27 @@
+body {
+    background-color:#76afcd;
+    font-family: 'Nunito', sans-serif;
+    width:100%;
+    /*padding:0px;
+    margin:0px;*/
+
+}
+
+
+.imagesFooter{
+    margin-top: 150px;
+}
+
+.imagesFooter .first{
+    margin-top: 80px;
+}
+
+.imagesFooter .third{
+    margin-top: 60px;
+}
+
+@media screen and (max-width:480px) {
+    .title{
+        font-size:5vw;
+    }
+}

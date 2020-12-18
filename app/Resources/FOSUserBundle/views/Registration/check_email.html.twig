@@ -1,0 +1,51 @@
+{# extends "base.html.twig" #}
+{% extends "::base.html.twig" %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('css/register.css') }}">
+<link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+<link rel="stylesheet" href="{{ asset('css/Registration/check-email-registration-link.css') }}">
+<link rel="stylesheet" href="{{ asset('css/Registration/check-email-registration-link-mobile.css') }}">
+{% endblock %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block body %}
+    <!--<div class="container">
+        <h1>{# 'registration.check_email'|trans({'%email%': user.email}) #}</h1>
+    </div>-->
+<div class="row">
+    <header>
+        <div class="header">
+            <img src="{{ asset('images/slider/slide_3.jpg') }}" alt="Dashboard">
+            <div class="account-activation-margin text-inside-header">
+                <h1>Activation du compte</h1>
+                <p>Un lien d'activation vous a été envoyé</p>
+            </div>
+        </div>
+        <div class="dropdown burger">
+            <a class="dropdown-item" style="padding: 0%;width:0%;" class="btn btn-secondary dropdown-toggle"
+                    href="{{ path('site_index') }}">
+                <button class="btn btn-secondary dropdown-toggle"><i class="fa fa-home" style="font-size:24px"></i>
+                </button>
+            </a>
+        </div>
+    </header>
+
+    <div class="main-title">
+        <div class="container">
+            <h1 class="title-information">{{ 'registration.check_email'|trans({'%email%': user.email}) }}</h1>
+        </div>
+    </div>
+
+    <a class="return-home" href="{{ path('site_index') }}">
+        <button  class="button-return-home">
+            Retour à l'accueil
+        </button>
+    </a>
+    
+    <div class="col-12" >
+        {% include 'footer.html.twig' %}
+    </div>
+</div>
+{% endblock body %}

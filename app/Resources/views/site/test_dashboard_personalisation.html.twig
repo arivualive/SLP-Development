@@ -1,0 +1,562 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Dashboard Personalisation{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/dashboard_personalisation.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.7/cropper.min.css">
+<link rel="stylesheet" href="{{ asset('css/custom_dashboard.css') }}">
+{% endblock %}
+
+{% block body %}
+
+
+{#------------------------------------------Header------------------------------------------------#}
+<div class="row myHeader mt-1">
+    <div class="d-flex content align-items-center justify-content-center">
+        <h2>page Personalisation</h2>
+    </div>
+</div>
+
+{#---------------------------------------Introduction---------------------------------------------#}
+<div class="intro row mydiv">
+    <p>Ici, vous pouvez <strong>modifier</strong> vos <strong> photos de profil </strong>et de <strong>couverture
+            personnelles</strong> , ainsi que celles de vos <strong>profils</strong> individus, famille, ménage et amis.
+    </p>
+    <p>Retrouvez aussi le <strong>description de chaque partie du dashboard</strong> , ainsi qu'une <strong>explication
+            d'utilisation </strong> de celles-ci.</p>
+    <p>Enfin, vous pourrez <strong>organiser les différentes pages de votre Dashboard</strong> pour qu'il puisse vous
+        correspondre.</p>
+    <div class="underline"></div>
+</div>
+
+{#--------------------------------------Personalisation-------------------------------------------#}
+<div class="wrap">
+    <div class="row personalisation mydiv">
+        <div class="box col-md-8 banner blocks-1">
+            <div class="content text-center">
+                <h2 class="mt-5">Votre photo de couverture</h2>
+                <p class="mt-3">Cet emplacement vous permet de choisir une image unique qui représente qui vous êtes et
+                    ce que vous aimez</p>
+                <div class="importbtn" id="importCover">
+                    <label class="btn btnImport mt-4" id="coverButton">
+                        Importer Image<input type="file" name="fileupload" id="coverInput" style="display: none;">
+                    </label>
+                    <label class="btn cropBtn mt-4" style="display: none;" id="cropCover">
+                        Recadrer<input type="submit" class="btn" id="cropCover" style="display: none;"></input>
+                    </label>
+                </div>
+                <div class="row mt-4 innerdiv text-center">
+                    <div class="col-md-6 box-2">
+                        <div id="bannerPreview">
+                            <img id="imageCropCover" data-id="1" src="" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 box-preview">
+                        <div id="preview">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="img-background"></div>
+            <div class="align-items-center justify-content-center d-flex mt-4">
+                <div class="box blocks-3 col-md-8 text-center">
+                    <div id="formCover" style="display: none;">
+                        <input type="hidden" name="cropped-cover" id="croppedCover">
+                        <label class="btn submitBtn mt-4">
+                            Valider<input type="submit" name="fileupload" class="uploadImage" style="display: none;"
+                                id="uploadCover" disabled>
+                        </label>
+                        <label class="dashboard-button mt-4" style="display: none;">
+                            <a href="{{path('site_dashboard')}}"><span
+                                    class="justify-content-center d-flex">Dashboard</span></a>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {#----------------Plan-------------------#}
+        <div class="box offset-md-1 col-md-2 blocks-2">
+            <div class="row plan_header mydiv plan_block planActivate">
+                <div class="box-2" id="plan-image-cover"></div>
+                <span class="bg-photo" style="background-color: #ececf3;"><img class="photo-user"></span>
+            </div>
+            <div class="row plan_title mydiv plan_block">
+            </div>
+            <div class="row plan_empreinte mydiv">
+                <div class="col-md-2 mydiv plan_innerDiv">
+                    <div class="plan_block"></div>
+                </div>
+                <div class="col-md-5 mydiv plan_innerDiv">
+                    <div class="plan_block"></div>
+                </div>
+                <div class="col-md-3 mydiv plan_innerDiv">
+                    <div class="plan_block"></div>
+                </div>
+                <div class="col-md-2 mydiv plan_lastDiv">
+                    <div class="plan_block"></div>
+                </div>
+            </div>
+            <div class="row no-gutters content mydiv">
+                <div class="col-md-2">
+                    <div class="plan_block menu"></div>
+                    <div class="plan_block menu"></div>
+                    <div class="plan_block menu"></div>
+                    <div class="plan_block menu"></div>
+                    <div class="plan_block menu"></div>
+                    <div class="plan_block badge_div"></div>
+                </div>
+                <div class="col-md-10">
+                    <div class="plan_block action align-items-end">
+                        <div class="col-md-12 mydiv plan_innerdiv">
+                            <div class="plan_block plan_action"></div>
+                        </div>
+                        <div class="row mydiv">
+                            <div class="col-md-8 mydiv plan_innerdiv">
+                                <div class="plan_block plan_groupe"></div>
+                            </div>
+                            <div class="col-md-4 mydiv plan_innerdiv">
+                                <div class="plan_block plan_groupe"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="row no-gutters innerdiv">
+                        <div class="col-md-5 mydiv">
+                            <div class="plan_block stat"></div>
+                            <div class="plan_block stat"></div>
+                            <div class="plan_block calendar"></div>
+                            <div class="plan_block package"></div>
+                            <div class="plan_block plateforme"></div>
+                            <div class="plan_block plateforme"></div>
+                            <div class="plan_block plateforme"></div>
+                            <div class="plan_block plateforme"></div>
+                            <div class="plan_block plateforme"></div>
+                            <div class="plan_block plateforme"></div>
+                            <div class="plan_block plateforme"></div>
+                            <div class="plan_block video"></div>
+                        </div>
+                        <div class="col-md-7 mydiv ">
+                            <div class="plan_block feed"></div>
+                            <div class="plan_block pub"></div>
+                            <div class="plan_block pub"></div>
+                            <div class="plan_block pub"></div>
+                            <div class="plan_block pub"></div>
+                            <div class="plan_block pub"></div>
+                            <div class="plan_block pub"></div>
+                            <div class="plan_block pub"></div>
+                        </div>
+                        <div class="col-md-12 mydiv plan_lastdiv">
+                            <div class="plan_block classement"></div>
+                        </div>
+                        <div class="col-md-12 mydiv plan_lastdiv">
+                            <div class="plan_block impact"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 mydiv">
+                    <div class="plan_block budget"></div>
+                    <div class="plan_block profil_perso"></div>
+                    <div class="row mydiv">
+                        <div class="col-md-4 mydiv plan_innerdiv">
+                            <div class="plan_block plan_groupe"></div>
+                        </div>
+                        <div class="col-md-4 mydiv plan_innerdiv">
+                            <div class="plan_block plan_groupe"></div>
+                        </div>
+                        <div class="col-md-4 mydiv plan_lastdiv">
+                            <div class="plan_block plan_groupe"></div>
+                        </div>
+                    </div>
+                    <div class="plan_block slc"></div>
+                    <div class="plan_block theme"></div>
+                    <div class="plan_block resultat"></div>
+                    <div class="plan_block repondez"></div>
+                    <div class="row mydiv">
+                        <div class="col-md-3 mydiv plan_innerdiv">
+                            <div class="plan_block plan_questionnaire"></div>
+                        </div>
+                        <div class="col-md-3 mydiv plan_innerdiv">
+                            <div class="plan_block plan_questionnaire"></div>
+                        </div>
+                        <div class="col-md-3 mydiv plan_innerdiv">
+                            <div class="plan_block plan_questionnaire"></div>
+                        </div>
+                        <div class="col-md-3 mydiv plan_innerdiv">
+                            <div class="plan_block plan_questionnaire"></div>
+                        </div>
+                        <div class="col-md-3 mydiv plan_innerdiv">
+                            <div class="plan_block plan_questionnaire"></div>
+                        </div>
+                        <div class="col-md-3 mydiv plan_innerdiv">
+                            <div class="plan_block plan_questionnaire"></div>
+                        </div>
+                        <div class="col-md-3 mydiv plan_innerdiv">
+                            <div class="plan_block plan_questionnaire"></div>
+                        </div>
+                        <div class="col-md-3 mydiv plan_innerdiv">
+                            <div class="plan_block plan_questionnaire"></div>
+                        </div>
+                    </div>
+                    <div class="row mydiv">
+                        <div class="col-md-6 mydiv plan_innerdiv">
+                            <div class="plan_block atelierPanier"></div>
+                        </div>
+                        <div class="col-md-6 mydiv plan_innerdiv">
+                            <div class="plan_block atelierPanier"></div>
+                        </div>
+                    </div>
+                    <div class="plan_block publicite_div"></div>
+                    <div class="plan_block CostBenef">
+                        <div class="row mydiv">
+                            <div class="col-md-12 plan_block personalize"></div>
+                            <div class="col-md-6 mydiv plan_innerdiv">
+                                <div class="plan_block choice"></div>
+                            </div>
+                            <div class="col-md-6 mydiv plan_innerdiv">
+                                <div class="plan_block choice"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plan_block greenCoaching"></div>
+                </div>
+                <div class="col-md-12 mydiv plan_innerdiv">
+                    <div class="plan_block footer"></div>
+                </div>
+            </div>
+        </div>
+        <div class="box col-md-8 avatar blocks-1 mt-3">
+            <div class="content text-center">
+                <h2 class="mt-5">Votre photo de profil</h2>
+                <p class="mt-3">Votre photo de profil est la photo que vos collègues voient à côté de votre nom partout
+                    sur le Workplace.</p>
+                <div class="importbtn" id="importAvatar">
+                    <label class="btn btnImport mt-4" id="avatarButton">
+                        Importer Image<input type="file" name="fileuploadavatar" id="avatarInput"
+                            style="display: none;">
+                    </label>
+                    <label class="btn cropBtn mt-4" style="display: none;" id="cropAvatar">
+                        Recadrer<input type="submit" class="btn" id="cropAvatar" style="display: none;"></input>
+                    </label>
+                </div>
+                <div class="row mt-4 innerdiv text-center">
+                    <div class="col-md-6 box-2">
+                        <div id="avatarPreview">
+                            <img id="imageCropAvatar" data-id="2" src="" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 box-preview">
+                        <div id="previewAvatar"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="img-background"></div>
+            <div class="align-items-center justify-content-center d-flex mt-4">
+                <div class="box blocks-3 col-md-8 text-center">
+                    <div id="formAvatar" style="display: none;">
+                        <input type="hidden" name="cropped-avatar" id="croppedAvatar">
+                        <label class="btn submitBtn-avatar mt-4">
+                            Valider<input type="submit" name="fileuploadavatar" style="display: none;"
+                                id="uploadAvatar" disabled>
+                        </label>
+                        <label class="dashboard-button-avatar mt-4" style="display: none;">
+                            <a href="{{path('site_dashboard')}}"><span
+                                    class="justify-content-center d-flex">Dashboard</span></a>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {#----------------Plan-------------------#}
+        <div class="box offset-md-1 col-md-2 blocks-2 mt-3">
+            <div class="row plan_header mydiv plan_block">
+                <div class="bg-photo planActivate" id="plan-image-avatar">
+                </div>
+            </div>
+            <div class="row plan_title mydiv plan_block">
+            </div>
+            <div class="row plan_empreinte mydiv">
+                <div class="col-md-2 mydiv plan_innerDiv">
+                    <div class="plan_block"></div>
+                </div>
+                <div class="col-md-5 mydiv plan_innerDiv">
+                    <div class="plan_block"></div>
+                </div>
+                <div class="col-md-3 mydiv plan_innerDiv">
+                    <div class="plan_block"></div>
+                </div>
+                <div class="col-md-2 mydiv plan_lastDiv">
+                    <div class="plan_block"></div>
+                </div>
+            </div>
+            <div class="row no-gutters content mydiv">
+                <div class="col-md-2">
+                    <div class="plan_block menu"></div>
+                    <div class="plan_block menu"></div>
+                    <div class="plan_block menu"></div>
+                    <div class="plan_block menu"></div>
+                    <div class="plan_block menu"></div>
+                    <div class="plan_block badge_div"></div>
+                </div>
+                <div class="col-md-10">
+                    <div class="plan_block action align-items-end">
+                        <div class="col-md-12 mydiv plan_innerdiv">
+                            <div class="plan_block plan_action"></div>
+                        </div>
+                        <div class="row mydiv">
+                            <div class="col-md-8 mydiv plan_innerdiv">
+                                <div class="plan_block plan_groupe"></div>
+                            </div>
+                            <div class="col-md-4 mydiv plan_innerdiv">
+                                <div class="plan_block plan_groupe"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="row no-gutters innerdiv">
+                        <div class="col-md-5 mydiv">
+                            <div class="plan_block stat"></div>
+                            <div class="plan_block stat"></div>
+                            <div class="plan_block calendar"></div>
+                            <div class="plan_block package"></div>
+                            <div class="plan_block plateforme"></div>
+                            <div class="plan_block plateforme"></div>
+                            <div class="plan_block plateforme"></div>
+                            <div class="plan_block plateforme"></div>
+                            <div class="plan_block plateforme"></div>
+                            <div class="plan_block plateforme"></div>
+                            <div class="plan_block plateforme"></div>
+                            <div class="plan_block video"></div>
+                        </div>
+                        <div class="col-md-7 mydiv ">
+                            <div class="plan_block feed"></div>
+                            <div class="plan_block pub"></div>
+                            <div class="plan_block pub"></div>
+                            <div class="plan_block pub"></div>
+                            <div class="plan_block pub"></div>
+                            <div class="plan_block pub"></div>
+                            <div class="plan_block pub"></div>
+                            <div class="plan_block pub"></div>
+                        </div>
+                        <div class="col-md-12 mydiv plan_lastdiv">
+                            <div class="plan_block classement"></div>
+                        </div>
+                        <div class="col-md-12 mydiv plan_lastdiv">
+                            <div class="plan_block impact"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 mydiv">
+                    <div class="plan_block budget"></div>
+                    <div class="plan_block profil_perso"></div>
+                    <div class="row mydiv">
+                        <div class="col-md-4 mydiv plan_innerdiv">
+                            <div class="plan_block plan_groupe"></div>
+                        </div>
+                        <div class="col-md-4 mydiv plan_innerdiv">
+                            <div class="plan_block plan_groupe"></div>
+                        </div>
+                        <div class="col-md-4 mydiv plan_lastdiv">
+                            <div class="plan_block plan_groupe"></div>
+                        </div>
+                    </div>
+                    <div class="plan_block slc"></div>
+                    <div class="plan_block theme"></div>
+                    <div class="plan_block resultat"></div>
+                    <div class="plan_block repondez"></div>
+                    <div class="row mydiv">
+                        <div class="col-md-3 mydiv plan_innerdiv">
+                            <div class="plan_block plan_questionnaire"></div>
+                        </div>
+                        <div class="col-md-3 mydiv plan_innerdiv">
+                            <div class="plan_block plan_questionnaire"></div>
+                        </div>
+                        <div class="col-md-3 mydiv plan_innerdiv">
+                            <div class="plan_block plan_questionnaire"></div>
+                        </div>
+                        <div class="col-md-3 mydiv plan_innerdiv">
+                            <div class="plan_block plan_questionnaire"></div>
+                        </div>
+                        <div class="col-md-3 mydiv plan_innerdiv">
+                            <div class="plan_block plan_questionnaire"></div>
+                        </div>
+                        <div class="col-md-3 mydiv plan_innerdiv">
+                            <div class="plan_block plan_questionnaire"></div>
+                        </div>
+                        <div class="col-md-3 mydiv plan_innerdiv">
+                            <div class="plan_block plan_questionnaire"></div>
+                        </div>
+                        <div class="col-md-3 mydiv plan_innerdiv">
+                            <div class="plan_block plan_questionnaire"></div>
+                        </div>
+                    </div>
+                    <div class="row mydiv">
+                        <div class="col-md-6 mydiv plan_innerdiv">
+                            <div class="plan_block atelierPanier"></div>
+                        </div>
+                        <div class="col-md-6 mydiv plan_innerdiv">
+                            <div class="plan_block atelierPanier"></div>
+                        </div>
+                    </div>
+                    <div class="plan_block publicite_div"></div>
+                    <div class="plan_block CostBenef">
+                        <div class="row mydiv">
+                            <div class="col-md-12 plan_block personalize"></div>
+                            <div class="col-md-6 mydiv plan_innerdiv">
+                                <div class="plan_block choice"></div>
+                            </div>
+                            <div class="col-md-6 mydiv plan_innerdiv">
+                                <div class="plan_block choice"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plan_block greenCoaching"></div>
+                </div>
+                <div class="col-md-12 mydiv plan_innerdiv">
+                    <div class="plan_block footer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.7/cropper.min.js"></script>
+<script>
+    let cropper;
+    let optionsCover = { preview: '#preview', aspectRatio: 1500 / 400, viewmode: 3, };
+    let optionsAvatar = { preview: '#previewAvatar', aspectRatio: 120 / 120, viewmode: 3, };
+
+    // changement d'état du bouton "importer image"
+    $(function () {
+        $('#coverInput').click(function () {
+            $('#coverButton').removeClass('btnImport').addClass('button-clicked')
+        });
+        $('#avatarInput').click(function () {
+            $('#avatarButton').removeClass('btnImport').addClass('button-clicked')
+        });
+    });
+
+
+    // upload image dans les balises <img> associées
+    function readURL(input, previewId, options) {
+        if (input.files && input.files[0]) {
+            let reader = new FileReader();
+            reader.onload = function (e) {
+                let img = document.getElementById(previewId);
+                img.src = e.target.result;
+                img.append();
+                initcropper(img, options);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    // send input change to function
+    $(function () {
+        $("#coverInput").change(function () {
+            readURL(this, 'imageCropCover', optionsCover);
+        });
+        $("#avatarInput").change(function () {
+            readURL(this, 'imageCropAvatar', optionsAvatar);
+        });
+    });
+
+    //Cropper
+    function initcropper(element, options) {
+        // cropper initialization
+        cropper = new Cropper(element, options);
+        console.log(cropper);
+
+        // si initialisation du cropper afficher les boutons "recadre" et "valider"
+        if (cropper) {
+            $(function () {
+                let id = element.id;
+                if (id === 'imageCropCover') {
+                    $('#cropCover').removeAttr('style');
+                    $('#formCover').removeAttr('style');
+                } else if (id === 'imageCropAvatar') {
+                    $('#cropAvatar').removeAttr('style');
+                    $('#formAvatar').removeAttr('style');
+                }
+            });
+        };
+
+        // send id to function
+        $(function () {
+            $('#cropCover, #cropAvatar').click(function () {
+                Cropping(this);
+            })
+        })
+
+        // On crop button clicked
+        function Cropping(button) {
+            console.log('button', button)
+            if (button.id === 'cropCover') {
+                let imgUrlCover = cropper.getCroppedCanvas().toDataURL('image/jpeg', { width: 231, height: 40 });
+                let imageResultcover = document.createElement("img");
+                imageResultcover.src = imgUrlCover;
+                $('#plan-image-cover').append(imageResultcover);
+                $('#croppedCover').attr('value', imgUrlCover);
+                $('#uploadCover').removeAttr('disabled');
+                $('#cropCover').attr('style', 'display:none');
+                $('#coverButton').removeClass('button-clicked').addClass('btnImport');
+            } else if (button.id === 'cropAvatar') {
+                let imgUrlAvatar = cropper.getCroppedCanvas().toDataURL('image/jpeg', { width: 33, height: 32 });
+                let imageResultAvatar = document.createElement("img");
+                imageResultAvatar.src = imgUrlAvatar;
+                $('#plan-image-avatar').append(imageResultAvatar);
+                $('#croppedAvatar').attr('value', imgUrlAvatar);
+                $('#uploadAvatar').removeAttr('disabled');
+                $('#cropAvatar').attr('style', 'display:none');
+                $('#avatarButton').removeClass('button-clicked').addClass('btnImport');
+            }
+            cropper.destroy();
+            $('#coverPreview, #avatarPreview').attr('style', 'margin-left:20px');
+        }
+
+        // send to server
+        $(function () {
+            $('#uploadCover, #uploadAvatar').click(function () {
+                submit(this);
+                $('input[type=hidden], input[type=file]').val('');
+                $('#imageCropCover, #imageCropAvatar').attr('src', '');
+            })
+        })
+
+        function submit(uploadButton) {
+            let cover_data = $('#croppedCover').val();
+            let avatar_data = $('#croppedAvatar').val();
+            var formData = new FormData();
+            formData.append('coverData', cover_data ?  cover_data: "null");
+            formData.append('avatarData', avatar_data ?  avatar_data: "null");
+            // Use `jQuery.ajax` method
+            $.ajax("{{ path('dashboard_personalisation_upload') }}", {
+            method: "POST",
+            data: formData,
+            processData: false,
+            contentType: false,
+            headers: {'X-Requested-With':'XMLHttpRequest'},
+            success: function () {
+                console.log('Upload success');
+            },
+            error: function () {
+                console.log('Upload error');
+            }
+            });
+        };
+    }
+</script>
+{% endblock %}

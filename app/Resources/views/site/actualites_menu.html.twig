@@ -1,0 +1,1372 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/actualites_menu.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+{% endblock %}
+
+{% block body %}
+    {# --------------------- IMAGE EN-TÊTE ET TITRE --------------------- #}
+        <header>
+            <img class="img-responsive" src="{{ asset('images/actualite/1_en_tete.png') }}"
+                 alt="En-tête actualités">
+            <h1>Actualités</h1>
+        </header>
+
+
+    {# --------------------- Database data --------------------- #}
+
+        <!--{#% for actuality in actualities %}
+        <div class="actualities-block">
+            <div class="actualities-block-header" style="background-color: #36667B;">
+                <h2>{{ actuality.title }}</h2>
+            </div>
+            <div class="actualities-block-body">
+                <div class="primary-actuality-row">
+                    <img class="primary-actuality-img" src="{{ asset('images/actualite/landing-page/landingpage.PNG') }}" alt="">
+                    <div class="primary-actuality-content">
+                        <div class="primary-actuality-text">
+                            <h2>{{ actuality.title }}</h2>
+                            <span>
+                                {{ actuality.content }}
+                            </span>
+                        </div>
+                        <a href="{{ path('actualite_type') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="other-actualities-row">
+                    {% for subactuality in subactualities %}
+                        <div class="actuality">
+                            <img class="actuality-img" src="{{ asset('images/actualite/landing-page/plateformeslp.PNG') }}" alt="">
+                            <div class="actuality-centent">
+                                <h2>{{ subactuality.title }}</h2>
+                                <p>{{ subactuality.description }}</p>
+                            </div>
+                            <a href="{{ path('actualite_type1') }}">
+                                <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% endfor %#}-->
+        
+    {# --------------------- LANDING PAGE --------------------- #}
+        <div class="actualities-block">
+            <div class="actualities-block-header" style="background-color: #36667B;">
+                <h2>LANDING PAGE</h2>
+            </div>
+            <div class="actualities-block-body">
+                <div class="primary-actuality-row">
+                    <img class="primary-actuality-img" src="{{ asset('images/actualite/landing-page/landingpage.PNG') }}" alt="">
+                    <div class="primary-actuality-content">
+                        <div class="primary-actuality-text">
+                            <h2>La Landing page SLP</h2>
+                            <span>
+                                La Landing page SLP est un portail web depuis lequel vous accédez au Dashboard universel. <br>
+                                Un outil unique et personnalisable destiné à vous accompagner dans votre volonté de changer de comportement. <br>
+                                Suivez votre évolution pour passer de consommateur à consom'acteur!
+                            </span>
+                        </div>
+                        <a href="{{ path('actualite_type') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="other-actualities-row">
+                    <div class="actuality">
+                        <img class="actuality-img" src="{{ asset('images/actualite/landing-page/plateformeslp.PNG') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>La plate-<br>forme SLP</h2>
+                            <p>Programme innovant de mesure de sensibilisation</p>
+                        </div>
+                        <a href="{{ path('actualite_type1') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+
+                    <div class="actuality">
+                            <img class="actuality-img" src="{{ asset('images/actualite/landing-page/dashboarduniv.png') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>LE DASH-<br>BOARD UNIVERSEL</h2>
+                            <p>Le dashboard est la première innovation</p>
+                        </div>
+                        <a href="{{ path('actualite_type2') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+
+                    <div class="actuality">
+                        <img class="actuality-img" src="{{ asset('images/actualite/landing-page/ecopaniers.png') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>LES ÉCO PANIERS</h2>
+                            <p>Les Éco paniers :  une solution pour mieux manger et soutenir</p>
+                        </div>
+                        <a href="{{ path('actualite_type3') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+
+                    <div class="actuality">
+                        <img class="actuality-img" src="{{ asset('') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>TITRE</h2>
+                            <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                        <a href="{{ path('actualite_type4') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--<div class="box">
+            <img class="img-responsive" src="{#{ asset('images/actualite/2_landing_page_bloc_sans_texte.png') }}"
+                 alt="Landing page actualités">
+
+            <div class="text">
+                <div class="col-6 offset-6">
+                    <h2>La Landing page SLP</h2>
+                    <p id="landing-page">La Landing page SLP est un portail web depuis lequel vous accédez au Dashboard universel.<br>
+                    Un outil unique et personnalisable destiné à vous accompagner dans votre volonté de changer de comportement.<br>
+                    Suivez votre évolution pour passer de consommateur à consom'acteur!<br>
+                    </p>
+                    <div class="button">
+                        <div class="link-button">
+                            <a href="{{ path('site_index') }}"><img id="en-savoir-plus" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text2">
+                <div class="row">
+                    <div class="col">
+                        <h2>La plate-<br>forme SLP</h2>
+                        <p id="slp">Programme innovant de mesure de sensibilisation</p>
+                        <div class="button">
+                            <div class="link-button2">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus2" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        <div class="button">
+                            <div class="link-button3">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus3" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        <div class="button">
+                            <div class="link-button3">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus3" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        <div class="button">
+                            <div class="link-button3">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus3" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }#}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>-->
+
+
+    {# --------------------- REPERTOIRE VERT --------------------- #}
+
+        <div class="actualities-block">
+            <div class="actualities-block-header" style="background-color: #A7A7A7;">
+                <h2>LE RÉPERTOIRE VERT</h2>
+            </div>
+            <div class="actualities-block-body">
+                <div class="primary-actuality-row">
+                    <img class="primary-actuality-img" src="{{ asset('') }}" alt="">
+                    <div class="primary-actuality-content">
+                        <div class="primary-actuality-text">
+                            <h2>Le Répertoire Vert</h2>
+                            <span>
+                                Le Répertoire Vert est un outil révolutionnaire qui va simplifier votre quotidien et vos recherches de solutions vertes, que ce soit concernant votre alimentation, votre maison ou votre emploi.
+                            </span>
+                        </div>
+                        <a href="">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="other-actualities-row">
+                    <div class="actuality">
+                        <img class="actuality-img" src="{{ asset('') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>TITRE</h2>
+                            <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                        <a href="{{ path('actualite_type1') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+
+                    <div class="actuality">
+                            <img class="actuality-img" src="{{ asset('') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>TITRE</h2>
+                            <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                        <a href="{{ path('site_index') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+
+                    <div class="actuality">
+                        <img class="actuality-img" src="{{ asset('') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>TITRE</h2>
+                            <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                        <a href="{{ path('site_index') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+
+                    <div class="actuality">
+                        <img class="actuality-img" src="{{ asset('') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>TITRE</h2>
+                            <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                        <a href="{{ path('site_index') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--<div style="margin: 0 -33px;">
+            <div class="" style="background-image: url('../images/actualite/2_répertoire_vert_bloc_vide.png'); background-size: contain; background-repeat: no-repeat; height: 1170px; width: 100%;  padding: 0 3%;">
+                <div class="" style=" width: 100%; border-radius: 4px; padding-top: 200px; padding-bottom: 30px;">
+                    <div class="primary-actuality-row">
+                        <img class="primary-actuality-img" src="{#{ asset('images/actualite/archive1.PNG') }}" alt="">
+                        <div class="primary-actuality-content">
+                            <div class="primary-actuality-text">
+                                <h2>Le Répertoire Vert</h2>
+                                <span>
+                                Le Répertoire Vert est un outil révolutionnaire qui va simplifier votre quotidien et vos recherches de solutions vertes, que ce soit concernant votre alimentation, votre maison ou votre emploi. 
+                                </span>
+                            </div>
+                            <a href="{{ path('site_index') }}">
+                                <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="other-actualities-row">
+                        <div class="actuality">
+                            <img class="actuality-img" src="{{ asset('') }}" alt="">
+                            <div class="actuality-centent">
+                                <h2>TITRE</h2>
+                                <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                            </div>
+                            <a href="{{ path('site_index') }}">
+                                <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                            </a>
+                        </div>
+
+                        <div class="actuality">
+                            <img class="actuality-img" src="{{ asset('') }}" alt="">
+                            <div class="actuality-centent">
+                                <h2>TITRE</h2>
+                                <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                            </div>
+                            <a href="{{ path('site_index') }}">
+                                <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                            </a>
+                        </div>
+
+                        <div class="actuality">
+                            <img class="actuality-img" src="{{ asset('') }}" alt="">
+                            <div class="actuality-centent">
+                                <h2>TITRE</h2>
+                                <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                            </div>
+                            <a href="{{ path('site_index') }}">
+                                <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                            </a>
+                        </div>
+
+                        <div class="actuality">
+                            <img class="actuality-img" src="{{ asset('') }}" alt="">
+                            <div class="actuality-centent">
+                                <h2>TITRE</h2>
+                                <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                            </div>
+                            <a href="{{ path('site_index') }}">
+                                <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }#}" alt="En savoir +">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+
+        <!--<div class="box"> 
+            <img class="img-responsive" src="{#{ asset('images/actualite/3_repertoire_vert_bloc_sans_texte.png') }}"
+                 alt="Répertoire Vert">
+
+            <div class="text">
+                <div class="col-6 offset-6">
+                    <h2>Le Répertoire Vert</h2>
+                    <p>Le Répertoire Vert est un outil révolutionnaire qui va simplifier votre quotidien et vos recherches de solutions vertes, que ce soit concernant votre alimentation, votre maison ou votre emploi.
+                    </p>
+                    <div class="button">
+                        <div class="link-button4">
+                            <a href="{{ path('site_index') }}"><img id="en-savoir-plus4" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text2">
+                <div class="row">
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        <div class="button">
+                            <div class="link-button5">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus5" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        <div class="button">
+                            <div class="link-button5">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus5" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        <div class="button">
+                            <div class="link-button5">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus5" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        <div class="button">
+                            <div class="link-button5">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus5" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }#}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>-->
+
+
+    {# --------------------- LES GREEN EVENTS --------------------- #}
+
+        <div class="actualities-block">
+            <div class="actualities-block-header" style="background-color: #64AF1A;">
+                <h2>Les Green Events</h2>
+            </div>
+            <div class="actualities-block-body">
+                <div class="primary-actuality-row">
+                    <img class="primary-actuality-img" src="{{ asset('') }}" alt="">
+                    <div class="primary-actuality-content">
+                        <div class="primary-actuality-text">
+                            <h2>Les Green Events</h2>
+                            <span>
+                                Bientôt disponibles dans le cadre du programme SLP, les Green Events Series (GES) sont une série d'événements organisés par gaea21.<br>
+                                Des activités ludiques et sportives adaptées à vos envies et besoins vous seront proposées dans le cadre des GES!
+                            </span>
+                        </div>
+                        <a href="">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="other-actualities-row">
+                    <div class="actuality">
+                        <img class="actuality-img" src="{{ asset('') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>TITRE</h2>
+                            <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                        <a href="{{ path('actualite_type1') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+
+                    <div class="actuality">
+                            <img class="actuality-img" src="{{ asset('') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>TITRE</h2>
+                            <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                        <a href="{{ path('site_index') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+
+                    <div class="actuality">
+                        <img class="actuality-img" src="{{ asset('') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>TITRE</h2>
+                            <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                        <a href="{{ path('site_index') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+
+                    <div class="actuality">
+                        <img class="actuality-img" src="{{ asset('') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>TITRE</h2>
+                            <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                        <a href="{{ path('site_index') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--<div class="box" style="position: relative;"> 
+            <img class="img-responsive" src="{#{ asset('images/actualite/4_ges_bloc_sans_texte.png') }}"
+                 alt="Les Green Events">
+
+            <div class="text">
+                <div class="col-6 offset-6">
+                    <h2>Les Green Events</h2>
+                    <p id="landing-page">Bientôt disponibles dans le cadre du programme SLP, les Green Events Series (GES) sont une série d'événements organisés par gaea21.<br>
+                    Des activités ludiques et sportives adaptées à vos envies et besoins vous seront proposées dans le cadre des GES!</p>
+                    <div class="button">
+                        <div class="link-button6">
+                            <a href="{{ path('site_index') }}"><img id="en-savoir-plus6" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text2">
+                <div class="row">
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        <div class="button">
+                            <div class="link-button7">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus7" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        <div class="button">
+                            <div class="link-button7">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus7" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        <div class="button">
+                            <div class="link-button7">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus7" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        <div class="button">
+                            <div class="link-button7">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus7" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }#}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>-->
+
+
+    {# --------------------- LE GREEN COACHING --------------------- #}
+
+        <div class="actualities-block">
+            <div class="actualities-block-header" style="background-color: #6D38A8;">
+                <h2>LE GREEN COACHING</h2>
+            </div>
+            <div class="actualities-block-body">
+                <div class="primary-actuality-row">
+                    <img class="primary-actuality-img" src="{{ asset('') }}" alt="">
+                    <div class="primary-actuality-content">
+                        <div class="primary-actuality-text">
+                            <h2>LE GREEN COACHING</h2>
+                            <span>
+                                Bientôt disponibles
+                            </span>
+                        </div>
+                        <a href="">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="other-actualities-row">
+                    <div class="actuality">
+                        <img class="actuality-img" src="{{ asset('') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>TITRE</h2>
+                            <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                        <a href="{{ path('actualite_type1') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+
+                    <div class="actuality">
+                            <img class="actuality-img" src="{{ asset('') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>TITRE</h2>
+                            <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                        <a href="{{ path('site_index') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+
+                    <div class="actuality">
+                        <img class="actuality-img" src="{{ asset('') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>TITRE</h2>
+                            <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                        <a href="{{ path('site_index') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+
+                    <div class="actuality">
+                        <img class="actuality-img" src="{{ asset('') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>TITRE</h2>
+                            <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                        <a href="{{ path('site_index') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--<div class="box">
+            <img class="img-responsive" src="{#{ asset('images/actualite/5_green_coaching_bloc_sans_texte.png') }}"
+                 alt="Le Green Coaching">
+
+            <div class="text"> 
+                <div class="col-6 offset-6">
+                    <h2>Le Green Coaching</h2>
+                    <p id="landing-page">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consequuntur fuga neque placeat recusandae. Dolor, fugit illum modi placeat porro quam tempora? Corporis debitis ex magni nihil quod, reiciendis repellendus. Aspernatur ducimus ipsum laborum minus nihil nostrum omnis, ratione repudiandae saepe similique vero, voluptates.</p>
+                    <div class="button">
+                        <div class="link-button6">
+                            <a href="{{ path('site_index') }}"><img id="en-savoir-plus6" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text2">
+                <div class="row">
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        <div class="button">
+                            <div class="link-button7">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus7" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        <div class="button">
+                            <div class="link-button7">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus7" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        <div class="button">
+                            <div class="link-button7">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus7" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        <div class="button">
+                            <div class="link-button7">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus7" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }#}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>-->
+
+
+    {# --------------------- GROW YOUR OWN --------------------- #}
+
+        <div class="actualities-block">
+            <div class="actualities-block-header" style="background-color: #5C360A;">
+                <!--<img style="width: 20%; margin: 0 40%;" src="{#{ asset('images/actualite/logo_consom_Action.png') }#}" alt="">-->
+                <h2>GROW YOUR OWN</h2>
+            </div>
+            <div class="actualities-block-body">
+                <div class="primary-actuality-row">
+                    <img class="primary-actuality-img" src="{{ asset('') }}" alt="">
+                    <div class="primary-actuality-content">
+                        <div class="primary-actuality-text">
+                            <h2>GROW YOUR OWN</h2>
+                            <span>
+                                Bientôt disponibles
+                            </span>
+                        </div>
+                        <a href="">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="other-actualities-row">
+                    <div class="actuality">
+                        <img class="actuality-img" src="{{ asset('') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>TITRE</h2>
+                            <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                        <a href="{{ path('actualite_type1') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+
+                    <div class="actuality">
+                            <img class="actuality-img" src="{{ asset('') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>TITRE</h2>
+                            <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                        <a href="{{ path('site_index') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+
+                    <div class="actuality">
+                        <img class="actuality-img" src="{{ asset('') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>TITRE</h2>
+                            <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                        <a href="{{ path('site_index') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+
+                    <div class="actuality">
+                        <img class="actuality-img" src="{{ asset('') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>TITRE</h2>
+                            <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                        <a href="{{ path('site_index') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div class="box">
+            <img class="img-responsive" src="{#{ asset('images/actualite/6_grow_your_own_bloc_sans_texte.png') }}"
+                 alt="Grow your own">
+
+            <div class="text">
+                <div class="col-6 offset-6">
+                    <h2>Grow your own</h2>
+                    <p id="landing-page">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consequuntur fuga neque placeat recusandae. Dolor, fugit illum modi placeat porro quam tempora? Corporis debitis ex magni nihil quod, reiciendis repellendus. Aspernatur ducimus ipsum laborum minus nihil nostrum omnis, ratione repudiandae saepe similique vero, voluptates.</p>
+                    
+                    <div class="button">
+                        <div class="link-button6">
+                            <a href="{{ path('site_index') }}"><img id="en-savoir-plus6" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text2">
+                <div class="row">
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        
+                        <div class="button">
+                            <div class="link-button7">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus7" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        
+                        <div class="button">
+                            <div class="link-button7">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus7" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        
+                        <div class="button">
+                            <div class="link-button7">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus7" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        
+                        <div class="button">
+                            <div class="link-button7">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus7" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }#}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>-->
+
+
+    {# --------------------- PLATEFORME ECO-GESTES --------------------- #}
+
+        <div class="actualities-block">
+            <div class="actualities-block-header" style="background-color: #93B4C1;">
+                <!--<img style="width: 20%; margin: 0 40%;" src="{#{ asset('images/actualite/logo_consom_Action.png') }#}" alt="">-->
+                <h2>LA PLATEFORME ÉCO-GESTES</h2>
+            </div>
+            <div class="actualities-block-body">
+                <div class="primary-actuality-row">
+                    <img class="primary-actuality-img" src="{{ asset('') }}" alt="">
+                    <div class="primary-actuality-content">
+                        <div class="primary-actuality-text">
+                            <h2>LA PLATEFORME <br>ÉCO-GESTES</h2>
+                            <span>
+                                Bientôt disponibles
+                            </span>
+                        </div>
+                        <a href="">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="other-actualities-row">
+                    <div class="actuality">
+                        <img class="actuality-img" src="{{ asset('') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>TITRE</h2>
+                            <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                        <a href="{{ path('actualite_type1') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+
+                    <div class="actuality">
+                            <img class="actuality-img" src="{{ asset('') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>TITRE</h2>
+                            <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                        <a href="{{ path('site_index') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+
+                    <div class="actuality">
+                        <img class="actuality-img" src="{{ asset('') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>TITRE</h2>
+                            <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                        <a href="{{ path('site_index') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+
+                    <div class="actuality">
+                        <img class="actuality-img" src="{{ asset('') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>TITRE</h2>
+                            <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                        <a href="{{ path('site_index') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--<div class="box">
+            <img class="img-responsive" src="{#{ asset('images/actualite/7_plateforme_sans_texte.png') }}"
+                 alt="Plateforme Éco-Gestes">
+
+            <div class="text">
+                <div class="col-6 offset-6">
+                    <h2>Plateforme<br>Éco-Gestes</h2>
+                    <p id="eco-gestes">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consequuntur fuga neque placeat recusandae. Dolor, fugit illum modi placeat porro quam tempora? Corporis debitis ex magni nihil quod, reiciendis repellendus. Aspernatur ducimus ipsum laborum minus</p>
+                    
+                    <div class="button">
+                        <div class="link-button8">
+                            <a href="{{ path('site_index') }}"><img id="en-savoir-plus8" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text2">
+                <div class="row">
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        
+                        <div class="button">
+                            <div class="link-button7">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus7" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        
+                        <div class="button">
+                            <div class="link-button7">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus7" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        
+                        <div class="button">
+                            <div class="link-button7">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus7" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        
+                        <div class="button">
+                            <div class="link-button7">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus7" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }#}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>-->
+
+
+    {# --------------------- PLATEFORME CONSOM'ACTION --------------------- #}
+
+        <div class="actualities-block">
+            <div class="actualities-block-header" style="background-color: #C8B010">
+                <img style="width: 20%; margin: 0 40%;" src="{{ asset('images/actualite/logo_consom_Action.png') }}" alt="">
+                <!--<h2>LA PLATEFORME CONSOM'ACTION</h2>-->
+            </div>
+            <div class="actualities-block-body">
+                <div class="primary-actuality-row">
+                    <img class="primary-actuality-img" src="{{ asset('') }}" alt="">
+                    <div class="primary-actuality-content">
+                        <div class="primary-actuality-text">
+                            <h2>LA PLATEFORME CONSOM'ACTION</h2>
+                            <span>
+                                Bientôt disponibles
+                            </span>
+                        </div>
+                        <a href="">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="other-actualities-row">
+                    <div class="actuality">
+                        <img class="actuality-img" src="{{ asset('') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>TITRE</h2>
+                            <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                        <a href="{{ path('actualite_type1') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+
+                    <div class="actuality">
+                            <img class="actuality-img" src="{{ asset('') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>TITRE</h2>
+                            <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                        <a href="{{ path('site_index') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+
+                    <div class="actuality">
+                        <img class="actuality-img" src="{{ asset('') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>TITRE</h2>
+                            <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                        <a href="{{ path('site_index') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+
+                    <div class="actuality">
+                        <img class="actuality-img" src="{{ asset('') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>TITRE</h2>
+                            <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                        <a href="{{ path('site_index') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--<div class="box">
+            <img class="img-responsive" src="{#{ asset('images/actualite/8_consomaction_bloc_sans_texte.png') }}"
+                 alt="Plateforme Consom'Action">
+
+            <div class="text">
+                <div class="col-6 offset-6">
+                    <h2>Plateforme Consom'Action</h2>
+                    <p>Le lancement de la plateforme Consom'Action est prévu dès le printemps 2019!</p>
+                    
+                    <div class="button">
+                        <div class="link-button9">
+                            <a href="{{ path('site_index') }}"><img id="en-savoir-plus9" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text2">
+                <div class="row">
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        
+                        <div class="button">
+                            <div class="link-button7">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus7" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        
+                        <div class="button">
+                            <div class="link-button7">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus7" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        
+                        <div class="button">
+                            <div class="link-button7">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus7" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        
+                        <div class="button">
+                            <div class="link-button7">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus7" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }#}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>-->
+
+
+    {# --------------------- LES ECO-ATELIERS --------------------- #}
+
+        <div class="actualities-block">
+            <div class="actualities-block-header" style="background-color: #FA00FA;">
+                <!--<img style="width: 20%; margin: 0 40%;" src="{#{ asset('images/actualite/logo_consom_Action.png') }#}" alt="">-->
+                <h2>LES ÉCO-ATELIERS</h2>
+            </div>
+            <div class="actualities-block-body">
+                <div class="primary-actuality-row">
+                    <img class="primary-actuality-img" src="{{ asset('') }}" alt="">
+                    <div class="primary-actuality-content">
+                        <div class="primary-actuality-text">
+                            <h2>LES ÉCO-ATELIERS</h2>
+                            <span>
+                                Bientôt disponibles
+                            </span>
+                        </div>
+                        <a href="">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="other-actualities-row">
+                    <div class="actuality">
+                        <img class="actuality-img" src="{{ asset('') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>TITRE</h2>
+                            <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                        <a href="{{ path('actualite_type1') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+
+                    <div class="actuality">
+                            <img class="actuality-img" src="{{ asset('') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>TITRE</h2>
+                            <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                        <a href="{{ path('site_index') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+
+                    <div class="actuality">
+                        <img class="actuality-img" src="{{ asset('') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>TITRE</h2>
+                            <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                        <a href="{{ path('site_index') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+
+                    <div class="actuality">
+                        <img class="actuality-img" src="{{ asset('') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>TITRE</h2>
+                            <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                        <a href="{{ path('site_index') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--<div class="box">
+            <img class="img-responsive" src="{#{ asset('images/actualite/9_eco_ateliers_bloc_sans_texte.png') }}"
+                 alt="Les Éco-Ateliers">
+
+            <div class="text">
+                <div class="col-6 offset-6">
+                    <h2>Les Éco-Ateliers</h2>
+                    <p>Les Éco-Ateliers: se former, s'informer et se sensibiliser aux différentes dimensions du Développement Durable tout en s'amusant!</p>
+                    
+                    <div class="button">
+                        <div class="link-button10">
+                            <a href="{{ path('site_index') }}"><img id="en-savoir-plus10" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text2">
+                <div class="row">
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        
+                        <div class="button">
+                            <div class="link-button7">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus7" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        
+                        <div class="button">
+                            <div class="link-button7">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus7" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        
+                        <div class="button">
+                            <div class="link-button7">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus7" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        
+                        <div class="button">
+                            <div class="link-button7">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus7" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }#}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>-->
+
+
+    {# --------------------- SHARING ECONOMY --------------------- #}
+
+        <div class="actualities-block">
+            <div class="actualities-block-header" style="background-color: black;">
+                <!--<img style="width: 20%; margin: 0 40%;" src="{#{ asset('images/actualite/logo_consom_Action.png') }#}" alt="">-->
+                <h2>SHARING ECONOMY</h2>
+            </div>
+            <div class="actualities-block-body">
+                <div class="primary-actuality-row">
+                    <img class="primary-actuality-img" src="{{ asset('') }}" alt="">
+                    <div class="primary-actuality-content">
+                        <div class="primary-actuality-text">
+                            <h2>SHARING ECONOMY</h2>
+                            <span>
+                                Bientôt disponibles
+                            </span>
+                        </div>
+                        <a href="">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="other-actualities-row">
+                    <div class="actuality">
+                        <img class="actuality-img" src="{{ asset('') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>TITRE</h2>
+                            <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                        <a href="{{ path('actualite_type1') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+
+                    <div class="actuality">
+                            <img class="actuality-img" src="{{ asset('') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>TITRE</h2>
+                            <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                        <a href="{{ path('site_index') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+
+                    <div class="actuality">
+                        <img class="actuality-img" src="{{ asset('') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>TITRE</h2>
+                            <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                        <a href="{{ path('site_index') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+
+                    <div class="actuality">
+                        <img class="actuality-img" src="{{ asset('') }}" alt="">
+                        <div class="actuality-centent">
+                            <h2>TITRE</h2>
+                            <p>Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                        <a href="{{ path('site_index') }}">
+                            <img src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--<div class="box">
+            <img class="img-responsive" src="{#{ asset('images/actualite/10_sharing_bloc_sans_texte_.png') }}"
+                 alt="Sharing Economy">
+
+            <div class="text">
+                <div class="col-6 offset-6">
+                    <h2>Sharing Economy</h2>
+                    <p id="landing-page">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consequuntur fuga neque placeat recusandae. Dolor, fugit illum modi placeat porro quam tempora? Accusamus, aut consequatur, doloribus ea est et harum hic iste libero molestias, quaerat quia quidem quod ratione repellat soluta tempora tenetur! Illum.</p>
+                    
+                    <div class="button">
+                        <div class="link-button11">
+                            <a href="{{ path('site_index') }}"><img id="en-savoir-plus11" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text2">
+                <div class="row">
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        
+                        <div class="button">
+                            <div class="link-button7">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus7" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        
+                        <div class="button">
+                            <div class="link-button7">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus7" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        
+                        <div class="button">
+                            <div class="link-button7">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus7" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h2>Titre</h2>
+                        <p id="titre">Texte explicatif. Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        
+                        <div class="button">
+                            <div class="link-button7">
+                                <a href="{{ path('site_index') }}"><img id="en-savoir-plus7" src="{{ asset('images/actualite/bouton_en_savoir_plus.png') }#}" alt="En savoir +"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>-->
+
+
+    {# --------------------- BOUTON RETOUR AU DASHBOARD --------------------- #}
+
+        <div class="retour-dashboard">
+            <div class="link-dashboard">
+                <a href="{{ path('presentationdashboard') }}"></a>
+            </div>
+            <img id="bouton-dashboard" src="{{ asset('images/actualite/bouton_retour_au_dash.png') }}"
+                 alt="Retour au dashboard">
+        </div>
+
+
+    {# --------------------- BLOC BANNIERES --------------------- #}
+
+        {% include 'site/humans_ambassador_community.html.twig' %}
+
+        <!--<div class="bannieres">
+            <div class="link-humans">
+                <a href="{#{ path('humans') }}"></a>
+            </div>
+            <div class="link-ambassadeur">
+                <a href="{{ path('ambassadeur') }}"></a>
+            </div>
+            <div class="link-slc">
+                <a href="{{ path('community') }}"></a>
+            </div>
+            <img class="img-responsive" src="{{ asset('images/actualite/11_bloc_bannieres.png') }#}"
+                 alt="Bloc bannières">
+        </div>-->
+
+
+    {# --------------------- FOOTER --------------------- #}
+
+    {#<div>
+        <img class="img-responsive" src="{{ asset('images/pelle_terre_footer.jpg') }}"
+             alt="Footer">
+    </div>#}
+
+    {% include 'footer.html.twig' %}
+
+{% endblock %}
+

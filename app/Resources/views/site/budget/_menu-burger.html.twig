@@ -1,0 +1,24 @@
+{#  Cette vue représente le ménu burger situé sur les pages du site en haut à droite
+    e.g: Il est inclut dans la vue #budgjet_programme.html.twig
+#}
+<div class="dollar-img-container">
+    <div class="dropdown burger">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="{{path('site_index')}}">Accueil</a>
+            <a class="dropdown-item" href="{{path('presentationdashboard')}}">Présentation dashboard</a>
+            <a class="dropdown-item" href="{{path('site_dashboard')}}">Dashboard</a>
+
+            <div class="dropdown-divider"></div>
+
+            {% if userslp != null %}
+                <a class="dropdown-item" href="/logout">Déconnexion</a>
+            {% else %}
+                <a class="dropdown-item" href="/loging">Connexion</a>
+            {% endif %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,127 @@
+{% extends "::base.html.twig" %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('css/Security/login.css') }}">
+{% endblock %}
+
+{% block body %}
+
+
+<div class="row">
+    
+    <header>
+        <div class="header">
+            <img class="d-block" src="{{ asset('images/slider/slide_3.jpg') }}" alt="Dashboard">
+            <div class="text-inside-header">
+                <h1>Connexion</h1> 
+                <p>Evaluez votre empreinte chromatique et réduisez vos émissions !</p>
+            </div>
+        </div>
+        <div class="dropdown burger">
+            <a class="dropdown-item" class="btn btn-secondary dropdown-toggle"
+                    href="{{ path('site_index') }}">
+                <button class="btn btn-secondary dropdown-toggle"><i class="fa fa-home" style="font-size:24px"></i>
+                </button>
+            </a>
+        </div>
+    </header>
+<div class="main-title">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 intro">
+               
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pt-3 pb-3">
+    <div class="container">
+        
+        <!-- debut notifications -->
+        {# for type, messages in app.session.flashbag.all() #}
+            {# for message in messages #}
+            <!--
+            <div class="alert alert-{# type #}">
+                {# message #}
+            </div>
+            -->
+            {# endfor #}
+        {# endfor #}
+        <!-- fin notifications -->
+
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="subtitle" style="color:#539ac4;">Se connecter</h2>
+
+                {% if error %}
+                <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
+
+                <div id="login_container">
+                    <form action="{{ path("fos_user_security_check") }}" method="post">
+                        <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+
+                        <div class="form-group">
+                            <label for="username">Nom d'utilisateur ou adresse mail</label>
+                            <input class="form-control" type="text" id="username" name="_username"
+                                value="{{ last_username }}" required="required" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">{{ 'security.login.password'|trans }}</label>
+                            <input class="form-control" type="password" id="password" name="_password"
+                                required="required" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="remember_me">
+                                <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+                                {{ 'security.login.remember_me'|trans }}
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <input class="btn btn-primary" type="submit" id="_submit" name="_submit"
+                                value="{{ 'security.login.submit'|trans }}" />
+                        </div>
+                    </form>
+
+                    <a href="{{ path('fos_user_resetting_request') }}" class="gold">Mot de passe oublié</a>
+
+                </div>
+            </div>
+
+            <div class="col-lg-4 offset-lg-2" style="margin-top:20px;">
+                <div class="gold-block">
+                    <h3 style="color:#539ac4;" >Pas encore inscrit ?</h3>
+                    <p class="h5">Rejoignez le site SLP</p>
+                    <p>"Tu te sens concerné par l’avenir de la planète ? Tu es sensible à l’environnement ? Tu
+                        t’intéresses à un mode de vie
+                        plus sobre et respectueux ? Le site SLP regorge d’astuces, d’ateliers et même de questionnaires
+                        pour calculer ton
+                        empreinte chromatique. Alors n’hésites plus et rejoins nous !"</p>
+                    <p>
+                        <a href="{{ path('fos_user_registration_register') }}" title="Inscription"
+                            class="btn btn-primary">Rejoindre le site</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <footer>
+                <div class="d-flex flex-row justify-content-around footer" style="height:380px;    ">
+                </div>
+            </footer>
+        </div>
+        
+    </div>
+</div>
+
+{% endblock %}

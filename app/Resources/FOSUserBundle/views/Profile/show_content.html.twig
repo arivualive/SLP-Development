@@ -1,0 +1,93 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('css/register.css') }}">
+<link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+{% endblock %}
+
+<div class="row">
+    <header>
+        <div class="header">
+            <img class="d-block" src="{{ asset('images/slider/slide_3.jpg') }}" alt="Dashboard">
+            <div class="text-inside-header">
+                <h1>Mot de passe réinitialisé</h1>
+                <!--<p>Votre mot de passe a été réinitialisé</p>-->
+            </div>
+        </div>
+        <div class="dropdown burger">
+            <a class="dropdown-item" class="btn btn-secondary dropdown-toggle"
+                    href="{{ path('site_index') }}">
+                <button class="btn btn-secondary dropdown-toggle"><i class="fa fa-home" style="font-size:24px"></i>
+                </button>
+            </a>
+        </div>
+    </header>
+    
+    <div class="main-title">
+        <div class="container">
+            <h1>{{ user.username | capitalize }}</h1>
+        </div>
+    </div>
+
+    <div>
+        <div class="container"><!---->
+            <div class="control-button"><!---->
+                <div class="btn-circle"><!---->
+                   <!--<span class="profile-settings glyphicon glyphicon-user"></span>-->
+
+                    <!--<ul class="more-dropdown">
+                        <li>
+                            <a href="#" title="Supprimer mon compte" data-toggle="modal" data-target="#deleteModal" class="text-danger">Supprimer mon compte</a>
+                        </li>
+                    </ul>-->
+                    <!--<a class="return-home" href="#" title="Supprimer mon compte" data-toggle="modal" data-target="#deleteModal" class="return-home text-danger">
+                        <button  class="button-delete-account">
+                            Supprimer mon compte
+                        </button>
+                    </a>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% for type, messages in app.session.flashbag.all() %}
+        {% for message in messages %}
+            <div class="alert alert-{{ type }}">
+                <div class="container">
+                    {{ message }}
+                </div>
+            </div>
+        {% endfor %}
+    {% endfor %}
+
+    <div class="gallery">
+        <div class="container">
+
+
+        </div>
+    </div>
+
+
+    <!-- Delete Account Modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="delteUser">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="delteUser">Supprimer mon compte</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Attention cette action est irrévesible.<br>Souhaitez-vous vraiment quitter l'Outdoor Club et supprimer votre compte ?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                    <a href="{#{ path('site_delete_account') }#}" title="Confirmé la suppression" class="btn btn-danger">Supprimer mon compte</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12" >
+        {% include 'footer.html.twig' %}
+    </div>
+</div>

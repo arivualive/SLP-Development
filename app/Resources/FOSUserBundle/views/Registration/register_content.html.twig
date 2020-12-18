@@ -1,0 +1,64 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+<link rel="stylesheet" href="{{ asset('css/register.css') }}">
+
+{% endblock %}
+
+<div class="row">
+    <header>
+        <div class="header">
+            <img class="d-block" src="{{ asset('images/slider/slide_3.jpg') }}" alt="Dashboard">
+            <div class="text-inside-header">
+                <h1>Inscription</h1>
+                <p>Rejoindre SLP: <br />C'est adhérer à une communauté ...</p>
+            </div>
+        </div>
+        <div class="dropdown burger">
+            <a class="dropdown-item btn btn-secondary dropdown-toggle"
+                    href="{{ path('site_index') }}">
+                <button class="btn btn-secondary dropdown-toggle"><i class="fa fa-home" style="font-size:24px"></i>
+                </button>
+            </a>
+        </div>
+    </header>
+
+<div class="pt-3 pb-3 content" style="">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-xs-12">
+                <h2 class="registration-title">Inscription</h2>
+                    <p>Pour la sécurité de votre compte, vous devez avoir un mot de passe contenant au moins 8 caractères, avec un chiffre, une minuscule et une majuscule.</p>
+                    {{ form_start(form) }}
+                    {{ form_widget(form) }}
+                    <div class="form-group">
+                        <input type="submit" value="{{ 'registration.submit'|trans }}" class="btn btn-lg btn-gimary" />
+                    </div>
+                    <p>
+                        Vous avez déjà un compte ?
+                        <a href="{{ path('fos_user_security_login') }}">Se connecter</a>
+                    </p>
+                </form>
+            </div>
+
+            <div class="siterules col-lg-5 offset-lg-1 col-xs-12">
+                <div class="text-left">
+                    <h2 style="color:#539ac4;">Règlement du site</h2>
+                    <p>En vous inscrivant, vous vous engagez à respecter les régles suivantes :</p>
+                    <ul>
+                        <li>Respecter les autres utilisateurs</li>
+                        <li>Poster des photos qui vous appartiennent</li>
+                        <li>Ne pas faire de publicité</li>
+                        <li>Respecter les lois</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12" >
+        {% include 'footer.html.twig' %}
+    </div>
+</div>

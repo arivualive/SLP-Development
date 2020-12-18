@@ -1,0 +1,340 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/empreinte_chromatique_individu_famille.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+{% endblock %}
+
+{% block body %}
+    <header class="head">
+        <div class="row">
+            <div class="offset-1 col-10 col-md-12 offset-md-0 ">
+                <div id="carousel-slp" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100 image-header img-responsive"
+                                 src="{{ asset('images/empreinte-chromatique/individus.jpg') }}" alt="Dashboard"
+                            >
+                            <div class="carousel-caption d-none d-block intro col-6 top-adjust">
+                                <h1>Empreinte <br> individuelle</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown burger">
+                        <a  class="dropdown-item btn btn-secondary dropdown-toggle"
+                           href="{{ path('empreinte_chromatique') }}">
+                            <button class="btn btn-secondary dropdown-toggle"><i class="fa fa-home"
+                                                                                 style="font-size:24px"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="row">
+        <div class="offset-1 col-10 offset-md-0 col-md-12">
+            <div class="intro-explicatif">
+                <h1 class="text-center">L'Empreinte Chromatique</h1><br>
+                <p><b>L’empreinte chromatique</b> est un <b>évaluateur</b> d’<b>impacts universel</b>,
+                    analysant les
+                    <b>conséquences associées</b> aux <b>choix </b> de <strong>comportement</strong> et de <b>consommation</b>
+                    d’une
+                    cible
+                    donnée, développé
+                    par <b>gaea21</b> au terme de 10 ans de recherches indépendantes.<span
+                            id="spacer_intro"></span>
+                    Les <strong>impacts</strong> peuvent être de plusieurs natures,<strong> économiques</strong>,
+                    <strong>sociaux </strong>et <strong> environnementaux</strong>.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--  Video  -->
+    <div class="row">
+        <div class="col-12 text-center">
+            <div class="video_empreinte_chromatique">
+                    <iframe src="https://www.youtube.com/embed/ZvJBhgaMYGA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="offset-1 col-10 offset-md-0 col-md-12">
+            <p class="text-after-video">Cet <strong>outil</strong> s’appuie donc sur un système de
+                <strong>comparaisons</strong> d’<strong>indicateurs</strong>  au travers de
+                <b>8 processus
+                </b> :
+            </p>
+        </div>
+    </div>
+
+
+
+    <!--  Processus   -->
+    <div class="offset-1 col-10 col-md-12 offset-md-0 ">
+        <div class="processus">
+            <h1 class="text-center">Processus</h1>
+            <div class="row">
+                <div class="col-4">
+                    <img id="img_communiquer" class=" mx-auto d-block"
+                         src="{{ asset('images/empreinte-chromatique/communiquer.png') }}" alt="communiquer">
+                    <h3 class="title_processus text-center" id="title_communiquer"> COMMUNIQUER</h3>
+                </div>
+                <div class="col-4">
+                    <img id="img_se_deplacer" class=" mx-auto d-block"
+                         src="{{ asset('images/empreinte-chromatique/se_deplacer.png') }}" alt="se deplacer">
+                    <h3 class="title_processus text-center" id="title_se_deplacer"> SE DEPLACER </h3>
+                </div>
+                <div class="col-4">
+                    <img id="img_manger" class=" mx-auto d-block"
+                         src="{{ asset('images/empreinte-chromatique/manger.png') }}" alt="manger">
+                    <h3 class="title_processus text-center" id="title_manger"> MANGER </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img id="img_habiter" class=" mx-auto d-block"
+                         src="{{ asset('images/empreinte-chromatique/habiter.png') }}"
+                         alt="habiter">
+                    <h3 class="title_processus text-center" id="title_habiter"> HABITER</h3>
+                </div>
+                <div class="col-4">
+                    <img id="img_se_distraire" class=" mx-auto d-block"
+                         src="{{ asset('images/empreinte-chromatique/se_distraire.png') }}"
+                         alt="se distraire">
+                    <h3 class="title-processus text-center" id="title_se_distraire"> SE DISTRAIRE </h3>
+                </div>
+                <div class="col-4">
+                    <img id="img_shabiller" class=" mx-auto d-block"
+                         src="{{ asset('images/empreinte-chromatique/s_habiller.png') }}" alt="s'habiller">
+                    <h3 class="title_processus text-center" id="title_shabiller"> S'HABILLER</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 offset-1 offset-md-0 col-5">
+                    <img id="img_prendre_soin_de_soi" class=" mx-auto d-block"
+                         src="{{ asset('images/empreinte-chromatique/prendre_soin_de_soiz.png') }}"
+                         alt="prendre soin de soi">
+                    <h3 class="title_processus text-center" id="title_prendre_soin_de_soi"> PRENDRE SOIN DE SOI </h3>
+                </div>
+                <div class="col-md-6 col-5">
+                    <img id="img_travailler" class=" mx-auto d-block"
+                         src="{{ asset('images/empreinte-chromatique/travaille.png') }}" alt="travailler">
+                    <h3 class="title_processus text-center" id="title_travailler"> TRAVAILLER</h3>
+                </div>
+            </div>
+        </div>
+            <p class="processus_text">
+                La <strong>comparaison</strong> d’<strong>indicateurs</strong> donnera lieu à un <strong>résultat
+                    final</strong>, l’<strong>empreinte chromatique</strong>, dont la
+                <strong>couleur </strong>dépendra du <strong> mode de vie </strong>de l’<strong>individu </strong>et
+                de son <strong>adéquation </strong> avec le <strong>développement durable. </strong>
+                <span id="spacer_about"></span>
+                Elle permettra de se positionner, de s’<strong>auto évaluer</strong> en matière de
+                <strong>développement durable, </strong>
+                et de visualiser les <strong>changements restants </strong> à faire pour <strong>améliorer son
+                    empreinte. </strong>
+            </p>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!--  Critere   -->
+
+
+        <div class="col-12 col-md-12 col-sm-12">
+            <div class="critere">
+                <h1 class="text-center">Les critères d'analyse</h1>
+                <div class="row myrow">
+                    <div class="offset-md-1 col-4 ">
+                        <img id="img_indicateur_eco" class="img-responsive" alt="indicateurEco"
+                             src="{{ asset('images/empreinte-chromatique/economique.jpg') }}">
+                    </div>
+                    <div class="col-8 col-sm-7  indicateur">
+                        <p class="first">
+                            Cet indicateur permet d’évaluer les activités économiques de
+                            chaque individu et d’analyser ses comportements et ses choix
+                            de consommation quotidiens.
+                        </p>
+                        <br>
+                            <li> Il se base principalement sur les critères suivants : </li>
+                            <li> Allocation du revenu mensuel (dépenses de consommation
+                                prioritaires et préférentielles)</li>
+                            <li>
+                             Notion d’usage et de besoin (dépenses de necessité et
+                            dépenses d’opportunité)</li>
+                            <li>
+                             Critères d’achat (marque, habitude, origine, prix....).
+                            </li>
+                    </div>
+                </div>
+                <div class="row myrow">
+                    <div class="offset-md-1 col-8 col-md-6  indicateur">
+                        <p class="second ">
+                            Cet indicateur détermine le profil psycho-sociologique de
+                            chaque individu.
+                            Il se base principalement sur les critères touchant les dimensions suivantes :
+                        </p>
+                        <br>
+                        <li>Santé </li>
+                        <li>Confort </li>
+                        <li>Etat civil </li>
+                        <li>Niveau d’éducation </li>
+                        <li>Statut socio-professionnel </li>
+                        <li>Appartenance à un groupe ou à une communauté </li>
+                        <li>Image et perception de soi et d’autrui. </li>
+
+                    </div>
+                    <div class="col-4 ">
+                        <img id="img_indicateur_social" class="img-responsive " alt="indicateurEco"
+                             src="{{ asset('images/empreinte-chromatique/social.jpg') }}">
+                    </div>
+                </div>
+                <div class="row myrow">
+                    <div class="offset-md-1 col-4   ">
+                        <img id="img_indicateur_environnemental" class="img-responsive" alt="indicateurEco"
+                             src="{{ asset('images/empreinte-chromatique/environnemental.jpg') }}">
+                    </div>
+                    <div class="col-8 col-sm-7  indicateur">
+                        <p class=" third">
+                            Cet indicateur permet d’évaluer le niveau d’éco-conscience
+                            de l’individu et son impact sur ses choix et comportements
+                            quotidiens.
+                            Il se base principalement sur les critères suivants :
+                        </p>
+                        <br>
+                        <li>Consommation / production d’énergie </li>
+                        <li>Consommation de ressources naturelles </li>
+                        <li>Alimentation </li>
+                        <li>Mode d’achat/dépense</li>
+                        <li>Production, tri et valorisation des déchets</li>
+                        <li>Mode de mobilité</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    <div class="echelle">
+        <h1 class="text-center">Échelle individus</h1>
+        <div class="row">
+            <div class="offset-md-0 offset-1 col-10 col-md-6 text-center">
+
+                <img alt="Bootstrap Image Preview" src="{{ asset('images/empreinte-chromatique/vert_clair.png') }}"
+                     class="rounded-circle" id="rounded_circle_green">
+                <h2> Mode de vie éco-responsable <br> ou « altruiste et irréprochable »<br></h2>
+                <p class="spacer_echelle">
+                    <br>
+                    •Structuration de sa vie autour de choix de consommation et de comportements
+                    durables : choix
+                    responsables, altruistes, favorisant l’économie positive •<br>
+                    <br>
+                    • Contributeur positif à l’éco-système •<br>
+                    <br>
+                    • Limitation maximale de son empreinte carbone •<br>
+                </p>
+            </div>
+            <div class="offset-md-0 offset-1 col-10  col-md-6 text-center">
+                <img alt="Bootstrap Image Preview" src="{{ asset('images/empreinte-chromatique/vert_foncé.png') }}"
+                     class="rounded-circle" id="rounded_circle_green_dark">
+                <h2>Mode de vie eco positif <br> ou « engagé et pro-actif » ou « consom’acteur »<br></h2>
+                <p class="spacer_echelle">
+                    <br>
+                    • L’individu devient consom’acteur,<br> décidé à mettre en place des changements<br> de niveau 2
+                    conduisant à un changement<br> de comportement et de mode de consommation. •
+                </p>
+            </div>
+            <div class="offset-md-0 offset-1 col-10 col-md-6 text-center">
+                <img alt="Bootstrap Image Preview" src="{{ asset('images/empreinte-chromatique/jaune.png') }}"
+                     class="rounded-circle " id="rounded_circle_yellow">
+                <h2>Eco conscience,<br> ou « sensibilisé et volontaire » : <br></h2>
+                <p class="spacer_echelle">
+                    <br>
+                    • Sur la voie du changement durable, <br> prise de conscience •<br>
+                    <br>
+                    • Mise en place de changements de niveau1, <br> premiers changements comportementaux <br>
+                    impactant
+                    encore peu le mode de consommation. •
+                </p>
+            </div>
+            <div class="offset-md-0 offset-1 col-10  col-md-6 text-center">
+                <img alt="Bootstrap Image Preview" src="{{ asset('images/empreinte-chromatique/orange.png') }}"
+                     class="rounded-circle" id="rounded_circle_orange">
+                <h2>Mode de vie neutre :</h2>
+                <p class="spacer_echelle">
+                    <br>
+                    <br>
+                    • Sans volonté particulière de changer •
+                    <br>
+                    • Impacts positifs <br> et négatifs globalement équivalents • <br>
+                </p>
+            </div>
+            <div class="offset-md-0 offset-1 col-10 col-md-6 text-center">
+                <img alt="Bootstrap Image Preview" src="{{ asset('images/empreinte-chromatique/rouge.png') }}"
+                     class="rounded-circle img-responsive mx-auto d-block" id="rounded_circle_red">
+                <h2> Mode de vie peu durable </h2>
+                <p class="spacer_echelle">
+            </div>
+            <div class="offset-md-0 offset-1 col-10 col-md-6 text-center">
+                <img alt="Bootstrap Image Preview" src="{{ asset('images/empreinte-chromatique/noir.png') }}"
+                     class="rounded-circle img-responsive mx-auto d-block" id="rounded_circle_black">
+                <h2>Mode de vie non-durable</h2>
+                <p class="spacer_echelle">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div id="classement" class="classement">
+        <h1 class="text-center">LE CLASSEMENT</h1>
+        <div class="row">
+            <div class="offset-1 col-10 col-md-11 ">
+                <p class="description">
+                    Une fois l’empreinte chromatique individuelle déterminée, le résultat pourra être comparé à 2
+                    catégories : <br>
+                    <br>
+                    • celle des autres utilisateurs dont les profils sont similaires ou comparables
+                    (âge, revenu, catégorie socio-professionnelle, localisation géographique) ;<br>
+                    <br>
+                    • celle des amis (invités sur la plateforme de networking
+                    de l’application green coaching pour individus/familles).<br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+<!--
+    <div class="offset-1 col-10 col-md-10 ">
+        <footer>
+            <img class="img-responsive" src="{{ asset('images/pelle_terre_footer.jpg') }}"
+                 alt="image footer">
+        </footer>
+    </div>
+
+    -->
+
+    <div class="col-12" >
+        {% include 'footer.html.twig' %}
+    </div>
+
+
+
+{% endblock %}
+
+{% block javascripts %}
+    
+    <script link rel="stylesheet" href="{{ asset('js/bootstrap.min.js') }}"></script>
+
+
+{% endblock %}

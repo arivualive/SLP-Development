@@ -1,0 +1,599 @@
+
+
+
+/* Section atelier alimentation */
+
+
+/* CSS Document */
+
+
+/*
+
+@media(max-width:767px){}
+@media(min-width:768px){}
+@media(min-width:992px){}
+@media(min-width:1200px){}
+
+*/
+
+/* ---------GLOBAL-------------*/
+
+.col-md-4,.container-fluid {
+    padding-left:0px;
+    padding-right:0px;
+    width: 90%;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+body {
+    text-align: center;
+    --style-bold: 700;
+    --style-regular: 400;
+    --style-light: 300;
+}
+body * {
+    font-family: 'Nunito', sans-serif;
+}
+a {
+    color: inherit;
+}
+
+header {
+    background-image: url("../images/atelier-eco/ateliers_eco_header.jpg");
+    background-size: cover;
+    height: 650px;
+}
+
+/******************************/
+
+body.pushable .pusher {
+
+	background-color: white;
+
+}
+
+body {
+	background-color: white;
+}
+
+
+.ui.menu {
+
+	margin-bottom: 0px !important;
+}
+
+
+
+.container-fluid {
+	background-color: white;
+}
+
+section {
+	margin-bottom: 66px;
+	margin-top: 66px;
+}
+
+h3{
+  font-size: 32px;
+  font-family: "Nunito";
+  color: rgb(97, 173, 213);
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+body {
+	/*padding-left: 120px;
+	padding-right: 120px;*/
+}
+
+/* ---------NAVBAR-------------*/
+
+nav {
+/*background-color: #67ABCF;*/
+}
+#mainNav {
+	opacity: 1;
+}
+#mainNav a {
+	color: white;
+	font-size: 18px;
+	font-family: nunito;
+	text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+}
+#navbarResponsive {
+/*background-color: black;*/
+	/*background-color:#67ABCF;
+	opacity: 0.8;*/
+}
+
+.btn.btn-primary.dropdown-toggle.dropdown_btn {
+  background-image:url(../../ecoatelier/img/icomenu.png);
+  height:80px;
+  width:88px;
+  background-color:rgba(0, 0, 0, 0);
+  border:none;
+  background-repeat:no-repeat;
+  outline:none;
+}
+
+.dropdown.fixed-top {
+  text-align:right;
+  margin:29px;
+}
+
+element.style {
+}
+
+@media (min-width: 992px) {
+  #navbar {
+    padding-right:120px;
+  }
+}
+
+.btn.btn-primary.dropdown-toggle.dropdown_btn:focus {
+  box-shadow:none;
+}
+
+
+
+/* ---------HEADER-------------*/
+
+header.masthead {
+	text-align: center;
+	color: white;
+	background-image: url("../images/atelier_alimentation/header_cover_alim.jpg");
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: center center;
+	background-size: cover;
+	font-size: 50px;
+	line-height: 50px;
+	margin-bottom: 25px;
+	padding-top: 176px;
+	padding-bottom: 80px;
+}
+header .container {
+	/*padding-left: 250px;
+	padding-right: 250px;*/
+}
+.header-btn {
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.header-btn :hover {
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+}
+.intro-lead-in {
+	font-size: 48px;
+	font-weight: bold;
+	font-family: 'Nunito', sans-serif;
+	color: rgb(255, 255, 255);
+	text-transform: uppercase;
+	line-height: 1.2;
+	text-align: center;
+}
+.intro-heading {
+	padding-top: 53px;
+	padding-bottom: 140px;
+	font-size: 30px;
+	font-weight: bold;
+	font-family: 'Nunito', sans-serif;
+	color: rgb(255, 255, 255);
+	text-align: justifyCenter;
+	line-height: 1.2;
+}
+
+@media(min-width:992px){
+	.intro-heading {
+		margin-left: 230px;
+		margin-right: 230px;
+	}
+}
+
+/* ---------SECTION INTRO -------------*/
+
+#intro p {
+  font-size: 18px;
+  font-family: "Nunito";
+  color: rgb(97, 173, 213);
+  line-height: 1.2;
+  text-align: center;
+}
+
+
+#intro h2 {
+  font-size: 32px;
+  font-family: "Nunito";
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  line-height: 1.2;
+  margin:18px;
+}
+
+.intro {
+	background-color: #61ADD5;
+}
+
+
+#intro option {
+	  font-size: 16px;
+  font-family: "Nunito";
+  color: rgb(97, 173, 213);
+  line-height: 1.2;
+}
+
+#intro .form-group {
+	margin: 18px;
+}
+
+
+/* ---------SECTION BODY ARTICLE-------------*/
+
+#mybody {
+	margin-top: 66px;
+	margin-bottom: 66px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#mybody h4 {
+  font-size: 30px;
+  font-family: "Nunito";
+  color: rgb(97, 173, 213);
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: left;
+}
+
+#mybody p {
+  font-family: "Nunito";
+}
+
+#mybody .col-md-8 .col-md-8 {
+	background-color:#BBE1F4;
+}
+
+#mybody .col-md-8 .col-md-4 {
+	margin:0;
+	padding:0;
+}
+
+.col-md-4, .container-fluid {
+		margin:0;
+	padding:0;
+}
+
+#mybody .col-md-8 img {
+    width: 100%;
+    height: 100%;
+}
+
+#mybody .article_title {
+	margin: auto;
+	text-align: left;
+	background-color: #BBE1F4;
+	color: rgb(97, 173, 213);
+	height: 307px;
+	padding-top: 12px;
+}
+
+#mybody .article_img {
+	background-image: url("../images/atelier_alimentation/article_fraicheur.png");
+	background-size: cover;
+}
+
+#mybody .mybody_definition {
+	margin-top: 75px;
+}
+
+#mybody li {
+	text-align: left;
+}
+
+/* ---------SECTION SIDEBAR-------------*/
+
+#mysidebar .card {
+	background-color: #BBE1F4;
+	text-align: center;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+#mysidebar .card h5 {
+  font-size: 25px;
+  font-family: "Nunito";
+  color: rgb(97, 173, 213);
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+#mysidebar .card a {
+	color: white;
+	background-color:#62ADD6;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 3px;
+	padding-right:3px;
+	font-size: 20px;
+    font-family: "Nunito";
+    line-height: 1.2;
+}
+
+#mysidebar .mysidebar_calendartitle {
+	font-family: "Nunito";
+    color: rgb(97, 173, 213);
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom:20px;
+}
+
+/* ---------SECTION DECOUVERTE DE RECETTES ET BENEFICES-------------*/
+
+#discover .container-fluid {
+	background-color: #963561;
+}
+
+
+@media(min-width:768px){
+
+#discover .discover_myrow{
+	padding-left: 150px;
+	margin-right: 150px;
+}
+	}
+
+#discover .discover_title {
+	background-color: #8DC9A5;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+#discover h5 {
+  font-size: 30px;
+  font-family: "Nunito";
+  color: rgba(150,53,97,1.00);
+  line-height: 1.25;
+  text-align: center
+}
+
+#discover h6 {
+	font-style: italic;
+	text-decoration: underline;
+	color: #8DC9A5;
+	font-family: "Nunito";
+	font-size: 20px;
+	font-weight: 300;
+	margin-top:35px;
+	margin-bottom: 30px;
+}
+
+#discover  ul{
+	margin:0;
+	padding:0;
+	margin-bottom: 35px;
+}
+
+#discover  li {
+	font-family: "Nunito";
+	color: white;
+	list-style: none;
+	font-size: 20px;
+	font-weight: 300;
+}
+
+#discover h6, li {
+	text-align: center;
+}
+
+
+
+
+/* ---------PROCHAIN ATELIER-------------*/
+
+#nextworkshops h2 {
+  font-size: 32px;
+  font-family: "Nunito";
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  line-height: 1.2;
+  margin:18px;
+  text-align: center;
+}
+
+#nextworkshops .container-fluid {
+	/*padding-left: 20px;
+	padding-right: 20px;*/
+	margin-top: 60px;
+}
+
+#nextworkshops .card {
+	padding-left: 50px;
+	padding-right: 50px;
+	border: none;
+}
+
+#nextworkshops .card-body {
+  font-size: 25px;
+  font-family: "Nunito";
+  color: rgb(97, 173, 213);
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 25px;
+	background-color: #BBE1F4;
+	text-align: center;
+}
+
+#nextworkshops .card a {
+	color: white;
+	background-color:#62ADD6;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 33px;
+	padding-right:33px;
+	font-size: 20px;
+    font-family: "Nunito";
+    line-height: 1.2;
+		text-align: center;
+}
+
+/* ---------FORMULAIRE-------------*/
+
+#formulaire_alimention h5 {
+  font-size: 24px;
+  font-family: "Nunito";
+  color: rgb(100, 174, 211);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.25;
+  text-align: center;
+}
+
+#FormControlSelect-classique option {
+	font-family: nunito;
+	font-weight: 400;
+	font-size: 18px;
+}
+
+#formulaire_alimention input {
+	color:#67ABCF;
+	font-family: nunito;
+	font-weight: 400;
+	font-size: 18px;
+}
+
+#formulaire_alimention button {
+	/*color:#67ABCF;*/
+	font-family: nunito;
+	font-weight: 400;
+	font-size: 18px;
+}
+
+#formulaire_alimention textarea, input {
+	height: 45px;
+}
+
+#formulaire_alimention select {
+	height: 45px;
+}
+
+
+/* ---------FOOTER-------------*/
+
+
+/*
+
+footer{
+	margin-top: 100px;
+	margin-bottom: 0px;
+	background-image: url("../images/ateliereco/footer_atelierseco.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    height: 382px;
+
+}
+
+footer h5 {
+	text-decoration: none;
+	color:white;
+	font-size: 22px;
+	font-family: nunito;
+	font-weight: bold;
+	text-align: left;
+}
+
+footer  a {
+	color: #FFFFFF;
+	text-decoration: none;
+
+	font-family: nunito;
+	font-weight: lighter;
+	text-decoration: none;
+}
+
+footer a:hover {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+footer .row {
+	padding-top: 70px;
+	padding-bottom: 0px;
+}
+
+footer .list-unstyled {
+		padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+footer li {
+	text-align: left;
+}
+
+
+
+footer h3 {
+	font-family:'Nunito';
+	color:white;
+	font-size:22px;
+	font-weight:900;
+	text-align: left;
+}
+
+
+footer ul {
+	padding:0;
+	list-style:none;
+	line-height:1.6;
+	font-size:14px;
+	margin-bottom:0;
+}
+
+
+footer li {
+	font-family:'Nunito';
+	color:white;
+	margin-top:10px;
+	margin-bottom:10px;
+	list-style:none;
+	font-weight:500;
+	font-size:16px;
+	margin-left: 0px;
+	padding-left: 0px;
+	margin-top: 15px;
+}
+
+
+
+*/
+
+
+
+#intro p {
+	margin-bottom: 50px;
+
+}
+
+.vertical > div:nth-child(1) {
+	font-size: 25px;
+	font-family: "Nunito";
+	color: rgb(97, 173, 213) !important;
+	background-color: rgb(97, 173, 213);;
+	font-weight: bold;
+	line-height: 1.2;
+}
+

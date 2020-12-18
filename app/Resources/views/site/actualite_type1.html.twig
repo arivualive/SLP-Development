@@ -1,0 +1,249 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/actualite_type.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+{% endblock %}
+
+{% block body %}
+
+    <header>
+        <div class="row">
+            <div class="col-12">
+                <div id="carousel-slp" class="carousel slide" data-ride="carousel">
+
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <img class="d-block w-100 image-header img-responsive"
+                                 src="{{ asset('images/landing-page/header.png') }}"
+                                 alt="Dashboard">
+                            <div class="carousel-caption d-none d-block intro col-6 top-adjust">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown burger">
+                        <a class="dropdown-item btn btn-secondary dropdown-toggle"
+                           href="{{ path('site_index') }}">
+                            <button class="btn btn-secondary dropdown-toggle"><i class="fa fa-home"
+                                                                                 style="font-size:24px"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <h1 class="text-center" id="title_page"> Actualités</h1>
+
+    <section id="presentation" style="text-align: justify">
+        <h1 class="d-flex align-items-center d-flex justify-content-center title_section" > LANDING PAGE</h1>
+        <div class="row">
+            <div class="col-8 offset-2">
+                <img class="img-fluid center-block" src="{{ asset('images/actualite/image_landing.png') }}"
+                     alt="presentation slp">
+                <h2 class="text-center"> LA PLATEFORME SLP <br> (Sustainable Living Program)<br>
+                    bientôt en ligne ! </h2>
+                <p id="intro"> Mais qu’est ce que le Sustainable Living Program ? </p>
+                <p>
+                    Programme innovant de mesure, de sensibilisation et de stimulation du
+                    changement de comportement, <b>le Sustainable Living Program</b> a été spécialement
+                    créé par gaea21 pour les individus et familles et vous offre des
+                    outils et solutions concrètes afin de vous aider à améliorer votre quotidien
+                    tout en réduisant votre empreinte écologique. Il s’adresse aux individus,
+                    aux familles et aux petites communautés qui désirent consommer autrement
+                    en alliant respect de l’environnement, développement social et individuel,
+                    et économie (ou plutôt optimisation budgétaire et environnementale)
+                    grâce à un Co2 tracker, un budget tracker, un mobility tracker et un investment
+                    tracker.
+                </p>
+                <p>
+                    Vous désirez être accompagné dans un processus de changement de vos
+                    habitudes alimentaires ? Réduire votre stress au quotidien et améliorer
+                    votre santé ? Éviter d’acheter et consommer des produits toxiques pour
+                    votre corps et l’environnement ? Vous orienter vers des loisirs, pratiques
+                    sportives en accord avec vos valeurs ?
+                    Sous la forme d’une plateforme web interactive, le Sustainable Living Program
+                    vous accompagne et démontre qu’il vous est possible d’améliorer
+                    votre mode de vie dans le respect d’autrui et de la planète, de réduire et
+                    mesurer votre empreinte, d’adapter votre consommation, de faire des économies,
+                    de mettre en place des solutions pour vous, faire participer votre
+                    famille, vos amis, suivre votre évolution et de vous comparer à d’autres individus
+                    avec un profil similaire ou avec d'autres familles.
+                </p>
+
+                 <p>
+                    <b>Le Sustainable Living Program est composé de 7 sections et d’un programme
+                    annuel d’éco-ateliers thématiques :
+                    </b>
+                </p>
+
+            <p>
+                1. Quoi acheter et où le trouver ? Il s’agit du <b>Répertoire vert</b> qui répertorie
+                    l’ensemble des produits et services verts dans un rayon de 130 kilomètres
+                    autour du centre de Genève.
+            </p>
+            <p>
+                    2. Quels choix de vie quotidiens et quelles alternatives ? <b>La Plateforme
+                    Consom'action, en ligne en été 2019 </b>, vous fournira des informations essentielles
+                    sur des thèmes variés du quotidien tels que le tourisme durable,
+                    la lutte contre le gaspillage (le zéro déchet), l’alimentation responsable, la
+                    mode et les cosmétiques éthiques et éco-responsables, et bien d’autres !
+                    Des idées recettes et “Do It Yourself” vous seront également proposées,
+                    sous la forme d’articles et de vidéos mensuelles. Pour une meilleure utilisation
+                    de la plateforme, vous pourrez prendre part au questionnaire “Quel
+                    consomm’acteur êtes vous?” afin d’établir votre profil de consommateur
+            </p>
+
+            <p>
+                    3. Comment mesurer mon empreinte écologique et identifier les gestes à
+                adopter ? C’est via nos programmes <b>Eco-gestes & Empreinte Chromatique</b>
+                    que vous trouverez des solutions pour améliorer votre comportement au
+                    quotidien. L’empreinte chromatique vous permettra de calculer votre
+                    impact environnemental et les éco-gestes vous permettront de l’améliorer.
+            </p>
+            <p>
+                4. Comment produire facilement et à moindre coût mes propres fruits et légumes ? Le programme <b>Grow Your Own</b> vous donnera les clés pour faire
+                facilement pousser vos fruits, légumes et aromates sans même avoir de
+                jardin : dans votre cuisine, sur votre balcon ou le toit de votre immeuble!
+            </p>
+            <p>
+                5. Comment partager mon savoir, mes ressources et bénéficier du soutien de
+                mes pairs ? La plateforme d’économie <b>collaborative Sharing economy</b>, dont
+                le lancement est prévue pour 2020, vous permettra de créer et faciliter les
+                échanges et liens sociaux autour de vous.
+            </p>
+            <p>
+                6. Comment et où m'amuser, sortir, faire du sport, rencontrer du monde ? Il
+                vous suffira de vous inscrire sur notre site <b>GES</b> (Green Events Series) qui
+                vous proposera des activités ludiques et sportives en fonction de vos besoins et centres d’intérêts.
+                Pour plus d’informations, nous vous invitons à visiter notre page Facebook
+                GES :
+                https://www.facebook.com/GESbygaea21/
+            </p>
+            <p>
+                7. Comment mettre en place un plan de changement et en mesurer immédiatement les bénéfices pour moi et mon entourage ? Grâce au <b>Green coaching</b>
+                vous pourrez bénéficier de conseils personnalisés pour adapter et modifier
+                vos gestes du quotidien et en constater les bénéfices écologiques et économiques immédiats.
+            </p>
+            <p>
+                Last but not least : Pour apprendre de façon concrète à transformer vos
+                choix de consommation le Sustainable Living Program vous propose les
+                <b>éco-ateliers.</b> Organisés autour de thématiques variées, sous la forme
+                d’ateliers de cuisine “zéro déchet” ou de tutoriel destiné à vous apprendre
+                à réaliser vous-même vos produits naturels et écologiques d’hygiène et de
+                beauté, nos éco-ateliers vous proposent d’apprendre à incorporer à votre
+                quotidien des alternatives simples à votre mode de consommation actuel
+                en vous amusant !
+            </p>
+                <p id="last">
+                    <b>
+                    Notre newsletter mensuelle vous permettra de suivre notre actualité et
+                    découvrir des recettes et astuces éco-responsables sur vos gestes du
+                    quotidien. Vous serez les premiers informés de la sortie de nos plateformes ainsi que des événements organisés par l’association.
+                    @ bientôt
+                    </b>
+                </p>
+                <p>
+                    L’équipe GAEA 21
+                </p>
+            </div>
+            </div>
+        <div class="row">
+            <div class="offset-2 col-md-4">
+                <img  id="logo_gaea21" src="{{ asset('images/logo-gaea21.png') }}"
+                     alt="logo gaea21">
+            </div>
+            <div class=" offset-2 col-md-4">
+                <img class="img-fluid" src="{{ asset('images/logo-slp-small.png') }}"
+                     alt="logo slp">
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="archive">
+        <h1 class="d-flex align-items-center d-flex justify-content-center title_section"> Archives </h1>
+        <div class="row" id="archive_actu_1">
+            <div class="col-4 text-center">
+                <img class="img-fluid" src="{{ asset('images/actualite/image_2.png') }}"
+                     alt="bloc archive">
+                <h1>LA LANDING PAGE SLP</h1>
+                <p>La Landing page SLP
+                    est un portail web
+                    depuis lequel vous ac</p>
+                <a href="#">en savoir <span class="sizeMore">+ </span></a>
+            </div>
+            <div class="col-4 text-center">
+                <img class="img-fluid" src="{{ asset('images/actualite/image_1.png') }}"
+                     alt="bloc archive">
+                <h1>LA LANDING PAGE SLP bis</h1>
+                <p>La Landing page SLP
+                    est LE portail web de
+                    toute la SL community ! </p>
+                <a href="#">en savoir <span class="sizeMore">+ </span></a>
+            </div>
+            <div class="col-4 text-center">
+                <img class="img-fluid" src="{{ asset('images/actualite/image_landing.png') }}"
+                     alt="bloc archive">
+                <h1>LA PLATEFORME SLP</h1>
+                <p>Programme innovant de
+                    mesure, de sensibilisation et de stimulation </p>
+                <a href="#">en savoir <span class="sizeMore">+ </span></a>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="col-12">
+            <img class="img-fluid" src="{{ asset('images/landing-page/bloc_carres.png') }}" alt="autres articles">
+        </div>
+    </section>
+
+
+    <section id="section_btn">
+        <div class="row">
+            <div class="offset-2 col-4 text-center">
+                <a href="{{ path('actualite_dashboard') }}">Retour menu actualités </a>
+            </div>
+
+            <div class="col-4 text-center">
+                <a href="{{ path('presentationdashboard') }}">Retour au dashboard </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="col-12 banniere">
+            <img class="img-fluid" src="{{ asset('images/landing-page/bloc_banniere_2.png') }}" alt="autres articles">
+            <div class="link1">
+                <a href="{{ path('humans') }}"> Cliquez-ici 1</a>
+            </div>
+            <div class="link2">
+                <a href="{{ path('ambassadeur') }}"> Cliquez-ici 2</a>
+            </div>
+            <div class="link3">
+                <a href="{{ path('community') }}"> Cliquez-ici 3</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="col-12">
+            {% include 'footer.html.twig' %}
+        </div>
+    </footer>
+{% endblock %}
+
+{% block javascripts %}
+    <script link rel="stylesheet" href="{{ asset('js/jquery.min.js') }}"></script>
+    <script link rel="stylesheet" href="{{ asset('js/bootstrap.min.js') }}"></script>
+
+
+{% endblock %}

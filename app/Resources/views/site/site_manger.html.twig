@@ -1,0 +1,127 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+
+
+{% endblock %}
+{% block title %}
+
+{% endblock %}
+
+{% block body %}
+	{#---------------------------------------------------------------------------------------#}
+	{#--------------------------colonne gauche----------------------------------------------#}
+	{#---------------------------------------------------------------------------------------#}
+
+
+	{% if form == 0 %}
+
+		{# si le formulaire profil est fait , on affiche rien #}
+
+	{% elseif form == 1 %}
+
+		{%  for manger in manger %}
+
+			{% if manger.PNG <= 202 %}
+
+			<div class="container-fluid " style="display:none;" id="mon-blok{{manger.id}}">
+
+
+				<div class="row ">
+				<div class="col-md-3" {{manger.backgroundleft|raw }}>
+					<div class=" titre-processus">
+						<p>Manger</p>
+
+					</div>
+
+					<div class="text-sous-processus">
+						<p>{{manger.sousProcessus}}<p>
+					</div>
+					<div class="img-numero"><img src="{{ asset('images/manger/PNG/' ~ manger.PNG  ~ '') }}"
+												 style=" width: 220px;" /></div>
+					<div class="text-sous-theme">
+						<p>{{manger.sousTheme}}</p>
+					</div>
+				</div>
+				{#---------------------------------------------------------------------------------------#}
+				{#---------------------------colonne droite----------------------------------------------#}
+				{#---------------------------------------------------------------------------------------#}
+			<div class="col-md-9" {{manger.backgroundright|raw }}>
+				<div class="titre-theme">
+					<p><i>-{{manger.theme}}</i></p>
+				</div>
+
+				<div class="question-alimentation">
+					<p><i>-{{manger.questions}}</i></p>
+				</div>
+				<form class="form-group" id="form{{manger.id}}" action="{{ path('thematique_reponse') }}" method="POST">
+					<div class="reponse">
+
+						<label id="1" for="{{manger.niveau1}}{{manger.id}}">{{manger.niveau1}}
+							<input type="radio" class="eat" name="{{manger.id}}" value="5" id="{{manger.niveau1}}{{manger.id}}" />
+						</label><br><br>
+						<div id="subComment1" class="subComment">{{ manger.commentaireNv1 }}</div>
+
+						<label id="2" for="{{manger.niveau2}}{{manger.id}}">{{manger.niveau2}}
+							<input type="radio" class="eat" name="{{manger.id}}" value="4" id="{{manger.niveau2}}{{manger.id}}" />
+						</label><br><br>
+						<div id="subComment2" class="subComment">{{ manger.commentairesNv2 }}</div>
+
+
+						<label id="3" for="{{manger.niveau3}}{{manger.id}}">{{manger.niveau3}}
+							<input type="radio" class="eat" name="{{manger.id}}" value="3" id="{{manger.niveau3}}{{manger.id}}"  />
+						</label><br><br>
+						<div id="subComment3" class="subComment">{{ manger.commentairesNv3 }}</div>
+
+
+						<label id="4" for="{{manger.niveau4}}{{manger.id}}">{{manger.niveau4}}
+							<input type="radio" class="eat" name="{{manger.id}}" value="2" id="{{manger.niveau4}}{{manger.id}}"  />
+						</label><br><br>
+						<div id="subComment4" class="subComment">{{ manger.commentairesNv4 }}</div>
+
+
+						<label id="5" for="{{manger.niveau5}}{{manger.id}}">{{manger.niveau5}}
+							<input type="radio" class="eat" name="{{manger.id}}" value="1" id="{{manger.niveau5}}{{manger.id}}"  >
+						</label><br><br>
+						<div id="subComment5" class="subComment">{{ manger.commentairesNv5 }}</div>
+
+
+						<label id="6" for="{{manger.niveau6}}{{manger.id}}">{{manger.niveau6}}
+							<input type="radio" class="eat" name="{{manger.id}}" value="0" id="{{manger.niveau6}}{{manger.id}}" />
+						</label><br><br>
+						<div id="subComment6" class="subComment">{{ manger.commentairesNv6 }}</div>
+
+					</div>
+				</form>
+
+
+				<div id="button{{manger.id}}" class="btn-valider">
+					<button type="button" id="suivant{{manger.id}}" data-numero="{{manger.numquestion}}"
+							class="valider btn btn-light" data-formulid="form{{manger.id}}">Valider</button>
+
+					<button type="button" id="suivant{{manger.id}}" data-numero="{{manger.numquestion}}"
+							class="suivant_manger btn btn-light" data-formulid="form{{manger.id}}">Suivant</button>
+
+					<button id="fermer" type="button" class="btn btn-light" data-dismiss="modal">Fermer et
+						finir
+						plus tard?</button>
+
+				</div>
+				</div>{#fin col-md-9#}
+				</div>{#fin row#}
+				</div>{#fin container-fluid#}
+
+
+			{% endif  %}
+		{% endfor %}
+
+	{% endif  %}
+{% endblock %}
+
+{% block javascripts %}
+	<script>
+
+		$(document).ready(function () {
+		});
+	</script>
+{% endblock %}

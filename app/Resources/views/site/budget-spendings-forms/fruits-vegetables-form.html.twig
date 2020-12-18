@@ -1,0 +1,311 @@
+<div class="eating-budget-spendings-form-container"></div>
+
+<div class="eating-budget-spendings-form-grid-container form-container fruits-vegetables-form-container">
+    <div class="row my-row">
+        {% include 'site/budget-spendings-forms/forms-columns-titles.html.twig' %}
+    </div>
+
+    <div class="subcategory-container fresh-fruit-container">
+        <div id="fresh-fruit-form-line" class="row my-row form-spending-line" data-id="0">
+            <div class="subcategory invisible">fresh-fruit</div>
+            <div class="col-3">
+                <idv class="form-line-title">
+                    <div class="form-line-title-content">
+                        - Fruits frais
+                    </div>
+                </idv>
+            </div>
+            <div class="col-1">
+                <input class="spendings-field what-field"/>
+            </div>
+            <div class="col-1 dropdown-list-col volume-dropdown-list-col">
+                <div class="dropdown-list-container quantity-container">
+                    <select class="dropdown-list fresh-fruit-quantity-list">
+                        <option>1L</option>
+                        <option>2L</option>
+                    </select>
+                    <div class="triangle-img-container fresh-fruit quantity">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-1">
+                <input class="spendings-field brand-field" />
+            </div>
+            <div class="col-1">
+                <input class="spendings-field amount-field" />
+            </div>
+            <div class="col-1 dropdown-list-col currency-dropdown-list-col">
+                <div class="dropdown-list-container currency-list-container">
+                    <select class="dropdown-list currency-list fresh-fruit-currency-list">
+                        <option>CHF</option>
+                        <option>EUR</option>
+                    </select>
+                    <div class="triangle-img-container fresh-fruit currency">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col add-fresh-fruit hand-on-hover">
+                <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+                <idv class="add-product-text">Ajouter un produit</idv>
+            </div>
+            
+        </div>
+        {% for spending in spendings %}
+            {% if spending.getProduct().getSubcategory().getName() == "fresh-fruit" %}
+                {% set subcategory = "fresh-fruit" %}
+                {% include('site/budget/recorded-theme-spending-form-line.html.twig') %}
+            {% endif %}
+        {% endfor %}
+        <!--<div class="add-product-line add-fresh-fruit hand-on-hover">
+            <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+            <idv class="add-product-text">Ajouter un produit</idv>
+        </div>-->
+    </div>
+    
+    
+    <div class="subcategory-container dried-fruit-container">
+        <div id="dried-fruit-form-line" class="row my-row form-spending-line" data-id="0">
+            <div class="subcategory invisible">dried-fruit</div>
+            <div class="col-3">
+                <idv class="form-line-title">
+                <div class="form-line-title-content">
+                    - Fruits secs
+                    <div class="small-title-content">
+                    (pruneau, abricots secs, figues sechées)
+                    </div>
+                </div>
+            </idv>
+            </div>
+            <div class="col-1">
+                <input class="spendings-field what-field"/>
+            </div>
+            <div class="col-1 dropdown-list-col volume-dropdown-list-col">
+                <div class="dropdown-list-container quantity-container">
+                    <select class="dropdown-list dried-fruit-quantity-list">
+                        <option>1L</option>
+                        <option>2L</option>
+                    </select>
+                    <div class="triangle-img-container dried-fruit quantity">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-1">
+                <input class="spendings-field brand-field" />
+            </div>
+            <div class="col-1">
+                <input class="spendings-field amount-field" />
+            </div>
+            <div class="col-1 dropdown-list-col currency-dropdown-list-col">
+                <div class="dropdown-list-container currency-list-container">
+                    <select class="dropdown-list currency-list dried-fruit-currency-list">
+                        <option>CHF</option>
+                        <option>EUR</option>
+                    </select>
+                    <div class="triangle-img-container dried-fruit currency">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col add-dried-fruit hand-on-hover">
+                <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+                <idv class="add-product-text">Ajouter un produit</idv>
+            </div>
+        </div>
+        {% for spending in spendings %}
+            {% if spending.getProduct().getSubcategory().getName() == "dried-fruit" %}
+                {% set subcategory = "dried-fruit" %}
+                {% include('site/budget/recorded-theme-spending-form-line.html.twig') %}
+            {% endif %}
+        {% endfor %}
+        <!--<div class="add-product-line add-dried-fruit hand-on-hover">
+            <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+            <idv class="add-product-text">Ajouter un produit</idv>
+        </div>-->
+    </div>
+    
+
+    <div class="subcategory-container processed-fruit-container">
+        <div id="processed-fruit-form-line" class="row my-row form-spending-line" data-id="0">
+            <div class="subcategory invisible">processed-fruit</div>
+            <div class="col-3">
+                <idv class="form-line-title">
+                    <div class="form-line-title-content">
+                        - Fruits transformés
+                        <div class="small-title-content">
+                            (compotes sans sucres ajoutés)
+                        </div>
+                    </div>
+                </idv>
+            </div>
+            <div class="col-1">
+                <input class="spendings-field what-field"/>
+            </div>
+            <div class="col-1 dropdown-list-col volume-dropdown-list-col">
+                <div class="dropdown-list-container quantity-container">
+                    <select class="dropdown-list processed-fruit-quantity-list">
+                        <option>1L</option>
+                        <option>2L</option>
+                    </select>
+                    <div class="triangle-img-container processed-fruit quantity">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-1">
+                <input class="spendings-field brand-field" />
+            </div>
+            <div class="col-1">
+                <input class="spendings-field amount-field" />
+            </div>
+            <div class="col-1 dropdown-list-col currency-dropdown-list-col">
+                <div class="dropdown-list-container currency-list-container">
+                    <select class="dropdown-list currency-list processed-fruit-currency-list">
+                        <option>CHF</option>
+                        <option>EUR</option>
+                    </select>
+                    <div class="triangle-img-container processed-fruit currency">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col add-processed-fruit hand-on-hover">
+                <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+                <idv class="add-product-text">Ajouter un produit</idv>
+            </div>
+        </div>
+        {% for spending in spendings %}
+            {% if spending.getProduct().getSubcategory().getName() == "processed-fruit" %}
+                {% set subcategory = "processed-fruit" %}
+                {% include('site/budget/recorded-theme-spending-form-line.html.twig') %}
+            {% endif %}
+        {% endfor %}
+        <!--<div class="add-product-line add-processed-fruit hand-on-hover">
+            <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+            <idv class="add-product-text">Ajouter un produit</idv>
+        </div>-->
+    </div>
+    
+    <div class="subcategory-container vegetable-container">
+        <div id="vegetable-form-line" class="row my-row form-spending-line" data-id="0">
+            <div class="subcategory invisible">vegetable</div>
+            <div class="col-3">
+                <idv class="form-line-title">
+                    <div class="form-line-title-content">
+                        - Légumes
+                    </div>
+                </idv>
+            </div>
+            <div class="col-1">
+                <input class="spendings-field what-field"/>
+            </div>
+            <div class="col-1 dropdown-list-col volume-dropdown-list-col">
+                <div class="dropdown-list-container quantity-container">
+                    <select class="dropdown-list vegetable-quantity-list">
+                        <option>1L</option>
+                        <option>2L</option>
+                    </select>
+                    <div class="triangle-img-container vegetable quantity">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-1">
+                <input class="spendings-field brand-field" />
+            </div>
+            <div class="col-1">
+                <input class="spendings-field amount-field" />
+            </div>
+            <div class="col-1 dropdown-list-col currency-dropdown-list-col">
+                <div class="dropdown-list-container currency-list-container">
+                    <select class="dropdown-list currency-list vegetable-currency-list">
+                        <option>CHF</option>
+                        <option>EUR</option>
+                    </select>
+                    <div class="triangle-img-container vegetable currency">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col add-vegetable hand-on-hover">
+                <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+                <idv class="add-product-text">Ajouter un produit</idv>
+            </div>
+        </div>
+        {% for spending in spendings %}
+            {% if spending.getProduct().getSubcategory().getName() == "vegetable" %}
+                {% set subcategory = "vegetable" %}
+                {% include('site/budget/recorded-theme-spending-form-line.html.twig') %}
+            {% endif %}
+        {% endfor %}
+        <!--<div class="add-product-line add-vegetable hand-on-hover">
+            <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+            <idv class="add-product-text">Ajouter un produit</idv>
+        </div>-->
+    </div>
+
+    <div class="subcategory-container oilseed-container">
+        <div id="oilseed-form-line" class="row my-row oilseed-bottom-form-line-0 last-line form-spending-line" data-id="0">
+            <div class="subcategory invisible">oilseed</div>
+            <div class="col-3">
+                <idv class="form-line-title">
+                <div class="form-line-title-content medium-width-title">
+                    - Oléagineux
+                    <div class="small-title-content">
+                    (noix, amandes, noix de cajoux, ... non sucrés, non salés)
+                    </div>
+                </div>
+            </idv>
+            </div>
+            <div class="col-1 field-and-button-under-field-container last-line-what-column">
+                <input class="spendings-field what-field"/>
+                <div class="form-button left-button">Retour au dashboard</div>
+            </div>
+            <div class="col-1 dropdown-list-col volume-dropdown-list-col">
+                <div class="dropdown-list-container quantity-container">
+                    <select class="dropdown-list oilseed-quantity-list">
+                        <option>1L</option>
+                        <option>2L</option>
+                    </select>
+                    <div class="triangle-img-container oilseed quantity">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-1">
+                <input class="spendings-field brand-field" />
+            </div>
+            <div class="col-1">
+                <input class="spendings-field amount-field" />
+            </div>
+            <div class="col-1 field-and-button-under-field-container last-line-currency-column dropdown-list-col currency-dropdown-list-col">
+                <div class="dropdown-list-container currency-list-container">
+                    <select class="dropdown-list currency-list oilseed-currency-list">
+                        <option>CHF</option>
+                        <option>EUR</option>
+                    </select>
+                    <div class="triangle-img-container oilseed currency">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+                <div class="form-button right-button form-validation-button" data-category="fruits-vegetables">Valider</div>
+            </div>
+            <div class="col add-oilseed hand-on-hover">
+                <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+                <idv class="add-product-text">Ajouter un produit</idv>
+            </div>
+        </div>
+        {% for spending in spendings %}
+            {% if spending.getProduct().getSubcategory().getName() == "oilseed" %}
+                {% set subcategory = "oilseed" %}
+                {% include('site/budget/recorded-theme-spending-form-line.html.twig') %}
+            {% endif %}
+        {% endfor %}
+        <!--<div class="add-product-line add-oilseed hand-on-hover">
+            <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+            <idv class="add-product-text">Ajouter un produit</idv>
+        </div>-->
+    </div>
+</div>

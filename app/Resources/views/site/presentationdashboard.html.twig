@@ -1,0 +1,128 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/presentationdashboard.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+
+{% endblock %}
+ 
+{% block body %}
+    <div class="row">
+        <header>
+            <div id="carousel-slp" class="carousel slide" data-ride="carousel">
+
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <img class="d-block w-100 image-header"
+                             src="{{ asset('images/dashboard/headerpresentation.jpg') }}"
+                             alt="Dashboard">
+                        <div class="carousel-caption d-none d-block intro col-6 top-adjust">
+                            <h1>PRESENTATION DASHBOARD</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown burger">
+                    <a class="dropdown-item btn btn-secondary dropdown-toggle" href="{{ path('site_index') }}">
+                        <button class="btn btn-secondary dropdown-toggle"><i class="fa fa-home"
+                                                                             style="font-size:24px"></i>
+
+                        </button>
+                    </a>
+                </div>
+
+            </div>
+        </header>
+    </div>
+
+    <section class="spacer">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="text-page-transition">
+                    <p>Vous retrouverez ici votre <b>dashboard </b>qui sera votre <b>point de départ </b>pour toute
+                        votre
+                        <b>navigation sur la plateforme SLP</b>.<br> <br>
+
+                        C’est ici que vous aurez <b>directement accès à tous les outils</b> vous permettant de
+                        <b>changer vos comportements de consommation</b>.<br> <br>
+                        Ce <b>dashboard</b> est composé de vos <b>photos de profil et couverture</b>,
+                        <b>votre empreinte chromatique</b> ou <b>green ID</b>, <b>vos questionnaires</b> et
+                        <b>mini-profils</b>
+                        correspondant ainsi que <b>tous les autres liens vers les différents sites de SLP</b>.
+
+                    </p>
+                    <h3> Vidéo explicative dashboard </h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="spacer video">
+    <div class="row">
+    <div class="col-12 offset-md-1 col-md-10 text-center" >
+        <div class="video_empreinte_chromatique">
+            <iframe src="{{ asset('videos/explication_dashboard.mp4') }}"
+                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </div>
+    </div>
+    </div>
+    </section>
+
+    <section class="spacer">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="image">
+                    <img src="{{ asset('images/dashboard/bandeau.png') }}" alt="Dashboard">
+                    <img src="{{ asset('images/dashboard/image1.jpg') }}" alt="Dashboard">
+                    <img src="{{ asset('images/dashboard/image2.jpg') }}" alt="Dashboard">
+                    <img src="{{ asset('images/dashboard/image-ordinateur.jpg') }}" alt="Dashboard">
+                    <img class="boutondash" src="{{ asset('images/dashboard/boutondash.png') }}" alt="Dashboard">
+                    <a href="{{ path('site_dashboard') }}">
+                        <button  class="btndash"> lire l'article</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="spacer">
+        <div class="ambassadeur">
+            <div class="link-ambassadeur">
+                <a href="{{ path('ambassadeur') }}"> Cliquez-ici
+                </a>
+            </div>
+            <div>
+                <img  src="{{ asset('images/landing-page/ambassadeur.PNG') }}" alt="ambassadeur">
+            </div>
+        </div>
+    </section>
+
+    <section class="spacer">
+        <div class="humans">
+            <div class="link-human">
+                <a href="{{ path('humans') }}"> Cliquez-ici
+                </a>
+            </div>
+            <div>
+                <img src="{{ asset('images/landing-page/humansMobile2.jpg')}}" alt="ambassadeurSmartphone">
+            </div>
+        </div>
+    </section>
+
+    {# BOUTON DE PARTAGE SUR FACEBOOK #}
+    {{ include('site/partager_facebook.html.twig') }}
+
+    <div class="col-12" >
+        {% include 'footer.html.twig' %}
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    
+    <script link rel="stylesheet" href="{{ asset('js/bootstrap.min.js') }}"></script>
+
+
+{% endblock %}

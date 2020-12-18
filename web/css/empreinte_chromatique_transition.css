@@ -1,0 +1,229 @@
+body{
+    font-family: Nunito sans-serif;
+    font-weight: normal;
+}
+
+
+.burger button{
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 1);
+    color: #539ac4;
+    border: solid 2px white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+.burger{
+    position: absolute;
+    top: 3%;
+    right: 2%;
+}
+.dropdown-menu::before,
+.dropdown-menu::after {
+    border: none;
+    content: none;
+}
+.dropdown-toggle::after {
+    display: none;
+}
+/* ------------------------------------------------
+MENU
+------------------------------------------------  */
+.container{
+    padding: 0;
+}
+/* ------------------------------------------------
+SLIDER
+------------------------------------------------  */
+.carousel-item{
+    background-color: #539ac4;
+}
+.top-adjust{
+    top: 30%;
+}
+.carousel-caption{
+    margin: auto;
+    padding-bottom: 10%;
+}
+.image-header{
+    opacity: 0.4;
+}
+.carousel-item .intro h1 {
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    text-align: center;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 45pt;
+    font-weight: bold;
+}
+
+
+.lien-emp-individu h3, .lien-emp-famille h3, .video_empreinte_chromatique h3{
+    color: #539ac4;
+    text-align: center;
+}
+
+@media (min-width: 768px) and (max-width: 5000px) {
+
+
+    .intro-explicatif {
+        font-family: 'Nunito', sans-serif;
+        color: #539ac4;
+        text-align: left;
+    }
+
+    .intro-explicatif h1 {
+        font-family: 'Nunito', sans-serif;
+        color: #539ac4;
+        font-weight: bold;
+        text-align: center;
+        font-size: 42.2pt;
+    }
+
+    .intro-explicatif p {
+        font-size: 15pt;
+        margin-bottom: 60px;
+    }
+
+
+    /* video */
+
+    .video_empreinte_chromatique{
+        margin: 0 0 0 0;
+    }
+
+    .video_empreinte_chromatique iframe{
+        height: 335.191px;
+        width: 628.66px;
+    }
+
+    /* Liens */
+
+    .lien {
+        margin-bottom: 10%;
+        margin-top: 10%;
+    }
+
+    .lien-emp-individu img, .lien-emp-famille img {
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    .btn-emp-individu, .btn-emp-famille {
+        position: absolute;
+        right: 35%;
+        top: 45%;
+        width: 30%;
+        background-color: white;
+        border-radius: inherit;
+        color: #337ab7;
+        font-weight: bold;
+    }
+
+
+}
+
+
+@media screen and (max-width:767px) {
+
+    #carousel-slp{
+        margin-bottom: 31.5px;
+    }
+
+    .carousel-item h1{
+        font-family: Nunito sans-serif;
+        font-size: 16pt !important;
+
+    }
+
+    .intro-explicatif{
+        color: #539ac4;
+    }
+
+    .intro-explicatif h1{
+        margin-top: 0;
+        font-size: 14pt;
+        font-weight: bold;
+    }
+
+    .intro-explicatif p{
+        font-family: Nunito sans-serif ;
+        font-size: 11pt ;
+        margin-bottom: 32px ;
+        margin-left: 40px;
+        margin-right:  40px;
+    }
+
+    /* video */
+
+
+    .video_empreinte_chromatique{
+        margin: 0 0 0 0;
+    }
+
+
+
+    /* Liens */
+    .lien {
+        margin-bottom: 40px;
+        margin-top: 37px;
+        font-size: 5px;
+    }
+
+    .lien-emp-individu img, .lien-emp-famille img {
+        width: 100%;
+        height: auto;
+    }
+
+    .lien-emp-individu a, .lien-emp-famille a{
+
+    }
+
+    .btn-emp-individu, .btn-emp-famille {
+        position: absolute;
+        right: 26%;
+        top: 52%;
+        background-color: white;
+        border-radius: inherit;
+        color: #337ab7;
+        font-weight: bold;
+    }
+
+    .lien {
+        margin : 37px 26px 40px 26px;
+    }
+
+}
+
+
+@media (min-width: 451px) and (max-width: 600px) {
+    .btn-emp-individu, .btn-emp-famille {
+        right: 29%;
+        top: 60%;
+        font-size: 11px;
+    }
+    .btn-emp-individu{
+            right: 32%;
+    }
+}
+
+
+
+
+
+@media (min-width: 320px) and (max-width: 450px) {
+    .btn-emp-individu, .btn-emp-famille {
+        width:60%;
+        left: 21%;
+        font-size: 11px;
+    }
+
+    .btn-emp-individu{
+        left: 12%;
+    }
+    .lien-emp-individu h3, .lien-emp-famille h3, .video_empreinte_chromatique h3{
+        font-size: 19px;
+        color: #539ac4;
+    }
+}

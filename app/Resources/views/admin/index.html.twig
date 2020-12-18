@@ -1,0 +1,21 @@
+{% extends '::admin_base.html.twig' %}
+
+{% block title %}Index{% endblock %}
+
+{% block breadcrumb %}
+    <li class="breadcrumb-item active">Accueil</li>
+{% endblock %}
+
+{% block page %}
+    <h1>Bienvenue sur l'espace d'administration</h1>
+
+    <div class="row">
+    
+        <div class="col-lg-6 mb-4">
+            <a href="#" class="btn btn-warning btn-lg btn-block">Commentaire</a>
+        </div>
+        <div class="col-lg-6 mb-4">
+            <a href="#" class="btn btn-danger btn-lg btn-block">Utilisateur</a>
+        </div>
+    </div>
+{% endblock %}

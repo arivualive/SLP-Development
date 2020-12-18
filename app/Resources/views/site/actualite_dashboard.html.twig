@@ -1,0 +1,153 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('css/actualite_dashboard.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+
+
+
+{% endblock %}
+ 
+{% block body %}
+
+
+<div class="row">
+    <header>
+        <div id="carousel-slp" class="carousel slide" data-ride="carousel">
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img class="d-block w-100 image-header" src="{{ asset('images/actualite/Fotolia_45167635_Subscription_XL.jpg') }}"
+                        alt="Dashboard">
+                    <div class="carousel-caption d-none d-block intro col-6 top-adjust">
+                        <h1>Actualité</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown burger">
+                <a style="padding: 0%;width:0%;" class="dropdown-item btn btn-secondary dropdown-toggle"
+                    href="{{ path('site_index') }}">
+                    <button class="btn btn-secondary dropdown-toggle"><i class="fa fa-home" style="font-size:24px"></i>
+
+                    </button>
+                </a>
+            </div>
+
+        </div>
+    </header>
+</div>
+
+    <div class="enavant">
+    <div class="budget">
+        <img class="course" src="{{ asset('images/actualite/Fotolia_43382709_Subscription_XXL_FromDESKTOP-037AKAU.jpg') }}" alt=""  >      
+        <img class="fete" src="{{ asset('images/actualite/lidya-nada-638316-unsplash.jpg') }}" alt=""  >      
+        <img class="moto"src="{{ asset('images/actualite/Fotolia_40963158_Subscription_XXL.jpg') }}" alt=""   >     
+        <img class="ecran"src="{{ asset('images/actualite/Fotolia_42638306_Subscription_XL.jpg') }}" alt=""   >     
+    </div>
+</div>
+
+    <section>
+        <div class="actualite">
+            <h1>Fil d'Actualité du programme SLP</h1>
+            <div class="consommaction">
+                <img class="logo" src="{{ asset('images/actualite/logo_consom_Action.png') }}" alt=""  >
+                <a href="{{ path('actualite_dashboard') }}"><button class="btn-actu-section2"> autres actualités</button></a>
+                <div>
+                <img class="actu" src="{{ asset('images/actualite/consommaction1.jpg') }}" alt=""  >
+                </div>
+                <div class="link1">
+                <a href="{{ path('actualite_dashboard') }}">lire l'article 1 </a>
+                </div>
+            </div>
+
+            <div class="consommaction">
+                <img class="logo" src="{{ asset('images/actualite/logo_consom_Action.png') }}" alt=""  >
+                <a href="{{ path('actualite_dashboard') }}"><button class="btn-actu-section2"> autres actualités</button></a>
+                <div>
+                <img class="actu" src="{{ asset('images/actualite/repertoirevert1.jpg') }}" alt=""  >
+                </div>
+                <div class="link2">
+                <a href="{{ path('actualite_dashboard') }}">lire l'article 2</a>
+                </div>
+            </div>
+
+            <div class="consommaction">
+                <img class="logo" src="{{ asset('images/actualite/logo_consom_Action.png') }}" alt=""  >
+                <a href="{{ path('actualite_dashboard') }}"><button class="btn-actu-section2"> autres actualités</button></a>
+                <div>
+                <img class="actu" src="{{ asset('images/actualite/slp1.jpg') }}" alt=""  >
+                </div>
+                <div class="link3">
+                <a href="{{ path('actualite_dashboard') }}">lire l'article 3</a>
+                </div>
+            </div>
+
+            <div class="consommaction">
+                <img class="logo" src="{{ asset('images/actualite/logo_consom_Action.png') }}" alt=""  >
+                <a href="{{ path('actualite_dashboard') }}"><button class="btn-actu-section2"> autres actualités</button></a>
+                <div>
+                <img class="actu" src="{{ asset('images/actualite/slp2.jpg') }}" alt=""  >
+                </div>
+                <div class="link4">
+                <a href="{{ path('actualite_dashboard') }}">lire l'article 4</a>
+                </div>
+            </div>
+
+            <div class="consommaction">
+                <img class="logo" src="{{ asset('images/actualite/logo_consom_Action.png') }}" alt=""  >
+                <a href="{{ path('actualite_dashboard') }}"><button class="btn-actu-section2"> autres actualités</button></a>
+                <div>
+                <img class="actu" src="{{ asset('images/actualite/atelier1.jpg') }}" alt=""  >
+                </div>
+                <div class="link5">
+                <a href="{{ path('actualite_dashboard') }}">lire l'article 5</a>
+                </div>
+            </div>
+
+            <div class="consommaction">
+                <img class="logo" src="{{ asset('images/actualite/logo_consom_Action.png') }}" alt=""  >
+                <a href="{{ path('actualite_dashboard') }}"><button class="btn-actu-section2"> autres actualités</button></a>
+                <div>
+                <img class="actu" src="{{ asset('images/actualite/ges1.jpg') }}" alt=""  >
+                </div>
+                <div class="link6">
+                <a href="{{ path('actualite_dashboard') }}">lire l'article 6 </a>
+                </div>
+            </div>
+
+            <div class="consommaction">
+                <img class="logo" src="{{ asset('images/actualite/logo_consom_Action.png') }}" alt=""  >
+                <a href="{{ path('actualite_dashboard') }}"><button class="btn-actu-section2"> autres actualités</button></a>
+                <div>
+                <img class="img-fluid" src="{{ asset('images/actualite/ecopanier1.jpg') }}" alt=""  >
+                </div>
+                <div class="link7">
+                <a href="{{ path('actualite_dashboard') }}">lire l'article 7</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+</div>
+
+    {# BOUTON DE PARTAGE SUR FACEBOOK #}
+    {{ include('site/partager_facebook.html.twig') }}
+
+<div class="row">
+    <footer>
+        <div class="col-12" >
+            {% include 'footer.html.twig' %}
+        </div>
+    </footer>
+{% endblock %}
+
+{% block javascripts %}
+
+<script link rel="stylesheet" href="{{ asset('js/bootstrap.min.js')}}"></script>
+
+{% endblock %}

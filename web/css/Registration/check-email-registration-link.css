@@ -1,0 +1,36 @@
+/*body {
+    font-family: 'Nunito', sans-serif;
+}
+
+.mobile {
+    display:none;
+}
+
+.ecran {
+    display:block;
+}
+
+.main-title .title-information {
+    font-family: 'Nunito', sans-serif;
+}
+
+.main-title {
+    font-family: 'Nunito', sans-serif;
+    /*margin-top:10%;
+    margin-bottom:10%;*/
+    /*font-size:0.5em;*/
+/*}
+
+@media screen and (max-width:480px) {
+    .mobile {
+        display:block;
+    }
+
+    .ecran {
+        display:none;
+    }
+
+    /*.main-title-mobile .title-information-mobile {
+        font-size:0.5vw;
+    }*/
+/*}

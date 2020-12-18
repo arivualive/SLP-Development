@@ -1,0 +1,164 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+
+    <link rel="stylesheet" type="text/css"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ asset('css/profilgaea.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/site_dashboard.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/profil-socio-eco.css') }}">
+
+    <style>
+        @-moz-document url-prefix() {
+            .selected1:after {
+                position: absolute;
+                top: 20px;
+                margin-left: -35px;
+                font-family: 'FontAwesome';
+                content: '\f00c';
+                color: #ffffff;
+                font-size: 30px;
+            }
+        }
+    </style>
+{% endblock %}
+{% block body %}
+
+
+    <h2 class="title" style="color:white; text-align:center; font-weight:bold; margin-top:7%; margin-bottom:5%;">MINI
+        PROFIL<br>SOCIO - ECONOMIQUE</h2>
+
+    <div class="row">
+        <!--
+    <div class="dropdown burger">
+        <a class="dropdown-item" style="padding: 0%;width:0%;margin-right: 160px;"
+            class="btn btn-secondary dropdown-toggle" href="{{ path('site_dashboard') }}">
+            <button class="btn btn-secondary dropdown-toggle"><i class="fa fa-home" style="font-size:24px"></i>
+            </button>
+        </a>
+    </div>
+    -->
+    </div>
+
+    <div style="width:90%; margin: 0 auto; margin: 0 auto;"><!--display:block;-->
+        <div style="height: 8%; position:relative;">
+            <img src=" {{ asset('images/mini-profile/Cadres dirigeants.jpg') }}"
+                 style="height: 100%; width:100%;margin-top:5px;" alt="photo background">
+            <div style="position:absolute; bottom:5%; right:13.5%; color:white; border:solid #76afcd 2px; text-align:center; background-color:white; width:72%;">
+                <p style="font-size:200%; color:#76afcd; margin-top:10px;">{{ professionalsituation }}</p></div>
+        </div>
+        <div style="display:flex; justify-content:space-between; margin-top:4%">
+            <h2 style="color:white; font-weight:bold; margin-left:1%;">Age</h2>
+            <h2 style="color:white; font-weight:bold; margin-right:1%;">{{ age }}</h2>
+        </div>
+        <div style="display:flex; justify-content:space-between; margin-top:4%">
+            <h2 style="color:white; font-weight:bold; margin-left:1%;">Revenu</h2><h2 style="color:white; font-weight:bold; margin-right:1%;">{{ minwage|round }}-{{ maxwage|round }}</h2>
+        </div>
+
+        {% if condition is not null %}
+            <div style="display:flex; justify-content:space-between; width:100%; margin-top:2.6%;">
+                <h2 style="color:white; font-weight:bold; ">Condition</h2>
+                <h2 style="color:white; font-weight:bold; ">{{ condition }}</h2>
+            </div>
+            <div style="display:flex; justify-content:space-between; width:100%; margin-top:6.6%;">
+                <h2 style="color:white; font-weight:bold; ">Mini-profil</h2>
+            </div>
+        {% else %}
+            <div style="display:flex; justify-content:space-between; width:100%; margin-top:4%;">
+                <h2 style="color:white; font-weight:bold; ">Mini-profil</h2>
+            </div>
+        {% endif %}
+        <p style="color:white; font-weight:bold; font-size:135%; margin-top:4%;">Vous êtes
+            un {{ professionalsituation }}</p>
+        <p style="color:white; font-size:125%; margin-top:5.3%;">{{ miniproText }}</p>
+
+    </div>
+
+
+
+    <div class="row imagesFooter">
+        <div class="offset-6"></div>
+        <div class="col-md-2">
+            <a href="http://www.gaea21.org/wpg21/">
+            <img class="img-fluid first" id="text-gaea21" src="{{ asset('images/mini-profile/www.gaea21.org.png') }}" alt="">
+            </a>
+        </div>
+        <div class="col-md-2">
+            <a href="http://www.sustlivprogram.org/" class="active">
+            <img class="img-fluid second" id="logo-slp" src="{{ asset('images/mini-profile/logo_slp blanc.png') }}" alt="">
+            </a>
+        </div>
+        <div class="col-md-2">
+            <a href="http://www.gaea21.org/wpg21/">
+            <img class="img-fluid third" id="logo-gaea21" src="{{ asset('images/mini-profile/logo_gaea21_rvb_blanc.png') }}"
+                 alt="">
+            </a>
+        </div>
+    </div>
+
+
+
+    <!--
+    <ul class="profile-menu col-l-12">
+        <a href="http://www.gaea21.org/wpg21/">
+            <li>
+                <img id="text-gaea21" src="{{ asset('images/mini-profile/www.gaea21.org.png') }}" alt="">
+            </li>
+        </a>
+        <a href="http://www.sustlivprogram.org/" class="active">
+            <li>
+                <img id="logo-slp" src="{{ asset('images/mini-profile/logo_slp blanc.png') }}" alt="">
+            </li>
+        </a>
+        <a href="http://www.gaea21.org/wpg21/">
+            <li>
+                <img id="logo-gaea21" src="{{ asset('images/mini-profile/logo_gaea21_rvb_blanc.png') }}" alt="">
+            </li>
+        </a>
+    </ul>
+
+    -->
+    <!--
+<div class="row">
+    <footer>
+        <div class="d-flex flex-row justify-content-around footer">
+            <div>
+                <h3>Projets</h3>
+                <ul>
+                    <li><a href="http://www.repertoirevert.org/">Répertoire Vert</a></li>
+                    <li><a href="">Gree Event Series</a></li>
+                    <li><a href="">Grow your own</a></li>
+                    <li><a href="">Consom'action</a></li>
+                    <li><a href="">Eco-gestes</a></li>
+                    <li><a href="">Green Coaching</a></li>
+                    <li><a href="">Sharing Economy</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3><a href="{{ path('site_mentions') }}">About</a></h3>
+            </div>
+
+            <div>
+                <h3><a href="{{ path('contact') }}">Contact</a></h3>
+            </div>
+
+            <div>
+                <h3><a href="http://www.gaea21.org/wpg21/">gaea21</a></h3>
+            </div>
+        </div>
+    </footer>
+</div>
+-->
+{% endblock %}
+
+{% block javascripts %}
+<<<<<<< HEAD
+    <script link rel="stylesheet" href="{{ asset('js/jquery.min.js') }}"></script>
+    <script link rel="stylesheet" href="{{ asset('js/bootstrap.min.js') }}"></script>
+=======
+
+<script link rel="stylesheet" href="{{ asset('js/bootstrap.min.js')}}"></script>
+>>>>>>> dashboard-pages-2
+
+
+{% endblock %}

@@ -1,0 +1,322 @@
+<div class="eating-budget-spendings-form-container"></div>
+
+<div class="eating-budget-spendings-form-grid-container form-container drinks-spendings-form-container">
+    <div class="row my-row">
+        {% include 'site/budget-spendings-forms/forms-columns-titles.html.twig' %}
+    </div>
+    <div class="subcategory-container water-container">
+        <div id="water-form-line" class="row my-row form-spending-line" data-id="0">
+            <div class="subcategory invisible">water</div>
+            <div class="col-3">
+                <idv class="form-line-title">
+                    <div class="form-line-title-content">
+                        - Eau
+                    </div>
+                </idv>
+            </div>
+            <div class="col-1">
+                <input class="spendings-field what-field"/>
+            </div>
+            <div class="col-1 dropdown-list-col volume-dropdown-list-col">
+                <div class="dropdown-list-container quantity-container">
+                    <select class="dropdown-list water-quantity-list">
+                        <option>1L</option>
+                        <option>2L</option>
+                    </select>
+                    <div class="triangle-img-container water quantity">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-1">
+                <input class="spendings-field brand-field" />
+            </div>
+            <div class="col-1">
+                <input class="spendings-field amount-field" />
+            </div>
+            <div class="col-1 dropdown-list-col currency-dropdown-list-col">
+                <div class="dropdown-list-container currency-list-container">
+                    <select class="dropdown-list currency-list water-currency-list">
+                        <option>CHF</option>
+                        <option>EUR</option>
+                    </select>
+                    <div class="triangle-img-container water currency">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col add-water hand-on-hover">
+                <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+                <idv class="add-product-text">Ajouter un produit</idv>
+            </div>
+            <!--<div class="white-div-to-hide-first-line-add-option"></div>-->
+        </div>
+
+        {% for spending in spendings %}
+            {% if spending.getProduct().getSubcategory().getName() == "water" %}
+                {% set subcategory = "water" %}
+                {% include('site/budget/recorded-theme-spending-form-line.html.twig') %}
+            {% endif %}
+        {% endfor %}
+
+        <!--<div class="add-product-line add-water hand-on-hover">
+            <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+            <idv class="add-product-text">Ajouter un produit</idv>
+        </div>-->
+    </div>
+    
+    <div class="subcategory-container coffee-container">
+        <div id="coffee-form-line" class="row my-row form-spending-line" data-id="0">
+            <div class="subcategory invisible">coffee</div>
+            <div class="col-3">
+                <idv class="form-line-title">
+                    <div class="form-line-title-content">
+                        - Café
+                    </div>
+                </idv>
+            </div>
+            <div class="col-1">
+                <input class="spendings-field what-field"/>
+            </div>
+            <div class="col-1 dropdown-list-col volume-dropdown-list-col">
+                <div class="dropdown-list-container quantity-container">
+                    <select class="dropdown-list coffee-quantity-list">
+                        <option>1L</option>
+                        <option>2L</option>
+                    </select>
+                    <div class="triangle-img-container coffee quantity">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-1">
+                <input class="spendings-field brand-field" />
+            </div>
+            <div class="col-1">
+                <input class="spendings-field amount-field" />
+            </div>
+            <div class="col-1 dropdown-list-col currency-dropdown-list-col">
+                <div class="dropdown-list-container currency-list-container">
+                    <select class="dropdown-list currency-list coffee-currency-list">
+                        <option>CHF</option>
+                        <option>EUR</option>
+                    </select>
+                    <div class="triangle-img-container coffee currency">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col add-coffee hand-on-hover">
+                <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+                <idv class="add-product-text">Ajouter un produit</idv>
+            </div>
+            <!--<div class="white-div-to-hide-first-line-add-option"></div>-->
+        </div>
+        {% for spending in spendings %}
+            {% if spending.getProduct().getSubcategory().getName() == "coffee" %}
+                {% set subcategory = "coffee" %}
+                {% include('site/budget/recorded-theme-spending-form-line.html.twig') %}
+            {% endif %}
+        {% endfor %}
+        <!--<div class="add-product-line add-coffee hand-on-hover">
+            <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+            <idv class="add-product-text">Ajouter un produit</idv>
+        </div>-->
+        
+    </div>
+
+    <div class="subcategory-container tea-container">
+        <div id="tea-form-line" class="row my-row form-spending-line" data-id="0">
+            <div class="subcategory invisible">tea</div>
+            <div class="col-3">
+                <idv class="form-line-title">
+                    <div class="form-line-title-content">
+                        - Thé
+                    </div>
+                </idv>
+            </div>
+            <div class="col-1">
+                <input class="spendings-field what-field"/>
+            </div>
+            <div class="col-1 dropdown-list-col volume-dropdown-list-col">
+                <div class="dropdown-list-container quantity-container">
+                    <select class="dropdown-list tea quantity tea-quantity-list">
+                        <option>1L</option>
+                        <option>2L</option>
+                    </select>
+                    <div class="triangle-img-container tea quantity">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-1">
+                <input class="spendings-field brand-field" />
+            </div>
+            <div class="col-1">
+                <input class="spendings-field amount-field" />
+            </div>
+            <div class="col-1 dropdown-list-col currency-dropdown-list-col">
+                <div class="dropdown-list-container currency-list-container">
+                    <select class="dropdown-list currency-list tea-currency-list">
+                        <option>CHF</option>
+                        <option>EUR</option>
+                    </select>
+                    <div class="triangle-img-container tea currency">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col add-tea hand-on-hover">
+                <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+                <idv class="add-product-text">Ajouter un produit</idv>
+            </div>
+        </div>
+        {% for spending in spendings %}
+            {% if spending.getProduct().getSubcategory().getName() == "tea" %}
+                {% set subcategory = "coffee" %}
+                {% include('site/budget/recorded-theme-spending-form-line.html.twig') %}
+            {% endif %}
+        {% endfor %}
+        <!--<div class="add-product-line add-tea hand-on-hover">
+            <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+            <idv class="add-product-text">Ajouter un produit</idv>
+        </div>-->
+        
+    </div>
+
+    <div class="subcategory-container soft-drink-container">
+        <div id="soft-drink-form-line" class="row my-row form-spending-line" data-id="0">
+            <div class="subcategory invisible">soft-drink</div>
+            <div class="col-3">
+                <idv class="form-line-title">
+                    <div class="form-line-title-content">
+                        - Sodas
+                    </div>
+                </idv>
+            </div>
+            <div class="col-1">
+                <input class="spendings-field what-field"/>
+            </div>
+            <div class="col-1 dropdown-list-col volume-dropdown-list-col">
+                <div class="dropdown-list-container quantity-container">
+                    <select class="dropdown-list soft-drink-quantity-list">
+                        <option>1L</option>
+                        <option>2L</option>
+                    </select>
+                    <div class="triangle-img-container soft-drink quantity">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-1">
+                <input class="spendings-field brand-field" />
+            </div>
+            <div class="col-1">
+                <input class="spendings-field amount-field" />
+            </div>
+            <div class="col-1 dropdown-list-col currency-dropdown-list-col">
+                <div class="dropdown-list-container currency-list-container">
+                    <select class="dropdown-list currency-list soft-drink-currency-list">
+                        <option>CHF</option>
+                        <option>EUR</option>
+                    </select>
+                    <div class="triangle-img-container soft-drink currency">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col add-soft-drink hand-on-hover">
+                <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+                <idv class="add-product-text">Ajouter un produit</idv>
+            </div>
+        </div>
+        {% for spending in spendings %}
+            {% if spending.getProduct().getSubcategory().getName() == "soft-drink" %}
+                {% set subcategory = "coffee" %}
+                {% include('site/budget/recorded-theme-spending-form-line.html.twig') %}
+            {% endif %}
+        {% endfor %}
+        <!--<div class="add-product-line add-soft-drink hand-on-hover">
+            <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+            <idv class="add-product-text">Ajouter un produit</idv>
+        </div>-->
+    </div>
+
+
+    <div class="subcategory-container vegetable-drink-container">
+        <div id="vegetable-drink-form-line" class="form-spending-line row my-row last-form-line vegetable-drink-bottom-form-line-0 last-line" data-id="0">
+            <div class="subcategory invisible">vegetable-drink</div>
+            <div class="col-3">
+                <idv class="form-line-title">
+                    <div class="form-line-title-content">
+                    - Boissons végétales
+                        <div class="small-title-content">
+                            (lait de soja, lait d'amandes, lait d'avoine)
+                        </div>
+                    </div>
+                </idv>
+            </div>
+            <div class="col-1 field-and-button-under-field-container last-line-what-column">
+                <input class="spendings-field what-field"/>
+                <!--<div class="form-button bottom-button-0 left-button">Retour au dashboard</div>-->
+            </div>
+            <div class="col-1 dropdown-list-col volume-dropdown-list-col">
+                <div class="dropdown-list-container quantity-container">
+                    <select class="dropdown-list vegetable-drink-quantity-list">
+                        <option>1L</option>
+                        <option>2L</option>
+                    </select>
+                    <div class="triangle-img-container vegetable-drink quantity">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-1">
+                <input class="spendings-field brand-field" />
+            </div>
+            <div class="col-1">
+                <input class="spendings-field amount-field" />
+            </div>
+            <div class="col-1 field-and-button-under-field-container last-line-currency-column dropdown-list-col currency-dropdown-list-col">
+                <div class="dropdown-list-container currency-list-container">
+                    <select class="dropdown-list currency-list vegetable-drink-currency-list">
+                        <option>CHF</option>
+                        <option>EUR</option>
+                    </select>
+                    <div class="triangle-img-container vegetable-drink currency">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+                <!--<div class="form-button bottom-button-0 right-button form-validation-button">Valider</div>-->
+            </div>
+            <div class="col add-vegetable-drink hand-on-hover">
+                <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+                <idv class="add-product-text">Ajouter un produit</idv>
+            </div>
+        </div>
+        {% for spending in spendings %}
+            {% if spending.getProduct().getSubcategory().getName() == "vegetable-drink" %}
+                {% set subcategory = "coffee" %}
+                {% include('site/budget/recorded-theme-spending-form-line.html.twig') %}
+            {% endif %}
+        {% endfor %}
+        <!--<div class="add-product-line add-vegetable-drink hand-on-hover">
+            <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+            <idv class="add-product-text">Ajouter un produit</idv>
+        </div>-->
+    </div>
+    <div class="bottom-buttons-line-container">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-1">
+                <div class="form-button bottom-button-0 left-button">Retour au dashboard</div>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+            <div class="col-1">
+                <div class="form-button bottom-button-0 right-button form-validation-button" data-category="drinks-spendings">Valider</div>
+            </div>
+        </div>
+    </div>
+</div>

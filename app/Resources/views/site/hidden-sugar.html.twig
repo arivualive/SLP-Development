@@ -1,0 +1,725 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <!--<link rel="stylesheet" href="{{ asset('css/eating-budget.css') }}">-->
+    <link rel="stylesheet" href="{{ asset('css/complementary-page.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+
+{% endblock %}
+
+{% block body %}
+
+    <div class="header">
+        <div class="dropdown burger above-image">
+        </div>
+        <h1>SUCRES<br>CACHÉS</h1>
+        <div class="image-container">
+            <div class="green-film"></div>
+            <img class="below-film" src="{{ asset('images/dashboard/additional-information-pages/header-hidden-sugar.jpg') }}">
+            <a href="#">
+                <div class="dollar-img-container">
+                    <img class="dollar-img" src="{{ asset('images/budget/individumenage/dollars.png') }}" />
+                </div>
+            </a>
+        </div>
+    </div>
+    <a href="#" title="Haut de page" class="scrollup"><i class="fa fa-arrow-up"></i></a>
+
+    <p id="scroll-up" class="intro black-text bold">Les sucres sont cachés quand ils apparaissent en tant qu’ingrédients sous des noms que nous connaîssons mal (lactose, dextrose, sirops de glucose...) dans des aliments industriels. Les sucres cachés sont en partie responsables des consommations aberrantes de sucre aujourd’hui : près de 100 grammes par jour, alors que la recommandation de l’OMS est de 50 g.</p>
+
+    <div class="btns-container container my-container">
+        <div class="row my-row">
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Glucose">Glucose</div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Jus-de-fruits-concentré">Jus de fruits concentré</div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Sucre-de-coco">Sucre de coco</div>
+        </div>
+        </div>
+
+        <div class="row my-row">
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Saccharose">Saccharose</div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Mélasse">Mélasse</div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Sucre-de-dattes">Sucre de dattes </div>
+        </div>
+        </div>
+
+        <div class="row my-row">
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Dextrose">Dextrose</div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Miel">Miel</div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Sucre-de-raisin">Sucre de raisin</div>
+        </div>
+        </div>
+
+        <div class="row my-row">
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Fructose">Fructose</div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Muscovado">Muscovado</div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Sucre-Demerara">Sucre Demerara</div>
+        </div>
+        </div>
+
+        <div class="row my-row">
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Fructose-cristallisé">Fructose cristallisé</div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Sirop-agave">Sirop d’agave</div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Sucre-glace">Sucre glace </div>
+        </div>
+        </div>
+
+        <div class="row my-row">
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Lactose">Lactose</div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Sirop-érable">Sirop d’érable</div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Sucre-inverti">Sucre inverti</div>
+        </div>
+        </div>
+
+        <div class="row my-row">
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Galactose">Galactose</div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Sirop-de-bouleau">Sirop de bouleau</div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Golden-syrup">Golden syrup</div>
+        </div>
+        </div>
+
+        <div class="row my-row">
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Maltose">Maltose</div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Sirop-de-maïs">Sirop de maïs</div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Sucre-de-palme">Sucre de palme</div>
+        </div>
+        </div>
+
+        <div class="row my-row">
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Maltodextrine">Maltodextrine</div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Sirop-de-malt">Sirop de malt </div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Sucre-de-canne">Sucre de canne / cassonnade / sucre brun </div>
+        </div>
+        </div>
+
+        <div class="row my-row">
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Dextrine">Dextrine</div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Sirop-de-riz">Sirop de riz</div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Sucre-turbiné">Sucre turbiné / turbinado</div>
+        </div>
+        </div>
+
+        <div class="row my-row">
+        <div class="col-4 my-col">
+            <div class="inactive hidden-sugar-btn" data-scrollId="Caramel">Caramel</div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Sirop-de-sorgho">Sirop de sorgho</div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Sucre-de-maïs-à-haute-teneur-en-fructose">Sirop de maïs à hauteteneur en fructose</div>
+        </div>
+        </div>
+
+        <div class="row my-row">
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Ethyl-maltol">Ethyl-maltol</div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Sucre-brut">Sucre brut </div>
+        </div>
+        <div class="col-4 my-col">
+            <div class="hidden-sugar-btn inactive" data-scrollId="Sirop-de-glucose-fructose">Sirop de glucose-fructose </div>
+        </div>
+        </div>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+    
+    
+    <div class="title" id="Glucose">
+        <p>• Glucose</p>
+    </div>
+    
+    
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Il est naturellement présent dans l’organisme, il entre dans la composition du saccharose et des amidons  (amylopectine,  amylose  :  ce  sont  des  sucres  sous  forme  de  longues  chaines  de glucose).  L’industrie  agroalimentaire  le  récupère  d'ailleurs  par  hydrolyse  enzymatique de l’amidon. Pris isolément, il élève fortement la glycémie et peut conduire à une résistance à l'insuline.</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Saccharose">
+        <p>• Saccharose</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Molécule composée de glucose et de fructose, c’est le sucre le plus utilisé par l’industrie agroalimentaire, surtout pour la confection de confiseries, boissons, confitures et pâtisseries. C’est le référent  pour  comparer  le  pouvoir  sucrant  des  différents  sucres.  Son  index  glycémique  est modéré du fait de la présence de fructose (qui elle-même peut poser problème, voir ci-dessous).</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Dextrose">
+        <p>• Dextrose</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Il  s’agit  d’une  molécule  de  glucose  purifié  et  cristallisé,  issue  de  l’hydrolyse  complète  de l’amidon. </p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Fructose">
+        <p>• Fructose</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Sucre naturel qui se trouve en abondance dans les fruits et le miel, il a un index glycémique plus bas que le saccharose mais un pouvoir sucrant supérieur à celui-ci. Les industriels l'obtiennent aussi (avec du glucose en proportions variables) à partir de sources comme le maïs, par acidification enzymatique et l'ajoutent aux sodas et autres aliments ultra-transformés. Le fructose est métabolisé par le foie et peut conduire à un "foie gras". </p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Fructose-cristallisé">
+        <p>• Fructose cristallisé</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Le fructose pur cristallisé est un produit issu des filières maïs ou sucrière. Il y a deux façons de l’obtenir à partir  D’amidon de maïs et de saccharose. Dans les deux process, le fructose est ensuite cristallisé, séché, broyé afin d’obtenir la granulométrie souhaitée et conditionné.</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Lactose">
+        <p>• Lactose</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">C’est  un  sucre  naturellement  présent  dans  le  lait  et  les  produits  laitiers.  Mais  les  industriels peuvent également récupérer ce sucre en procédant à diverses manipulations du lactosérum. Il est métabolisé en galactose et glucose, mais après l'âge de 3-5 ans, la majorité des êtres humains ne peuvent plus assurer cette transformation correctement (ce qu'on appelle intolérance au lactose).</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Galactose">
+        <p>• Galactose</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Issu de l’hydrolyse du lactose, un sucre présent dans les produits laitiers, on peut aussi le trouver en petite quantité dans certaines plantes comme les légumineuses</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Maltose">
+        <p>• Maltose</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Appelé aussi sucre de malt, il est composé de plusieurs molécules de glucose. Il est issu de l’hydrolyse de l’amidon du maïs ou de l’orge.</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Maltodextrine">
+        <p>• Maltodextrine</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">C’est une molécule soluble composée de maltose et de dextrine. Il est utilisé par les industriels comme additif et s’apparente au dextrose. Il sert surtout à épaissir les produits laitiers. </p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Dextrine">
+        <p>• Dextrine</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Chimiquement c’est une longue chaîne de dextrose, issue de la fermentation du saccharose par des bactéries</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Caramel">
+        <p>• Caramel</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Provenant de la cuisson du sucre, il est souvent utilisé comme colorant ou arôme (E150)</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Ethyl-maltol">
+        <p>• Ethyl-maltol</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">C’est un composant de l’industrie agroalimentaire utilisé comme exhausteur de goût et arôme synthétique (E637</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Jus-de-fruits-concentré">
+        <p>• Jus de fruits concentré</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Sirop obtenu suite à la réduction de l’eau dans le jus, c’est un produit riche en fructose, glucose ou saccharose en fonction du fruit.</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Mélasse">
+        <p>• Mélasse</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">produit généré par le raffinage du sucre de canne ou de betterave. Seule la mélasse issue de la canne est propre à la consommation humaine. C’est un sirop épais et visqueux qui peut être utilisé en cuisine pour remplacer le sucre simple, il est essentiellement composé de saccharose. </p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Miel">
+        <p>• Miel</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Ce sucre naturel qu’on ne présente plus, est riche en fructose et a un pouvoir sucrant souvent plus élevé que le saccharos</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Muscovado">
+        <p>• Muscovado</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">C’est  un  sucre  naturel  de  canne  roux  non  raffiné,  purifié,  filtré  puis  caramélisé  composé  de saccharose</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Sirop-agave">
+        <p>• Sirop d’agave</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">C’est un sucre issu de l’extraction de la sève de l’agave, la plante qui sert à fabriquer la téquila. Il a un goût relativement neutre comparé à celui du miel. C’est un édulcorant naturel avec un pouvoir sucrant plus élevé que le sucre blanc, avec une forte teneur en fructose. </p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Sirop-érable">
+        <p>• Sirop d’érable</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Sucre issu de la sève de l’érable à sucre qui a été bouillie. Il est riche en saccharose.</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Sirop-de-bouleau">
+        <p>• Sirop de bouleau</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Il est issu à partir de la sève du bouleau mais il est moins sucré que son cousin le sirop d’érable et  a  un  goût  particulier  qui  s’apparente  au  caramel  épicé,  il  est  composé  de  fructose  et  de glucose.</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Sirop-de-glucose-fructose">
+        <p>• Sirop de glucose-fructose</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">C'est un sirop de glucose qui contient une proportion de fructose, c'est un produit essentiellement utilisé par les industriels</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Sirop-de-maïs">
+        <p>• Sirop de maïs</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Issu de la fécule de maïs, avant transformation il est essentiellement composé de glucose. Il est utilisé  principalement  en  confiserie,  mais  on  peut  le  retrouver  dans  les  boissons,  les  fruits  en conserve, les crèmes glacées ... l’industrie agroalimentaire utilise une version de ce sirop qui est riche en fructose, surtout pour les boissons gazeuses.</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Sirop-de-malt">
+        <p>• Sirop de malt</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">C’est un sirop confectionné à partir de graines d’orge germées, séchées, grillées puis moulues qui vont ensuite être fermentées. Ce produit est une sorte de mélasse sucrée composé de maltose, destinée à certaines recettes, mais elle permet également la confection d’alcools tels que la bière ou le whisky.</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Sirop-de-riz">
+        <p>• Sirop de riz</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Issu de la fermentation du riz brun et d’orge entier, composé de maltose. Il est souvent utilisé par les industriels pour les barres énergétiques destinées aux sportifs</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Sirop-de-sorgho">
+        <p>• Sirop de sorgho</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">C’est un sirop issu des tiges du sorgho commun, une céréale d’origine africaine. La tige va être pressée,  puis  chauffée  ;  ensuite  en  évaporant  l’eau,  on  va  obtenir  un  sirop  couleur  or.  On  retrouve essentiellement de l'amidon.</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Sucre-brut">
+        <p>• Sucre brut</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Il se présente sous forme de cristaux bruns et secs, il est issu du jus de la canne à sucre non raffiné et évaporé.</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Sucre-de-canne">
+        <p>• Sucre de canne / cassonnade / sucre brun</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">C’est un sucre roux brut issu de la canne à sucre non raffinée.</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Sucre-de-coco">
+        <p>• Sucre de coco</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Il provient de la sève de la fleur de cocotier et ressemble au sucre roux, mais avec un index glycémique plus bas.</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Sucre-de-dattes">
+        <p>• Sucre de dattes</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Issu de la déshydratation et le broyage des dattes, il ressemble au sucre roux, les bénéfices nutritionnels de ce fruit en plus. Il contient essentiellement du fructose et du glucose.</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Sucre-de-raisin">
+        <p>• Sucre de raisin</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Suite aux vendanges, le jus de raisin restant subit une évaporation afin d’obtenir un concentré liquide des sucres du raisin contenant du glucose.</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Sucre-Demerara">
+        <p>• Sucre Demerara</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Extrait du sucre de canne qui provient de Guyane, il est granulé, humide et enrobé de mélasse onctueuse</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Sucre-glace">
+        <p>• Sucre glace</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Cristaux de sucre blanc moulus en poudre très fine.</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Sucre-inverti">
+        <p>• Sucre inverti</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Mélange de sirop de glucose et de sirop de fructose à concentration égale qui affiche un pouvoir sucrant  légèrement  supérieur  au  fructose.  Il  est  très  utilisé  par  l’industrie  pour  la  biscuiterie grâce un fort potentiel technologique (liant, texture, couleur, goût ).</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Golden-syrup">
+        <p>• Golden syrup</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Sucre inverti (glucose et fructose) obtenu à partir de la mélasse lors de la fabrication du sucre de canne. Il est utilisé en cuisine pour son fort pouvoir sucrant et le fait qu'il ne dessèche pas.</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Sucre-turbiné">
+        <p>• Sucre turbiné / turbinado</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Sucre de canne semi-raffiné avec des cristaux plus ou moins colorés.</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Sucre-de-palme">
+        <p>• Sucre de palme</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Se fait d’une façon artisanale: la sève est concentrée jusqu’à consistance suffisante par la chaleur dans des bassines à feu nu.</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="title" id="Sucre-de-maïs-à-haute-teneur-en-fructose">
+        <p>• Sirop de maïs à haute teneur en fructose</p>
+    </div>
+
+    <br class="ecran"><br class="ecran">
+
+    <div class="description-txt-container">
+        <p class="description-txt black-text">Sirop obtenu à partir d’amidon de maïs et contient généralment 42% ou 55% de fructose.</p>
+    </div>
+    
+
+    <br class="ecran"><br class="ecran"><br class="ecran"><br class="ecran">
+
+    <div class="references-text black-text">
+    <p class="references">Références :</p>
+    <br class="ecran">
+    <p>- Leaky Gut Syndrome, Tartrazine E102, Herbizide</p>
+    <p>- E102</p>
+    <p>- WebAdditifs</p>
+    <p>- Tartrazine</p>
+    <p>- Le tartrazine E102, un colorant dangereux</p>
+    <p>- Allergie de tartrazin</p>
+    <p>- Quels sont les risques annoncés en consommant ce colorant ?</p>
+    <p>- Always read the label</p>
+    <p>- Food agency calls ban on six artificial colours</p>
+    <p>- Les additifs alimentaires sont-ils dangereux pour la santé </p>
+    <p>- Acide benzoïque et ses sel</p>
+    <p>- E104</p>
+    <p>- Additifs alimentaires: la face cachée de l’alimentation transformé</p>
+    <p>- E110</p>
+    <p>- Naturopathie holistique</p>
+    <p>- E122</p>
+    <p>- E122 Carmoisine - Azorubine</p>
+    <p>- E124</p>
+    <p>- E150</p>
+    <p>- Le colorant caramel serait nocif pour la santé</p>
+    <p>- Le caramel, un colorant pas si anodin omniprésent dans notre alimentation</p>
+    <p>- What are the most dangerous E-numbers</p>
+    <p>- Top E numbers to avoid</p>
+    <p>- E210</p>
+    </div>
+    <br><br><br>
+
+{% include 'footer.html.twig' %}
+
+{% endblock %}
+
+{% block javascripts %}
+    <script link rel="stylesheet" href="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script>
+        $('.hidden-sugar-btn').click(function (){
+            var dataId = $(this).data('scrollid');
+            console.log(dataId);
+            $('.hidden-sugar-btn').addClass('inactive');
+            $(this).removeClass('inactive');
+            $('html, body').animate({
+                scrollTop: $("#" + dataId).offset().top
+            }, 500);
+        });
+
+
+        //Bouton pour remonter en haut de la page
+        ScrollToTop=function() {
+            var s = $(window).scrollTop();
+            if (s > 1000) {
+                $('.scrollup').fadeIn();
+            } else {
+                $('.scrollup').fadeOut();
+            }
+
+            $('.scrollup').click(function () {
+                $("html, body").animate({ scrollTop: 0 }, 500);
+                return false;
+            });
+        }
+
+        StopAnimation=function() {
+            $("html, body").bind("scroll mousedown DOMMouseScroll mousewheel keyup", function(){
+                $('html, body').stop();
+            });
+        }
+
+
+        $(window).scroll(function() {
+            ScrollToTop();
+            StopAnimation();
+        });
+    </script>
+{% endblock %}

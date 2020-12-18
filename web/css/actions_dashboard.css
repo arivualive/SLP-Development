@@ -1,0 +1,278 @@
+body {
+    font-family: 'Nunito';
+}
+.header {
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+.menu-img-container {
+    position: absolute;
+    width:6%;
+    height:auto;
+    top:4%;
+    right:4%;
+}
+.header img {
+    width: 100%;
+}
+.above-image {
+    z-index: 1;
+}
+.image-container {
+    width: fit-content;
+    position: relative;
+}
+.blue-film {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(83,156,196,0.5);
+}
+.blue-film .imgTitle{
+    color: white;
+    text-transform: uppercase;
+    font-size: 60pt;
+    font-weight: bold;
+}
+.blue-film h2{
+    color: white;
+    text-transform: uppercase;
+    font-size: 60pt;
+    font-weight: bold;
+}
+.below-film {
+    z-index: -1;
+}
+
+/*-----------------------------
+Actions et points
+----------------------------- */
+.main {
+    margin-top: 69px;
+}
+.actionsTitle {
+    text-align: center;
+}
+.descriptionPoints h2  {
+    color: #539ac4;
+    font-weight: bold;
+}
+.imgTitle  {
+    color: #539ac4;
+    font-weight: bold;
+}
+.textActions, .descriptionPoints p {
+    color: #539ac4;
+    font-size: 25pt;
+}
+.textActionsPoints {
+    margin-top: 200px;
+    color: #539ac4;
+    font-size: 25pt;
+}
+.imgActionsTitle {
+    width: 20%;
+    margin-top: 241px;
+}
+.imgActions-intervention img{
+    width: 100%;
+}
+.imgActions img{
+    width: 50%;
+}
+.serviceTitle, .serviceActions {
+    text-align: center;
+}
+.mainService {
+    margin-top: 146px;
+}
+.serviceTitle img {
+    width: 10%;
+}
+.serviceActions img {
+    width: 100%;
+}
+.divServices {
+    margin-top: 156px;
+}
+.footerActionsPoints {
+    margin-top: 445px;
+}
+
+/*-----------------------------
+medailles / badges
+----------------------------- */
+.imgBadges {
+width: 166px;
+padding-top: 50px;
+transition: transform .2s; /* Animation */
+}
+.imgBadges:hover {
+    -ms-transform: scale(1.3); /* IE 9 */
+    -webkit-transform: scale(1.3); /* Safari 3-8 */
+    transform: scale(1.3);
+}
+.gallery1 {
+    margin-top: 175px;
+}
+.gallery2, .gallery3, .gallery4, .gallery5 {
+margin-top: 50px;
+}
+.descriptionBadges{
+    margin-top: 218px;
+}
+.successBadge {
+    width: 166px;
+}
+.badges {
+    margin-top: 129px;
+}
+.badges .action, .badgeFirst .action {
+    text-align: justify;
+}
+.badgeFirst, .badges {
+    align-items: center;
+}
+.badgeFirst h4, .badges h4, .message{
+    color: #539ac4;
+    font-weight: bold;
+}
+.badgeFirst p, .badges p{
+    color: #539ac4;
+    font-size: 18pt;
+}
+.footerBadges {
+    margin-top: 354px;
+}
+
+/*-----------------------------
+Passer à l'action
+----------------------------- */
+.actionMenu {
+    margin-top: 21%;
+}
+.menu2 {
+    margin-top: 10%;
+}
+#menu3 {
+    margin-top: 10%;
+}
+.imgMenu {
+    width: 75%;
+    cursor: pointer;
+    transition: transform .2s; /* Animation */
+}
+.imgMenu:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
+}
+.imgHover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
+}
+.passerActionText {
+    color: #539ac4;
+    font-size: 20pt;
+}
+
+/*-----------------------------
+rotation boutons et tableau
+----------------------------- */
+#rotator { height: 192px; position: relative; margin-bottom: 10%; }
+#rotator > div { 
+    position: absolute; 
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+#catCompetence {
+    color: #d267f9;
+    font-weight: bold;
+}
+#catMateriel {
+    color: #e4bd06;
+    font-weight: bold;
+}
+#catTransport {
+    color: #ff8170;
+    font-weight: bold;
+}
+#catLogement {
+    color: #a3e747;
+    font-weight: bold;
+}
+#catSoutien {
+    color: #5fcadd;
+    font-weight: bold;
+}
+#catParrainage {
+    color: #bd661e;
+    font-weight: bold;
+}
+#rotator > div img {
+    width: 100%;
+}
+#rotator > div.non-active-top h3, #rotator > div.non-active-top-2 h3,
+#rotator> div.non-active-top-3 h3, #rotator > div.non-active-top-4 h3, #rotator > div.non-active-top-5 h3 
+{
+	display: none;
+}
+#rotator .active { left: 50%; width: 200px; z-index: 6;}
+#rotator .non-active-top { left: 70%; width: 152px; z-index: 5; }
+#rotator .non-active-top-2 { left: 75%; width: 152px; z-index: 4; }
+#rotator .non-active-top-3 { left: 80%; width: 152px; z-index: 3; }
+#rotator .non-active-top-4 { left: 85%; width: 152px; z-index: 2; }
+#rotator .non-active-top-5 { left: 90%; width: 152px; z-index: 1; }		
+
+#tables > div {
+	overflow: hidden;
+	transition: all 0.5s ease;
+}
+
+#tables > div.non-active-top, #tables > div.non-active-top-2,
+#tables > div.non-active-top-3, #tables > div.non-active-top-4, #tables > div.non-active-top-5
+{
+	display: none;
+}
+
+/*-----------------------------
+Bouton retour top
+----------------------------- */
+#button {
+    display: inline-block;
+    background-color: #539ac4;;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+  }
+  #button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+  }
+  #button:hover {
+    cursor: pointer;
+    background-color: #333;
+  }
+  #button:active {
+    background-color: #555;
+  }
+  #button.show {
+    opacity: 1;
+    visibility: visible;
+  }

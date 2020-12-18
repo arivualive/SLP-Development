@@ -1,0 +1,1688 @@
+.mobile {
+    display: none;
+}
+
+.burger button {
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 1);
+    color: #539ac4;
+    border: solid 2px white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.burger {
+    position: absolute;
+    top: 3%;
+    right: 2%;
+}
+
+.dropdown-menu::before,
+.dropdown-menu::after {
+border: none;
+content: none;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+/* ------------------------------------------------
+MENU
+------------------------------------------------  */
+
+.container {
+    padding: 0;
+}
+ 
+
+/* ------------------------------------------------
+SLIDER
+------------------------------------------------  */
+    .carousel-item {
+        background-color: #539ac4;
+    }
+
+    .top-adjust {
+        top: 30%;
+    }
+
+    .carousel-caption {
+        margin: auto;
+        padding-bottom: 10%;
+    }
+
+    .carousel-item .intro h1 {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        text-align: center;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        font-size: 40pt;
+        font-weight: bold;
+    }
+
+    .image-header {
+        opacity: 1;
+    }
+    .ligne {
+        border-right: 2px solid #539ac4;
+        min-height: 510px;  
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+
+/* ------------------------------------------------
+ABOUT
+------------------------------------------------  */
+.about {
+    margin-bottom: 113px;
+    width: 1200px;
+    padding-top: 50px;
+}
+
+.about h1 {
+    color: #36667b;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    margin-top: 80px;
+    font-weight: bold; 
+    font-size: 40px;
+}
+.about .desc {
+    font-family: 'Nunito', sans-serif;
+    color:#36667b;
+    font-size: 18px;
+}
+
+.about p {
+    font-family: 'Nunito', sans-serif;
+    color: #36667b;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    
+}
+
+.bandeau {
+    width: 100%;
+    height: 150px;
+    margin-top: 1013px;
+    position: absolute;
+    background-color: #36667b;
+    z-index: -1;
+}
+
+.bandeau2 {
+    width: 100%;
+    height: 150px;
+    margin-top: -1325px;
+    position: absolute;
+    background-color: #36667b;
+    z-index: -1;
+}
+/* ------------------------------------------------
+SLC community
+------------------------------------------------  */
+.SLC {
+    background-color: #36667b;
+    height: 125px;
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+    /*display: inline-flex;
+    justify-content: space-around;*/
+}
+
+.SLC .option {
+    margin-left: 210px;
+}
+
+.SLC p {
+    color: white;
+}
+
+.SLC-join {
+    display: inline-flex;
+    height:100%;
+    float: right;
+}
+
+.join {
+    margin-left:300px;
+}
+
+.SLC h2 {
+    color:white;
+    text-align: center;
+    font-weight: bold;
+    margin-top:46px;
+    width:565px;
+    /*margin-left:20px;*/
+    font-size: 30px;
+}
+
+.SLC .SLC-join .slc-logo {
+    width: 60px;
+    height: 60px;
+    margin-top: 30px;
+    /*margin-left: 100px;*/
+    padding: 2px;
+    margin-left:12%;
+}
+
+.SLC .yes-no {
+    padding-right:300px;
+}
+
+.SLC .yes { 
+    width:103px;
+    height: 103px;
+    margin-top: 11px;
+    padding: 2px;
+    margin-right:40%;
+    margin-left:60%;
+}
+
+.SLC .no {
+    width:103px;
+    height: 103px;
+    margin-top: 11px;
+    padding: 2px;
+    /*margin-left:3%;*/
+}
+
+/* ------------------------------------------------
+information
+------------------------------------------------ */
+
+.info {
+    font-family: 'Nunito', sans-serif;
+    background-color: #36667b;
+    width: 100%;
+    margin-top: 70px;
+    padding-left: 33px;
+    padding-top: 53px;
+    position: relative;
+}
+
+.info .titre {
+    font-family: 'Nunito', sans-serif;
+    width: 700px;
+}
+
+.info .titre h2 {
+    font-family: 'Nunito', sans-serif;
+    margin: 0px;
+    font-size:30pt;
+    color: white;
+    font-weight: bold;
+}
+
+.info .gauche {
+    position: absolute;
+    /*width: 500px;*/
+    width: 40%;
+    height: auto;
+    margin-top: 102px;
+    /*margin-left: 3px;*/
+}
+
+.info .content {
+    font-family: 'Nunito', sans-serif;
+    margin-top: 82px;
+    width: 550px;
+    
+}
+
+.info .contentright p {
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    font-size: 14pt;
+    float: right;
+    margin-bottom: 120px;
+    margin-top: 100px;
+    margin-right: 20px;
+    width:52%;
+}
+
+.diagramme {
+    width: 625px;
+    height: auto;
+    position: absolute;
+    right: 30px;
+    top: 180px;
+}
+
+.ours {
+    width: 520px;
+    height: auto;
+    position: absolute;
+    right: 30px;
+    top: 685px;
+}
+.videoGreta{
+    width: 100%;
+}
+.content p {
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    font-size: 14pt;
+}
+
+.association {
+    font-family: 'Nunito', sans-serif;
+    width: 100%;
+    height: auto;
+    color: #36667b;
+    text-align: right;
+    font-size: 14pt;
+    position: relative;
+}
+
+.association .image-slp {
+    position: absolute;
+    width:42%;
+    height:30%;
+    bottom: 17%;
+}
+
+.association .image-slp iframe{
+    width: 100%;
+}
+/*.association .image-slp img {
+    
+    width:97.5%;
+    height:104%;
+    margin-bottom:6%;
+}*/
+.association .image-slp .teaser-slp {
+    width:97.5%;
+    height:104%;
+    margin-bottom:6%;
+    
+}
+
+.association .image-slp h3 {
+    /*
+    width:100%;
+    height:100%;
+    */
+    font-weight: bold;
+    text-align:left;
+    margin-left:2.5%;
+}
+
+/*association-text*/
+
+.association h2 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 30pt;
+    font-weight: bold;
+}
+
+.abeilles {
+    
+    position: absolute;
+    height: 100%;
+    left: 0;
+}
+
+.action {
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+    background-color: rgb(83, 83, 83);
+    /*margin-top: 40px;*/
+    color:white;
+    height:auto;
+    /*padding-bottom: 40px;*/
+}
+
+.action .tedx {
+    /*width: 30%;*/
+    width: 100%;
+    height: 52%;
+    
+    margin-top:6%;
+    float:right;
+}
+
+.action .link_non_violent_struggle {
+    color:white;
+}
+
+.action .my-container {
+    border:1px dotted green;
+}
+
+.action .my-row {
+    border:3px dotted red;
+    margin:0 0 0 0;
+}
+
+.action .my-col {
+    border:3px dotted blue;
+}
+
+.action h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25pt;
+}
+
+.action h3 {
+    font-weight: bold;
+    font-size: 17.7pt;
+}
+
+.action p {
+    font-size: 12pt;
+}
+
+.avantages {
+    width: 100%;
+    color: #36667b;
+    font-family: 'Nunito', sans-serif;
+    margin-top: 40px;
+    position: relative;
+}
+
+.avantages img {
+    width: 230px;
+    height: 90px;
+    margin-bottom: 50px;
+
+}
+
+.avantages h2 {
+    width: 75%;
+    text-align: left;
+    font-size: 24pt;
+    margin-bottom: 70px;
+    font-weight: bold;
+    float: right;
+    margin-top: 28.8px;
+}
+
+.avantages .dashed {
+    margin:0;
+    list-style-image: url('/images/dash.png');
+    
+}/*
+.avantages .dashed li:before {      display:block;
+    float: right;
+    content: "- ";
+}*/
+
+/*.avantages .dashed {
+    margin:0px;list-style-type:none;
+}
+
+.avantages .dashed > li {
+    text-indent: -5px;
+}
+
+.avantages .dashed > li:before {
+    content: "-";
+    text-indent: -5px;
+}*/
+
+.avantages-title-below-min-width-991 {
+    display: none;
+}
+
+.avantages p {
+    font-size: 14.5pt;
+}
+
+.avantages li {
+    font-size: 14.5pt;
+}
+
+.abeilles-avantages-slc {
+    position: absolute;
+    bottom: 0;
+    right: 0%;
+    width:66%;
+    height:auto;
+}
+
+.abeilles-avantages-slc img {
+    width:100%;
+    height:100%;
+    margin-bottom: 17px;
+}
+
+/*.buttonforum a button {
+    width: 100%;
+    padding: 10px;
+    padding-left: 80px;
+    padding-right: 30px;
+    border: solid 2px #36667b;
+    border-radius: 15px;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #36667b;
+    background-color: transparent;
+    position:relative;
+}*/
+
+.buttonforum {
+    border: solid 3px #36667b;
+    border-radius: 15px;
+    padding-left: 80px;
+    padding-right: 30px;
+    position: relative;
+    width:370px;height:65px;
+    margin-left:90%;
+    margin-top:20%;margin-bottom:25%;
+    /*margin-left: 90%;*/
+}
+
+.buttonforum p {
+    color: #36667b;
+    font-family: 'Nunito', sans-serif;
+    font-size: 180%;
+    font-weight: bold;
+    margin-top:12px;
+    
+}
+
+/*.buttonforum a {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 125%;
+}*/
+.linkforum {
+    /**/
+    width: 30%;height:auto;
+    /*margin-left: 125%;*/
+    z-index: 300;
+    margin:0 auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.linkforum .bouton {
+    width:100%;height:100%;
+    
+}
+
+.buttonforum .bouton {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: 11px;
+    left:20px;
+}
+
+.ambassadeur {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-top:40px;
+    margin-bottom: 40px;
+    padding-left:0px;
+    position:relative;
+}
+
+.linkAmbassadeur {
+    width: 9.1%;
+    height: 13%;
+    position: absolute;
+    /*border: 3px purple dotted;*/
+    bottom:15.8%;
+    left: 46.6%;
+    z-index: 1;
+}
+
+.linkAmbassadeur a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.ambassadeur img {
+    display: block;
+    width: 100%;
+    height:100%;
+}
+
+.ambassadeur .btn-q {
+    text-align: center;
+}
+
+.ambassadeur a button {
+    margin-top: 250px;
+    position: absolute;
+    margin-left: 530px;
+    padding: 8px;
+    padding-left:10px;
+    padding-right:10px;
+    border: solid 2px transparent;
+    border-radius: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color:transparent;
+    background-color: transparent;
+
+}
+
+.humans {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 15px;
+    padding-left:0px;
+    position: relative;
+}
+
+.linkHoG {
+    width: 21.5%;
+    height: 14.6%;
+    position: absolute;
+    /*border: 3px purple dotted;*/
+    bottom:5.8%;
+    left: 39.3%;
+    z-index: 1;
+}
+
+.linkHoG a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.humans img {
+    display: block;
+    width: 100%;
+    height:100%;
+}
+
+.humans .btn-q {
+    text-align: center;
+}
+
+.humans a button {
+    margin-top: 16%;
+    position: absolute;
+    margin-left: 27%;
+    padding: 30px;
+    padding-left: 192px;
+    padding-right: 60px;
+    border: solid 2px transparent;
+    border-radius: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: transparent;
+    background-color: transparent;
+}
+
+
+
+/* ------------------------------------------------
+FOOTER
+------------------------------------------------  */
+footer{
+    background-image: url('/images/pelle_terre_footer.jpg');
+    width: 100%;
+    color: white;
+}
+
+/* ------------------------------------------------
+RESPONSIVE
+------------------------------------------------  */
+
+@media screen and (min-width:1525px) {
+
+    .about .diagramme {
+        right:20%;
+    }
+        
+}
+
+@media screen and (max-width:1199px) {
+    .diagramme {
+        width: 446px;
+        height: auto;
+        position: absolute;
+        right: 30px;
+        top: 285px;
+    }
+    
+    .ours {
+        width: 380px;
+        height: auto;
+        position: absolute;
+        right: 30px;
+        top: 750px;
+    }
+
+    .SLC .yes { 
+        /*width:103px;
+        height: 103px;
+        margin-top: 11px;
+        padding: 2px;
+        margin-right:40%;*/
+        margin-left:25%;
+    }
+
+    .SLC .SLC-join .slc-logo {
+        /*width: 60px;
+        height: 60px;
+        margin-top: 30px;*/
+        /*margin-left: 100px;*/
+        /*padding: 2px;*/
+        margin-left:6%;
+    }
+    
+    .SLC .yes-no {
+        padding-right:300px;
+    }
+
+    /*
+    -------------------------
+    ACTION
+    -------------------------
+    */
+    
+    .action .tedx {
+        height: 33.5%;
+    }
+
+    /*
+    ---------------------------
+    ASSOCIATION
+    ---------------------------
+    */
+
+    .abeilles {
+        /*bottom: -18%;*/
+    }
+
+    /*
+    ---------------------------
+    AVANTAGES
+    ---------------------------
+    */
+
+    .abeilles-avantages-slc {
+        bottom:0px;
+    }
+
+    .avantages h2 {
+        font-size: 22pt;
+        /*margin-left: 20px;*/
+        /*margin-top: 28.8px;*/
+    }
+}
+
+/*@media screen and (min-width:1198px) {
+    .diagramme {
+        width: 42%;
+        height: auto;
+        position: absolute;
+        right: 3%;
+        top: 18.5%;
+    }
+    .ours {
+        width: 41.5%;
+        height: auto;
+        position: absolute;
+        right: 3%;
+        top: 46.5%;
+    }
+}
+
+@media screen and (min-width:1197px) {
+    .diagramme {
+        width: 42%;
+        
+        right: 3%;
+        top: 18.5%;
+    }
+    .ours {
+        width: 41.5%;
+        
+        right: 3%;
+        top: 46.5%;
+    }
+}*/
+
+@media screen and (max-width:1024px) {
+
+    .info .gauche {
+        position: absolute;
+        /*width: 500px;*/
+        width: 30%;
+        max-width: 500px;
+        height: auto;
+        margin-top: 102px;
+        /*margin-left: 3px;*/
+    }
+    /*.diagramme {
+        width: 42%;
+        
+        right: 3%;
+        top: 18.5%;
+    }
+    .ours {
+        width: 41.5%;
+        
+        right: 3%;
+        top: 46.5%;
+    }*/
+        
+}
+
+@media screen and (max-width:991px) {
+    .diagramme {
+        width: 200px;
+        /*height: auto;
+        position: absolute;*/
+        right: 20px;
+        top: 330px;
+    }
+    
+    .ours {
+        width: 200px;
+        /*height: auto;
+        position: absolute;*/
+        right: 20px;
+        top: 780px;
+    }
+    
+    .SLC .yes {
+        margin-right:33px;
+    }
+
+    .SLC .yes { 
+        /*width:103px;
+        height: 103px;
+        margin-top: 11px;
+        padding: 2px;
+        margin-right:40%;*/
+        margin-left:5%;
+    }
+
+    .SLC h2{
+        /*color:white;
+        text-align: center;
+        font-weight: bold;
+        margin-top:46px;
+        width:565px;*/
+        /*margin-left:20px;*/
+        margin-top:50px;
+        width:405px;
+        font-size: 25px;
+    }
+
+    .SLC .SLC-join .slc-logo {
+        /*width: 60px;
+        height: 60px;
+        margin-top: 30px;*/
+        /*margin-left: 100px;*/
+        /*padding: 2px;*/
+        margin-left:3%;
+    }
+
+    /*
+    -------------------------
+    ACTION
+    -------------------------
+    */
+    
+    .action .tedx {
+        height: 20.5%;
+    }
+    
+    /*
+    ---------------------------
+    BUTTON FORUM
+    ---------------------------
+    */
+    .buttonforum {
+        /*border: solid 2px #36667b;
+        border-radius: 15px;
+        padding-left: 80px;
+        padding-right: 30px;
+        position: relative;
+        width:370px;height:65px;*/
+        margin-left:55%;
+        /*margin-top:20%;margin-bottom:25%;
+        margin-left: 90%;*/
+    }
+
+    /*
+    ---------------------------
+    ASSOCIATION
+    ---------------------------
+    */
+
+    .abeilles {
+        /*bottom: -12.5%;*/
+    }
+
+    .association .image-slp {
+        bottom: 9%;
+    }
+    
+    .association .image-slp h3 {
+        font-weight: bold;
+        margin-top: -2.5%;
+        font-size: 101%;
+        text-align:left;
+        margin-left:2.5%;
+    }
+
+    .association-text {
+        font-size: 100%;
+    }
+
+    .progappli {
+        margin-bottom:22px;
+    }
+
+    /*
+    ---------------------------
+    AVANTAGES
+    ---------------------------
+    */
+
+    .abeilles-avantages-slc {
+        bottom:0px;
+    }
+
+    .avantages {
+        position: relative;
+    }
+    
+    .avantages h2 {
+        display: none;
+    }
+
+    .avantages-title-below-min-width-991 {
+        position: absolute;
+        font-size: 14pt;
+        top:20px;left:20px;
+        width:80%;
+        height:400px;
+    }
+}
+
+
+@media screen and (max-width:960px) {
+
+    /* ------------------------------------------------
+    MENU
+    ------------------------------------------------  */
+    .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+
+    .menu ul {
+        padding-top: 5px;
+        width: 95%;
+        z-index: 200;
+        position: absolute;
+        top:0;
+        left: 0;
+    }
+
+    
+
+    /* ------------------------------------------------
+    SLIDER
+    ------------------------------------------------  */
+    .carousel-item .intro h1 {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        text-align: center;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .carousel-item .intro p {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        font-size: 14px;
+    }
+
+    /* ------------------------------------------------
+    PROCESSUS
+    ------------------------------------------------  */
+    .processus h3 {
+        color: #fff;
+        font-family: 'Nunito', sans-serif;
+        font-size: 16px;
+        margin-top: 0;
+        font-weight: bold;
+        text-align: center;
+    }
+    .processus img {
+        display: block;
+        width: 100%;
+        min-height: 100%;
+        margin-bottom: 15px;
+    
+    }
+}
+
+@media screen and (max-width:821px) {
+    .SLC h2 {
+        /*margin-top:43px;*/
+    }
+
+    
+}
+
+
+
+@media screen and (max-width:768px) {
+
+    /* ------------------------------------------------
+    MENU
+    ------------------------------------------------  */
+    .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+
+    /* ------------------------------------------------
+    SLIDER
+    ------------------------------------------------  */
+    .carousel-item .intro h1 {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        text-align: center;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .carousel-item .intro p {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        font-size: 10px;
+    }
+
+}
+
+@media screen and (max-width:767px) {
+    .info .titre h2 {
+        /*font-family: 'Nunito', sans-serif;
+        margin: 0px;
+        font-size:30pt;
+        color: white;
+        font-weight: bold;*/
+        width:580px;
+    }
+    
+    .info .content {
+        /*font-family: 'Nunito', sans-serif;
+        margin-top: 82px;
+        width: 550px;*/
+        width:360px;
+    }
+
+    .info .content br {
+        display:none;
+    }
+
+    .diagramme {
+        width: 155px;
+        right: 20px;
+        top: 410px;
+    }
+    .ours {
+        width: 130px;
+        right: 20px;
+        top: 1090px;
+    }
+
+    /*
+    ---------------------------
+    ASSOCIATION
+    ---------------------------
+    */
+
+    .abeilles {
+        /*bottom: -10.5%;*/
+    }
+
+    .association .image-slp {
+        bottom: 11%;
+    }
+    
+    .association .image-slp h3 {
+        font-weight: bold;
+        margin-top: -2.5%;
+        font-size: 78%;
+        text-align:left;
+        margin-left:2.5%;
+    }
+
+    .association-text {
+        font-size: 60%;
+    }
+
+    .progappli {
+        margin-bottom:22px;
+    }
+
+    /*
+    ---------------------------
+    AVANTAGES
+    ---------------------------
+    */
+
+    .abeilles-avantages-slc {
+        bottom:0px;
+    }
+
+    /*
+    ---------------------------
+    ACTION
+    ---------------------------
+    */
+
+    .action .tedx {
+        height: 13%;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    /* ------------------------------------------------
+    MENU
+    ------------------------------------------------  */
+    .navbar {
+        margin-bottom: 0;
+    }
+
+    .griditem {
+        position: relative;
+        -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        width: 75%;
+        height: 400px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (max-width:480px) {
+
+    .ecran {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+    
+    .carousel-item .intro h1 {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        text-align: center;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 0px;
+    }
+
+    /*.humans .btn-q {
+        text-align: center;
+    }
+    
+    .humans a button {
+        margin-top: 18.5%;
+        position: absolute;
+        margin-left: 1%;
+        padding: 5px;
+        padding-left: 60px;
+        padding-right: 60px;
+        border: solid 2px transparent;
+        border-radius: 15px;
+        font-size: 1.2em;
+        font-weight: bold;
+        color: transparent;
+        background-color: transparent;
+    
+    }
+
+    .ambassadeur .btn-q {
+        text-align: center;
+    }
+    
+    .ambassadeur a button {
+        margin-top: 250px;
+        position: absolute;
+        margin-left: 320px;
+        padding: 8px;
+        padding-left:10px;
+        padding-right:10px;
+        border: solid 2px transparent;
+        border-radius: 15px;
+        font-size: 1.2em;
+        font-weight: bold;
+        color:transparent;
+        background-color: transparent;
+    
+    }*/
+
+    .container {
+        padding: 0 10%;
+        width: 100%;
+    }
+
+    .about .desc {
+        font-family: 'Nunito', sans-serif;
+        font-weight: bold;
+        color: #36667b;
+        font-size: 11px;
+        text-align: justify;
+    }
+
+    .bandeau {
+        height: 80px;
+        margin-top: 496px;
+        position: absolute;
+        background-color: #36667b;
+        z-index: -1;
+    }
+    /*
+    -------------------------
+    JE REJOINS SLC
+    -------------------------
+    */
+    .SLC {
+        background-color: #36667b;
+        height: auto;
+        width: 100%;
+        font-family: 'Nunito', sans-serif;
+        display: inline-flex;
+        margin-top:-100px;
+        padding-bottom: 10px;
+    }
+    .SLC .SLC-join .slc-logo{
+        margin-top: 10px;
+        width: 40px;
+        height: auto;
+    }
+    .SLC img {
+        width: 40px;
+        height: 40px;
+        margin-top: 20px;
+        padding: 2px;
+        margin-left: 0;
+    }
+
+    .SLC h2 {
+        color: white;
+        text-align: initial;
+        font-weight: bold;
+        margin-top: 7%;
+        font-size: 10pt;
+        width: 120%;
+    }
+    .SLC .yes{
+        width: 40px;
+        height: 40px;
+        margin-right:40%;
+    }
+    .SLC .no{
+        width: 40px;
+        height: 40px;
+    }
+    
+    /*.SLC-m {
+        background-color: #36667b;
+        width: 100%;
+        font-family: 'Nunito', sans-serif;
+    }
+
+    .SLC-m img {
+    }
+
+    .SLC-m .content {
+        display:flex; flex-direction:row;
+    }
+
+    .SLC-join-m {
+        display:flex;flex-direction: row;
+    }
+
+    .slc-logo-m {
+        width:3%;height:43%;
+    }
+
+    .SLC-m .yes-m {
+        width:3%;height:auto;
+    }
+
+    .SLC-m .no-m {
+        width:3%;height:auto;
+    }
+
+    .SLC-m h2 {
+        color: white;
+        font-weight: bold;
+        font-size: 3vw;
+    }*/
+    
+
+    /*
+    --------------------------------
+    INFO
+    --------------------------------
+    */
+
+    .info {
+        font-family: 'Nunito', sans-serif;
+        background-color: #36667b;
+        width: 100%;
+        margin-top: 30px;
+        padding-left: 0px;
+        padding-top: 15px;
+    }
+
+    .diagramme {
+        width: 45%;
+        height: auto;
+        position: absolute;
+        left: 53%;
+        top: 20%;
+    }
+    
+    .ours {
+        width: 45%;
+        height: auto;
+        position: absolute;
+        left: 53%;
+        top: 52.5%;
+    }
+
+    .info .titre h2 {
+        width: 100%;
+        font-family: 'Nunito', sans-serif;
+        margin: 0px;
+        font-size: 4vw;
+        color: white;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+
+    .info .gauche {
+        position: absolute;
+        width: 170px;
+        height: 100px;
+        margin-top: 15px;
+        margin-left: 7px;
+    }
+
+    .content p {
+        width: 60%;
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        font-size: 2vw;
+        margin-left: 10px;
+        margin-top: -60px;
+    }
+
+    .contentright strong {
+
+    }
+
+    .info .contentright p {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        font-size: 2vw;
+        
+        float: none;
+        margin-left:185px;
+        margin-bottom: 20px;
+        margin-top: 24px;
+        margin-right: 0px;
+        width: 50%;
+    }
+
+    .info .national-assembly-speach {
+        width: 220px;
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        font-size: 2vw;
+        margin-left: 10px;
+        /*margin-top: -60px;*/
+        margin-top:-4%;
+        margin-bottom:5%;
+    }
+
+    .info .national-assembly-speach .bigger {
+        font-size: 2.4vw;
+    }
+
+    
+
+    .association {
+        font-family: 'Nunito', sans-serif;
+        width: 100%;
+        height: 500px;
+        color: #36667b;
+        /*text-align: left;*/
+        font-size: 8pt;
+    }
+
+    /*.association .solutions {
+        
+        text-align:left;
+    }*/
+
+    .association h2 {
+        font-family: 'Nunito', sans-serif;
+        font-size: 13pt;
+        font-weight: bold;
+        text-align: justify;
+        float: left;
+    }
+
+    .association .abeilles {
+        /*top:0px;*//*bottom:-30%;*/
+        width:95%;
+        /*bottom: -20%;*/
+    }
+    .association .image-slp {
+        bottom: 11%;
+    }
+    
+    .association .image-slp h3 {
+        font-weight: bold;
+        margin-top: -2.5%;
+        font-size: 78%;
+        text-align:left;
+        margin-left:2.5%;
+    }
+
+    
+
+    .action h2 {
+        text-align: center;
+        font-weight: bold;
+        font-size: 18pt;
+    }
+    .action .dashboard-video{
+        margin-bottom: 0px;
+        display: block;
+        margin: 0 auto;
+        width: 60%;
+        height: auto;
+        margin-bottom:7%;
+    }
+    .action .gauche {
+        width: 225px;
+        height: 140px;
+        margin-top: 7%;
+        margin-left: 60px;
+    }
+
+    .action .droite {
+        width: 60%;
+        height: auto;
+        position: initial;
+        display: block;
+        margin: 0 auto;
+        margin-top: 7%;
+        margin-bottom:7%;
+    }
+
+
+    .action .right h3 {
+        text-align: center;
+        font-weight: bold;
+        font-size: 12pt;
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom:7%;
+    }
+
+    .action .left h3 {
+        text-align: center;
+        font-weight: bold;
+        font-size: 12pt;
+        margin-right: 0px;
+        width: 100%;
+        /*margin-top:7%;*/
+    }
+
+    .action .right {
+        float: right;
+        font-size: 0px;
+        margin-bottom:8%;
+    }
+
+    .action .left {
+        margin-left: 18px;
+        width: 91%;
+        
+    }
+    .action p {
+        font-size: 8pt;
+    }
+
+    .avantages {
+        width: 100%;
+        color: #36667b;
+        font-family: 'Nunito', sans-serif;
+        margin-top: -15px;
+    }
+
+    .avantages p {
+        font-size: 8pt;
+    }
+
+    .avantages h2 {
+        width: 61%;
+        text-align: left;
+        font-size: 11pt;
+        margin-bottom: 30px;
+        font-weight: bold;
+        float: right;
+        margin-top: 64px;
+    }
+
+    .avantages img {
+        width: 34%;
+        height: auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .avantages h2 {
+        display: block;
+    }
+    .avantages li {
+        font-size: 8pt;
+    }
+    .abeilles-avantages-slc{
+        bottom: 21%;
+        position: absolute;
+        width: auto;
+        text-align: right;
+    }
+    .abeilles-avantages-slc img{
+        right: 0px;
+        margin: 0px;
+    }
+    .buttonforum .bouton {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        margin-top: -215px;
+        left: 23%;
+    }
+    .linkforum img{
+        width: 40%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .bandeau2 {
+        width: 100%;
+        height: 80px;
+        margin-top: -1775px;
+        position: absolute;
+        background-color: #36667b;
+        z-index: -1;
+    }
+
+    
+}
+
+@media screen and (max-width:467px) {
+    /*
+    -----------------------------
+    INFO
+    ----------------------------
+    */
+    
+    .diagramme {
+        width: 40%;
+        left: 60%;
+        /*top: 20%;*/
+    }
+    
+    .ours {
+        width: 40%;
+        left: 60%;
+        /*top: 52.5%;*/
+    }
+}
+
+@media screen and (max-width:440px) {
+    /*
+    -----------------------------
+    INFO
+    ----------------------------
+    */
+    
+    .diagramme {
+        width: 30%;
+        left: 65%;
+        /*top: 20%;*/
+    }
+    
+    .ours {
+        width: 30%;
+        left: 65%;
+        /*top: 52.5%;*/
+    }
+}
+
+@media screen and (max-width:426px) {
+    
+    .info .national-assembly-speach {
+        width: 250px;
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        font-size: 2.3vw;
+        margin-left: 10px;
+        /*margin-top: -60px;*/
+        margin-top:-4%;
+        margin-bottom:5%;
+    }
+    .info .contentright p {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width:395px) {
+    /*
+    -----------------------------
+    INFO
+    ----------------------------
+    */
+    
+    .diagramme {
+        width: 25%;
+        left: 70%;
+        /*top: 20%;*/
+    }
+    
+    .ours {
+        width: 25%;
+        left: 70%;
+        /*top: 52.5%;*/
+    }
+    
+    .info .national-assembly-speach {
+        width: 250px;
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        font-size: 2.3vw;
+        margin-left: 10px;
+        /*margin-top: -60px;*/
+        margin-top:-2%;
+        margin-bottom:5%;
+    }
+}
+
+@media screen and (max-width:382px) {
+    .info .gauche {
+        position: absolute;
+        width: 170px;
+        height: 85px;
+        margin-top: 15px;
+        margin-left: 7px;
+    }
+    
+    .info .national-assembly-speach {
+        width: 250px;
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        font-size: 2.3vw;
+        margin-left: 10px;
+        /*margin-top: -60px;*/
+        margin-top:5%;
+        margin-bottom:5%;
+    }
+}
+
+
+@media screen and (max-width:382px) {
+    .info .contentright p {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:356px) {
+    /*
+    -----------------------------
+    INFO
+    ----------------------------
+    */
+    
+    .diagramme {
+        width: 22%;
+        left: 75%;
+        /*top: 20%;*/
+    }
+    
+    .ours {
+        width: 22%;
+        left: 75%;
+        /*top: 52.5%;*/
+    }
+}
+
+@media screen and (max-width:341px) {
+    .info .contentright p {
+        width: 30%;
+    }
+}

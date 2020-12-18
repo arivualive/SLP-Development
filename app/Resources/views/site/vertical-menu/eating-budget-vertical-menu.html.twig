@@ -1,0 +1,64 @@
+<div class="eating-budget-vertical-menu-container ecran">
+    <div class="eating-budget-vertical-menu">
+        <div class="eating-budget-vertical-menu-images-container">
+            <!-- Boucler sur chaque catégorie -->
+            {% for category in categories %}
+            <div class="group" id="group-{{ category.image }}"> <!-- Englobe chaque catégorie pour le JS -->
+                <div style="position: relative">
+                    <img id="{{ category.image }}" class="big-image display" data-category="{{ category.image }}" data-catname="{{ category.name }}" src="{{ asset('images/dashboard/budget/menu-vertical-eating/' ~ category.image ~ '.png') }}"/>
+                    <div class="big-image-title">{{ category.name }}</div>
+                </div>
+                <!-- Puis imbriquer une boucle sur les sous-catégories correspondantes -->
+                {% for subcategory in category.subcategories %}
+                <div class="small invisible" style="position: relative;">
+                    <img id="{{ subcategory.image }}" class="small-image" data-category="{{ category.image }}" data-subcategory="{{ subcategory.image }}" data-subcatname="{{ subcategory.name }}" src="{{ asset('images/dashboard/budget/menu-vertical-eating/' ~ subcategory.image ~ '.png') }}"/>
+                    <div class="small-image-title">{{ subcategory.name }}</div>
+                </div>
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+        <div class="rounded-green-bar"></div>
+    </div>
+</div>
+
+
+<!-- Menu version mobile -->
+<div class="eating-budget-vertical-menu-container mobile-eating position-sticky">
+    <div class="eating-budget-vertical-menu">
+        <div class="eating-budget-vertical-menu-images-container">
+            {% set count = 1 %}
+            <!-- Boucler sur chaque catégorie -->
+            {% for category in categories %}
+                {% if count < 4 %}
+                    <div class="group active{{ count }}" id="group-{{ category.image }}"> <!-- Englobe chaque catégorie pour le JS -->
+                {% else %}
+                    <div class="group invisible" id="group-{{ category.image }}"> <!-- Englobe chaque catégorie pour le JS -->
+                {% endif %}
+                        <div style="position: relative">
+                        <img id="{{ category.image }}" class="big-image display" data-category="{{ category.image }}" data-catname="{{ category.name }}" src="{{ asset('images/dashboard/budget/menu-vertical-eating/' ~ category.image ~ '.png') }}"/>
+                        <div class="big-image-title">{{ category.name }}</div>
+                    </div>
+                    <!-- Puis imbriquer une boucle sur les sous-catégories correspondantes -->
+                    {% for subcategory in category.subcategories %}
+                        <div class="small invisible" style="position: relative;">
+                            <img id="{{ subcategory.image }}" class="small-image" data-category="{{ category.image }}" data-subcategory="{{ subcategory.image }}" data-subcatname="{{ subcategory.name }}" src="{{ asset('images/dashboard/budget/menu-vertical-eating/' ~ subcategory.image ~ '.png') }}"/>
+                            <div class="small-image-title">{{ subcategory.name }}</div>
+                        </div>
+                    {% endfor %}
+                        <div class="secondary-rounded-green-bar invisible"></div>
+                        <div class="background-white invisible"></div>
+                    </div>
+                {% set count = count + 1 %}
+            {% endfor %}
+        </div>
+            <div class="rounded-green-bar">
+                <div class="green-bar-left">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </div>
+                <div class="green-bar-right">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </div>
+            </div>
+    </div>
+</div>

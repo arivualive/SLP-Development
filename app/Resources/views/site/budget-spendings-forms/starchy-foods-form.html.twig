@@ -1,0 +1,290 @@
+<div class="eating-budget-spendings-form-container"></div>
+<div class="eating-budget-spendings-form-grid-container form-container starchy-foods-form-container">
+    <div class="row my-row">
+        {% include 'site/budget-spendings-forms/forms-columns-titles.html.twig' %}
+    </div>
+    
+    <div class="subcategory-container complete-starch-container">
+        <div id="complete-starch-form-line" class="row my-row form-spending-line" data-id="0">
+            <div class="subcategory invisible">complete-starch</div>
+            <div class="col-3">
+                <idv class="form-line-title">
+                    <div class="form-line-title-content medium-width-title">
+                        - Féculents complets
+                        <div class="small-title-content">
+                            (riz complet, pâtes complètes, pain complet)
+                        </div>
+                    </div>
+                </idv>
+            </div>
+            <div class="col-1">
+                <input class="spendings-field what-field"/>
+            </div>
+            <div class="col-1 dropdown-list-col volume-dropdown-list-col">
+                <div class="dropdown-list-container quantity-container">
+                    <select class="dropdown-list complete-starch-quantity-list">
+                        <option>1L</option>
+                        <option>2L</option>
+                    </select>
+                    <div class="triangle-img-container complete-starch quantity">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-1">
+                <input class="spendings-field brand-field" />
+            </div>
+            <div class="col-1">
+                <input class="spendings-field amount-field" />
+            </div>
+            <div class="col-1 dropdown-list-col currency-dropdown-list-col">
+                <div class="dropdown-list-container currency-list-container">
+                    <select class="dropdown-list currency-list complete-starch-currency-list">
+                        <option>CHF</option>
+                        <option>EUR</option>
+                    </select>
+                    <div class="triangle-img-container complete-starch currency">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col add-complete-starch hand-on-hover">
+                <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+                <idv class="add-product-text">Ajouter un produit</idv>
+            </div>
+            <!--<div class="white-div-to-hide-first-line-add-option"></div>-->
+        </div>
+        {% for spending in spendings %}
+            {% if spending.getProduct().getSubcategory().getName() == "complete-starch" %}
+                {% set subcategory = "complete-starch" %}
+                {% include('site/budget/recorded-theme-spending-form-line.html.twig') %}
+            {% endif %}
+        {% endfor %}
+        <!--<div class="add-product-line add-complete-starch hand-on-hover">
+            <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+            <idv class="add-product-text">Ajouter un produit</idv>
+        </div>-->
+    </div>
+    
+    <div class="subcategory-container refined-starchy-container">
+        <div id="refined-starchy-form-line" class="row my-row form-spending-line" data-id="0">
+            <div class="subcategory invisible">refined-starchy</div>
+            <div class="col-3">
+                <idv class="form-line-title">
+                <div class="form-line-title-content">
+                    - Féculents raffinés
+                    <div class="small-title-content">
+                        (riz blanc, pâtes et pain blanc ...)
+                    </div>
+                </div>
+            </idv>
+            </div>
+            <div class="col-1">
+                <input class="spendings-field what-field"/>
+            </div>
+            <div class="col-1 dropdown-list-col volume-dropdown-list-col">
+                <div class="dropdown-list-container quantity-container">
+                    <select class="dropdown-list refined-starchy-quantity-list">
+                        <option>1L</option>
+                        <option>2L</option>
+                    </select>
+                    <div class="triangle-img-container refined-starchy quantity">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-1">
+                <input class="spendings-field brand-field" />
+            </div>
+            <div class="col-1">
+                <input class="spendings-field amount-field" />
+            </div>
+            <div class="col-1 dropdown-list-col currency-dropdown-list-col">
+                <div class="dropdown-list-container currency-list-container">
+                    <select class="dropdown-list currency-list refined-starchy-currency-list">
+                        <option>CHF</option>
+                        <option>EUR</option>
+                    </select>
+                    <div class="triangle-img-container refined-starchy currency">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col add-refined-starchy hand-on-hover">
+                <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+                <idv class="add-product-text">Ajouter un produit</idv>
+            </div>
+        </div>
+        {% for spending in spendings %}
+            {% if spending.getProduct().getSubcategory().getName() == "refined-starchy" %}
+                {% set subcategory = "refined-starchy" %}
+                {% include('site/budget/recorded-theme-spending-form-line.html.twig') %}
+            {% endif %}
+        {% endfor %}
+        <!--<div class="add-product-line add-refined-starchy hand-on-hover">
+            <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+            <idv class="add-product-text">Ajouter un produit</idv>
+        </div>-->
+    </div>
+
+    <div class="subcategory-container legume-container">
+        <div id="legume-form-line" class="row my-row legume-bottom-form-line-0 last-line form-spending-line" data-id="0">
+            <div class="subcategory invisible">legume</div>
+            <div class="col-3">
+                <idv class="form-line-title">
+                    <div class="form-line-title-content medium-width-title">
+                        - Legumineuses
+                        <div class="small-title-content">
+                            (lentilles, pois chiches, fèves, pois cassés ...)
+                        </div>
+                    </div>
+                </idv>
+            </div>
+            <div class="col-1 field-and-button-under-field-container last-line-what-column">
+                <input class="spendings-field what-field"/>
+                <div class="form-button left-button">Retour au dashboard</div>
+            </div>
+            <div class="col-1 dropdown-list-col volume-dropdown-list-col">
+                <div class="dropdown-list-container quantity-container">
+                    <select class="dropdown-list legume-quantity-list">
+                        <option>1L</option>
+                        <option>2L</option>
+                    </select>
+                    <div class="triangle-img-container legume quantity">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-1">
+                <input class="spendings-field brand-field" />
+            </div>
+            <div class="col-1">
+                <input class="spendings-field amount-field" />
+            </div>
+            <div class="col-1 field-and-button-under-field-container last-line-currency-column dropdown-list-col currency-dropdown-list-col">
+                <div class="dropdown-list-container currency-list-container">
+                    <select class="dropdown-list currency-list legume-currency-list">
+                        <option>CHF</option>
+                        <option>EUR</option>
+                    </select>
+                    <div class="triangle-img-container legume currency">
+                        <img class="triangle-img" src="{{ asset('images/dashboard/budget/dropdown-menu/triangle.png') }}" />
+                    </div>
+                </div>
+                <div class="form-button right-button form-validation-button" data-category="starchy-foods">Valider</div>
+            </div>
+            <div class="col add-legume hand-on-hover">
+                <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+                <idv class="add-product-text">Ajouter un produit</idv>
+            </div>
+        </div>
+        {% for spending in spendings %}
+            {% if spending.getProduct().getSubcategory().getName() == "legume" %}
+                {% set subcategory = "legume" %}
+                {% include('site/budget/recorded-theme-spending-form-line.html.twig') %}
+            {% endif %}
+        {% endfor %}
+        <!--<div class="add-product-line add-legume hand-on-hover">
+            <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+            <idv class="add-product-text">Ajouter un produit</idv>
+        </div>-->
+    </div>
+</div>
+<!--
+<div class="eating-budget-spendings-form">
+    
+    <div class="form-line first-line">
+        <idv class="what-title">
+            Quoi
+        </idv>
+        <idv class="quantity-title">
+            Quantité
+        </idv>
+        <idv class="brand-title">
+            Marque
+        </idv>
+        <idv class="amount-title">
+            Montant
+        </idv>
+    </div>
+    
+    <div class="form-line">
+        <idv class="form-line-title">
+            <div class="form-line-title-content">
+                - Féculents complets<br>
+                <div class="small-title-content">
+                    (riz complet, pâtes complètes, pain complet)
+                </div>
+            </div>
+        </idv>
+        
+        <input class="spendings-field what-field"/>
+        
+        <select class="dropdown-list">
+            <option>1L</option>
+            <option>2L</option>
+        </select>
+        <input class="spendings-field brand-field" />
+        <input class="spendings-field amount-field" />
+        <select class="dropdown-list currency-list">
+            <option>CHF</option>
+            <option>EUR</option>
+        </select>
+        <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+        <idv class="add-product-text">Ajouter un produit</idv>
+    </div>
+
+    <div class="form-line">
+
+        <idv class="form-line-title">
+            <div class="form-line-title-content">
+                - Féculents raffinés<br>
+                <div class="small-title-content">
+                    (riz blanc, pâtes et pain blanc ...)
+                </div>
+            </div>
+        </idv>
+        
+        <input class="spendings-field what-field"/>
+        
+        <select class="dropdown-list">
+            <option>1L</option>
+            <option>2L</option>
+        </select>
+        <input class="spendings-field brand-field" />
+        <input class="spendings-field amount-field" />
+        <select class="dropdown-list currency-list">
+            <option>CHF</option>
+            <option>EUR</option>
+        </select>
+        <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+        <idv class="add-product-text">Ajouter un produit</idv>
+    </div>
+
+    <div class="form-line">
+        <idv class="form-line-title">
+            <div class="form-line-title-content">
+                - Legumineuses<br>
+                <div class="small-title-content">
+                    (lentilles, pois chiches, fèves, pois cassés ...)
+                </div>
+            </div>
+        </idv>
+        
+        <input class="spendings-field what-field"/>
+        
+        <select class="dropdown-list">
+            <option>1L</option>
+            <option>2L</option>
+        </select>
+        <input class="spendings-field brand-field" />
+        <input class="spendings-field amount-field" />
+        <select class="dropdown-list currency-list">
+            <option>CHF</option>
+            <option>EUR</option>
+        </select>
+        <img class="plus-img" src="{{ asset('images/dashboard/budget/blue-plus-sign.png') }}" />
+        <idv class="add-product-text">Ajouter un produit</idv>
+    </div>
+</div>
+-->

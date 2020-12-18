@@ -1,0 +1,272 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/agenda/agenda.css') }}">
+    
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+{% endblock %}
+
+{% block body %}
+    <div class="header">
+        <div class="dropdown burger above-image">
+        </div>
+        <h1>AGENDA <br> COLLECTIF</h1>
+        <div class="image-container">
+            <div class="blue-film"></div>
+            <img class="below-film" src="{{ asset('images/dashboard/agenda/header-agenda.png') }}">
+            <!--
+            <a href="#">
+                <div class="dollar-img-container">
+                    <img class="dollar-img" src="{{ asset('images/budget/individumenage/dollars.png') }}" />
+                </div>
+            </a>
+            -->
+        </div>
+    </div>
+
+    <h2 class="collective-calendar-title">AGENDA COLLECTIF</h2>
+
+    <div class="container my-container ges-diary">
+        <div class="row my-row">
+            <h2>Calendrier GES</h2>
+        </div>
+        <div class="row my-row">
+            <div class="col-5 my-col previous-image-row">
+                <img class="previous-image" src="{{ asset('images/dashboard/agenda/previous.png') }}" />
+            </div>
+            <div class="col-2 my-col">
+                <h2 class="month-text">Juillet</h2>
+            </div>
+            <div class="col-5 my-col next-image-row">
+                <img class="next-image" src="{{ asset('images/dashboard/agenda/next.png') }}" />
+            </div>
+            
+        </div>
+        <div class="row my-row">
+            <div class="my-col col-2 day-container">
+                
+            </div>
+            <div class="my-col col-2 day-container">
+                
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-1-to-9">1</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="white-text day round-event martial-art"><h2 class="number-1-to-9 white-text">2</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-1-to-9">3</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-1-to-9">4</h2></div>
+            </div>
+        </div>
+        <div class="row my-row">
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-1-to-9">5</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-1-to-9">6</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-1-to-9">7</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background round-event cinema"><h2 class="number-1-to-9 white-text">8</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-1-to-9">9</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">10</h2></div>
+            </div>
+        </div>
+        <div class="row my-row">
+            <div class="my-col col-2 day-container">
+                <div class="day white-background round-event archery"><h2 class="number-10-to-99 white-text">11</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">12</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day blue-background"><h2 class="number-10-to-99 white-text">13</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">14</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">15</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">16</h2></div>
+            </div>
+        </div>
+        <div class="row my-row">
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">17</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">18</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">19</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">20</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">21</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">22</h2></div>
+            </div>
+        </div>
+        <div class="row my-row">
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">23</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">24</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">25</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background round-event kayak"><h2 class="number-10-to-99 white-text">26</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">27</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">28</h2></div>
+            </div>
+        </div>
+        <div class="row my-row">
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">29</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">30</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                <div class="day white-background"><h2 class="number-10-to-99">31</h2></div>
+            </div>
+            <div class="my-col col-2 day-container">
+                
+            </div>
+            <div class="my-col col-2 day-container">
+                
+            </div>
+            <div class="my-col col-2 day-container">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="container people">
+        <div class="row my-row people-row">
+            <div class="col-2 my-col image-under-text-col">
+                <div class="image-under-text">
+                    <div class="round-image damien"></div>
+                    <div>
+                        <p class="centered-text people-text-medium">Damien</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 my-col image-under-text-row">
+                
+            </div>
+            <div class="col-2 my-col image-under-text-row">
+                <div class="image-under-text">
+                    <div class="round-image nadine"></div>
+                    <div>
+                        <p class="centered-text people-text-medium">Nadine</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 my-col image-under-text-row">
+                
+            </div>
+            <div class="col-2 my-col image-under-text-row">
+                <div class="image-under-text">
+                    <div class="round-image lilly"></div>
+                    <div>
+                        <p class="centered-text people-text-medium">Lilly</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-row">
+            <div class="col-4 my-col"></div>
+            <div class="col-4 my-col">
+                <div class="image-under-text">
+                    <div class="round-image center-bigger-image lilly"></div>
+                    <div>
+                        <p class="centered-text people-text-big">Lilly</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 my-col"></div>
+        </div>
+    </div>
+
+    <div class="container info-events">
+        <div class="row my-row">
+            <div class="col-2 my-col">
+                <div class="image-under-text">
+                    <div class="round-image image-event-info kayak"></div>
+                </div>
+            </div>
+            <div class="col-6 my-col">
+                <div class="container info-event-text-container">
+                    <div><p class="info-event-text">Date : 26 / 07 / 2019</p></div>
+                    <div><p class="info-event-text">Lieu : Base de Sierne</p></div>
+                    <div><p class="info-event-text">Activité : Canoe kayak</p></div>
+                </div>
+            </div>
+            <div class="col-4 my-col">
+                <div class="info-event-button">
+                    Plus<br>d'informations
+                </div>
+                <div class="info-event-button info-event-button-margin-top">
+                    S'inscrire à<br>l'événement
+                </div>
+            </div>
+        </div>
+        <div class="row my-row secound-info-events-section">
+            <div class="col-2 my-col">
+                <div class="image-under-text">
+                    <div class="round-image kayak"></div>
+                </div>
+            </div>
+            <div class="col-6 my-col">
+                <div class="container info-event-text-container">
+                    <div><p class="info-event-text">Date : 26 / 07 / 2019</p></div>
+                    <div><p class="info-event-text">Lieu : Base de Sierne</p></div>
+                    <div><p class="info-event-text">Activité : Canoe kayak</p></div>
+                </div>
+            </div>
+            <div class="col-4 my-col">
+                
+                <div class="info-event-button">
+                    Plus<br>d'informations
+                </div>
+                <div class="info-event-button info-event-button-margin-top">
+                    S'inscrire à<br>l'événement
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+<br><br>
+
+{% include 'footer.html.twig' %}
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src"{{ asset('js/budget/spendings.js') }}"></script>
+{% endblock %}

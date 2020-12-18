@@ -1,0 +1,489 @@
+
+{% block body %}
+
+<div class="ContainerBadge">
+	<div class="row">
+		<div class="col-md-12">
+            <div class="actionsTitle">
+                <img class="imgActionsTitle" src="{{ asset('images/dashboard/points-badges/medaille-et-badges.png') }}" />
+            </div>
+			<div class="mainBadges text-center">
+                <div class="row gallery1">
+                    <div class="col-md-3">
+                        <a href="#bourgeon"><img class="imgBadges" src="{{ asset('images/dashboard/points-badges/bourgeon-durable.png') }}" /></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#bouton"><img class="imgBadges" src="{{ asset('images/dashboard/points-badges/bouton-dor.png') }}" /></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#pissenlit"><img class="imgBadges" src="{{ asset('images/dashboard/points-badges/pissenlit.png') }}" /></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#demandeur_novice"><img class="imgBadges" src="{{ asset('images/dashboard/points-badges/demaneur-novice.png') }}" /></a>
+                    </div>
+                </div>
+                <div class="row gallery2">
+                    <div class="col-md-3">
+                        <a href="#demandeur_avance"><img class="imgBadges" src="{{ asset('images/dashboard/points-badges/demandeur-avance.png') }}" /></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#demandeur_confirme"><img class="imgBadges" src="{{ asset('images/dashboard/points-badges/demandeur-confirme.png') }}" /></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#rendeur_novice"><img class="imgBadges" src="{{ asset('images/dashboard/points-badges/rendeur-de-service-novice.png') }}" /></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#rendeur_avance"><img class="imgBadges" src="{{ asset('images/dashboard/points-badges/rendeur-de-service-avance.png') }}" /></a>
+                    </div>
+                </div>
+                <div class="row gallery3">
+                    <div class="col-md-3">
+                        <a href="#rendeur_confirme"><img class="imgBadges" src="{{ asset('images/dashboard/points-badges/rendeur-de-service-confirme.png') }}" /></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#ponctuel_dimanche"><img class="imgBadges" src="{{ asset('images/dashboard/points-badges/ponctuel-du-dimanche.png') }}" /></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#serviteur_ponctualite"><img class="imgBadges" src="{{ asset('images/dashboard/points-badges/serviteur-de-la-ponctualite.png') }}" /></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#poli"><img class="imgBadges" src="{{ asset('images/dashboard/points-badges/poli-comme-il-se-doit.png') }}" /></a>
+                    </div>
+                </div>
+                <div class="row gallery4">
+                    <div class="col-md-3">
+                        <a href="#serviteur_politesse"><img class="imgBadges" src="{{ asset('images/dashboard/points-badges/serviteur-de-la-politesse.png') }}" /></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#simple_efficace"><img class="imgBadges" src="{{ asset('images/dashboard/points-badges/simple-et-efficace.png') }}" /></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#un_as"><img class="imgBadges" src="{{ asset('images/dashboard/points-badges/un-as-en-la-matiere.png') }}" /></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#emballe"><img class="imgBadges" src="{{ asset('images/dashboard/points-badges/emballe-cest-pese.png') }}" /></a>
+                    </div>
+                </div>
+                <div class="row gallery5">
+                    <div class="col-md-3">
+                        <a href="#collectionneur"><img class="imgBadges" src="{{ asset('images/dashboard/points-badges/collectionneur-avere.png') }}" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="descriptionBadges">
+                <div class="row badgeFirst" id="bourgeon">
+                    <div class="col-md-3 text-center">
+                        <img class="successBadge" src="{{ asset('images/dashboard/points-badges/bourgeon-durable.png') }}" />
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="action">
+                            <div class="actionBadge">
+                                <h4>Action</h4>
+                                <p>A rejoint la SL community</p>
+                            </div>
+                            <div class="points">
+                                <h4>Points gagnés</h4>
+                                <p>+5</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Message</h4>
+                        <p class="message">
+                           'Félicitation, vous avez franchi une nouvelle étape <br>
+                            vers le développement durable et l'entraide'
+                        </p>
+                    </div>
+                </div>
+                <div class="row badges" id="bouton">
+                    <div class="col-md-3 text-center">
+                        <img class="successBadge" src="{{ asset('images/dashboard/points-badges/bouton-dor.png') }}" />
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="action">
+                            <div class="actionBadge">
+                                <h4>Action</h4>
+                                <p>Membre depuis 1 an</p>
+                            </div>
+                            <div class="points">
+                                <h4>Points gagnés</h4>
+                                <p>+5</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Message</h4>
+                        <p class="message">
+                            'Bravo! On espère vous retrouver ici l’année prochaine'
+                        </p>
+                    </div>
+                </div>
+                <div class="row badges" id="pissenlit">
+                    <div class="col-md-3 text-center">
+                        <img class="successBadge" src="{{ asset('images/dashboard/points-badges/pissenlit.png') }}" />
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="action">
+                            <div class="actionBadge">
+                                <h4>Action</h4>
+                                <p>Membre depuis 1 mois</p>
+                            </div>
+                            <div class="points">
+                                <h4>Points gagnés</h4>
+                                <p>+10</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Message</h4>
+                        <p class="message">
+                           'On espère que vous vous plaisez bien ici'
+                        </p>
+                    </div>
+                </div>
+                <div class="row badges" id="demandeur_novice">
+                    <div class="col-md-3 text-center">
+                        <img class="successBadge" src="{{ asset('images/dashboard/points-badges/demaneur-novice.png') }}" />
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="action">
+                            <div class="actionBadge">
+                                <h4>Action</h4>
+                                <p>A demandé un service</p>
+                            </div>
+                            <div class="points">
+                                <h4>Points gagnés</h4>
+                                <p>+5</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Message</h4>
+                        <p class="message">
+                           'Félicitation, vous avez fait votre première
+                           demande de services'
+                        </p>
+                    </div>
+                </div>
+                <div class="row badges" id="demandeur_avance">
+                    <div class="col-md-3 text-center">
+                        <img class="successBadge" src="{{ asset('images/dashboard/points-badges/demandeur-avance.png') }}" />
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="action">
+                            <div class="actionBadge">
+                                <h4>Action</h4>
+                                <p>A demandé 10 services</p>
+                            </div>
+                            <div class="points">
+                                <h4>Points gagnés</h4>
+                                <p>+5</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Message</h4>
+                        <p class="message">
+                           'Félicitation, vous n’avez pas de problème à demander
+                           de l’aide et ça se voit!'
+                        </p>
+                    </div>
+                </div>
+                <div class="row badges" id="demandeur_confirme">
+                    <div class="col-md-3 text-center">
+                        <img class="successBadge" src="{{ asset('images/dashboard/points-badges/demandeur-confirme.png') }}" />
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="action">
+                            <div class="actionBadge">
+                                <h4>Action</h4>
+                                <p>A demandé 50 services</p>
+                            </div>
+                            <div class="points">
+                                <h4>Points gagnés</h4>
+                                <p>+20</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Message</h4>
+                        <p class="message">
+                           'La communauté n’a plus de secret pour vous'
+                        </p>
+                    </div>
+                </div>
+                <div class="row badges" id="rendeur_novice">
+                    <div class="col-md-3 text-center">
+                        <img class="successBadge" src="{{ asset('images/dashboard/points-badges/rendeur-de-service-novice.png') }}" />
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="action">
+                            <div class="actionBadge">
+                                <h4>Action</h4>
+                                <p>A rendu un service</p>
+                            </div>
+                            <div class="points">
+                                <h4>Points gagnés</h4>
+                                <p>+10</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Message</h4>
+                        <p class="message">
+                           'Félicitation, vous avez votre première demande de services!'
+                        </p>
+                    </div>
+                </div>
+                <div class="row badges" id="rendeur_avance">
+                    <div class="col-md-3 text-center">
+                        <img class="successBadge" src="{{ asset('images/dashboard/points-badges/rendeur-de-service-avance.png') }}" />
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="action">
+                            <div class="actionBadge">
+                                <h4>Action</h4>
+                                <p>A rendu 10 services</p>
+                            </div>
+                            <div class="points">
+                                <h4>Points gagnés</h4>
+                                <p>+20</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Message</h4>
+                        <p class="message">
+                           'Félicitation, rendre services est pour vous
+                           une seconde nature'
+                        </p>
+                    </div>
+                </div>
+                <div class="row badges" id="rendeur_confirme">
+                    <div class="col-md-3 text-center">
+                        <img class="successBadge" src="{{ asset('images/dashboard/points-badges/rendeur-de-service-confirme.png') }}" />
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="action">
+                            <div class="actionBadge">
+                                <h4>Action</h4>
+                                <p>A rendu 50 services</p>
+                            </div>
+                            <div class="points">
+                                <h4>Points gagnés</h4>
+                                <p>+40</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Message</h4>
+                        <p class="message">
+                           'La communauté vous remercie de vos loyaux services'
+                        </p>
+                    </div>
+                </div>
+                <div class="row badges" id="ponctuel_dimanche">
+                    <div class="col-md-3 text-center">
+                        <img class="successBadge" src="{{ asset('images/dashboard/points-badges/ponctuel-du-dimanche.png') }}" />
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="action">
+                            <div class="actionBadge">
+                                <h4>Action</h4>
+                                <p>Reçu un point en plus
+                                pour sa ponctualité</p>
+                            </div>
+                            <div class="points">
+                                <h4>Points gagnés</h4>
+                                <p>+5</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Message</h4>
+                        <p class="message">
+                           'Bravo, on y pense pas souvent mais la ponctualité, c’est bien'
+                        </p>
+                    </div>
+                </div>
+                <div class="row badges" id="serviteur_ponctualite">
+                    <div class="col-md-3 text-center">
+                        <img class="successBadge" src="{{ asset('images/dashboard/points-badges/serviteur-de-la-ponctualite.png') }}" />
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="action">
+                            <div class="actionBadge">
+                                <h4>Action</h4>
+                                <p>A accumulé 10 points
+                                en plus pour sa ponctualité</p>
+                            </div>
+                            <div class="points">
+                                <h4>Points gagnés</h4>
+                                <p>+10</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Message</h4>
+                        <p class="message">
+                           'Excellent! Toujours à l’heure et plein de bonne humeur'
+                        </p>
+                    </div>
+                </div>
+                <div class="row badges" id="poli">
+                    <div class="col-md-3 text-center">
+                        <img class="successBadge" src="{{ asset('images/dashboard/points-badges/poli-comme-il-se-doit.png') }}" />
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="action">
+                            <div class="actionBadge">
+                                <h4>Action</h4>
+                                <p>Reçu un point en plus
+                                pour sa politesse</p>
+                            </div>
+                            <div class="points">
+                                <h4>Points gagnés</h4>
+                                <p>+5</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Message</h4>
+                        <p class="message">
+                           'On aime savoir que les bonnes manières ne sont pas perdue'
+                        </p>
+                    </div>
+                </div>
+                <div class="row badges" id="serviteur_politesse">
+                    <div class="col-md-3 text-center">
+                        <img class="successBadge" src="{{ asset('images/dashboard/points-badges/serviteur-de-la-politesse.png') }}" />
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="action">
+                            <div class="actionBadge">
+                                <h4>Action</h4>
+                                <p>Reçu 10 point en plus
+                                pour sa politesse</p>
+                            </div>
+                            <div class="points">
+                                <h4>Points gagnés</h4>
+                                <p>+10</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Message</h4>
+                        <p class="message">
+                           'La politesse, ça vous connaît'
+                        </p>
+                    </div>
+                </div>
+                <div class="row badges" id="simple_efficace">
+                    <div class="col-md-3 text-center">
+                        <img class="successBadge" src="{{ asset('images/dashboard/points-badges/simple-et-efficace.png') }}" />
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="action">
+                            <div class="actionBadge">
+                                <h4>Action</h4>
+                                <p>Reçu cinq points d’un coup
+                                pour la qualité de son service</p>
+                            </div>
+                            <div class="points">
+                                <h4>Points gagnés</h4>
+                                <p>+5</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Message</h4>
+                        <p class="message">
+                           'Bravo, vos efforts ont été récompensés!'
+                        </p>
+                    </div>
+                </div>
+                <div class="row badges" id="un_as">
+                    <div class="col-md-3 text-center">
+                        <img class="successBadge" src="{{ asset('images/dashboard/points-badges/un-as-en-la-matiere.png') }}" />
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="action">
+                            <div class="actionBadge">
+                                <h4>Action</h4>
+                                <p>Reçu cinq points d’un coup pour
+                                la qualité de son service,
+                                3 fois de suite</p>
+                            </div>
+                            <div class="points">
+                                <h4>Points gagnés</h4>
+                                <p>+20</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Message</h4>
+                        <p class="message">
+                           'Eh bien, on vous emploierait presque à plein temps'
+                        </p>
+                    </div>
+                </div>
+                <div class="row badges" id="emballe">
+                    <div class="col-md-3 text-center">
+                        <img class="successBadge" src="{{ asset('images/dashboard/points-badges/emballe-cest-pese.png') }}" />
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="action">
+                            <div class="actionBadge">
+                                <h4>Action</h4>
+                                <p>A demandé un service
+                                dans chacune des 6 catégories</p>
+                            </div>
+                            <div class="points">
+                                <h4>Points gagnés</h4>
+                                <p>+5</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Message</h4>
+                        <p class="message">
+                           'Vous n’avez pas peur d’expérimenter'
+                        </p>
+                    </div>
+                </div>
+                <div class="row badges" id="collectionneur">
+                    <div class="col-md-3 text-center">
+                        <img class="successBadge" src="{{ asset('images/dashboard/points-badges/collectionneur-avere.png') }}" />
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="action">
+                            <div class="actionBadge">
+                                <h4>Action</h4>
+                                <p>Collectionneur avéré</p>
+                            </div>
+                            <div class="points">
+                                <h4>Points gagnés</h4>
+                                <p>+50</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Message</h4>
+                        <p class="message">
+                           'Vous êtes un bon samaritain, et cela vous va bien au teint'
+                        </p>
+                    </div>
+                </div>
+            </div>
+		</div>
+    </div>
+</div>   
+{% endblock %}
+
+{% block javascripts %}
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+crossorigin="anonymous"></script>
+
+
+{% endblock %}

@@ -1,0 +1,514 @@
+.mobile {
+    display: none;
+}
+
+.burger button{
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 1);
+    color: #539ac4;
+    border: solid 2px white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.burger{
+    position: absolute;
+    top: 3%;
+    right: 2%;
+}
+
+.dropdown-menu::before,
+.dropdown-menu::after {
+border: none;
+content: none;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+
+
+
+/* ------------------------------------------------
+MENU
+------------------------------------------------  */
+
+.container {
+    padding: 0;
+}
+ 
+
+/* ------------------------------------------------
+SLIDER
+------------------------------------------------  */
+    .carousel-item{
+        background-color: #539ac4;
+    }
+
+    .top-adjust{
+        top: 30%;
+    }
+
+    .carousel-caption{
+        margin: auto;
+        padding-bottom: 10%;
+    }
+
+    .carousel-item .intro h1 {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        text-align: center;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        font-size: 40pt;
+        font-weight: bold;
+    }
+
+    .image-header{
+        opacity: 1;
+    }
+    .ligne {
+        border-right: 2px solid #539ac4;
+        min-height: 510px;  
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+/* ------------------------------------------------
+SHRINKEDCONTENT
+------------------------------------------------  */
+
+.shrinkedcontent {
+    width:95%;
+    margin:0 auto;
+}
+
+/* ------------------------------------------------
+ABOUT
+------------------------------------------------  */
+.about {
+    margin-bottom: 10%;
+    margin-top: 3%;
+    width: 1200px;
+    padding-top: 50px;
+}
+
+.about h1 {
+    color: #36667b;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    margin-top: 8%;
+    /*margin-bottom: 30px;*/
+    /*font-weight: bold;*/ 
+    font-size: 34.57pt;
+}
+
+.about .desc {
+    margin:0 auto;
+    font-family: 'Nunito', sans-serif;
+    color: #36667b;
+    /*font-size: 21pt;*/
+    font-size: 16pt;
+    width:95%;
+}
+
+
+.diagramme {
+    width: 100%;
+    height: auto;
+    right: 12%;
+    /*margin-bottom:-70px;*/
+}
+
+.ours {
+    width: 100%;
+    height: auto;
+    right: 15%;
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+.coordonnees {
+        width: 60%;
+        font-size: 16pt;
+        margin-top: 20px;
+        color: #36667b;
+        font-family: 'Nunito', sans-serif;
+        /*font-weight: bold;*/
+    
+}
+
+.titre {
+    width: 100%;
+    font-size: 25pt;
+    margin-top: 10%;
+    color: #36667b;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+
+}
+
+.array-logo-and-bees {
+    position: relative;
+    /*width: 100%;
+    height: auto;*/
+    /*margin-top:-10%;*/
+}
+
+.array-logo-and-bees .bees-container {
+    position: absolute;bottom:0px;
+    /*width:100%;height:auto;*//*max-height:900.1%;*//*overflow:hidden;*//*margin-top:20%;
+    z-index:-1;*/
+}
+
+/*.array-logo-and-bees .bees-container .abeilles {
+    width: 100%;height:100%;max-height:initial;margin-bottom:4%;
+}*/
+.tableau2{
+    width: 100%;
+    margin-top: -19%;
+}
+
+/* ------------------------------------------------
+FOOTER
+------------------------------------------------  */
+footer{
+    background-image: url('/images/pelle_terre_footer.jpg');
+    width: 100%;
+    color: white;
+}
+
+/* ------------------------------------------------
+RESPONSIVE
+------------------------------------------------  */
+@media screen and (max-width:1199px) {
+    .array-logo-and-bees .bees-container {
+        bottom:-440px;
+    }
+}
+
+
+@media screen and (max-width:1024px) {
+
+    /* ------------------------------------------------
+    SHRINKEDCONTENT
+    ------------------------------------------------  */
+
+    .shrinkedcontent {
+        width:95%;
+        margin:0 auto;
+    }
+    
+    /* ------------------------------------------------
+    TITRE TABLEAU COTISATION
+    ------------------------------------------------  */
+
+    .about h1 {
+        
+        font-size: 25pt;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .array-logo-and-bees .bees-container {
+        bottom:-295px;
+    }
+}
+
+@media screen and (max-width:960px) {
+    
+    /* ------------------------------------------------
+    MENU
+    ------------------------------------------------  */
+    .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+
+    .menu ul {
+        padding-top: 5px;
+        width: 95%;
+        z-index: 200;
+        position: absolute;
+        top:0;
+        left: 0;
+    }
+
+    /* ------------------------------------------------
+    SLIDER
+    ------------------------------------------------  */
+    .carousel-item .intro h1 {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        text-align: center;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .carousel-item .intro p {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        font-size: 14px;
+    }
+
+    .shrinkedcontent {
+        width:95%;
+        margin:0 auto;
+    }
+
+    /* ------------------------------------------------
+    PROCESSUS
+    ------------------------------------------------  */
+    .processus h3 {
+        color: #fff;
+        font-family: 'Nunito', sans-serif;
+        font-size: 16px;
+        margin-top: 0;
+        font-weight: bold;
+        text-align: center;
+    }
+    .processus img {
+        display: block;
+        width: 100%;
+        min-height: 100%;
+        margin-bottom: 15px;
+    
+    }
+
+
+    /* ------------------------------------------------
+    TITRE TABLEAU COTISATION
+    ------------------------------------------------  */
+
+    .about h1 {
+        
+        font-size: 25pt;
+    }
+}
+@media screen and (max-width:768px) {
+
+    /* ------------------------------------------------
+    MENU
+    ------------------------------------------------  */
+    .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+
+    /* ------------------------------------------------
+    SLIDER
+    ------------------------------------------------  */
+    .carousel-item .intro h1 {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        text-align: center;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .carousel-item .intro p {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        font-size: 10px;
+    }
+
+    .shrinkedcontent {
+        width:95%;
+        margin:0 auto;
+    }
+
+    /* ------------------------------------------------
+    TITRE TABLEAU COTISATION
+    ------------------------------------------------  */
+
+    .about h1 {
+        
+        font-size: 25pt;
+    }
+
+}
+
+@media screen and (max-width:767px) {
+    .array-logo-and-bees .bees-container {
+        bottom:-220px;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    /* ------------------------------------------------
+    MENU
+    ------------------------------------------------  */
+    .navbar {
+        margin-bottom: 0;
+    }
+
+    .griditem {
+        position: relative;
+        -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        width: 75%;
+        height: 400px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .shrinkedcontent {
+        width:95%;
+        margin:0 auto;
+    }
+
+    /* ------------------------------------------------
+    TITRE TABLEAU COTISATION
+    ------------------------------------------------  */
+
+    .about h1 {
+        
+        font-size: 25pt;
+    }
+
+}
+
+@media screen and (max-width:480px) {
+    .mobile {
+        display:block;
+    }
+    
+    html body{
+        margin:0;padding-right:0;padding-left:0;min-width:100%;
+    }
+
+    header {
+        margin-right:0;margin-left:0;padding-right:0;padding-left:0;min-width:100%;
+    }
+    
+    .container-fluid {
+        padding-right:0;
+        padding-left:0;
+        margin-right:auto;
+        margin-left:auto;
+        min-width:100%;
+    }
+    
+    .carousel-item .intro h1 {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        text-align: center;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 0px;
+    }
+    
+    .container {
+        min-width:100%;
+        padding:0px 0px 0px 0px;
+        margin:0px 0px 0px 0px;
+        background:
+            url(images/devenezmembre/abeilles2.png) bottom no-repeat/*,
+            url(background-pattern.png) repeat;*/
+    }
+
+    .carousel-item .image-header {
+        width:100%;
+        
+        height:auto;
+        /*position: absolute;*/
+        top:60%;right:30%;
+        margin-bottom: 0;
+    }
+    
+    .shrinkedcontent {
+        width:95%;
+        margin:0 auto;
+    }
+
+    .container {
+        padding: 0 7%;
+        width: 100%;
+    }
+
+    .about {
+        margin-top:0px;margin-bottom:0px;
+        /*width:120%;*/
+    }
+
+    .about .desc {
+        font-family: 'Nunito', sans-serif;
+        /*font-weight: bold;*/
+        color: #36667b;
+        font-size: 2.4vw;
+        text-align: justify;
+        
+    }
+
+    .about h1 {
+        color: #36667b;
+        text-align: center;
+        font-family: 'Nunito', sans-serif;
+        margin-top: 14%;margin-bottom: 8%;
+        font-weight: normal;
+        /*font-size: 10pt;*/
+        font-size: 3.3vw;
+    }
+  
+    .diagramme {
+        width: 100%;
+        height: auto;
+        /*margin-top: -80px;*/
+    }
+
+    .ours {
+        width: 100%;
+        height: auto;
+        /*
+        margin-top: 25px;
+        margin-bottom: 55px;
+        */
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+  
+
+    /*.abeilles {
+        position: relative;
+        top: 0;
+        width: 132%;
+    }*/
+
+    .titre {
+        /*font-size: 10pt;*/
+        font-size: 3.2vw;
+        margin-top: 10%;
+    }
+
+    .coordonnees {
+        width: 60%;
+        /*font-size: 7pt;*/
+        font-size: 2.3vw;
+        font-weight:normal;
+        margin-top: 10px;
+    }
+
+    .array-logo-and-bees {
+        position:relative;
+        /*margin-top:-10%;*/
+    }
+    
+    .array-logo-and-bees .bees-container {
+        position:absolute;bottom:-27%;
+        width:140%;height:auto;/*max-height:900.1%;*//*overflow:hidden;*/margin-top:20%;
+    }
+    
+    .array-logo-and-bees .bees-container .abeilles {
+        width: 100%;height:100%;/*max-height:initial;*//*margin-bottom:4%;*/
+    }
+}

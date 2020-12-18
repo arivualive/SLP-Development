@@ -1,0 +1,877 @@
+/* ------------------------------------------------
+MENU
+------------------------------------------------  */
+.navbar {
+    margin-bottom: 0;
+}
+
+
+
+
+/* ------------------------------------------------
+SLIDER
+------------------------------------------------  */
+
+    .slider {
+        z-index: 100;
+        width:100%;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .slider img {
+        z-index: 1;
+        display: block;
+        width: 100%;
+    }
+
+    .slider .intro {
+        z-index: 10000;
+        width: 314px;
+        overflow: hidden;
+        position: absolute;
+        top:23%;
+        left:58%;
+    }
+
+    .slider .intro h1 {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        text-align: center;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-size: 26px;
+        font-weight: bold;
+    }
+
+    .slider .intro p {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        font-size: 16px;
+        margin-bottom:15px;
+    }
+
+    .slider .intro a {
+        display: block;
+        width:143px;
+        margin: 0 auto;
+    }
+    .slider .intro a button {
+        padding: 5px;
+        background-color: #539ac4;
+        color: white;
+        border: solid 2px white;
+        border-radius: 3px;
+    }
+
+    .slider .arrow {
+        z-index: 200000;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+    }
+
+    .slider .arrow a {
+        display: inline-block;
+    }
+
+    .slider .arrow a i {
+        padding-left:30px;
+        padding-right:30px;
+        color: white;
+    }
+    .slider .arrow .right {
+        float: right;
+    }
+
+/* ------------------------------------------------
+ABOUT
+------------------------------------------------  */
+.about {
+    margin-bottom: 20px;
+}
+
+.about h2 {
+    color: #539ac4;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.about .desc {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    color: #539ac4;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.about p {
+    font-family: 'Nunito', sans-serif;
+    color: #539ac4;
+}
+
+.slogant p {
+    font-family: 'Nunito', sans-serif;
+    color: #539ac4;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* ------------------------------------------------
+TEXT-CONTENT
+------------------------------------------------  */
+
+.text-content {
+    width: 100%;
+    min-height: 200px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    background-color: #539ac4;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.text-content h2 {
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.text-content img {
+    display: block;
+    width: 100%;
+}
+.text-content p {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    font-size: 16px;
+}
+
+.text-content .btn-q {
+    text-align: center;
+}
+
+.text-content p a button {
+    padding: 5px;
+    background-color: #539ac4;
+    color: white;
+    border: solid 2px white;
+    border-radius: 3px;
+}
+
+/* ------------------------------------------------
+DASHBOARD (h2)
+------------------------------------------------  */
+.dashboard {
+    width: 100%;
+    min-height: 200px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    background-color: #fff;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.dashboard h2 {
+    color: #539ac4;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.dashboard img {
+    display: block;
+    width: 100%;
+}
+.dashboard p {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    color: #539ac4;
+    font-size: 16px;
+}
+
+.dashboard .btn-q {
+    text-align: center;
+}
+
+.dashboard p a button {
+    padding: 5px;
+    background-color: #fff;
+    color: #539ac4;
+    border: solid 2px #539ac4;
+    border-radius: 3px;
+}
+
+/* ------------------------------------------------
+ACTU
+------------------------------------------------  */
+.actu {
+    width: 100%;
+    min-height: 200px;
+    background-color: #539ac4;
+    overflow: hidden;
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+}
+
+.actu h2 {
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.actu h3 {
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    margin-top: 0;
+    font-weight: bold;
+}
+.actu img {
+    display: block;
+    width: 100%;
+
+}
+
+.actu p {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    font-size: 14px;
+    min-height: 205px;
+}
+
+/* ------------------------------------------------
+EMPREINTE
+------------------------------------------------  */
+.empreinte {
+    width: 100%;
+    min-height: 200px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    background-color: #fff;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.empreinte h2 {
+    color: #539ac4;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.empreinte img {
+    display: block;
+    width: 100%;
+}
+.empreinte p {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    color: #539ac4;
+    font-size: 16px;
+}
+
+.empreinte .slogant p {
+    font-family: 'Nunito', sans-serif;
+    color: #539ac4;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* ------------------------------------------------
+VIDEO APPLI "griditem"
+------------------------------------------------- */
+#colorItem {
+    background-color: #fc00ff;
+}
+
+#colorItem2 {
+    background-color: #a7a7a7;
+}
+#colorItem3 {
+    background-color: #64af1a;
+}
+#colorItem4 {
+    background-color: #5c360a;
+}
+#colorItem5 {
+    background-color: #c8b010;
+}
+#colorItem6 {
+    background-color: #6099bd;
+}
+#colorItem7 {
+    background-color: #4f2995;
+}
+#colorItem8 {
+    background-color: #93b4c1;
+}
+#colorItem9 {
+    background-color: #6d38a8;
+}
+#colorItem10 {
+    background-color: #202020;
+}
+.griditem {
+    position: relative;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+}
+
+.griditem img {
+    width: 100%;
+    display: block;
+}
+
+.video {
+    position: relative;
+    margin-top: none;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+}
+
+.overlay {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    /*pour désactiver les liens :*/
+    /*pointer-events: none;*/
+}
+.overlay img {
+    width: 100%;
+    display: block;
+    height: 100%;
+}
+
+
+.titles {
+    display: table;
+    width: 100%;
+    height: 100%; /*important, forces to 100% height of parent*/
+    opacity:0;
+    -webkit-transition: opacity .5s ease;
+    -moz-transition: opacity .25s ease;
+    background: rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+    text-decoration: none;
+
+}
+
+
+.titles p {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 25px;
+    font-family: helvetica;
+}
+
+.griditem:hover .titles {
+    text-decoration: none;
+    opacity:1;
+}
+
+.griditem .imgspacer img {
+    width:100%;
+    display: block;
+}
+
+.griditem:hover .video {
+    display: inline;
+}
+
+.griditem:hover .imgspacer {
+    display: none;
+}
+/* ------------------------------------------------
+ECO PANIER
+------------------------------------------------  */
+
+.eco-panier img {
+    display: block;
+    width: 100%;
+}
+
+.eco-panier h2 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    color: #539ac4;
+
+}
+.eco-panier p {
+    font-family: 'Nunito', sans-serif;
+    color: #539ac4;
+    font-size: 20px;
+    margin-bottom:20px;
+}
+
+.eco-panier a {
+    font-family: 'Nunito', sans-serif;
+    color: #539ac4;
+    font-size: 24px;
+    border:solid 2px #539ac4;
+    padding: 10px 10px;
+    margin-bottom:50px;
+}
+
+
+
+/* ------------------------------------------------
+RESPONSIVE
+------------------------------------------------  */
+
+@media screen and (max-width:1024px) {
+
+    /* ------------------------------------------------
+    MENU
+    ------------------------------------------------  */
+    .navbar {
+        margin-bottom: 0;
+    }
+
+    /* ------------------------------------------------
+    VIDEO APPLI "griditem"
+    ------------------------------------------------- */
+
+    .griditem {
+        position: relative;
+        -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+    }
+
+    /* ------------------------------------------------
+    ECO PANIER
+    ------------------------------------------------  */
+
+    .eco-panier h2 {
+        font-family: 'Nunito', sans-serif;
+        font-weight: bold;
+        color: #539ac4;
+
+    }
+    .eco-panier p {
+        font-family: 'Nunito', sans-serif;
+        color: #539ac4;
+        font-size: 16px;
+        margin-bottom:16px;
+    }
+
+    .eco-panier a {
+        font-family: 'Nunito', sans-serif;
+        color: #539ac4;
+        font-size: 16px;
+        border:solid 2px #539ac4;
+        padding: 5px 5px;
+        margin-bottom:50px;
+    }
+}
+
+@media screen and (max-width:960px) {
+
+    /* ------------------------------------------------
+    MENU
+    ------------------------------------------------  */
+    .navbar {
+        margin-bottom: 0;
+    }
+
+        .menu ul {
+            padding-top: 5px;
+            width: 95%;
+            z-index: 200;
+            position: absolute;
+            top:0;
+            left: 0;
+        }
+
+        /* ------------------------------------------------
+        SLIDER
+        ------------------------------------------------  */
+
+        .slider .intro {
+            z-index: 10000;
+            width: 210px;
+            overflow: hidden;
+            position: absolute;
+            top:10%;
+            left:58%;
+        }
+
+        .slider .intro h1 {
+            font-family: 'Nunito', sans-serif;
+            color: white;
+            text-align: center;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .slider .intro p {
+            font-family: 'Nunito', sans-serif;
+            color: white;
+            font-size: 14px;
+        }
+
+        /* ------------------------------------------------
+        DASHBOARD (h2)
+        ------------------------------------------------  */
+        .dashboard img {
+            display: block;
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        /* ------------------------------------------------
+        TEXT-CONTENT
+        ------------------------------------------------  */
+        .text-content img {
+            display: block;
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        /* ------------------------------------------------
+        ACTU
+        ------------------------------------------------  */
+        .actu h3 {
+            color: #fff;
+            font-family: 'Nunito', sans-serif;
+            font-size: 16px;
+            margin-top: 0;
+            font-weight: bold;
+            text-align: center;
+        }
+        .actu img {
+            display: block;
+            width: 100%;
+            min-height: 100%;
+            margin-bottom: 15px;
+        }
+
+        /* ------------------------------------------------
+        VIDEO APPLI "griditem"
+        ------------------------------------------------- */
+        .griditem {
+            position: relative;
+            background-color: #777;
+            -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            overflow: hidden;
+            height: 370px;
+        }
+
+        /* ------------------------------------------------
+        ECO PANIER
+        ------------------------------------------------  */
+
+        .eco-panier h2 {
+            font-family: 'Nunito', sans-serif;
+            font-weight: bold;
+            color: #539ac4;
+
+        }
+        .eco-panier p {
+            font-family: 'Nunito', sans-serif;
+            color: #539ac4;
+            font-size: 14px;
+            margin-bottom:16px;
+        }
+
+        .eco-panier a {
+            font-family: 'Nunito', sans-serif;
+            color: #539ac4;
+            font-size: 12px;
+            border:solid 2px #539ac4;
+            padding: 5px 5px;
+            margin-bottom:50px;
+        }
+    }
+
+
+
+@media screen and (max-width:768px) {
+
+        /* ------------------------------------------------
+        MENU
+        ------------------------------------------------  */
+        .navbar {
+            margin-bottom: 0;
+        }
+
+        /* ------------------------------------------------
+        SLIDER
+        ------------------------------------------------  */
+
+        .slider .intro {
+            z-index: 10000;
+            width: 192px;
+            overflow: hidden;
+            position: absolute;
+            top:18%;
+            left:56%;
+        }
+
+        .slider .intro h1 {
+            font-family: 'Nunito', sans-serif;
+            color: white;
+            text-align: center;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .slider .intro p {
+            font-family: 'Nunito', sans-serif;
+            color: white;
+            font-size: 10px;
+        }
+
+        /* ------------------------------------------------
+        TEXT-CONTENT
+        ------------------------------------------------  */
+        .text-content img {
+            display: block;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        /* ------------------------------------------------
+        VIDEO APPLI "griditem"
+        ------------------------------------------------- */
+
+        .griditem {
+            position: relative;
+            -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height:370px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        /* ------------------------------------------------
+        ECO PANIER
+        ------------------------------------------------  */
+
+        .eco-panier img {
+            padding-top:20px;
+            display: block;
+            width: 55%;
+            margin: 0 auto;
+        }
+
+        .eco-panier h2 {
+            font-family: 'Nunito', sans-serif;
+            font-weight: bold;
+            color: #539ac4;
+            text-align: center;
+
+        }
+        .eco-panier p {
+            font-family: 'Nunito', sans-serif;
+            color: #539ac4;
+            font-size: 14px;
+            width: 70%;
+            margin: 0 auto;
+            margin-bottom:20px;
+        }
+
+        .eco-panier a {
+            font-family: 'Nunito', sans-serif;
+            color: #539ac4;
+            font-size: 12px;
+            border:solid 2px #539ac4;
+            padding: 5px 5px;
+            width: 28%;
+            margin: 0 auto 60px;
+            display: block;
+            text-align: center;
+        }
+
+    }
+
+@media screen and (max-width:600px) {
+
+    /* ------------------------------------------------
+    MENU
+    ------------------------------------------------  */
+    .navbar {
+        margin-bottom: 0;
+    }
+
+    .griditem {
+        position: relative;
+        -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        width: 75%;
+        height: 400px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (max-width:480px) {
+
+    /* ------------------------------------------------
+    MENU
+    ------------------------------------------------  */
+    .navbar {
+        margin-bottom: 0;
+    }
+
+        /* ------------------------------------------------
+        SLIDER
+        ------------------------------------------------  */
+
+        .slider .intro {
+            z-index: 10000;
+            width: 110px;
+            overflow: hidden;
+            position: absolute;
+            top:14%;
+            left:55%;
+        }
+
+
+
+        .slider .intro h1 {
+            font-family: 'Nunito', sans-serif;
+            color: white;
+            text-align: center;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            font-size: 7px;
+            font-weight: bold;
+        }
+
+        .slider .intro p {
+            font-family: 'Nunito', sans-serif;
+            color: white;
+            font-size: 6px;
+        }
+
+        .slider .intro a {
+            display: block;
+            width:90px;
+            margin: 0 auto;
+        }
+        .slider .intro a button {
+            padding: 2px;
+            background-color: #539ac4;
+            color: white;
+            border: solid 2px white;
+            border-radius: 3px;
+            font-size: 8px;
+        }
+
+        .slider .arrow a i {
+            padding-left:5px;
+            padding-right:5px;
+            color: white;
+        }
+
+        /* ------------------------------------------------
+        ABOUT
+        ------------------------------------------------  */
+        .about .desc {
+            font-family: 'Nunito', sans-serif;
+            font-weight: bold;
+            color: #539ac4;
+            font-size: 14px;
+            text-align: justify;
+        }
+
+        /* ------------------------------------------------
+        TEXT-CONTENT
+        ------------------------------------------------  */
+        .text-content img {
+            display: none;
+            width: 50%;
+        }
+
+        /* ------------------------------------------------
+        VIDEO APPLI "griditem"
+        ------------------------------------------------- */
+
+        .griditem {
+            position: relative;
+            -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        /* ------------------------------------------------
+        ECO PANIER
+        ------------------------------------------------  */
+
+        .eco-panier img {
+            padding-top:20px;
+            display: block;
+            width: 55%;
+            margin: 0 auto;
+        }
+
+        .eco-panier h2 {
+            font-family: 'Nunito', sans-serif;
+            font-weight: bold;
+            color: #539ac4;
+            text-align: center;
+
+        }
+        .eco-panier p {
+            font-family: 'Nunito', sans-serif;
+            color: #539ac4;
+            font-size: 14px;
+            width: 70%;
+            margin: 0 auto;
+            margin-bottom:20px;
+        }
+
+        .eco-panier a {
+            font-family: 'Nunito', sans-serif;
+            color: #539ac4;
+            font-size: 12px;
+            border:solid 2px #539ac4;
+            padding: 5px 5px;
+            width: 48%;
+            margin: 0 auto 60px;
+            display: block;
+            text-align: center;
+        }
+    }

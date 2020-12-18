@@ -1,0 +1,2039 @@
+*{font-family: 'Nunito', sans-serif !important}
+
+/* ------------------------------------------------
+MENU
+------------------------------------------------  */
+.navbar {
+    margin: 0;
+    border-radius: 0;
+    width: 100%;
+} 
+.carousel{
+    width: 100%;
+}
+/*------si l'utilisateur n'est pas!! connecté est sur la page index il verra ces 2 boutons---------*/
+.inscription button{
+    position: absolute;
+    top: 3%;
+    right: 2%;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 1);
+    color: #539ac4;
+    border: solid 2px white;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+.connexion button{
+    position: absolute;
+    top: 3%;
+    right: 12%;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 1);
+    color: #539ac4;
+    border: solid 2px white;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+/*--------si l'utilisateur connecté est sur la page index il verra ces 2 boutons---------*/
+.quizz-yourself button{
+    position: absolute;
+    top: 3%;
+    right: 2%;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 1);
+    color: #539ac4;
+    border: solid 2px white;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+.deconnexion button{
+    position: absolute;
+    top: 3%;
+    right: 12%;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 1);
+    color: #539ac4;
+    border: solid 2px white;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+/* ------------------------------------------------
+SLIDER
+------------------------------------------------  */
+.carousel-item{
+    background-color: #539ac4;
+}
+.top-adjust{
+    top: 30%;
+}
+.carousel-caption{
+    margin: auto;
+    padding-bottom: 10%;
+}
+.carousel-item .intro h1 {
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+}
+.carousel-item .intro p {
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    font-size: 16px;
+    margin-bottom:15px;
+}
+.carousel-item .intro a {
+    display: block;
+    margin: 0 auto;
+}
+.carousel-item .intro a button {
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: solid 2px white;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+.carouselLandingPage{
+    opacity: 0.4;
+}
+
+/* ------------------------------------------------
+ABOUT
+------------------------------------------------  */
+.about{
+    margin-top: 15px;
+}
+.about h2 {
+    color: #539ac4;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold; 
+}
+.about .desc {
+    font-family: 'Nunito', sans-serif;
+    /*font-weight: bold;*/
+    color: #539ac4;
+    font-size: 16px;
+    /*text-align: justify;*/
+}
+.about p {
+    font-family: 'Nunito', sans-serif;
+    color: #539ac4;
+    font-size: 16px;
+}
+.about .sec-part{
+    margin-top: 2rem;
+}
+.slogant p {
+    font-family: 'Nunito', sans-serif;
+    color: #539ac4;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+/*.plusiconbutton{
+    background: none; 
+    border: none;
+    padding: 0;
+    height: 15px;
+    width: 15px;
+}
+.plusicon {
+    height: 100%; 
+    width: 100%;
+    padding: 0;
+}
+.aboutmobile2 {
+    padding: 0 10%;
+    margin: 0;
+}
+.aboutmobilep{
+    width: 21%;
+    margin: 5px 0;
+    padding: 0 0 0 5%;
+}
+.aboutmobileimg {
+    height: 90px; 
+    margin: 5px 0;
+    padding: 0;
+}
+.aboutmobileimg img{
+    height: 100%; 
+    width: 100%; 
+    margin: 0; 
+    padding: 0;
+}
+.pmobile{
+    margin: 0;
+    padding: 0;
+    font-size: 0.9em !important;
+}*/
+
+/* ------------------------------------------------
+TEXT-CONTENT
+------------------------------------------------  */
+.text-content{
+    width: 100%;
+    min-height: 200px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    background-color: #539ac4;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.text-content h2 {
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.text-content img {
+    display: block;
+    width: 100%;
+    margin-top: 120px;
+}
+.text-content p {
+    font-family: 'Nunito', sans-serif;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+.text-content a button {
+    padding: 5px;
+    border: solid 2px white;
+    border-radius: 3px;
+    text-transform: uppercase;
+    background-color: #539ac4;
+    color: white;
+    font-size: 1.4em;
+}
+/*@media screen and (max-width:450px) {
+    .text-content-mobile a button {
+        background-color: white;
+        color: #539ac4;
+        padding: 5px 30px;
+    }
+}*/
+/*.text-content-mobile {
+    width: 100%;
+    min-height: 200px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    background-color: #539ac4;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.text-content-mobile h2 {
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.text-content-mobile img {
+    display: block;
+    width: 90%;
+    margin-top: 8rem;
+}
+.text-content-mobile p {
+    font-family: 'Nunito', sans-serif;
+    color: #fff;
+} */
+/*.questionnaire-interp-space{
+    margin-bottom: 5px;
+    font-family: 'Nunito', sans-serif;
+    color: #fff;
+}*/
+
+/* ------------------------------------------------
+DASHBOARD (h2)
+------------------------------------------------  */
+.dashboard {
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    /*width: 100%;
+    min-height: 200px;
+    background-color: #fff;
+    overflow: hidden;
+    margin-bottom: 15px;*/
+    /*padding: 15px 5% 25px 5%;*/
+}
+.dashboard h2 {
+    color: #539ac4;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.dashboard-img{
+    padding-right: 0px; 
+    padding-left: 0px; 
+    margin: 60px 30px 50px 0;
+}
+.dashboard .dashboard-img img {
+    display: block;
+    width: 100%;
+}
+.dashboard p {
+    font-family: 'Nunito', sans-serif;
+    color: #539ac4;
+    font-size: 16px;
+}
+.dashboard a button {
+    border: solid 2px #539ac4;
+    border-radius: 3px;
+    text-transform: uppercase;
+    margin-top: 7px;
+    padding: 5px;
+    background-color: #fff;
+    color: #539ac4;
+    font-size: 1.5em;
+}
+
+/* ------------------------------------------------
+ACTU
+------------------------------------------------  */
+.news {
+    width: 100%;
+    min-height: 200px;
+}
+.news img{
+    padding: 0;
+    margin: 0;
+    height: 150px;
+    width: 100%;
+}
+.actu {
+    width: 100%;
+    min-height: 200px;
+    background-color: white;
+    overflow: hidden;
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+}
+.actu h2 {
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+}
+.actu h3 {
+    color: grey;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    margin-top: 0;
+    font-weight: bold;
+}
+.actu .actu-block-img img {
+    display: block;
+    /*width: 165px;*/
+    height: 110px;
+    width: 90%;
+}
+.actu p {
+    font-family: 'Nunito', sans-serif;
+    color: grey;
+    font-size: 14px;
+}
+.actu-ensavoirplus-button{
+    background: none; 
+    border: none; 
+    padding: 0;
+    margin: 0 0 0 15%; 
+    width: 55%;
+}
+.actu-ensavoirplus-img{
+    padding: 0;
+    margin: 0;
+    height: 100%; 
+    width: 100%;
+}
+.actu-block-img{
+    padding-left: 0;
+    padding-right: 0;
+}
+.actu-block{
+    padding-left: 0;
+    padding-right: 25px;
+}
+.btn-actu-dashboard{
+    padding: 5px;
+    background-color: #fff;
+    color: #539ac4;
+    border: solid 1px #539ac4;
+    border-radius: 3px;
+    font-size: 20px;
+    margin-top: 40px;
+    display: inline-block;
+}
+.btn-actu-dashboard-mobile{
+    background-color: #539ac4;
+    color: white;
+    border: solid 1px #539ac4;
+    border-radius: 3px;
+    font-size: 0.9em; 
+    width: 100%;
+    padding: 5px 0;
+    /*font-size: 1vw;
+    width: 80%;
+    margin: 0 10%;*/
+}
+.btn-actu-dashboard-site{
+    background-color: #539ac4;
+    color: white;
+    border: solid 1px #539ac4;
+    border-radius: 3px;
+    font-size: 3.9vw;
+    width: 80%;
+    margin: 0 10%;
+}
+/*btn-actu-lp{
+    padding: 5px;
+    background-color: #fff;
+    color: #539ac4;
+    border: solid 2px #539ac4;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom:20px;
+    margin-left: 200px;
+}
+.div-btn-actu-dashboard{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}*/
+
+/* ------------------------------------------------
+Community
+------------------------------------------------  */
+.community {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    padding-left:0px;
+}
+.community img {
+    display: block;
+    width: 100%;
+    height:350px;
+}
+.community a {
+    position: absolute;
+    top: 84.5%;
+    left: 2%;
+    width: 30.8%;
+    height: 9%;
+}
+
+/* ------------------------------------------------
+Ambassadeur
+------------------------------------------------  */
+.ambassadeur {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    padding-left:0px;
+}
+.ambassadeur img {
+    display: block;
+    width: 100%;
+    height:350px;
+}
+.ambassadeur a {
+    position: absolute;
+    top: 73%;
+    left: 43.5%;
+    height: 10%;
+    width: 13%;
+}
+
+/* ------------------------------------------------
+EMPREINTE
+------------------------------------------------  */
+.empreinte {
+    width: 100%;
+    min-height: 200px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    background-color: #fff;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.empreinte a button {
+    padding: 5px;
+    background-color: #fff;
+    color: #539ac4;
+    border: solid 2px #539ac4;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom:20px;
+}
+.empreinte h2 {
+    color: #539ac4;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight:bold;
+}
+.empr-div-img{
+    padding-right: 0;
+    padding-left: 0;
+    margin: 80px 0;
+}
+.empreinte img {
+    display: block;
+    width: 100%;
+}
+.empreinte p {
+    font-family: 'Nunito', sans-serif;
+    color: #539ac4;
+    font-size: 17px;
+}
+.empreinte strong{ 
+    font-weight: bold;
+}
+.empreinte .slogant {
+    font-family: 'Nunito', sans-serif;
+    color: #539ac4;
+    font-weight: bold;
+    margin-top: 17px;
+    font-size: 17px;
+}
+.empreinte .rond{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+.empreinte a button {
+    background-color: #fff;
+    color: #539ac4;
+    border: solid 2px #539ac4;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding: 5px 30px;
+}
+
+/* ------------------------------------------------
+EMPREINTE mobile
+------------------------------------------------  */
+/*@media screen and (max-width:450px) {
+    .empreinte-mobile {
+        border: 2px solid #539ac4;
+    }
+    .empreinte-mobile-frame{
+        padding: 15px 5%;
+    }
+}*/
+/*.empreinte-mobile {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+.empreinte-mobile .emp-img{
+    padding: 0;
+    margin: 90px 0 0 0;
+    height: 130px;
+    position: relative;
+}
+.empreinte-mobile .emp-text{
+    padding: 0 1% 0 0;
+}
+.empreinte-mobile img{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: block;
+    transform: rotate(-90deg); 
+    position: absolute;
+}
+.empreinte-mobile h2 {
+    color: #539ac4;
+    font-family: 'Nunito', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 4.5vw;
+}
+.empreinte-mobile p {
+    font-family: 'Nunito', sans-serif;
+    color: #539ac4;
+    font-size: 3.9vw;
+    margin: 0;
+}
+.empreinte-mobile .slogant {
+    font-family: 'Nunito', sans-serif;
+    color: #539ac4;
+    font-weight: bold;
+    width: 100%;
+}
+.empreinte-mobile .rond{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 17px 2%;
+}
+.empreinte-mobile a button {
+    background-color: #fff;
+    color: #539ac4;
+    border: solid 2px #539ac4;
+    text-transform: uppercase;
+    font-size: 3.9vw;
+    margin-bottom: 10px;
+    padding: 5px 0px;
+    /*border-radius: 3px;
+    margin-bottom: 10px;
+    padding: 5px 30px;
+}*/
+
+/* ------------------------------------------------
+Humans of gaea
+------------------------------------------------  */
+.humans {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    padding-left:0px;
+}
+.humans img {
+    display: block;
+    width: 100%;
+    height:350px;
+}
+.humans a {
+    position: absolute;
+    top: 81%;
+    left: 39.9%;
+    height: 12%;
+    width: 20.3%;
+    /*padding: 30px;
+    padding-left: 192px;
+    padding-right: 60px;
+    border: solid 2px transparent;
+    border-radius: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: transparent;
+    background-color: transparent;*/
+}
+/* ------------------------------------------------
+VIDEO APPLI "griditem"
+------------------------------------------------- */
+#colorItem {
+    background-color: #fc00ff;
+}
+#colorItem2 {
+    background-color: #a7a7a7;
+}
+#colorItem3 {
+    background-color: #64af1a;
+}
+#colorItem4 {
+    background-color: #5c360a;
+}
+#colorItem5 {
+    background-color: #c8b010;
+}
+#colorItem6 {
+    background-color: #6099bd;
+}
+#colorItem7 {
+    background-color: #4f2995;
+}
+#colorItem8 {
+    background-color: #93b4c1;
+}
+#colorItem9 {
+    background-color: #6d38a8;
+}
+#colorItem10 {
+    background-color: #202020;
+}
+.griditem {
+    position: relative;
+    /*-webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);*/
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+}
+.griditem img {
+    width: 100%;
+    display: block;
+}
+.allothers .video {
+    position: relative;
+    margin-top: none;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+}
+.allothers-mobile .video {
+    position: relative;
+    margin-top: none;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /*display: none;*/
+}
+.overlay {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+.overlay img {
+    width: 100%;
+    display: block;
+    height: 100%;
+}
+.titles {
+    display: table;
+    width: 100%;
+    height: 100%; /*important, forces to 100% height of parent*/
+    opacity:0;
+    -webkit-transition: opacity .5s ease;
+    -moz-transition: opacity .25s ease;
+    background: rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.titles p {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 25px;
+    font-family: helvetica;
+}
+.griditem:hover .titles {
+    text-decoration: none;
+    opacity:1;
+}
+.griditem .imgspacer img {
+    width:100%;
+    display: block;
+}
+.griditem:hover .video {
+    display: inline;
+}
+.griditem:hover .imgspacer {
+    display: none;
+}
+
+.allothers{
+    padding-right: 0;
+    padding-left: 0;
+}
+.allothers-mobile .overlay img {
+    width: 155%;
+    display: block;
+    height: 170%;
+    margin: -28%;
+}
+
+/* ------------------------------------------------
+ECO PANIER
+------------------------------------------------  */
+.eco-panier img {
+    display: block;
+}
+.eco-panier h2 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    color: #539ac4;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.eco-panier p {
+    font-family: 'Nunito', sans-serif;
+    color: #539ac4;
+    font-size: 16px;
+    margin-bottom:20px;
+    font-weight:bold;
+}
+.eco-panier a {
+    font-family: 'Nunito', sans-serif;
+    color: #539ac4;
+    font-size: 24px;
+    border:solid 2px #539ac4;
+    padding: 10px 10px;
+    margin-bottom:50px;
+}
+/*@media screen and (max-width:450px) {
+    .eco-panier p{
+        font-size: 1.3vw;
+    }
+    .eco-panier {
+        border: 2px solid #539ac4;
+    }
+}*/
+/*.eco-panier-mobile-frame{
+    padding: 15px 5%;
+    margin: 0;
+}
+.eco-panier-mobile{
+    border: 2px solid #539ac4;
+    margin: 0; 
+    padding: 0 0 25px 0;
+}
+.eco-panier-mobile .ecopimg{
+    height: 108px;
+    width: 115px;
+    margin: 29px 10px 0 10px;
+    padding: 0;
+}
+.eco-panier-mobile img {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.eco-panier-mobile .ecop{
+    margin: 0;
+    padding: 0;
+}
+.eco-panier-mobile h2 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    color: #539ac4;
+    margin-top: 29px;
+    margin-bottom: 10px;
+    font-size: 4.5vw;
+}
+.eco-panier-mobile p {
+    font-family: 'Nunito', sans-serif;
+    color: #539ac4;
+    font-size: 16px;
+    margin-bottom:20px;
+    font-size: 3.7vw;
+} 
+.eco-panier-mobile a {
+    font-family: 'Nunito', sans-serif;
+    color: #539ac4;
+    font-size: 3vw;
+    border:solid 2px #539ac4;
+    padding: 5px 10px;
+    margin-bottom:50px;
+}*/
+
+/* ------------------------------------------------
+FOOTER
+------------------------------------------------  */
+.footer{
+    width: 100%;
+    color: white;
+    padding: 3%;
+}
+footer a, footer h3{
+    color: white;
+}
+footer ul{
+    padding: 0;
+}
+footer ul li{
+    list-style: none;
+    padding-top: 1.3rem;
+}
+
+
+
+/* ------------------------------------------------
+RESPONSIVE
+------------------------------------------------  */
+
+.dashboard-mobile, .community-mobile, .ambassadeur-mobile, .empreinte-mobile, .humans-mobile, .eco-panier-mobile {
+    padding: 0; 
+    margin: 0 5% 20px 5%;
+    position: relative;
+}
+
+/**********About***********/
+.about-mobile {
+    padding: 20px 5%;
+}
+.about-mobile img {
+    height: 100%;
+    width: 100%;
+}
+.about-mobile a {
+    
+}
+.about-mobile a button {
+    background-color: transparent;
+    color: transparent;
+    border: solid 2px transparent;
+    position: absolute;
+    padding: 0;
+    margin-top: 318px;
+    margin-left: 31%;
+    width: 38.5%;
+    height: 21px;
+}
+
+/**********text-content***********/
+.text-content-mobile {
+    padding: 0 0 20px 0;
+}
+.text-content-mobile img {
+    height: 100%;
+    width: 100%;
+}
+.text-content-mobile a {
+    position: absolute;
+    margin-top: 76.5%;
+    margin-left: 31%;
+    width: 38.5%;
+    height: 21px;
+}
+.text-content-mobile a button {
+    background-color: transparent;
+    color: transparent;
+    border: solid 2px transparent;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/**********Dashboard***********/
+/*.dashboard-mobile {
+    padding: 0 5% 20px 5%;
+}*/
+.dashboard-mobile img {
+    height: 100%;
+    width: 100%;
+}
+.dashboard-mobile a {
+    position: absolute;
+    margin-top: 51%;
+    margin-left: 29%;
+    width: 45%;
+    height: 10%;
+}
+.dashboard-mobile a button {
+    background-color: transparent;
+    color: transparent;
+    border: solid 2px transparent;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/**********News***********/
+.news-mobile{
+    padding: 0;
+    margin: 0 5% 15px 5%;
+    height: 75.177px;
+    width: 90%;
+}
+.news-mobile img{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+.actu-mobile {
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+    margin-bottom: 18px;
+}
+.actu-mobile .actu-row{
+    margin: 0 5% 20px 5%; 
+    padding: 0; 
+    display: flex;
+}
+.actu-mobile .actu-left{
+    width: 37%; 
+    padding: 0 2% 0 0;
+}
+.actu-mobile .actu-center{
+    width: 37%; 
+    padding: 0 1%;
+}
+.actu-mobile .actu-right{
+    width: 37%; 
+    padding: 0 0 0 2%;
+}
+.actu-mobile .actu-img-p{
+    height: 180px;
+}
+.actu-mobile .actu-img-p img {
+    display: block;
+    height: 77px; 
+    width: 100%;
+    margin-bottom:5px;
+}
+.actu-mobile p {
+    /*font-family: 'Nunito', sans-serif;*/
+    color: #539ac4;
+    font-size: 0.8em;
+}
+.actu-mobile h2 {
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+}
+.actu-mobile .plus-button{
+    background: none; 
+    border: none; 
+    margin: 10px 15% 0 15%; 
+    width: 70%; 
+    padding: 0;
+}
+.actu-mobile .plus-btn-img{
+    padding: 0;
+    margin: 0;
+    height: 100%; 
+    width: 100%;
+}
+/*.actu-mobile h3 {
+    color: grey;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    margin-top: 0;
+    font-weight: bold;
+}*/
+/*.actu-mobile .actuimg {
+    margin: 0 5px;
+    width: 115px;
+    height: 77px;
+    padding: 0px;
+}*/
+
+/**********Community***********/
+/*.community-mobile {
+    padding: 0; 
+    margin: 0 5% 20px 5%;
+}*/
+.community-mobile img {
+    width: 100%; 
+    height: 100%;
+}
+.community-mobile a {
+    position: absolute;
+    margin-top: 37.5%;
+    margin-left: 34%;
+    width: 45%;
+    height: 12%;
+}
+.community-mobile a button {
+    border: solid 2px transparent;
+    border-radius: 3px;
+    background-color: transparent;
+    color: transparent;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/**********Ambassadeur***********/
+/*.ambassadeur-mobile {
+    padding: 0; 
+    margin: 0 5% 20px 5%;
+}*/
+.ambassadeur-mobile img {
+    width: 100%; 
+    height: 100%;
+}
+.ambassadeur-mobile a {
+    position: absolute;
+    margin-top: 35%;
+    margin-left: 40%;
+    width: 20%;
+    height: 13%;
+}
+.ambassadeur-mobile a button {
+    border: solid 2px transparent;
+    border-radius: 15px;
+    background-color: transparent;
+    color: transparent;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/**********Empreinte***********/
+/*.empreinte-mobile {
+    padding: 20px 5%; 
+    margin: 0;
+}*/
+.empreinte-mobile img  {
+    width: 100%; 
+    height: 100%;
+}
+.empreinte-mobile a  {
+    position: absolute;
+    margin-top: 60%;
+    margin-left: 34%;
+    width: 42%;
+    height: 20px;
+}
+.empreinte-mobile a button {
+    border: solid 2px transparent;
+    border-radius: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: transparent;
+    background-color: transparent;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/**********Human of gaea***********/
+/*.humans-mobile {
+    margin: 0 5% 20px 5%;
+}*/
+.humans-mobile img {
+    width: 100%;
+    height: 100%;
+}
+.humans-mobile a{
+    position: absolute;
+    margin-top: 29.5%;
+    margin-left: 34%;
+    width: 32%;
+    height: 17%;
+}
+.humans-mobile a button {
+    border: solid 2px transparent;
+    color: transparent;
+    background-color: transparent;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/**********Other***********/
+.row-other{
+    display: flex;
+}
+.row-other .other-left{
+    padding: 0 2% 2% 0;
+    width: 55%;
+}
+.row-other .other-right{
+    padding-left: 0 0 2% 2%;
+    width: 55%;
+}
+
+/**********Eco panier***********/
+/*.eco-panier-mobile {
+    padding: 10px 5% 20px 5%;
+}*/
+.eco-panier-mobile img {
+    height: 100%;
+    width: 100%;
+}
+.eco-panier-mobile a {
+    position: absolute;
+    margin-top: 27%;
+    margin-left: 30%;
+    width: 42%;
+    height: 15%;
+}
+.eco-panier-mobile a button {
+    background-color: transparent;
+    color: transparent;
+    border: solid 2px transparent;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width:450px) {
+    .mobile{
+        display: none;
+    }
+    .ecran{
+        display: block;
+    }
+    .carousel-site, .about, .text-content, .dashboard, .news, .actu, .community, .ambassadeur, .empreinte, .humans, .allothers, .eco-panier, .footer{
+        display: none;
+    }
+    #colorItem, #colorItem2, #colorItem3, #colorItem4, #colorItem5, #colorItem8, #colorItem9, #colorItem10{
+        height: 155px;
+    }
+    .ateliercuisineimg{
+        padding: 45%;
+    }
+}
+@media screen and (min-width:451px) {
+    .mobile{
+        display: block;
+    }
+    .ecran{
+        display: none;
+    }
+    .carousel-mobile, .about-mobile, .text-content-mobile, .dashboard-mobile, .news-mobile, .actu-mobile, .community-mobile, .ambassadeur-mobile, .empreinte-mobile, .humans-mobile, .allothers-mobile, .eco-panier-mobile, .footer-mobile{
+        display: none;
+    }
+    .ateliercuisineimg{
+        padding: 131px 136px 136px 136px;
+    }
+    .slogant{
+        margin-top: 30px;
+    }
+    .griditem {
+        -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+    }
+}
+
+
+/********************************************************************************************************************************/
+
+/* ------------------------------------------------
+RESPONSIVE ???
+------------------------------------------------  */
+@media screen and (max-width:1400px) {
+    .community a button {
+        padding: 10px;
+        padding-left: 185px;
+        background-color: transparent;
+        color: transparent;
+        border: solid 2px transparent;
+        border-radius: 3px;
+        font-size: 12px;
+        font-weight: bold;
+        margin-top: 21%;
+    }
+    .humans a button {
+        margin-top: 20.5%;
+        position: absolute;
+        margin-left: 34%;
+        padding: 30px;
+        padding-left: 192px;
+        padding-right: 60px;
+        border: solid 2px transparent;
+        border-radius: 15px;
+        font-size: 1.2em;
+        font-weight: bold;
+        color: transparent;
+        background-color: transparent;
+    }
+}
+@media screen and (max-width:1200px) {
+    .community a button {
+        padding: 10px;
+        padding-left: 130px;
+        background-color: transparent;
+        color: transparent;
+        border: solid 2px transparent;
+        border-radius: 3px;
+        font-size: 12px;
+        font-weight: bold;
+        margin-top: 25%;
+    }
+    .ambassadeur a button {
+        margin-top: 250px;
+        position: absolute;
+        margin-left: 37%;
+        padding: 8px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border: solid 2px transparent;
+        border-radius: 15px;
+        font-size: 1.2em;
+        font-weight: bold;
+        color: transparent;
+        background-color: transparent;
+    }
+    .humans a button {
+        margin-top: 18.5%;
+        position: absolute;
+        margin-left: 1%;
+        padding: 5px;
+        padding-left: 60px;
+        padding-right: 60px;
+        border: solid 2px transparent;
+        border-radius: 15px;
+        font-size: 1.2em;
+        font-weight: bold;
+        color: transparent;
+        background-color: transparent;
+    }
+    .actu-img {
+        display: block;
+        width: 150px;
+        height: 110px;
+    }
+    .actu h3 {
+        font-size:13px;
+    }
+}
+
+@media screen and (max-width:1199px) {
+    .actu .actu-block-img img {
+        display: block;
+        width: 145px;
+        height: 90px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+
+    /* ------------------------------------------------
+    MENU
+    ------------------------------------------------  */
+    .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+    .deconnexion button {
+        right: 18%;
+    }
+    .connexion button{
+        position: absolute;
+        top: 3%;
+        right: 18%;
+        padding: 5px;
+        background-color: rgba(255, 255, 255, 1);
+        color: #539ac4;
+        border: solid 2px white;
+        border-radius: 3px;
+        text-transform: uppercase;
+    }
+    .carousel-item .intro p {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        font-size: 10px;
+        margin-bottom: 15px;
+    }
+    /*.btn-actu-dashboard {
+        margin-left:60%;
+        margin-top:10px;
+    }*/
+    .actu h2 {
+        display:none;
+    }
+    /* ------------------------------------------------
+    VIDEO APPLI "griditem"
+    ------------------------------------------------- */
+    .griditem {
+        position: relative;
+        /*-webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);*/
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        background-position:bottom;
+    }
+
+    /* ------------------------------------------------
+    ECO PANIER
+    ------------------------------------------------  */
+    .eco-panier h2 {
+        font-family: 'Nunito', sans-serif;
+        font-weight: bold;
+        color: #539ac4;
+        margin-left:50px;
+    }
+    .eco-panier p {
+        font-family: 'Nunito', sans-serif;
+        color: #539ac4;
+        font-size: 16px;
+        margin-bottom:16px;
+        margin-left:50px;
+    }
+    .eco-panier a {
+        font-family: 'Nunito', sans-serif;
+        color: #539ac4;
+        font-size: 16px;
+        border:solid 2px #539ac4;
+        padding: 5px 5px;
+        margin-bottom:50px;
+        margin-left:50px;
+    }
+    .actu-img {
+        display: block;
+        width: 110px;
+        height: 110px;
+    }
+    .actu p {
+        font-family: 'Nunito', sans-serif;
+        color: grey;
+        font-size: 14px;
+    }
+    .humans a button {
+        margin-top: 18.5%;
+        position: absolute;
+        margin-left: 1%;
+        padding: 5px;
+        padding-left: 60px;
+        padding-right: 60px;
+        border: solid 2px transparent;
+        border-radius: 15px;
+        font-size: 1.2em;
+        font-weight: bold;
+        color: transparent;
+        background-color: transparent;
+    }
+    .ambassadeur a button {
+        margin-top: 250px;
+        position: absolute;
+        margin-left: 320px;
+        padding: 8px;
+        padding-left:10px;
+        padding-right:10px;
+        border: solid 2px transparent;
+        border-radius: 15px;
+        font-size: 1.2em;
+        font-weight: bold;
+        color:transparent;
+        background-color: transparent;
+    }
+    .community h3 {
+        color: white;
+        font-family: 'Nunito', sans-serif;
+        font-weight: bold;
+        font-size: 18px;
+        float:left;
+    }
+    .community img {
+        display: block;
+        width: 100%;
+        height:350px;
+    }
+    .community p {
+        font-family: 'Nunito', sans-serif;
+        font-weight: bold;
+        color: white;
+        font-size: 10px;
+    }  
+    .community a button {
+        padding: 10px;
+        padding-left: 50px;
+        background-color: transparent;
+        color: transparent;
+        border: solid 2px transparent;
+        border-radius: 3px;
+        font-size: 12px;
+        font-weight: bold;
+        margin-top: 30%;
+    }  
+    .community .logo {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        bottom: 0px;
+        margin-left: 230px;
+    }
+}
+@media screen and (max-width:991px) {
+    .actu .actu-block-img img {
+        width: 105px;
+        height: 70px;
+    }
+    .actu p {
+        font-family: 'Nunito', sans-serif;
+        color: grey;
+        font-size: 8px;
+    }
+}
+
+
+@media screen and (max-width:960px) {
+
+    /* ------------------------------------------------
+    MENU
+    ------------------------------------------------  */
+    .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+    .menu ul {
+        padding-top: 5px;
+        width: 95%;
+        z-index: 200;
+        position: absolute;
+        top:0;
+        left: 0;
+    }
+
+    /* ------------------------------------------------
+    SLIDER
+    ------------------------------------------------  */
+    .carousel-item .intro h1 {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        text-align: center;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .carousel-item .intro p {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        font-size: 14px;
+    }
+
+    /* ------------------------------------------------
+    DASHBOARD (h2)
+    ------------------------------------------------  */
+    .dashboard img {
+        display: block;
+        margin: 0 auto;
+    }
+    .dashboardmobile img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* ------------------------------------------------
+    TEXT-CONTENT
+    ------------------------------------------------  */
+    /*.text-content img {
+        display: block;
+        width: 70%;
+        margin: 0 auto;
+    }
+    .text-content-mobile img {
+        display: block;
+        width: 70%;
+        margin: 0 auto;
+    }*/
+
+    /* ------------------------------------------------
+    ACTU
+    ------------------------------------------------  */
+    .actu h3 {
+        color: #fff;
+        font-family: 'Nunito', sans-serif;
+        font-size: 16px;
+        margin-top: 0;
+        font-weight: bold;
+        text-align: center;
+    }
+    .actu-img {
+        display: block;
+        width: 100%;
+        min-height: 100%;
+        margin-bottom: 15px;
+    }
+
+    /* ------------------------------------------------
+    VIDEO APPLI "griditem"
+    ------------------------------------------------- */
+    .griditem {
+        position: relative;
+        background-color: #777;
+        /*-webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);*/
+        width: 100%;
+        overflow: hidden;
+        height: 370px;
+    }
+
+    /* ------------------------------------------------
+    ECO PANIER
+    ------------------------------------------------  */
+
+    .eco-panier h2 {
+        font-family: 'Nunito', sans-serif;
+        font-weight: bold;
+        color: #539ac4;
+
+    }
+    .eco-panier p {
+        font-family: 'Nunito', sans-serif;
+        color: #539ac4;
+        font-size: 14px;
+        margin-bottom:16px;
+    }
+    .eco-panier a {
+        font-family: 'Nunito', sans-serif;
+        color: #539ac4;
+        font-size: 12px;
+        border:solid 2px #539ac4;
+        padding: 5px 5px;
+        margin-bottom:50px;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    .mobileN{
+        display:block;
+    }
+    .ecranN{
+        display: none;
+    }
+    /* ------------------------------------------------
+    MENU
+    ------------------------------------------------  */
+    .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+
+    /* ------------------------------------------------
+    SLIDER
+    ------------------------------------------------  */
+    .carousel-item .intro h1 {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        text-align: center;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .carousel-item .intro p {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        font-size: 10px;
+    }
+
+    /* ------------------------------------------------
+    TEXT-CONTENT
+    ------------------------------------------------  */
+    .text-content img {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    /* ------------------------------------------------
+    VIDEO APPLI "griditem"
+    ------------------------------------------------- */
+
+    .griditem {
+        position: relative;
+        /*-webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);*/
+        width: 100%;
+        height:370px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    /* ------------------------------------------------
+    ECO PANIER
+    ------------------------------------------------  */
+
+    .eco-panier img {
+        padding-top:20px;
+        display: block;
+        width: 55%;
+        margin: 0 auto;
+    }
+    .eco-panier h2 {
+        font-family: 'Nunito', sans-serif;
+        font-weight: bold;
+        color: #539ac4;
+        text-align: center;
+
+    }
+    .eco-panier p {
+        font-family: 'Nunito', sans-serif;
+        color: #539ac4;
+        font-size: 14px;
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom:20px;
+    }
+    .eco-panier a {
+        font-family: 'Nunito', sans-serif;
+        color: #539ac4;
+        font-size: 12px;
+        border:solid 2px #539ac4;
+        padding: 5px 5px;
+        width: 28%;
+        margin: 0 auto 60px;
+        display: block;
+        text-align: center;
+    }
+    .plus-btn-img{
+        width: 80%;
+    }
+    .actu-img-p p{
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    /* ------------------------------------------------
+    MENU
+    ------------------------------------------------  */
+    .navbar {
+        margin-bottom: 0;
+    }
+    .griditem {
+        position: relative;
+        /*-webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);*/
+        width: 75%;
+        height: 400px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+}
+
+/* ------------------------------------------------
+MOBILE RESPONSIVE
+------------------------------------------------  */
+
+@media screen and (max-width:480px) {
+
+    /* ------------------------------------------------
+    MENU
+    ------------------------------------------------  */
+    .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+ 
+    /* ------------------------------------------------
+    SLIDER
+    ------------------------------------------------  */
+    .carousel-caption {
+        bottom:0px;
+        padding-top: 0px;
+    }
+    .carousel-item .intro h1 {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        text-align: center;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        font-size: 12px;
+        margin-top: 0px;
+        font-weight: bold;
+    }
+    .carousel-item .intro p {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        font-size: 6px;
+        margin-bottom: 0%;
+    }
+    .carousel-item .intro a {
+        display: block;
+        width: 90px;
+        margin: 0 auto;
+    }
+    .carousel-item .intro a button {
+        padding: 4px;
+        background-color: #539ac4;
+        color: white;
+        border: solid 2px white;
+        border-radius: 3px;
+        font-size: 4px;
+    }
+    .carousel-caption img {
+        width: 75%;
+    }
+
+    /* ------------------------------------------------
+    VIDEO APPLI "griditem"
+    ------------------------------------------------- */
+    .griditem {
+        position: relative;
+        /*-webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);*/
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    .deconnexion button {
+        position: absolute;
+        top: 3%;
+        right: 19%;
+        padding: 1px;
+        background-color: rgba(255, 255, 255, 1);
+        color: #539ac4;
+        border: solid 2px white;
+        border-radius: 3px;
+        text-transform: uppercase;
+        font-size: 8px;
+    }
+    .connexion button {
+        position: absolute;
+        top: 3%;
+        right: 19%;
+        padding: 1px;
+        background-color: rgba(255, 255, 255, 1);
+        color: #539ac4;
+        border: solid 2px white;
+        border-radius: 3px;
+        text-transform: uppercase;
+        font-size: 8px;
+    }
+    .quizz-yourself button {
+        position: absolute;
+        top: 3%;
+        right: 3%;
+        padding: 1px;
+        background-color: rgba(255, 255, 255, 1);
+        color: #539ac4;
+        border: solid 2px white;
+        border-radius: 3px;
+        text-transform: uppercase;
+        font-size: 8px;
+    }
+    .inscription button {
+        position: absolute;
+        top: 3%;
+        right: 3%;
+        padding: 1px;
+        background-color: rgba(255, 255, 255, 1);
+        color: #539ac4;
+        border: solid 2px white;
+        border-radius: 3px;
+        text-transform: uppercase;
+        font-size: 8px;
+    }
+    .actu-img-p{
+        font-size: 0.8em;
+    }
+    /*.about .desc {
+        font-family: 'Nunito', sans-serif;
+        font-weight: bold;
+        color: #539ac4;
+        font-size: 14px;
+        text-align: justify;
+    }
+    .text-content img {
+        height: 99.116px;
+        width: 115px;
+        padding: 0px;
+        margin: 150px 0 0 0;
+    }
+    .text-content-mobile img {
+        height: 99.116px;
+        width: 115px;
+        padding: 0px;
+        margin: 150px 0 0 0;
+    }
+    .eco-panier img {
+        padding-top:20px;
+        display: block;
+        width: 55%;
+        margin: 0 auto;
+    }
+    .eco-panier h2 {
+        font-family: 'Nunito', sans-serif;
+        font-weight: bold;
+        color: #539ac4;
+        text-align: center;
+    }
+    .eco-panier p {
+        font-family: 'Nunito', sans-serif;
+        color: #539ac4;
+        font-size: 14px;
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom:20px;
+    }
+    .eco-panier a {
+        font-family: 'Nunito', sans-serif;
+        color: #539ac4;
+        font-size: 12px;
+        border:solid 2px #539ac4;
+        padding: 5px 5px;
+        width: 48%;
+        margin: 0 auto 60px;
+        display: block;
+        text-align: center;
+    }
+    .actu-img {
+        width: 80px;
+        height: 100px;
+    }
+    .actu p {
+        font-size:11px;
+    }*/
+    /*.humans {
+        background-image: url('/images/landing-page/humansMobile.jpg');
+        height: 600px;
+        display: block;
+        background-repeat: round;
+    }
+    .humans a button {
+        margin-top: 125%;
+        position: absolute;
+        margin-left: 9%;
+        padding: 50px;
+        padding-left: 183px;
+        padding-right: 26px;
+        border: solid 2px transparent;
+        border-radius: 15px;
+        font-size: 1.4em;
+        font-weight: bold;
+        color: transparent;
+        background-color: transparent;
+    }
+    .humans a button {
+        margin-top: 18.5%;
+        position: absolute;
+        margin-left: 1%;
+        padding: 5px;
+        padding-left: 60px;
+        padding-right: 60px;
+        border: solid 2px transparent;
+        border-radius: 15px;
+        font-size: 1.2em;
+        font-weight: bold;
+        color: transparent;
+        background-color: transparent;
+    }
+    .ambassadeur a button {
+        margin-top: 127%;
+        position: absolute;
+        margin-left: 10%;
+        padding: 50px;
+        padding-left: 175px;
+        padding-right: 26px;
+        border: solid 2px transparent;
+        border-radius: 15px;
+        font-size: 1.4em;
+        font-weight: bold;
+        color: transparent;
+        background-color: transparent;
+    }
+    .community a button {
+        padding: 25px;
+        padding-left: 170px;
+        background-color: transparent;
+        color: transparent;
+        border: solid 2px transparent;
+        border-radius: 3px;
+        font-size: 13px;
+        font-weight: bold;
+        margin-top: 60%;
+    }
+    .btn-actu-dashboard {
+        margin-left: 50%;
+        margin-top: 10px;
+        font-size:15px;
+    }
+    .about .slogant p{
+        font-size: 3.3vw;
+    }
+    .about .text-content-mobile p{
+        font-size: 2.9vw;
+    }
+    .tcbutton{
+        font-size: 2vw;
+        color: #539ac4;
+        background-color: #FFFFFF;
+    }*/
+    /*.dash {
+        padding: 30px 5%;
+    }
+    .dashboardmobile {
+        width: 100%;
+        min-height: 200px;
+        padding-top: 15px;
+        padding-bottom: 25px;
+        background-color: #fff;
+        overflow: hidden;
+        margin-bottom: 15px;
+        border: 2px solid #539ac4;
+    }
+    .dashboardmobile .dashimg{
+        padding: 0;
+        margin: 62px 0px 0 10px;
+        width: 91px;
+    }
+    .dashboardmobile img {
+        height: 54.232px;
+        width: 91px;
+        margin: 0;
+        padding: 0;
+        display: block;
+        width: 100%;
+    }
+    .dashboardmobile h2 {
+        font-size: 4vw;
+        font-weight: bold;
+        color: #539ac4;
+        font-family: 'Nunito', sans-serif;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+    .dashboardmobile p {
+        font-family: 'Nunito', sans-serif;
+        color: #539ac4;
+    }
+    .dashboardmobile a button {
+        background-color: #539ac4;
+        color: #fff;
+        height: 22.029px;
+        font-size: 3vw;
+        border: solid 2px #539ac4;
+        text-transform: uppercase;
+    }*/
+}
+@media screen and (max-width:385px) {
+    .actu-mobile .btn-actu-dashboard-mobile {
+        height:42px;
+    }
+}
+/*@media screen and (min-width:451px) {*/
+    /*.empreinte-slogant{
+        margin-top: 17px;
+    }
+    .community {
+        background-image: url('/images/landing-page/communityMobile.jpg');
+        display: block;
+        background-repeat: round;
+    }
+    .ambassadeur {
+        background-image: url('/images/landing-page/ambassadeurMobile.jpg');
+        display: block;
+        background-repeat: round;
+    }
+    .news {
+        width: 100%;
+        min-height: 200px;
+    }
+    .news img {
+        display: block;
+        width: 100%;
+        height: 150px;
+    }*/
+/*}*/

@@ -1,0 +1,488 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/community_mobile.css') }}">
+<link rel="stylesheet" href="{{ asset('css/community_ecran.css') }}">
+<link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block community %}
+
+{################################## HEADER & ABOUT ##################################}
+{# HEADER #}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <header>
+                <img class="img-fluid" src="{{ asset('images/community/header-with-text-and-logo.png') }}"
+                    alt="Sustainable Living Community">
+            </header>
+        </div>
+    </div>
+
+    {# ABOUT #}
+
+    <div class="row justify-content-center">
+        <div class="col-12 about">
+            <p class="desc"><strong>La Sustainable Living Community (SLC) réunit toutes les personnes qui participent à
+                    un des 7 sous-programmes du programme Sustainable Living Program (SLP)</strong>.</p>
+            <p class="desc">L’appartenance à la SL community offre deux intérêts majeurs :</p>
+            <ul>
+                <li class="desc"><strong>La force du nombre</strong> qui permet de<strong> déclencher le pouvoir des
+                        3,5%</strong> (voir les explications dans la page)</li>
+                <li class="desc"><strong>Les avantages communautaires</strong> et tous les <strong>bénéfices qui en
+                        découlent</strong>.</li>
+            </ul>
+            <p class="desc">L'adhésion à la SL community est gratuite. <span>Il vous suffit de valider votre accord sur
+                    le bouton ci-dessous.</span></p>
+        </div>
+    </div>
+</div>
+
+{################################ JE REJOINS LA SLC #################################}
+
+<div class="SLC">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-1 offset-1">
+                <img class="slc-logo" src="{{ asset('images/community/logoSLC2.png') }}" alt="SLC">
+            </div>
+            <div class="col-6">
+                <h2 id="join">JE REJOINS LA SL COMMUNITY</h2>
+            </div>
+            <div class="col-1 col-lg-2 yesBtn">
+                <img class="yes join" src="{{ asset('images/community/oui.png') }}" alt="oui">
+            </div>
+            <div class="col-2">
+                <img class="no join" src="{{ asset('images/community/non.png') }}" alt="non">
+            </div>
+        </div>
+    </div>
+</div>
+
+{########################## IF EVERY DROP IN THE OCEAN SAID #########################}
+
+<div class="container info">
+    <div class="row justify-content-start">
+        <div class="col-xs-10 col-lg-9 titre">
+            <h1>IF EVERY DROP IN THE OCEAN
+                <span>SAID,</span>
+                'I WAS JUST A DROP'
+                <span>THERE WOULD BE NO OCEAN.</span></h1>
+        </div>
+    </div>
+    <div class="row dashedList">
+        <div class="col-7">
+            <p>Ces derniers mois ont vu le spectre du changement climatique devenir une réalité ponctuée par :</p>
+            <ul class="dashed">
+                <li>Les grèves climatiques des jeunes partout dans le monde.</li>
+                <li>L'avènement de mouvements comme <strong>#extinctionrebellion</strong>.</li>
+                <li>Des rapports confirmant la disparition de plus de 80% du vivant en 40 ans.</li>
+                <li>La fonte accélérée de la banquise.</li>
+                <li>La répétition et la multiplication d'événements climatiques intenses et inédits <strong>dans
+                        l'histoire de la planète</strong>, comme la vague caniculaire que nous avons connue tout
+                    récemment, les violents orages, les tempêtes de grêle, etc...</li>
+            </ul>
+        </div>
+        <div class="col-5 align-self-center">
+            <img class="diagramme" src="{{ asset('images/community/diagramme.png') }}" alt="diagramme">
+        </div>
+    </div>
+    <div class="content2">
+        <div class="row">
+            <div class="col-7">
+                <ul>
+                    <li>Or, ce <strong>constat de danger</strong> s'accompagne en parallèle par
+                        l'<strong>inaction</strong> (ou plutot l'art de faire semblant de faire) des gouvernements et le
+                        <strong>cynisme</strong> économique des entreprises.</li>
+                    <li>L'<strong>urgence climatique</strong> indique qu'il nous reste <strong>10 ans pour
+                            agir</strong>, non pas de manière sporadique ou à travers quelques initiatives ou éco-gestes
+                        mais <strong>massivement</strong>, en se jetant de toutes nos forces et avec toute notre énergie
+                        dans cette bataille pour <strong>donner un avenir à notre planète et à nos enfants</strong>.
+                    </li>
+                    <li>L’<strong>urgence climatique</strong> exige qu’on réponde par une <strong>vague d'actions et de
+                            mesures</strong> qui concerneraient gouvernements, administrations, entreprises, familles et
+                        individus. On en est très loin...</li>
+                </ul>
+            </div>
+            <div class="col-5 align-self-center">
+                <img class="ours" src="{{ asset('images/community/ours2.png') }}" alt="ours">
+            </div>
+        </div>
+    </div>
+    <div class="content2">
+        <div class="row">
+            <div class="col-6">
+                <iframe class="videoGreta" width="560" height="315" src="https://www.youtube.com/embed/rfSGaOhiRd0"
+                    frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="col-6 contentright">
+                <q>
+                    C’est comme si vous ne saviez même pas que ces chiffres existent. C’est comme si vous n’aviez même
+                    pas lu le dernier rapport du GIEC sur lequel se fonde l’avenir de notre civilisation. Ou peut-être
+                    que vous n’êtes pas suffisamment mûrs pour accepter ce rapport ?
+                </q>
+                {# Le paragraphe suivant n'est affiché qu'en version écran (>= 992px) #}
+                <p class="desktop">
+                    <span><strong>Greta Thunberg</strong></span>
+                    Discours du 23 juillet 2019
+                    <span>à L'Assemblée nationale en France</span>
+                </p>
+            </div>
+        </div>
+        {# Le paragraphe suivant n'est affiché qu'en version mobile (< 992px) #}
+        <div class="row alignLeft">
+            <div class="col-12">
+                <p>
+                    <span><strong>Greta Thunberg</strong></span>
+                    Discours du 23 juillet 2019
+                    <span>à L'Assemblée nationale en France</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{######## ASSOCIATION POUR LA MISE EN OEUVRE DU DEVELOPPEMENT DURABLE VERSION MOBILE #######}
+
+<div class="container association assoMobile">
+    <div class="row">
+        <div class="col-7">
+            <h2>ASSOCIATION POUR LA MISE EN &#338;UVRE DU DEVELOPPEMENT DURABLE ET DE L’AGENDA 21.</h2>
+        </div>
+    </div>
+    <div class="row firstParagraph">
+        <div class="col-12" id="firstParagraph">
+            <p>
+                <span><strong>Il existe des solutions.</strong></span>
+                gaea21 est un centre de recherches appliquées en économie circulaire et économie verte qui, au terme de
+                13 ans de recherches indépendantes, a mis au point un <strong>programme de recherches éco-conso</strong>
+                dont le but est de <strong>stimuler</strong> le <strong>changement de comportement</strong> et de
+                proposer <strong>aux individus et familles</strong> des <strong>outils</strong> et des
+                <strong>solutions</strong> afin de les mettre en &#339;uvre.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <img class="abeilles" src="{{ asset('images/community/abeilles.png') }}" alt="abeilles">
+            <div class="videoTeaserSlp">
+                <iframe src="https://www.youtube.com/embed/_19X_0GEnyc"
+                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="slpText">
+                <h3>SUSTAINABLE LIVING PROGRAM</h3>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="secondParagraph">
+                <p>
+                    Le programme <strong>éco-conso</strong> s'articule sur la détermination des <strong>8
+                        processus</strong> fondamentaux de chaque être humain (manger, habiter, se déplacer, prendre
+                    soin de soi, communiquer, acheter, loisirs, s'occuper/travailler/étudier). <span>Il établit un
+                        <strong>profil</strong> pour chacun</span> d'entre nous via <strong>3 questionnaires</strong>
+                    (socio-économiques, psychologiques et écologiques).
+                </p>
+            </div>
+            <div class="secondParagraph">
+                <p>
+                    <strong>Le programme SLP (Sustainable Living Program) est le programme d'application
+                        d’éco-conso.</strong>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{######## ASSOCIATION POUR LA MISE EN OEUVRE DU DEVELOPPEMENT DURABLE VERSION ECRAN #######}
+
+<div class="container association assoDesktop">
+    <div class="row">
+        <img class="abeilles" src="{{ asset('images/community/abeilles.png') }}" alt="abeilles">
+        <div class="col-7">
+            <div class="videoTeaserSlp">
+                <iframe src="https://www.youtube.com/embed/_19X_0GEnyc"
+                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="slpText">
+                <h3>SUSTAINABLE LIVING PROGRAM</h3>
+            </div>
+        </div>
+        <div class="col-5">
+            <h2>ASSOCIATION POUR LA MISE EN &#338;UVRE DU DEVELOPPEMENT DURABLE ET DE L’AGENDA 21.</h2>
+            <div id="firstParagraph">
+                <p>
+                    <span><strong>Il existe des solutions.</strong></span>
+                    gaea21 est un centre de recherches appliquées en économie circulaire et économie verte qui, au terme
+                    de 13 ans de recherches indépendantes, a mis au point le <strong>programme de recherches
+                        éco-conso</strong> dont le but est de <strong>stimuler</strong> le <strong>changement de
+                        comportement</strong> et de proposer <strong>aux individus et familles</strong> des
+                    <strong>outils</strong> et des <strong>solutions</strong> afin de les mettre en &#339;uvre.
+                </p>
+            </div>
+            <div id="secondParagraph">
+                <p>
+                    Le programme <strong>éco-conso</strong> s'articule sur la détermination des <strong>8
+                        processus</strong> fondamentaux de chaque être humain (manger, habiter, se déplacer, prendre
+                    soin de soi, communiquer, acheter, loisirs, s'occuper/travailler/étudier). Il établit un
+                    <strong>profil</strong> pour chacun d'entre nous via <strong>3 questionnaires</strong>
+                    socio-économiques, psychologiques et écologiques.
+                </p>
+            </div>
+            <p>
+                <strong><span>Le programme SLP</span> (Sustainable Living Program) <span>est le programme
+                        d'application</span> d’éco-conso.</strong>
+            </p>
+        </div>
+    </div>
+</div>
+
+{################################# PASSEZ A L'ACTION ################################}
+
+{# TITRE #}
+
+<div class="container action">
+    <div class="row actionTitle align-self-center">
+        <div class="col-12">
+            <h2>Passez à l’action !</h2>
+        </div>
+    </div>
+
+    {# LIGNE 1 #}
+
+    <div class="row actionDashboard">
+        <div class="col-12 col-md-6 d-md-none">
+            <h3>Le dashboard, un outil pour tout changer !</h3>
+        </div>
+        <div class="col-12 col-md-6 order-md-1 paddingBottom">
+            <iframe src="https://www.youtube.com/embed/Y4Aldzchm2A"
+                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="col-12 col-md-6 order-md-3">
+            <h3 class="d-none d-md-block">Le dashboard, un outil pour tout changer !</h3>
+            <p>Une fois le questionnaire préliminaire rempli et votre profil établi, votre dashboard est créé.</p>
+            <p>Le dashboard est un tableau de bord qui vous permet d'identifier, évaluer et mesurer votre impact
+                individuel. Il établit en temps réel la valeur de votre comportement.</p>
+            <p>Cet outil vous aide donc à intégrer dans votre réalité quotidienne, de manière simple, progressive et
+                non-contraignante un comportement éco-conscient.</p>
+            <p>Le dashboard vous permet de mesurer en temps réel l'impact de chaque changement. Vous pouvez donc
+                désormais décider de l'impact que vous souhaitez ou pouvez avoir.</p>
+        </div>
+    </div>
+
+    {# LIGNE 2 #}
+
+    <div class="row actionForce">
+        <div class="col-12 col-md-6 d-md-none">
+            <h3>La communauté. Une vraie force !</h3>
+        </div>
+        <div class="col-12 col-md-6 order-md-3 paddingBottom">
+            <iframe src="https://www.youtube.com/embed/YJSehRlU34w"
+                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="col-12 col-md-6 order-md-2">
+            <h3 class="d-none d-md-block">La communauté. Une vraie force !</h3>
+            <p>A l'échelle de la communauté, et en vertu de la règle des 3,5%, la somme des actions individuelles aura
+                alors le pouvoir d’influer de façon concrète et significative sur les politiques d’achat des entreprises
+                mais également les politiques des administrations.</p>
+            <p>Mais quelle est donc cette règle des 3,5% ?<br>Elle est basée sur les travaux de la chercheuse Erica
+                Chenoweth et de plusieurs études concordantes qui ont démontré qu’il suffit que 3,5% d’une population
+                dans un espace géographique donné poussent dans la même direction et réclament la même chose pour
+                déclencher une série d’actions et de décisions qui obligent Etats et entreprises à suivre leurs
+                recommandations.</p>
+            <p><a class="link_non_violent_struggle"
+                    href="https://lareleveetlapeste.fr/il-suffit-que-35-dune-population-soit-mobilisee-pour-quune-lutte-non-violente-renverse-un-gouvernement/">https://lareleveetlapeste.fr/il-suffit-que-35-dune-population-soit-mobilisee-pour-quune-lutte-non-violente-renverse-un-gouvernement/</a>
+            </p>
+        </div>
+    </div>
+
+    {# LIGNE 3 #}
+
+    <div class="row transition">
+        <div class="col-12">
+            <p>C’est sur cette loi statistique que s’appuie le besoin de créer la SL Community. Alors rejoignez-nous
+                !<br>Il est temps de passer à l’action sans plus attendre le bon vouloir des gouvernements et des
+                entreprises.<br>Il nous reste à peine 10 ans. &#199;a commence maintenant !</p>
+        </div>
+    </div>
+</div>
+
+{########################## LES AVANTAGES DE LA SLC #########################}
+
+<div class="container avantages">
+    <div class="row align-items-center avantagesTitle">
+        <div class="col-3">
+            <img src="{{ asset('images/community/slcbleu.png') }}" alt="SLC">
+        </div>
+        <div class="col-9">
+            <h2>Les Avantages de la <span>Sustainable Living Community</span></h2>
+        </div>
+    </div>
+    <div class="row avantagesText">
+        <div class="col-12">
+            <p>Quels sont les avantages de devenir membre de la SL Community ?</p>
+
+            <ul class="dashed">
+                <li>
+                    <strong>L’inscription est gratuite</strong><br>
+                    <a href="{{ path('devenezmembre') }}">(vous avez la possibilité de soutenir notre travail en
+                        devenant <span>membre actif ou sympathisant de l’association gaea21</span>).</a>
+                </li>
+                <li>
+                    <strong>L’union fait la force</strong>. Vous représentez des votes, un revenu fiscal ainsi qu’un
+                    budget.<br>En validant des choix collectifs plus éco-responsables et plus éco-conscients, vous
+                    influez réellement sur la politique des administrations et des entreprises de votre ville, région,
+                    pays. Vous devenez de facto un contre-pouvoir.
+                </li>
+                <li>
+                    <strong>Vous profitez des ressources de tous les autres membres de la SL community et intégrez un
+                        modèle de société différent à l'échelle locale. </strong>La SL community facilite votre passage
+                    à l’action et votre changement de comportement à travers plusieurs dimensions collectives :
+                </li>
+                <ul class="bulletPoints">
+                    <li>
+                        <strong>Mobilité</strong> (nous proposons des solutions de mobilité collective à tous les
+                        membres de la SL community)
+                    </li>
+                    <li>
+                        <strong>Eco-paniers</strong> : pour bénéficier de la prestation, il faut faire partie de la SL
+                        community
+                    </li>
+                    <li>
+                        <strong>Ateliers-éco</strong> : pour bénéficier de la prestation, il faut faire partie de la SL
+                        community
+                    </li>
+                    <li>
+                        <strong>Partage</strong> :
+                        <ul class="dashed">
+                            <li>Banque de graines</li>
+                            <li>Compétences, conseil, bonnes pratiques</li>
+                            <li>Achats collectifs</li>
+                            <li>Co-owning (propriété partagée)</li>
+                            <li>Co-sharing (partage de biens)</li>
+                            <li>Couchsurfing (partage de canapés ou chambre d’amis)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Soutien/solidarité</strong> :
+                        <ul class="dashed">
+                            <li>Crowdfunding (financement participatif)</li>
+                            <li>Investissement participatif</li>
+                            <li>Tontines (financement collaboratif)</li>
+                            <li>Emploi (jeunes, réinsertion, transition)</li>
+                            <li>Immobilier</li>
+                            <li>Parrainages</li>
+                            <li>Aide aux minorités (genre, ethniques...)</li>
+                            <li>Juniors et seniors</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Programmes/projets collaboratifs</strong> :
+                        <ul class="dashed lastParagraph">
+                            <li>Participation au développement du programme SLP (boîte à idées/suggestions + possibilité
+                                de devenir <strong>ambassadeur/drice gaia</strong>)</li>
+                            <li>Mise en &#339;uvre de programmes d’actions sociales et environnementales sur
+                                propositions des membres de la communauté</li>
+                            <li>Déchets, nettoyage des espaces partagés</li>
+                            <li>DIY (Do it yourself)</li>
+                            <li>Vide-greniers / seconde main</li>
+                            <li>Eco-ateliers</li>
+                            <li>Formations pratiques et appliquées</li>
+                            <li>Débats, forums, informations pour des prises de position collectives au niveau des
+                                politiques locales et nationales liées au changement climatique.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-5 offset-7">
+            <div class="abeilles-avantages-slc">
+                <img src="{{ asset('images/devenezmembre/abeilles2.png') }}" alt="abeilles">
+            </div>
+        </div>
+    </div>
+</div>
+
+    {# BOUTON SL COMMUNITY FORUM #}
+
+<div class="container slcForum">
+    <div class="row justify-content-center">
+        <div class="col-4">
+            <a class="linkforum" href="#">
+            <img class="bouton" src="{{ asset('images/community/forumbutton.png') }}">
+            </a>
+        </div>
+    </div>
+</div>
+
+{################################ JE REJOINS LA SLC #################################}
+
+<div class="SLC">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-1 offset-1">
+                <img class="slc-logo" src="{{ asset('images/community/logoSLC2.png') }}" alt="SLC">
+            </div>
+            <div class="col-6">
+                <h2 id="join">JE REJOINS LA SL COMMUNITY</h2>
+            </div>
+            <div class="col-1 col-lg-2 yesBtn">
+                <img class="yes join" src="{{ asset('images/community/oui.png') }}" alt="oui">
+            </div>
+            <div class="col-2">
+                <img class="no join" src="{{ asset('images/community/non.png') }}" alt="non">
+            </div>
+        </div>
+    </div>
+</div>
+
+{#################################### BANNIERES #####################################}
+{# BANNIERE AMBASSADEUR GAIA #}
+<div class="container">
+    <div class="row">
+        <div class="ambassadeur">
+            <div class="linkAmbassadeur">
+                <a href="{{ path('ambassadeur') }}"><button>Cliquez ici</button></a>
+            </div>
+            <div>
+                <img src="{{ asset('images/community/banniere_ambassadeur.png') }}" alt="ambassadeur">
+            </div>
+        </div>
+
+        {# BANNIERE HUMANS OF GAEA21 #}
+
+        <div class="humans">
+            <div class="linkHoG">
+                <a href="{{ path('humans') }}"></a>
+            </div>
+            <div>
+                <img src="{{ asset('images/bannièreHOG21.jpg') }}" alt="ambassadeur">
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+{##################################### FOOTER #######################################}
+
+{% include 'footer.html.twig' %}
+
+{% endblock %}
+
+{% block javascripts %}
+<<<<<<< HEAD
+    <script src="{{ asset('js/site/community.js')}}"></script>
+=======
+
+<script link rel="stylesheet" href="{{ asset('js/bootstrap.min.js')}}"></script>
+
+
+>>>>>>> dashboard-pages-2
+{% endblock %}

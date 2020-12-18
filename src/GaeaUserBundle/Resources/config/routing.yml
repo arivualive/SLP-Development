@@ -1,0 +1,7 @@
+#fos_user_registration_confirm:
+#   path: /register/confirm/{token}
+#   methods: [GET]
+#   defaults: { _controller: 'GaeaUserBundle\Controller\RegistrationController:confirmAction' }
+fos_user_resetting_send_email:
+    path: /confirm/{token}
+    defaults: { _controller: GaeaUserBundle:UserSlp\Registration:confirmAction }

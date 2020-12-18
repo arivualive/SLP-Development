@@ -1,0 +1,109 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<h1>Hello {{ app.user.username }}</h1>
+
+<p>Vous pouvez analyser vos réponses ainsi que celle des autres en Tant que Admin</p>
+
+{% if connectedUser.roleSlp == 1 or connectedUser.roleSlp == 2 %}
+
+<h2>Voir d'autres profils : </h2>
+
+<div class="dropdown">
+    <button class="btn btn-primary" data-toggle="dropdown">Autres Utilisateurs</button>
+    <div class="dropdown-menu">
+        {% for user in users %}
+        <div class="dropdown-item">
+            <a href="{{ path('userslp_show', { 'id': user.id }) }}">Numero de l'utilisateur: {{user.id}}</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+<h2>Recap User Slp</h2>
+
+<h3>Email</h3>
+<p>{{app.user.email}}</p>
+
+<table>
+    <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ userSlp.id }}</td>
+        </tr>
+        <tr>
+            <th>Gaeauserid</th>
+            <td>{{ userSlp.gaeaUserId }}</td>
+        </tr>
+
+
+
+
+    </tbody>
+</table>
+
+<ul>
+    <li>
+        {{ form_start(delete_form) }}
+        <input type="submit" value="Delete">
+        {{ form_end(delete_form) }}
+    </li>
+</ul>
+
+{# on crée une varible pour ne pas repeter la masterquestion a chaqune de ces reponses #}
+
+{% set lastMasterQuestion = "" %}
+
+{% for answer in answers %}
+
+{% if answer.question == "Sub_question_choice" or answer.question == "Sub_question_scale" or answer.question == "Sub_question_free" %}
+
+{% if answer.question.masterQuestion == "Question_master" %}
+{% if lastMasterQuestion != answer.question.masterQuestion.question %}
+<h4>{{answer.question.masterQuestion.number}}/ {{answer.question.masterQuestion.question}}</h4>
+
+{% set lastMasterQuestion = answer.question.masterQuestion.question %}
+
+{% endif %}
+
+{% elseif answer.question.masterConditionalQuestion == "Conditional_question_master"  %}
+{% if lastMasterQuestion != answer.question.masterConditionalQuestion.question %}
+<h4>{{answer.question.masterQuestion.number}}/ {{answer.question.masterQuestion.question}}</h4>
+
+{% set lastMasterQuestion = answer.question.masterQuestion.question %}
+
+{% endif %}
+{% endif %}
+
+
+<h5>{{answer.question.number}}/ {{answer.question.question}}</h5>
+
+{% else %}
+
+<h4>{{answer.question.number}}/ {{answer.question.question}}</h4>
+
+{% endif %}
+
+{% if answer == "choice" %}
+
+{% for choice in answer.choices %}
+<p>{{choice.name}}</p>
+{% endfor %}
+
+{% elseif answer == "free" %}
+
+<p>{{answer.freeAswere}}</p>
+
+{% elseif answer == "scale" %}
+
+<p> {{answer.scale}} </p>
+
+{% endif %}
+
+{% endfor %}
+{% endif %}
+
+<a href="{{ path('userslp_portail') }}"> Retour à la page d acceuil</a>
+{% endblock %}

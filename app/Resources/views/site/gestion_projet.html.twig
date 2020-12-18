@@ -1,0 +1,249 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    SLP
+{% endblock %}
+
+{% block stylesheets %}
+
+    <link rel="stylesheet" href="{{ asset('css/gestion_projet.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+
+{% endblock %}
+
+{% block body %}
+
+    <header>
+        <div class="row">
+            <div class="col-md-12">
+                <img class="img-fluid"
+                     src="{{ asset('images/empreinte-chromatique/header empreinte chromatique.jpg') }}" alt="Dashboard">
+            </div>
+        </div>
+    </header>
+
+    <div class="row gestion-projet">
+        <h1 class="center-block"> Impact Tracker </h1>
+        <div class="offset-1 col-md-10">
+            <p> Retrouvez ici votre impact tracker retraçant les effets que vous pourriez avoir en participant à des
+                initiatives variées.</p>
+            <p>Vous pourrez vous rendre compte de vos impacts en fonction des modalités d'investissement (crowfunding,
+                investissement direct, participation),
+                des tyes de projets et des montants que vous souhaitez mettre à disposition. Retrouvez sur cette page un
+                résumé des effets escomptés
+                lors de vos investissemnents à travers différents indicateurs (impact sur les émissions de CO2, sur
+                l'emploi...)</p>
+        </div>
+    </div>
+
+
+    <!-- Tableau !-->
+    <div class="row tableau">
+        <div class="col-md-12">
+            <table class="table table-bordered">
+                <thead>
+                <tr class="d-flex">
+                    <th class="col-2 firstColumn"></th>
+                    <th class="col-5 text-center firstRowColumn">Impact pour la communauté</th>
+                    <th class="col-5 text-center firstRowColumn">Impact personnel</th>
+                </tr>
+                <tr class="d-flex secondRowColumn">
+                    <th class="col-2 firstColumn"></th>
+                    <th class="col-1 text-center">Impact CO2</th>
+                    <th class="col-1 text-center">Impact économique</th>
+                    <th class="col-1 text-center">Impact emploi</th>
+                    <th class="col-2 text-center">Balance d'investissement</th>
+                    <th class="col-2 text-center">Impact financier</th>
+                    <th class="col-2 text-center">Impact santé</th>
+                    <th class="col-1 text-center">Impact social</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="d-flex">
+                    <td class="col-2 text-center headerRow"> Crowdfunding</td>
+                    <td class="col-1 backgroundInnerRow"> 12</td>
+                    <td class="col-1 backgroundInnerRow"> 1450 CHF</td>
+                    <td class="col-1 backgroundInnerRow"> 0</td>
+                    <td class="col-2 text-center backgroundInnerRow"> Visibilité<br> client<br> agent</td>
+                    <td class="col-2 backgroundInnerRow"></td>
+                    <td class="col-2 backgroundInnerRow"></td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                </tr>
+                <tr class="d-flex">
+                    <td class="col-2  spacer_line subHeader"> Projet 1</td>
+                    <td class="col-1 backgroundInnerRow">6</td>
+                    <td class="col-1 backgroundInnerRow">4850 CHF</td>
+                    <td class="col-1 backgroundInnerRow"> 14</td>
+                    <td class="col-2 backgroundInnerRow"></td>
+                    <td class="col-2 backgroundInnerRow"></td>
+                    <td class="col-2 backgroundInnerRow"></td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                </tr>
+                <tr class="d-flex">
+                    <td class="col-2 spacer_line subHeader"> Projet 2</td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                    <td class="col-2 backgroundInnerRow"></td>
+                    <td class="col-2 backgroundInnerRow"></td>
+                    <td class="col-2 backgroundInnerRow"></td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                </tr>
+                <tr class="d-flex">
+                    <td class="col-2 text-center headerRow"> Total Crowdunding</td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                    <td class="col-2 backgroundInnerRow"></td>
+                    <td class="col-2 backgroundInnerRow"></td>
+                    <td class="col-2 backgroundInnerRow"></td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                </tr>
+                <tr class="d-flex">
+                    <td class="col-2 text-center headerRow"> Investissement direct</td>
+                    <td class="col-1 backgroundInnerRow"> 0</td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                    <td class="col-2 backgroundInnerRow"></td>
+                    <td class="col-2 backgroundInnerRow"></td>
+                    <td class="col-2 backgroundInnerRow"></td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                </tr>
+                <tr class="d-flex">
+                    <td class="col-2 spacer_line subHeader"> fundraising</td>
+                    <td class="col-1 backgroundInnerRow"> 0</td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                    <td class="col-2 backgroundInnerRow"></td>
+                    <td class="col-2 backgroundInnerRow"></td>
+                    <td class="col-2 backgroundInnerRow"></td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                </tr>
+                <tr class="d-flex">
+                    <td class="col-2 spacer_line subHeader"> sponsoring</td>
+                    <td class="col-1 backgroundInnerRow"> 0</td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                    <td class="col-2 backgroundInnerRow"></td>
+                    <td class="col-2 backgroundInnerRow"></td>
+                    <td class="col-2 backgroundInnerRow"></td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                </tr>
+                <tr class="d-flex">
+                    <td class="col-2 text-center headerRow"> Total investissement</td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                    <td class="col-2 backgroundInnerRow"></td>
+                    <td class="col-2 backgroundInnerRow"></td>
+                    <td class="col-2 backgroundInnerRow"></td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                </tr>
+                <tr class="d-flex">
+                    <td class="col-2 text-center headerRow"> Participation projet</td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                    <td class="col-2 backgroundInnerRow"></td>
+                    <td class="col-2 backgroundInnerRow"></td>
+                    <td class="col-2 backgroundInnerRow"></td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                </tr>
+                <tr class="d-flex">
+                    <td class="col-2 text-center headerRow"> Total participation</td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                    <td class="col-2 backgroundInnerRow"></td>
+                    <td class="col-2 backgroundInnerRow"></td>
+                    <td class="col-2 backgroundInnerRow"></td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                </tr>
+                <tr class="d-flex">
+                    <td class="col-2 text-center headerRow"> Impact cumulé</td>
+                    <td class="col-1 backgroundInnerRow"> 18</td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                    <td class="col-2 backgroundInnerRow"></td>
+                    <td class="col-2 backgroundInnerRow"></td>
+                    <td class="col-2 backgroundInnerRow"></td>
+                    <td class="col-1 backgroundInnerRow"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <!-- Graphique !-->
+    <div class="col-md-12">
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <div class="row processus">
+        <h1 class="center-block">Processus </h1>
+        <div class="offset-1 col-md-10">
+            <p> Pour faire les bons choix d’investissement, vous devez prendre en compte un certain nombre de
+                paramètres. Nous vous proposons donc un certain
+                nombre de possibilités permettant de coller au mieux à vos envies !
+                Personnalisez ici, vos financements en fonction de leur type et surtout de leur échelle.
+            </p>
+        </div>
+    </div>
+
+
+
+    <div class="offset-7 col-5 btnDashboard">
+        <a id="returnDashboard" href="{{ asset('dashboard') }}">Retour au dashboard</a>
+    </div>
+    <br>
+
+    <div class="col-12">
+        {% include 'footer.html.twig' %}
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        var ctx = document.getElementById("myChart").getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ["Impact co2", "Impact économique", "Impact emploi", "Balance d'investissement", "Impact financier", "Impact santé", "Impact social"],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [6, 7, 12, 2, 11, 1, 8],
+                    backgroundColor: [
+                        'rgba(76, 191, 55)',
+                        'rgba(247, 241, 64)',
+                        'rgba(93, 30, 176)',
+                        'rgba(84, 154, 196)',
+                        'rgba(247, 241, 64)',
+                        'rgba(217, 59, 59)',
+                        'rgba(84, 154, 196)'
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)',
+                        'rgba(75, 192, 192, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+{% endblock %}

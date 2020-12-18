@@ -1,0 +1,440 @@
+.category-form {
+    width: 140%;
+    margin-bottom: 170px;
+}
+
+.eating-budget-spendings-form-grid-container {
+    margin-bottom: 100px;
+    /*line-height: 1;*/
+}
+                
+.eating-budget-spendings-form-container {
+    width: 140%;
+    margin-top: 100px;
+}
+
+.eating-budget-spendings-form {
+    width: 100%;
+    /*position: relative;*/
+}
+
+.form-line {
+    width: 150%;
+    margin-bottom: 10px;
+}
+
+.first-line {
+    margin-bottom: 10px;
+    color: #539ac4;
+}
+
+.bold {
+    font-weight: bold;
+}
+                                                        
+.green-text {
+    color: #4fd568;
+}
+
+.green {
+    background-color: #4fd568;
+}
+
+.dark-gray {
+    background-color: #9b9a9a;
+}
+
+.large-text {
+    font-size: large;
+}
+
+.medium-text {
+    font-size: medium;
+}
+
+.what-title {
+    margin-left: 280px;
+}
+
+.quantity-title {
+    margin-left: 115px;
+}
+
+.brand-title {
+    margin-left: 93px;
+}
+
+.amount-title {
+    margin-left: 98px;
+}
+
+.drinks-form-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.spendings-field {
+    /*width: 130px;*/
+    width: 100%;
+}
+
+.ui-widget {
+    width: 130px;
+}
+
+input {
+    color: #539ac4;
+}
+
+.form-line-title {
+    position: relative;
+    color: #539ac4;
+    /*margin-right: 280px;*/
+    /*margin-right: 150px;*/
+}
+
+.pseudo-column-title {
+    position: absolute;
+    top: -30;
+}
+
+.what-field-container {
+    position: relative;
+}
+
+.what-field {
+    /*
+    margin-right: 15px;
+    */
+}
+
+.brand-field {
+    /*
+    margin-left: 15px;
+    margin-right: 15px;
+    */
+}
+
+.dropdown-list {
+    height: 100%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+/* add product functionaltiy */
+
+.white-div-to-hide-first-line-add-option {
+    position: absolute; width: 32%; height: 100%; background-color: white; z-index: 5; right: 0px;
+}
+
+.subcategory-container {
+    position: relative;
+}
+
+.add-product-line {
+    position: absolute;
+    width: 260px;
+    right: 90px;
+    bottom: 22px;
+    z-index: 6;
+}
+
+.plus-img {
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.add-product-text {
+    margin-top: 6px;
+    color: #539ac4;
+    font-size: 0.7em;
+}
+
+.form-line-title-content {
+    position: absolute;
+    width: 280px;
+}
+
+.small-title-content {
+    margin-top: -4px;
+    font-size: 70%;
+}
+
+
+
+/*button, input, optgroup, select, textarea {
+    line-height: 100%;
+}*/
+
+
+
+/* form buttons */
+
+.field-and-button-under-field-container {
+    position: relative;
+}
+
+.bottom-buttons {
+    margin-top: 50px;
+    /*width: 140%;*/
+}
+
+.buttons-container {
+    /*display: flex;
+    flex-direction: row;
+    justify-content: space-between;*/
+    position: relative;
+}
+
+.form-button {
+    /*display: flex;
+    flex-direction: row;*/
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    background-color: #539ac4;
+    color: white;
+    /*width: 150px;*/
+    height: 20px;
+    text-align: center;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+.left-button {
+    position: absolute;
+    bottom: -50px;
+    width: 150px;
+}
+
+.right-button {
+    /*margin-left: 20px;*/
+    /*float: right;*/
+    /*width: 100px;*/
+    position: absolute;
+    bottom: -50px;
+    width: 100px;
+}
+
+/* boostrap grid modifications */
+.row {
+    margin-bottom: 20px;
+}
+
+
+.col-1 {
+    padding: 0px, 0px, 0px, 0px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+                                    
+.col-5 {
+    padding-left: 5px;
+    padding-right: 0px;
+}
+
+/* triangle picture inside dropdown menu button */
+
+.dropdown-list-col {
+    position: relative;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.triangle-img-container {
+    position: absolute;
+    top: 6%;
+    right: 15%;
+    width: 20px;
+    height: 17px;
+    cursor: pointer;
+}
+
+.triangle-img {
+    width: 100%;
+    height: 100%;
+}
+
+/* select menu modifications */
+
+.ui-selectmenu-button {
+    
+    height: 100%;
+    /*height: 100%;*/
+    /*width: 130px;*/
+    width: 100%;
+    /*margin-top: -1px;*/
+    /*padding-top: 55px;*/
+    color: #539ac4;
+    padding: 0px 0px 0px 0px;
+}
+
+.ui-selectmenu-icon {
+    display: none;
+}
+
+.ui-selectmenu-button.ui-button {
+    
+    /*width: 130px;*/
+    width: 100%;
+    height: 100%;
+    padding: 0px 0px 0px 0px;
+    color: #539ac4;
+}
+
+.option-list-container {
+    /*width: 130px;*/
+    width: 100%;
+    height: 100%;
+    padding: 0px 0px 0px 0px;
+    color: #539ac4;
+}
+
+.option-list-container span {
+    /*width: 130px;*/
+    width: 100%;
+    height: 100%;
+    padding: 0px 0px 0px 0px;
+    color: #539ac4;
+}
+
+.ui-selectmenu-menu {
+    /*width: 130px;*/
+    width: 100%;
+    height: 100%;
+    padding: 0px 0px 0px 0px;
+    color: #539ac4;
+}
+.ui-selectmenu-menu .ui-menu { /* pour la partie dépliée du menu - il prend les pourcentages par rapport à la largeur de la page et non par rapport à la largeur de la col - à changer à chaque résolution d'écran */
+    width: 88px;
+    /*width: 100%;*/
+    color: #539ac4;
+    /*height: 100%;*/
+    padding: 0px 0px 0px 0px;
+}
+.ui-selectmenu-menu .ui-menu .ui-selectmenu-optgroup {
+    /*width: 130px;*/
+    width: 100%;
+    height: 100%;
+    padding: 0px 0px 0px 0px;
+    color: #539ac4;
+}
+.ui-selectmenu-open {
+    /*width: 130px;*/
+    width: 100%;
+    height: 100%;
+    padding: 0px 0px 0px 0px;
+    color: #539ac4;
+}
+.ui-selectmenu-text {
+    /*width: 130px;*/
+    width: 100%;
+    height: 100%;
+    padding: 0px 0px 0px 0px;
+    margin-top: 2px;
+    margin-left: 5px;
+    color: #539ac4;
+}
+.ui-selectmenu-button.ui-button {
+    /*width: 130px;*/
+    width: 100%;
+    height: 100%;
+    padding: 0px 0px 0px 0px;
+    color: #539ac4;
+}
+.ui-selectmenu-icon.ui-icon {
+    /*width: 130px;*/
+    width: 100%;
+    height: 100%;
+    padding: 0px 0px 0px 0px;
+}
+
+/* mobile version */
+
+.subcategory-rectangle-title-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.subcategory-rectangle-title {
+    border: 2px solid #539ac4;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    width: 70px;
+    text-align: center;
+    font-weight: bold;
+    font-size: medium;
+    margin-bottom: 30px;
+}
+
+.subcategory-rectangle {
+    color: white;
+    background-color: #539ac4;
+    /*padding-top: 5px;
+    padding-bottom: 5px;*/
+    text-align: center;
+    font-size: small;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+@media screen and (max-width:991px) {
+    
+    .long-row-title { /* pour ne pas que le titre passe en dessous du premier champ de la ligne */
+        width: 200px;
+    }
+    
+    .ui-selectmenu-menu .ui-menu { /* pour la partie dépliée du menu - il prend les pourcentages par rapport à la largeur de la page et non par rapport à la largeur de la col - à changer à chaque résolution d'écran */
+        width: 80px;
+        /*width: 100%;*/
+        color: #539ac4;
+        /*height: 24px;*/
+    }
+
+    /* form buttons */
+
+    .right-button {
+        width: 80px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .row { /* pour modifier la marge en bas de la row (classe de bootstrap grid) */
+        margin-bottom: 20px;
+    }
+
+    /* le texte de la ligne est en position absolute */
+
+    .row-with-long-title { /* pour ajouter une marge en dessous de la ligne pour que le texte de dépasse pas sur la ligne du dessous*/
+        margin-bottom: 60px;
+    }
+    
+    .long-row-title { /* pour ne pas que le titre passe en dessous du premier champ de la ligne */
+        width: 150px;
+    }
+
+    .medium-width-title { /* pareil que pour long-row-title mais pour les titres qui ne dépassent pas en 991 mais qui dépasseraient en 767 */
+        width: 150px;
+    }
+    
+    .ui-selectmenu-menu .ui-menu { /* pour la partie dépliée du menu - il prend les pourcentages par rapport à la largeur de la page et non par rapport à la largeur de la col - à changer à chaque résolution d'écran */
+        width: 57px;
+        /*width: 100%;*/
+        color: #539ac4;
+        /*height: 24px;*/
+    }
+
+    /* form buttons */
+
+    .right-button {
+        width: 55px;
+    }
+}
+

@@ -1,0 +1,334 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+
+<link rel="stylesheet" href="{{ asset('css/profilgaea.css') }}">
+<link rel="stylesheet" href="{{ asset('css/site_dashboard.css') }}">
+<link rel="stylesheet" type="text/css"
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+{% endblock %}
+{% block body %}
+<div class="row">
+    <div class="dropdown burger">
+        <a class="dropdown-item" style="padding: 0%;width:0%;margin-right:160px;"
+            class="btn btn-secondary dropdown-toggle" href="{{ path('site_dashboard') }}">
+            <button class="btn btn-secondary dropdown-toggle"><i class="fa fa-home" style="font-size:24px"></i>
+
+            </button>
+        </a>
+
+    </div>
+    <img src=" {{ asset('images/dashboard/pmanger.jpg') }}" style="height: 550px;width:100%;margin-top: 5px;"
+        alt="photo background">
+
+</div>
+<div class="container ">
+    <div class="class row">
+
+        <div class="mini-profil-manger">
+            <h3>Mini Profil / Processus Manger</h3>
+            {#-------------------------------------Quoi--------------------------------------------#}
+            {% if totalQuoi[0]['nbQuestion'] >= 60 %}
+
+
+            {% if totalQuoi[0]['totValue'] >= 292.5  and totalQuoi[0]['totValue'] <= 325  %}
+            <h4>Theme <b>"Quoi"</b></h4>
+            {{ miniprofil[8].description}}
+            <hr>
+            {% elseif totalQuoi[0]['totValue'] >= 227.5 and totalQuoi[0]['totValue'] <= 292.4   %}
+            <h4>Theme <b>"Quoi"</b></h4>
+            {{ miniprofil[9].description}}
+            <hr>
+            {% elseif totalQuoi[0]['totValue'] >= 162.5 and totalQuoi[0]['totValue'] <= 227.4  %}
+            <h4>Theme <b>"Quoi"</b></h4>
+            {{ miniprofil[10].description}}
+            <hr>
+            {% elseif totalQuoi[0]['totValue'] >= 97.5 and totalQuoi[0]['totValue'] <= 162.4 %}
+            <h4>Theme <b>"Quoi"</b></h4>
+            {{ miniprofil[11].description}}
+            <hr>
+            {% elseif totalQuoi[0]['totValue'] >= 33.5 and totalQuoi[0]['totValue'] <= 97.4  %}
+            <h4>Theme <b>"Quoi"</b></h4>
+            {{ miniprofil[12].description}}
+            <hr>
+            {% elseif totalQuoi[0]['totValue'] > 0 and totalQuoi[0]['totValue'] <= 32.4 %}
+            <h4>Theme <b>"Quoi"</b></h4>
+            {{ miniprofil[13].description}}
+            <hr>
+            {% endif %}
+            {% endif %}
+
+            {#-------------------------------------OU--------------------------------------------#}
+
+
+            {% if totalOu >= 45  and totalOu <= 50 %}
+            <h4>Theme <b>"Ou"</b></h4>
+            {{ miniprofil[14].description}}
+            <hr>
+            {% elseif totalOu >= 35 and totalOu <= 44.9  %}
+            <h4>Theme <b>"Ou"</b></h4>
+            {{ miniprofil[15].description}}
+            <hr>
+            {% elseif totalOu >= 25 and totalOu <= 34.9 %}
+            <h4>Theme <b>"Ou"</b></h4>
+            {{ miniprofil[16].description}}
+            <hr>
+            {% elseif totalOu >= 15 and totalOu <= 24.9 %}
+            <h4>Theme <b>"Ou"</b></h4>
+            {{ miniprofil[17].description}}
+            <hr>
+            {% elseif totalOu >= 5 and totalOu <= 14.9  %}
+            <h4>Theme <b>"Ou"</b></h4>
+            {{ miniprofil[18].description}}
+            <hr>
+            {% elseif totalOu > 0 and totalOu <= 4.9 %}
+            <h4>Theme <b>"Ou"</b></h4>
+            {{ miniprofil[19].description}}
+            <hr>
+            {% endif %}
+
+            {#-------------------------------------Comment--------------------------------------------#}
+
+
+            {% if totalComment >= 126  and totalComment <= 140 %}
+            <h4>Theme <b>"Comment"</b></h4>
+            {{ miniprofil[20].description}}
+            <hr>
+            {% elseif totalComment >= 99 and totalComment <= 125.9  %}
+            <h4>Theme <b>"Comment"</b></h4>
+            {{ miniprofil[21].description}}
+            <hr>
+            {% elseif totalComment >= 70 and totalComment <= 98.9 %}
+            <h4>Theme <b>"Comment"</b></h4>
+            {{ miniprofil[22].description}}
+            <hr>
+            {% elseif totalComment >= 42 and totalComment <= 69.9 %}
+            <h4>Theme <b>"Comment"</b></h4>
+            {{ miniprofil[23].description}}
+            <hr>
+            {% elseif totalComment >= 14 and totalComment <= 41.9  %}
+            <h4>Theme <b>"Comment"</b></h4>
+            {{ miniprofil[24].description}}
+            <hr>
+            {% elseif totalComment > 0 and totalComment <= 13.9 %}
+            <h4>Theme <b>"Comment"</b></h4>
+            {{ miniprofil[25].description}}
+            <hr>
+            {% endif %}
+            {#-------------------------------------Conditions--------------------------------------------#}
+
+            {% if totalCondition >= 58.5  and totalCondition <= 65  %}
+            <h4>Theme <b>"Conditions"</b></h4>
+            {{ miniprofil[26].description}}
+            <hr>
+            {% elseif totalCondition >= 45.5 and totalCondition <= 58.4  %}
+            <h4>Theme <b>"Conditions"</b></h4>
+            {{ miniprofil[27].description}}
+            <hr>
+            {% elseif totalCondition >= 32.5 and totalCondition <= 45.4 %}
+            <h4>Theme <b>"Conditions"</b></h4>
+            {{ miniprofil[28].description}}
+            <hr>
+            {% elseif totalCondition >= 19.5 and totalCondition <= 32.4  %}
+            <h4>Theme <b>"Conditions"</b></h4>
+            {{ miniprofil[29].description}}
+            <hr>
+            {% elseif totalCondition >= 6.5 and totalCondition <= 19.4  %}
+            <h4>Theme <b>"Conditions"</b></h4>
+            {{ miniprofil[30].description}}
+            <hr>
+            {% elseif totalCondition > 0 and totalCondition <= 6.4 %}
+            <h4>Theme <b>"Conditions"</b></h4>
+            {{ miniprofil[31].description}}
+            <hr>
+            {% endif %}
+            {#-------------------------------------Déchets--------------------------------------------#}
+
+            {% if totalDechet >= 76.5   and totalDechet <= 85  %}
+            <h4>Theme <b>"Déchets"</b></h4>
+            {{ miniprofil[32].description}}
+            <hr>
+            {% elseif totalDechet >= 59.5  and totalDechet <= 76.4  %}
+            <h4>Theme <b>"Déchets"</b></h4>
+            {{ miniprofil[33].description}}
+            <hr>
+            {% elseif totalDechet >= 42.5   and totalDechet <= 59.4 %}
+            <h4>Theme <b>"Déchets"</b></h4>
+            {{ miniprofil[34].description}}
+            <hr>
+            {% elseif totalDechet >= 25.5   and totalDechet <= 42.4  %}
+            <h4>Theme <b>"Déchets"</b></h4>
+            {{ miniprofil[35].description}}
+            <hr>
+            {% elseif totalDechet >= 8.5  and totalDechet <= 25.4 %}
+            <h4>Theme <b>"Déchets"</b></h4>
+            {{ miniprofil[36].description}}
+            <hr>
+            {% elseif totalDechet > 0 and totalDechet <= 8.4 %}
+            <h4>Theme <b>"Déchets"</b></h4>
+            {{ miniprofil[37].description}}
+            <hr>
+            {% endif %}
+
+            {#-------------------------------------Troubles--------------------------------------------#}
+
+            {% if totalTrouble >= 85.5  and totalTrouble <= 95  %}
+            <h4>Theme <b>"Troubles"</b></h4>
+            {{ miniprofil[38].description}}
+            <hr>
+            {% elseif totalTrouble >= 66.5   and totalTrouble <= 85.4   %}
+            <h4>Theme <b>"Troubles"</b></h4>
+            {{ miniprofil[39].description}}
+            <hr>
+            {% elseif totalTrouble >= 47.5  and totalTrouble <= 66.4 %}
+            <h4>Theme <b>"Troubles"</b></h4>
+            {{ miniprofil[40].description}}
+            <hr>
+            {% elseif totalTrouble >= 28.5  and totalTrouble <= 47.4  %}
+            <h4>Theme <b>"Troubles"</b></h4>
+            {{ miniprofil[41].description}}
+            <hr>
+            {% elseif totalTrouble >= 9.5   and totalTrouble <= 28.4 %}
+            <h4>Theme <b>"Troubles"</b></h4>
+            {{ miniprofil[42].description}}
+            <hr>
+            {% elseif totalTrouble > 0 and totalTrouble <= 9.4 %}
+            <h4>Theme <b>"Troubles"</b></h4>
+            {{ miniprofil[43].description}}
+            <hr>
+            {% endif %}
+
+            {#-------------------------------------Inconscient--------------------------------------------#}
+
+            {% if totalInconscient >= 85.5  and totalInconscient <= 95  %}
+            <h4>Theme <b>"Inconscient"</b></h4>
+            {{ miniprofil[44].description}}
+            <hr>
+            {% elseif totalInconscient >= 66.5   and totalInconscient <= 85.4   %}
+            <h4>Theme <b>"Inconscient"</b></h4>
+            {{ miniprofil[45].description}}
+            <hr>
+            {% elseif totalInconscient >= 47.5  and totalInconscient <= 66.4 %}
+            <h4>Theme <b>"Inconscient"</b></h4>
+            {{ miniprofil[46].description}}
+            <hr>
+            {% elseif totalInconscient >= 28.5  and totalInconscient <= 47.4  %}
+            <h4>Theme <b>"Inconscient"</b></h4>
+            {{ miniprofil[47].description}}
+            <hr>
+            {% elseif totalInconscient >= 9.5   and totalInconscient <= 28.4 %}
+            <h4>Theme <b>"Inconscient"</b></h4>
+            {{ miniprofil[48].description}}
+            <hr>
+            {% elseif totalInconscient > 0 and totalInconscient <= 9.4 %}
+            <h4>Theme <b>"Inconscient"</b></h4>
+            {{ miniprofil[49].description}}
+            <hr>
+            {% endif %}
+
+            {#-------------------------------------ALLERGIES/SYMPTÔMES--------------------------------------------#}
+            {% if totalInconscient > 20   %}
+            <h4>Theme <b>"Allergies / Symptomes"</b></h4>
+            {{ miniprofil[50].description}}
+            <hr>
+            {% endif %}
+            {#-------------------------------------RÉGIMES/ÉVICTION--------------------------------------------#}
+
+            {% if totalRegimes >= 49.5  and totalRegimes <= 55  %}
+            <h4>Theme <b>"Régimes / Evictions"</b></h4>
+            {{ miniprofil[51].description}}
+            <hr>
+            {% elseif totalRegimes >= 38.5   and totalRegimes <= 49.4   %}
+            <h4>Theme <b>"Régimes / Evictions"</b></h4>
+            {{ miniprofil[52].description}}
+            <hr>
+            {% elseif totalRegimes >= 27.5  and totalRegimes <= 38.4 %}
+            <h4>Theme <b>"Régimes / Evictions"</b></h4>
+            {{ miniprofil[53].description}}
+            <hr>
+            {% elseif totalRegimes >= 16.5  and totalRegimes <= 27.4  %}
+            <h4>Theme <b>"Régimes / Evictions"</b></h4>
+            {{ miniprofil[54].description}}
+            <hr>
+            {% elseif totalRegimes >= 5.5   and totalRegimes <= 16.4 %}
+            <h4>Theme <b>"Régimes / Evictions"</b></h4>
+            {{ miniprofil[55].description}}
+            <hr>
+            {% elseif totalRegimes > 0 and totalRegimes <= 5.4 %}
+            <h4>Theme <b>"Régimes / Evictions"</b></h4>
+            {{ miniprofil[56].description}}
+            <hr>
+            {% endif %}
+
+            {#----------------Mini Profil general-------------------#}
+
+
+            {% if totalManger >= 904.5  and totalManger <= 1005  %}
+            <h4>Theme <b>"Résultat Général du Processus"</b></h4>
+            {{ miniprofil[57].description}}
+            <hr>
+            {% elseif totalManger >= 703.5   and totalManger <= 904.4   %}
+            <h4>Theme <b>"Résultat Général du Processus"</b></h4>
+            {{ miniprofil[58].description}}
+            <hr>
+            {% elseif totalManger >= 502.5  and totalManger <= 703.4 %}
+            <h4>Theme <b>"Résultat Général du Processus"</b></h4>
+            {{ miniprofil[59].description}}
+            <hr>
+            {% elseif totalManger >= 301.5  and totalManger <= 502.4  %}
+            <h4>Theme <b>"Résultat Général du Processus"</b></h4>
+            {{ miniprofil[60].description}}
+            <hr>
+            {% elseif totalManger >= 100.5   and totalManger <= 301.4 %}
+            <h4>Theme <b>"Résultat Général du Processus"</b></h4>
+            {{ miniprofil[61].description}}
+            <hr>
+            {% elseif totalManger > 0 and totalManger <= 100.4 %}
+            <h4>Theme <b>"Résultat Général du Processus"</b></h4>
+            {{ miniprofil[62].description}}
+            <hr>
+            {% endif %}
+
+        </div><br>
+    </div>
+</div>
+
+<div class="row">
+    <footer>
+        <div class="d-flex flex-row justify-content-around footer">
+            <div>
+                <h3>Projets</h3>
+                <ul>
+                    <li><a href="http://www.repertoirevert.org/">Répertoire Vert</a></li>
+                    <li><a href="">Green Event Series</a></li>
+                    <li><a href="">Grow your own</a></li>
+                    <li><a href="">Consom'action</a></li>
+                    <li><a href="">Eco-gestes</a></li>
+                    <li><a href="">Green Coaching</a></li>
+                    <li><a href="">Sharing Economy</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3><a href="{{ path('site_mentions') }}">About</a></h3>
+            </div>
+
+            <div>
+                <h3><a href="{{ path('contact') }}">Contact</a></h3>
+            </div>
+
+            <div>
+                <h3><a href="http://www.gaea21.org/wpg21/">gaea21</a></h3>
+            </div>
+        </div>
+    </footer>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+
+<script link rel="stylesheet" href="{{ asset('js/bootstrap.min.js')}}"></script>
+
+
+{% endblock %}

@@ -1,0 +1,749 @@
+.burger button {
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 1);
+    color: #539ac4;
+    border: solid 2px white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.image-header {
+    opacity: 0.4;
+}
+
+.burger {
+    position: absolute;
+    top: 3%;
+    right: 2%;
+}
+
+.dropdown-menu::before,
+.dropdown-menu::after {
+    border: none;
+    content: none;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+/* Video */
+
+.video_empreinte_chromatique iframe{
+    width:  100%;
+    height: 576px;
+}
+
+
+/* ------------------------------------------------
+MENU
+------------------------------------------------  */
+
+.container {
+    padding: 0;
+}
+
+
+/* ------------------------------------------------
+SLIDER
+------------------------------------------------  */
+.carousel-item {
+    background-color: #539ac4;
+}
+
+.top-adjust {
+    top: 30%;
+}
+
+.carousel-caption {
+    margin: auto;
+    padding-bottom: 10%;
+}
+
+.image-header {
+    opacity: 1;
+}
+
+.carousel-item .intro h1 {
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    text-align: center;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 45pt;
+    font-weight: bold;
+}
+
+/* ------------------------------------------------
+ABOUT
+------------------------------------------------  */
+.about {
+    margin-bottom: 20px;
+    width: 1200px;
+}
+
+.about h1 {
+    color: #539ac4;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    margin-top: 80px;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.about .desc {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    color: #539ac4;
+    font-size: 23px;
+    text-align: left;
+    margin-top: 50px;
+}
+
+.text-page-transition {
+    font-family: 'Nunito', sans-serif;
+    color: #539ac4;
+    font-size: 23px;
+    text-align: left;
+
+}
+
+.text-page-transition h3 {
+    font-family: 'Nunito', sans-serif;
+    color: #539ac4;
+    font-weight: bold;
+    text-align: center;
+    font-size: 24pt;
+
+}
+
+.text-page-transition p {
+    font-size: 18pt;
+    margin-bottom: 60px;
+    margin-top: 30px;
+}
+
+.text-page-transition p.desc {
+    margin: 0px;
+}
+.n1 img{
+    width: 300px;
+    margin-top: 20px;
+}
+.variation p{
+    margin: 0px;
+    text-align: center;
+}
+.video-emp {
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.lien {
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
+
+.lien-emp-individu img {
+    width: 50%;
+    margin-left: 25%;
+}
+
+.btn-emp-individu, .btn-emp-famille {
+    position: absolute;
+    right: 35%;
+    top: 70%;
+    width: 30%;
+    background-color: white;
+    border-radius: inherit;
+    color: #337ab7;
+    font-weight: bold;
+}
+
+.lien-emp-famille img {
+    width: 50%;
+    margin-left: 25%;
+}
+
+.about p {
+    font-family: 'Nunito', sans-serif;
+    color: #539ac4;
+    font-size: 0.9em;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+}
+
+.image .boutondash {
+    width: 30%;
+    margin-left: 35%;
+}
+
+.image .btndash {
+    position: absolute;
+    margin-top: 1%;
+    left: 36%;
+    font-size: 65px;
+    color: transparent;
+    background-color: transparent;
+    border: transparent;
+}
+
+
+.humans {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    padding-left: 0px;
+    position: relative;
+}
+
+
+.humans img {
+    display: block;
+    width: 100%;
+    height: 350px;
+}
+
+.humans .btn-q {
+    text-align: center;
+}
+
+.link-human  {
+    width: 30%;
+    top: 82%;
+    position: absolute;
+    left: 35%;
+    border: solid 2px transparent;
+    border-radius: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.link-human a{
+    color: transparent;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.buttonforum a button {
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 125%;
+    padding: 10px;
+    padding-left: 80px;
+    padding-right: 30px;
+    border: solid 2px #36667b;
+    border-radius: 15px;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #36667b;
+    background-color: transparent;
+}
+
+.ambassadeur {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-left: 0px;
+    position:relative;
+}
+
+
+.ambassadeur img {
+    display: block;
+    width: 100%;
+    height: 350px;
+}
+
+.ambassadeur .btn-q {
+    text-align: center;
+}
+
+.link-ambassadeur  {
+    width: 12%;
+    top: 72%;
+    left: 44%;
+    position: absolute;
+    border: solid 2px transparent;
+    border-radius: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: transparent;
+
+}
+
+.link-ambassadeur a{
+    color: transparent;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+
+footer{
+    margin-top: 40px;
+}
+
+
+
+
+
+
+@media screen and (max-width: 960px) {
+
+    /* ------------------------------------------------
+    MENU
+    ------------------------------------------------  */
+    .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+
+    .menu ul {
+        padding-top: 5px;
+        width: 95%;
+        z-index: 200;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    /* ------------------------------------------------
+    SLIDER
+    ------------------------------------------------  */
+    .carousel-item .intro h1 {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        text-align: center;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .carousel-item .intro p {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        font-size: 14px;
+    }
+
+    /* ------------------------------------------------
+    DASHBOARD (h2)
+    ------------------------------------------------  */
+    .dashboard img {
+        display: block;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    /* ------------------------------------------------
+    TEXT-CONTENT
+    ------------------------------------------------  */
+    .text-content img {
+        display: block;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    /* ------------------------------------------------
+    PROCESSUS
+    ------------------------------------------------  */
+    .processus h3 {
+        color: #fff;
+        font-family: 'Nunito', sans-serif;
+        font-size: 16px;
+        margin-top: 0;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .processus img {
+        display: block;
+        width: 100%;
+        min-height: 100%;
+        margin-bottom: 15px;
+    }
+
+    /* ------------------------------------------------
+    VIDEO APPLI "griditem"
+    ------------------------------------------------- */
+    .griditem {
+        position: relative;
+        background-color: #777;
+        -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        width: 100%;
+        overflow: hidden;
+        height: 370px;
+    }
+
+    /* ------------------------------------------------
+    ECO PANIER
+    ------------------------------------------------  */
+    .eco-panier h2 {
+        font-family: 'Nunito', sans-serif;
+        font-weight: bold;
+        color: #539ac4;
+
+    }
+
+    .eco-panier p {
+        font-family: 'Nunito', sans-serif;
+        color: #539ac4;
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+
+    .eco-panier a {
+        font-family: 'Nunito', sans-serif;
+        color: #539ac4;
+        font-size: 12px;
+        border: solid 2px #539ac4;
+        padding: 5px 5px;
+        margin-bottom: 50px;
+    }
+
+    .video_empreinte_chromatique iframe{
+
+        width: 100% !important;
+        height: 240px !important;
+    }
+    .image .boutondash{
+        width: 40%;
+        margin-left: 31%;
+    }
+    .image .btndash{
+        left: 30%;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    /* ------------------------------------------------
+    MENU
+    ------------------------------------------------  */
+    .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+
+    /* ------------------------------------------------
+    SLIDER
+    ------------------------------------------------  */
+    .carousel-item .intro h1 {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        text-align: center;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    .carousel-item .intro p {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        font-size: 10px;
+    }
+
+    /* ------------------------------------------------
+    TEXT-CONTENT
+    ------------------------------------------------  */
+    .text-content img {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    /* ------------------------------------------------
+    VIDEO APPLI "griditem"
+    ------------------------------------------------- */
+    .griditem {
+        position: relative;
+        -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 370px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    /* ------------------------------------------------
+    ECO PANIER
+    ------------------------------------------------  */
+    .eco-panier img {
+        padding-top: 20px;
+        display: block;
+        width: 55%;
+        margin: 0 auto;
+    }
+
+    .eco-panier h2 {
+        font-family: 'Nunito', sans-serif;
+        font-weight: bold;
+        color: #539ac4;
+        text-align: center;
+
+    }
+
+    .eco-panier p {
+        font-family: 'Nunito', sans-serif;
+        color: #539ac4;
+        font-size: 14px;
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .eco-panier a {
+        font-family: 'Nunito', sans-serif;
+        color: #539ac4;
+        font-size: 12px;
+        border: solid 2px #539ac4;
+        padding: 5px 5px;
+        width: 28%;
+        margin: 0 auto 60px;
+        display: block;
+        text-align: center;
+    }
+
+    .video_empreinte_chromatique iframe{
+
+        width: 100% !important;
+        height: 240px !important;
+    }
+
+    .image .boutondash{
+        width: 40%;
+        margin-left: 31%;
+    }
+    .image .btndash{
+        left: 30%;
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+    /* ------------------------------------------------
+    MENU
+    ------------------------------------------------  */
+    .navbar {
+        margin-bottom: 0;
+    }
+
+    .griditem {
+        position: relative;
+        -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        width: 75%;
+        height: 400px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .video_empreinte_chromatique iframe{
+
+        width: 100% !important;
+        height: 240px !important;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    /* ------------------------------------------------
+    MENU
+    ------------------------------------------------  */
+    .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+
+    /* ------------------------------------------------
+    SLIDER
+    ------------------------------------------------  */
+    .carousel-item .intro h1 {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        text-align: center;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .carousel-item .intro p {
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        font-size: 6px;
+    }
+
+    .carousel-item .intro a {
+        display: block;
+        width: 90px;
+        margin: 0 auto;
+    }
+
+    .carousel-item .intro a button {
+        padding: 2px;
+        background-color: #539ac4;
+        color: white;
+        border: solid 2px white;
+        border-radius: 3px;
+        font-size: 8px;
+    }
+
+    /* ------------------------------------------------
+    ABOUT
+    ------------------------------------------------  */
+    .about .desc {
+        font-family: 'Nunito', sans-serif;
+        font-weight: bold;
+        color: #539ac4;
+        font-size: 14px;
+        text-align: justify;
+    }
+
+
+    .humans .btn-q {
+        text-align: center;
+    }
+
+    .ambassadeur .btn-q {
+        text-align: center;
+    }
+
+    .ambassadeur img {
+        display: none;
+    }
+
+    .humans img {
+        display: none;
+    }
+
+    .ambassadeur {
+        background-image: url(../images/landing-page/ambassadeurMobile.jpg);
+        height: 124.91px;
+        background-repeat: round;
+        width: 100%;
+        position: relative;
+
+    }
+
+    .humans {
+        background-image: url(../images/landing-page/humansMobile2.jpg);
+        height: 124.39px;
+        width: 100%;
+        background-repeat: round;
+        position: relative;
+    }
+
+
+    .link-ambassadeur{
+        top: 73%;
+        left: 37%;
+        font-size: 1.2em;
+        width: 25%;
+        height: 20%;
+
+    }
+
+    .link-ambassadeur a{
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+
+    .link-human {
+        top: 76%;
+        left: 33%;
+        font-size: 1.2em;
+        width: 35%;
+        height: 20%;
+    }
+
+    .link-human a{
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+
+
+
+    .text-page-transition p {
+        font-size: 12pt;
+        margin-bottom: 60px;
+        margin-top: 26px;
+        margin-left: 10px;
+        margin-right: 10px;
+        color: #539ac4;
+    }
+
+    .text-page-transition h3 {
+        font-family: 'Nunito', sans-serif;
+        color: #539ac4;
+        font-weight: bold;
+        text-align: center;
+        font-size: 14pt;
+        margin-bottom: 26px
+    }
+    .n1 img{
+        width: 100%;
+    }
+    .variation p{
+        margin: 0px;
+    }
+
+    .image .btndash {
+        left: 10%;
+    }
+
+    .boutondash {
+        height: 19.47px !important;
+
+    }
+
+
+    .spacer {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+
+
+    .video_empreinte_chromatique iframe{
+
+        width: 100% !important;
+        height: 240px !important;
+    }
+
+}
+
+
+
+
+
+
+
+
+

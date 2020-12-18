@@ -1,0 +1,285 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    SLP
+{% endblock %}
+
+{% block stylesheets %}
+
+    <link rel="stylesheet" href="{{ asset('css/favoris.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+
+{% endblock %}
+
+{% block body %}
+
+    <header>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ asset('images/favoris/page_favoris_header.jpg') }}" class="d-block w-100"
+                         alt="Dashboard">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2>Favoris</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="row favoris">
+        <div class="col-md-12">
+            <p> Le <strong>développement durable</strong> se décline en une <strong>multitude</strong> de <strong>sous-catégories.</strong>
+                <br>
+                Chacune d’entre elles mérite une <strong>attention particulière.</strong><br>
+                Nous avons choisi de les regrouper au sein de <strong>quatre grands ensembles</strong></p>
+        </div>
+    </div>
+
+    <div class="four_section" id="hideCard">
+        <div class="d-flex flex-row bd-highlight justify-content-between">
+            <div class="card col-md-5" >
+                <img src="{{ asset('images/favoris/macro.jpg') }}" class="card-img-top img-fluid-card" alt="Dashboard">
+                <div class="card-body">
+                    <h3 class="card-title"><b>Développement durable</b></h3>
+                    <h3 class="card-text">Développement durable à l’échelle des régions</h3>
+                </div>
+            </div>
+            <div class="card col-md-5">
+                <img src="{{ asset('images/favoris/Prevention-santé-et-stress.jpg') }}" class="card-img-top img-fluid-card" alt="Dashboard">
+                <div class="card-body">
+                    <h3 class="card-title"><b>Humain</b></h3>
+                    <h3 class="card-text">Développement durable dans sa relation à l’homme</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex flex-row bd-highlight justify-content-between">
+            <div class="card col-md-5" >
+                <img src="{{ asset('images/favoris/general.jpg') }}" class="card-img-top img-fluid-card" alt="Dashboard">
+                <div class="card-body">
+                    <h3 class="card-title"><b>Général</b></h3>
+                    <h3 class="card-text">Regroupe divers thèmes du développement durable</h3>
+                </div>
+            </div>
+            <div class="card col-md-5">
+                <img src="{{ asset('images/favoris/Architecture-verte.jpg') }}" class="card-img-top img-fluid-card" alt="Dashboard">
+                <div class="card-body">
+                    <h3 class="card-title"><b>Développement durable</b></h3>
+                    <h3 class="card-text">Différents outils de mise en oeuvre du développement durable </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!---hide step2---->
+    <div class="step2 mb-5">
+        <div class="d-flex flex-row bd-highlight mb-3">
+            <div class="bd-highlight col-md-3" id="first">
+                <img class="img-fluid small p-2"
+                     src="{{ asset('images/favoris/communication_durable.jpg') }}" alt="Dashboard">
+            </div>
+            <div class="bd-highlight col-md-3" id="second">
+                <img class="img-fluid small  p-2"
+                     src="{{ asset('images/favoris/macro.jpg') }}" alt="Dashboard">
+            </div>
+            <div class="bd-highlight col-md-3" id="third">
+                <img class="img-fluid small p-2"
+                     src="{{ asset('images/favoris/macro.jpg') }}" alt="Dashboard">
+            </div>
+            <div class="bd-highlight col-md-3" id="four">
+                <img class="img-fluid small p-2"
+                     src="{{ asset('images/favoris/Fotolia_42300046_Subscription_XXL_FromDESKTOP-037AKAU.jpg') }}"
+                     alt="Dashboard">
+            </div>
+        </div>
+
+        <div class="d-flex flex-row bd-highlight mb-3">
+            <div class="bd-highlight col-md-3" id="five">
+                <img class="img-fluid small p-2"
+                    src="{{ asset('images/favoris/Tourisme-durable.jpg') }}" alt="Dashboard">
+            </div>
+            <div class="bd-highlight col-md-3" id="six">
+                <img class="img-fluid small p-2"
+                    src="{{ asset('images/favoris/macro.jpg') }}" alt="Dashboard">
+            </div>
+            <div class="bd-highlight col-md-3" id="seven">
+                <img class="img-fluid small p-2"
+                    src="{{ asset('images/favoris/macro.jpg') }}" alt="Dashboard">
+            </div>
+            <div class="bd-highlight col-md-3" id="height">
+                <img class="img-fluid small p-2"
+                    src="{{ asset('images/favoris/macro.jpg') }}" alt="Dashboard">
+            </div>
+        </div>
+
+            <!----hide--->
+        <div class="d-flex flex-row bd-highlight mb-3 mt-5">
+            <div class="bd-highlight col-md-3 mx-auto" id="nine">
+                <img class="img-fluid small p-2"
+                     src="{{ asset('images/favoris/Humains.jpg') }}" alt="Dashboard">
+            </div>
+        </div>
+    </div>
+
+<!----step3 hide---->
+    <div class="step3 mb-5">
+        <div class="card-2 mt-5">
+            <div class="row no-gutters">
+                <div class="ml-5 mt-4" id="first">
+                    <img src="{{ asset('images/favoris/communication_durable.jpg') }}" alt="Dashboard"
+                         class="img-fluid small" style="width: 240px">
+                </div>
+                <div class="col-md-8 ml-5">
+                    <div class="card-body">
+                        <h2 class="card-title mt-0">Communautés Durables</h2>
+                        <h4 class="card-text mt-0" id="descriptionFirstImgStep3">Les communautés durables sont des
+                            groupes de populations locales
+                            (quartiers, villes, régions) décidant de mettre en œuvre des politiques
+                            à leur échelle qui visent le respect de l’environnement et d’une justice sociale.
+
+                            Les nouvelles technologies de la communication, dont internet jouent un rôle important
+                            notamment pour l’amélioration de la logistique qui permet aux communautés de mieux
+                            s’organiser
+                            localement afin de rendre efficiente l’utilisation des ressources.
+
+                            Communautés Durables
+                            No Silver Bullet: The New Urban
+                            Agenda and Smart Cities
+
+                            Le domaine couvert dans cette partie est assez large :
+                            il peut s’agir d’actions entreprises par les autorités publiques,
+                            par des entreprises régionalement importantes, de nouveaux groupes
+                            qui émergent afin de promouvoir une certaines activités, etc.</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-deck ">
+            <div class="card" id="second">
+                <img src="{{ asset('images/favoris/s_occuper_2.jpg') }}" alt="Dashboard" class="card-img-top">
+                    <div class="card-body ">
+                        <h3 class="card-title">Communautés Durables</h3>
+                            <h3><b>No Silver Bullet: The New Urban
+                                Agenda and Smart Cities</b></h3>
+                                    <h4 class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                elit, sed diam nonummy nibh euismod tincidunt ut
+                            laoreet dolore magna aliquam erat volutpat</h4>
+                        <h3><a href="#">lire</a></h3>
+                    </div>
+            </div>
+
+            <div class="card" id="third">
+                <img src="{{ asset('images/favoris/s_occuper_2.jpg') }}" alt="Dashboard" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">Communautés Durables</h3>
+                            <h3><b>À Marseille, un hackathon pour
+                                changer le monde</b></h3>
+                                    <h4 class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                elit, sed diam nonummy nibh euismod tincidunt ut
+                        laoreet dolore magna aliquam erat volutpat.</h4>
+                    <h3><a href="#">lire</a></h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex flex-row bd-highlight mt-5 ml-5">
+            <div class="row bd-highlight mb-3" id="four">
+                    <img src="{{ asset('images/favoris/s_occuper_2.jpg') }}" alt="Dashboard" class="card-img"
+                         style="width: 250px">
+                <div class="col m-0">
+                    <div class="card-body">
+                        <h4 class="card-title">Communautés Durables</h4>
+                        <h4 class="card-text">Les plateformes d'innovation
+                            comme outils de politique publique :
+                            repenser le rôle des collectivités locales</h4>
+                        <a href="#">Lire la suite </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row bd-highlight mb-3 ml-5" id="five">
+                    <img src="{{ asset('images/favoris/s_occuper_2.jpg') }}" alt="Dashboard" class="card-img"
+                         style="width: 250px">
+                <div class="col">
+                    <div class="card-body">
+                        <h4 class="card-title">Communautés Durables</h4>
+                        <h4 class="card-text">Les plateformes d'innovation
+                            comme outils de politique publique :
+                            repenser le rôle des collectivités locales</h4>
+                        <a href="#">Lire la suite </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex flex-row bd-highlight mb-3 lastEtape3">
+            <div class="col-md-2 bd-highlight" id="seven">
+                <img class="img-fluid"
+                     src="{{ asset('images/favoris/katie-smith-104748-unsplash.jpg') }}" alt="Dashboard">
+            </div>
+
+            <div class="col-md-2 bd-highlight" id="height">
+                <img class="img-fluid"
+                     src="{{ asset('images/favoris/katie-smith-104748-unsplash.jpg') }}" alt="Dashboard">
+            </div>
+
+            <div class="col-md-2 bd-highlight" id="nine">
+                <img class="img-fluid"
+                     src="{{ asset('images/favoris/katie-smith-104748-unsplash.jpg') }}" alt="Dashboard">
+            </div>
+        </div>
+    </div>
+
+    <!-- Hide default -->
+    <div class="row four_section_after">
+        <div class="col-md-3 mx-auto" id="first_after">
+            <img class="img-fluid"
+                 src="{{ asset('images/favoris/macro.jpg') }}" alt="Dashboard">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3" id="nine_after">
+            <img class="img-fluid small p-2"
+                 src="{{ asset('images/favoris/Humains.jpg') }}" alt="Dashboard">
+        </div>
+    </div>
+
+    <div class="footer_favoris mt-5">
+        {% include 'footer.html.twig' %}
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+
+    <script>
+
+
+        $(document).ready(function () {
+
+            // hide les images avant le premier clic
+            var fourSectionAfter = $('.four_section_after').hide();
+            var nineAfter = $('#nine_after').hide();
+            $('.step2').hide();
+            var step3 = $('.step3').hide();
+
+            // clic sur la premiere image, hide des 3 autres etape 1 et display des 8 autres images (step 2)
+            $(".card-img-top").click(function (newChild, refChild) {
+                $(fourSectionAfter).insertBefore(".step2").show();
+                $('.step2').show();
+                $('#hideCard').hide();
+            });
+
+            // second clic, hide de la premiere image de l'etape 2 et de la 9eme et ajout de la 9 eme en premier de l'étape 2 et de la premiere de l'étape 1 en dessous de l'étape 2
+            $('.step2 #first').click(function () {
+                $('.step2 #first, .step2 #nine').hide();
+                $(nineAfter).insertBefore('.step2 #second').show();
+                $(step3).insertAfter(".step2").show();
+            });
+
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/jquery/blue-form-widgets/jquery-ui.min.css') }}">
+{% endblock %}
+
+{% block body %}
+
+    <script src="{{ asset('js/blue-form-items/jquery-ui.min.js') }}"></script>
+    <!--
+    <script type="text/javascript">
+        $(".autocomplete").autocomplete({source:["AI","CG","DS","OS","C","C#","JAVA"]});
+        $("#autocomplete2").autocomplete({source:["JS","LISP","C++","HTML","CSS"]});
+        $(".dropdown-list").selectmenu();
+    </script>
+    -->
+        
+{% endblock %}
+
+{% block javascripts %}
+
+    <script src="{{ asset('js/blue-form-items/jquery-ui.min.js') }}"></script>
+    
+    <script type="text/javascript">
+        $(".autocomplete").autocomplete({source:["AI","CG","DS","OS","C","C#","JAVA"]});
+        $("#autocomplete2").autocomplete({source:["JS","LISP","C++","HTML","CSS"]});
+        $(".dropdown-list").selectmenu();
+    </script>
+{% endblock %}

@@ -1,0 +1,253 @@
+{% extends 'base.html.twig' %}
+
+
+{% block stylesheets %}
+
+<link rel="stylesheet" href="{{ asset('css/profilgaea.css') }}">
+<link rel="stylesheet" type="text/css"
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    @-moz-document url-prefix() {
+        .selected1:after {
+            position: absolute;
+            top: 20px;
+            margin-left: -35px;
+            font-family: 'FontAwesome';
+            content: '\f00c';
+            color: #ffffff;
+            font-size: 30px;
+        }
+    }
+</style>
+
+{% endblock %}
+
+{% block body %}
+
+{# variable qui permet de ce retrouver dans les numeros de questions en cas de reprise de formulaire #}
+
+
+
+<div class="container profil-page">
+    <div class="row">
+        <header>
+            <div id="carousel-slp" class="carousel slide" data-ride="carousel">
+
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="{{ asset('images/questionnaire_01.png') }}"
+                            alt="Questionnaire consom'acteur">
+                        <div class="carousel-caption d-none d-block intro col-6 top-adjust">
+                            <h1>quel consom'acteur êtes-vous ?</h1>
+                            <p>Voulez-vous connaître le type de comsom'acteur que vous êtes ? Ces questionnaires vont
+                                vous révéler votre degré d'implication vis-à-vis de l'environnement. Vous pourrez ainsi
+                                obtenir votre profil de consom'acteur, et éventuellement rectifier ou améliorer vos
+                                gestes au quotidien avec nos conseils. Êtes-vous prêt ? C'est parti !</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="dropdown burger">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="{{ path('site_index') }}">Accueil</a>
+
+
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="row">
+        <div class="profil-intro col-12">
+            <h2>Déterminez votre profil !</h2>
+        </div>
+        <div class="d-flew flex-row row profil-descritpion">
+            <div class="col-8">
+                <p>
+                    Déterminer votre profil socio-économique actuel, et validez votre inscription sur la plateforme SLP.
+                </p>
+                <p>
+                    Votre dashboard sera actif, et vous pourrez gérer vos actions et faire evoluer votre compte et créer
+                    des profils différents ou complémentaire
+                </p>
+            </div>
+            <div class="col-2"><img class="profil-miniature" src="{{ asset('images/landing-page/ecran.jpg') }}"
+                    alt="image d un ecran"></div>
+            <div class="col-2"><img class="profil-miniature" src="{{ asset('images/landing-page/consom_action.jpg') }}"
+                    alt="logo consom'action"></div>
+        </div>
+
+        <p>Invitez amis, famille, proches et définissez la dynamique de votre ménage, votre famille, votre groupe d amis
+            ou votre mode solo.</p>
+
+        <div class="d-flew flex-row row">
+
+            <div class="col-3 profil">
+                <a href="">
+                    <span>Profil ménage</span>
+                    <img src="{{ asset('images/landing-page/menage.png') }}" alt="">
+                    <p>Vous vivez sous le même toit, sans pour autant avois des liens familliaux</p>
+                </a>
+            </div>
+
+            <div class="col-3 profil">
+                <a href="">
+                    <span>Profil famille</span>
+                    <img src="{{ asset('images/landing-page/famille.png') }}" alt="">
+                    <p>Vous avez des liens familliaux, mais ne vivez pas sous le même toit.</p>
+                </a>
+            </div>
+
+            <div class="col-3 profil">
+                <a href="">
+                    <span>Profil amis</span>
+                    <img src="{{ asset('images/landing-page/amis.png') }}" alt="">
+                    <p>Un profil entre amis !</p>
+                </a>
+            </div>
+
+            <div class="col-3 profil">
+                <a href="{{ path('fos_user_registration_register') }}">
+                    <span>Profil individu</span>
+                    <img src="{{ asset('images/landing-page/solo.png') }}" alt="">
+                    <p>Je reste seul pour l'instant</p>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+</div>
+<!--fin container page-->
+
+<div class="modal" onclick="return false;" id="myModal" role="dialog">{#POP UP POUR u are what you eat#}
+    <div class="modal-body">
+
+     {#   {{ render(controller('AppBundle\\Controller\\SiteController::mangerAction'))}} #}
+    </div>
+</div>
+
+
+
+<div class="row">
+    <h4 class="blue-title col-12">Repondez aux questionnaires et complétez votre profil</h4>
+    <div class="d-flex flex-row flex-wrap wrap justify-content-around them-survey">
+        {# future foreach quand les questionnaires thématiques serrons fini #}
+        <div>
+            <a href="">
+                <img src="{{ asset('images/landing-page/s_habiller.jpg') }}" alt="">
+                <h5 class="questionnaire-title">S'habiller</h5>
+            </a>
+        </div>
+        <div>
+            <a href="">
+                <img src="{{ asset('images/landing-page/habiter.jpg') }}" alt="">
+                <h5 class="questionnaire-title">Habiter</h5>
+            </a>
+        </div>
+        <div>
+
+           <a href="{{ path('fos_user_registration_register') }}">
+                <img src="{{ asset('images/landing-page/manger.jpg') }}" alt="">
+                <h5 class="questionnaire-title">Manger</h5>
+            </a>
+
+        </div>
+        <div>
+            <a href="">
+                <img src="{{ asset('images/landing-page/se_deplacer.jpg') }}" alt="">
+                <h5 class="questionnaire-title">Se deplacer</h5>
+            </a>
+        </div>
+        <div>
+            <a href="">
+                <img src="{{ asset('images/landing-page/communiquer.jpg') }}" alt="">
+                <h5 class="questionnaire-title">Communiquer</h5>
+            </a>
+        </div>
+        <div>
+            <a href="">
+                <img src="{{ asset('images/landing-page/se_distraire.jpg') }}" alt="">
+                <h5 class="questionnaire-title">Se distraire</h5>
+            </a>
+        </div>
+        <div>
+            <a href="">
+                <img src="{{ asset('images/landing-page/prendre_soin_de_soi.jpg') }}" alt="">
+                <h5 class="questionnaire-title">Prendre soin de soi</h5>
+            </a>
+        </div>
+        <div>
+            <a href="">
+                <img src="{{ asset('images/landing-page/travailler.jpg') }}" alt="">
+                <h5 class="questionnaire-title">Travailler</h5>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <footer>
+        <div class="d-flex flex-row justify-content-around footer">
+            <div>
+                <h3>Projets</h3>
+                <ul>
+                    <li><a href="http://www.repertoirevert.org/">Répertoire Vert</a></li>
+                    <li><a href="">Green Event Series</a></li>
+                    <li><a href="">Grow your own</a></li>
+                    <li><a href="">Consom'action</a></li>
+                    <li><a href="">Eco-gestes</a></li>
+                    <li><a href="">Green Coaching</a></li>
+                    <li><a href="">Sharing Economy</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3><a href="{{ path('site_mentions') }}">About</a></h3>
+            </div>
+
+            <div>
+                <h3><a href="{{ path('contact') }}">Contact</a></h3>
+            </div>
+
+            <div>
+                <h3><a href="http://www.gaea21.org/wpg21/">gaea21</a></h3>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+{% endblock %}
+
+{% block javascripts %}
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+    </script>
+<script link rel="stylesheet" href="{{ asset('js/bootstrap.min.js')}}"></script>
+<script src="{{ asset('js/app.js')}}"></script>
+
+
+{% endblock %}

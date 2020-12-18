@@ -1,0 +1,931 @@
+/* --------- */
+/* pie chart */
+/* --------- */
+
+.svg-max {
+    display: block;
+}
+
+.svg-991 {
+    display: none;
+}
+
+.svg-767 {
+    display: none;
+}
+
+.svg-480 {
+    display: none;
+}
+
+.pie-charts-col {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+.pie-charts-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.line-two {
+    margin-bottom: 10px;
+}
+.pie-charts-container {
+    
+}
+.seventh-pie-chart-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.seventh-pie-chart {
+
+}
+.pie-chart-container {
+    position: relative;
+    width: 130px;
+    height: 130px;
+}
+.circle-one {
+    fill: rgb(163, 190, 107);
+    /*
+    stroke: #655;
+    */
+    stroke: yellowgreen;
+    stroke-width: 30%;
+    /*
+    stroke-dasharray: 5 5;
+    */
+    /*stroke-dasharray: 200 150;*/ /* 100% : stroke-dasharray: 220 150*/
+    /*border: 2px dotted purple;*/
+}
+.living-circle {
+    stroke-width: 30%;
+    stroke-dasharray: 100 220; /* 100% : stroke-dasharray: 220 220*/
+}
+.eating-circle {
+    stroke-width: 30%;
+    stroke-dasharray: 100 220; /* 100% : stroke-dasharray: 220 220*/
+}
+.moving-circle {
+    stroke-width: 30%;
+    stroke-dasharray: 110 220; /* 100% : stroke-dasharray: 220 220*/
+}
+.communicating-circle {
+    stroke-width: 30%;
+    stroke-dasharray: 120 220; /* 100% : stroke-dasharray: 220 220*/
+}
+.leisures-circle {
+    stroke-width: 30%;
+    stroke-dasharray: 130 220; /* 100% : stroke-dasharray: 220 220*/
+}
+.eating-circle {
+    stroke-width: 30%;
+    stroke-dasharray: 140 220; /* 100% : stroke-dasharray: 220 220*/
+}
+.take-care-of-yourself-circle {
+    stroke-width: 30%;
+    stroke-dasharray: 150 220; /* 100% : stroke-dasharray: 220 220*/
+}
+.working-circle {
+    stroke-width: 30%;
+    stroke-dasharray: 160 220; /* 100% : stroke-dasharray: 220 220*/
+}
+.dressing-circle {
+    stroke-width: 30%;
+    stroke-dasharray: 170 220; /* 100% : stroke-dasharray: 220 220*/
+}
+svg {
+    position: absolute;
+    transform: rotate(-90deg);
+    /*margin-right: 10px;*/
+    
+}
+.one {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    width: 99%;
+    height: 98%;
+    z-index: 2;
+}
+.two {
+    position: absolute;
+    /*
+    border: 2px dotted purple;
+    */
+    /*
+    background-color: green;
+    */
+    background-color: rgb(163, 190, 107);
+    top: 21.6%;
+    left: 8.5%;
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.blue-pie-chart .circle-one {
+    fill: #75e6f0;
+    stroke: #1ed3e8;
+}
+
+.blue-pie-chart .two {
+    background-color: #75e6f0;
+}
+
+.pink-pie-chart .circle-one {
+    fill: #fad7f8;
+    stroke: #eca8e9;
+}
+
+.pink-pie-chart .two {
+    background-color: #fad7f8;
+}
+
+.orange-pie-chart .circle-one {
+    fill: #ffb966;
+    stroke: #f08608;
+}
+
+.orange-pie-chart .two {
+    background-color: #ffb966;
+}
+
+.navyblue-pie-chart .circle-one {
+    fill: #95b3fe;
+    stroke: #4378ff;
+}
+
+.navyblue-pie-chart .two {
+    background-color: #95b3fe;
+}
+
+.green-pie-chart .circle-one {
+    fill: #a8f2b5;
+    stroke: #4fd568;
+}
+
+.green-pie-chart .two {
+    background-color: #a8f2b5;
+}
+
+.orangered-pie-chart .circle-one {
+    fill: #ff9b7e;
+    stroke: #ff5e2e;
+}
+
+.orangered-pie-chart .two {
+    background-color: #ff9b7e;
+}
+
+.lightorangered-pie-chart .circle-one {
+    fill: #ffbba6;
+    stroke: #fb8056;
+}
+
+.lightorangered-pie-chart .two {
+    background-color: #ffbba6;
+}
+
+.purlpe-pie-chart .circle-one {
+    fill: #cbadfc;
+    stroke: #ad7afd;
+}
+
+.purlpe-pie-chart .two {
+    background-color: #cbadfc;
+}
+
+.theme-list-item-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.blue-text {
+    color: #1ed3e8;
+}
+
+.pink-text {
+    color: #eca8e9;
+}
+
+.orange-text {
+    color: #f08608;
+}
+
+.orangered-text {
+    color: #ff5e2e;
+}
+
+.purple-text {
+    color: #ad7afd;
+}
+
+.green-text {
+    color: #3aaa35;
+}
+
+.lightorangered-text {
+    color: #fb8056;
+}
+
+.navyblue-text {
+    color: #4378ff;
+}
+
+@media screen and (max-width:1199px) {
+    .enter-revenues-box {
+        width: 75%;
+    }
+    
+    .enter-spendings-box {
+        width: 75%;
+    }
+
+    .enter-revenues-spendings-description {
+        width: 75%;
+    }
+
+    /* -------------------- */
+    /* -- graphs buttons -- */
+    /* -------------------- */
+
+    .monthly-graphs-buttons {
+        /*font-size: x-large;*/
+        /*width: 50px;*/
+        border: 2px solid #76afcd; background-color: white;
+        color: #76afcd; border-radius: 3px;
+        padding-right: 9px; padding-left: 9px;
+        padding-top: 3px; padding-bottom: 3px;
+        font-weight: bold; text-align: center;
+        width: 100px; font-size: 18px; font-family: 'Nunito', sans-serif; margin-top: 30%; margin-left: 15%;
+    }
+    .annual-graphs-buttons {
+        /*font-size: x-large;*/
+        /*width: 50px;*/
+        border: 2px solid #76afcd; background-color: #76afcd;
+        color: white; border-radius: 3px;
+        padding-right: 9px; padding-left: 9px; padding-top: 3px;
+        padding-bottom: 3px; font-weight: bold; font-size: 18px;
+        width: 100px; text-align: center;
+        font-family: 'Nunito', sans-serif;
+        display: inline-block; text-decoration: none; margin-top: 50%; margin-left: 15%;
+    }
+
+    .living-circle {
+        stroke-width: 30%;
+        stroke-dasharray: 40 130; /* 100% : stroke-dasharray: 130 130*/
+    }
+    .eating-circle {
+        stroke-width: 30%;
+        stroke-dasharray: 50 130; /* 100% : stroke-dasharray: 130 130*/
+    }
+    .moving-circle {
+        stroke-width: 30%;
+        stroke-dasharray: 60 130; /* 100% : stroke-dasharray: 130 130*/
+    }
+    .communicating-circle {
+        stroke-width: 30%;
+        stroke-dasharray: 70 130; /* 100% : stroke-dasharray: 130 130*/
+    }
+    .leisures-circle {
+        stroke-width: 30%;
+        stroke-dasharray: 80 130; /* 100% : stroke-dasharray: 130 130*/
+    }
+    .eating-circle {
+        stroke-width: 30%;
+        stroke-dasharray: 90 130; /* 100% : stroke-dasharray: 130 130*/
+    }
+    .take-care-of-yourself-circle {
+        stroke-width: 30%;
+        stroke-dasharray: 100 130; /* 100% : stroke-dasharray: 130 130*/
+    }
+    .working-circle {
+        stroke-width: 30%;
+        stroke-dasharray: 110 130; /* 100% : stroke-dasharray: 130 130*/
+    }
+    .dressing-circle {
+        stroke-width: 30%;
+        stroke-dasharray: 120 130; /* 100% : stroke-dasharray: 130 130*/
+    }
+}
+
+@media screen and (max-width:991px) {
+    .enter-revenues-box {
+        width: 100%;
+    }
+    
+    .enter-spendings-box {
+        width: 100%;
+    }
+
+    .enter-revenues-spendings-description{
+        width: 100%;
+    }
+
+    .cliked-time-period-img {
+        height: 25px;
+    }
+    
+    .time-period-img {
+        height: 15px;
+    }
+
+    /* ------- */
+    /* buttons */
+    /* ------- */
+
+    .join-sl-community-button img {
+        width: 37%;
+    }
+
+    .n2 .debutprogramme img {
+        width: 40%;
+    }
+
+    /* --------- */
+    /* pie chart */
+    /* --------- */
+
+    .svg-max {
+        display: none;
+    }
+    
+    .svg-991 {
+        display: block;
+    }
+    
+    .svg-767 {
+        display: none;
+    }
+    
+    .svg-480 {
+        display: none;
+    }
+
+    .line-two {
+        margin-bottom: 10px;
+    }
+    .pie-chart-container {
+        width: 95px;
+        height: 95px;
+    }
+    .circle-one {
+        stroke-width: 30%;
+        /*stroke-dasharray: 100 150;*/
+    }
+    svg {
+        position: absolute;
+        left: -10px;
+        top: -15px;
+        transform: rotate(-90deg);
+    }
+    .one {
+        position: relative;
+        top: 1%;
+        left: 1%;
+        width: 99%;
+        height: 98%;
+    }
+    .two {
+        
+        top: 22%;
+        left: 20%;
+        width: 68%;
+        height: 68%;
+        border-radius: 50%;
+    }
+
+    /*.living-circle {
+        stroke-width: 30%;
+        stroke-dasharray: 40 130; 
+    }
+    .eating-circle {
+        stroke-width: 30%;
+        stroke-dasharray: 50 130; 
+    }
+    .moving-circle {
+        stroke-width: 30%;
+        stroke-dasharray: 60 130; 
+    }
+    .communicating-circle {
+        stroke-width: 30%;
+        stroke-dasharray: 70 130; 
+    }
+    .leisures-circle {
+        stroke-width: 30%;
+        stroke-dasharray: 80 130; 
+    }
+    .eating-circle {
+        stroke-width: 30%;
+        stroke-dasharray: 90 130; 
+    }
+    .take-care-of-yourself-circle {
+        stroke-width: 30%;
+        stroke-dasharray: 100 130; 
+    }
+    .working-circle {
+        stroke-width: 30%;
+        stroke-dasharray: 110 130; 
+    }
+    .dressing-circle {
+        stroke-width: 30%;
+        stroke-dasharray: 120 130; 
+    }*/
+
+    /* -------------------- */
+    /* -- graphs buttons -- */
+    /* -------------------- */
+
+    .monthly-graphs-buttons {
+        border: 2px solid #76afcd;
+        border-radius: 3px;
+        padding-right: 9px; padding-left: 9px;
+        padding-top: 3px; padding-bottom: 3px; width: 80px; font-size: 15px; margin-top: 30%; margin-left: 5%;
+    }
+    .annual-graphs-buttons {
+        border: 2px solid #76afcd;
+        color: white; border-radius: 3px;
+        padding-right: 9px; padding-left: 9px; padding-top: 3px;
+        padding-bottom: 3px; font-size: 15px; width: 80px; margin-top: 50%; margin-left: 5%;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .larger-than-767-px {
+        display: none;
+    }
+    
+    .smaller-than-768-px {
+        display: block;
+    }
+    
+    .enter-revenues-box {
+        /*font-size: x-large;*/
+    }
+    
+    .enter-spendings-box {
+        /*font-size: x-large;*/
+    }
+
+    /* --------- */
+    /* pie chart */
+    /* --------- */
+
+    .svg-max {
+        display: none;
+    }
+    
+    .svg-991 {
+        display: none;
+    }
+    
+    .svg-767 {
+        display: block;
+    }
+    
+    .svg-480 {
+        display: none;
+    }
+
+    .line-two {
+        margin-bottom: 10px;
+    }
+    .pie-chart-container {
+        width: 72px;
+        height: 72px;
+    }
+    .circle-one {
+        stroke-width: 30%;
+        /*stroke-dasharray: 100 150;*/
+    }
+    svg {
+        position: absolute;
+        left: -15px;
+        top: -5px;
+        transform: rotate(-90deg);
+    }
+    .one {
+        position: relative;
+        top: 1%;
+        left: 1%;
+        width: 99%;
+        height: 98%;
+    }
+    .two {
+        
+        top: 15%;
+        left: 5%;
+        width: 75%;
+        height: 75%;
+        border-radius: 50%;
+    }
+
+    /*.living-circle {
+        stroke-width: 30%;
+        stroke-dasharray: 40 130; 
+    }
+    .eating-circle {
+        stroke-width: 30%;
+        stroke-dasharray: 50 130; 
+    }
+    .moving-circle {
+        stroke-width: 30%;
+        stroke-dasharray: 60 130; 
+    }
+    .communicating-circle {
+        stroke-width: 30%;
+        stroke-dasharray: 70 130; 
+    }
+    .leisures-circle {
+        stroke-width: 30%;
+        stroke-dasharray: 80 130; 
+    }
+    .eating-circle {
+        stroke-width: 30%;
+        stroke-dasharray: 90 130; 
+    }
+    .take-care-of-yourself-circle {
+        stroke-width: 30%;
+        stroke-dasharray: 100 130; 
+    }
+    .working-circle {
+        stroke-width: 30%;
+        stroke-dasharray: 110 130; 
+    }
+    .dressing-circle {
+        stroke-width: 30%;
+        stroke-dasharray: 120 130; 
+    }*/
+
+    /* -------------------- */
+    /* -- graphs buttons -- */
+    /* -------------------- */
+
+    .monthly-graphs-buttons {
+        border: 2px solid #76afcd;
+        border-radius: 3px;
+        padding-right: 9px; padding-left: 9px;
+        padding-top: 3px; padding-bottom: 3px; width: 70px; font-size: 12px; margin-top: 30%; margin-left: 5%;
+    }
+    .annual-graphs-buttons {
+        border: 2px solid #76afcd;
+        color: white; border-radius: 3px;
+        padding-right: 9px; padding-left: 9px; padding-top: 3px;
+        padding-bottom: 3px; font-size: 12px; width: 70px; margin-top: 50%; margin-left: 5%;
+    }
+}
+
+@media screen and (max-width:520px) {
+    /* -------------------- */
+    /* -- graphs buttons -- */
+    /* -------------------- */
+
+    .monthly-graphs-buttons {
+        border: 2px solid #76afcd;
+        border-radius: 3px;
+        padding-right: 9px; padding-left: 9px;
+        padding-top: 3px; padding-bottom: 3px; width: 70px; font-size: 12px; margin-top: 30%; margin-left: 0%;
+    }
+    .annual-graphs-buttons {
+        border: 2px solid #76afcd;
+        color: white; border-radius: 3px;
+        padding-right: 9px; padding-left: 9px; padding-top: 3px;
+        padding-bottom: 3px; font-size: 12px; width: 70px; margin-top: 50%; margin-left: 0%;
+    }
+
+    .pie-charts-container {
+        display: none;
+    }
+}
+
+@media screen and (max-width:484px) {
+    .enter-revenues-box {
+        font-size: 6.3vw;
+    }
+
+    .enter-spendings-box {
+        font-size: 6.3vw;
+    }
+}
+
+@media screen and (max-width:480px) {
+    /* --------- */
+    /* pie chart */
+    /* --------- */
+
+    .svg-max {
+        display: none;
+    }
+    
+    .svg-991 {
+        display: none;
+    }
+    
+    .svg-767 {
+        display: none;
+    }
+    
+    .svg-480 {
+        display: block;
+    }
+
+    .line-two {
+        margin-bottom: 10px;
+    }
+    .pie-chart-container {
+        width: 72px;
+        height: 72px;
+    }
+    .circle-one {
+        stroke-width: 30%;
+        /*stroke-dasharray: 100 150;*/
+    }
+    svg {
+        position: absolute;
+        left: -15px;
+        top: -5px;
+        transform: rotate(-90deg);
+    }
+    .one {
+        position: relative;
+        top: 1%;
+        left: 1%;
+        width: 99%;
+        height: 98%;
+    }
+    .two {
+        top: 15%;
+        left: 5%;
+        width: 75%;
+        height: 75%;
+        border-radius: 50%;
+    }
+    .graphs-container {
+        margin-top: 1.5%;
+    }
+
+    /* ------------- */
+    /* end pie chart */
+    /* ------------- */
+
+    .ecran {
+        display: none;
+    }
+    
+    .mobile {
+        display: block;
+    }
+    
+    .title-budget-surplus {
+        font-size: 7.5vw;
+    }
+
+    .text-page-transition{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    
+    .text-page-transition p {
+        /*font-size: 3.5vw;*/
+        /*margin-left: 10px;
+        margin-right: 10px;
+        color: #539ac4;
+        text-align: center;*/
+        font-weight: 10vw;
+    }
+
+    h3 {
+        font-size: 5.5vw;
+    }
+
+    h2 {
+        font-size: 5vw;
+    }
+
+    .text-page-transition h3 {
+        font-size: 5.5vw;
+    }
+
+    .level-2-text h3 {
+        font-size: 5.5vw;
+        margin-bottom: 5%;
+    }
+
+    .title p {
+        /*font-size: 3.5vw;*/
+    }
+
+    /*.responsive-text {
+        font-size: 3.5vw;
+    }*/
+
+    .themes-title {
+        font-size: 5vw;
+    }
+
+    .enter-revenues-spendings-description {
+        font-size: 3.5vw;
+    }
+
+    .surplus-revenue-variation-title p{
+        /*font-weight: bold;*/
+        font-size: 4.5vw;
+    }
+
+    .info-text-rounded-white-section {
+        font-size: 3.5vw;
+    }
+
+    .budget-intro-text p {
+        /*margin-top: 26px;
+        margin-bottom: 60px;*/
+        font-size: 3.5vw;
+    }
+
+    .budget-surplus-title {
+        font-size: 6vw;
+    }
+
+    .plus-surplus-value-text {
+        font-size: 6vw;
+    }
+
+    .allocation-variation-spendings {
+        font-size: 3.5vw;
+    }
+
+    .dashboard-budget-program-text {
+        font-size: 3.5vw;
+    }
+
+    .level-2-paragraph {
+        font-size: 3.5vw;
+        margin-bottom: 4%;
+        margin-left: -4%;
+    }
+
+    .cliked-time-period-img {
+        height: 20px;
+    }
+    
+    .time-period-img {
+        height: 12px;
+    }
+
+    .centered-time-period-container {
+        margin-top: 12%;
+        
+    }
+
+    .budget-themes-title {
+        margin-bottom: 8%;
+    }
+
+    .budget-themes-title {
+        margin-top: 12%;
+    }
+
+    .sixth-question-text {
+        margin-top: 5%;
+        margin-bottom: 13%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .join-sl-community-button {
+        margin-bottom: 5%;
+    }
+
+    .join-sl-community-button img {
+        width: 54%;
+    }
+    
+    .n2 .debutprogramme img {
+        width: 60%;
+    }
+
+    .level-2-text{
+        margin-top: 7%;
+        margin-bottom: 7%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .n1 {
+        padding-top: 3%;
+    }
+
+    .title {
+        margin-bottom: 5%;
+    }
+
+    .title h3 {
+        margin-bottom: 5%;
+    }
+
+    .variation {
+        margin-top: 5%
+    }
+
+    .rounded-white-section {
+        margin-top: 8%;
+        margin-bottom: 8%;
+        padding: 2%;
+        border-radius: 5px;
+        text-align: center;
+        /*font-size: large*/;
+    }
+
+    .enter-spendings-box {
+        border: 2px solid white;
+    }
+
+    .determine-budget-title {
+        font-size: 4.5vw;
+    }
+
+    .n1 .revenues-spending-parenthesis-text {
+        color: white;
+        font-size: 3vw;
+    }
+    
+    .level-1-title {
+        color: white;
+    }
+
+    .budget-intro-text {
+        margin-top: 5%;
+        margin-bottom: 12%;
+    }
+
+    .budget-surplus-container {
+        margin-top: 5%;
+    }
+    
+    .themes-grid {
+        margin-top: 35px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .themes-grid .central-row {
+        margin-top: 15%;
+        margin-bottom: 15%;
+    }
+
+    /* -------------------- */
+    /* -- graphs buttons -- */
+    /* -------------------- */
+
+    .monthly-graphs-buttons {
+        border: 1px solid #76afcd;
+        border-radius: 8px;
+        padding-right: 9px; padding-left: 6px;
+        padding-top: 3px; padding-bottom: 3px; width: 90%; font-size: 2.5vw; margin-top: 30%; margin-left: 0%;
+    }
+    .annual-graphs-buttons {
+        border: 1px solid #76afcd;
+        color: white; border-radius: 8px;
+        padding-right: 9px; padding-left: 8px; padding-top: 3px;
+        padding-bottom: 3px; font-size: 2.5vw; width: 90%; margin-top: 50%; margin-left: 0%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .cliked-time-period-img {
+        height: 18px;
+    }
+    
+    .time-period-img {
+        height: 10px;
+    }
+}
+
+@media screen and (max-width:370px) {
+    /* -------------------- */
+    /* -- graphs buttons -- */
+    /* -------------------- */
+
+    .monthly-graphs-buttons {
+        padding-left: 3px;
+    }
+    .annual-graphs-buttons {
+        padding-left: 5px;
+    }
+}
+
+@media screen and (max-width:295px) {
+    .cliked-time-period-img {
+        height: 16px;
+    }
+    
+    .time-period-img {
+        height: 8px;
+    }
+}

@@ -1,0 +1,357 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/ambassadeur.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="row">
+    <header>
+        <div id="carousel-slp" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="{{ asset('images/ambassadeur/En-tête.jpg') }}"
+                        alt="Dashboard">
+                </div>
+            </div>
+            <div class="dropdown burger">
+                <a class="dropdown-item" style="padding: 0%;width:0%;" class="btn btn-secondary dropdown-toggle"
+                    href="{{ path('site_index') }}">
+                    <button class="btn btn-secondary dropdown-toggle"><i class="fa fa-home" style="font-size:24px"></i>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </header>
+</div>
+
+<div class="row">
+    <div id="about" class="about">
+            <h1> Ambassadeur of Gaia </h1>
+            <p> Le programme “ Ambassadeurs Gaia “ a pour but de permettre à tout individu le souhaitant de contribuer à son échelle à la mise en place de solutions destinées à lutter contre le changement climatique. 
+                Devenir ambassadeur Gaia, c’est donc partager sa sensibilité environnementale avec son cercle familial, affectif, et/ou professionnel.
+            </p>
+    </div>  
+</div>
+
+<div class="row no-gutters">
+    <div class="introambassadeur">
+        <h2> Qui peut devenir ambassadeur Gaia ?  </h2>
+            <img src="{{ asset('images/ambassadeur/Devenir-Ambassadeur.jpg') }}" alt="directory"> 
+            <p>Le programme ambassadeur Gaia s'adresse aux membres :</p>
+
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12 left">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-6 align-self-center image">
+                        <img src="{{ asset('images/ambassadeur/Membres-staff.jpg') }}" alt="directory">
+                        <p> Du staff de gaea21</p>
+                    </div> 
+                    <div class="col-md-6 col-sm-6 col-xs-6 align-self-center image">
+                        <img src="{{ asset('images/ambassadeur/Alumni.jpg') }}" alt="directory"> 
+                        <p>Alumni de gaea21</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6  image">
+                        <img src="{{ asset('images/ambassadeur/Membres-asso.jpg') }}" alt="directory"> 
+                        <p>De l’association gaea21</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6 image">
+                        <img src="{{ asset('images/ambassadeur/Membres-communauté.jpg') }}" alt="directory">
+                        <p> Des communautés gaea21 ( communautés SLP, GES, Répertoire vert)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6  col-sm-6 col-xs-12">
+                <img src="{{ asset('images/ambassadeur/flecheinscription.PNG') }}" alt="directory">   
+            </div>
+        </div>
+        
+    <div class="ambassadeur pc">           
+        <h2> Pourquoi devenir ambassadeur of Gaia ?</h2>
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="media">
+                    <img class="court align-self-start mr-5"src="{{ asset('images/ambassadeur/Créer.jpg') }}" alt="directory">
+                    <div class="media-body">
+                        <h1> Créer des events </h1>
+                        <p class="text-justify">Ces événements sont un moyen unique de sensibiliser vos proches au développement durable tout en passant un agréable moment.
+                        </p> 
+                    </div>
+                </div>
+                <div class="media">
+                    <img class="long align-self-start mr-5" src="{{ asset('images/ambassadeur/Impact_societaux.jpg') }}" alt="directory">
+                    <div class="media-body">
+                        <h1> Impacts sociétaux </h1>
+                        <p class="text-justify">Ces événements sont une superbe occasion de lutter contre l’isolement social
+                        et sensibiliser aux enjeux du développement durable. En devenant Ambassadeur of  Gaia
+                        vous devenez le fédérateur d’une communauté solidaire qui en se sensibilisant au développement durable,
+                        agit de façon positive pour la société et l'environnement.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="media">
+                    <img class="long align-self-start mr-5" src="{{ asset('images/ambassadeur/aider-la-planète.jpg') }}" alt="directory">
+                    <div class="media-body">
+                        <h1> Aider la planète </h1>
+                        <p class="text-justify">Sensibiliser ses proches aux enjeux du développement durable,
+                        c’est leur permettre d’agir pour protéger l’environnement !
+                        </p> 
+                    </div>
+                </div>
+                <div class="media">
+                    <img class="court align-self-start mr-5" src="{{ asset('images/ambassadeur/Formation.jpg') }}" alt="directory">
+                    <div class="media-body">
+                        <h1> Formation </h1>
+                        <p class="text-justify">Au côté des équipes GES et Community Management vous pourrez en apprendre d'avantage 
+                        sur l’organisation d’événement et ainsi vous former au métier de l’événementiel.
+                        </p> 
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <div class="ambassadeur mobile">       
+        <h2> Pourquoi devenir ambassadeur of Gaia ?</h2>
+
+            <div class="row">
+                <div class="col-xs-4 float-left">
+                    <img class="court" src="{{ asset('images/ambassadeur/Créer.jpg') }}" alt="directory"> 
+                </div>
+                <div class="col-xs-8">
+                    <p class="titre"> Créer des events </p>
+                    <p class="content">Ces événements sont un moyen unique de sensibiliser vos proches au développement durable tout en passant un agréablemoment</p> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4">
+                    <img class="court" src="{{ asset('images/ambassadeur/aider-la-planète.jpg') }}" alt="directory"> 
+                </div>
+                <div class="col-xs-8">
+                    <p class="titre"> Aider la planète </p>
+                    <p class="content">Sensibiliser ses proches aux enjeux du développement durable, c’est leur permettre d’agir pour protéger l’environnement !</p> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4">
+                    <img class="court" src="{{ asset('images/ambassadeur/Impact_societaux.jpg') }}" alt="directory">
+                </div>
+                <div class="col-xs-8">
+                    <p class="titre"> Impacts sociétaux </p>
+                    <p class="content">Ces événements sont une superbe occasion de lutter contre l’isolement social et sensibiliser aux enjeux du développement durable. En devenant Ambassadeur of  Gaia vous devenez le fédérateur d’une communauté solidaire qui en se sensibilisant au développement durable agit de façon positive pour la société et l'environnement.</p> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4">
+                    <img class="court" src="{{ asset('images/ambassadeur/Formation.jpg') }}" alt="directory"> 
+                </div>
+                <div class="col-xs-8">
+                    <p class="titre">Formation</p>
+                    <p class="content">Au côté des équipesbGES et Community Management vous pourrez en apprendre d'avantage sur l’organisation d’événement et ainsi vous former au métier de l’événementiel.</p> 
+                </div>
+            </div>
+        </div>
+
+<div class="selection">
+    <h2>Procédures et cheminement</h2>
+    <h3>1. Sélectionner, contacter et réunir les individus composant son réseau</h3>
+    <img src="{{ asset('images/ambassadeur/Sélection.jpg') }}" alt="directory"> 
+        <p class="spacer">Il s’agira en effet d’identifier parmi vos proches, dix personnes qui partageraient une sensibilité à la question climatique similaire à la vôtre 
+            et qui seraient intéressées/disponibles à l’idée de participer à un événement autour de thématiques spécifiques. 
+        </p>
+
+    <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-3">
+             <img class="réseaux d-none d-sm-block"src="{{ asset('images/ambassadeur/Mail_FB_Insta.jpg') }}" alt="directory">
+             <img  class="reseaux-resp d-block d-sm-none" src="{{ asset('images/ambassadeur/Mail_FB_Insta_Responsive.jpg') }}" alt="directory">
+        </div>
+        <div class="col-md-8 col-sm-8 col-xs-9">
+        <p class="réseauxp reseaux-resp">Entre ici les coordonnées des personnes que tu as choisies: cela peut ête un mail, la page Facebook d’un ami, ou son compte Instagram.
+        </p>
+        </div>
+        
+    </div>
+
+    <h2>Centres d'intérêt </h2>
+    <p> Attribuez à chaque membre de votre réseau un ou plusieurs intérêts !
+
+    <div class="interet">
+    <img src="{{ asset('images/ambassadeur/cercle2.PNG') }}" alt="directory"> 
+    </div>
+
+    </div>
+
+    <div class="row">
+        <div class="introambassadeur">
+        <h2>2. Créer le concept-event </h2>
+            <img src="{{ asset('images/ambassadeur/Créer-concept-event.jpg') }}" alt="directory"> 
+            <p class="text-justify">Il s’agit de réfléchir au type d’événement que vous souhaitez proposer à vos proches. 
+                Cet événement devra être un événement budget 0 mais pas de panique, les équipes GES, SLP, 
+                Répertoire Vert et Community Management
+                vous accompagneront lors de toutes les étapes de l’organisation de votre événement ! 
+            </p>
+        </div>
+
+        <div class="ambassadeur pc">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="media">
+                        <img class="long align-self-start mr-5" src="{{ asset('images/ambassadeur/Cafe.jpg') }}" alt="directory">
+                        <div class="media-body">
+                            <h1> Type d'events </h1>
+                            <p class="text-justify">Cet événement est avant tout le votre, c’est-à-dire
+                            que c’est à vous de choisir quel type d’événement
+                            proposer à vos proches. Que ce soit un goûter éco-responsable, 
+                            un atelier pour en apprendre plus sur les pratiques en lien avec le développement durable 
+                            ou encore une randonnée, vous avez carte blanche ! La seule contrainte est cependant celle
+                            du budget puisque l’événement doit être un événement budget 0. repas, drink, workshop, DIY, éco-atelier</p> 
+                        </div>
+                    </div>
+                    <div class="media">
+                        <img class="court align-self-start mr-5" src="{{ asset('images/ambassadeur/Public-cible.jpg') }}" alt="directory">
+                        <div class="media-body">
+                            <h1> Public cible</h1>
+                            <p class="text-justify">
+                            Vous êtes libre de choisir qui vous souhaitez inviter à votre événement. Amis, famille,
+                            voisins… l’important c’est que comme vous ils soient intéressés à en découvrir plus sur le développement durable !</p> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="media">
+                        <img class="court align-self-start mr-5" src="{{ asset('images/ambassadeur/Lieux.jpg') }}" alt="directory">
+                        <div class="media-body">
+                            <h1> Lieu </h1>
+                            <p class="text-justify">Nous vous encourageons grandement à réaliser
+                            votre événement chez vous ou chez vos proches afin de 
+                            respecter la contrainte du budget 0. Cependant si vous avez la possibilité de choisir
+                            un lieu autre et respectant cette contrainte alors n’hésitez pas, l’essentiel est que le
+                            lieu se prête à l’événement que vous souhaitez proposer.</p> 
+                        </div>
+                    </div>
+                    <div class="media">
+                        <img class="long align-self-start mr-5" src="{{ asset('images/ambassadeur/thème.jpg') }}" alt="directory">
+                        <div class="media-body">
+                            <h1> Thème </h1>
+                            <p class="text-justify">Pour choisir le thème de votre événement il vous suffit de vous poser la question 
+                                “Qu’est-ce qui dans le développement durable m’intéresse le plus ?”. Pour vous aider,
+                                vous pouvez également consulter  les thèmes de l’Agenda21. Le thème de votre événement sera votre fil 
+                                conducteur et vous permettra de mieux définir le type d’événement que vous souhaitez ainsi que les activités
+                                que vous proposerez.
+                            </p> 
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div> 
+        
+        <div class="ambassadeur mobile">       
+            <div class="row">
+                <div class="col-xs-4">
+                    <img class="court" src="{{ asset('images/ambassadeur/Cafe.jpg') }}" alt="directory"> 
+                </div>
+                <div class="col-xs-8">
+                    <p class="titre"> Type d'events </p>
+                    <p class="content">Cet événement est avant tout le votre, c’est-à-dire
+                    que c’est à vous de choisir quel type d’événement proposer à vos proches. Que ce soit un goûter éco-responsable,
+                    un atelier pour en apprendre plus sur les pratiques en lien avec le développement durable 
+                    ou encore une randonnée, vous avez carte blanche ! La seule contrainte est cependant celle
+                    du budget puisque l’événement doit être un événement budget 0. repas, drink, workshop, DIY, éco-atelier</p> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4">
+                    <img class="court" src="{{ asset('images/ambassadeur/Public-cible.jpg') }}" alt="directory"> 
+                </div>
+                <div class="col-xs-8">
+                    <p class="titre"> Public cible </p>
+                    <p class="content">Vous êtes libre de choisir qui vous souhaitez inviter à votre événement. Amis, famille,
+                voisins… l’important c’est que comme vous ils soient intéressés à en découvrir plus sur le développement durable !</p> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4">
+                    <img class="court" src="{{ asset('images/ambassadeur/Lieux.jpg') }}" alt="directory"> 
+                </div>
+                <div class="col-xs-8">
+                    <p class="titre"> Lieu</p>
+                    <p class="content">Nous vous encourageons grandement à réaliser votre événement chez vous ou chez vos proches afin de 
+                    respecter la contrainte du budget 0. 
+                    Cependant si vous avez la possibilité de choisir
+                    un lieu autre et respectant cette contrainte alors n’hésitez pas, l’essentiel est que le
+                    lieu se prête à l’événement que vous souhaitez proposer.</p> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4">
+                    <img class="court" src="{{ asset('images/ambassadeur/thème.jpg') }}" alt="directory"> 
+                </div>
+                <div class="col-xs-8">
+                    <p class="titre">Thème</p>
+                    <p class="content">Pour choisir le thème de votre événement il vous suffit de vous poser la question 
+                    “Qu’est ce qui dans le développement durable m’intéresse le plus ?”. Pour vous aider,
+                    vous pouvez également consulter  les thèmes de l’Agenda21. Le thème de votre événement sera votre fil 
+                    conducteur et vous permettra de mieux définir le type d’événement que vous souhaitez ainsi que les activités
+                    que vous proposerez.</p> 
+                </div>
+            </div>
+        </div>
+
+        <div class="selection">
+            <h2>3. Co-organiser l'événement </h2>
+            <img src="{{ asset('images/ambassadeur/coorganiser.PNG') }}" alt="directory"> 
+                <p class="spacer">Une fois fixé sur ce que vous souhaitez proposer à vos proches, il s’agira donc d’organiser l’événement !
+                    Pour cela, les équipes de Green Event Series et du Sustainable Living Program seront là pour vous conseiller et vous aider à organiser un événement à la hauteur de vos espérances. 
+                </p>
+
+            <div class="row align-items-center">
+                <div class="offset-md-2 col-md-2 offset-sm-2 col-sm-2 col-xs-3">
+                    <img class="mail"src="{{ asset('images/ambassadeur/Mail.jpg') }}" alt="directory"> 
+                </div>
+                <div class="col-md-8 col-sm-8 col-xs-9">
+                    <p class="réseauxp">Besoin d’aide ? Envoyez un message à notre équipe !
+                    </p>
+                </div>
+            </div>
+
+            <div class="selection">
+                <h2>4. Suivi et follow-up </h2>
+                <img src="{{ asset('images/ambassadeur/loupe.PNG') }}" alt="directory"> 
+                    <p class="spacer">L’organisation ainsi que les préparatifs de votre événement se sont déroulés pour le mieux ! 
+                        Il faut donc à présent développer votre communauté en créant un lien avec vos convives, ceci afin de vous assurer qu’ils se rendent à votre événement. 
+                        L’équipe Community Management, spécialisée dans le développement ainsi que la gestion de communautés, vous épaulera afin de mettre en place une stratégie de communication adaptée à votre événement.
+                    </p>
+            </div>
+
+            <div class="selection">
+                <h2>5. Classement </h2>
+                <img src="{{ asset('images/ambassadeur/classement.PNG') }}" alt="directory"> 
+                    <p class="spacer">Votre événement est terminé et il a été sans nul doute un véritable succès ! 
+                        Ce dernier va alors entrer dans le classement des événements “ Ambassadeur of Gaia “ classant les événements selon leur impact écologique et social. 
+                        Les ambassadeurs dont les événements font partie du top du classement recevront des prix. Alors n’attendez plus et faites de vos événements les meilleurs événements “ Ambassadeur of Gaia “
+
+                    </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    {# BOUTON DE PARTAGE SUR FACEBOOK #}
+    {{ include('site/partager_facebook.html.twig') }}
+
+<div class="col-12" >
+    {% include 'footer.html.twig' %}
+</div>
+
+{% endblock %}
+
+{% block javascripts %}
+
+<script link rel="stylesheet" href="{{ asset('js/bootstrap.min.js')}}"></script>
+
+
+{% endblock %}

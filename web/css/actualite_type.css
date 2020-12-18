@@ -1,0 +1,272 @@
+body{
+    font-family: Nunito sans-serif;
+    color: #646464;
+}
+
+.burger button {
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 1);
+    color: #539ac4;
+    border: solid 2px white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.burger {
+    position: absolute;
+    top: 3%;
+    right: 2%;
+}
+
+.dropdown-menu::before,
+.dropdown-menu::after {
+    border: none;
+    content: none;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+/* ------------------------------------------------
+MENU
+------------------------------------------------  */
+
+.container {
+    padding: 0;
+}
+
+
+/* ------------------------------------------------
+SLIDER
+------------------------------------------------  */
+.carousel-item {
+    background-color: #539ac4;
+
+}
+
+.carousel-caption {
+    margin: auto;
+    padding-bottom: 10%;
+}
+
+.carousel-item .intro h1 {
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    text-align: center;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.image-header {
+    opacity: 0.4;
+}
+
+
+
+/* Global */
+
+#title_page{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 50px;
+}
+
+.title_section {
+    background-color: #36667b;
+    height: 120px;
+    color: #fff;
+    font-weight: lighter !important;
+    font-size: 42px !important;
+    margin-bottom: 30px;
+}
+
+
+#presentation, #archive {
+    /*margin: 60px;*/
+    box-shadow: 0 0 20px grey;
+}
+
+#presentation, #archive p{
+    color: #646464;
+    font-size: 20px;
+}
+
+
+
+/* Section Landing Page */
+
+
+#presentation h2{
+    color: #646464;
+    font-weight: bold;
+}
+
+#presentation #intro, #presentation #last {
+    font-weight: bold;
+    font-style: italic;
+    margin: 20px 0 30px 0;
+}
+
+
+#logo_gaea21{
+    width: 60%;
+}
+
+/* Archives */
+
+.arch{
+    width: 22%; 
+    margin: 30px 1.5%;
+}
+.arch-text{
+    height: 197px;
+}
+.img-fluid{
+    height: 203px;
+    width: 100%;
+}
+
+#archive_actu_1{
+    margin: 0 50px 0 50px;
+}
+
+
+#archive  h1 {
+    font-weight: bold;
+    text-transform: uppercase;
+    /*min-height: 118px;*/
+    font-size: 27px;
+
+}
+
+
+#archive a {
+    color: #646464;
+    border: solid 3px #646464;
+    font-size: 22px;
+    padding: 7px;
+    text-decoration: none;
+    margin: 0 15%;
+    width: 70%;
+}
+
+#archive .row {
+    padding-bottom: 50px;
+}
+
+#archive .sizeMore {
+    font-size: 40px;
+    top: 7px;
+    position: relative;
+}
+
+/* Autres articles */
+
+
+/* Section 2 boutons */
+
+
+#section_btn {
+    margin: 40px 0 40px 0;
+}
+
+#section_btn a {
+    color: #646464;
+    border: solid 2px #646464;
+    border-radius: 7px;
+    font-size: 22px;
+    padding: 7px;
+    text-transform: uppercase;
+}
+
+
+/* Humans of GAEA */
+
+.banniere {
+    position: relative;
+}
+
+.link1 {
+    position: absolute;
+    top: 321px;
+    right: 470px;
+    width: 18%;
+
+}
+
+.link1 a, .link2 a, .link3 a {
+    color: red;
+    display: block;
+}
+
+
+.link2 {
+    position: absolute;
+    top: 634px;
+    right: 497px;
+    width: 12%;
+}
+
+
+.link3 {
+    position: absolute;
+    top: 1013px;
+    right: 727px;
+    width: 28%;
+}
+
+
+/* ------------------------------------------------
+FOOTER
+------------------------------------------------  */
+
+footer {
+    margin-top: 50px;
+}
+
+/* ------------------------------------------------
+RESPONSIVE
+------------------------------------------------  */
+
+
+@media screen and (min-width: 1200px) {
+
+    #archive h1 {
+        /*min-height: 80px;*/
+    }
+
+    #archive p {
+
+    }
+
+}
+
+@media screen and (max-width: 991px) {
+    #archive h1 {
+        /*min-height: 50px;*/
+        font-size: 23px;
+    }
+
+    #archive p{
+        min-height: 171px;
+    }
+
+    #archive a{
+        font-size: 19px;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+}
+
+
+@media screen and (max-width: 480px) {
+
+}

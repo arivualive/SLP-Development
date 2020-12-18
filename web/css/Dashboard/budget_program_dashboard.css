@@ -1,0 +1,273 @@
+.card-budget-dashboard {
+    text-align: center;
+}
+
+.intro-margin {
+    margin-bottom: 244px;
+}
+
+.img-program-icone {
+    width: 258px;
+    height: 258px;
+}
+
+.img-program-button {
+    margin-top: 39px;
+}
+
+.space-between-card-dashboard {
+    height: 116px;
+    width: 100%;
+}
+
+.space-between-card-dashboard-small {
+    height: 97px;
+    width: 100%;
+}
+
+.description-budget-dashboard {
+    min-height: 216px;
+}
+
+.lancez-vous {
+    width: 100%;
+    height: 89px;
+}
+
+.lancez-vous-manger {
+    background: url("../../images/dashboard/budget/program-dashboard/lancez-vous-manger.png") center no-repeat;
+    background-size: contain;
+}
+
+.lancez-vous-manger:hover {
+    background: url("../../images/dashboard/budget/program-dashboard/lancez-vous-manger-selectionne.png") center no-repeat;
+    background-size: contain;
+}
+
+.lancez-vous-prendre-soin-de-soi {
+    background: url("../../images/dashboard/budget/program-dashboard/lancez-vous-prendre-soin-de-soi.png") center no-repeat;
+    background-size: contain;
+}
+
+.lancez-vous-prendre-soin-de-soi:hover {
+    background: url("../../images/dashboard/budget/program-dashboard/lancez-vous-prendre-soin-de-soi-selectionne.png") center no-repeat;
+    background-size: contain;
+}
+
+.lancez-vous-se-deplacer {
+    background: url("../../images/dashboard/budget/program-dashboard/lancez-vous-se-deplacer.png") center no-repeat;
+    background-size: contain;
+}
+
+.lancez-vous-se-deplacer:hover {
+    background: url("../../images/dashboard/budget/program-dashboard/lancez-vous-se-deplacer-selectionne.png") center no-repeat;
+    background-size: contain;
+}
+
+.lancez-vous-travailler {
+    background: url("../../images/dashboard/budget/program-dashboard/lancez-vous-travailler.png") center no-repeat;
+    background-size: contain;
+}
+
+.lancez-vous-travailler:hover {
+    background: url("../../images/dashboard/budget/program-dashboard/lancez-vous-travailler-selectionne.png") center no-repeat;
+    background-size: contain;
+}
+
+.lancez-vous-shabiller {
+    background: url("../../images/dashboard/budget/program-dashboard/lancez-vous-shabiller.png") center no-repeat;
+    background-size: contain;
+}
+
+.lancez-vous-shabiller:hover {
+    background: url("../../images/dashboard/budget/program-dashboard/lancez-vous-shabiller-selectionne.png") center no-repeat;
+    background-size: contain;
+}
+
+.lancez-vous-communiquer {
+    background: url("../../images/dashboard/budget/program-dashboard/lancez-vous-communiquer.png") center no-repeat;
+    background-size: contain;
+}
+
+.lancez-vous-communiquer:hover {
+    background: url("../../images/dashboard/budget/program-dashboard/lancez-vous-communiquer-selectionne.png") center no-repeat;
+    background-size: contain;
+}
+
+.lancez-vous-se-distraire {
+    background: url("../../images/dashboard/budget/program-dashboard/lancez-vous-se-distraire.png") center no-repeat;
+    background-size: contain;
+}
+
+.lancez-vous-se-distraire:hover {
+    background: url("../../images/dashboard/budget/program-dashboard/lancez-vous-se-distraire-selectionne.png") center no-repeat;
+    background-size: contain;
+}
+
+.lancez-vous-habiter {
+    background: url("../../images/dashboard/budget/program-dashboard/lancez-vous-habiter.png") center no-repeat;
+    background-size: contain;
+}
+
+.lancez-vous-habiter:hover {
+    background: url("../../images/dashboard/budget/program-dashboard/lancez-vous-habiter-selectionne.png") center no-repeat;
+    background-size: contain;
+}
+
+.title-icone {
+    margin-top: 26px;
+    margin-bottom: 73px;
+}
+
+.title-manger {
+    color: #4fd568;
+}
+
+.title-prendre-soin-de-soi {
+    color: #ff5e2e;
+}
+
+.title-se-deplacer {
+    color: #eca8e9;
+}
+
+.title-travailler {
+    color: #fb8056;
+}
+
+.title-shabiller {
+    color: #ad7afd;
+}
+
+.title-communiquer {
+    color: #f08608;
+}
+
+.title-se-distraire {
+    color: #4378ff;
+}
+
+.title-habiter {
+    color: #1ed3e8;
+}
+
+@media screen and (max-width: 1081px) {
+
+    .description-budget-dashboard {
+        min-height: 300px;
+    }
+
+}
+
+@media screen and (max-width:991px) {
+    .intro-margin {
+        margin-bottom: 122px;
+    }
+
+    .img-program-icone {
+        width: 128px;
+        height: 128px;
+    }
+
+    .img-program-button {
+        width: 172px;
+        height: 44px;
+        margin-top: 39px;
+        background-size: contain;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .description-budget-dashboard {
+        min-height: 300px;
+    }
+
+    .space-between-card-dashboard {
+        height: 56px;
+    }
+
+    .space-between-card-dashboard-small {
+        height: 56px;
+    }
+}
+
+@media screen and (max-width: 860px){
+    .description-budget-dashboard p {
+        font-size: 1em;
+    }
+    .img-program-icone {
+        width: 64px;
+        height: 64px;
+    }
+    .title-icone {
+        margin-bottom: 24px;
+        margin-top: 8px;
+    }
+    .img-program-button {
+        margin-top: 17px;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .description-budget-dashboard {
+        min-height: 340px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .description-budget-dashboard {
+        min-height: 360px;
+    }
+    .introduction p {
+        font-size: 1em;
+    }
+    .space-between-card-dashboard {
+        height: 28px;
+    }
+    .space-between-card-dashboard-small {
+       height: 28px;
+    }
+    .intro-margin {
+        margin-bottom: 61px;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .img-program-button {
+        width: 107px;
+        height: 27px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title-icone {
+        height: 51px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .description-budget-dashboard {
+        min-height: 400px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .description-budget-dashboard {
+        min-height: 441px;
+    }
+}
+
+@media screen and (max-width: 380px){
+    .description-budget-dashboard {
+        min-height: 483px;
+    }
+    .img-program-button {
+        width: 86px;
+        height: 22px;
+    }
+}
+@media screen and (max-width: 320px){
+    .description-budget-dashboard {
+        min-height: 525px;
+    }
+}

@@ -1,0 +1,346 @@
+{# variable qui permet de ce retrouver dans les numeros de questions en cas de reprise de formulaire #}
+<style>
+    .save-n-quit {
+        background-color: #539ac4;
+        color: #fff;
+        text-transform: uppercase;
+        border: none;
+        outline: none;
+        height: 38px;
+        padding: 10px;
+    }
+</style>
+
+{% set questionnumber = 0 %}
+
+{% if formPsycho == 1  %}
+
+{% for question in questions %}
+
+{% set questionnumber =  questionnumber + 1 %}
+
+
+<div class="container question-box" style="display: none;background-color: white;" id="container{{question.number}}">
+
+    <div class="row" style="padding-right:15px;padding-left:15px;">
+        <h4 class="blue-title col-12" style="margin-top:0">{{ question.theme.name}}
+            <img src="{{ asset('images/survey/theme/' ~ question.theme.favicon ~ '') }}" style="width : 35px;">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+        </h4>
+    </div>
+
+    <form class="form-group" id="form{{question.id}}" action="{{ path('answer_save') }}" method="POST">
+        <h4 style="margin-left:15px;">{{questionnumber}}.{{question.question}}</h4>
+        <div class="row">
+            <div class="answer-box offset-1 col-8">
+                {% if question.number == 30  or question.number == 34 
+                    or question.number == 35 or question.number == 36 or question.number == 37 %}
+                <div class="humeur-visage">
+                    <div class="img-rouge"><img src="{{ asset('images/survey/rouge.jpg') }}"
+                            style="width: 50px; height: 50px;"></div>
+                    <div class="img-orange"><img src="{{ asset('images/survey/orange.jpg') }}"
+                            style="width:  50px; height: 50px;"></div>
+                    <div class="img-vert-clair"><img src="{{ asset('images/survey/vert clair.jpg') }}"
+                            style="width:  50px; height: 50px;"></div>
+                    <div class="img-vert-mediant"><img src="{{ asset('images/survey/vert mediant.jpg') }}"
+                            style="width:  50px; height: 50px;"></div>
+                    <div class="img-vert-fonce"><img src="{{ asset('images/survey/vert foncé.jpg') }}"
+                            style="width:  50px; height: 50px;"></div>
+
+                </div>
+                {% endif %}
+
+                {% if  question.number == 31 %}
+                <div class="humeur-visage">
+                    <div class="img-rouge"><img src="{{ asset('images/survey/humeur-vert/vrai.jpg') }}"
+                            style="width:  50px; height: 50px;"></div>
+                    <div class="img-orange"><img src="{{ asset('images/survey/humeur-vert/plutot-vrai.jpg') }}"
+                            style="width:  50px; height: 50px;"></div>
+                    <div class="img-vert-clair"><img src="{{ asset('images/survey/humeur-vert/plutot-faux.jpg') }}"
+                            style="width:  50px; height: 50px;">
+                    </div>
+                    <div class="img-vert-mediant"><img src="{{ asset('images/survey/humeur-vert/faux.jpg') }}"
+                            style="width:  50px; height: 50px;"></div>
+
+
+                </div>
+                {% endif %}
+
+                {# traitement des sous question #}
+                {% if  question == "Question_master" or question == "Conditional_question_master" %}
+
+                {% for subQuestion in question.subQuestions %}
+                <div class="sub-answer-box offset-2 col-10 d-flex" style="margin-left: 0;max-width: 100%;">
+
+
+                    {% if subQuestion == "Sub_question_choice" %}
+
+                    {% if subQuestion.isUnique %}
+                    <div class="label-div" style="width: 480px;">
+                        {% if subQuestion.master %}
+                        <div class="col-6" style="max-width:100%;">
+                            <h4>{{subQuestion.question}}</h4>
+
+                        </div>
+                        {% endif %}
+
+                        {% if question.number == 38 %}
+                        <div class="label-div" style="width: 480px;">
+                            {% for choice in subQuestion.choices %}
+
+                            <label for="choice{{choice.id}}" style="margin:8px;" id="labelchoice{{choice.id}}">
+                                <img src="{{ asset('images/survey/' ~ choice.picture ~ '') }}"
+                                    style=" width: 400px;"></label><br>
+                            <input type="checkbox" id="choice{{choice.id}}" {% if choice.conditional %}
+                                class="decisivechoice checkbox-pict" {% else %} class=" normalchoice checkbox-pict"
+                                {% endif %} value="{{choice.id}}" name="{{subQuestion.id}}">
+                            {% endfor %}
+                        </div>
+                        {% else %}
+
+                        <div class="label-div" style="width: 480px;">
+                            {% for choice in subQuestion.choices %}
+                            <label for="choice{{choice.id}}" style="margin:8px" ; id="labelchoice{{choice.id}}"><img
+                                    src="{{ asset('images/survey/' ~ choice.picture ~ '') }}"></label>
+                            <input type="radio" id="choice{{choice.id}}" {% if choice.conditional %}
+                                class="decisivechoice radio-pict" {% else %} class="normalchoice radio-pict" {% endif %}
+                                value="{{choice.id}}" name="{{subQuestion.id}}">
+                            {% endfor %}
+                        </div>
+
+                        {% endif %}
+                    </div>
+
+                    {% else %}
+
+
+                    <div class="label-div" style="width: 480px;">
+                        {% for choice in subQuestion.choices %}
+
+                        <label for="choice{{choice.id}}" style="margin:8px;" id="labelchoice{{choice.id}}">
+                            <img src="{{ asset('images/survey/' ~ choice.picture ~ '') }}"
+                                style=" width: 80px;"></label>
+                        <input type="checkbox" id="choice{{choice.id}}" {% if choice.conditional %}
+                            class="decisivechoice checkbox-pict" {% else %} class=" normalchoice checkbox-pict"
+                            {% endif %} value="{{choice.id}}" name="{{subQuestion.id}}">
+                        {% endfor %}
+                    </div>
+
+
+                    {% endif %}
+
+
+                    {#--------------------Sub_question_scale-------------------------#}
+
+
+                    {% elseif subQuestion == "Sub_question_scale" %}
+
+                    <div class="col-6">
+                        <div class="sub-question-left">
+                            <p style=" color: white;font-size: 11px;">{{subQuestion.question}}</p>
+                        </div>
+                        <div class="sub-question-right">
+                            <label class="go" id="{{subQuestion.id}}">
+                                <img src="{{asset('images/survey/' ~ subQuestion.id ~ '.jpg')}}"
+                                    style="height: 60px;width: 60px;"></label>
+                        </div>
+                    </div>
+
+                    {% if question.number == 31 %}
+                    <div class="col-6 d-flex">
+                        <div class="label-div1">
+                            {% for i in 1.. subQuestion.scaleType.choiceNumber %}
+                            <label for="subscale{{subQuestion.id}}for{{i}}" style="margin:3px;"><img
+                                    src="{{asset('images/survey/humeur-vert/'~ i ~'.jpg')}}"
+                                    style="width:  50px; height: 50px;">
+                            </label>
+                            <input type="radio" class="radio-pict" name="{{subQuestion.id}}"
+                                id="subscale{{subQuestion.id}}for{{i}}" value="{{i}}">
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    {% else %}
+
+                    <div class="col-6 d-flex">
+                        <div class="label-div1">
+                            {% for i in 1.. subQuestion.scaleType.choiceNumber %}
+                            <label for="subscale{{subQuestion.id}}for{{i}}" style="margin:3px;"><img
+                                    src="{{asset('images/survey/humeur/'~ i ~'.jpg')}}"
+                                    style="width:  50px; height: 50px;">
+                            </label>
+                            <input type="radio" class="radio-pict" name="{{subQuestion.id}}"
+                                id="subscale{{subQuestion.id}}for{{i}}" value="{{i}}">
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}{# fin du if question 31 #}
+
+                    {#--------------------Sub_question_free-------------------------#}
+
+                    {% elseif subQuestion == "Sub_question_free" %}
+
+                    <div class="free-answer-box" style="margin : 8px;">
+                        <label for="subfree{{subQuestion.id}}">{{subQuestion.question}}</label><br>
+                        <input type="text" id="subfree{{subQuestion.id}}" name="{{subQuestion.id}}" value=""
+                            placeholder="Champ de réponse libre">
+                    </div>
+
+                    {% endif %}
+
+                </div>
+                {% endfor %}
+
+                {# ----------------------question de choix------------------------------ #}
+                {% elseif  question == "Question_choice" or question == "Conditional_question_choice" %}
+
+                {% if question.isUnique %}{# si la question est de type btn radio un choix possible #}
+
+
+
+                {% if question.number == 34 %}{#---question 34 elle est a choix unique mais a un design bien specifique----- #}
+                <div class="quest34">
+
+                    <div class="question-34" style="width: 360px;display:inline-block">
+                        {% for choice in question.choices %}
+                        <label for="choice{{choice.id}}" style="margin:8px" ; id="labelchoice{{choice.id}}">
+                            <img src="{{ asset('images/survey/' ~ choice.picture ~ '') }}"
+                                style="width:310px;height:60px;"></label>
+                        {% endfor %}
+                    </div>
+
+                    <div class="special34" style="float:right;margin-right:50px">
+
+                        {% for choice in question.choices %}
+                        <div class="col-6" style="max-width:100%;margin-bottom: 20px;margin-top: 10px;">
+                            <div class="label-div1">
+                                {% for i in 1.. 5 %}
+                                <label for="choix-a-echelle{{choice.id}}for{{i}}" style="margin:3px;"><img
+                                        src="{{asset('images/survey/humeur/'~ i ~'.jpg')}}"
+                                        style="width:  50px; height: 50px;">
+                                </label>
+                                <input type="radio" class="radio-pict" name="{{choice.id}}"
+                                    id="choix-a-echelle{{choice.id}}for{{i}}" value="{{i}}">
+                                {% endfor %}
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+
+                {% if question.number != 34 %}
+                {#-----------je fais un design general pour les question de choix--------#}
+
+                <div class="label-div" style="width: 480px;">
+                    {% for choice in question.choices %}
+                    <label for="choice{{choice.id}}" style="margin:8px" ; id="labelchoice{{choice.id}}">
+                        <img src="{{ asset('images/survey/' ~ choice.picture ~ '') }}"> </label>
+                    <input type="radio" id="choice{{choice.id}}" {% if choice.conditional %}
+                        class="decisivechoice radio-pict" {% else %} class="normalchoice radio-pict" {% endif %}
+                        value="{{choice.id}}" name="{{question.id}}">
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                {% else %}{#---sinon je crée pour les autres question de choix de type chexckbox (a multi-choix)---#}
+
+
+
+
+
+
+                {% endif %}{# fin if is unique #}
+
+
+                {# Question libre #}
+                {% elseif question == "Question_free" or question == "Conditional_question_free" %}
+
+                <div class="free-answer-box">
+                    <input type="text" style="margin-left: 15px;" id="free{{question.id}}" name="{{question.id}}"
+                        value="" placeholder="Champ de réponse libre">
+                </div>
+
+
+                {# question a echelle #}
+                {% elseif question == "Question_scale" %}
+
+                <div class="col-6">
+
+                    <div class="label-div" style="width: 450px;">
+                        {% for i in 1..10 %}
+                        <label for="scale{{question.id}}for{{i}}" style="margin:3px;"><img
+                                src="{{asset('images/survey/'~ i ~'.jpg')}}"></label>
+                        <input type="radio" class="radio-pict" name="{{question.id}}" id="scale{{question.id}}for{{i}}"
+                            value="{{i}}">
+                        {% endfor %}
+                    </div>
+
+                </div>
+                {% endif %}
+            </div>{# fin de answer-box col 8  #}
+
+
+
+            {# affichage de l encart pour le dashboard #}
+            <div class="info-box col-3">
+                <div class="info-box-div">
+                    <img src="{{ asset('images/dashboard.png') }}" alt="logo dashboard">
+                    <p>Votre dashboard actif dès la fin du questionnaire !</p>
+                </div>
+            </div>
+        </div>
+
+        {# gestion des bouttons #}
+        <div id="button{{question.id}}" class="button-box col-9">
+            {% if question.number > 1 %}
+            <button type="submit" data-number="{{question.number}}" class="precedent side-arrow">
+                <div class="arrow-button">
+                    <div class="cadre2"></div>
+                    <div class="cadre1"><span class="left-arrow">{{question.number - 1}}</span></div>
+                </div>
+            </button>
+            {% endif %}
+            <button class="save-n-quit">Enregistrer</button>
+            {% if questionnumber < questions|length %}
+            <button type="submit" data-number="{{question.number}}" class="suivant side-arrow"
+                data-formid="form{{question.id}}" id="suivant{{question.id}}">
+                <div class="arrow-button">
+                    <div class="cadre1"><span class="right-arrow">{{question.number + 1}}</span></div>
+                    <div class="cadre3"></div>
+                </div>
+            </button>
+            {% else %}
+            <button type="submit" id="termine" data-number="{{question.number}}" data-user="{{userslp.id}}"
+                data-formid="form{{question.id}}" class="termine save-n-quit">Terminer</button>
+            {% endif %}
+        </div>
+    </form>
+</div>
+
+
+
+
+
+{% endfor %}{#------fin du foreach question-------#}
+
+{% endif %}{#---fin du if---form est egale "0" ou "1"#}
+
+
+
+
+<div class="notif-end" style="display:none">
+    <div class="bandeau-end"></div>
+    <p>Vous venez de finir le Questionnaire Psychologique
+        Remplissez maintenant le questionnaire écologique,<br><br>
+        Ainsi que les questionnaires par thématiques pour créer le contenu de votre dashboard!
+        Il sera composé d’une page de profil personnalisé, d’un feed d’actualités,
+        et d’informations et conseils pour devenir davantage éco-responsable!
+    </p>
+    <button type="button" class="btn-notif-end" style="margin-left: 500px;padding: 5px;"
+        data-dismiss="modal">Continuer</button>
+</div>
+
+
+</div>

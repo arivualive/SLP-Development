@@ -1,0 +1,162 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/actualite_type.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+{% endblock %}
+
+{% block body %}
+
+    <header>
+        <div class="row">
+            <div class="col-12">
+                <div id="carousel-slp" class="carousel slide" data-ride="carousel">
+
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <img class="d-block w-100 image-header img-responsive"
+                                 src="{{ asset('images/landing-page/header.png') }}"
+                                 alt="Dashboard">
+                            <div class="carousel-caption d-none d-block intro col-6 top-adjust">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown burger">
+                        <a class="dropdown-item btn btn-secondary dropdown-toggle"
+                           href="{{ path('site_index') }}">
+                            <button class="btn btn-secondary dropdown-toggle"><i class="fa fa-home"
+                                                                                 style="font-size:24px"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <h1 class="text-center title_page"> Actualités</h1>
+
+
+    <section>
+        <div class="col-12">
+            <img class="img-fluid" src="{{ asset('images/landing-page/bloc_article.png') }}" alt="bloc article">
+        </div>
+    </section>
+
+
+    <section id="archive">
+        <h1 class="d-flex align-items-center d-flex justify-content-center" id="title_archive"> Archives </h1>
+        <div class="row">
+            <div class="col-3">
+                <img class="img-fluid" src="{{ asset('images/landing-page/image_type_bloc_archive.png') }}"
+                     alt="bloc archive">
+                <h1>la plate-forme SLP</h1>
+                <p> Programme innovant de mesure de sensibilisation</p>
+                <a href="#">en savoir <span class="sizeMore">+ </span></a>
+            </div>
+            <div class="col-3">
+                <img class="img-fluid" src="{{ asset('images/landing-page/image_type_bloc_archive.png') }}"
+                     alt="bloc archive">
+                <h1>Titre same size</h1>
+                <p>Texte explicatif Lorem ipsum dolor sit amet, consecte-Lorem ipsum Dolor</p>
+                <a href="#">en savoir <span class="sizeMore">+ </span></a>
+            </div>
+            <div class="col-3">
+                <img class="img-fluid" src="{{ asset('images/landing-page/image_type_bloc_archive.png') }}"
+                     alt="bloc archive">
+                <h1>Titre</h1>
+                <p>Texte explicatif Lorem ipsum dolor sit amet, consecte-Lorem ipsum Dolor</p>
+                <a href="#">en savoir <span class="sizeMore">+ </span></a>
+            </div>
+            <div class="col-3">
+                <img class="img-fluid" src="{{ asset('images/landing-page/image_type_bloc_archive.png') }}"
+                     alt="bloc archive">
+                <h1>Titre</h1>
+                <p>Texte explicatif Lorem ipsum dolor sit amet, consecte-Lorem ipsum Dolor</p>
+                <a href="#">en savoir <span class="sizeMore">+ </span></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <img class="img-fluid" src="{{ asset('images/landing-page/image_type_bloc_archive.png') }}"
+                     alt="bloc archive">
+                <h1>LA PLATE-FORME SLP</h1>
+                <p>Texte explicatif Lorem ipsum dolor sit amet, consecte-Lorem ipsum Dolor</p>
+                <a href="#">en savoir <span class="sizeMore">+ </span></a>
+            </div>
+            <div class="col-3">
+                <img class="img-fluid" src="{{ asset('images/landing-page/image_type_bloc_archive.png') }}"
+                     alt="bloc archive">
+                <h1>Titres same size</h1>
+                <p>Texte explicatif Lorem ipsum dolor sit amet, consecte-Lorem ipsum Dolor</p>
+                <a href="#">en savoir <span class="sizeMore">+ </span></a>
+            </div>
+            <div class="col-3">
+                <img class="img-fluid" src="{{ asset('images/landing-page/image_type_bloc_archive.png') }}"
+                     alt="bloc archive">
+                <h1>Titre</h1>
+                <p>Texte explicatif Lorem ipsum dolor sit amet, consecte-Lorem ipsum Dolor</p>
+                <a href="#">en savoir <span class="sizeMore">+ </span></a>
+            </div>
+            <div class="col-3">
+                <img class="img-fluid" src="{{ asset('images/landing-page/image_type_bloc_archive.png') }}"
+                     alt="bloc archive">
+                <h1>Titre</h1>
+                <p>Texte explicatif Lorem ipsum dolor sit amet, consecte-Lorem ipsum Dolor</p>
+                <a href="#">en savoir <span class="sizeMore">+ </span></a>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="col-12">
+            <img class="img-fluid" src="{{ asset('images/landing-page/bloc_carres.png') }}" alt="autres articles">
+        </div>
+    </section>
+
+
+    <section id="section_btn">
+        <div class="row">
+            <div class="offset-2 col-4 text-center">
+                <a href="{{ path('actualite_dashboard') }}">Retour menu actualités </a>
+            </div>
+
+            <div class="col-4 text-center">
+                <a href="{{ path('presentationdashboard') }}">Retour au dashboard </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="col-12 banniere">
+            <img class="img-fluid" src="{{ asset('images/landing-page/bloc_banniere_2.png') }}" alt="autres articles">
+            <div class="link1">
+                <a href="{{ path('humans') }}"> Cliquez-ici 1</a>
+            </div>
+            <div class="link2">
+                <a href="{{ path('ambassadeur') }}"> Cliquez-ici 2</a>
+            </div>
+            <div class="link3">
+                <a href="{{ path('community') }}"> Cliquez-ici 3</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="col-12">
+            {% include 'footer.html.twig' %}
+        </div>
+    </footer>
+{% endblock %}
+
+{% block javascripts %}
+    <script link rel="stylesheet" href="{{ asset('js/jquery.min.js') }}"></script>
+    <script link rel="stylesheet" href="{{ asset('js/bootstrap.min.js') }}"></script>
+
+
+{% endblock %}

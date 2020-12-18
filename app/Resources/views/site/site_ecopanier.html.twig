@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eco Panier</title>
+  <!-- Bootstrap -->
+  <link href="{{ asset('bundles/ecopanier/css/bootstrap-4.0.0.css') }}" rel="stylesheet">
+
+  <link href="{{ asset('bundles/ecoatelier/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:300,400,700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+
+  <!-- Custom CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link href="{{ asset('bundles/ecopanier/fonts/Gotham-Font/GothamMedium.ttf') }}">
+  <link href="{{ asset('bundles/ecopanier/fonts/Roboto/Roboto-Medium.ttf') }}">
+  <link href="{{ asset('bundles/ecopanier/css/ecopanier.css') }}" rel="stylesheet">
+
+
+
+
+
+  <script type="text/javascript">
+    function MM_swapImgRestore() { //v3.0
+      var i, x, a = document.MM_sr; for (i = 0; a && i < a.length && (x = a[i]) && x.oSrc; i++) x.src = x.oSrc;
+    }
+    function MM_preloadImages() { //v3.0
+      var d = document; if (d.images) {
+        if (!d.MM_p) d.MM_p = new Array();
+        var i, j = d.MM_p.length, a = MM_preloadImages.arguments; for (i = 0; i < a.length; i++)
+          if (a[i].indexOf("#") != 0) { d.MM_p[j] = new Image; d.MM_p[j++].src = a[i]; }
+      }
+    }
+
+    function MM_findObj(n, d) { //v4.01
+      var p, i, x; if (!d) d = document; if ((p = n.indexOf("?")) > 0 && parent.frames.length) {
+        d = parent.frames[n.substring(p + 1)].document; n = n.substring(0, p);
+      }
+      if (!(x = d[n]) && d.all) x = d.all[n]; for (i = 0; !x && i < d.forms.length; i++) x = d.forms[i][n];
+      for (i = 0; !x && d.layers && i < d.layers.length; i++) x = MM_findObj(n, d.layers[i].document);
+      if (!x && d.getElementById) x = d.getElementById(n); return x;
+    }
+
+    function MM_swapImage() { //v3.0
+      var i, j = 0, x, a = MM_swapImage.arguments; document.MM_sr = new Array; for (i = 0; i < (a.length - 2); i += 3)
+        if ((x = MM_findObj(a[i])) != null) { document.MM_sr[j++] = x; if (!x.oSrc) x.oSrc = x.src; x.src = a[i + 2]; }
+    }
+  </script>
+
+</head>
+
+<body
+  onLoad="MM_preloadImages('{{ asset('bundles/ecopanier/images/ecopanier/navigation/ban_inscription_hover.png') }}')">
+
+
+  <!--SECTION NAVBAR -->
+  <div class="dropdown fixed-top" id="navbar"><button class="btn btn-primary dropdown-toggle dropdown_btn"
+      data-toggle="dropdown" aria-expanded="false" type="button"></button>
+    <div class="dropdown-menu" role="menu">
+      <a class="dropdown-item" role="presentation" href="{{ path('site_index') }}">Page d&#39;accueil</a>
+      <a class="dropdown-item" role="presentation" href="#">Page 1 (en cours)</a>
+      <a class="dropdown-item" role="presentation" href="#">Page 2 (en cours)</a>
+      <a class="dropdown-item" role="presentation" href="#">Page 3 (en cours)</a>
+      <a class="dropdown-item" role="presentation" href="#">Page 4 (en cours)</a>
+      <a class="dropdown-item" role="presentation" href="#">Page 5 (en cours)</a>
+      <a class="dropdown-item" role="presentation" href="#">Page 6 (en cours)</a>
+    </div>
+
+  </div>
+
+
+
+
+  <!-- Header -->
+  <div class="jumbotron hero-photography">
+    <div class="header_icon"><img src="{{ asset('bundles/ecopanier/images/ecopanier/header_icon.png') }}"
+        id="header_btn"></div>
+    <h1>LES ÉCO-PANIERS</h1>
+    <!--<div><a href="#section_atelier" class="header_btn"><img src="{{ asset('bundles/ecoatelier/img/icoheader.png') }}" id="header_btn"></a></div> -->
+  </div>
+
+
+
+  <!-- Composition -->
+  <section id="composition">
+    <div class="container-fluid">
+      <div class="row text-center composition_h2">
+        <div class="col-xl-12 d-flex align-items-center justify-content-center">
+          <h2>LA COMPOSITION DES PANIERS</h2>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-xl-6">
+          <div class="composition-backbox">
+            <h3 class="mt-4">Le classique</h3>
+            <div>
+              <h4 class="mt-5">Economique</h4> <br>
+              <p>
+                Saucisson ou viande séchée * (boeuf) <br>
+                Mélange de crudités, oeuf dur, sauce (petites carottes, tomates cerises et radis) <br>
+                Fruits : pêche (200g) et abricots (83g) <br>
+                Gruyère <br>
+                Jus de pomme de la région (50cl) <br>
+                Pain rustique
+              </p>
+            </div>
+            <hr class="style5">
+            <div>
+              <h4>Middle</h4> <br>
+              <p> Saucisson ou viande séchée (boeuf) * <br>
+                Mélange de crudités, oeuf dur, sauce (petites carottes, tomates cerises et radis) <br>
+                Fruits : pêche (200g) et abricots (83g) <br>
+                Gruyère <br>
+                Jus de pomme de la région (50cl) <br>
+                Vin de la région de Genève - gamay de satigny AOC (50cl) <br>
+                Pain rustique
+              </p>
+            </div>
+            <hr class="style5">
+            <div>
+              <h4>Premium</h4> <br>
+              <p>
+                Saucisson ou viande séchée (boeuf) * <br>
+                Terrine <br>
+                Mélange de crudités, oeuf dur, sauce (petites carottes, tomates cerises et radis) <br>
+                Noix (250g) <br>
+                Fruits : pêche (200g) et abricots (83g) <br>
+                Gruyère <br>
+                Jus de pomme de la région (50cl) <br>
+                Vin de la région de Genève (50cl) - Pinot noir Grande Réserve AOC <br>
+                Pain rustique 2x
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <div class="composition-backbox">
+            <h3 class="mt-4">Le végétarien</h3>
+            <div>
+              <h4 class="mt-5">Economique</h4> <br>
+              <p>
+                Tomme de brebis, ou chèvre ou gruyère * <br>
+                Mélange de crudités, sauce (petites carottes, tomates cerises et radis) <br>
+                Fruits : pêche (200g) et abricots (83g) <br>
+                Jus de pomme de la région (50cl) <br>
+                Pain rustique <br> <br>
+              </p>
+            </div>
+            <hr class="style5">
+            <div>
+              <h4>Middle</h4> <br>
+              <p>
+                Tomme de brebis, ou chèvre ou gruyère * <br>
+                Grande crudités, sauce (petites carottes, tomates cerises et radis) <br>
+                Fruits : pêche (200g) et abricots (83g) <br>
+                Jus de pomme de la région (50cl) <br>
+                Vin de la région de Genève - Gamay de satigny AOC(50cl) <br>
+                Pain rustique <br> <br>
+              </p>
+            </div>
+            <hr class="style5">
+            <div>
+              <h4>Premium</h4> <br>
+              <p>Tomme de brebis ou chèvre * <br>
+                gruyère <br>
+                Barquette de hummus ou pâte à tartiner au soja <br>
+                Grande crudités, oeuf dur, sauce (petites carottes, tomates cerises et radis) <br>
+                Noix (250g) <br>
+                Fruits : pêche (200g) et abricots (83g) <br>
+                Jus de pomme de la région (50cl) <br>
+                Vin de la région de Genève (50cl) - Pinot noir Grande Réserve AOC <br>
+                Pain rustique x2
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Je Commande -->
+  <section class="mt-5" id="commande">
+    <div class="container-fluid ">
+      <div class="row text-center commande_h2">
+        <div class="col-md-12 d-flex align-items-center justify-content-center">
+          <h2> LES TARIFS DES PANIERS </h2>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-8 offset-md-2">
+          <div class="row">
+            <div class="col-md-3">
+              <h4 class="text-left">Le classique</h4>
+              <div>
+                <h5>Economique</h5>
+                <ul>
+                  <li>Non membres : 26 -</li>
+                  <li>Staff : 22 -</li>
+                  <li>Membres Gaea21 : 24</li>
+                </ul>
+              </div>
+              <div>
+                <h5>Middle</h5>
+                <ul>
+                  <li>Non membres : 26 -</li>
+                  <li>Staff : 22 -</li>
+                  <li>Membres Gaea21 : 24</li>
+                </ul>
+              </div>
+              <div>
+                <h5>Premium</h5>
+                <ul>
+                  <li>Non membres : 26 -</li>
+                  <li>Staff : 22 -</li>
+                  <li>Membres Gaea21 : 24</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="tarif-background">
+                <div class="tarif-img img-fluid"> </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <h4 class="text-left">Le végétarien</h4>
+              <div>
+                <h5>Economique</h5>
+                <ul>
+                  <li>Non membres : 26 -</li>
+                  <li>Staff : 22 -</li>
+                  <li>Membres Gaea21 : 24</li>
+                </ul>
+              </div>
+              <div>
+                <h5>Middle</h5>
+                <ul>
+                  <li>Non membres : 26 -</li>
+                  <li>Staff : 22 -</li>
+                  <li>Membres Gaea21 : 24</li>
+                </ul>
+              </div>
+              <div>
+                <h5>Premium</h5>
+                <ul>
+                  <li>Non membres : 26 -</li>
+                  <li>Staff : 22 -</li>
+                  <li>Membres Gaea21 : 24</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row commande-form">
+        <div class="container-fluid">
+          <!-- DEBUT FORMULAIRE -->
+          <!-- <form> -->
+          {# à réactiver :
+
+        <div class="col-md-8 offset-md-2 form-group">
+          <div class="form-row">
+            <div class="col-md-4 form-group pl-0">
+              <button type="button" data-toggle="modal" data-target="#modalform" class="btn btn-jecommande">Je commande</button>
+            </div>
+            <div class="col-md-8 form-group">
+              <div class="form-group form-inline my-1">
+                <label for="exampleInputEmail6">Pour l'évenement du * : &nbsp; </label>
+                <input class="form-control form-control-sm" id="eventdateipunt1" name="eventdateinput1" type="text" placeholder="">
+              </div>    
+              <div class="form-group form-inline my-1">
+                <label for="exampleInputEmail2">Adresse mail : &nbsp; </label>
+                <input type="email" class="form-control form-control-sm" id="InputEmail1" name="inputEmail1" placeholder="">
+              </div>
+              <div class="form-group form-inline my-1">
+                <label for="exampleInputEmail5"> Pseudonyme (si inscrit) : &nbsp; </label>
+                <input class="form-control form-control-sm" id="pseudoinput1" name="pseudoinput1" type="text" placeholder="">
+              </div>
+            </div>
+            <div class="col-12"> <small id="emailHelp1" class="form-text text-muted text-right"> * livraison sur le lieu de l'événement </small> </div>
+          </div>
+          <div class="form-row mt-4">
+            <div class="col-md-6 form-group">
+              <h3 class="text-left">Le classique</h3>              
+                <div class="form-group">
+                 <label for="FormControlSelect-classique"> </label>
+                  <!-- <form action="/ecopanier" method="post"> -->
+
+                  <select class="form-control" id="FormControlSelect-classique" name="select1">
+                  <!-- AFFICHER LA LISTE DES PRODUITS DANS UN MENU DEROULANT :  -->
+                    {% for product in products %}
+                     <option data-price="{{ product.getPrice() }}" value="{{ product.getIdproduct()}}"> <strong>{{ product.getName() }}</strong> </option>  
+                    {% endfor %} 
+                   </select>
+				          <button type="submit" class="add-to-cart-classique" >Ajouter au panier</button> <!-- -->
+				          <!-- <a href="#" data-name="Classique" data-price="0.5" class="add-to-cart btn btn-primary">Add to cart</a> -->
+                  <!--<button type="submit" class="btn btn-primary mb-2 mt-2">Ajouter au panier</button>--> 
+                <!-- </form> -->
+
+              </div>
+            </div>
+            <div class="col-md-6 form-group">
+              <h3 class="text-left">Le vegetarien</h3>              
+              <div class="form-group">
+                <label for="FormControlSelect-vegetarien"> </label>
+                 <!-- <form action="/ecopanier" method="post"> -->
+                <select class="form-control" id="FormControlSelect-vegetarien" name="select2">
+                   <!-- AFFICHER LA LISTE DES PRODUITS DANS UN MENU DEROULANT :  -->
+                  {% for product in products %}
+                    <option data-price="{{ product.getPrice() }}" value="{{ product.getIdproduct()}}"> <strong>{{ product.getName() }}</strong> </option>  
+                  {% endfor %}  
+                </select>
+				        <button  type="submit" class="add-to-cart-vegetarien">Ajouter au panier</button> <!-- type="submit" -->
+				        <!-- <a href="#" data-name="Végétarien" data-price="1.22" class="add-to-cart btn btn-primary">Add to cart</a> -->
+                <!--<button type="submit" class="btn btn-primary mb-2 mt-5">Ajouter au panier</button>--> 
+               <!-- </form>  -->
+
+              </div>
+            </div>
+          </div>
+
+		   <div class="form-row mt-4">
+            <div class="col-md-12 form-group text-center">
+              <button type="button" data-toggle="modal" data-target="#cart">Afficher le panier (<span class="total-count"></span>) </button>
+				<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button> --> 
+				<!-- <button class="clear-cart btn btn-danger">Clear Cart</button> -->
+				<button class="clear-cart">Vider le panier</button>
+			  </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      <!-- </form> -->
+
+
+    (fin à réactiver) #}
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Footer -->
+
+  <div id="footer" class="footer-clean">
+    <footer>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-sm-4 col-md-3 item">
+            <h3>Projets</h3>
+            <ul>
+              <li><a href="#">Répertoire Vert</a></li>
+              <li><a href="#">Green Events Series</a></li>
+              <li><a href="#">Grow your own</a></li>
+              <li><a href="#">Consom'action</a></li>
+              <li><a href="#">Eco-gestes</a></li>
+              <li><a href="#">Green Coaching</a></li>
+              <li><a href="#">Sharing Economy</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-4 col-md-3 item">
+            <h3>About</h3>
+            <ul>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+            </ul>
+          </div>
+          <div class="col-sm-4 col-md-3 item">
+            <h3>Contact</h3>
+            <ul>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+            </ul>
+          </div>
+          <div class="col-sm-4 col-md-3 item">
+            <h3>Gaeia21</h3>
+            <ul>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+
+
+  <!-- Modal Panier -->
+  <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Panier</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table class="show-cart table">
+
+          </table>
+          <div>Prix total : <span class="total-cart"></span></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" data-dismiss="modal"> Fermer </button>
+          <button type="button">Commander</button> <!-- class="btn btn-primary" -->
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- fin modal -->
+
+
+
+
+
+
+
+
+
+
+
+  <script src="{{ asset('bundles/ecopanier/js/jquery-3.2.1.min.js') }}"></script>
+  <script src="{{ asset('bundles/ecopanier/js/popper.min.js') }}"></script>
+  <script src="{{ asset('bundles/ecopanier/js/bootstrap-4.0.0.js') }}"></script>
+
+  <script type='text/javascript' src="{{ asset('bundles/ecopanier/js/shoppingcart.js') }}"></script>
+
+
+
+
+
+
+
+  <script>
+    $('#pseudoinput1').change(function () { $('#pseudoinput2').val($('#pseudoinput1').val()); });
+    $('#eventdateipunt1').change(function () { $('#eventdateipunt2').val($('#eventdateipunt1').val()); });
+    $('#InputEmail1').change(function () { $('#InputEmail2').val($('#InputEmail1').val()); });
+  </script>
+
+
+
+
+
+</body>
+
+</html>
